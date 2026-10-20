@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="{{ t.html_lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page_title %}{{ page_title }} – Cia. VENDAVAL{% else %}{{ t.meta.title }}{% endif %}</title>
+<meta name="description" content="{{ page_desc or t.meta.description }}">
+<link rel="canonical" href="https://{{ site.domain }}/{{ lang }}/{{ path }}">
+{% for l in langs %}<link rel="alternate" hreflang="{{ i18n[l].html_lang }}" href="https://{{ site.domain }}/{{ l }}/{{ path }}">
+{% endfor %}<link rel="alternate" hreflang="x-default" href="https://{{ site.domain }}/">
+<meta property="og:title" content="{% if page_title %}{{ page_title }} – Cia. VENDAVAL{% else %}{{ t.meta.title }}{% endif %}">
+<meta property="og:description" content="{{ page_desc or t.meta.description }}">
+<meta property="og:image" content="https://{{ site.domain }}/img/{{ og_image }}-1600.webp">
+<meta property="og:type" content="website">
+<link rel="icon" href="{{ R }}img/favicon.png">
+<link rel="preload" href="{{ R }}fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ R }}assets/style.css?v={{ version }}">
+</head>
+<body>
+<span id="top"></span>
+<a class="skip" href="#main">{{ t.skip }}</a>
+
+<header class="top">
+  <a class="brand" href="{{ H }}" aria-label="VENDAVAL · {{ t.nav.home }}"><img src="{{ R }}img/logo.webp" alt="VENDAVAL" width="150" height="111"></a>
+  <details class="langs">
+    <summary aria-label="{{ t.nav.language }}">{{ t.lang_name }} <span aria-hidden="true">▾</span></summary>
+    <ul>
+      {% for l in langs %}<li><a href="{{ R }}{{ l }}/{{ path }}" hreflang="{{ i18n[l].html_lang }}" lang="{{ i18n[l].html_lang }}"{% if l == lang %} aria-current="true"{% endif %}>{{ i18n[l].lang_name }}</a></li>{% endfor %}
+    </ul>
+  </details>
+  <button class="menu-btn" aria-expanded="false" aria-controls="nav">{{ icon('menu') }}<span>{{ t.nav.menu }}</span></button>
+  <nav id="nav" aria-label="{{ t.nav.menu }}">
+    <ul>
+      {% for k, u in [('about', H ~ '#about'), ('shows', H ~ '#shows'), ('workshops', H ~ 'workshops/'), ('agenda', H ~ 'agenda/'), ('artists', H ~ 'artists/'), ('downloads', H ~ 'downloads/'), ('crew', H ~ 'crew/'), ('contact', H ~ '#contact')] %}<li><a href="{{ u }}"{% if page == k %} aria-current="page"{% endif %}>{{ t.nav[k] }}</a></li>{% endfor %}
+    </ul>
+  </nav>
+</header>
+
+<main id="main" class="page-{{ page }}">
+{% if page == 'home' %}
+<section class="hero">
+  <div class="slides" aria-roledescription="carousel">
+    {% for sl in hero_slides %}
+    <figure class="slide{% if loop.first %} on{% endif %}"{% if not loop.first %} aria-hidden="true"{% endif %}>
+      <img class="slide-bg" src="{{ R }}img/{{ sl.image }}-800.webp" alt="" aria-hidden="true"{% if not loop.first %} loading="lazy"{% endif %}>
+      <picture>
+        <source media="(max-width: 700px)" srcset="{{ R }}img/{{ sl.image }}-800.webp">
+        <img src="{{ R }}img/{{ sl.image }}-1600.webp" alt="{{ t.show[sl.show].name }}"{% if loop.first %} fetchpriority="high"{% else %} loading="lazy"{% endif %}>
+      </picture>
+    </figure>
+    {% endfor %}
+  </div>
+  <div class="hero-in">
+    <h1>{{ t.hero.title }}</h1>
+    <p class="ctas"><a class="btn btn-hot" href="#contact">{{ t.hero.cta_book }}</a></p>
+    <p class="dots">{% for sl in hero_slides %}<button type="button" aria-label="{{ t.show[sl.show].name }}" data-href="{{ H }}{{ slugs[sl.show] }}/" data-name="{{ t.show[sl.show].name }}"{% if loop.first %} aria-current="true"{% endif %}></button>{% endfor %}<a class="slide-link" href="{{ H }}{{ slugs[hero_slides[0].show] }}/">{{ icon('camera') }}<span>{{ t.show[hero_slides[0].show].name }}</span> →</a></p>
+  </div>
+</section>
+
+<section id="about" class="sec cream">
+  <div class="wrap two">
+    <div>
+      <h2>{{ t.about.title }}</h2>
+      {% for p in t.about.p %}<p>{{ p }}</p>{% endfor %}
+    </div>
+    <figure class="tilt"><img loading="lazy" src="{{ R }}img/{{ about_image }}-800.webp" alt="" width="800"></figure>
+  </div>
+</section>
+
+<section id="shows" class="sec">
+  <div class="wrap">
+    <h2>{{ t.shows.title }}</h2>
+    <p class="lead">{{ t.shows.intro }}</p>
+    <div class="show-cards">
+      {% for s in shows %}{% set st = t.show[s.id] %}
+      <a class="show-card" href="{{ H }}{{ s.slug }}/">
+        <img loading="lazy" src="{{ R }}img/{{ s.cover }}-800.webp" alt="">
+        <span class="sc-body">
+          {% if st.status %}<span class="badge badge-{{ st.status }}">{{ t.shows.status[st.status] }}</span>{% endif %}
+          <span class="sc-name">{{ st.name }}</span>
+          <span class="sc-kicker">{{ st.kicker }}</span>
+          <span class="sc-more">{{ t.shows.see }} →</span>
+        </span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="home-workshops" class="sec cream">
+  <div class="wrap">
+    <h2>{{ t.workshops.title }}</h2>
+    <p class="lead">{{ t.workshops.intro }}</p>
+    <div class="ws-cards">
+      {% for g in workshop_groups %}{% set tg = t.workshops.groups[g.id] %}<a class="ws-group ws-{{ g.kind }} ws-link" href="{{ H }}workshops/#ws-{{ g.id }}">
+        <img loading="lazy" src="{{ R }}img/{{ g.photo }}-800.webp" alt="">
+        <h3>{{ tg.title }} <small>· {{ g.by }}</small></h3>
+        <ul class="tags">{% for w in tg['items'] %}<li>{{ w }}</li>{% endfor %}</ul>
+      </a>{% endfor %}
+    </div>
+    <p><a class="btn btn-small btn-line" href="{{ H }}workshops/">{{ t.nav.workshops }} →</a></p>
+  </div>
+</section>
+
+<section id="video" class="sec navy">
+  <div class="wrap">
+    <h2>{{ t.video.title }}</h2>
+    <p class="lead">{{ t.video.intro }}</p>
+    <figure class="video">
+      <div class="lite" data-src="https://www.youtube-nocookie.com/embed/{{ video.id }}?autoplay=1&rel=0">
+        <img loading="lazy" src="{{ R }}img/{{ video.poster }}-1600.webp" alt="">
+        <button type="button" class="play" aria-label="{{ t.video.play }}: {{ t.video['items'][video.key] }}">{{ icon('play') }}</button>
+        <p class="consent">{{ t.video.consent }}</p>
+      </div>
+      <figcaption>{{ t.video['items'][video.key] }} · <a href="https://www.youtube.com/watch?v={{ video.id }}" rel="noopener" target="_blank">{{ t.video.watch_on }} YouTube</a></figcaption>
+    </figure>
+    <p class="channels"><a class="btn btn-line-light" href="https://www.youtube.com/@VENDAVAL.YOUTUBE" rel="noopener" target="_blank">{{ icon('youtube') }} YouTube</a></p>
+  </div>
+</section>
+
+<section id="agenda" class="sec">
+  <div class="wrap agenda" data-today="{{ today }}">
+    <h2>{{ t.agenda.title }}</h2>
+    <h3 class="ag-up">{{ t.agenda.upcoming }}</h3>
+    <ol class="timeline up" data-max="3">{% for e in agenda_up[:6] %}{% include 'agenda_item.html' %}{% endfor %}</ol>
+    <p class="none"{% if agenda_up %} hidden{% endif %}>{{ t.agenda.none }}</p>
+    <p><a class="btn btn-small btn-line" href="{{ H }}agenda/">{{ t.agenda.all }} →</a></p>
+  </div>
+</section>
+
+{% include 'contact.html' %}
+
+<section id="home-crew" class="sec">
+  <div class="wrap home-crew">
+    <svg class="crew-pennants" viewBox="0 0 240 14" preserveAspectRatio="none" aria-hidden="true" focusable="false">{% for i in range(10) %}<polygon class="p{{ loop.index0 % 4 + 1 }}" points="{{ i*24 }},0 {{ i*24+24 }},0 {{ i*24+12 }},14"/>{% endfor %}</svg>
+    <div class="home-crew-body">
+      <h2>{{ t.crew.home_title }}</h2>
+      <p>{{ t.crew.home_text }}</p>
+      <p><a class="btn btn-hot" href="{{ H }}crew/">{{ t.crew.home_btn }} →</a></p>
+    </div>
+  </div>
+</section>
+
+{% elif page == 'show' %}
+{% set st = t.show[s.id] %}
+<section class="sec show-page">
+  <article class="show" id="show-{{ s.id }}">
+    <div class="wrap show-grid">
+      <div class="show-media">
+        <img src="{{ R }}img/{{ s.cover }}-800.webp" alt="{{ st.name }}">
+        {% for sd in s.side %}<img loading="lazy" src="{{ R }}img/{{ sd }}-800.webp" alt="{{ st.name }}">{% endfor %}
+      </div>
+      <div class="show-text">
+        {% if st.status %}<p class="badge badge-{{ st.status }}">{{ t.shows.status[st.status] }}</p>{% endif %}
+        <h1 class="show-title">{{ st.name }}</h1>
+        <p class="kicker">{{ st.kicker }}</p>
+        {% for p in st.text %}<p>{{ p }}</p>{% endfor %}
+        <div class="facts">
+          <h2>{{ t.shows.facts }}</h2>
+          <ul>{% for f in st.facts %}<li>{{ f }}</li>{% endfor %}</ul>
+        </div>
+        {% if st.extra_title %}<div class="facts"><h2>{{ st.extra_title }}</h2><p>{{ st.extra_text }}</p></div>{% endif %}
+        {% if st.access %}<p class="access"><strong>{{ st.access_title }}:</strong> {{ st.access }}</p>{% endif %}
+        {% if s.link %}<p class="show-links"><a class="btn btn-small btn-line" href="{{ s.link }}" rel="noopener" target="_blank">{{ t.shows.more }} {{ icon('open-in-new') }}</a></p>{% endif %}
+      </div>
+    </div>
+    {% set bx = boxes.get(s.id) %}{% if bx %}<div class="wrap show-dl"><div class="downloads one">{% include 'dlbox.html' %}</div></div>{% endif %}
+    {% if s.gallery %}
+    <div class="gallery" aria-label="{{ t.shows.photos }} – {{ st.name }}">
+      {% for g in s.gallery %}<a href="{{ R }}img/{{ g }}-1600.webp" class="gal"><img loading="lazy" src="{{ R }}img/{{ g }}-800.webp" alt="{{ st.name }} – {{ t.shows.photos|lower }} {{ loop.index }}"></a>{% endfor %}
+    </div>
+    {% endif %}
+    <p class="wrap back-shows"><a href="{{ H }}#shows">← {{ t.shows.back }}</a></p>
+    {% set sup = agenda_up|selectattr('show', 'equalto', s.id)|list %}{% set spast = agenda_past|selectattr('show', 'equalto', s.id)|list %}
+    {% if sup or spast %}<div class="wrap agenda show-agenda" data-today="{{ today }}">
+      <h2>{{ t.agenda.show_dates }}</h2>
+      <h3 class="ag-up">{{ t.agenda.upcoming }}</h3>
+      <ol class="timeline up">{% for e in sup %}{% include 'agenda_item.html' %}{% endfor %}</ol>
+      <p class="none"{% if sup %} hidden{% endif %}>{{ t.agenda.none }}</p>
+      <h3>{{ t.agenda.past }}</h3>
+      <ol class="timeline past">{% for e in spast %}{% include 'agenda_item.html' %}{% endfor %}</ol>
+    </div>{% endif %}
+  </article>
+</section>
+
+{% elif page == 'workshops' %}
+<section id="workshops" class="sec cream">
+  <div class="wrap">
+    <h1>{{ t.workshops.title }}</h1>
+    <p class="lead">{{ t.workshops.intro }}</p>
+    <div class="ws-cards">
+      {% for g in workshop_groups %}{% set tg = t.workshops.groups[g.id] %}<article class="ws-group ws-{{ g.kind }}" id="ws-{{ g.id }}">
+        <img loading="lazy" src="{{ R }}img/{{ g.photo }}-800.webp" alt="{{ t.workshops.title }}: {{ tg.title }}">
+        <h2>{{ tg.title }} <small>· <a href="{{ g.url_l }}" rel="noopener" target="_blank">{{ g.by }}</a></small></h2>
+        <ul class="tags">{% for w in tg['items'] %}<li>{{ w }}</li>{% endfor %}</ul>
+        {% if g.dossier %}{% set f = dlfile(g.dossier) %}<p><a class="btn btn-small" href="{{ R }}{{ f.url }}" download>{{ icon('download') }} {{ t.downloads.kinds.workshop }} <small>{{ i18n[f.lang].lang_name }}</small></a></p>{% endif %}
+      </article>{% endfor %}
+    </div>
+    <p class="note">{{ t.workshops.note }} <a href="{{ H }}#contact">{{ t.workshops.ask }}</a></p>
+  </div>
+  <div class="gallery" aria-label="{{ t.shows.photos }} – {{ t.workshops.title }}">
+    {% for g in workshops_gallery %}<a href="{{ R }}img/{{ g }}-1600.webp" class="gal"><img loading="lazy" src="{{ R }}img/{{ g }}-800.webp" alt="{{ t.workshops.title }} – {{ t.shows.photos|lower }} {{ loop.index }}"></a>{% endfor %}
+  </div>
+</section>
+
+{% elif page == 'agenda' %}
+<section class="sec">
+  <div class="wrap agenda" data-today="{{ today }}">
+    <h1>{{ t.agenda.title }}</h1>
+    <h2 class="ag-up">{{ t.agenda.upcoming }}</h2>
+    <ol class="timeline up">{% for e in agenda_up %}{% include 'agenda_item.html' %}{% endfor %}</ol>
+    <p class="none"{% if agenda_up %} hidden{% endif %}>{{ t.agenda.none }}</p>
+    <h2>{{ t.agenda.past }}</h2>
+    <ol class="timeline past">{% for e in agenda_past %}{% include 'agenda_item.html' %}{% endfor %}</ol>
+  </div>
+</section>
+
+{% elif page == 'artists' %}
+<section class="sec cream">
+  <div class="wrap">
+    <h1>{{ t.artists.title }}</h1>
+    <p class="lead">{{ t.artists.intro }}</p>
+    <ul class="artists">
+      {% for a in artists %}{% set p = t.artists.people[a.id] %}
+      <li class="artist">
+        <img loading="lazy" src="{{ R }}img/{{ a.photo }}-800.webp" alt="{{ a.name }}" width="400" height="533">
+        <h2>{{ a.name }}</h2>
+        <p class="origin">{{ p.origin }}</p>
+        <p>{{ p.roles }}</p>
+        {% if a.link %}<a href="{{ a.link }}" rel="noopener" target="_blank">{{ t.artists.link_by_gender[artist_gender.get(a.id, 'x')] }} {{ icon('open-in-new') }}</a>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    <h2 class="subs-title">{{ t.artists.subs_title }}</h2>
+    <p class="subs">{% for n in substitutes %}<span>{{ n }}</span>{% if not loop.last %} · {% endif %}{% endfor %}</p>
+  </div>
+</section>
+
+{% elif page == 'crew' %}{% set C = t.crew %}
+<section class="sec crew" id="crew">
+  <div class="wrap crew-wrap">
+    <header class="crew-head">
+      <p class="kicker">{{ C.kicker }}</p>
+      <h1>{{ C.title }}</h1>
+      <p class="lead">{{ C.lede }}{% if C.note %} <em>{{ C.note }}</em>{% endif %}</p>
+    </header>
+    <section class="crew-card" id="crew-card" aria-label="{{ C.card }}">
+      <svg class="crew-pennants" viewBox="0 0 240 14" preserveAspectRatio="none" aria-hidden="true" focusable="false">{% for i in range(10) %}<polygon class="p{{ loop.index0 % 4 + 1 }}" points="{{ i*24 }},0 {{ i*24+24 }},0 {{ i*24+12 }},14"/>{% endfor %}</svg>
+      <div class="crew-body">
+        <p class="crew-eyebrow"><span>{{ C.plate }}</span><span>{{ C.mat }} <span id="crew-mat">—</span></span></p>
+        <p class="crew-cargo" id="crew-cargo"></p>
+        <h2 class="crew-nombre" id="crew-nombre"></h2>
+        <p class="crew-meta" id="crew-meta"></p>
+        <div class="crew-actions">
+          <button type="button" class="btn btn-hot" id="crew-otra">{{ C.again }}</button>
+          <button type="button" class="btn btn-small btn-line" id="crew-sorpresa">{{ C.surprise }}</button>
+          <button type="button" class="btn btn-small btn-line" id="crew-copiar">{{ C.copy_btn }}</button>
+        </div>
+        <p class="crew-status" id="crew-estado" role="status"></p>
+      </div>
+    </section>
+    <p class="sr-only" id="crew-anuncio" aria-live="polite"></p>
+    <div class="crew-controls">
+      <fieldset><legend>{{ C.month }}</legend><p class="crew-sub">{{ C.month_sub }}</p><div class="crew-months" id="crew-meses"></div></fieldset>
+      <fieldset{% if lang in ('en', 'ja') %} hidden{% endif %}><legend>{{ C.pronoun }}</legend>
+        <div class="crew-seg" id="crew-genero">{% for g in ['m','f','n'] %}<button type="button" data-g="{{ g }}">{{ C.pron[loop.index0] }}</button>{% endfor %}</div>
+      </fieldset>
+      <fieldset><legend>{{ C.first }}</legend><p class="crew-sub">{{ C.first_sub }}</p><div class="crew-letters" id="crew-letras-nombre"></div></fieldset>
+      <fieldset><legend>{{ C.last }}</legend><p class="crew-sub">{{ C.last_sub }}</p><div class="crew-letters" id="crew-letras-apellido"></div></fieldset>
+    </div>
+  </div>
+  <script type="application/json" id="crew-i18n">{{ {'meta': C.meta, 'copied': C.copied, 'selected': C.selected, 'letter': C.letter}|tojson }}</script>
+  {% if lang != 'es' %}<script src="{{ R }}assets/crew-data/{{ lang }}.js?v={{ version }}" defer></script>
+  {% endif %}<script src="{{ R }}assets/crew.js?v={{ version }}" defer></script>
+</section>
+{% elif page == 'downloads' %}
+<section class="sec">
+  <div class="wrap">
+    <h1>{{ t.downloads.title }}</h1>
+    <p class="lead">{{ t.downloads.intro }}</p>
+    <div class="downloads">{% for bx in download_boxes %}{% include 'dlbox.html' %}{% endfor %}</div>
+    <p class="note">{{ t.downloads.note }}</p>
+  </div>
+</section>
+{% endif %}
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <a href="{{ H }}"><img src="{{ R }}img/logo.webp" alt="VENDAVAL · {{ t.nav.home }}" width="140" height="104" loading="lazy"></a>
+    <ul class="socials">
+      {% for so in socials %}<li><a class="soc soc-{{ so.id }}" href="{{ so.url }}" rel="noopener" target="_blank" aria-label="{{ so.label }}">{{ icon(so.id) }}</a></li>{% endfor %}
+    </ul>
+    <p class="credits">{% for c in credits %}<span><strong>{{ t.footer.roles[c.role] }}{{ t.footer.colon }}</strong> {% for pp in c.people %}{% if pp.url %}<a href="{{ pp.url }}" rel="noopener" target="_blank">{{ pp.name }}</a>{% else %}{{ pp.name }}{% endif %}{% if not loop.last %}, {% endif %}{% endfor %}</span>{% if not loop.last %} · {% endif %}{% endfor %}</p>
+    <p>© Cia. VENDAVAL · {{ t.footer.hosted }}</p>
+    <p><a href="#top">{{ icon('arrow-up') }} {{ t.footer.top }}</a></p>
+  </div>
+</footer>
+
+<a class="to-top" href="#top" aria-label="{{ t.footer.top }}" title="{{ t.footer.top }}" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5l-7 7 1.4 1.4L11 8.8V20h2V8.8l4.6 4.6L19 12z"/></svg></a>
+<div class="a11y">
+  <button type="button" class="a11y-btn" aria-expanded="false" aria-controls="a11y-panel" aria-label="{{ t.a11y.title }}" title="{{ t.a11y.title }}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4" r="2"/><path d="M21 9h-6v13h-2v-6h-2v6H9V9H3V7h18z"/></svg></button>
+  <div id="a11y-panel" class="a11y-panel" role="group" aria-label="{{ t.a11y.title }}" hidden>
+    <p class="a11y-title">{{ t.a11y.title }}</p>
+    <div class="a11y-size"><button type="button" data-a="smaller" aria-label="{{ t.a11y.smaller }}">A−</button><span>{{ t.a11y.size }}</span><button type="button" data-a="bigger" aria-label="{{ t.a11y.bigger }}">A+</button></div>
+    <button type="button" data-a="contrast" aria-pressed="false">{{ t.a11y.contrast }}</button>
+    <button type="button" data-a="links" aria-pressed="false">{{ t.a11y.links }}</button>
+    <button type="button" data-a="spacing" aria-pressed="false">{{ t.a11y.spacing }}</button>
+    <button type="button" data-a="motion" aria-pressed="false">{{ t.a11y.motion }}</button>
+    <button type="button" data-a="reset" class="a11y-reset">{{ t.a11y.reset }}</button>
+  </div>
+</div>
+<dialog class="lightbox"><button type="button" class="lb-close" aria-label="×">×</button><img alt=""></dialog>
+<script src="{{ R }}assets/site.js?v={{ version }}" defer></script>
+</body>
+</html>

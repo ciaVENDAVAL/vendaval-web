@@ -1,0 +1,42 @@
+<section id="contact" class="sec navy">
+  <div class="wrap two">
+    <div>
+      <h2>{{ t.contact.title }}</h2>
+      <p>{{ t.contact.intro }}</p>
+      <ul class="contact-list">
+        <li>{{ icon('email') }} <a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        <li>{{ icon('phone') }} <a href="tel:{{ site.phone_link }}">{{ site.phone }}</a></li>
+        <li>{{ icon('map-marker') }} Barcelona · Terrassa</li>
+      </ul>
+      <p class="note">{{ t.contact.invoice }}</p>
+      <p class="morse" aria-label="{{ t.contact.morse }}">·· ·· ·−− · ·−·· ·−−− ··<br><a href="https://lucassedberg.com/tools/morse/simulator" rel="noopener" target="_blank">{{ t.contact.morse }}</a></p>
+    </div>
+    {% set F = t.contact.form %}
+    <form class="form" action="{{ site.form_endpoint }}" method="POST" data-key="{{ site.form_access_key }}" data-ok="{{ F.ok }}" data-err="{{ F.err }}" data-sending="{{ F.sending }}">
+      <input type="hidden" name="access_key" value="{{ site.form_access_key }}">
+      <input type="hidden" name="subject" value="VENDAVAL.cat · {{ lang|upper }}">
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <label><span>{{ F.name }} <abbr title="{{ F.required }}">*</abbr></span><input name="name" required autocomplete="name"></label>
+      <label><span>{{ F.email }} <abbr title="{{ F.required }}">*</abbr></span><input name="email" type="email" required autocomplete="email"></label>
+      <div class="row">
+        <label><span>{{ F.phone }}</span><input name="phone" type="tel" autocomplete="tel"></label>
+        <label><span>{{ F.org }}</span><input name="organisation" autocomplete="organization"></label>
+      </div>
+      <div class="row">
+        <label><span>{{ F.date }}</span><input name="date" type="date"></label>
+        <label><span>{{ F.place }}</span><input name="town"></label>
+      </div>
+      <label><span>{{ F.show }}</span>
+        <select name="show">
+          {% for s in shows %}<option>{{ t.show[s.id].name }}</option>{% endfor %}
+          {% for g in workshop_groups %}<option>{{ t.workshops.title }}: {{ t.workshops.groups[g.id].title }}</option>{% endfor %}
+          <option>{{ F.show_any }}</option>
+        </select>
+      </label>
+      <label><span>{{ F.message }} <abbr title="{{ F.required }}">*</abbr></span><textarea name="message" rows="5" required></textarea></label>
+      <p class="privacy">{{ F.privacy }}</p>
+      <button class="btn btn-hot" type="submit">{{ F.submit }}</button>
+      <p class="status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>

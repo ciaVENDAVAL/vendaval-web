@@ -1,0 +1,589 @@
+{
+ "shows": {
+  "brass": {
+   "cover": "vendaval-passecalles-000",
+   "side": [],
+   "gallery": [
+    "vendaval-003-400px",
+    "vendaval-unterwegs001",
+    "vendaval-unterwegs002",
+    "vendaval-unterwegs003",
+    "vendaval-unterwegs004",
+    "vendaval-bobila001",
+    "vendaval-102",
+    "img-0677",
+    "img-0780",
+    "photo-2026-09-09-20-43-56",
+    "img-0622"
+   ],
+   "link": null
+  },
+  "joc": {
+   "cover": "el-joc-etern-drawing-swap",
+   "side": [
+    "windy-vespa-grinding"
+   ],
+   "gallery": [
+    "img-0780",
+    "creating-windy-1",
+    "creating-windy-5",
+    "creating-windy-2",
+    "creating-windy-4",
+    "creating-windy-3",
+    "creating-el-joc-etern-8",
+    "creating-el-joc-etern-10",
+    "creating-el-joc-etern-13",
+    "creating-el-joc-etern-17",
+    "creating-el-joc-etern-24",
+    "creating-el-joc-etern-6",
+    "creating-el-joc-etern-7",
+    "windy-cad-frame",
+    "windy-trailer-frame",
+    "windy-trailer-deck",
+    "windy-vespa-grinding",
+    "windy-vespa-motor",
+    "windy-welding-frame",
+    "windy-welding",
+    "windy-steering-part",
+    "windy-vespa-rear",
+    "windy-vespa-frame",
+    "boat-chicken-rudder",
+    "masks-boat-drummer",
+    "mask-rat-drummer",
+    "mask-owlcat-sail"
+   ],
+   "link": null
+  },
+  "freakfrac": {
+   "cover": "freak-frac-3",
+   "side": [],
+   "gallery": [
+    "freak-frac-9",
+    "freak-frac-1",
+    "freak-frac-8",
+    "freak-frac-2",
+    "freak-frac-4",
+    "freak-frac-5",
+    "freak-frac-6",
+    "freak-frac-7",
+    "freak-frac-2021-1",
+    "freak-frac-2021-2",
+    "freak-frac-2021-3"
+   ],
+   "link": "https://ciafiligranes.net/en/shows/freak-frac"
+  },
+  "friend": {
+   "cover": "amigui-5",
+   "side": [],
+   "gallery": [
+    "amigui-7",
+    "amigui-mg-7306",
+    "amigui-footer-12",
+    "amigui-2",
+    "amigui-4",
+    "amigui-1"
+   ],
+   "link": null
+  }
+ },
+ "agenda": [
+  {
+   "start": "2026-11-07",
+   "end": "2026-11-07",
+   "show": "freakfrac",
+   "url": null,
+   "precision": "day",
+   "place": {
+    "ca": "Pas de la Casa (Andorra)",
+    "es": "Pas de la Casa (Andorra)",
+    "en": "Pas de la Casa (Andorra)",
+    "de": "Pas de la Casa (Andorra)",
+    "fr": "Pas de la Casa (Andorra)",
+    "it": "Pas de la Casa (Andorra)",
+    "pt": "Pas de la Casa (Andorra)",
+    "ja": "Pas de la Casa (Andorra)"
+   },
+   "note": {
+    "ca": "",
+    "es": "",
+    "en": "",
+    "de": "",
+    "fr": "",
+    "it": "",
+    "pt": "",
+    "ja": ""
+   },
+   "ws": {}
+  },
+  {
+   "start": "2027-01-05",
+   "end": "2027-01-05",
+   "show": "freakfrac",
+   "url": null,
+   "precision": "day",
+   "place": {
+    "ca": "Cavalcada de Reis, Roses",
+    "es": "Cavalcada de Reis, Roses",
+    "en": "Cavalcada de Reis, Roses",
+    "de": "Cavalcada de Reis, Roses",
+    "fr": "Cavalcada de Reis, Roses",
+    "it": "Cavalcada de Reis, Roses",
+    "pt": "Cavalcada de Reis, Roses",
+    "ja": "Cavalcada de Reis, Roses"
+   },
+   "note": {
+    "ca": "",
+    "es": "",
+    "en": "",
+    "de": "",
+    "fr": "",
+    "it": "",
+    "pt": "",
+    "ja": ""
+   },
+   "ws": {}
+  },
+  {
+   "start": "2027-02-05",
+   "end": "2027-02-05",
+   "show": "freakfrac",
+   "url": null,
+   "precision": "day",
+   "place": {
+    "ca": "Andorra",
+    "es": "Andorra",
+    "en": "Andorra",
+    "de": "Andorra",
+    "fr": "Andorra",
+    "it": "Andorra",
+    "pt": "Andorra",
+    "ja": "Andorra"
+   },
+   "note": {
+    "ca": "",
+    "es": "",
+    "en": "",
+    "de": "",
+    "fr": "",
+    "it": "",
+    "pt": "",
+    "ja": ""
+   },
+   "ws": {}
+  },
+  {
+   "start": "2026-09-12",
+   "end": "2026-09-12",
+   "show": "brass",
+   "url": "https://www.instagram.com/p/DcCAY8LOgD_/",
+   "precision": "day",
+   "place": {
+    "ca": "Circ Rural, Capafonts",
+    "es": "Circ Rural, Capafonts",
+    "en": "Circ Rural, Capafonts",
+    "de": "Circ Rural, Capafonts",
+    "fr": "Circ Rural, Capafonts",
+    "it": "Circ Rural, Capafonts",
+    "pt": "Circ Rural, Capafonts",
+    "ja": "Circ Rural, Capafonts"
+   },
+   "note": {
+    "ca": "Itinerant en xanques",
+    "es": "Itinerante en zancos",
+    "en": "Stilt walkact",
+    "de": "Stelzen-Walkact",
+    "fr": "Déambulation sur échasses",
+    "it": "Itinerante sui trampoli",
+    "pt": "Itinerante em andas",
+    "ja": "竹馬の練り歩き"
+   },
+   "ws": {}
+  },
+  {
+   "start": "2026-07-24",
+   "end": "2026-07-26",
+   "show": "brass",
+   "url": "https://sommerwerft.de/?lang=en",
+   "precision": "day",
+   "place": {
+    "ca": "Sommerwerft Theater Festival, Frankfurt del Main (DE)",
+    "es": "Sommerwerft Theater Festival, Fráncfort del Meno (DE)",
+    "en": "Sommerwerft Theater Festival, Frankfurt am Main (DE)",
+    "de": "Sommerwerft Theater Festival, Frankfurt am Main (DE)",
+    "fr": "Sommerwerft Theater Festival, Francfort-sur-le-Main (DE)",
+    "it": "Sommerwerft Theater Festival, Francoforte sul Meno (DE)",
+    "pt": "Sommerwerft Theater Festival, Francoforte do Meno (DE)",
+    "ja": "Sommerwerft Theater Festival, フランクフルト・アム・マイン (DE)"
+   },
+   "note": {
+    "ca": "<a href=\"{W}\">Espectacle i tallers</a>",
+    "es": "<a href=\"{W}\">Espectáculo y talleres</a>",
+    "en": "<a href=\"{W}\">Show and workshops</a>",
+    "de": "<a href=\"{W}\">Show und Workshops</a>",
+    "fr": "<a href=\"{W}\">Spectacle et ateliers</a>",
+    "it": "<a href=\"{W}\">Spettacolo e laboratori</a>",
+    "pt": "<a href=\"{W}\">Espetáculo e oficinas</a>",
+    "ja": "<a href=\"{W}\">公演とワークショップ</a>"
+   },
+   "ws": {
+    "ca": "Tallers: <a href=\"{W}\">música amb Yiflauki</a> · <a href=\"{W}\">xanques</a> · maquillatge, creació de personatges, dansa i concert, creats amb el públic i <a href=\"https://lasmarikarmen.com\" rel=\"noopener\" target=\"_blank\">Las Marikarmen</a>",
+    "es": "Talleres: <a href=\"{W}\">música con Yiflauki</a> · <a href=\"{W}\">zancos</a> · maquillaje, creación de personajes, danza y concierto, creados con el público y <a href=\"https://lasmarikarmen.com\" rel=\"noopener\" target=\"_blank\">Las Marikarmen</a>",
+    "en": "Workshops: <a href=\"{W}\">music with Yiflauki</a> · <a href=\"{W}\">stilts</a> · make-up, character creation, dance and a concert, co-created with the audience and <a href=\"https://lasmarikarmen.com\" rel=\"noopener\" target=\"_blank\">Las Marikarmen</a>",
+    "de": "Workshops: <a href=\"{W}\">Musik mit Yiflauki</a> · <a href=\"{W}\">Stelzen</a> · Make-up, Figurenentwicklung, Tanz und Konzert, gemeinsam mit dem Publikum und <a href=\"https://lasmarikarmen.com\" rel=\"noopener\" target=\"_blank\">Las Marikarmen</a>",
+    "fr": "Ateliers: <a href=\"{W}\">musique avec Yiflauki</a> · <a href=\"{W}\">échasses</a> · maquillage, création de personnages, danse et concert, créés avec le public et <a href=\"https://lasmarikarmen.com\" rel=\"noopener\" target=\"_blank\">Las Marikarmen</a>",
+    "it": "Laboratori: <a href=\"{W}\">musica con Yiflauki</a> · <a href=\"{W}\">trampoli</a> · trucco, creazione di personaggi, danza e concerto, creati con il pubblico e <a href=\"https://lasmarikarmen.com\" rel=\"noopener\" target=\"_blank\">Las Marikarmen</a>",
+    "pt": "Oficinas: <a href=\"{W}\">música com Yiflauki</a> · <a href=\"{W}\">andas</a> · maquilhagem, criação de personagens, dança e concerto, criados com o público e <a href=\"https://lasmarikarmen.com\" rel=\"noopener\" target=\"_blank\">Las Marikarmen</a>",
+    "ja": "ワークショップ: <a href=\"{W}\">Yiflauki による音楽</a> · <a href=\"{W}\">竹馬</a> · 観客と一緒に作るメイク、キャラクター作り、ダンス、コンサート（共同： <a href=\"https://lasmarikarmen.com\" rel=\"noopener\" target=\"_blank\">Las Marikarmen</a>）"
+   }
+  },
+  {
+   "start": "2026-05-30",
+   "end": "2026-05-31",
+   "show": "brass",
+   "url": "https://www.firadelvapor.cat/programa.html",
+   "precision": "day",
+   "place": {
+    "ca": "Fira del Vapor, Sant Vicenç de Castellet",
+    "es": "Fira del Vapor, Sant Vicenç de Castellet",
+    "en": "Fira del Vapor, Sant Vicenç de Castellet",
+    "de": "Fira del Vapor, Sant Vicenç de Castellet",
+    "fr": "Fira del Vapor, Sant Vicenç de Castellet",
+    "it": "Fira del Vapor, Sant Vicenç de Castellet",
+    "pt": "Fira del Vapor, Sant Vicenç de Castellet",
+    "ja": "Fira del Vapor, Sant Vicenç de Castellet"
+   },
+   "note": {
+    "ca": "",
+    "es": "",
+    "en": "",
+    "de": "",
+    "fr": "",
+    "it": "",
+    "pt": "",
+    "ja": ""
+   },
+   "ws": {}
+  },
+  {
+   "start": "2026-05-08",
+   "end": "2026-05-11",
+   "show": "brass",
+   "url": "https://www.protagon.net/en/unterwegs",
+   "precision": "day",
+   "place": {
+    "ca": "Unterwegs Theater Festival, Mühlheim am Main & Dreieich (DE)",
+    "es": "Unterwegs Theater Festival, Mühlheim am Main & Dreieich (DE)",
+    "en": "Unterwegs Theater Festival, Mühlheim am Main & Dreieich (DE)",
+    "de": "Unterwegs Theater Festival, Mühlheim am Main & Dreieich (DE)",
+    "fr": "Unterwegs Theater Festival, Mühlheim am Main & Dreieich (DE)",
+    "it": "Unterwegs Theater Festival, Mühlheim am Main & Dreieich (DE)",
+    "pt": "Unterwegs Theater Festival, Mühlheim am Main & Dreieich (DE)",
+    "ja": "Unterwegs Theater Festival, Mühlheim am Main & Dreieich (DE)"
+   },
+   "note": {
+    "ca": "",
+    "es": "",
+    "en": "",
+    "de": "",
+    "fr": "",
+    "it": "",
+    "pt": "",
+    "ja": ""
+   },
+   "ws": {}
+  },
+  {
+   "start": "2026-03-02",
+   "end": "2026-03-08",
+   "show": "joc",
+   "url": "https://tubdassaig.com/",
+   "precision": "day",
+   "place": {
+    "ca": "Tub d'assaig, Terrassa",
+    "es": "Tub d'assaig, Terrassa",
+    "en": "Tub d'assaig, Terrassa",
+    "de": "Tub d'assaig, Terrassa",
+    "fr": "Tub d'assaig, Terrassa",
+    "it": "Tub d'assaig, Terrassa",
+    "pt": "Tub d'assaig, Terrassa",
+    "ja": "Tub d'assaig, Terrassa"
+   },
+   "note": {
+    "ca": "Residència artística",
+    "es": "Residencia artística",
+    "en": "Artistic residency",
+    "de": "Künstlerische Residenz",
+    "fr": "Résidence artistique",
+    "it": "Residenza artistica",
+    "pt": "Residência artística",
+    "ja": "アーティスト・イン・レジデンス"
+   },
+   "ws": {}
+  },
+  {
+   "start": "2025-10-25",
+   "end": "2025-10-25",
+   "show": "freakfrac",
+   "url": null,
+   "precision": "day",
+   "place": {
+    "ca": "Festival Clownic, Torrelles de Foix",
+    "es": "Festival Clownic, Torrelles de Foix",
+    "en": "Festival Clownic, Torrelles de Foix",
+    "de": "Festival Clownic, Torrelles de Foix",
+    "fr": "Festival Clownic, Torrelles de Foix",
+    "it": "Festival Clownic, Torrelles de Foix",
+    "pt": "Festival Clownic, Torrelles de Foix",
+    "ja": "Festival Clownic, Torrelles de Foix"
+   },
+   "note": {
+    "ca": "",
+    "es": "",
+    "en": "",
+    "de": "",
+    "fr": "",
+    "it": "",
+    "pt": "",
+    "ja": ""
+   },
+   "ws": {}
+  },
+  {
+   "start": "2025-03-01",
+   "end": "2025-03-01",
+   "show": "brass",
+   "url": "https://www.ateneulabobila.org/",
+   "precision": "day",
+   "place": {
+    "ca": "Festes de Porta, Ateneu la Bòbila, Barcelona",
+    "es": "Festes de Porta, Ateneu la Bòbila, Barcelona",
+    "en": "Festes de Porta, Ateneu la Bòbila, Barcelona",
+    "de": "Festes de Porta, Ateneu la Bòbila, Barcelona",
+    "fr": "Festes de Porta, Ateneu la Bòbila, Barcelona",
+    "it": "Festes de Porta, Ateneu la Bòbila, Barcelona",
+    "pt": "Festes de Porta, Ateneu la Bòbila, Barcelona",
+    "ja": "Festes de Porta, Ateneu la Bòbila, Barcelona"
+   },
+   "note": {
+    "ca": "Estrena",
+    "es": "Estreno",
+    "en": "Premiere",
+    "de": "Premiere",
+    "fr": "Première",
+    "it": "Debutto",
+    "pt": "Estreia",
+    "ja": "初演"
+   },
+   "ws": {}
+  },
+  {
+   "start": "2024-05-01",
+   "end": "2025-03-01",
+   "show": "brass",
+   "url": "https://www.ateneulabobila.org/",
+   "precision": "month",
+   "place": {
+    "ca": "Ateneu la Bòbila, Barcelona",
+    "es": "Ateneu la Bòbila, Barcelona",
+    "en": "Ateneu la Bòbila, Barcelona",
+    "de": "Ateneu la Bòbila, Barcelona",
+    "fr": "Ateneu la Bòbila, Barcelona",
+    "it": "Ateneu la Bòbila, Barcelona",
+    "pt": "Ateneu la Bòbila, Barcelona",
+    "ja": "Ateneu la Bòbila, Barcelona"
+   },
+   "note": {
+    "ca": "Residència musical de llarga durada",
+    "es": "Residencia musical de larga duración",
+    "en": "Long-term music residency",
+    "de": "Langzeit-Musikresidenz",
+    "fr": "Résidence musicale de longue durée",
+    "it": "Residenza musicale di lunga durata",
+    "pt": "Residência musical de longa duração",
+    "ja": "長期音楽レジデンス"
+   },
+   "ws": {}
+  },
+  {
+   "start": "2025-01-04",
+   "end": "2025-01-05",
+   "show": "freakfrac",
+   "url": "https://tubdassaig.com/",
+   "precision": "day",
+   "place": {
+    "ca": "Tub d'assaig, Terrassa & Sant Quirze del Vallès",
+    "es": "Tub d'assaig, Terrassa & Sant Quirze del Vallès",
+    "en": "Tub d'assaig, Terrassa & Sant Quirze del Vallès",
+    "de": "Tub d'assaig, Terrassa & Sant Quirze del Vallès",
+    "fr": "Tub d'assaig, Terrassa & Sant Quirze del Vallès",
+    "it": "Tub d'assaig, Terrassa & Sant Quirze del Vallès",
+    "pt": "Tub d'assaig, Terrassa & Sant Quirze del Vallès",
+    "ja": "Tub d'assaig, Terrassa & Sant Quirze del Vallès"
+   },
+   "note": {
+    "ca": "",
+    "es": "",
+    "en": "",
+    "de": "",
+    "fr": "",
+    "it": "",
+    "pt": "",
+    "ja": ""
+   },
+   "ws": {}
+  },
+  {
+   "start": "2024-12-13",
+   "end": "2024-12-13",
+   "show": "brass",
+   "url": "https://www.ateneulabobila.org/",
+   "precision": "day",
+   "place": {
+    "ca": "Ateneu la Bòbila, Barcelona",
+    "es": "Ateneu la Bòbila, Barcelona",
+    "en": "Ateneu la Bòbila, Barcelona",
+    "de": "Ateneu la Bòbila, Barcelona",
+    "fr": "Ateneu la Bòbila, Barcelona",
+    "it": "Ateneu la Bòbila, Barcelona",
+    "pt": "Ateneu la Bòbila, Barcelona",
+    "ja": "Ateneu la Bòbila, Barcelona"
+   },
+   "note": {
+    "ca": "Masterclass de dansa «Música en moviment» · amb Dada Draženka Večerin (DE / HR)",
+    "es": "Masterclass de danza «Música en movimiento» · con Dada Draženka Večerin (DE / HR)",
+    "en": "Dance masterclass “Music in Movement” · with Dada Draženka Večerin (DE / HR)",
+    "de": "Tanz-Masterclass „Musik in Bewegung“ · mit Dada Draženka Večerin (DE / HR)",
+    "fr": "Masterclass de danse « Musique en mouvement » · avec Dada Draženka Večerin (DE / HR)",
+    "it": "Masterclass di danza «Musica in movimento» · con Dada Draženka Večerin (DE / HR)",
+    "pt": "Masterclass de dança «Música em movimento» · com Dada Draženka Večerin (DE / HR)",
+    "ja": "ダンス・マスタークラス「動きの中の音楽」 · 講師： Dada Draženka Večerin (DE / HR)"
+   },
+   "ws": {}
+  },
+  {
+   "start": "2024-12-10",
+   "end": "2024-12-10",
+   "show": "freakfrac",
+   "url": null,
+   "precision": "day",
+   "place": {
+    "ca": "Casal de les Fonts, Terrassa",
+    "es": "Casal de les Fonts, Terrassa",
+    "en": "Casal de les Fonts, Terrassa",
+    "de": "Casal de les Fonts, Terrassa",
+    "fr": "Casal de les Fonts, Terrassa",
+    "it": "Casal de les Fonts, Terrassa",
+    "pt": "Casal de les Fonts, Terrassa",
+    "ja": "Casal de les Fonts, Terrassa"
+   },
+   "note": {
+    "ca": "",
+    "es": "",
+    "en": "",
+    "de": "",
+    "fr": "",
+    "it": "",
+    "pt": "",
+    "ja": ""
+   },
+   "ws": {}
+  }
+ ],
+ "artists": [
+  {
+   "id": "tyle",
+   "name": "tyle fernández",
+   "photo": "portrait-tyle",
+   "link": "https://linktr.ee/bicialta"
+  },
+  {
+   "id": "albert",
+   "name": "Albert Pérez",
+   "photo": "portrait-albert",
+   "link": "https://www.ciafiligranes.net/es/filipersonas/makutu"
+  },
+  {
+   "id": "jordi",
+   "name": "Jordi Torrens",
+   "photo": "portrait-jordi",
+   "link": "https://www.ciafiligranes.net/es/filipersonas/trinxeta"
+  },
+  {
+   "id": "alian",
+   "name": "Alián Rodrigues",
+   "photo": "portrait-alian",
+   "link": "https://linktr.ee/a.alian.n"
+  },
+  {
+   "id": "juan",
+   "name": "Juan Lichter",
+   "photo": "portrait-juan",
+   "link": "https://instagram.com/juanlichter90"
+  },
+  {
+   "id": "stefano",
+   "name": "Stefano Ferraro",
+   "photo": "portrait-stefano",
+   "link": "https://linktr.ee/stefano.ferraro"
+  },
+  {
+   "id": "lucas",
+   "name": "Lucas Raiquen Pereyra",
+   "photo": "portrait-lucas",
+   "link": "https://instagram.com/lukasraiquen"
+  },
+  {
+   "id": "facu",
+   "name": "Facundo Fernández Alberdi",
+   "photo": "portrait-facu",
+   "link": "https://instagram.com/ffa_musica"
+  }
+ ],
+ "workshop_groups": [
+  {
+   "id": "stilts",
+   "kind": "circus",
+   "photo": "tallers-zancos-1",
+   "by": "tyle fernández",
+   "url": "https://linktr.ee/bicialta",
+   "dossier": "xanques_dossier"
+  },
+  {
+   "id": "circus",
+   "kind": "circus",
+   "photo": "taller-circo-20-1",
+   "by": "Cia. Filigranes",
+   "url": "https://ciafiligranes.net/tallers",
+   "dossier": null
+  },
+  {
+   "id": "music",
+   "kind": "music",
+   "photo": "talleres-10-musica",
+   "by": "Yiflauki",
+   "url": "https://yiflauki.com/",
+   "dossier": null
+  }
+ ],
+ "workshops_gallery": [
+  "talleres-9-musica",
+  "talleres-3",
+  "talleres-1-circ",
+  "talleres-10-equilibrios",
+  "talleres-2-circ",
+  "talleres-3-circ",
+  "talleres-4-circ",
+  "talleres-5-circ",
+  "talleres-4",
+  "tallers-zancos-2",
+  "taller-circo-20-2",
+  "taller-circo-30",
+  "img-0622",
+  "vendaval-102",
+  "photo-2026-09-09-20-43-56"
+ ],
+ "substitutes": [
+  "Dennis",
+  "Laia"
+ ]
+}

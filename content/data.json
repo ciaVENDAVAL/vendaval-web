@@ -1,0 +1,772 @@
+{
+ "site": {
+  "domain": "vendaval.cat",
+  "email": "VENDAVAL@anartist.org",
+  "phone": "+34 644 389 757",
+  "phone_link": "+34644389757",
+  "form_endpoint": "https://api.web3forms.com/submit",
+  "form_access_key": "14340506-b525-497b-9cee-8ec2dc00c07d",
+  "default_lang": "ca"
+ },
+ "languages": [
+  "ca",
+  "es",
+  "en",
+  "de",
+  "fr",
+  "it",
+  "pt",
+  "ja"
+ ],
+ "socials": [
+  {
+   "id": "instagram",
+   "label": "Instagram",
+   "url": "https://www.instagram.com/vendaval.brass/"
+  },
+  {
+   "id": "youtube",
+   "label": "YouTube",
+   "url": "https://www.youtube.com/@VENDAVAL.YOUTUBE"
+  },
+  {
+   "id": "telegram",
+   "label": "Telegram",
+   "url": "https://t.me/+34644389757"
+  },
+  {
+   "id": "whatsapp",
+   "label": "WhatsApp",
+   "url": "https://wa.me/34644389757"
+  },
+  {
+   "id": "email",
+   "label": "Email",
+   "url": "mailto:VENDAVAL@anartist.org"
+  }
+ ],
+ "hero_slides": [
+  {
+   "show": "brass",
+   "image": "vendaval-firavapor002",
+   "pos": "50% 35%"
+  },
+  {
+   "show": "friend",
+   "image": "amigui-5",
+   "pos": "50% 40%"
+  },
+  {
+   "show": "joc",
+   "image": "windy-vespa-grinding",
+   "pos": "50% 50%"
+  },
+  {
+   "show": "freakfrac",
+   "image": "freak-frac-9",
+   "pos": "50% 40%"
+  }
+ ],
+ "about_image": "vendaval-firavapor001",
+ "shows": [
+  {
+   "id": "brass",
+   "slug": "brass",
+   "cover": "vendaval-passecalles-000",
+   "side": [],
+   "gallery": [
+    "vendaval-003-400px",
+    "vendaval-unterwegs001",
+    "vendaval-unterwegs002",
+    "vendaval-unterwegs003",
+    "vendaval-unterwegs004",
+    "vendaval-bobila001",
+    "vendaval-102",
+    "img-0677",
+    "img-0780",
+    "photo-2026-09-09-20-43-56",
+    "img-0622"
+   ],
+   "link": null
+  },
+  {
+   "id": "friend",
+   "slug": "imaginary-friend",
+   "cover": "amigui-5",
+   "side": [],
+   "gallery": [
+    "amigui-7",
+    "amigui-mg-7306",
+    "amigui-footer-12",
+    "amigui-2",
+    "amigui-4",
+    "amigui-1"
+   ],
+   "link": null
+  },
+  {
+   "id": "joc",
+   "slug": "el-joc-etern",
+   "cover": "el-joc-etern-drawing-swap",
+   "side": [
+    "windy-vespa-grinding"
+   ],
+   "gallery": [
+    "img-0780",
+    "creating-windy-1",
+    "creating-windy-5",
+    "creating-windy-2",
+    "creating-windy-4",
+    "creating-windy-3",
+    "creating-el-joc-etern-8",
+    "creating-el-joc-etern-10",
+    "creating-el-joc-etern-13",
+    "creating-el-joc-etern-17",
+    "creating-el-joc-etern-24",
+    "creating-el-joc-etern-6",
+    "creating-el-joc-etern-7",
+    "windy-cad-frame",
+    "windy-trailer-frame",
+    "windy-trailer-deck",
+    "windy-vespa-grinding",
+    "windy-vespa-motor",
+    "windy-welding-frame",
+    "windy-welding",
+    "windy-steering-part",
+    "windy-vespa-rear",
+    "windy-vespa-frame",
+    "boat-chicken-rudder",
+    "masks-boat-drummer",
+    "mask-rat-drummer",
+    "mask-owlcat-sail"
+   ],
+   "link": null
+  },
+  {
+   "id": "freakfrac",
+   "slug": "freak-frac",
+   "cover": "freak-frac-3",
+   "side": [],
+   "gallery": [
+    "freak-frac-9",
+    "freak-frac-1",
+    "freak-frac-8",
+    "freak-frac-2",
+    "freak-frac-4",
+    "freak-frac-5",
+    "freak-frac-6",
+    "freak-frac-7",
+    "freak-frac-2021-1",
+    "freak-frac-2021-2",
+    "freak-frac-2021-3"
+   ],
+   "link": "https://ciafiligranes.net/en/shows/freak-frac"
+  }
+ ],
+ "video": {
+  "id": "HpkRH-YxNXE",
+  "poster": "vendaval-unterwegs002",
+  "key": "brass_trailer"
+ },
+ "downloads": {
+  "brass_dossier": {
+   "show": "brass",
+   "kind": "dossier",
+   "short": "brass",
+   "files": {
+    "ca": "pdf/VENDAVAL-Brass_CA_dossier_2026-09.pdf",
+    "es": "pdf/VENDAVAL-Brass_ES_dossier_2026-09.pdf",
+    "en": "pdf/VENDAVAL-Brass_EN_dossier_2026-09.pdf",
+    "de": "pdf/VENDAVAL-Brass_DE_dossier_2026-09.pdf",
+    "ja": "pdf/VENDAVAL-Brass_JA_dossier_2026-09.pdf"
+   }
+  },
+  "brass_rider": {
+   "show": "brass",
+   "kind": "rider",
+   "short": "brass",
+   "files": {
+    "ca": "pdf/VENDAVAL-Brass_CA_rider_2026-09.pdf",
+    "es": "pdf/VENDAVAL-Brass_ES_rider_2026-09.pdf",
+    "en": "pdf/VENDAVAL-Brass_EN_rider_2026-09.pdf",
+    "de": "pdf/VENDAVAL-Brass_DE_rider_2026-09.pdf"
+   }
+  },
+  "concert_dossier": {
+   "show": "brass",
+   "kind": "dossier",
+   "variant": "concert",
+   "short": "brass-concert",
+   "files": {
+    "ca": "pdf/VENDAVAL-Brass-Concert-Placa_CA_dossier_2026-10.pdf",
+    "es": "pdf/VENDAVAL-Brass-Concert-Placa_ES_dossier_2026-10.pdf",
+    "en": "pdf/VENDAVAL-Brass-Concert-Placa_EN_dossier_2026-10.pdf",
+    "de": "pdf/VENDAVAL-Brass-Concert-Placa_DE_dossier_2026-10.pdf",
+    "fr": "pdf/VENDAVAL-Brass-Concert-Placa_FR_dossier_2026-10.pdf",
+    "it": "pdf/VENDAVAL-Brass-Concert-Placa_IT_dossier_2026-10.pdf",
+    "pt": "pdf/VENDAVAL-Brass-Concert-Placa_PT_dossier_2026-10.pdf",
+    "ja": "pdf/VENDAVAL-Brass-Concert-Placa_JA_dossier_2026-10.pdf"
+   }
+  },
+  "concert_rider": {
+   "show": "brass",
+   "kind": "rider",
+   "variant": "concert",
+   "short": "brass-concert",
+   "files": {
+    "ca": "pdf/VENDAVAL-Brass-Concert-Placa_CA_rider_2026-10.pdf",
+    "es": "pdf/VENDAVAL-Brass-Concert-Placa_ES_rider_2026-10.pdf",
+    "en": "pdf/VENDAVAL-Brass-Concert-Placa_EN_rider_2026-10.pdf",
+    "de": "pdf/VENDAVAL-Brass-Concert-Placa_DE_rider_2026-10.pdf",
+    "fr": "pdf/VENDAVAL-Brass-Concert-Placa_FR_rider_2026-10.pdf",
+    "it": "pdf/VENDAVAL-Brass-Concert-Placa_IT_rider_2026-10.pdf",
+    "pt": "pdf/VENDAVAL-Brass-Concert-Placa_PT_rider_2026-10.pdf",
+    "ja": "pdf/VENDAVAL-Brass-Concert-Placa_JA_rider_2026-10.pdf"
+   }
+  },
+  "joc_dossier": {
+   "show": "joc",
+   "kind": "dossier",
+   "short": "el-joc-etern",
+   "files": {
+    "ca": "pdf/VENDAVAL_El-Joc-Etern_CA_dossier.pdf",
+    "en": "pdf/VENDAVAL_El-Joc-Etern_EN_dossier.pdf"
+   }
+  },
+  "friend_dossier": {
+   "show": "friend",
+   "kind": "dossier",
+   "short": "imaginary-friend",
+   "files": {
+    "ca": "pdf/VENDAVAL_Amigui-Imaginari_CA_dossier_2026-10.pdf",
+    "es": "pdf/VENDAVAL_Amigui-Imaginari_ES_dossier_2026-10.pdf",
+    "en": "pdf/VENDAVAL_Imaginary-Friend_EN_dossier_2026-10.pdf",
+    "de": "pdf/VENDAVAL_Imaginary-Friend_DE_dossier_2026-10.pdf",
+    "fr": "pdf/VENDAVAL_Amigui-Imaginari_FR_dossier_2026-10.pdf",
+    "it": "pdf/VENDAVAL_Amigui-Imaginari_IT_dossier_2026-10.pdf",
+    "pt": "pdf/VENDAVAL_Amigui-Imaginari_PT_dossier_2026-10.pdf",
+    "ja": "pdf/VENDAVAL_Imaginary-Friend_JA_dossier_2026-10.pdf"
+   }
+  },
+  "friend_rider": {
+   "show": "friend",
+   "kind": "rider",
+   "short": "imaginary-friend",
+   "files": {
+    "ca": "pdf/VENDAVAL_Amigui-Imaginari_CA_rider.pdf",
+    "es": "pdf/VENDAVAL_Amigui-Imaginari_ES_rider.pdf",
+    "en": "pdf/VENDAVAL_Imaginary-Friend_EN_rider.pdf",
+    "de": "pdf/VENDAVAL_Imaginary-Friend_DE_rider.pdf"
+   }
+  },
+  "xanques_dossier": {
+   "show": "xanques",
+   "kind": "workshop",
+   "short": "stilts-workshops",
+   "files": {
+    "ca": "pdf/VENDAVAL_Tallers-Xanques_CA_dossier.pdf",
+    "es": "pdf/VENDAVAL_Talleres-Zancos_ES_dossier.pdf",
+    "en": "pdf/VENDAVAL_Stilts-Workshops_EN_dossier.pdf"
+   }
+  }
+ },
+ "download_boxes": [
+  {
+   "id": "brass",
+   "items": [
+    "brass_dossier",
+    "brass_rider",
+    "concert_dossier",
+    "concert_rider"
+   ],
+   "press": "brass"
+  },
+  {
+   "id": "friend",
+   "items": [
+    "friend_dossier",
+    "friend_rider"
+   ],
+   "press": "friend"
+  },
+  {
+   "id": "joc",
+   "items": [
+    "joc_dossier"
+   ],
+   "press": "joc"
+  },
+  {
+   "id": "freakfrac",
+   "link": "https://ciafiligranes.net/en/shows/freak-frac",
+   "link_label": "ciafiligranes.net"
+  },
+  {
+   "id": "xanques",
+   "title": "xanques",
+   "items": [
+    "xanques_dossier"
+   ],
+   "press": "xanques",
+   "thumb": "tallers-zancos-1"
+  },
+  {
+   "id": "yiflauki",
+   "title": "yiflauki",
+   "link": "https://yiflauki.com/",
+   "link_label": "yiflauki.com",
+   "thumb": "talleres-10-musica"
+  }
+ ],
+ "press": {
+  "brass": [
+   "vendaval-firavapor002",
+   "vendaval-firavapor001",
+   "vendaval-passecalles-000",
+   "vendaval-003-400px",
+   "vendaval-unterwegs001",
+   "vendaval-unterwegs002",
+   "vendaval-unterwegs003",
+   "vendaval-unterwegs004",
+   "vendaval-bobila001",
+   "vendaval-102",
+   "img-0677",
+   "img-0780",
+   "photo-2026-09-09-20-43-56",
+   "img-0622"
+  ],
+  "joc": [
+   "el-joc-etern-drawing-swap",
+   "windy-vespa-grinding",
+   "img-0780",
+   "creating-windy-1",
+   "creating-windy-2",
+   "creating-windy-3",
+   "creating-windy-4",
+   "creating-windy-5",
+   "creating-el-joc-etern-8",
+   "creating-el-joc-etern-13",
+   "boat-chicken-rudder",
+   "masks-boat-drummer",
+   "mask-owlcat-sail"
+  ],
+  "friend": [
+   "amigui-5",
+   "amigui-7",
+   "amigui-mg-7306",
+   "amigui-footer-12",
+   "amigui-2",
+   "amigui-4",
+   "amigui-1"
+  ],
+  "xanques": [
+   "tallers-zancos-1",
+   "tallers-zancos-2"
+  ]
+ },
+ "agenda": [
+  {
+   "start": "2024-05-01",
+   "end": "2025-03-01",
+   "show": "brass",
+   "url": "https://www.ateneulabobila.org/",
+   "precision": "month",
+   "place": "Ateneu la Bòbila, Barcelona",
+   "note": {
+    "ca": "Residència musical de llarga durada",
+    "es": "Residencia musical de larga duración",
+    "en": "Long-term music residency",
+    "de": "Langzeit-Musikresidenz",
+    "fr": "Résidence musicale de longue durée",
+    "it": "Residenza musicale di lunga durata",
+    "pt": "Residência musical de longa duração",
+    "ja": "長期音楽レジデンス"
+   },
+   "ws": ""
+  },
+  {
+   "start": "2024-12-10",
+   "end": "2024-12-10",
+   "show": "freakfrac",
+   "url": null,
+   "precision": "day",
+   "place": "Casal de les Fonts, Terrassa",
+   "note": "",
+   "ws": ""
+  },
+  {
+   "start": "2024-12-13",
+   "end": "2024-12-13",
+   "show": "brass",
+   "url": "https://www.ateneulabobila.org/",
+   "precision": "day",
+   "place": "Ateneu la Bòbila, Barcelona",
+   "note": {
+    "ca": "Masterclass de dansa «Música en moviment» · amb Dada Draženka Večerin (DE / HR)",
+    "es": "Masterclass de danza «Música en movimiento» · con Dada Draženka Večerin (DE / HR)",
+    "en": "Dance masterclass “Music in Movement” · with Dada Draženka Večerin (DE / HR)",
+    "de": "Tanz-Masterclass „Musik in Bewegung“ · mit Dada Draženka Večerin (DE / HR)",
+    "fr": "Masterclass de danse « Musique en mouvement » · avec Dada Draženka Večerin (DE / HR)",
+    "it": "Masterclass di danza «Musica in movimento» · con Dada Draženka Večerin (DE / HR)",
+    "pt": "Masterclass de dança «Música em movimento» · com Dada Draženka Večerin (DE / HR)",
+    "ja": "ダンス・マスタークラス「動きの中の音楽」 · 講師： Dada Draženka Večerin (DE / HR)"
+   },
+   "ws": ""
+  },
+  {
+   "start": "2025-01-04",
+   "end": "2025-01-05",
+   "show": "freakfrac",
+   "url": "https://tubdassaig.com/",
+   "precision": "day",
+   "place": "Tub d'assaig, Terrassa & Sant Quirze del Vallès",
+   "note": "",
+   "ws": ""
+  },
+  {
+   "start": "2025-03-01",
+   "end": "2025-03-01",
+   "show": "brass",
+   "url": "https://www.ateneulabobila.org/",
+   "precision": "day",
+   "place": "Festes de Porta, Ateneu la Bòbila, Barcelona",
+   "note": {
+    "ca": "Estrena",
+    "es": "Estreno",
+    "en": "Premiere",
+    "de": "Premiere",
+    "fr": "Première",
+    "it": "Debutto",
+    "pt": "Estreia",
+    "ja": "初演"
+   },
+   "ws": ""
+  },
+  {
+   "start": "2025-10-25",
+   "end": "2025-10-25",
+   "show": "freakfrac",
+   "url": "https://clownic.cat/",
+   "precision": "day",
+   "place": "Festival Clownic, Torrelles de Foix",
+   "note": "",
+   "ws": ""
+  },
+  {
+   "start": "2026-03-02",
+   "end": "2026-03-08",
+   "show": "joc",
+   "url": "https://tubdassaig.com/",
+   "precision": "day",
+   "place": "Tub d'assaig, Terrassa",
+   "note": {
+    "ca": "Residència artística",
+    "es": "Residencia artística",
+    "en": "Artistic residency",
+    "de": "Künstlerische Residenz",
+    "fr": "Résidence artistique",
+    "it": "Residenza artistica",
+    "pt": "Residência artística",
+    "ja": "アーティスト・イン・レジデンス"
+   },
+   "ws": ""
+  },
+  {
+   "start": "2026-05-08",
+   "end": "2026-05-11",
+   "show": "brass",
+   "url": "https://www.protagon.net/en/unterwegs",
+   "precision": "day",
+   "place": "Unterwegs Theater Festival, Mühlheim am Main & Dreieich (DE)",
+   "note": "",
+   "ws": ""
+  },
+  {
+   "start": "2026-05-30",
+   "end": "2026-05-31",
+   "show": "brass",
+   "url": "https://www.firadelvapor.cat/programa.html",
+   "precision": "day",
+   "place": "Fira del Vapor, Sant Vicenç de Castellet",
+   "note": "",
+   "ws": ""
+  },
+  {
+   "start": "2026-07-24",
+   "end": "2026-07-26",
+   "show": "brass",
+   "url": "https://sommerwerft.de/?lang=en",
+   "precision": "day",
+   "place": {
+    "ca": "Sommerwerft Theater Festival, Frankfurt del Main (DE)",
+    "es": "Sommerwerft Theater Festival, Fráncfort del Meno (DE)",
+    "en": "Sommerwerft Theater Festival, Frankfurt am Main (DE)",
+    "de": "Sommerwerft Theater Festival, Frankfurt am Main (DE)",
+    "fr": "Sommerwerft Theater Festival, Francfort-sur-le-Main (DE)",
+    "it": "Sommerwerft Theater Festival, Francoforte sul Meno (DE)",
+    "pt": "Sommerwerft Theater Festival, Francoforte do Meno (DE)",
+    "ja": "Sommerwerft Theater Festival, フランクフルト・アム・マイン (DE)"
+   },
+   "note": {
+    "ca": "<a href=\"{W}\">Espectacle i tallers</a>",
+    "es": "<a href=\"{W}\">Espectáculo y talleres</a>",
+    "en": "<a href=\"{W}\">Show and workshops</a>",
+    "de": "<a href=\"{W}\">Show und Workshops</a>",
+    "fr": "<a href=\"{W}\">Spectacle et ateliers</a>",
+    "it": "<a href=\"{W}\">Spettacolo e laboratori</a>",
+    "pt": "<a href=\"{W}\">Espetáculo e oficinas</a>",
+    "ja": "<a href=\"{W}\">公演とワークショップ</a>"
+   },
+   "ws": {
+    "ca": "Tallers: <a href=\"{W}\">música amb Yiflauki</a> · <a href=\"{W}\">xanques</a> · maquillatge, creació de personatges, dansa i concert, creats amb el públic i <a href=\"https://lasmarikarmen.com\" rel=\"noopener\" target=\"_blank\">Las Marikarmen</a>",
+    "es": "Talleres: <a href=\"{W}\">música con Yiflauki</a> · <a href=\"{W}\">zancos</a> · maquillaje, creación de personajes, danza y concierto, creados con el público y <a href=\"https://lasmarikarmen.com\" rel=\"noopener\" target=\"_blank\">Las Marikarmen</a>",
+    "en": "Workshops: <a href=\"{W}\">music with Yiflauki</a> · <a href=\"{W}\">stilts</a> · make-up, character creation, dance and a concert, co-created with the audience and <a href=\"https://lasmarikarmen.com\" rel=\"noopener\" target=\"_blank\">Las Marikarmen</a>",
+    "de": "Workshops: <a href=\"{W}\">Musik mit Yiflauki</a> · <a href=\"{W}\">Stelzen</a> · Make-up, Figurenentwicklung, Tanz und Konzert, gemeinsam mit dem Publikum und <a href=\"https://lasmarikarmen.com\" rel=\"noopener\" target=\"_blank\">Las Marikarmen</a>",
+    "fr": "Ateliers: <a href=\"{W}\">musique avec Yiflauki</a> · <a href=\"{W}\">échasses</a> · maquillage, création de personnages, danse et concert, créés avec le public et <a href=\"https://lasmarikarmen.com\" rel=\"noopener\" target=\"_blank\">Las Marikarmen</a>",
+    "it": "Laboratori: <a href=\"{W}\">musica con Yiflauki</a> · <a href=\"{W}\">trampoli</a> · trucco, creazione di personaggi, danza e concerto, creati con il pubblico e <a href=\"https://lasmarikarmen.com\" rel=\"noopener\" target=\"_blank\">Las Marikarmen</a>",
+    "pt": "Oficinas: <a href=\"{W}\">música com Yiflauki</a> · <a href=\"{W}\">andas</a> · maquilhagem, criação de personagens, dança e concerto, criados com o público e <a href=\"https://lasmarikarmen.com\" rel=\"noopener\" target=\"_blank\">Las Marikarmen</a>",
+    "ja": "ワークショップ: <a href=\"{W}\">Yiflauki による音楽</a> · <a href=\"{W}\">竹馬</a> · 観客と一緒に作るメイク、キャラクター作り、ダンス、コンサート（共同： <a href=\"https://lasmarikarmen.com\" rel=\"noopener\" target=\"_blank\">Las Marikarmen</a>）"
+   }
+  },
+  {
+   "start": "2026-09-12",
+   "end": "2026-09-12",
+   "show": "brass",
+   "url": "https://www.instagram.com/p/DcCAY8LOgD_/",
+   "precision": "day",
+   "place": "Circ Rural, Capafonts",
+   "note": {
+    "ca": "Itinerant en xanques",
+    "es": "Itinerante en zancos",
+    "en": "Stilt walkact",
+    "de": "Stelzen-Walkact",
+    "fr": "Déambulation sur échasses",
+    "it": "Itinerante sui trampoli",
+    "pt": "Itinerante em andas",
+    "ja": "竹馬の練り歩き"
+   },
+   "ws": ""
+  },
+  {
+   "start": "2026-11-07",
+   "end": "2026-11-07",
+   "show": "freakfrac",
+   "url": null,
+   "precision": "day",
+   "place": "Pas de la Casa (Andorra)",
+   "note": "",
+   "ws": ""
+  },
+  {
+   "start": "2027-01-05",
+   "end": "2027-01-05",
+   "show": "freakfrac",
+   "url": null,
+   "precision": "day",
+   "place": "Cavalcada de Reis, Roses",
+   "note": "",
+   "ws": ""
+  },
+  {
+   "start": "2027-02-05",
+   "end": "2027-02-05",
+   "show": "freakfrac",
+   "url": null,
+   "precision": "day",
+   "place": "Andorra",
+   "note": "",
+   "ws": ""
+  }
+ ],
+ "artists": [
+  {
+   "id": "tyle",
+   "name": "tyle fernández",
+   "photo": "portrait-tyle",
+   "link": "https://linktr.ee/bicialta"
+  },
+  {
+   "id": "albert",
+   "name": "Albert Pérez",
+   "photo": "portrait-albert",
+   "link": "https://www.ciafiligranes.net/es/filipersonas/makutu"
+  },
+  {
+   "id": "jordi",
+   "name": "Jordi Torrens",
+   "photo": "portrait-jordi",
+   "link": "https://www.ciafiligranes.net/es/filipersonas/trinxeta"
+  },
+  {
+   "id": "alian",
+   "name": "Alián Rodrigues",
+   "photo": "portrait-alian",
+   "link": "https://linktr.ee/a.alian.n"
+  },
+  {
+   "id": "juan",
+   "name": "Juan Lichter",
+   "photo": "portrait-juan",
+   "link": "https://instagram.com/juanlichter90"
+  },
+  {
+   "id": "stefano",
+   "name": "Stefano Ferraro",
+   "photo": "portrait-stefano",
+   "link": "https://linktr.ee/stefano.ferraro"
+  },
+  {
+   "id": "lucas",
+   "name": "Lucas Raiquen Pereyra",
+   "photo": "portrait-lucas",
+   "link": "https://instagram.com/lukasraiquen"
+  },
+  {
+   "id": "facu",
+   "name": "Facundo Fernández Alberdi",
+   "photo": "portrait-facu",
+   "link": "https://instagram.com/ffa_musica"
+  }
+ ],
+ "artist_gender": {
+  "tyle": "x",
+  "albert": "m",
+  "jordi": "m",
+  "alian": "m",
+  "juan": "m",
+  "stefano": "m",
+  "lucas": "m",
+  "facu": "m"
+ },
+ "substitutes": [
+  "Dennis",
+  "Laia"
+ ],
+ "workshop_groups": [
+  {
+   "id": "stilts",
+   "kind": "circus",
+   "photo": "tallers-zancos-1",
+   "by": "tyle fernández",
+   "url": "https://linktr.ee/bicialta",
+   "dossier": "xanques_dossier"
+  },
+  {
+   "id": "circus",
+   "kind": "circus",
+   "photo": "taller-circo-20-1",
+   "by": "Cia. Filigranes",
+   "url": {
+    "ca": "https://ciafiligranes.net/tallers/",
+    "es": "https://ciafiligranes.net/es/talleres",
+    "*": "https://ciafiligranes.net/en/workshops"
+   },
+   "dossier": null
+  },
+  {
+   "id": "music",
+   "kind": "music",
+   "photo": "talleres-10-musica",
+   "by": "Yiflauki",
+   "url": "https://yiflauki.com/",
+   "dossier": null
+  }
+ ],
+ "workshops_gallery": [
+  "talleres-9-musica",
+  "talleres-3",
+  "talleres-1-circ",
+  "talleres-10-equilibrios",
+  "talleres-2-circ",
+  "talleres-3-circ",
+  "talleres-4-circ",
+  "talleres-5-circ",
+  "talleres-4",
+  "tallers-zancos-2",
+  "taller-circo-20-2",
+  "taller-circo-30",
+  "img-0622",
+  "vendaval-102",
+  "photo-2026-09-09-20-43-56"
+ ],
+ "originals": {
+  "amigui-1": "zancos_peluche_1.jpg",
+  "amigui-2": "zancos_peluche_2.jpg",
+  "amigui-4": "zancos_peluche_4.jpg",
+  "amigui-5": "zancos_peluche_5.jpg",
+  "amigui-7": "zancos_peluche_7.jpg",
+  "amigui-footer-12": "footer_images_12.jpg",
+  "amigui-mg-7306": "_MG_7306.jpg",
+  "boat-chicken-rudder": "20260331_163157.jpg",
+  "creating-el-joc-etern-13": "20260331_164050.jpg",
+  "creating-el-joc-etern-8": "creating_el_Joc_Etern_8.jpg",
+  "creating-windy-1": "creating_windy_1.jpg",
+  "creating-windy-2": "creating_windy_2.jpg",
+  "creating-windy-3": "creating_windy_3.jpg",
+  "creating-windy-4": "creating_windy_4.jpg",
+  "creating-windy-5": "creating_windy_5.jpg",
+  "img-0622": "IMG_0622.JPG",
+  "img-0677": "IMG_0677.JPG",
+  "img-0780": "IMG_0780.JPG",
+  "masks-boat-drummer": "20260401_133927.jpg",
+  "photo-2026-09-09-20-43-56": "photo_2026-09-09_20-43-56.jpg",
+  "tallers-zancos-1": "tallers_zancos_1.jpg",
+  "tallers-zancos-2": "tallers_zancos_2.jpg",
+  "vendaval-003-400px": "VENDAVAL_003-_400px.jpg",
+  "vendaval-102": "VENDAVAL_102.jpg",
+  "vendaval-bobila001": "VENDAVAL_Bobila001.jpg",
+  "vendaval-firavapor001": "VENDAVAL_FiraVapor001.jpg",
+  "vendaval-firavapor002": "VENDAVAL_FiraVapor002.jpg",
+  "vendaval-passecalles-000": "VENDAVAL_passecalles_000.jpg",
+  "vendaval-unterwegs001": "VENDAVAL_Unterwegs001.jpg",
+  "vendaval-unterwegs002": "VENDAVAL_Unterwegs002.jpg",
+  "vendaval-unterwegs003": "VENDAVAL_Unterwegs003.jpg",
+  "vendaval-unterwegs004": "VENDAVAL_Unterwegs004.jpg",
+  "windy-vespa-grinding": "20260324_192711.jpg"
+ },
+ "credits": [
+  {
+   "role": "photo",
+   "people": [
+    {
+     "name": "David Ugalde (ROAR)",
+     "url": "https://www.instagram.com/roar_audiovisual/"
+    },
+    {
+     "name": "Barbara Walzer",
+     "url": "https://www.instagram.com/barbarawalzer/"
+    },
+    {
+     "name": "Jordi Largo",
+     "url": "https://www.jordilargo.com"
+    },
+    {
+     "name": "Albert Garcia",
+     "url": "https://www.instagram.com/al.garciarome"
+    }
+   ]
+  },
+  {
+   "role": "costume",
+   "people": [
+    {
+     "name": "Imaginario de Mónica",
+     "url": "https://imaginariodemonica.wordpress.com"
+    },
+    {
+     "name": "Tropidelia",
+     "url": "https://www.instagram.com/tropidelia"
+    }
+   ]
+  },
+  {
+   "role": "design",
+   "people": [
+    {
+     "name": "bicialta",
+     "url": "https://linktr.ee/bicialta"
+    }
+   ]
+  }
+ ]
+}

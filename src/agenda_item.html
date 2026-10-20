@@ -1,0 +1,6 @@
+<li data-end="{{ e.end }}">
+  <time datetime="{{ e.start }}">{{ fmt_range(e.start, e.end, e.precision) }}</time>
+  <span class="place">{% if e.url %}<a href="{{ e.url }}" rel="noopener" target="_blank">{{ e.place|loc(lang) }}</a>{% else %}{{ e.place|loc(lang) }}{% endif %}</span>
+  <span class="what">{% if e.show %}<a href="{{ H }}{{ slugs[e.show] }}/">{{ t.show[e.show].name }}</a>{% endif %}{% set n = e.note|loc(lang) %}{% if n %}{% if e.show %} · {% endif %}{{ n|replace('{W}', H ~ 'workshops/') }}{% endif %}</span>
+  {% set w = e.ws|loc(lang) %}{% if w %}<span class="what ws">{{ w|replace('{W}', H ~ 'workshops/') }}</span>{% endif %}
+</li>

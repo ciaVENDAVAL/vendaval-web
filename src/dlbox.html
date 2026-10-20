@@ -1,0 +1,26 @@
+<article class="dlcard" id="dl-{{ bx.id }}">
+  <div class="dl-head">
+    {% set thumb = bx.thumb or (shows_by_id[bx.id].cover if bx.id in shows_by_id else None) %}{% if thumb %}<img src="{{ R }}img/{{ thumb }}-800.webp" alt="" loading="lazy">{% endif %}
+    <h3>{% if bx.title %}{{ t.downloads.titles[bx.title] }}{% elif page == 'downloads' %}<a href="{{ H }}{{ slugs[bx.id] }}/">{{ t.show[bx.id].name }}</a>{% else %}{{ t.downloads.title }}{% endif %}</h3>
+  </div>
+  {% for it in bx.get('items', []) %}{% set d = downloads[it] %}{% set fs = avail(it) %}
+  <div class="dl-row">
+    <span class="dl-kind">{% if d.variant %}{{ t.downloads.concert }} · {% endif %}{{ t.downloads.kinds[d.kind] }}</span>
+    {% if fs %}{% set main = dlfile(it) %}
+    <a class="dl" href="{{ R }}{{ main.url }}" download hreflang="{{ i18n[main.lang].html_lang }}">{{ icon('download') }} {{ i18n[main.lang].lang_name }}</a>
+    {% set others = fs|selectattr('0', 'ne', main.lang)|list %}{% if others %}
+    <details class="dl-more"><summary>{{ t.downloads.other }} ({{ others|length }})</summary>
+      <ul>{% for l, u in others %}<li><a href="{{ R }}{{ u }}" download hreflang="{{ i18n[l].html_lang }}" lang="{{ i18n[l].html_lang }}">{{ i18n[l].lang_name }}</a></li>{% endfor %}</ul>
+    </details>{% endif %}
+    {% else %}<span class="dl-missing">{{ t.downloads.missing }}</span>{% endif %}
+  </div>
+  {% endfor %}
+  {% if bx.press and press_zips.get(bx.press) %}{% set z = press_zips[bx.press] %}
+  <div class="dl-row">
+    <span class="dl-kind">{{ t.downloads.kinds.photos }}</span>
+    {% if z.web %}<a class="dl-alt" href="{{ R }}{{ z.web.url }}" download>{{ icon('download') }} {{ t.downloads.photos_web }} <small>{{ z.web.n }} · {{ z.web.mb }} MB</small></a>{% endif %}
+    {% if z.print %}<a class="dl-alt" href="{{ R }}{{ z.print.url }}" download>{{ icon('download') }} {{ t.downloads.photos_print }} <small>{{ z.print.n }} · {{ z.print.mb }} MB</small></a>{% endif %}
+  </div>
+  {% endif %}
+  {% if bx.link %}<p class="dl-row dl-link">{{ t.downloads.more_at }} <a href="{{ bx.link }}" rel="noopener" target="_blank">{{ bx.link_label }} {{ icon('open-in-new') }}</a></p>{% endif %}
+</article>

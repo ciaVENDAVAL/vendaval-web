@@ -1,0 +1,316 @@
+{
+ "html_lang": "it",
+ "lang_name": "Italiano",
+ "skip": "Vai al contenuto",
+ "meta": {
+  "title": "Cia. VENDAVAL – Giochi e musica dal vivo in strada",
+  "description": "Banda itinerante di fiati con personaggi fantastici sui trampoli e sul monociclo. Spettacoli di strada per tutte le età, da Barcellona e Terrassa."
+ },
+ "nav": {
+  "about": "La compagnia",
+  "shows": "Spettacoli",
+  "video": "Video",
+  "workshops": "Laboratori",
+  "agenda": "Agenda",
+  "artists": "Artisti",
+  "downloads": "Download",
+  "contact": "Contatti",
+  "menu": "Menu",
+  "language": "Lingua",
+  "home": "Home",
+  "crew": "Ciurma"
+ },
+ "hero": {
+  "kicker": "Barcellona · Terrassa",
+  "title": "Giochi e musica dal vivo in strada",
+  "sub": "Una banda itinerante di fiati con personaggi fantastici sui trampoli e sul monociclo, diretta dal vivo con segni delle mani.",
+  "cta_book": "Prenotaci",
+  "cta_video": "Guarda il video"
+ },
+ "about": {
+  "title": "La compagnia",
+  "p": [
+   "La Cia. VENDAVAL è un collettivo di musica e circo con sede a Barcellona e Terrassa. Dal 2024 animiamo lo spazio pubblico con una banda di fiati e percussioni, personaggi fantastici sui trampoli e sul monociclo, giocoleria e giochi partecipativi. I musicisti vengono dall'Europa e dalle Americhe, e i loro ritmi mescolano funk, balcanico, swing, salsa e cumbia.",
+   "Dirigiamo la banda con segni delle mani, così ogni spettacolo si compone davanti al pubblico. Coproduciamo con la Cia. Filigranes, e la nostra base creativa è l'associazione di circo Tub d'assaig 7.70 di Terrassa.",
+   "Ci siamo esibiti in Catalogna, Andorra e Germania, tra cui alla Fira del Vapor e, a Francoforte sul Meno, ai festival di teatro Sommerwerft e Unterwegs."
+  ]
+ },
+ "shows": {
+  "title": "Spettacoli",
+  "intro": "Circo di strada: da un solo personaggio sui trampoli a una grande parata con 8 artisti e musicisti.",
+  "back": "Tutti gli spettacoli",
+  "photos": "Foto",
+  "status": {
+   "creation": "In creazione",
+   "coproduction": "Coproduzione con la Cia. Filigranes",
+   "new": "Nuovo"
+  },
+  "facts": "Scheda",
+  "more": "Più informazioni",
+  "see": "Vedi lo spettacolo"
+ },
+ "show": {
+  "brass": {
+   "name": "VENDAVAL Brass",
+   "kicker": "Spettacolo itinerante con musica dal vivo",
+   "text": [
+    "VENDAVAL Brass è una banda itinerante che trasforma la strada in una festa in movimento. Si comincia con una cumbia contagiosa, mentre due personaggi clowneschi riempiono lo spazio di umorismo con trampoli, monociclo e giocoleria.",
+    "Tre sassofoni, tromba, sousafono e batteria portatile danno il ritmo e improvvisano dal vivo con segni delle mani. Con costumi e oggetti di scena marinari e giochi partecipativi, VENDAVAL propone un viaggio festoso, poetico e condiviso. Funziona come parata tra un palco e l'altro o come pezzo autonomo."
+   ],
+   "facts": [
+    "Itinerante, di giorno o di sera",
+    "Per tutte le età",
+    "Repliche di 30 minuti, più volte al giorno, con 30 minuti di pausa tra una replica e l'altra",
+    "8 artisti: 6 musicisti e 2 artisti di circo",
+    "Durata e numero di artisti adattabili all'evento (minimo 4 musicisti)",
+    "Acustico; in piazza, con radiomicrofoni propri",
+    "Nessun tecnico necessario"
+   ],
+   "extra_title": "Concerto in mezzo al pubblico",
+   "extra_text": "Per i festival musicali: la banda suona in piazza, davanti al palco, durante i cambi palco tra un concerto e l'altro. 30 minuti, più repliche al giorno, suono amplificato con 8 microfoni wireless sull'impianto del festival. Il personaggio sui trampoli resta sempre tra il pubblico; la banda può salire sul palco.",
+   "access_title": "Accessibilità",
+   "access": "Prima dello spettacolo offriamo sempre una visita tattile. Se lo spazio dispone dell'attrezzatura, possiamo lavorare anche con audiodescrizione, anello magnetico, zaini vibranti e interpretazione in lingua dei segni."
+  },
+  "joc": {
+   "status": "creation",
+   "name": "El Joc Etern (Il Gioco Eterno)",
+   "kicker": "Itinerante con palco mobile · titolo provvisorio",
+   "text": [
+    "Tre creature del mare, un po' clownesche e un po' mitologiche, cercano il Gioco Eterno, una reliquia magica che permette di giocare per sempre a chi la tocca, e invitano chiunque incontrino a unirsi alla ricerca.",
+    "Un equipaggio di cinque artisti viaggia con Windy, una Vespa elettrica a tre ruote guidata da Jordi Torrens che traina una barca. Albert Pérez e tyle fernández sono sui trampoli. Quando Windy si ferma, Jordi salta sul monociclo e si passa le clave con Albert, in alto sui trampoli. Albert, Jordi e tyle guidano i giochi e il filo teatrale della storia.",
+    "La musica è di Alián Rodrigues e Stefano Ferraro, che portano l'esperienza di Yiflauki e del loro duo elettronico 3L3M3NTS: loop station, suoni elettronici, batteria, uno xilofono e didgeridoo di tubi di plastica fatti a mano, e microfoni piezo che trasformano la barca in uno strumento. tyle si unisce con tromba o fisarmonica.",
+    "Nel 2027 dedicheremo un periodo di ricerca a creare e provare in strada da 10 a 15 giochi partecipativi, con l'accessibilità (tatto, vibrazione, lingua dei segni) integrata nei giochi stessi. Il debutto arriverà dopo la ricerca."
+   ],
+   "facts": [
+    "Itinerante con palco mobile elettrico",
+    "Per tutte le età",
+    "60 minuti (in lavorazione)",
+    "5 artisti, cast fisso",
+    "Per festival di circo, teatro e musica, feste di paese e scuole"
+   ]
+  },
+  "freakfrac": {
+   "status": "coproduction",
+   "name": "Freak Frac",
+   "kicker": "Itinerante con musica dal vivo, trampoli, giocoleria e salto della corda",
+   "text": [
+    "Una compagnia di personaggi clowneschi altissimi percorre le strade dietro la banda e il suo direttore. Lungo il cammino si fermano a fare giocoleria con clave e diabolo e a saltare la corda, sempre con musica dal vivo. Creato nel 2013 dalla Cia. Filigranes e dall'associazione di circo Tub d'assaig.",
+    "Ideale per fiere, mercati, cortei e carnevali, dove il contatto con il pubblico viene prima di tutto."
+   ],
+   "facts": [
+    "All'aperto o al chiuso",
+    "Per tutte le età",
+    "Durata e numero di artisti adattabili all'evento",
+    "Preparazione: 1 h 30 min"
+   ]
+  },
+  "friend": {
+   "status": "new",
+   "name": "Amigui Imaginari",
+   "kicker": "Un animale fantastico su trampoli a quattro zampe",
+   "text": [
+    "Un peluche gigante è venuto a trovarci. L'ho immaginato e, all'improvviso, è uscito da sotto il letto. Se lo vedi anche tu, giochiamo insieme!",
+    "Un altissimo animale fantastico, su trampoli a quattro zampe, passeggia tra il pubblico in cerca di amici con cui giocare. Un itinerante tenero e giocoso, di giorno o di sera.",
+    "Tre formati: «L'ora della nanna», con una persona acrobata il cui rituale molto elaborato (stretching, salti, breakdance e coreografie con il pubblico) finisce con il sonno sopra il suo peluche preferito; con un musicista di fiati che improvvisa suoni e melodie; oppure il peluche da solo, con giochi con il pubblico."
+   ],
+   "facts": [
+    "Itinerante",
+    "Per tutte le età",
+    "1–2 artisti",
+    "30 minuti",
+    "Da solo o con musica dal vivo"
+   ],
+   "dossier_soon": "Dossier su richiesta."
+  }
+ },
+ "video": {
+  "title": "Video",
+  "intro": "Guarda VENDAVAL in strada.",
+  "play": "Riproduci il video",
+  "consent": "Premendo play il video si carica da YouTube, che può usare cookie.",
+  "watch_on": "Guarda su",
+  "items": {
+   "brass_trailer": "Trailer di VENDAVAL Brass"
+  }
+ },
+ "workshops": {
+  "title": "Laboratori",
+  "intro": "Gli artisti di VENDAVAL offrono laboratori di circo e di musica per giovani e adulti, tenuti da professionisti in attività.",
+  "groups": {
+   "stilts": {
+    "title": "Trampoli",
+    "items": [
+     "Trampoli"
+    ]
+   },
+   "circus": {
+    "title": "Circo",
+    "items": [
+     "Clown",
+     "Bolle di sapone",
+     "Giocoleria ed equilibri"
+    ]
+   },
+   "music": {
+    "title": "Musica",
+    "items": [
+     "Direzione con segni delle mani",
+     "Respirazione circolare",
+     "Strumenti riciclati"
+    ]
+   }
+  },
+  "ask": "Richiedili qui.",
+  "note": "Tutte le informazioni sono nei dossier dei laboratori."
+ },
+ "agenda": {
+  "title": "Agenda",
+  "upcoming": "Prossime date",
+  "past": "Siamo stati a",
+  "none": "Nuove date in arrivo.",
+  "all": "Tutte le date",
+  "show_dates": "Date dello spettacolo"
+ },
+ "artists": {
+  "title": "Artisti",
+  "intro": "Gli artisti che danno vita a VENDAVAL.",
+  "link": "Pagina dell'artista",
+  "subs_title": "Percussioni (sostituti)",
+  "people": {
+   "tyle": {
+    "origin": "USA / Germania",
+    "roles": "Direzione artistica, trampoli, clown, tromba, sax baritono, trombone, fisarmonica, giochi"
+   },
+   "albert": {
+    "origin": "Catalogna",
+    "roles": "Clown, mimo, trampoli, giocoleria, sfera d'equilibrio · Cia. Filigranes"
+   },
+   "jordi": {
+    "origin": "Catalogna",
+    "roles": "Clown, monociclo, giocoleria (anche con il fuoco), sfera d'equilibrio · Cia. Filigranes"
+   },
+   "alian": {
+    "origin": "Argentina / Portogallo",
+    "roles": "Sousafono, eufonio, flauto, armonica, attore"
+   },
+   "juan": {
+    "origin": "Argentina",
+    "roles": "Sax contralto, tromba, basso elettrico"
+   },
+   "stefano": {
+    "origin": "Italia",
+    "roles": "Sax tenore e contralto, DJ"
+   },
+   "lucas": {
+    "origin": "Argentina",
+    "roles": "Tromba"
+   },
+   "facu": {
+    "origin": "Argentina / Spagna",
+    "roles": "Batteria, percussioni, violino"
+   }
+  },
+  "link_by_gender": {
+   "m": "Pagina dell'artista",
+   "f": "Pagina dell'artista",
+   "x": "Pagina dell'artista"
+  }
+ },
+ "downloads": {
+  "title": "Download",
+  "intro": "Materiale per programmatori e stampa.",
+  "note": "Ogni documento si apre nella tua lingua, quando disponibile. Ti serve un'altra lingua? Chiedicelo.",
+  "kinds": {
+   "dossier": "Dossier dello spettacolo",
+   "rider": "Scheda tecnica (rider)",
+   "photos": "Foto",
+   "workshop": "Dossier dei laboratori"
+  },
+  "photos_web": "Web · 1000 px",
+  "photos_print": "Stampa · 300 dpi",
+  "missing": "Non ancora disponibile in italiano.",
+  "more_at": "Informazioni e dossier su",
+  "titles": {
+   "xanques": "Laboratori di trampoli",
+   "yiflauki": "Laboratori di musica · Yiflauki"
+  },
+  "concert": "Concerto in mezzo al pubblico",
+  "other": "Altre lingue"
+ },
+ "contact": {
+  "title": "Contatti",
+  "intro": "Siamo disponibili per ingaggi, laboratori, stampa e collaborazioni. Raccontaci la tua idea e ti risponderemo presto.",
+  "invoice": "Ingaggi e fatturazione tramite l'associazione di circo Tub d'assaig 7.70 (Terrassa).",
+  "morse": "Puoi scriverci anche in codice Morse.",
+  "form": {
+   "name": "Nome",
+   "email": "E-mail",
+   "phone": "Telefono",
+   "org": "Festival o organizzazione",
+   "date": "Data prevista",
+   "place": "Città",
+   "show": "Spettacolo o laboratorio",
+   "message": "Messaggio",
+   "required": "obbligatorio",
+   "show_any": "Non lo so ancora",
+   "privacy": "Usiamo questi dati solo per risponderti.",
+   "submit": "Invia",
+   "ok": "Grazie! Abbiamo ricevuto il tuo messaggio.",
+   "err": "Non è stato possibile inviare il messaggio. Scrivici a VENDAVAL@anartist.org.",
+   "sending": "Invio in corso…"
+  }
+ },
+ "footer": {
+  "credits": "Fotografia: David Ugalde (ROAR), Barbara Walzer, Jordi Largo, Albert Garcia · Costumi: Imaginario de Monica, Tropidelia · Grafica: bicialta",
+  "hosted": "Sito fatto con software libero, senza cookie né tracciamento.",
+  "top": "Torna su",
+  "roles": {
+   "photo": "Fotografia",
+   "costume": "Costumi",
+   "design": "Grafica"
+  },
+  "colon": ":"
+ },
+ "a11y": {
+  "title": "Accessibilità",
+  "size": "Dimensione del testo",
+  "smaller": "Testo più piccolo",
+  "bigger": "Testo più grande",
+  "contrast": "Contrasto elevato",
+  "links": "Sottolinea i link",
+  "spacing": "Più interlinea",
+  "motion": "Ferma le animazioni",
+  "reset": "Ripristina"
+ },
+ "crew": {
+  "kicker": "Registro della ciurma",
+  "title": "Unisciti alla ciurma",
+  "lede": "Scegli il tuo mese di nascita e le iniziali del tuo nome e cognome. La ciurma del VENDAVAL ti assegna un ruolo a bordo e un brevetto con il nome completo.",
+  "note": "",
+  "month": "Mese di nascita",
+  "month_sub": "Decide il tuo ruolo. Ogni mese ne ha cinque, secondo quello che si fa a bordo in quella stagione.",
+  "pronoun": "Pronome",
+  "pron": [
+   "Lui",
+   "Lei",
+   "Ləi"
+  ],
+  "first": "Iniziale del nome",
+  "first_sub": "Il tuo nome sarà un oggetto del mare.",
+  "last": "Iniziale del cognome",
+  "last_sub": "Il tuo cognome sarà un aggettivo del mondo del circo.",
+  "card": "Il tuo brevetto di ciurma",
+  "plate": "Brevetto di ciurma",
+  "mat": "Matricola",
+  "again": "Un altro tiro",
+  "surprise": "Sorprendimi",
+  "copied": "Copiato:",
+  "selected": "Nome selezionato. Copialo con il menu del tuo dispositivo.",
+  "letter": "Lettera",
+  "meta": "Nascita: {m}. Nome con {a}, cognome con {b}.",
+  "copy_btn": "Copia",
+  "home_title": "Unisciti alla ciurma",
+  "home_text": "Che ruolo avresti a bordo di VENDAVAL? Scegli il tuo mese e le tue iniziali e scopri il tuo nome di mare.",
+  "home_btn": "Scopri il tuo ruolo"
+ }
+}

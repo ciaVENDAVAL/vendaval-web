@@ -1,0 +1,133 @@
+{
+ "_about": "Canonical facts and house style used by tools/check.py. Update this file FIRST when new info arrives.",
+ "contact": {
+  "email": "VENDAVAL@anartist.org",
+  "phone_digits": "644389757",
+  "web": "vendaval.cat"
+ },
+ "names": {
+  "tyle fernández": [
+   "Tyle",
+   "TYLE",
+   "tyle fernandez",
+   "Tyle Fernández",
+   "Tyle Fernandez"
+  ],
+  "Albert Pérez": [
+   "Albert Perez"
+  ],
+  "Alián Rodrigues": [
+   "Alian Rodrigues",
+   "Alián Rodriguez",
+   "Alian Rodriguez"
+  ],
+  "Facundo Fernández Alberdi": [
+   "Facundo Fernandez",
+   "Facu Fernández"
+  ],
+  "Lucas Raiquen Pereyra": [
+   "Lucas Raiquén",
+   "Lucas Pereira"
+  ],
+  "Imaginario de Mónica": [
+   "Imaginario de Monica"
+  ],
+  "Dada Draženka Večerin": [
+   "Drazenka",
+   "Vecerin"
+  ],
+  "Tub d'assaig": [
+   "Tub d’Assaig",
+   "Tub d'Assaig",
+   "Tub Dassaig"
+  ],
+  "cia. Filigranes": [
+   "Cia Filigranes",
+   "cía. Filigranes"
+  ]
+ },
+ "banned": {
+  "*": [
+   "\\bVendaval\\b",
+   "(?<![@/.\\w])vendaval(?![.@\\w])",
+   "(?i)60 ?(minuts|minutos|minutes|minuten|minuti|分)[^.\\n]{0,40}?(brass|cercavila|itinerant de carrer)"
+  ],
+  "ca": [
+   "[Pp]allass",
+   "[Ww]alkact",
+   "Frankfurt am Main",
+   "\\btothom\\b"
+  ],
+  "es": [
+   "[Pp]ayas",
+   "Frankfurt am Main"
+  ],
+  "en": [
+   "\\b[Cc]lowns?\\b"
+  ],
+  "de": [
+   "\\bClowns?\\b"
+  ],
+  "fr": [
+   "\\b[Cc]lowns?\\b",
+   "Frankfurt am Main"
+  ],
+  "it": [
+   "[Pp]agliacc",
+   "Frankfurt am Main"
+  ],
+  "pt": [
+   "[Pp]alhaç"
+  ],
+  "ja": [
+   "ピエロ"
+  ]
+ },
+ "frankfurt": {
+  "ca": "Frankfurt del Main",
+  "es": "Fráncfort del Meno",
+  "en": "Frankfurt am Main",
+  "de": "Frankfurt am Main",
+  "fr": "Francfort-sur-le-Main",
+  "it": "Francoforte sul Meno",
+  "pt": "Francoforte do Meno",
+  "ja": "フランクフルト"
+ },
+ "families": {
+  "VENDAVAL Brass dossier": "VENDAVAL-Brass_{L}_dossier",
+  "VENDAVAL Brass rider": "VENDAVAL-Brass_{L}_rider",
+  "Concert in the audience dossier": "VENDAVAL-Brass-Concert-Placa_{L}_dossier",
+  "Concert in the audience rider": "VENDAVAL-Brass-Concert-Placa_{L}_rider",
+  "Imaginary Friend dossier": "(Amigui-Imaginari|Imaginary-Friend)_{L}_dossier",
+  "Imaginary Friend rider": "(Amigui-Imaginari|Imaginary-Friend)_{L}_rider",
+  "El Joc Etern dossier": "El-Joc-Etern_{L}_dossier",
+  "Stilts workshops dossier": "(Tallers-Xanques|Talleres-Zancos|Stilts-Workshops)_{L}_dossier"
+ },
+ "external_pdfs": {
+  "VENDAVAL Brass dossier/rider 2026-09": "made outside this generator (design files with tyle) — edit by hand",
+  "Concert in the audience 2026-10": "made in the FiM 2027 conversation (WeasyPrint) — rebuild there",
+  "El Joc Etern / Stilts workshops": "old generator lost on 19 Oct — rebuild in dossiers/ before the next change"
+ },
+ "ignore_cross_language": [
+  "ciafiligranes.net/en/workshops",
+  "ciafiligranes.net/tallers",
+  "ciafiligranes.net/es/talleres"
+ ],
+ "allowed": {
+  "_why": "clown is fine as a discipline/skill (workshops, artist skills, discipline lists) — tyle, 20 Oct 2026. Not fine: calling the performers clowns in show texts.",
+  "patterns": [
+   "(?i)(tallers?|talleres?|workshops?|ateliers?|laborator\\w*|oficinas?|ワークショップ)[^.\\n]{0,80}?(pallass\\w*|payas\\w*|clowns?|pagliacc\\w*|palhaç\\w*)",
+   "(?i)(pallassos sense fronteres|payasos sin fronteras|clowns without borders|clowns ohne grenzen|clowns sans fronti\\w+)",
+   "(?i)(xanques|zancos|stilts?|stelzen|échasses|trampoli|andas|monocicle|monociclo|unicycle|einrad|monocycle|malabars|malabares|juggling|jonglage|jonglerie|giocoleria|mim|mime|pantomime|acrobàcia|acrobacia)[^.\\n]{0,40}?(pallass\\w*|payas\\w*|clowns?|pagliacc\\w*|palhaç\\w*)",
+   "(?i)(pallass\\w*|payas\\w*|clowns?|pagliacc\\w*|palhaç\\w*)[^.\\n]{0,40}?(xanques|zancos|stilts?|stelzen|échasses|trampoli|andas|monocicle|monociclo|unicycle|einrad|monocycle|malabars|malabares|juggling|jonglage|jonglerie|giocoleria|mim|mime|pantomime|acrobàcia|acrobacia)"
+  ]
+ },
+ "shows": {
+  "brass": {
+   "duration": "30-min sets, several a day, always 30-min break between sets; no 60-min version (tyle, 20 Oct 2026)"
+  },
+  "joc": {
+   "cast": "5: Albert Pérez, Jordi Torrens, Alián Rodrigues, Stefano Ferraro, tyle fernández (20 Oct 2026; was 8)"
+  }
+ }
+}

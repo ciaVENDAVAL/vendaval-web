@@ -1,0 +1,316 @@
+{
+ "html_lang": "en-GB",
+ "lang_name": "English",
+ "skip": "Skip to content",
+ "meta": {
+  "title": "Cia. VENDAVAL – Games and live music in the street",
+  "description": "A roaming brass band with fantastical characters on stilts and unicycle. Street shows for all ages, from Barcelona and Terrassa."
+ },
+ "nav": {
+  "about": "About",
+  "shows": "Shows",
+  "video": "Video",
+  "workshops": "Workshops",
+  "agenda": "Agenda",
+  "artists": "Artists",
+  "downloads": "Downloads",
+  "contact": "Contact",
+  "menu": "Menu",
+  "language": "Language",
+  "home": "Home",
+  "crew": "Crew"
+ },
+ "hero": {
+  "kicker": "Barcelona · Terrassa",
+  "title": "Games and live music in the street",
+  "sub": "A roaming brass band with fantastical characters on stilts and unicycle, conducted live with hand signals.",
+  "cta_book": "Book us",
+  "cta_video": "Watch the video"
+ },
+ "about": {
+  "title": "About",
+  "p": [
+   "Cia. VENDAVAL is a music and circus collective based in Barcelona and Terrassa. Since 2024 we have taken over public space with a brass and percussion band, fantastical characters on stilts and unicycle, juggling and participatory games. The musicians come from Europe and the Americas, and their rhythms mix funk, Balkan, swing, salsa and cumbia.",
+   "We conduct the band with hand signals, so every performance is composed in front of the audience. We co-produce with Cia. Filigranes, and our creative base is the circus association Tub d'assaig 7.70 in Terrassa.",
+   "We have performed in Catalonia, Andorra and Germany, including Fira del Vapor and, in Frankfurt am Main, the Sommerwerft and Unterwegs theatre festivals."
+  ]
+ },
+ "shows": {
+  "title": "Shows",
+  "intro": "Street circus, from a single character on stilts to a full parade with 8 artists and musicians.",
+  "back": "All shows",
+  "photos": "Photos",
+  "status": {
+   "creation": "In creation",
+   "coproduction": "Co-production with Cia. Filigranes",
+   "new": "New"
+  },
+  "facts": "Key facts",
+  "more": "More information",
+  "see": "See the show"
+ },
+ "show": {
+  "brass": {
+   "name": "VENDAVAL Brass",
+   "kicker": "Roaming street show with live music",
+   "text": [
+    "VENDAVAL Brass is a roaming band that turns the street into a moving party. It opens with a catchy cumbia while two clownesque characters fill the space with humour on stilts, unicycle and juggling.",
+    "Three saxophones, trumpet, sousaphone and portable drums set the rhythm and improvise live with hand signals. With sea-themed costumes, props and participatory games, VENDAVAL offers a festive, poetic, shared journey. It works as a parade between stages or as a stand-alone piece."
+   ],
+   "facts": [
+    "Roaming street show, day or night",
+    "All ages",
+    "30-minute sets, several a day, with a 30-minute break between sets",
+    "8 artists: 6 musicians and 2 circus artists",
+    "Duration and number of artists adapt to the event (minimum 4 musicians)",
+    "Acoustic; on a square, with our own wireless mics",
+    "No technicians needed"
+   ],
+   "extra_title": "Concert in the audience",
+   "extra_text": "For music festivals: the band plays on the square in front of the stage during changeovers between concerts. 30 minutes, several sets a day, amplified with 8 wireless mics into the festival PA. The stilt-walker always stays in the crowd; the band can go up on stage.",
+   "access_title": "Accessibility",
+   "access": "We always offer a touch tour before the show. If the venue has the equipment, we can also work with audio description, hearing loops, vibrating backpacks and sign-language interpretation."
+  },
+  "joc": {
+   "status": "creation",
+   "name": "El Joc Etern (The Eternal Game)",
+   "kicker": "Roaming show with a mobile stage · working title",
+   "text": [
+    "Three sea creatures, part clownesque, part mythical, search for the Eternal Game, a magical relic that lets whoever touches it play forever. They invite everyone they meet to join the hunt.",
+    "A crew of five performers travels with Windy, a three-wheeled electric Vespa driven by Jordi Torrens and towing a boat. Albert Pérez and tyle fernández are on stilts. When Windy stops, Jordi jumps onto his unicycle and passes juggling clubs with Albert up on his stilts. Albert, Jordi and tyle lead the games and the theatrical storyline.",
+    "The music comes from Alián Rodrigues and Stefano Ferraro, drawing on their work with Yiflauki and their electronic duo 3L3M3NTS: loop station, electronic sounds, drum kit, a handmade xylophone and didgeridoos made from plastic tubes, and piezo microphones that turn the boat into an instrument. tyle joins in on trumpet or accordion.",
+    "In 2027 we will spend a research period creating and testing 10–15 participatory games in the street, with accessibility (touch, vibration, sign language) built into the games themselves. The premiere will follow the research."
+   ],
+   "facts": [
+    "Roaming street show with an electric mobile stage",
+    "All ages",
+    "60 minutes (in progress)",
+    "5 performers, fixed cast",
+    "For circus, theatre and music festivals, local festivals and schools"
+   ]
+  },
+  "freakfrac": {
+   "status": "coproduction",
+   "name": "Freak Frac",
+   "kicker": "Roaming show with live music, stilts, juggling and jump rope",
+   "text": [
+    "A troupe of very tall clownesque characters walks the streets behind the band and its conductor. Along the way they stop for juggling with clubs and diabolos and a round of jump rope, always with live music. Created in 2013 by Cia. Filigranes and the circus association Tub d'assaig.",
+    "It suits fairs, markets, cavalcades and parades, where contact with the audience comes first."
+   ],
+   "facts": [
+    "Outdoor or indoor",
+    "All ages",
+    "Duration and number of artists adapt to the event",
+    "Preparation: 1 h 30 min"
+   ]
+  },
+  "friend": {
+   "status": "new",
+   "name": "Imaginary Friend",
+   "kicker": "A fantasy animal on four-legged stilts",
+   "text": [
+    "A giant stuffed animal has come to visit. I dreamed it up, and suddenly it crawled out from under the bed. If you can see it too, let's play together!",
+    "A towering fantasy animal on four-legged stilts wanders through the crowd looking for friends to play with. A gentle, playful walkabout, by day or night.",
+    "Three formats: \"Bedtime\", with an acrobat whose elaborate bedtime ritual (stretching, jumping, breakdance and choreographies with the audience) ends with them asleep on their favourite stuffed toy; with a wind musician improvising sounds and melodies; or the stuffed animal alone, playing games with the audience."
+   ],
+   "facts": [
+    "Roaming",
+    "All ages",
+    "1–2 artists",
+    "30 minutes",
+    "Solo or with live music"
+   ],
+   "dossier_soon": "Dossier on request."
+  }
+ },
+ "video": {
+  "title": "Video",
+  "intro": "See VENDAVAL in the street.",
+  "play": "Play video",
+  "consent": "Pressing play loads the video from YouTube, which may set cookies.",
+  "watch_on": "Watch on",
+  "items": {
+   "brass_trailer": "VENDAVAL Brass trailer"
+  }
+ },
+ "workshops": {
+  "title": "Workshops",
+  "intro": "VENDAVAL's artists offer circus and music workshops for young people and adults, led by working professionals.",
+  "groups": {
+   "stilts": {
+    "title": "Stilts",
+    "items": [
+     "Stilts"
+    ]
+   },
+   "circus": {
+    "title": "Circus",
+    "items": [
+     "Clown",
+     "Soap bubbles",
+     "Juggling and balance"
+    ]
+   },
+   "music": {
+    "title": "Music",
+    "items": [
+     "Conducting with hand signals",
+     "Circular breathing",
+     "Recycled instruments"
+    ]
+   }
+  },
+  "ask": "Request them here.",
+  "note": "All the details are in the workshop dossiers."
+ },
+ "agenda": {
+  "title": "Agenda",
+  "upcoming": "Coming up",
+  "past": "We've been at",
+  "none": "New dates coming soon.",
+  "all": "All dates",
+  "show_dates": "Show dates"
+ },
+ "artists": {
+  "title": "Artists",
+  "intro": "The artists who breathe life into VENDAVAL.",
+  "link": "Artist's page",
+  "subs_title": "Substitute percussion",
+  "people": {
+   "tyle": {
+    "origin": "USA / Germany",
+    "roles": "Artistic direction, stilts, clown, trumpet, baritone sax, trombone, accordion, games"
+   },
+   "albert": {
+    "origin": "Catalonia",
+    "roles": "Clown, mime, stilts, juggling, balance ball · Cia. Filigranes"
+   },
+   "jordi": {
+    "origin": "Catalonia",
+    "roles": "Clown, unicycle, juggling (including fire), balance ball · Cia. Filigranes"
+   },
+   "alian": {
+    "origin": "Argentina / Portugal",
+    "roles": "Sousaphone, euphonium, flute, harmonica, actor"
+   },
+   "juan": {
+    "origin": "Argentina",
+    "roles": "Alto sax, trumpet, electric bass"
+   },
+   "stefano": {
+    "origin": "Italy",
+    "roles": "Tenor and alto sax, DJ"
+   },
+   "lucas": {
+    "origin": "Argentina",
+    "roles": "Trumpet"
+   },
+   "facu": {
+    "origin": "Argentina / Spain",
+    "roles": "Drums, percussion, violin"
+   }
+  },
+  "link_by_gender": {
+   "m": "Artist's page",
+   "f": "Artist's page",
+   "x": "Artist's page"
+  }
+ },
+ "downloads": {
+  "title": "Downloads",
+  "intro": "Material for programmers and press.",
+  "note": "Each document opens in your language when available. Ask us if you need another language.",
+  "kinds": {
+   "dossier": "Show dossier",
+   "rider": "Technical rider",
+   "photos": "Photos",
+   "workshop": "Workshop dossier"
+  },
+  "photos_web": "Web · 1000 px",
+  "photos_print": "Print · 300 dpi",
+  "missing": "Dossier coming soon.",
+  "more_at": "Information and dossier at",
+  "titles": {
+   "xanques": "Stilts workshops",
+   "yiflauki": "Music workshops · Yiflauki"
+  },
+  "concert": "Concert in the audience",
+  "other": "Other languages"
+ },
+ "contact": {
+  "title": "Contact",
+  "intro": "We're available for bookings, workshops, press and collaborations. Tell us your idea and we'll get back to you soon.",
+  "invoice": "Bookings and invoicing through the circus association Tub d'assaig 7.70 (Terrassa).",
+  "morse": "You can also write to us in Morse code.",
+  "form": {
+   "name": "Name",
+   "email": "Email",
+   "phone": "Phone",
+   "org": "Festival or organisation",
+   "date": "Planned date",
+   "place": "Town",
+   "show": "Show or workshop",
+   "message": "Message",
+   "required": "required",
+   "show_any": "Not sure yet",
+   "privacy": "We only use this data to reply to you.",
+   "submit": "Send",
+   "ok": "Thank you! We've received your message.",
+   "err": "The message couldn't be sent. Please write to VENDAVAL@anartist.org.",
+   "sending": "Sending…"
+  }
+ },
+ "footer": {
+  "credits": "Photography: David Ugalde (ROAR), Barbara Walzer, Jordi Largo, Albert Garcia · Costumes: Imaginario de Monica, Tropidelia · Graphic design: bicialta",
+  "hosted": "Built with free software, no cookies or tracking.",
+  "top": "Back to top",
+  "roles": {
+   "photo": "Photography",
+   "costume": "Costumes",
+   "design": "Graphic design"
+  },
+  "colon": ":"
+ },
+ "a11y": {
+  "title": "Accessibility",
+  "size": "Text size",
+  "smaller": "Smaller text",
+  "bigger": "Bigger text",
+  "contrast": "High contrast",
+  "links": "Underline links",
+  "spacing": "More line spacing",
+  "motion": "Stop animations",
+  "reset": "Reset"
+ },
+ "crew": {
+  "kicker": "Crew register",
+  "title": "Join the crew",
+  "lede": "Choose your birth month and the initials of your first and last name. The VENDAVAL crew gives you a job on board and a crew licence with your full name.",
+  "note": "",
+  "month": "Birth month",
+  "month_sub": "It sets your job. Each month has five, depending on what happens on board that season.",
+  "pronoun": "Pronoun",
+  "pron": [
+   "He",
+   "She",
+   "They"
+  ],
+  "first": "First-name initial",
+  "first_sub": "Your first name will be a word from the circus world.",
+  "last": "Last-name initial",
+  "last_sub": "Your last name will be something from the sea.",
+  "card": "Your crew licence",
+  "plate": "Crew licence",
+  "mat": "Reg. no.",
+  "again": "Roll again",
+  "surprise": "Surprise me",
+  "copied": "Copied:",
+  "selected": "Name selected. Copy it with your device's menu.",
+  "letter": "Letter",
+  "meta": "Born in {m}. First name with {a}, last name with {b}.",
+  "copy_btn": "Copy",
+  "home_title": "Join the crew",
+  "home_text": "What would your job be on board VENDAVAL? Pick your month and initials and find out your sea name.",
+  "home_btn": "Find your job on board"
+ }
+}

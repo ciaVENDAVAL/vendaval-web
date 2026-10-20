@@ -1,0 +1,316 @@
+{
+ "html_lang": "fr",
+ "lang_name": "Français",
+ "skip": "Aller au contenu",
+ "meta": {
+  "title": "Cia. VENDAVAL – Jeux et musique live dans la rue",
+  "description": "Fanfare déambulatoire avec des personnages fantastiques sur échasses et monocycle. Spectacles de rue tout public, depuis Barcelone et Terrassa."
+ },
+ "nav": {
+  "about": "La compagnie",
+  "shows": "Spectacles",
+  "video": "Vidéo",
+  "workshops": "Ateliers",
+  "agenda": "Agenda",
+  "artists": "Artistes",
+  "downloads": "Téléchargements",
+  "contact": "Contact",
+  "menu": "Menu",
+  "language": "Langue",
+  "home": "Accueil",
+  "crew": "Équipage"
+ },
+ "hero": {
+  "kicker": "Barcelone · Terrassa",
+  "title": "Jeux et musique live dans la rue",
+  "sub": "Une fanfare déambulatoire avec des personnages fantastiques sur échasses et monocycle, dirigée en direct par des signes de la main.",
+  "cta_book": "Nous programmer",
+  "cta_video": "Voir la vidéo"
+ },
+ "about": {
+  "title": "La compagnie",
+  "p": [
+   "La Cia. VENDAVAL est un collectif de musique et de cirque basé à Barcelone et à Terrassa. Depuis 2024, nous investissons l'espace public avec une fanfare de cuivres et percussions, des personnages fantastiques sur échasses et monocycle, de la jonglerie et des jeux participatifs. Les musicien·nes viennent d'Europe et des Amériques, et leurs rythmes mêlent funk, balkan, swing, salsa et cumbia.",
+   "Nous dirigeons la fanfare par des signes de la main : chaque représentation se compose devant le public. Nous coproduisons avec la Cia. Filigranes, et notre base de création est l'association de cirque Tub d'assaig 7.70 à Terrassa.",
+   "Nous avons joué en Catalogne, en Andorre et en Allemagne, notamment à la Fira del Vapor et, à Francfort-sur-le-Main, aux festivals de théâtre Sommerwerft et Unterwegs."
+  ]
+ },
+ "shows": {
+  "title": "Spectacles",
+  "intro": "Du cirque de rue, d'un seul personnage sur échasses à une grande parade avec 8 artistes et musicien·nes.",
+  "back": "Tous les spectacles",
+  "photos": "Photos",
+  "status": {
+   "creation": "En création",
+   "coproduction": "Coproduction avec la Cia. Filigranes",
+   "new": "Nouveau"
+  },
+  "facts": "Fiche",
+  "more": "En savoir plus",
+  "see": "Voir le spectacle"
+ },
+ "show": {
+  "brass": {
+   "name": "VENDAVAL Brass",
+   "kicker": "Déambulation avec musique live",
+   "text": [
+    "VENDAVAL Brass est une fanfare déambulatoire qui transforme la rue en fête en mouvement. Tout commence par une cumbia entraînante, pendant que deux personnages clownesques remplissent l'espace d'humour sur échasses, monocycle et en jonglant.",
+    "Trois saxophones, une trompette, un soubassophone et une batterie portable donnent le rythme et improvisent en direct par signes de la main. Avec des costumes et accessoires marins et des jeux participatifs, VENDAVAL propose un voyage festif, poétique et partagé. Il fonctionne comme parade entre deux scènes ou comme pièce autonome."
+   ],
+   "facts": [
+    "Déambulation, de jour comme de nuit",
+    "Tout public",
+    "Passages de 30 minutes, plusieurs par jour, avec 30 minutes de pause entre deux passages",
+    "8 artistes : 6 musicien·nes et 2 artistes de cirque",
+    "Durée et nombre d'artistes adaptables à l'événement (minimum 4 musicien·nes)",
+    "Acoustique ; sur une place, avec nos propres micros sans fil",
+    "Aucun technicien nécessaire"
+   ],
+   "extra_title": "Concert au milieu du public",
+   "extra_text": "Pour les festivals de musique : la fanfare joue sur la place, devant la scène, pendant les changements de plateau. 30 minutes, plusieurs passages par jour, son amplifié avec 8 micros sans fil sur la sono du festival. Le personnage sur échasses reste toujours dans le public ; la fanfare peut monter sur scène.",
+   "access_title": "Accessibilité",
+   "access": "Nous proposons toujours une visite tactile avant le spectacle. Si le lieu dispose de l'équipement, nous pouvons aussi travailler avec l'audiodescription, une boucle magnétique, des sacs à dos vibrants et l'interprétation en langue des signes."
+  },
+  "joc": {
+   "status": "creation",
+   "name": "El Joc Etern (Le Jeu Éternel)",
+   "kicker": "Déambulation avec scène mobile · titre provisoire",
+   "text": [
+    "Trois créatures de la mer, entre clownesques et mythologiques, cherchent le Jeu Éternel, une relique magique qui permet de jouer pour toujours à qui la touche. Elles invitent tous ceux qu'elles croisent à se joindre à la quête.",
+    "Un équipage de cinq artistes voyage avec Windy, une Vespa électrique à trois roues conduite par Jordi Torrens, qui tire un bateau. Albert Pérez et tyle fernández sont sur échasses. Quand Windy s'arrête, Jordi saute sur son monocycle et s'échange des massues avec Albert, perché sur ses échasses. Albert, Jordi et tyle mènent les jeux et le fil théâtral de l'histoire.",
+    "La musique est signée Alián Rodrigues et Stefano Ferraro, forts de leur expérience avec Yiflauki et avec leur duo électro 3L3M3NTS : loop station, sons électroniques, batterie, un xylophone et des didgeridoos en tubes de plastique faits main, et des micros piézo qui transforment le bateau en instrument. tyle les rejoint à la trompette ou à l'accordéon.",
+    "En 2027, nous consacrerons une période de recherche à créer et tester dans la rue 10 à 15 jeux participatifs, l'accessibilité (toucher, vibration, langue des signes) étant intégrée aux jeux eux-mêmes. La première suivra la recherche."
+   ],
+   "facts": [
+    "Déambulation avec scène mobile électrique",
+    "Tout public",
+    "60 minutes (en cours)",
+    "5 artistes, distribution fixe",
+    "Pour festivals de cirque, de théâtre et de musique, fêtes locales et écoles"
+   ]
+  },
+  "freakfrac": {
+   "status": "coproduction",
+   "name": "Freak Frac",
+   "kicker": "Déambulation avec musique live, échasses, jonglerie et corde à sauter",
+   "text": [
+    "Une troupe de personnages clownesques très grands parcourt les rues derrière la fanfare et son chef. En chemin, ils s'arrêtent pour jongler avec des massues et des diabolos et sauter à la corde, toujours en musique live. Créé en 2013 par la Cia. Filigranes et l'association de cirque Tub d'assaig.",
+    "Idéal pour les foires, marchés, cavalcades et carnavals, où le contact avec le public passe avant tout."
+   ],
+   "facts": [
+    "En extérieur ou en intérieur",
+    "Tout public",
+    "Durée et nombre d'artistes adaptables à l'événement",
+    "Préparation : 1 h 30"
+   ]
+  },
+  "friend": {
+   "status": "new",
+   "name": "Amigui Imaginari",
+   "kicker": "Un animal fantastique sur échasses à quatre pattes",
+   "text": [
+    "Une peluche géante vient nous rendre visite. Je l'ai imaginée et, soudain, elle est sortie de sous le lit. Si toi aussi tu la vois, jouons ensemble !",
+    "Un immense animal fantastique, sur des échasses à quatre pattes, se promène parmi le public à la recherche d'amis pour jouer. Une déambulation tendre et joueuse, de jour comme de nuit.",
+    "Trois formats : « L'heure du coucher », avec une personne acrobate dont le rituel très élaboré (étirements, sauts, breakdance et chorégraphies avec le public) se termine endormie sur sa peluche préférée ; avec un·e musicien·ne à vent qui improvise sons et mélodies ; ou la peluche seule, avec des jeux avec le public."
+   ],
+   "facts": [
+    "Déambulation",
+    "Tout public",
+    "1–2 artistes",
+    "30 minutes",
+    "Seul ou avec musique live"
+   ],
+   "dossier_soon": "Dossier sur demande."
+  }
+ },
+ "video": {
+  "title": "Vidéo",
+  "intro": "Découvrez VENDAVAL dans la rue.",
+  "play": "Lire la vidéo",
+  "consent": "En appuyant sur lecture, la vidéo se charge depuis YouTube, qui peut déposer des cookies.",
+  "watch_on": "Voir sur",
+  "items": {
+   "brass_trailer": "Bande-annonce VENDAVAL Brass"
+  }
+ },
+ "workshops": {
+  "title": "Ateliers",
+  "intro": "Les artistes de VENDAVAL proposent des ateliers de cirque et de musique pour jeunes et adultes, animés par des professionnel·les en activité.",
+  "groups": {
+   "stilts": {
+    "title": "Échasses",
+    "items": [
+     "Échasses"
+    ]
+   },
+   "circus": {
+    "title": "Cirque",
+    "items": [
+     "Clown",
+     "Bulles de savon",
+     "Jonglerie et équilibres"
+    ]
+   },
+   "music": {
+    "title": "Musique",
+    "items": [
+     "Direction par signes de la main",
+     "Respiration circulaire",
+     "Instruments recyclés"
+    ]
+   }
+  },
+  "ask": "Demandez-les ici.",
+  "note": "Toutes les informations sont dans les dossiers des ateliers."
+ },
+ "agenda": {
+  "title": "Agenda",
+  "upcoming": "Prochaines dates",
+  "past": "Nous sommes passés par",
+  "none": "De nouvelles dates arrivent bientôt.",
+  "all": "Toutes les dates",
+  "show_dates": "Dates du spectacle"
+ },
+ "artists": {
+  "title": "Artistes",
+  "intro": "Les artistes qui donnent vie à VENDAVAL.",
+  "link": "Page de l'artiste",
+  "subs_title": "Percussions (remplacement)",
+  "people": {
+   "tyle": {
+    "origin": "États-Unis / Allemagne",
+    "roles": "Direction artistique, échasses, clown, trompette, saxophone baryton, trombone, accordéon, jeux"
+   },
+   "albert": {
+    "origin": "Catalogne",
+    "roles": "Clown, mime, échasses, jonglerie, boule d'équilibre · Cia. Filigranes"
+   },
+   "jordi": {
+    "origin": "Catalogne",
+    "roles": "Clown, monocycle, jonglerie (aussi avec le feu), boule d'équilibre · Cia. Filigranes"
+   },
+   "alian": {
+    "origin": "Argentine / Portugal",
+    "roles": "Soubassophone, euphonium, flûte, harmonica, comédien"
+   },
+   "juan": {
+    "origin": "Argentine",
+    "roles": "Saxophone alto, trompette, basse électrique"
+   },
+   "stefano": {
+    "origin": "Italie",
+    "roles": "Saxophone ténor et alto, DJ"
+   },
+   "lucas": {
+    "origin": "Argentine",
+    "roles": "Trompette"
+   },
+   "facu": {
+    "origin": "Argentine / Espagne",
+    "roles": "Batterie, percussions, violon"
+   }
+  },
+  "link_by_gender": {
+   "m": "Page de l'artiste",
+   "f": "Page de l'artiste",
+   "x": "Page de l'artiste"
+  }
+ },
+ "downloads": {
+  "title": "Téléchargements",
+  "intro": "Documents pour programmateurs et presse.",
+  "note": "Chaque document s'ouvre dans votre langue quand il existe. Besoin d'une autre langue ? Demandez-nous.",
+  "kinds": {
+   "dossier": "Dossier du spectacle",
+   "rider": "Fiche technique (rider)",
+   "photos": "Photos",
+   "workshop": "Dossier d'ateliers"
+  },
+  "photos_web": "Web · 1000 px",
+  "photos_print": "Impression · 300 dpi",
+  "missing": "Pas encore disponible en français.",
+  "more_at": "Infos et dossier sur",
+  "titles": {
+   "xanques": "Ateliers d'échasses",
+   "yiflauki": "Ateliers de musique · Yiflauki"
+  },
+  "concert": "Concert au milieu du public",
+  "other": "Autres langues"
+ },
+ "contact": {
+  "title": "Contact",
+  "intro": "Nous sommes disponibles pour la programmation, les ateliers, la presse et les collaborations. Parlez-nous de votre projet, nous vous répondrons vite.",
+  "invoice": "Programmation et facturation via l'association de cirque Tub d'assaig 7.70 (Terrassa).",
+  "morse": "Vous pouvez aussi nous écrire en morse.",
+  "form": {
+   "name": "Nom",
+   "email": "E-mail",
+   "phone": "Téléphone",
+   "org": "Festival ou structure",
+   "date": "Date prévue",
+   "place": "Ville",
+   "show": "Spectacle ou atelier",
+   "message": "Message",
+   "required": "obligatoire",
+   "show_any": "Pas encore sûr",
+   "privacy": "Nous utilisons ces données uniquement pour vous répondre.",
+   "submit": "Envoyer",
+   "ok": "Merci ! Nous avons bien reçu votre message.",
+   "err": "Le message n'a pas pu être envoyé. Écrivez-nous à VENDAVAL@anartist.org.",
+   "sending": "Envoi en cours…"
+  }
+ },
+ "footer": {
+  "credits": "Photographie : David Ugalde (ROAR), Barbara Walzer, Jordi Largo, Albert Garcia · Costumes : Imaginario de Monica, Tropidelia · Graphisme : bicialta",
+  "hosted": "Site fait avec des logiciels libres, sans cookies ni pistage.",
+  "top": "Retour en haut",
+  "roles": {
+   "photo": "Photographie",
+   "costume": "Costumes",
+   "design": "Graphisme"
+  },
+  "colon": " :"
+ },
+ "a11y": {
+  "title": "Accessibilité",
+  "size": "Taille du texte",
+  "smaller": "Texte plus petit",
+  "bigger": "Texte plus grand",
+  "contrast": "Contraste élevé",
+  "links": "Souligner les liens",
+  "spacing": "Plus d'interligne",
+  "motion": "Arrêter les animations",
+  "reset": "Réinitialiser"
+ },
+ "crew": {
+  "kicker": "Registre d'équipage",
+  "title": "Rejoins l'équipage",
+  "lede": "Choisis ton mois de naissance et les initiales de ton prénom et de ton nom. L'équipage du VENDAVAL t'attribue un poste à bord et un brevet avec ton nom complet.",
+  "note": "",
+  "month": "Mois de naissance",
+  "month_sub": "Il définit ton poste. Chaque mois en a cinq, selon ce qui se fait à bord à cette saison.",
+  "pronoun": "Pronom",
+  "pron": [
+   "Il",
+   "Elle",
+   "Iel"
+  ],
+  "first": "Initiale du prénom",
+  "first_sub": "Ton prénom sera un objet de la mer.",
+  "last": "Initiale du nom",
+  "last_sub": "Ton nom sera un adjectif du monde du cirque.",
+  "card": "Ton brevet d'équipage",
+  "plate": "Brevet d'équipage",
+  "mat": "Immatriculation",
+  "again": "Relancer",
+  "surprise": "Surprends-moi",
+  "copied": "Copié :",
+  "selected": "Nom sélectionné. Copie-le avec le menu de ton appareil.",
+  "letter": "Lettre",
+  "meta": "Né·e en {m}. Prénom en {a}, nom en {b}.",
+  "copy_btn": "Copier",
+  "home_title": "Rejoins l'équipage",
+  "home_text": "Quel serait ton poste à bord de VENDAVAL ? Choisis ton mois et tes initiales et découvre ton nom de marin.",
+  "home_btn": "Découvre ton poste"
+ }
+}

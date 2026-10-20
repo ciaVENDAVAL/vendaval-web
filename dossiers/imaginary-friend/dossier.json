@@ -1,0 +1,30 @@
+{
+ "file": "VENDAVAL_{name}_{L}_dossier_2026-10.pdf",
+ "names": {
+  "ca": "Amigui-Imaginari",
+  "es": "Amigui-Imaginari",
+  "fr": "Amigui-Imaginari",
+  "it": "Amigui-Imaginari",
+  "pt": "Amigui-Imaginari",
+  "*": "Imaginary-Friend"
+ },
+ "cover": "zancos_peluche_5.jpg",
+ "rows": {
+  "0": {
+   "photos": [
+    "zancos_peluche_7.jpg",
+    "_MG_7306.jpg"
+   ],
+   "h": 105
+  },
+  "3": {
+   "photos": [
+    "footer_images_12.jpg",
+    "zancos_peluche_2.jpg",
+    "zancos_peluche_4.jpg"
+   ],
+   "h": 60
+  }
+ },
+ "row_h": 55
+}
