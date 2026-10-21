@@ -12,19 +12,19 @@ data = json.loads((ROOT/'content/data.json').read_text())
 # El Joc Etern is left out until it is on tour.
 X = {
  'ca': {'title': 'Espectacles i tallers', 'concert': 'Concert enmig del públic',
-        'brass_facts': ['Itinerant de carrer, de dia o de nit', 'Passis de 30 minuts, diversos al dia', '6 músics i 2 artistes de circ, amb jocs per al públic', "Durada i nombre d'artistes adaptables (mínim 4 músics)"],
-        'concert_kicker': "El VENDAVAL Brass, estàtic i amplificat, a la plaça davant de l'escenari",
-        'concert_facts': ["Passis de 30 minuts als canvis d'escenari, diversos al dia", 'La banda toca enmig del públic, amb xanques i jocs', '8 micròfons sense fils propis; PA del festival', "Durada i nombre d'artistes adaptables"],
+        'brass_kicker': 'Itinerant acústic', 'brass_facts': ['Pels carrers, de dia o de nit', 'Passis de 30 minuts, diversos al dia', '6 músics i 2 artistes de circ, amb jocs per al públic', "Durada i nombre d'artistes adaptables (mínim 4 músics)"],
+        'concert_kicker': 'Concert amplificat a la plaça',
+        'concert_facts': ["Passis de 30 minuts als canvis d'escenari, diversos al dia", "La banda es mou enmig del públic, dins la plaça davant de l'escenari, amb xanques i jocs", '8 micròfons sense fils propis; PA del festival', "Durada i nombre d'artistes adaptables"],
         'ws_kicker': 'Per a joves i adults, amb artistes en actiu', 'web': 'Fotos, vídeos, dossiers i fitxes tècniques'},
  'es': {'title': 'Espectáculos y talleres', 'concert': 'Concierto entre el público',
-        'brass_facts': ['Itinerante, de día o de noche', 'Pases de 30 minutos, varios al día', '6 músicos y 2 artistas de circo, con juegos para el público', 'Duración y número de artistas adaptables (mínimo 4 músicos)'],
-        'concert_kicker': 'El VENDAVAL Brass, estático y amplificado, en la plaza frente al escenario',
-        'concert_facts': ['Pases de 30 minutos en los cambios de escenario, varios al día', 'La banda toca entre el público, con zancos y juegos', '8 micrófonos inalámbricos propios; PA del festival', 'Duración y número de artistas adaptables'],
+        'brass_kicker': 'Pasacalles acústico', 'brass_facts': ['Por las calles, de día o de noche', 'Pases de 30 minutos, varios al día', '6 músicos y 2 artistas de circo, con juegos para el público', 'Duración y número de artistas adaptables (mínimo 4 músicos)'],
+        'concert_kicker': 'Concierto amplificado en la plaza',
+        'concert_facts': ['Pases de 30 minutos en los cambios de escenario, varios al día', 'La banda se mueve entre el público, dentro de la plaza frente al escenario, con zancos y juegos', '8 micrófonos inalámbricos propios; PA del festival', 'Duración y número de artistas adaptables'],
         'ws_kicker': 'Para jóvenes y adultos, con artistas en activo', 'web': 'Fotos, vídeos, dosieres y fichas técnicas'},
  'en': {'title': 'Shows and workshops', 'concert': 'Concert in the audience',
-        'brass_facts': ['Roaming street show, day or night', '30-minute sets, several a day', '6 musicians and 2 circus artists, with games for the audience', 'Duration and number of artists adapt to the event (minimum 4 musicians)'],
-        'concert_kicker': 'VENDAVAL Brass standing still and amplified, on the square in front of the stage',
-        'concert_facts': ['30-minute sets during stage changeovers, several a day', 'The band plays among the audience, with stilts and games', '8 wireless mics of our own; festival PA', 'Duration and number of artists adapt to the event'],
+        'brass_kicker': 'Acoustic roaming show', 'brass_facts': ['Through the streets, day or night', '30-minute sets, several a day', '6 musicians and 2 circus artists, with games for the audience', 'Duration and number of artists adapt to the event (minimum 4 musicians)'],
+        'concert_kicker': 'Amplified concert on the square',
+        'concert_facts': ['30-minute sets during stage changeovers, several a day', 'The band moves among the audience, on the square in front of the stage, with stilts and games', '8 wireless mics of our own; festival PA', 'Duration and number of artists adapt to the event'],
         'ws_kicker': 'For young people and adults, led by working artists', 'web': 'Photos, videos, dossiers and technical riders'},
 }
 FACTS = {'friend': [0, 2, 3, 4], 'freakfrac': [0, 2, 3]}
@@ -52,7 +52,7 @@ def page(lang):
     ws = card('h ws', W['title'], x['ws_kicker'],
               [f"{g['title']}: {', '.join(i[0].lower() + i[1:] for i in g['items'])}" if g['items'] != [g['title']] else g['title'] for g in W['groups'].values()],
               PHOTO['workshops'])
-    left = (card('h brass', S['brass']['name'], S['brass']['kicker'], x['brass_facts'], PHOTO['brass'])
+    left = (card('h brass', S['brass']['name'], x['brass_kicker'], x['brass_facts'], PHOTO['brass'])
             + card('h concert', x['concert'], x['concert_kicker'], x['concert_facts'], PHOTO['concert'], sub='VENDAVAL Brass') + ws)
     right = show('friend', 'v friend') + show('freakfrac', 'v freak')
     cards = [f'<div class="col">{left}</div><div class="col">{right}</div>']
