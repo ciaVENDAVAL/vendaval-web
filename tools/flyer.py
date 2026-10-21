@@ -8,31 +8,35 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 DOCS, OUT = ROOT/'docs', ROOT/'flyer'
 data = json.loads((ROOT/'content/data.json').read_text())
 
-# flyer-only texts (short versions); add a language here before building it
+# flyer-only texts (short versions); add a language here before building it.
+# El Joc Etern is left out until it is on tour.
 X = {
  'ca': {'title': 'Espectacles i tallers', 'concert': 'Concert enmig del públic',
-        'concert_kicker': "Concert amplificat a la plaça, davant de l'escenari",
-        'concert_facts': ["Passis de 30 minuts durant els canvis d'escenari, diversos al dia", 'La banda toca enmig del públic, amb xanques i jocs', '8 micròfons sense fils propis; PA del festival'],
+        'brass_facts': ['Itinerant de carrer, de dia o de nit', 'Passis de 30 minuts, diversos al dia', '6 músics i 2 artistes de circ, amb jocs per al públic', "Durada i nombre d'artistes adaptables (mínim 4 músics)"],
+        'concert_kicker': "El VENDAVAL Brass, estàtic i amplificat, a la plaça davant de l'escenari",
+        'concert_facts': ["Passis de 30 minuts als canvis d'escenari, diversos al dia", 'La banda toca enmig del públic, amb xanques i jocs', '8 micròfons sense fils propis; PA del festival', "Durada i nombre d'artistes adaptables"],
         'ws_kicker': 'Per a joves i adults, amb artistes en actiu', 'web': 'Fotos, vídeos, dossiers i fitxes tècniques'},
  'es': {'title': 'Espectáculos y talleres', 'concert': 'Concierto entre el público',
-        'concert_kicker': 'Concierto amplificado en la plaza, frente al escenario',
-        'concert_facts': ['Pases de 30 minutos en los cambios de escenario, varios al día', 'La banda toca entre el público, con zancos y juegos', '8 micrófonos inalámbricos propios; PA del festival'],
+        'brass_facts': ['Itinerante, de día o de noche', 'Pases de 30 minutos, varios al día', '6 músicos y 2 artistas de circo, con juegos para el público', 'Duración y número de artistas adaptables (mínimo 4 músicos)'],
+        'concert_kicker': 'El VENDAVAL Brass, estático y amplificado, en la plaza frente al escenario',
+        'concert_facts': ['Pases de 30 minutos en los cambios de escenario, varios al día', 'La banda toca entre el público, con zancos y juegos', '8 micrófonos inalámbricos propios; PA del festival', 'Duración y número de artistas adaptables'],
         'ws_kicker': 'Para jóvenes y adultos, con artistas en activo', 'web': 'Fotos, vídeos, dosieres y fichas técnicas'},
  'en': {'title': 'Shows and workshops', 'concert': 'Concert in the audience',
-        'concert_kicker': 'Amplified concert on the square in front of the stage',
-        'concert_facts': ['30-minute sets during stage changeovers, several a day', 'The band plays among the audience, with stilts and games', '8 wireless mics of our own; festival PA'],
+        'brass_facts': ['Roaming street show, day or night', '30-minute sets, several a day', '6 musicians and 2 circus artists, with games for the audience', 'Duration and number of artists adapt to the event (minimum 4 musicians)'],
+        'concert_kicker': 'VENDAVAL Brass standing still and amplified, on the square in front of the stage',
+        'concert_facts': ['30-minute sets during stage changeovers, several a day', 'The band plays among the audience, with stilts and games', '8 wireless mics of our own; festival PA', 'Duration and number of artists adapt to the event'],
         'ws_kicker': 'For young people and adults, led by working artists', 'web': 'Photos, videos, dossiers and technical riders'},
 }
-FACTS = {'brass': [0, 2, 3], 'friend': [0, 2, 3, 4], 'joc': [0, 2, 3], 'freakfrac': [0, 2]}
+FACTS = {'friend': [0, 2, 3, 4], 'freakfrac': [0, 2, 3]}
 PHOTO = {'brass': 'vendaval-passecalles-000', 'concert': 'vendaval-firavapor002', 'friend': 'amigui-7',
-         'joc': 'el-joc-etern-drawing-swap', 'freakfrac': 'freak-frac-3', 'workshops': 'tallers-zancos-1'}
+         'freakfrac': 'freak-frac-3', 'workshops': 'tallers-zancos-1'}
 
-def img(name): return (DOCS/'img'/f'{name}-800.webp').as_uri()
+def img(name): return (DOCS/'img'/f'{name}-1600.webp').as_uri()
 e = html.escape
 
-def card(name, kicker, items, photo, tag=None, sub=None):
+def card(cls, name, kicker, items, photo, tag=None, sub=None):
     lis = ''.join(f'<li>{e(i)}</li>' for i in items)
-    return f'''<article class="card">
+    return f'''<article class="card {cls}">
   <div class="ph"><img class="bg" src="{img(photo)}" alt=""><img class="fg" src="{img(photo)}" alt=""></div>
   <div class="tx">{f'<span class="tag">{e(tag)}</span>' if tag else ''}
     <h2>{e(name)}</h2>{f'<p class="sub">{e(sub)}</p>' if sub else ''}
@@ -41,16 +45,17 @@ def card(name, kicker, items, photo, tag=None, sub=None):
 
 def page(lang):
     t = json.loads((ROOT/f'content/i18n/{lang}.json').read_text()); x = X[lang]; S = t['show']; site = data['site']
-    cards = [card(S['brass']['name'], S['brass']['kicker'], [S['brass']['facts'][i] for i in FACTS['brass']], PHOTO['brass']),
-             card(x['concert'], x['concert_kicker'], x['concert_facts'], PHOTO['concert'], sub='VENDAVAL Brass')]
-    for k in ('friend', 'joc', 'freakfrac'):
+    def show(k, cls):
         s = S[k]; st = s.get('status')
-        cards.append(card(s['name'], s['kicker'], [s['facts'][i] for i in FACTS[k]], PHOTO[k],
-                          tag=t['shows']['status'][st] if st else None))
+        return card(cls, s['name'], s['kicker'], [s['facts'][i] for i in FACTS[k]], PHOTO[k], tag=t['shows']['status'][st] if st else None)
     W = t['workshops']
-    cards.append(card(W['title'], x['ws_kicker'],
-                      [f"{g['title']}: {', '.join(i[0].lower() + i[1:] for i in g['items'])}" if g['items'] != [g['title']] else g['title'] for g in W['groups'].values()],
-                      PHOTO['workshops']))
+    ws = card('h ws', W['title'], x['ws_kicker'],
+              [f"{g['title']}: {', '.join(i[0].lower() + i[1:] for i in g['items'])}" if g['items'] != [g['title']] else g['title'] for g in W['groups'].values()],
+              PHOTO['workshops'])
+    left = (card('h brass', S['brass']['name'], S['brass']['kicker'], x['brass_facts'], PHOTO['brass'])
+            + card('h concert', x['concert'], x['concert_kicker'], x['concert_facts'], PHOTO['concert'], sub='VENDAVAL Brass') + ws)
+    right = show('friend', 'v friend') + show('freakfrac', 'v freak')
+    cards = [f'<div class="col">{left}</div><div class="col">{right}</div>']
     web = 'vendaval.cat'
     fonts = ''.join(f"@font-face{{font-family:{fam};font-weight:{w};src:url({(ROOT/'static/fonts'/f).as_uri()})}}"
                     for fam, w, f in [('Brico', 800, 'bricolage-grotesque-latin-800-normal.woff2'), ('Brico', 800, 'bricolage-grotesque-latin-ext-800-normal.woff2'),
@@ -68,9 +73,18 @@ header{{display:flex;align-items:center;gap:6mm;padding-bottom:4mm;border-bottom
 header img{{height:24mm}}
 header h1{{font:800 21pt/1 Brico,sans-serif;color:#082f40}}
 header p{{font-size:10pt;color:#4f5e65;margin-top:1.5mm;max-width:120mm}}
-main{{flex:1;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,minmax(0,1fr));min-height:0;gap:4mm;padding:5mm 0}}
-.card{{display:flex;min-height:0;border:.4mm solid #e3d6c3;border-radius:3mm;overflow:hidden;background:#fff}}
-.ph{{position:relative;flex:0 0 42mm;overflow:hidden;background:#082f40}}
+main{{flex:1;display:grid;grid-template-columns:1.9fr 1fr;gap:4mm;padding:5mm 0;min-height:0}}
+.col{{display:flex;flex-direction:column;gap:4mm;min-height:0}}
+.card{{display:flex;min-height:0;flex:1 1 auto;border:.4mm solid #e3d6c3;border-radius:3mm;overflow:hidden;background:#fff}}
+.ph{{position:relative;overflow:hidden;background:#082f40}}
+.h .ph{{flex:0 0 auto}}
+.brass .ph{{width:60mm}}
+.concert .ph,.ws .ph{{width:70mm}}
+.concert .tx,.ws .tx{{font-size:8.6pt}}
+.v{{flex-direction:column}}
+.v .ph{{flex:1 1 auto;min-height:0}}
+.v .tx{{flex:0 0 auto}}
+.brass{{flex-grow:1.3}}
 .ph .bg{{position:absolute;inset:-4mm;width:calc(100% + 8mm);height:calc(100% + 8mm);object-fit:cover;filter:blur(2.5mm) brightness(.8)}}
 .ph .fg{{position:relative;width:100%;height:100%;object-fit:contain}}
 .tx{{padding:3.2mm 3.5mm;display:flex;flex-direction:column;gap:1.2mm}}
