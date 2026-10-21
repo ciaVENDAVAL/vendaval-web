@@ -28,6 +28,17 @@
     if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) timer = setInterval(function () { if (!root.classList.contains('a11y-motion')) show(cur + 1); }, 6000);
   }
 
+  // open menus (language, other languages…) close when clicking anywhere else, opening another one, or pressing Esc
+  function closeMenus(except) {
+    document.querySelectorAll('details[open]').forEach(function (d) { if (d !== except && !d.contains(except)) d.removeAttribute('open'); });
+  }
+  document.addEventListener('click', function (e) { closeMenus(e.target.closest('details a') ? null : e.target.closest('details')); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    var d = document.activeElement && document.activeElement.closest('details[open]');
+    closeMenus(null); if (d) { var s = d.querySelector('summary'); if (s) s.focus(); }
+  });
+
   // "back to top" links: scroll the page itself (the header is sticky, so jumping to it does nothing)
   document.querySelectorAll('a[href="#top"]').forEach(function (a) {
     a.addEventListener('click', function (e) {

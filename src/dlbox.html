@@ -1,7 +1,8 @@
 <article class="dlcard" id="dl-{{ bx.id }}">
   <div class="dl-head">
     {% set thumb = bx.thumb or (shows_by_id[bx.id].cover if bx.id in shows_by_id else None) %}{% if thumb %}<img src="{{ R }}img/{{ thumb }}-800.webp" alt="" loading="lazy">{% endif %}
-    <h3>{% if bx.title %}{{ t.downloads.titles[bx.title] }}{% elif page == 'downloads' %}<a href="{{ H }}{{ slugs[bx.id] }}/">{{ t.show[bx.id].name }}</a>{% else %}{{ t.downloads.title }}{% endif %}</h3>
+    <div>{% if page != 'downloads' %}<p class="dl-kicker">{{ t.downloads.title }}</p>{% endif %}
+    <h3>{% if bx.title %}{{ t.downloads.titles[bx.title] }}{% elif page == 'downloads' %}<a href="{{ H }}{{ slugs[bx.id] }}/">{{ t.show[bx.id].name }}</a>{% else %}{{ t.show[bx.id].name }}{% endif %}</h3></div>
   </div>
   {% for it in bx.get('items', []) %}{% set d = downloads[it] %}{% set fs = avail(it) %}
   <div class="dl-row">

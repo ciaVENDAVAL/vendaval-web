@@ -311,6 +311,10 @@
   "copy_btn": "コピー",
   "home_title": "乗組員になろう",
   "home_text": "VENDAVAL号でのあなたの役職は？生まれた月とイニシャルを選んで、海の名前を見つけよう。",
-  "home_btn": "役職を見つける"
+  "home_btn": "役職を見つける",
+  "sample_name": "ヨーデルを歌う潜望鏡",
+  "sample_job": "優雅なハリケーンの見張り番",
+  "sample_mat": "10M-0420-YS",
+  "sample": "例"
  }
 }

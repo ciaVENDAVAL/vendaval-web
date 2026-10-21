@@ -473,3 +473,16 @@ h1.show-title,.page-workshops h1,.page-agenda h1,.page-artists h1,.page-download
 .home-crew p { max-width: 46rem; }
 .home-crew .crew-pennants{border-bottom:0}.home-crew .crew-pennants .p3{fill:#fff}
 .crew-controls fieldset[hidden]{display:none}
+.dl-kicker{margin:0;font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--teal-d)}
+#contact .two{align-items:start}
+.home-crew-body{display:grid;gap:28px;align-items:center}
+@media(min-width:860px){.home-crew-body{grid-template-columns:1fr minmax(300px,420px)}}
+.crew-sample{display:block;text-decoration:none;color:inherit;transform:rotate(-1.5deg);transition:transform .2s;position:relative}
+.crew-sample:hover,.crew-sample:focus-visible{transform:rotate(0)}
+.crew-sample .crew-body,.crew-sample .crew-eyebrow,.crew-sample .crew-cargo,.crew-sample .crew-nombre{display:block}
+.crew-sample .crew-eyebrow{display:flex}
+.crew-sample .crew-nombre{font:800 clamp(1.6rem,3.2vw,2.2rem)/1.05 var(--head);color:var(--navy);margin:.2em 0 .3em}
+.crew-sample-tag{display:inline-block;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:var(--yellow);color:var(--navy);padding:2px 8px;border-radius:4px}
+.home-crew .crew-sample .crew-pennants .p3{fill:var(--navy)}
+.crew-card.crew-sample{position:relative;top:auto;grid-area:auto;box-shadow:6px 6px 0 #f27f1b;border-color:#fff}
+.crew-sample .crew-eyebrow{margin-bottom:8px}.crew-sample .crew-body{padding:14px 18px 18px}

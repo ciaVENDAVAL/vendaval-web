@@ -311,6 +311,10 @@
   "copy_btn": "Kopieren",
   "home_title": "Heuere bei uns an",
   "home_text": "Welchen Posten hättest du an Bord von VENDAVAL? Wähle deinen Monat und deine Initialen und entdecke deinen Seenamen.",
-  "home_btn": "Deinen Posten entdecken"
+  "home_btn": "Deinen Posten entdecken",
+  "sample_name": "Jodelndes Periskop",
+  "sample_job": "Ausguck eleganter Orkane",
+  "sample_mat": "OKT-0420-JP",
+  "sample": "Beispiel"
  }
 }

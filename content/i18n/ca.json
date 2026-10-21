@@ -311,6 +311,10 @@
   "copy_btn": "Copia",
   "home_title": "Uneix-te a la tripulació",
   "home_text": "Quin càrrec tindries a bord del VENDAVAL? Tria el teu mes i les teves inicials i descobreix el teu nom de mar.",
-  "home_btn": "Descobreix el teu càrrec"
+  "home_btn": "Descobreix el teu càrrec",
+  "sample_name": "Periscopi Tirolès",
+  "sample_job": "Guaita d'Huracans Elegants",
+  "sample_mat": "OCT-0420-PT",
+  "sample": "Exemple"
  }
 }

@@ -311,6 +311,10 @@
   "copy_btn": "Copia",
   "home_title": "Unisciti alla ciurma",
   "home_text": "Che ruolo avresti a bordo di VENDAVAL? Scegli il tuo mese e le tue iniziali e scopri il tuo nome di mare.",
-  "home_btn": "Scopri il tuo ruolo"
+  "home_btn": "Scopri il tuo ruolo",
+  "sample_name": "Periscopio Tirolese",
+  "sample_job": "Vedetta degli Uragani Eleganti",
+  "sample_mat": "OTT-0420-PT",
+  "sample": "Esempio"
  }
 }

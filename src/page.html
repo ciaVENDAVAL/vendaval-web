@@ -146,9 +146,20 @@
   <div class="wrap home-crew">
     <svg class="crew-pennants" viewBox="0 0 240 14" preserveAspectRatio="none" aria-hidden="true" focusable="false">{% for i in range(10) %}<polygon class="p{{ loop.index0 % 4 + 1 }}" points="{{ i*24 }},0 {{ i*24+24 }},0 {{ i*24+12 }},14"/>{% endfor %}</svg>
     <div class="home-crew-body">
-      <h2>{{ t.crew.home_title }}</h2>
-      <p>{{ t.crew.home_text }}</p>
-      <p><a class="btn btn-hot" href="{{ H }}crew/">{{ t.crew.home_btn }} →</a></p>
+      <div>
+        <h2>{{ t.crew.home_title }}</h2>
+        <p>{{ t.crew.home_text }}</p>
+        <p><a class="btn btn-hot" href="{{ H }}crew/">{{ t.crew.home_btn }} →</a></p>
+      </div>
+      <a class="crew-card crew-sample" href="{{ H }}crew/" aria-label="{{ t.crew.sample }}: {{ t.crew.sample_name }}, {{ t.crew.sample_job }}">
+        <svg class="crew-pennants" viewBox="0 0 240 14" preserveAspectRatio="none" aria-hidden="true" focusable="false">{% for i in range(10) %}<polygon class="p{{ loop.index0 % 4 + 1 }}" points="{{ i*24 }},0 {{ i*24+24 }},0 {{ i*24+12 }},14"/>{% endfor %}</svg>
+        <span class="crew-body" aria-hidden="true">
+          <span class="crew-eyebrow"><span>{{ t.crew.plate }}</span><span>{{ t.crew.mat }} {{ t.crew.sample_mat }}</span></span>
+          <span class="crew-cargo">{{ t.crew.sample_job }}</span>
+          <span class="crew-nombre">{{ t.crew.sample_name }}</span>
+          <span class="crew-sample-tag">{{ t.crew.sample }}</span>
+        </span>
+      </a>
     </div>
   </div>
 </section>
@@ -189,6 +200,7 @@
       <h3 class="ag-up">{{ t.agenda.upcoming }}</h3>
       <ol class="timeline up">{% for e in sup %}{% include 'agenda_item.html' %}{% endfor %}</ol>
       <p class="none"{% if sup %} hidden{% endif %}>{{ t.agenda.none }}</p>
+      <p><a class="btn btn-small btn-line" href="{{ H }}agenda/">{{ t.agenda.all }} →</a></p>
       <h3>{{ t.agenda.past }}</h3>
       <ol class="timeline past">{% for e in spast %}{% include 'agenda_item.html' %}{% endfor %}</ol>
     </div>{% endif %}

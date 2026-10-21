@@ -311,6 +311,10 @@
   "copy_btn": "Copy",
   "home_title": "Join the crew",
   "home_text": "What would your job be on board VENDAVAL? Pick your month and initials and find out your sea name.",
-  "home_btn": "Find your job on board"
+  "home_btn": "Find your job on board",
+  "sample_name": "Yodelling Periscope",
+  "sample_job": "Lookout for Elegant Hurricanes",
+  "sample_mat": "OCT-0420-YP",
+  "sample": "Example"
  }
 }

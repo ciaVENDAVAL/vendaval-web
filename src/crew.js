@@ -94,7 +94,7 @@ const NOMBRES_RAW = {
   M: "medusa:f, mástil:m, merluza:f, marea:f, manatí:m, morena:f, mejillón:m, mero:m, mar:m, marinero:m, mascarón de proa:m, muelle:m, mantarraya:f, marlín:m, morsa:f, mastelero:m, maroma:f, monstruo marino:m, mojarra:f",
   N: "nautilo:m, náufrago:m, navío:m, nao:f, narval:m, nudo:m, nácar:m, niebla:f, nasa:f, nereida:f, nave:f, noray:m, nadador:m",
   O: "ostra:f, orca:f, océano:m, ola:f, oleaje:m, ostrero:m, octópodo:m, oreja de mar:f, orilla:f, obenque:m, ojo de buey:m",
-  P: "pulpo:m, pez espada:m, pirata:m, pingüino:m, popa:f, proa:f, puerto:m, pargo:m, percebe:m, perca:f, pez globo:m, plancton:m, pesquero:m, polizón:m, patache:m, pleamar:f, pez payaso:m, pelícano:m, pez luna:m, peñasco:m, pasarela:f, pailebote:m, pez vela:m, palangre:m, piragua:f",
+  P: "periscopio:m, pulpo:m, pez espada:m, pirata:m, pingüino:m, popa:f, proa:f, puerto:m, pargo:m, percebe:m, perca:f, pez globo:m, plancton:m, pesquero:m, polizón:m, patache:m, pleamar:f, pez payaso:m, pelícano:m, pez luna:m, peñasco:m, pasarela:f, pailebote:m, pez vela:m, palangre:m, piragua:f",
   Q: "quilla:f, quisquilla:f, quelonio:m, quimera:f, quechemarín:m, quitón:m",
   R: "remo:m, raya:f, rémora:f, rape:m, red:f, regata:f, rompeolas:m, rodaballo:m, roca:f, rumbo:m, remolcador:m, ría:f, rizón:m, rascacio:m, rompehielos:m, robalo:m, rada:f, ron:m",
   S: "sirena:f, sardina:f, salmón:m, sextante:m, sepia:f, submarino:m, salmonete:m, salina:f, soga:f, sargazo:m, sonda:f, serpiente marina:f, salvavidas:m, sábalo:m, sirenio:m, sonar:m, sargo:m",
@@ -133,7 +133,7 @@ const APELLIDOS_RAW = {
   V: "valiente, vanguardista, vanidoso, vaporoso, vertiginoso, versátil, vibrante, vigoroso, virtuoso, vistoso, vívido, vivaracho, vivaz, vodevilesco, volador, voluptuoso, veloz",
   W: "wagneriano, warholiano",
   X: "xilofónico, xenófilo",
-  Y: "yeyé, yóguico, yámbico",
+  Y: "yodelero, yeyé, yóguico, yámbico",
   Z: "zalamero, zancudo, zapateador, zarzuelero, zigzagueante, zumbón, zaragatero"
 };
 /*ENDDATA*/

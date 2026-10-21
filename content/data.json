@@ -77,7 +77,7 @@
    "cover": "vendaval-passecalles-000",
    "side": [],
    "gallery": [
-    "vendaval-003-400px",
+    "vendaval-003",
     "vendaval-unterwegs001",
     "vendaval-unterwegs002",
     "vendaval-unterwegs003",
@@ -94,15 +94,15 @@
   {
    "id": "friend",
    "slug": "imaginary-friend",
-   "cover": "amigui-5",
+   "cover": "amigui-7",
    "side": [],
    "gallery": [
-    "amigui-7",
     "amigui-mg-7306",
     "amigui-footer-12",
     "amigui-2",
     "amigui-4",
-    "amigui-1"
+    "amigui-1",
+    "amigui-5"
    ],
    "link": null
   },
@@ -325,7 +325,7 @@
    "vendaval-firavapor002",
    "vendaval-firavapor001",
    "vendaval-passecalles-000",
-   "vendaval-003-400px",
+   "vendaval-003",
    "vendaval-unterwegs001",
    "vendaval-unterwegs002",
    "vendaval-unterwegs003",
@@ -353,8 +353,8 @@
    "mask-owlcat-sail"
   ],
   "friend": [
-   "amigui-5",
    "amigui-7",
+   "amigui-5",
    "amigui-mg-7306",
    "amigui-footer-12",
    "amigui-2",
@@ -714,7 +714,7 @@
   "photo-2026-09-09-20-43-56": "photo_2026-09-09_20-43-56.jpg",
   "tallers-zancos-1": "tallers_zancos_1.jpg",
   "tallers-zancos-2": "tallers_zancos_2.jpg",
-  "vendaval-003-400px": "VENDAVAL_003-_400px.jpg",
+  "vendaval-003": "VENDAVAL_003.jpg",
   "vendaval-102": "VENDAVAL_102.jpg",
   "vendaval-bobila001": "VENDAVAL_Bobila001.jpg",
   "vendaval-firavapor001": "VENDAVAL_FiraVapor001.jpg",

@@ -311,6 +311,10 @@
   "copy_btn": "Copiar",
   "home_title": "Junta-te à tripulação",
   "home_text": "Que cargo terias a bordo do VENDAVAL? Escolhe o teu mês e as tuas iniciais e descobre o teu nome de mar.",
-  "home_btn": "Descobre o teu cargo"
+  "home_btn": "Descobre o teu cargo",
+  "sample_name": "Periscópio Tirolês",
+  "sample_job": "Vigia de Furacões Elegantes",
+  "sample_mat": "OUT-0420-PT",
+  "sample": "Exemplo"
  }
 }

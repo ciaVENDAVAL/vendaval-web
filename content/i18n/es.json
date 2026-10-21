@@ -311,6 +311,10 @@
   "copy_btn": "Copiar",
   "home_title": "Únete a la tripulación",
   "home_text": "¿Qué cargo tendrías a bordo del VENDAVAL? Elige tu mes y tus iniciales y descubre tu nombre de mar.",
-  "home_btn": "Descubre tu cargo"
+  "home_btn": "Descubre tu cargo",
+  "sample_name": "Periscopio Yodelero",
+  "sample_job": "Vigía de Huracanes Elegantes",
+  "sample_mat": "OCT-0420-PY",
+  "sample": "Ejemplo"
  }
 }

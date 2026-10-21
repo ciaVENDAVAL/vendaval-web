@@ -31,7 +31,7 @@ window.CREW_DATA = {
   M: ["Méduse", "Mât", "Marée", "Moule", "Mouette", "Murène", "Matelot", "Morse"],
   N: ["Nautile", "Narval", "Naufragé", "Navire", "Nœud", "Nacre", "Nasse", "Néréide"],
   O: ["Orque", "Océan", "Oursin", "Ormeau", "Otarie", "Ouragan"],
-  P: ["Poulpe", "Pirate", "Pingouin", "Proue", "Poupe", "Port", "Plancton", "Poisson-Lune", "Pélican", "Perle"],
+  P: ["Poulpe", "Pirate", "Pingouin", "Proue", "Poupe", "Port", "Plancton", "Poisson-Lune", "Pélican", "Perle", "Périscope"],
   Q: ["Quille", "Quai", "Quartier-Maître"],
   R: ["Raie", "Récif", "Rame", "Rascasse", "Remorqueur", "Requin"],
   S: ["Sirène", "Sardine", "Saumon", "Sextant", "Seiche", "Sous-Marin", "Sole", "Sterne"],
@@ -68,7 +68,7 @@ window.CREW_DATA = {
   V: ["Vaillant|Vaillante|Vaillant·e", "Velouté|Veloutée|Velouté·e", "Vertigineux|Vertigineuse|Vertigineux·se", "Vibrant|Vibrante|Vibrant·e", "Virtuose", "Virevoltant|Virevoltante|Virevoltant·e"],
   W: ["Wagnérien|Wagnérienne|Wagnérien·ne", "Warholien|Warholienne|Warholien·ne"],
   X: ["Xylophonique"],
-  Y: ["Yéyé"],
+  Y: ["Yéyé", "Yodleur|Yodleuse|Yodleur·se"],
   Z: ["Zinzin", "Zigzagant|Zigzagante|Zigzagant·e", "Zélé|Zélée|Zélé·e"]
  }
 };

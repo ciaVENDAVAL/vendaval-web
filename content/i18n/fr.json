@@ -311,6 +311,10 @@
   "copy_btn": "Copier",
   "home_title": "Rejoins l'équipage",
   "home_text": "Quel serait ton poste à bord de VENDAVAL ? Choisis ton mois et tes initiales et découvre ton nom de marin.",
-  "home_btn": "Découvre ton poste"
+  "home_btn": "Découvre ton poste",
+  "sample_name": "Périscope Yodleur",
+  "sample_job": "Vigie des Ouragans Élégants",
+  "sample_mat": "OCT-0420-PY",
+  "sample": "Exemple"
  }
 }
