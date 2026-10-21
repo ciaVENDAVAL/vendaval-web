@@ -157,6 +157,7 @@
           <span class="crew-eyebrow"><span>{{ t.crew.plate }}</span><span>{{ t.crew.mat }} {{ t.crew.sample_mat }}</span></span>
           <span class="crew-cargo">{{ t.crew.sample_job }}</span>
           <span class="crew-nombre">{{ t.crew.sample_name }}</span>
+          <span class="crew-sign"><span class="flip">🎷</span><span>💨</span><span class="flip">⛵</span> VENDAVAL.cat</span>
           <span class="crew-sample-tag">{{ t.crew.sample }}</span>
         </span>
       </a>
@@ -268,6 +269,7 @@
       <h1>{{ C.title }}</h1>
       <p class="lead">{{ C.lede }}{% if C.note %} <em>{{ C.note }}</em>{% endif %}</p>
     </header>
+    <div class="crew-res">
     <section class="crew-card" id="crew-card" aria-label="{{ C.card }}">
       <svg class="crew-pennants" viewBox="0 0 240 14" preserveAspectRatio="none" aria-hidden="true" focusable="false">{% for i in range(10) %}<polygon class="p{{ loop.index0 % 4 + 1 }}" points="{{ i*24 }},0 {{ i*24+24 }},0 {{ i*24+12 }},14"/>{% endfor %}</svg>
       <div class="crew-body">
@@ -275,14 +277,16 @@
         <p class="crew-cargo" id="crew-cargo"></p>
         <h2 class="crew-nombre" id="crew-nombre"></h2>
         <p class="crew-meta" id="crew-meta"></p>
-        <div class="crew-actions">
-          <button type="button" class="btn btn-hot" id="crew-otra">{{ C.again }}</button>
-          <button type="button" class="btn btn-small btn-line" id="crew-sorpresa">{{ C.surprise }}</button>
-          <button type="button" class="btn btn-small btn-line" id="crew-copiar">{{ C.copy_btn }}</button>
-        </div>
-        <p class="crew-status" id="crew-estado" role="status"></p>
+        <p class="crew-sign" aria-label="VENDAVAL.cat"><span class="flip" aria-hidden="true">🎷</span><span aria-hidden="true">💨</span><span class="flip" aria-hidden="true">⛵</span> VENDAVAL.cat</p>
       </div>
     </section>
+    <div class="crew-actions">
+      <button type="button" class="btn btn-hot" id="crew-otra">{{ C.again }}</button>
+      <button type="button" class="btn btn-small btn-line" id="crew-sorpresa">{{ C.surprise }}</button>
+      <button type="button" class="btn btn-small btn-line" id="crew-copiar">{{ C.copy_btn }}</button>
+    </div>
+    <p class="crew-status" id="crew-estado" role="status"></p>
+    </div>
     <p class="sr-only" id="crew-anuncio" aria-live="polite"></p>
     <div class="crew-controls">
       <fieldset><legend>{{ C.month }}</legend><p class="crew-sub">{{ C.month_sub }}</p><div class="crew-months" id="crew-meses"></div></fieldset>

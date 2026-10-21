@@ -33,7 +33,7 @@
 <link rel="apple-touch-icon" href="../../img/apple-touch-icon.png">
 <link rel="manifest" href="../../site.webmanifest">
 <link rel="preload" href="../../fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../../assets/style.css?v=202610211437">
+<link rel="stylesheet" href="../../assets/style.css?v=202610211517">
 </head>
 <body>
 <span id="top"></span>
@@ -61,6 +61,7 @@
       <h1>Únete a la tripulación</h1>
       <p class="lead">Elige tu mes de nacimiento y las iniciales de tu nombre y de tu apellido. La tripulación del VENDAVAL te asigna un cargo a bordo y una patente con nombre completo.</p>
     </header>
+    <div class="crew-res">
     <section class="crew-card" id="crew-card" aria-label="Tu patente de tripulación">
       <svg class="crew-pennants" viewBox="0 0 240 14" preserveAspectRatio="none" aria-hidden="true" focusable="false"><polygon class="p1" points="0,0 24,0 12,14"/><polygon class="p2" points="24,0 48,0 36,14"/><polygon class="p3" points="48,0 72,0 60,14"/><polygon class="p4" points="72,0 96,0 84,14"/><polygon class="p1" points="96,0 120,0 108,14"/><polygon class="p2" points="120,0 144,0 132,14"/><polygon class="p3" points="144,0 168,0 156,14"/><polygon class="p4" points="168,0 192,0 180,14"/><polygon class="p1" points="192,0 216,0 204,14"/><polygon class="p2" points="216,0 240,0 228,14"/></svg>
       <div class="crew-body">
@@ -68,14 +69,16 @@
         <p class="crew-cargo" id="crew-cargo"></p>
         <h2 class="crew-nombre" id="crew-nombre"></h2>
         <p class="crew-meta" id="crew-meta"></p>
-        <div class="crew-actions">
-          <button type="button" class="btn btn-hot" id="crew-otra">Otra tirada</button>
-          <button type="button" class="btn btn-small btn-line" id="crew-sorpresa">Sorpréndeme</button>
-          <button type="button" class="btn btn-small btn-line" id="crew-copiar">Copiar</button>
-        </div>
-        <p class="crew-status" id="crew-estado" role="status"></p>
+        <p class="crew-sign" aria-label="VENDAVAL.cat"><span class="flip" aria-hidden="true">🎷</span><span aria-hidden="true">💨</span><span class="flip" aria-hidden="true">⛵</span> VENDAVAL.cat</p>
       </div>
     </section>
+    <div class="crew-actions">
+      <button type="button" class="btn btn-hot" id="crew-otra">Otra tirada</button>
+      <button type="button" class="btn btn-small btn-line" id="crew-sorpresa">Sorpréndeme</button>
+      <button type="button" class="btn btn-small btn-line" id="crew-copiar">Copiar</button>
+    </div>
+    <p class="crew-status" id="crew-estado" role="status"></p>
+    </div>
     <p class="sr-only" id="crew-anuncio" aria-live="polite"></p>
     <div class="crew-controls">
       <fieldset><legend>Mes de nacimiento</legend><p class="crew-sub">Define tu cargo. Cada mes tiene cinco, según lo que se hace a bordo en esa estación.</p><div class="crew-months" id="crew-meses"></div></fieldset>
@@ -87,7 +90,7 @@
     </div>
   </div>
   <script type="application/json" id="crew-i18n">{"copied": "Copiado:", "letter": "Letra", "meta": "Nacimiento: {m}. Nombre con {a}, apellido con {b}.", "selected": "Nombre seleccionado. C\u00f3pialo con el men\u00fa de tu dispositivo."}</script>
-<script src="../../assets/crew.js?v=202610211437" defer></script>
+<script src="../../assets/crew.js?v=202610211517" defer></script>
 </section>
 </main>
 
@@ -116,6 +119,6 @@
   </div>
 </div>
 <dialog class="lightbox"><button type="button" class="lb-close" aria-label="×">×</button><img alt=""></dialog>
-<script src="../../assets/site.js?v=202610211437" defer></script>
+<script src="../../assets/site.js?v=202610211517" defer></script>
 </body>
 </html>

@@ -279,7 +279,7 @@ function cargoPara(t, g) {
     marcar(cm, "data-i", st.mes); marcar($("crew-letras-nombre"), "data-l", st.a); marcar($("crew-letras-apellido"), "data-l", st.b); tirar();
   });
   $("crew-copiar").addEventListener("click", function () {
-    var txt = nombreCompleto(st.r) + ", " + cargoActual(st.r) + " · VENDAVAL";
+    var txt = nombreCompleto(st.r) + ", " + cargoActual(st.r) + " · 🎷💨⛵ VENDAVAL.cat";
     var ok = function () { $("crew-estado").textContent = T.copied + " " + txt; };
     var sel = function () { var r = document.createRange(); r.selectNodeContents($("crew-nombre")); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); $("crew-estado").textContent = T.selected; };
     if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(ok, sel); else sel();
