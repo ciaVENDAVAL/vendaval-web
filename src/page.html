@@ -5,14 +5,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% if page_title %}{{ page_title }} – Cia. VENDAVAL{% else %}{{ t.meta.title }}{% endif %}</title>
 <meta name="description" content="{{ page_desc or t.meta.description }}">
-<link rel="canonical" href="https://{{ site.domain }}/{{ lang }}/{{ path }}">
-{% for l in langs %}<link rel="alternate" hreflang="{{ i18n[l].html_lang }}" href="https://{{ site.domain }}/{{ l }}/{{ path }}">
-{% endfor %}<link rel="alternate" hreflang="x-default" href="https://{{ site.domain }}/">
+<link rel="canonical" href="{{ site_url }}/{{ lang }}/{{ path }}">
+{% for l in langs %}<link rel="alternate" hreflang="{{ i18n[l].html_lang }}" href="{{ site_url }}/{{ l }}/{{ path }}">
+{% endfor %}<link rel="alternate" hreflang="x-default" href="{{ site_url }}/">
+<meta property="og:site_name" content="Cia. VENDAVAL">
 <meta property="og:title" content="{% if page_title %}{{ page_title }} – Cia. VENDAVAL{% else %}{{ t.meta.title }}{% endif %}">
 <meta property="og:description" content="{{ page_desc or t.meta.description }}">
-<meta property="og:image" content="https://{{ site.domain }}/img/{{ og_image }}-1600.webp">
+<meta property="og:url" content="{{ site_url }}/{{ lang }}/{{ path }}">
+<meta property="og:locale" content="{{ t.html_lang|replace('-', '_') }}">
+<meta property="og:image" content="{{ site_url }}/{{ og_image }}">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{% if page_title %}{{ page_title }} – {% endif %}Cia. VENDAVAL">
 <meta property="og:type" content="website">
-<link rel="icon" href="{{ R }}img/favicon.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#082f40">
+<link rel="icon" href="{{ R }}favicon.ico" sizes="any">
+<link rel="icon" href="{{ R }}img/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="{{ R }}img/apple-touch-icon.png">
+<link rel="manifest" href="{{ R }}site.webmanifest">
 <link rel="preload" href="{{ R }}fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{{ R }}assets/style.css?v={{ version }}">
 </head>

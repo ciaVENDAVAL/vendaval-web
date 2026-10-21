@@ -1,3 +1,4 @@
+import sys
 #!/usr/bin/env python3
 """Build the VENDAVAL website into docs/ (served by GitHub Pages).
 
@@ -18,6 +19,7 @@ from PIL import Image, ImageOps
 ROOT = pathlib.Path(__file__).parent
 SRC, OUT, CONTENT, STATIC, IMGSRC = ROOT/'src', ROOT/'docs', ROOT/'content', ROOT/'static', ROOT/'source-images'
 data = json.loads((CONTENT/'data.json').read_text(encoding='utf-8'))
+SITE_URL = 'https://' + data['site']['domain'] if data['site'].get('domain_live') else data['site']['preview_url']
 langs = [l for l in data['languages'] if (CONTENT/'i18n'/f'{l}.json').exists()]
 i18n = {l: json.loads((CONTENT/'i18n'/f'{l}.json').read_text(encoding='utf-8')) for l in langs}
 today = datetime.date.today().isoformat()
@@ -128,10 +130,10 @@ def build_links():
         base = OUT/kind/d['short']
         for l, u in fs.items():
             (base/l).mkdir(parents=True, exist_ok=True); (base/l/'index.html').write_text(redirect(u, '../../../'))
-            lines.append(f'https://{data["site"]["domain"]}/{kind}/{d["short"]}/{l}')
+            lines.append(f'{SITE_URL}/{kind}/{d["short"]}/{l}')
         js = json.dumps(fs)
         (base/'index.html').write_text(f'<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><script>var f={js},n=(navigator.languages||[navigator.language||"en"]).map(function(x){{return x.slice(0,2)}}),k=n.find(function(x){{return f[x]}})||(f.en?"en":Object.keys(f)[0]);location.replace("../../"+f[k]);</script>\n')
-        lines.append(f'https://{data["site"]["domain"]}/{kind}/{d["short"]}  (opens in the reader\'s language)')
+        lines.append(f'{SITE_URL}/{kind}/{d["short"]}  (opens in the reader\'s language)')
     (ROOT/'LINKS.txt').write_text('\n'.join(lines) + '\n')
 
 # ---------- pages
@@ -148,16 +150,17 @@ def render():
     for lang in langs:
         t = i18n[lang]
         groups = [dict(g, url_l=loc(g['url'], lang)) for g in data['workshop_groups']]
-        base = dict(data, t=t, lang=lang, langs=langs, i18n=i18n, today=today, version=version, icon=icon,
+        base = dict(data, site_url=SITE_URL, t=t, lang=lang, langs=langs, i18n=i18n, today=today, version=version, icon=icon,
                     fmt_range=make_fmt(lang), slugs=slugs, agenda_up=up, agenda_past=past, boxes=boxes,
                     press_zips=press_zips, avail=avail, shows_by_id={x['id']: x for x in shows}, dlfile=make_dlfile(lang), workshop_groups=groups,
-                    og_image=data['hero_slides'][0]['image'], page_title=None, page_desc=None)
+                    og_image='og/photo-' + data['hero_slides'][0]['image'] + '.jpg', page_title=None, page_desc=None)
         pages = [('', 'home', {})]
         for s in shows:
             st = t['show'][s['id']]
-            pages.append((s['slug'] + '/', 'show', {'s': s, 'page_title': st['name'], 'page_desc': re.sub('<[^>]+>', '', st['text'][0])[:180], 'og_image': s['cover']}))
+            pages.append((s['slug'] + '/', 'show', {'s': s, 'page_title': st['name'], 'page_desc': re.sub('<[^>]+>', '', st['text'][0])[:180], 'og_image': 'og/photo-' + s['cover'] + '.jpg'}))
         for k in ('workshops', 'agenda', 'artists', 'downloads', 'crew'):
-            pages.append((k + '/', k, {'page_title': t['nav'][k]}))
+            og = ('og/photo-' + data['workshop_groups'][0]['photo'] + '.jpg') if k == 'workshops' else f'og/{lang}-{k}.jpg'
+            pages.append((k + '/', k, {'page_title': t['nav'][k], 'og_image': og}))
         for path, page, extra in pages:
             depth = path.count('/') + 1
             R = '../' * depth
@@ -167,11 +170,12 @@ def render():
             # links to another page always open at its top (#top), not at the old scroll position
             html = re.sub(r'href="((?:\.\./)+[a-z]{2}/(?:[a-z-]+/)?)"', r'href="\1#top"', html)
             out.write_text(html, encoding='utf-8')
-            urls.append(f'https://{data["site"]["domain"]}/{lang}/{path}')
+            urls.append(f'{SITE_URL}/{lang}/{path}')
     # root: pick the visitor's language
     codes = json.dumps(langs)
     (OUT/'index.html').write_text(f'''<!doctype html><html lang="ca"><meta charset="utf-8"><title>Cia. VENDAVAL</title>
-<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="img/favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="favicon.ico" sizes="any"><link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta property="og:title" content="Cia. VENDAVAL"><meta property="og:image" content="{SITE_URL}/og/photo-{data['hero_slides'][0]['image']}.jpg">
 <script>var L={codes},n=(navigator.languages||[navigator.language||"ca"]).map(function(x){{return x.slice(0,2).toLowerCase()}}),k=n.find(function(x){{return L.indexOf(x)>=0}})||"{data['site']['default_lang']}";location.replace(k+"/");</script>
 <p>{' · '.join(f'<a href="{l}/">{i18n[l]["lang_name"]}</a>' for l in langs)}</p></html>
 ''')
@@ -179,7 +183,11 @@ def render():
 <link rel="stylesheet" href="/assets/style.css"><body><main class="sec"><div class="wrap"><h1>404</h1><p><a href="/">VENDAVAL.cat</a></p>
 <p>{' · '.join(f'<a href="/{l}/">{i18n[l]["lang_name"]}</a>' for l in langs)}</p></div></main></body></html>
 ''')
-    (OUT/'CNAME').write_text(data['site']['domain'] + '\n')
+    import tools.og as og
+    og.make(OUT, force='--og' in sys.argv)
+    # vendaval.cat only once its DNS points to GitHub (set site.domain_live = true in content/data.json)
+    if data['site'].get('domain_live'): (OUT/'CNAME').write_text(data['site']['domain'] + '\n')
+    elif (OUT/'CNAME').exists(): (OUT/'CNAME').unlink()
     (OUT/'.nojekyll').write_text('')
     (OUT/'robots.txt').write_text(f'User-agent: *\nAllow: /\nSitemap: https://{data["site"]["domain"]}/sitemap.xml\n')
     (OUT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'

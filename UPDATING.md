@@ -48,3 +48,10 @@ python3 tools/check.py                      # writes CHECK-REPORT.md
 - Name spellings: see `names` in `content/facts.json`.
 - Prices never on the website or in public PDFs.
 - Dossiers short, website long.
+
+## Link previews and icons
+- `tools/og.py` (run by build.py) makes the favicon/app icons from the logo and a 1200×630 preview per page in `docs/og/`:
+  photo pages = whole photo on a blurred copy (never cropped); agenda, artists, downloads, crew = screenshot per language.
+- Previews are only made when missing. After changing a page's text or photo: `python3 build.py --og`.
+- Domain: while `site.domain_live` is false in content/data.json, links and previews use the GitHub address.
+  When vendaval.cat points to GitHub, set it to true, rebuild and push (this adds the CNAME file), then tick "Enforce HTTPS".

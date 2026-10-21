@@ -6,7 +6,9 @@
   "phone_link": "+34644389757",
   "form_endpoint": "https://api.web3forms.com/submit",
   "form_access_key": "14340506-b525-497b-9cee-8ec2dc00c07d",
-  "default_lang": "ca"
+  "default_lang": "ca",
+  "domain_live": false,
+  "preview_url": "https://ciavendaval.github.io/vendaval-web"
  },
  "languages": [
   "ca",

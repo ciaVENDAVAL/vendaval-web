@@ -1,48 +1,48 @@
-https://vendaval.cat/dossier/brass/es
-https://vendaval.cat/dossier/brass/en
-https://vendaval.cat/dossier/brass/de
-https://vendaval.cat/dossier/brass/ja
-https://vendaval.cat/dossier/brass  (opens in the reader's language)
-https://vendaval.cat/rider/brass/es
-https://vendaval.cat/rider/brass/en
-https://vendaval.cat/rider/brass/de
-https://vendaval.cat/rider/brass  (opens in the reader's language)
-https://vendaval.cat/dossier/brass-concert/ca
-https://vendaval.cat/dossier/brass-concert/es
-https://vendaval.cat/dossier/brass-concert/en
-https://vendaval.cat/dossier/brass-concert/de
-https://vendaval.cat/dossier/brass-concert/fr
-https://vendaval.cat/dossier/brass-concert/it
-https://vendaval.cat/dossier/brass-concert/pt
-https://vendaval.cat/dossier/brass-concert/ja
-https://vendaval.cat/dossier/brass-concert  (opens in the reader's language)
-https://vendaval.cat/rider/brass-concert/ca
-https://vendaval.cat/rider/brass-concert/es
-https://vendaval.cat/rider/brass-concert/en
-https://vendaval.cat/rider/brass-concert/de
-https://vendaval.cat/rider/brass-concert/fr
-https://vendaval.cat/rider/brass-concert/it
-https://vendaval.cat/rider/brass-concert/pt
-https://vendaval.cat/rider/brass-concert/ja
-https://vendaval.cat/rider/brass-concert  (opens in the reader's language)
-https://vendaval.cat/dossier/el-joc-etern/ca
-https://vendaval.cat/dossier/el-joc-etern/en
-https://vendaval.cat/dossier/el-joc-etern  (opens in the reader's language)
-https://vendaval.cat/dossier/imaginary-friend/ca
-https://vendaval.cat/dossier/imaginary-friend/es
-https://vendaval.cat/dossier/imaginary-friend/en
-https://vendaval.cat/dossier/imaginary-friend/de
-https://vendaval.cat/dossier/imaginary-friend/fr
-https://vendaval.cat/dossier/imaginary-friend/it
-https://vendaval.cat/dossier/imaginary-friend/pt
-https://vendaval.cat/dossier/imaginary-friend/ja
-https://vendaval.cat/dossier/imaginary-friend  (opens in the reader's language)
-https://vendaval.cat/rider/imaginary-friend/ca
-https://vendaval.cat/rider/imaginary-friend/es
-https://vendaval.cat/rider/imaginary-friend/en
-https://vendaval.cat/rider/imaginary-friend/de
-https://vendaval.cat/rider/imaginary-friend  (opens in the reader's language)
-https://vendaval.cat/dossier/stilts-workshops/ca
-https://vendaval.cat/dossier/stilts-workshops/es
-https://vendaval.cat/dossier/stilts-workshops/en
-https://vendaval.cat/dossier/stilts-workshops  (opens in the reader's language)
+https://ciavendaval.github.io/vendaval-web/dossier/brass/es
+https://ciavendaval.github.io/vendaval-web/dossier/brass/en
+https://ciavendaval.github.io/vendaval-web/dossier/brass/de
+https://ciavendaval.github.io/vendaval-web/dossier/brass/ja
+https://ciavendaval.github.io/vendaval-web/dossier/brass  (opens in the reader's language)
+https://ciavendaval.github.io/vendaval-web/rider/brass/es
+https://ciavendaval.github.io/vendaval-web/rider/brass/en
+https://ciavendaval.github.io/vendaval-web/rider/brass/de
+https://ciavendaval.github.io/vendaval-web/rider/brass  (opens in the reader's language)
+https://ciavendaval.github.io/vendaval-web/dossier/brass-concert/ca
+https://ciavendaval.github.io/vendaval-web/dossier/brass-concert/es
+https://ciavendaval.github.io/vendaval-web/dossier/brass-concert/en
+https://ciavendaval.github.io/vendaval-web/dossier/brass-concert/de
+https://ciavendaval.github.io/vendaval-web/dossier/brass-concert/fr
+https://ciavendaval.github.io/vendaval-web/dossier/brass-concert/it
+https://ciavendaval.github.io/vendaval-web/dossier/brass-concert/pt
+https://ciavendaval.github.io/vendaval-web/dossier/brass-concert/ja
+https://ciavendaval.github.io/vendaval-web/dossier/brass-concert  (opens in the reader's language)
+https://ciavendaval.github.io/vendaval-web/rider/brass-concert/ca
+https://ciavendaval.github.io/vendaval-web/rider/brass-concert/es
+https://ciavendaval.github.io/vendaval-web/rider/brass-concert/en
+https://ciavendaval.github.io/vendaval-web/rider/brass-concert/de
+https://ciavendaval.github.io/vendaval-web/rider/brass-concert/fr
+https://ciavendaval.github.io/vendaval-web/rider/brass-concert/it
+https://ciavendaval.github.io/vendaval-web/rider/brass-concert/pt
+https://ciavendaval.github.io/vendaval-web/rider/brass-concert/ja
+https://ciavendaval.github.io/vendaval-web/rider/brass-concert  (opens in the reader's language)
+https://ciavendaval.github.io/vendaval-web/dossier/el-joc-etern/ca
+https://ciavendaval.github.io/vendaval-web/dossier/el-joc-etern/en
+https://ciavendaval.github.io/vendaval-web/dossier/el-joc-etern  (opens in the reader's language)
+https://ciavendaval.github.io/vendaval-web/dossier/imaginary-friend/ca
+https://ciavendaval.github.io/vendaval-web/dossier/imaginary-friend/es
+https://ciavendaval.github.io/vendaval-web/dossier/imaginary-friend/en
+https://ciavendaval.github.io/vendaval-web/dossier/imaginary-friend/de
+https://ciavendaval.github.io/vendaval-web/dossier/imaginary-friend/fr
+https://ciavendaval.github.io/vendaval-web/dossier/imaginary-friend/it
+https://ciavendaval.github.io/vendaval-web/dossier/imaginary-friend/pt
+https://ciavendaval.github.io/vendaval-web/dossier/imaginary-friend/ja
+https://ciavendaval.github.io/vendaval-web/dossier/imaginary-friend  (opens in the reader's language)
+https://ciavendaval.github.io/vendaval-web/rider/imaginary-friend/ca
+https://ciavendaval.github.io/vendaval-web/rider/imaginary-friend/es
+https://ciavendaval.github.io/vendaval-web/rider/imaginary-friend/en
+https://ciavendaval.github.io/vendaval-web/rider/imaginary-friend/de
+https://ciavendaval.github.io/vendaval-web/rider/imaginary-friend  (opens in the reader's language)
+https://ciavendaval.github.io/vendaval-web/dossier/stilts-workshops/ca
+https://ciavendaval.github.io/vendaval-web/dossier/stilts-workshops/es
+https://ciavendaval.github.io/vendaval-web/dossier/stilts-workshops/en
+https://ciavendaval.github.io/vendaval-web/dossier/stilts-workshops  (opens in the reader's language)
