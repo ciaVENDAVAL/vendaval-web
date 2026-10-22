@@ -59,7 +59,7 @@ VENDAVAL wants to reach every audience, including differently abled people.
 
 - **Production**: cia. VENDAVAL
 - **Photography**: [Albert Garcia](https://www.instagram.com/al.garciarome)
-- **Costume**: [Tropidelia](https://www.instagram.com/tropidelia), co-produced with cia. Victoria Sickness ([www.victoriasickness.com](https://www.victoriasickness.com))
+- **Clothing**: [Tropidelia](https://www.instagram.com/tropidelia), co-produced with cia. Victoria Sickness ([www.victoriasickness.com](https://www.victoriasickness.com))
 
 ## Trailer
 

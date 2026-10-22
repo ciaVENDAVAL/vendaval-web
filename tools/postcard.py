@@ -73,7 +73,7 @@ def page():
     body = (f'<p><b>{BODY[0]}</b></p><p>{e(BODY[1])}</p><p><i>{e(BODY[2])}</i></p>')
     logos = ''.join(f'<img src="{(LOGOS/f).as_uri()}" alt="">' for f in ['tub-dassaig.png', 'filigranes.svg', 'bobila.png', 'apcc.svg'])
     contact = ('<span class="co">Cia. VENDAVAL</span><b>+34 644 389 757</b><span>VENDAVAL@anartist.org</span>'
-               '<span>www.VENDAVAL.cat</span><span>@vendaval.brass</span>')
+               '<span>www.VENDAVAL.cat</span>')
     games = ''.join(f'<img class="g" src="{img(f)}" alt="">' for f in GAMES)
     return f'''<!doctype html><html lang="ca"><meta charset="utf-8"><title>VENDAVAL Brass · postal</title>
 <style>{FONTCSS}
@@ -98,8 +98,8 @@ p,li,div{{text-wrap:pretty}}
 .front .photo{{height:97mm;object-position:50% 70%}}
 .front .col{{height:80mm}}
 .strip{{position:absolute;left:0;bottom:0;width:154mm;height:14mm;background:#F5EDDC;display:flex;align-items:center;justify-content:space-between;
-  padding:0 9mm 3mm 6.5mm;font-size:6.6pt;color:#0F2C40;white-space:nowrap}}
-.strip .co{{font:600 7.6pt Oswald,sans-serif;letter-spacing:.35mm;color:#B5401C}}
+  padding:0 9mm 3mm 6.5mm;font-size:7.6pt;font-weight:700;color:#0F2C40;white-space:nowrap}}
+.strip .co{{font:600 8.4pt Oswald,sans-serif;letter-spacing:.35mm;color:#B5401C}}
 /* back: supporters inside the contact box */
 .bsup{{display:flex;align-items:center;gap:4.5mm}}
 .bsup img{{height:6mm;max-width:17mm;object-fit:contain}}
@@ -128,10 +128,12 @@ li::before{{content:"\\2693\\FE0E";color:#B5401C;display:inline-block;width:2.6m
 .clogo{{height:11mm;filter:drop-shadow(.35mm 0 0 #fff) drop-shadow(-.35mm 0 0 #fff) drop-shadow(0 .35mm 0 #fff) drop-shadow(0 -.35mm 0 #fff)}}
 .ct{{flex:1;min-width:0;font-size:6pt;line-height:1.5}}
 .ct .co{{font:600 6.6pt Oswald,sans-serif;letter-spacing:.3mm;color:#EBA53B}}
-.qr{{flex:0 0 12mm;text-align:center;font:600 4.6pt Oswald,sans-serif;letter-spacing:.2mm;color:#0F2C40}}
-.qr svg{{display:block;width:100%;margin-bottom:.6mm}}
-.pics{{position:absolute;left:95mm;top:3mm;width:56mm;height:105mm;display:flex;flex-direction:column;justify-content:center;gap:1mm}}
-.pics .g{{width:56mm;display:block;border-radius:1.2mm}}
+.qr{{text-align:right;font:600 5pt/1.3 Oswald,sans-serif;letter-spacing:.25mm;color:#0F2C40}}
+
+.pics{{position:absolute;left:97mm;top:7mm;width:50mm;height:97mm;display:flex;flex-direction:column;gap:1.2mm}}
+.pics .g{{width:50mm;display:block;border-radius:1.2mm}}
+.pics .qr{{margin-top:auto;display:flex;justify-content:flex-end;align-items:center;gap:2mm}}
+.pics .qr svg{{width:12mm;height:12mm;display:block}}
 </style>
 <section class="pg front">
   <img class="photo" src="{img(FRONT)}" alt="">
@@ -152,10 +154,9 @@ li::before{{content:"\\2693\\FE0E";color:#B5401C;display:inline-block;width:2.6m
     <div class="cr">{credits}</div>
     <div class="foot">
       <div class="ct"><div class="lab">{tri("Amb el suport de", "Con el apoyo de", "Supported by", sep=" · ")}</div><div class="bsup">{logos}</div></div>
-      <div class="qr">{qr_svg(QR_URL)}VÍDEO · DOSSIER</div>
     </div>
   </div>
-  <div class="pics">{games}</div>
+  <div class="pics">{games}<div class="qr"><span>VÍDEO ·<br>DOSSIER ›</span>{qr_svg(QR_URL)}</div></div>
 </section></html>'''
 
 def build():
