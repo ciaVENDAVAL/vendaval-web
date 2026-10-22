@@ -168,3 +168,53 @@
     });
   }
 })();
+
+// Squid cursor (mouse/trackpad only): looks left; over links and buttons it grabs and looks at the viewer; blinks on click.
+// Off for touch screens, reduced motion and the "stop animations" option; normal cursor in text fields.
+(function () {
+  var root = document.documentElement;
+  if (!window.matchMedia || !window.matchMedia('(pointer: fine)').matches) return;
+  var NS = 'http://www.w3.org/2000/svg';
+  var box = document.createElement('div');
+  box.className = 'squid'; box.setAttribute('aria-hidden', 'true');
+  box.innerHTML = '<svg viewBox="0 0 60 40" width="54" height="36">' +
+    '<g class="sq-body">' +
+      '<path class="sq-fin" d="M44 20 L52 7 L59 20 L52 33 Z"/>' +
+      '<path class="sq-mantle" d="M27 11 Q46 9 58 20 Q46 31 27 29 Z"/>' +
+      '<circle class="sq-spot" cx="40" cy="15" r="1.6"/><circle class="sq-spot" cx="47" cy="22" r="1.3"/><circle class="sq-spot" cx="38" cy="25" r="1.1"/>' +
+      '<ellipse class="sq-head" cx="24" cy="20" rx="9" ry="10"/>' +
+    '</g>' +
+    '<g class="sq-arms sq-idle"><path d="M17 15 Q10 11 4 14"/><path d="M16 18 Q9 17 2 19"/><path d="M16 22 Q9 23 2 22"/><path d="M17 25 Q10 29 4 27"/></g>' +
+    '<g class="sq-arms sq-grab"><path d="M17 15 Q7 7 4 12 Q3 16 7 15"/><path d="M16 18 Q7 15 3 18 Q2 21 6 20"/><path d="M16 22 Q7 25 3 22 Q3 19 6 20"/><path d="M17 25 Q7 33 4 28 Q4 25 7 25"/></g>' +
+    '<g class="sq-eyes sq-side"><circle class="sq-white" cx="21" cy="17" r="4.2"/><circle class="sq-pupil" cx="19" cy="17" r="2.1"/></g>' +
+    '<g class="sq-eyes sq-front"><circle class="sq-white" cx="20" cy="17" r="3.6"/><circle class="sq-white" cx="28" cy="17" r="3.6"/><circle class="sq-pupil" cx="20" cy="18" r="1.9"/><circle class="sq-pupil" cx="28" cy="18" r="1.9"/></g>' +
+    '<g class="sq-lids"><path d="M16.5 17.5 Q20 19.5 23.5 17.5"/><path d="M24.5 17.5 Q28 19.5 31.5 17.5"/></g>' +
+    '</svg>';
+  var on = false, blinkT;
+  function off() {
+    return root.classList.contains('a11y-motion') || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  }
+  function textField(el) {
+    return el && el.closest && el.closest('input:not([type=button]):not([type=submit]):not([type=checkbox]):not([type=radio]),textarea,select,[contenteditable=""],[contenteditable=true]');
+  }
+  function grabbable(el) {
+    return el && el.closest && el.closest('a,button,summary,label,[role=button],input[type=button],input[type=submit],input[type=checkbox],input[type=radio],.gallery img,[data-lb]');
+  }
+  document.body.appendChild(box);
+  document.addEventListener('mousemove', function (e) {
+    if (off()) { if (on) { root.classList.remove('squid-on'); on = false; } return; }
+    if (!on) { root.classList.add('squid-on'); on = true; }
+    // hotspot = tips of the arms (left middle of the drawing)
+    box.style.transform = 'translate(' + (e.clientX - 2) + 'px,' + (e.clientY - 18) + 'px)';
+    var t = e.target;
+    box.classList.toggle('hide', !!textField(t));
+    box.classList.toggle('grab', !!grabbable(t));
+  }, { passive: true });
+  document.addEventListener('mouseleave', function () { box.classList.add('hide'); });
+  document.addEventListener('mouseenter', function () { box.classList.remove('hide'); });
+  document.addEventListener('mousedown', function () {
+    if (!on) return;
+    box.classList.add('blink'); clearTimeout(blinkT);
+    blinkT = setTimeout(function () { box.classList.remove('blink'); }, 180);
+  });
+})();
