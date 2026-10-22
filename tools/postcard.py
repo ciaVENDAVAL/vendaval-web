@@ -2,7 +2,7 @@
 A6 landscape (148 x 105 mm), 2 pages (front, back), 3 mm bleed on every side for the print shop (PDF page = 154 x 111 mm).
 Usage: python3 tools/postcard.py  ->  postcard/VENDAVAL-Brass_CA-ES-EN_postal_<yyyy-mm>.pdf
 Languages are told apart by style, always the same: CA bold · ES plain · EN italic. When CA and ES are identical, ES is left out.
-Photos are never cropped: each is shown whole, with its edges softly faded into the plain background colour.
+Photos: back photos whole and sharp; front photo trimmed top/bottom (sidewalk, building; never people, tyle 22 Oct 2026), left edge fading into the navy.
 Credits: VENDAVAL Brass only (Tropidelia belongs to Amigui Imaginari and the website footer, not here).
 No prices or private data: this is public promoter material."""
 import html, pathlib, datetime
@@ -14,7 +14,7 @@ SRC, OUT = ROOT/'source-images', ROOT/'postcard'
 DFONTS, SFONTS, LOGOS = ROOT/'dossiers/assets/fonts', ROOT/'static/fonts', ROOT/'dossiers/assets/logos'
 FRONT = 'VENDAVAL_FiraVapor001.jpg'                                      # whole band in front of the modernista building
 GAMES = ['VENDAVAL_salvavidas_publico.jpg', 'VENDAVAL_FiraVapor002.jpg']   # lifebuoy game · sea-net game
-QR_URL = 'https://vendaval.cat/dossier/brass/es'
+QR_URL = 'https://vendaval.cat/es/brass/'   # show page (video, photos, dossier, rider, language switcher)
 LOGO = (LOGOS/'vendaval.png').as_uri()
 e = html.escape
 
@@ -63,7 +63,7 @@ WAVE = ('<svg class="wave" viewBox="0 0 600 20" preserveAspectRatio="none" xmlns
 # soft edge: the photo stays whole, only its outer few millimetres fade into the background
 FADE_ALL = ('-webkit-mask-image:linear-gradient(to right,transparent,#000 9%,#000 91%,transparent),linear-gradient(to bottom,transparent,#000 9%,#000 91%,transparent);'
             '-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent,#000 9%,#000 91%,transparent),linear-gradient(to bottom,transparent,#000 9%,#000 91%,transparent);mask-composite:intersect;')
-FADE_LEFT = ('-webkit-mask-image:linear-gradient(to right,transparent,#000 16%);mask-image:linear-gradient(to right,transparent,#000 16%);')
+FADE_LEFT = ('-webkit-mask-image:linear-gradient(to right,transparent,#000 7%);mask-image:linear-gradient(to right,transparent,#000 7%);')
 
 def page():
     img = lambda f: (SRC/f).as_uri()
@@ -84,22 +84,23 @@ p,li,div{{text-wrap:pretty}}
 .wave{{position:absolute;left:0;width:100%;height:3.2mm}}
 /* FRONT: deep-sea navy; the portrait photo on the right, its left edge fading into the navy */
 .front{{background:#0F2C40}}
-.front .photo{{position:absolute;right:0;top:0;height:111mm;width:83.25mm;display:block;{FADE_LEFT}}}
-.front .col{{position:absolute;left:8mm;top:8mm;width:66mm;height:95mm;display:flex;flex-direction:column}}
-.front .logo{{width:44mm;filter:drop-shadow(0 0 .35mm rgba(245,237,220,.95)) drop-shadow(0 0 .2mm rgba(245,237,220,.9))}}
-.front h1{{font:400 33pt/.95 Anton,sans-serif;color:#F5EDDC;letter-spacing:.3mm;margin-top:4mm}}
+/* front photo: tyle's choice (22 Oct 2026) to crop sidewalk and building, never people: full width kept, top and bottom trimmed */
+.front .photo{{position:absolute;right:0;top:0;height:111mm;width:100mm;display:block;object-fit:cover;object-position:50% 60%;{FADE_LEFT}}}
+.front .col{{position:absolute;left:6.5mm;top:7.5mm;width:46mm;height:95mm;display:flex;flex-direction:column}}
+.front .logo{{width:42mm;filter:drop-shadow(0 0 .35mm rgba(245,237,220,.95)) drop-shadow(0 0 .2mm rgba(245,237,220,.9))}}
+.front h1{{font:400 31pt/.95 Anton,sans-serif;color:#F5EDDC;letter-spacing:.3mm;margin-top:4mm}}
 .front h1 span{{color:#EBA53B;display:block}}
-.front .kick{{font:600 6.8pt Oswald,sans-serif;letter-spacing:.45mm;color:#9FDCEC;margin-top:2.6mm;position:relative;padding-top:2.6mm}}
+.front .kick{{font:600 6.2pt Oswald,sans-serif;letter-spacing:.45mm;color:#9FDCEC;margin-top:2.6mm;position:relative;padding-top:2.6mm}}
 .front .kick .wave{{top:-.6mm;width:40mm}}
-.front .sup{{margin-top:auto;display:grid;grid-template-columns:repeat(2,auto);justify-content:start;align-items:center;gap:1.6mm 4mm;
-  background:#F5EDDC;border-radius:1.6mm;padding:1.8mm 3mm;align-self:flex-start}}
-.front .sup img{{height:6.4mm;max-width:20mm;object-fit:contain;justify-self:center}}
+.front .sup{{margin-top:auto;display:grid;grid-template-columns:repeat(2,auto);justify-content:start;align-items:center;gap:1.6mm 3mm;
+  background:#F5EDDC;border-radius:1.6mm;padding:1.6mm 2.4mm;align-self:flex-start}}
+.front .sup img{{height:5.6mm;max-width:17mm;object-fit:contain;justify-self:center}}
 /* BACK: plain sand; text left, game photos right, edges fading into the sand */
 .back{{background:#F5EDDC}}
 .back .txt{{position:absolute;left:8mm;top:7mm;width:84mm;height:97mm;display:flex;flex-direction:column}}
 .head{{display:flex;align-items:center;gap:2.4mm}}
 .head img{{height:8.6mm}}
-.head h1{{font:400 16pt/1 Anton,sans-serif;color:#0F2C40;letter-spacing:.15mm}}
+.head h1{{font:400 18pt/1 Anton,sans-serif;color:#0F2C40;letter-spacing:.15mm}}
 .head h1 span{{color:#B5401C}}
 .body{{margin-top:1.6mm}}
 .body p{{font-size:5.9pt;line-height:1.25;margin-bottom:.6mm}}
@@ -113,13 +114,14 @@ li::before{{content:"\\2693\\FE0E";color:#B5401C;margin-right:1mm;font-size:4.6p
 .cr{{margin-top:1mm;font-size:5.2pt;line-height:1.32;color:#55636D}}
 .cr .nm{{font-weight:700;color:#1E2A33}}
 .foot{{margin-top:auto;display:flex;gap:3mm;align-items:center;background:#0F2C40;color:#F5EDDC;border-radius:2mm;padding:1.6mm 2.6mm;margin-top:1.4mm}}
+.clogo{{height:11mm;filter:drop-shadow(0 0 .3mm rgba(245,237,220,.95)) drop-shadow(0 0 .2mm rgba(245,237,220,.9))}}
 .ct{{flex:1;font-size:6pt;line-height:1.5}}
 .ct .co{{font:600 6.6pt Oswald,sans-serif;letter-spacing:.3mm;color:#EBA53B}}
 .ct i{{color:#9FDCEC}}
-.qr{{flex:0 0 13mm;text-align:center;font:600 4.6pt Oswald,sans-serif;letter-spacing:.2mm;color:#9FDCEC}}
+.qr{{flex:0 0 14mm;text-align:center;font:600 4.6pt Oswald,sans-serif;letter-spacing:.2mm;color:#9FDCEC}}
 .qr svg{{display:block;width:100%;margin-bottom:.5mm;background:#F5EDDC;padding:.8mm;border-radius:.6mm}}
 .pics{{position:absolute;left:95mm;top:3mm;width:56mm;height:105mm;display:flex;flex-direction:column;justify-content:center;gap:1mm}}
-.pics .g{{width:56mm;display:block;{FADE_ALL}}}
+.pics .g{{width:56mm;display:block;border-radius:1.2mm}}
 </style>
 <section class="pg front">
   <img class="photo" src="{img(FRONT)}" alt="">
@@ -132,15 +134,15 @@ li::before{{content:"\\2693\\FE0E";color:#B5401C;margin-right:1mm;font-size:4.6p
 </section>
 <section class="pg back">
   <div class="txt">
-    <div class="head"><img src="{LOGO}" alt="VENDAVAL"><h1>VENDAVAL <span>BRASS</span></h1></div>
+    <div class="head"><h1>VENDAVAL <span>BRASS</span></h1></div>
     <div class="body">{body}</div>
     <div class="genres">FUNK · BALKAN · SWING · CUMBIA</div>
     <div class="figs">{figs}</div>
     <ul>{lines}</ul>
     <div class="cr">{credits}</div>
     <div class="foot">
-      <div class="ct"><span class="co">Cia. VENDAVAL</span><br><b>+34 644 389 757</b> · VENDAVAL@anartist.org<br>www.VENDAVAL.cat · <i>@vendaval.brass</i></div>
-      <div class="qr">{qr_svg(QR_URL)}DOSSIER</div>
+      <img class="clogo" src="{LOGO}" alt="VENDAVAL"><div class="ct"><span class="co">Cia. VENDAVAL</span><br><b>+34 644 389 757</b> · VENDAVAL@anartist.org<br>www.VENDAVAL.cat · <i>@vendaval.brass</i></div>
+      <div class="qr">{qr_svg(QR_URL)}VÍDEO · DOSSIER</div>
     </div>
   </div>
   <div class="pics">{games}</div>
