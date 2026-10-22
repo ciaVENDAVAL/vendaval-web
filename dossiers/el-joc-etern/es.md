@@ -8,9 +8,9 @@
 
 El Joc Etern es la nueva creación de Cia. VENDAVAL: un espectáculo itinerante de calle con escenario móvil eléctrico, música en directo, zancos, monociclo y juegos participativos. Es una obra en proceso.
 
-Tres criaturas del mar, entre clownescas y mitológicas, buscan el Joc Etern, una reliquia mágica que permite jugar para siempre a quien la toca, e invitan a todas las personas que encuentran a sumarse a la búsqueda. La fantasía marina se inspira en Ursula K. Le Guin.
+Tres criaturas del mar, entre clownescas y mitológicas, buscan el Joc Etern, una reliquia mágica que permite jugar para siempre a quien la toca, e invitan a todas las personas que encuentran a sumarse a la búsqueda. La fantasía marina y los dragones se inspiran en los libros de Terramar de Ursula K. Le Guin.
 
-Cinco intérpretes viajan con el Windy, una Vespa eléctrica de tres ruedas que remolca un barco que también es un instrumento. Dos personajes en zancos guían los juegos y la historia; cuando el Windy se para, quien lo conduce salta al monociclo y se pasa mazas de malabares con quien va en zancos.
+Cinco intérpretes viajan con el Windy, una Vespa eléctrica de tres ruedas que remolca un barco que también es un instrumento. Dos personajes en zancos guían los juegos y la historia, y la criatura que conduce el Windy a veces se desplaza en monociclo entre el público y se pasa mazas de malabares con quien va en zancos.
 
 El espectáculo nace de VENDAVAL Brass, la banda itinerante con la que salimos de gira desde 2025 por Cataluña y Alemania.
 
@@ -20,17 +20,6 @@ El espectáculo nace de VENDAVAL Brass, la banda itinerante con la que salimos d
 - **Personajes**: cada intérprete desarrolla un personaje, con un nombre, una manera de caminar y una manera de saludar a la gente a través del sonido.
 - **Estreno**: después del periodo de investigación.
 
-## Dragones y gigantes
-
-Los dragones atraviesan todo el mundo del espectáculo: dragones pequeños que se llevan como pulseras o en el pelo, y colas en algunos personajes.
-
-Dos figuras más grandes se plantean como producciones aparte, que también pueden salir de gira como pasacalles independientes. Solo saldrán adelante con financiación:
-
-- **Ani Arqui, el Pacífico (el Gigante del Mar)**: un dios-demonio del océano de unos 3 m de altura, un robot acuático al estilo de Neptuno con estética anime. Lleva un carnyx, una trompeta medieval de 2 m. Antiguamente el carnyx llamaba a la guerra; este gigante viene en paz, a tocar y jugar con el pueblo de los dragones.
-- **El Dragón**: un títere volador o un dragón en zancos de cuatro patas, de 3 a 4 m de altura, con cabeza y alas animatrónicas manejadas por una segunda persona intérprete.
-
-Dosier de concepto de Ani Arqui a petición.
-
 ## El Windy
 
 El Windy es el escenario móvil del espectáculo: una Vespa de tres ruedas convertida en vehículo eléctrico que remolca un barco. Uli Weigel construye el remolque y el escenario, y Pepe Ferros el vehículo eléctrico. El motor ya está montado; falta arreglar la dirección, decorarlo y ensayar con él.
@@ -38,9 +27,18 @@ El Windy es el escenario móvil del espectáculo: una Vespa de tres ruedas conve
 - **Medidas**: Vespa y remolque, 4,66 m de largo × 1,55 m de ancho × 3 m de alto con el barco.
 - **Recorrido**: pendiente máxima del 5 %.
 
+## Dragones y gigantes
+
+Los dragones atraviesan todo el mundo del espectáculo: dragones pequeños que se llevan como pulseras o en el pelo, y colas en algunos personajes.
+
+Si el presupuesto lo permite, desarrollaremos dos figuras más grandes como producciones aparte, que también podrán salir de gira como pasacalles independientes:
+
+- **Ani Arqui, el Pacífico (el Gigante del Mar)**: un dios-demonio del océano de unos 3 m de altura, mucho más grande que una figura habitual en zancos. Es un robot acuático al estilo de Neptuno con estética anime, hecho de goma EVA con detalles impresos en 3D. Lleva un carnyx, una trompeta medieval de 2 m que se oye en todas las calles. Antiguamente el carnyx llamaba a la guerra; Ani Arqui viene en paz, a tocar y jugar con el pueblo de los dragones. Su nombre juega con la palabra «anarquista». Dosier de concepto a petición.
+- **El Dragón**: de momento solo es una idea (un títere volador o un dragón en zancos de cuatro patas).
+
 ## La música
 
-La música la crean Alián Rodrigues y Stefano Ferraro, a partir de su trabajo con Yiflauki y con su dúo electrónico 3L3M3NTS: loop station, sonidos electrónicos, batería, xilófono y didgeridoos de tubos de plástico reciclado, y micrófonos piezoeléctricos que convierten el barco en un instrumento. tyle fernández se suma con la trompeta o el acordeón.
+La música la crean Alián Rodrigues y Stefano Ferraro, a partir de su trabajo con VENDAVAL Brass, su proyecto Yiflauki y su dúo electrónico 3L3M3NTS: loop station, sonidos electrónicos, batería, xilófono y didgeridoos de tubos de plástico reciclado, y micrófonos piezoeléctricos que convierten el barco en un instrumento. tyle fernández se suma con la trompeta o el acordeón.
 
 ## Las máscaras
 
@@ -78,20 +76,11 @@ El equipo tiene una larga experiencia formativa. tyle fernández ha dirigido tal
 
 ## Equipo
 
-- **tyle fernández**: dirección artística, zancos, trompeta, acordeón, juegos
-- **Albert Pérez**: zancos, clown, malabares
-- **Jordi Torrens**: conducción del Windy, monociclo, malabares
-- **Alián Rodrigues**: loop station, electrónica, batería, instrumentos reciclados
-- **Stefano Ferraro**: loop station, electrónica, batería, instrumentos reciclados
+**tyle fernández**: dirección artística, zancos, trompeta, acordeón, juegos · **Albert Pérez**: zancos, clown, malabares · **Jordi Torrens**: conducción del Windy, monociclo, malabares · **Alián Rodrigues** y **Stefano Ferraro**: loop station, electrónica, batería, instrumentos reciclados
 
 ## Créditos
 
-- **Escenario móvil**: Uli Weigel
-- **Vehículo eléctrico**: Pepe Ferros
-- **Vestuario**: [Imaginario de Mónica](https://imaginariodemonica.wordpress.com)
-- **Diseño gráfico**: [bicialta](https://linktr.ee/bicialta)
-- **Fotografía**: [David Ugalde / ROAR](https://www.instagram.com/roar_audiovisual), [Jordi Largo](https://jordilargo.com)
-- **Música y sonido**: Cia. VENDAVAL
+**Escenario móvil**: Uli Weigel · **Vehículo eléctrico**: Pepe Ferros · **Vestuario**: [Imaginario de Mónica](https://imaginariodemonica.wordpress.com) · **Diseño gráfico**: [bicialta](https://linktr.ee/bicialta) · **Fotografía**: [David Ugalde / ROAR](https://www.instagram.com/roar_audiovisual), [Jordi Largo](https://jordilargo.com) · **Música y sonido**: Cia. VENDAVAL
 
 ## Trayectoria
 

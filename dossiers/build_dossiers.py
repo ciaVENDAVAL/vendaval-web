@@ -91,8 +91,12 @@ def render_html(cfg, lang):
     rows = cfg.get('rows', {})
     for i, (h, body) in enumerate(body_secs):
         cls = ' class="long"' if len(body) > 900 else ''
-        r = rows.get(str(i)); extra = row(r['photos'] if isinstance(r, dict) else r, r.get('h', cfg.get('row_h', 55)) if isinstance(r, dict) else cfg.get('row_h', 55)) if r else ''
-        out.append(f'<section{cls}><h2>{h}</h2>{M(body)}</section>{extra}')
+        r = rows.get(str(i)); rs = r if isinstance(r, list) else ([r] if r else [])
+        extra = ''.join(row(x['photos'] if isinstance(x, dict) else x, x.get('h', cfg.get('row_h', 55)) if isinstance(x, dict) else cfg.get('row_h', 55)) for x in rs)
+        if cfg.get('keep_photos'):  # section and its photos never split across pages
+            out.append(f'<div style="break-inside:avoid"><section><h2>{h}</h2>{M(body)}</section>{extra}</div>')
+        else:
+            out.append(f'<section{cls}><h2>{h}</h2>{M(body)}</section>{extra}')
     (th, tb), (ch, cb) = contact_secs
     cb = cb.replace('\n', '  \n')
     out.append(f'<div class="contact"><h2>{ch}</h2>{M(cb)}<p>{M(tb)[3:-4]}</p></div>')
