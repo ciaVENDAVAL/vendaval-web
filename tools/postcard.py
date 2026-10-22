@@ -65,13 +65,20 @@ FADE_ALL = ('-webkit-mask-image:linear-gradient(to right,transparent,#000 9%,#00
             '-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent,#000 9%,#000 91%,transparent),linear-gradient(to bottom,transparent,#000 9%,#000 91%,transparent);mask-composite:intersect;')
 FADE_LEFT = ('-webkit-mask-image:linear-gradient(to right,transparent,#000 7%);mask-image:linear-gradient(to right,transparent,#000 7%);')
 
-def page():
+SUP_LAB = ('Amb el suport de', 'Con el apoyo de', 'Supported by')
+
+def page(sup='mono'):
     img = lambda f: (SRC/f).as_uri()
     figs = ''.join(f'<div class="fig"><div class="n">{e(n)}</div><div class="l">{tri(*l)}</div></div>' for n, l in FIGS)
     lines = ''.join(f'<li>{tri(*l, sep=" · ")}</li>' for l in LINES)
     credits = ''.join(f'<div>{tri(*r, sep=" · ")}: <span class="nm">{e(n)}</span></div>' for r, n in CREDITS)
     body = (f'<p><b>{BODY[0]}</b></p><p>{e(BODY[1])}</p><p><i>{e(BODY[2])}</i></p>')
     logos = ''.join(f'<img src="{(LOGOS/f).as_uri()}" alt="">' for f in ['tub-dassaig.png', 'filigranes.svg', 'bobila.png', 'apcc.svg'])
+    lab = tri(*SUP_LAB, sep=" · ")
+    sup_front = {'mono': f'<div class="sup mono"><div class="lab">{lab}</div><div class="row">{logos}</div></div>',
+                 'strip': '', 'back': ''}[sup]
+    strip = f'<div class="strip"><div class="lab">{lab}</div>{logos}</div>' + '<style>.front .photo{height:97mm;object-position:50% 40%}.front .col{height:80mm}</style>' if sup == 'strip' else ''
+    back_sup = f'<div class="bsup">{logos}</div>' if sup == 'back' else ''
     games = ''.join(f'<img class="g" src="{img(f)}" alt="">' for f in GAMES)
     return f'''<!doctype html><html lang="ca"><meta charset="utf-8"><title>VENDAVAL Brass · postal</title>
 <style>{FONTCSS}
@@ -92,9 +99,15 @@ p,li,div{{text-wrap:pretty}}
 .front h1 span{{color:#EBA53B;display:block}}
 .front .kick{{font:600 6.2pt Oswald,sans-serif;letter-spacing:.45mm;color:#9FDCEC;margin-top:2.6mm;position:relative;padding-top:2.6mm}}
 .front .kick .wave{{top:-.6mm;width:40mm}}
-.front .sup{{margin-top:auto;display:grid;grid-template-columns:repeat(2,auto);justify-content:start;align-items:center;gap:1.6mm 3mm;
-  background:#F5EDDC;border-radius:1.6mm;padding:1.6mm 2.4mm;align-self:flex-start}}
-.front .sup img{{height:5.6mm;max-width:17mm;object-fit:contain;justify-self:center}}
+.front .sup{{margin-top:auto}}
+.front .sup .lab,.strip .lab{{font-size:5pt;line-height:1.25;color:#9FDCEC;margin-bottom:1.4mm}}
+.front .sup .row{{display:grid;grid-template-columns:repeat(2,auto);justify-content:start;align-items:center;gap:2.2mm 5mm}}
+.front .sup img{{height:6mm;max-width:18mm;object-fit:contain;filter:brightness(0) invert(.94) sepia(.15)}}
+.strip{{position:absolute;left:0;bottom:0;width:154mm;height:14mm;background:#F5EDDC;display:flex;align-items:center;gap:6mm;padding:0 9mm 3mm 6.5mm}}
+.strip .lab{{color:#0F2C40;margin:0;width:22mm}}
+.strip img{{height:6.4mm;max-width:22mm;object-fit:contain}}
+.bsup{{display:flex;align-items:center;gap:3mm;margin-top:1.4mm}}
+.bsup img{{height:4.4mm;max-width:14mm;object-fit:contain;filter:brightness(0) invert(.94) sepia(.15)}}
 /* BACK: plain sand; text left, game photos right, edges fading into the sand */
 .back{{background:#F5EDDC}}
 .back .txt{{position:absolute;left:8mm;top:7mm;width:84mm;height:97mm;display:flex;flex-direction:column}}
@@ -116,10 +129,9 @@ li::before{{content:"\\2693\\FE0E";color:#B5401C;display:inline-block;width:2.6m
 .cr{{margin-top:1.6mm;font-size:5.6pt;line-height:1.42;color:#55636D}}
 .cr .nm{{font-weight:700;color:#1E2A33}}
 .foot{{margin-top:auto;display:flex;gap:3mm;align-items:center;background:#0F2C40;color:#F5EDDC;border-radius:2mm;padding:1.6mm 2.6mm;margin-top:1.4mm}}
-.clogo{{height:11mm;filter:drop-shadow(0 0 .3mm rgba(245,237,220,.95)) drop-shadow(0 0 .2mm rgba(245,237,220,.9))}}
+.clogo{{height:11mm;filter:drop-shadow(.35mm 0 0 #fff) drop-shadow(-.35mm 0 0 #fff) drop-shadow(0 .35mm 0 #fff) drop-shadow(0 -.35mm 0 #fff)}}
 .ct{{flex:1;font-size:6pt;line-height:1.5}}
 .ct .co{{font:600 6.6pt Oswald,sans-serif;letter-spacing:.3mm;color:#EBA53B}}
-.ct i{{color:#9FDCEC}}
 .qr{{flex:0 0 11.5mm;text-align:center;font:600 4.6pt Oswald,sans-serif;letter-spacing:.2mm;color:#9FDCEC}}
 .qr svg{{display:block;width:100%;margin-bottom:.5mm;background:#F5EDDC;padding:.8mm;border-radius:.6mm}}
 .pics{{position:absolute;left:95mm;top:3mm;width:56mm;height:105mm;display:flex;flex-direction:column;justify-content:center;gap:1mm}}
@@ -131,8 +143,9 @@ li::before{{content:"\\2693\\FE0E";color:#B5401C;display:inline-block;width:2.6m
     <img class="logo" src="{LOGO}" alt="VENDAVAL">
     <h1>VENDAVAL <span>BRASS</span></h1>
     <div class="kick">{WAVE}FUNK · BALKAN · SWING · CUMBIA</div>
-    <div class="sup">{logos}</div>
+    {sup_front}
   </div>
+  {strip}
 </section>
 <section class="pg back">
   <div class="txt">
@@ -143,23 +156,24 @@ li::before{{content:"\\2693\\FE0E";color:#B5401C;display:inline-block;width:2.6m
     <ul>{lines}</ul>
     <div class="cr">{credits}</div>
     <div class="foot">
-      <img class="clogo" src="{LOGO}" alt="VENDAVAL"><div class="ct"><span class="co">Cia. VENDAVAL</span><br><b>+34 644 389 757</b> · VENDAVAL@anartist.org<br>www.VENDAVAL.cat · <i>@vendaval.brass</i></div>
+      <img class="clogo" src="{LOGO}" alt="VENDAVAL"><div class="ct"><span class="co">Cia. VENDAVAL</span><br><b>+34 644 389 757</b> · VENDAVAL@anartist.org<br>www.VENDAVAL.cat · @vendaval.brass{back_sup}</div>
       <div class="qr">{qr_svg(QR_URL)}VÍDEO · DOSSIER</div>
     </div>
   </div>
   <div class="pics">{games}</div>
 </section></html>'''
 
-def build():
+def build(sup='mono'):
     OUT.mkdir(exist_ok=True); stamp = datetime.date.today().strftime('%Y-%m')
     with sync_playwright() as p:
         b = p.chromium.launch(); pg = b.new_page()
-        f = OUT/'_postcard.html'; f.write_text(page())
+        f = OUT/'_postcard.html'; f.write_text(page(sup))
         pg.goto(f.as_uri()); pg.wait_for_load_state('networkidle')
-        out = OUT/f'VENDAVAL-Brass_CA-ES-EN_postal_{stamp}.pdf'
+        out = OUT/f'VENDAVAL-Brass_CA-ES-EN_postal_{stamp}.pdf' if sup == 'mono' else OUT/f'_preview_{sup}.pdf'
         pg.pdf(path=str(out), width='154mm', height='111mm', print_background=True, prefer_css_page_size=True)
         f.unlink(); print('built', out.relative_to(ROOT))
         b.close()
 
 if __name__ == '__main__':
-    build()
+    import sys
+    build(sys.argv[1] if len(sys.argv) > 1 else 'mono')
