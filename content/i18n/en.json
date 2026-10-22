@@ -85,7 +85,7 @@
     "Roaming street show with an electric mobile stage",
     "All ages",
     "60 minutes (in progress)",
-    "5 performers, fixed cast",
+    "5 performers, fixed cast (in progress)",
     "For circus, theatre and music festivals, local festivals and schools"
    ]
   },
@@ -118,7 +118,7 @@
     "All ages",
     "1–2 artists",
     "30 minutes",
-    "Solo or with live music"
+    "Solo, with live music or with acrobatics"
    ],
    "dossier_soon": "Dossier on request."
   }
@@ -135,7 +135,7 @@
  },
  "workshops": {
   "title": "Workshops",
-  "intro": "VENDAVAL's artists offer circus and music workshops for young people and adults, led by working professionals.",
+  "intro": "VENDAVAL's artists offer circus and music workshops for young people and adults, led by working professionals. We offer them together with one of our shows, and we travel from Barcelona.",
   "groups": {
    "stilts": {
     "title": "Stilts",
@@ -258,7 +258,8 @@
    "ok": "Thank you! We've received your message.",
    "err": "The message couldn't be sent. Please write to VENDAVAL@anartist.org.",
    "sending": "Sending…"
-  }
+  },
+  "where": "Barcelona · Terrassa (Spain)"
  },
  "footer": {
   "credits": "Photography: David Ugalde (ROAR), Barbara Walzer, Jordi Largo, Albert Garcia · Costumes: Imaginario de Monica, Tropidelia · Graphic design: bicialta",
@@ -280,7 +281,10 @@
   "links": "Underline links",
   "spacing": "More line spacing",
   "motion": "Stop animations",
-  "reset": "Reset"
+  "reset": "Reset",
+  "day": "Day",
+  "night": "Night",
+  "theme": "Theme"
  },
  "crew": {
   "kicker": "Crew register",
@@ -316,5 +320,10 @@
   "sample_job": "Lookout for Elegant Hurricanes",
   "sample_mat": "OCT-0420-YP",
   "sample": "Example"
+ },
+ "gallery": {
+  "prev": "Previous photo",
+  "next": "Next photo",
+  "close": "Close"
  }
 }

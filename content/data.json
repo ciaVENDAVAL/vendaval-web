@@ -648,10 +648,7 @@
   "lucas": "m",
   "facu": "m"
  },
- "substitutes": [
-  "Dennis",
-  "Laia"
- ],
+ "substitutes": [],
  "workshop_groups": [
   {
    "id": "stilts",
@@ -778,5 +775,8 @@
     }
    ]
   }
- ]
+ ],
+ "festival_links": {
+  "Unterwegs": "https://www.protagon.net/en/unterwegs-theatre-festival-2026"
+ }
 }

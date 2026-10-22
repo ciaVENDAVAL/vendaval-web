@@ -85,7 +85,7 @@
     "Walkact mit elektrischer mobiler Bühne",
     "Für alle Altersgruppen",
     "60 Minuten (in Arbeit)",
-    "5 Performer*innen, feste Besetzung",
+    "5 Performer*innen, feste Besetzung (in Arbeit)",
     "Für Zirkus-, Theater- und Musikfestivals, Stadtfeste und Schulen"
    ]
   },
@@ -109,7 +109,7 @@
    "name": "Imaginary Friend",
    "kicker": "Ein Fantasietier auf vierbeinigen Stelzen",
    "text": [
-    "Ein riesiges Kuscheltier kommt zu Besuch. Ich habe es mir ausgedacht, und plötzlich kroch es unter dem Bett hervor. Wenn du es auch siehst, lass uns zusammen spielen!",
+    "Ein riesiges Kuscheltier kommt zu Besuch. Ich habe es mir ausgedacht, und plötzlich kroch es unter dem Bett hervor. Wer es auch sieht, spielt mit!",
     "Ein hochgewachsenes Fantasietier auf vierbeinigen Stelzen streift durch das Publikum und sucht Freund*innen zum Spielen. Ein zarter, verspielter Walkact, tagsüber oder abends.",
     "Drei Formate: „Schlafenszeit“, mit einer akrobatischen Person, deren ausgefeiltes Einschlafritual (Dehnen, Springen, Breakdance und Choreografien mit dem Publikum) damit endet, dass sie auf ihrem Lieblingskuscheltier einschläft; mit einer*m Bläser*in, die*der Klänge und Melodien improvisiert; oder das Kuscheltier allein, mit Spielen mit dem Publikum."
    ],
@@ -118,7 +118,7 @@
     "Für alle Altersgruppen",
     "1–2 Künstler*innen",
     "30 Minuten",
-    "Solo oder mit Live-Musik"
+    "Solo, mit Live-Musik oder mit Akrobatik"
    ],
    "dossier_soon": "Dossier auf Anfrage."
   }
@@ -135,7 +135,7 @@
  },
  "workshops": {
   "title": "Workshops",
-  "intro": "Die Künstler*innen von VENDAVAL bieten Zirkus- und Musikworkshops für Jugendliche und Erwachsene an, geleitet von aktiven Profis.",
+  "intro": "Die Künstler*innen von VENDAVAL bieten Zirkus- und Musikworkshops für Jugendliche und Erwachsene an, geleitet von aktiven Profis. Die Workshops gibt es in Kombination mit einem unserer Stücke; wir reisen aus Barcelona an.",
   "groups": {
    "stilts": {
     "title": "Stelzen",
@@ -219,7 +219,7 @@
  "downloads": {
   "title": "Downloads",
   "intro": "Material für Veranstalter*innen und Presse.",
-  "note": "Jedes Dokument öffnet sich in deiner Sprache, wenn verfügbar. Brauchst du eine andere Sprache? Frag uns.",
+  "note": "Jedes Dokument öffnet sich in der Sprache der Seite, wenn verfügbar. Eine andere Sprache gewünscht? Einfach nachfragen.",
   "kinds": {
    "dossier": "Dossier zur Show",
    "rider": "Technischer Rider",
@@ -239,9 +239,9 @@
  },
  "contact": {
   "title": "Kontakt",
-  "intro": "Wir sind offen für Buchungen, Workshops, Presse und Kooperationen. Erzähl uns von deiner Idee, wir melden uns bald.",
+  "intro": "Wir sind offen für Buchungen, Workshops, Presse und Kooperationen. Wir freuen uns auf neue Ideen und melden uns bald.",
   "invoice": "Buchung und Rechnungsstellung über den Zirkusverein Tub d'assaig 7.70 (Terrassa).",
-  "morse": "Du kannst uns auch in Morsecode schreiben.",
+  "morse": "Uns mal in Morsecode schreiben.",
   "form": {
    "name": "Name",
    "email": "E-Mail",
@@ -253,12 +253,13 @@
    "message": "Nachricht",
    "required": "Pflichtfeld",
    "show_any": "Noch nicht sicher",
-   "privacy": "Wir nutzen diese Daten nur, um dir zu antworten.",
+   "privacy": "Wir nutzen diese Daten nur, um zu antworten.",
    "submit": "Senden",
-   "ok": "Danke! Wir haben deine Nachricht erhalten.",
+   "ok": "Danke! Die Nachricht ist angekommen.",
    "err": "Die Nachricht konnte nicht gesendet werden. Bitte schreib an VENDAVAL@anartist.org.",
    "sending": "Wird gesendet…"
-  }
+  },
+  "where": "Barcelona · Terrassa (Spanien)"
  },
  "footer": {
   "credits": "Fotos: David Ugalde (ROAR), Barbara Walzer, Jordi Largo, Albert Garcia · Kostüme: Imaginario de Monica, Tropidelia · Grafikdesign: bicialta",
@@ -280,15 +281,18 @@
   "links": "Links unterstreichen",
   "spacing": "Mehr Zeilenabstand",
   "motion": "Animationen stoppen",
-  "reset": "Zurücksetzen"
+  "reset": "Zurücksetzen",
+  "day": "Tag",
+  "night": "Nacht",
+  "theme": "Farbschema"
  },
  "crew": {
   "kicker": "Crew-Register",
-  "title": "Komm an Bord",
-  "lede": "Wähle deinen Geburtsmonat und die Anfangsbuchstaben deines Vor- und Nachnamens. Die VENDAVAL-Crew gibt dir einen Posten an Bord und ein Crew-Patent mit vollem Namen.",
+  "title": "Kommt an Bord",
+  "lede": "Wählt euren Geburtsmonat und die Anfangsbuchstaben eures Vor- und Nachnamens. Die VENDAVAL-Crew gibt euch einen Posten an Bord und ein Crew-Patent mit vollem Namen.",
   "note": "",
   "month": "Geburtsmonat",
-  "month_sub": "Er bestimmt deinen Posten. Jeder Monat hat fünf, je nachdem, was an Bord in dieser Jahreszeit los ist.",
+  "month_sub": "Er bestimmt euren Posten. Jeder Monat hat fünf, je nachdem, was an Bord in dieser Jahreszeit los ist.",
   "pronoun": "Pronomen",
   "pron": [
    "Er",
@@ -296,25 +300,30 @@
    "Dey"
   ],
   "first": "Anfangsbuchstabe Vorname",
-  "first_sub": "Dein Vorname wird ein Wort aus der Zirkuswelt.",
+  "first_sub": "Euer Vorname wird ein Wort aus der Zirkuswelt.",
   "last": "Anfangsbuchstabe Nachname",
-  "last_sub": "Dein Nachname wird etwas aus dem Meer.",
-  "card": "Dein Crew-Patent",
+  "last_sub": "Euer Nachname wird etwas aus dem Meer.",
+  "card": "Euer Crew-Patent",
   "plate": "Crew-Patent",
   "mat": "Kennung",
   "again": "Nochmal würfeln",
   "surprise": "Überrasch mich",
   "copied": "Kopiert:",
-  "selected": "Name markiert. Kopiere ihn über das Menü deines Geräts.",
+  "selected": "Name markiert. Kopiert ihn über das Menü eures Geräts.",
   "letter": "Buchstabe",
   "meta": "Geboren im {m}. Vorname mit {a}, Nachname mit {b}.",
   "copy_btn": "Kopieren",
-  "home_title": "Heuere bei uns an",
-  "home_text": "Welchen Posten hättest du an Bord von VENDAVAL? Wähle deinen Monat und deine Initialen und entdecke deinen Seenamen.",
-  "home_btn": "Deinen Posten entdecken",
+  "home_title": "Kommt an Bord",
+  "home_text": "Welchen Posten hättet ihr an Bord von VENDAVAL? Wählt euren Monat und eure Initialen und entdeckt euren Seenamen.",
+  "home_btn": "Posten entdecken",
   "sample_name": "Jodelndes Periskop",
   "sample_job": "Ausguck eleganter Orkane",
   "sample_mat": "OKT-0420-JP",
   "sample": "Beispiel"
+ },
+ "gallery": {
+  "prev": "Vorheriges Foto",
+  "next": "Nächstes Foto",
+  "close": "Schließen"
  }
 }

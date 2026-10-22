@@ -85,7 +85,7 @@
     "Itinerante com palco móvel elétrico",
     "Para todos os públicos",
     "60 minutos (em processo)",
-    "5 intérpretes, elenco fixo",
+    "5 intérpretes, elenco fixo (em curso)",
     "Para festivais de circo, teatro e música, festas populares e escolas"
    ]
   },
@@ -118,7 +118,7 @@
     "Para todos os públicos",
     "1–2 artistas",
     "30 minutos",
-    "Sozinho ou com música ao vivo"
+    "Sozinho, com música ao vivo ou com acrobacias"
    ],
    "dossier_soon": "Dossier disponível a pedido."
   }
@@ -135,7 +135,7 @@
  },
  "workshops": {
   "title": "Oficinas",
-  "intro": "As artistas de VENDAVAL oferecem oficinas de circo e de música para jovens e adultos, orientadas por profissionais no ativo.",
+  "intro": "As artistas de VENDAVAL oferecem oficinas de circo e de música para jovens e adultos, orientadas por profissionais no ativo. Oferecemo-las em conjunto com um dos nossos espetáculos e vimos de Barcelona.",
   "groups": {
    "stilts": {
     "title": "Andas",
@@ -258,7 +258,8 @@
    "ok": "Obrigado! Recebemos a sua mensagem.",
    "err": "Não foi possível enviar a mensagem. Escreva-nos para VENDAVAL@anartist.org.",
    "sending": "A enviar…"
-  }
+  },
+  "where": "Barcelona · Terrassa (Espanha)"
  },
  "footer": {
   "credits": "Fotografia: David Ugalde (ROAR), Barbara Walzer, Jordi Largo, Albert Garcia · Figurinos: Imaginario de Monica, Tropidelia · Design gráfico: bicialta",
@@ -280,7 +281,10 @@
   "links": "Sublinhar as ligações",
   "spacing": "Mais espaço entre linhas",
   "motion": "Parar as animações",
-  "reset": "Repor"
+  "reset": "Repor",
+  "day": "Dia",
+  "night": "Noite",
+  "theme": "Tema"
  },
  "crew": {
   "kicker": "Registo de tripulação",
@@ -316,5 +320,10 @@
   "sample_job": "Vigia de Furacões Elegantes",
   "sample_mat": "OUT-0420-PT",
   "sample": "Exemplo"
+ },
+ "gallery": {
+  "prev": "Foto anterior",
+  "next": "Foto seguinte",
+  "close": "Fechar"
  }
 }

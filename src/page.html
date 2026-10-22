@@ -73,7 +73,7 @@
   <div class="wrap two">
     <div>
       <h2>{{ t.about.title }}</h2>
-      {% for p in t.about.p %}<p>{{ p }}</p>{% endfor %}
+      {% for p in t.about.p %}<p>{{ p|festlinks }}</p>{% endfor %}
     </div>
     <figure class="tilt"><img loading="lazy" src="{{ R }}img/{{ about_image }}-800.webp" alt="" width="800"></figure>
   </div>
@@ -130,7 +130,7 @@
   </div>
 </section>
 
-<section id="agenda" class="sec">
+<section id="agenda" class="sec cream">
   <div class="wrap agenda" data-today="{{ today }}">
     <h2>{{ t.agenda.title }}</h2>
     <h3 class="ag-up">{{ t.agenda.upcoming }}</h3>
@@ -154,7 +154,7 @@
       <a class="crew-card crew-sample" href="{{ H }}crew/" aria-label="{{ t.crew.sample }}: {{ t.crew.sample_name }}, {{ t.crew.sample_job }}">
         <svg class="crew-pennants" viewBox="0 0 240 14" preserveAspectRatio="none" aria-hidden="true" focusable="false">{% for i in range(10) %}<polygon class="p{{ loop.index0 % 4 + 1 }}" points="{{ i*24 }},0 {{ i*24+24 }},0 {{ i*24+12 }},14"/>{% endfor %}</svg>
         <span class="crew-body" aria-hidden="true">
-          <span class="crew-eyebrow"><span>{{ t.crew.plate }}</span><span>{{ t.crew.mat }} {{ t.crew.sample_mat }}</span></span>
+          <span class="crew-eyebrow"><span>{{ t.crew.plate }}</span></span>
           <span class="crew-cargo">{{ t.crew.sample_job }}</span>
           <span class="crew-nombre">{{ t.crew.sample_name }}</span>
           <span class="crew-sign"><span class="flip">🎷</span><span>💨</span><span class="flip">⛵</span> VENDAVAL.cat</span>
@@ -229,7 +229,7 @@
 </section>
 
 {% elif page == 'agenda' %}
-<section class="sec">
+<section class="sec cream">
   <div class="wrap agenda" data-today="{{ today }}">
     <h1>{{ t.agenda.title }}</h1>
     <h2 class="ag-up">{{ t.agenda.upcoming }}</h2>
@@ -256,8 +256,7 @@
       </li>
       {% endfor %}
     </ul>
-    <h2 class="subs-title">{{ t.artists.subs_title }}</h2>
-    <p class="subs">{% for n in substitutes %}<span>{{ n }}</span>{% if not loop.last %} · {% endif %}{% endfor %}</p>
+
   </div>
 </section>
 
@@ -273,10 +272,9 @@
     <section class="crew-card" id="crew-card" aria-label="{{ C.card }}">
       <svg class="crew-pennants" viewBox="0 0 240 14" preserveAspectRatio="none" aria-hidden="true" focusable="false">{% for i in range(10) %}<polygon class="p{{ loop.index0 % 4 + 1 }}" points="{{ i*24 }},0 {{ i*24+24 }},0 {{ i*24+12 }},14"/>{% endfor %}</svg>
       <div class="crew-body">
-        <p class="crew-eyebrow"><span>{{ C.plate }}</span><span>{{ C.mat }} <span id="crew-mat">—</span></span></p>
+        <p class="crew-eyebrow"><span>{{ C.plate }}</span></p>
         <p class="crew-cargo" id="crew-cargo"></p>
         <h2 class="crew-nombre" id="crew-nombre"></h2>
-        <p class="crew-meta" id="crew-meta"></p>
         <p class="crew-sign" aria-label="VENDAVAL.cat"><span class="flip" aria-hidden="true">🎷</span><span aria-hidden="true">💨</span><span class="flip" aria-hidden="true">⛵</span> VENDAVAL.cat</p>
       </div>
     </section>
@@ -330,15 +328,19 @@
   <button type="button" class="a11y-btn" aria-expanded="false" aria-controls="a11y-panel" aria-label="{{ t.a11y.title }}" title="{{ t.a11y.title }}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4" r="2"/><path d="M21 9h-6v13h-2v-6h-2v6H9V9H3V7h18z"/></svg></button>
   <div id="a11y-panel" class="a11y-panel" role="group" aria-label="{{ t.a11y.title }}" hidden>
     <p class="a11y-title">{{ t.a11y.title }}</p>
-    <div class="a11y-size"><button type="button" data-a="smaller" aria-label="{{ t.a11y.smaller }}">A−</button><span>{{ t.a11y.size }}</span><button type="button" data-a="bigger" aria-label="{{ t.a11y.bigger }}">A+</button></div>
+    <div class="a11y-theme" role="group" aria-label="{{ t.a11y.theme }}">
+      <button type="button" data-a="day" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1" stroke-width="2" stroke-linecap="round"/></svg>{{ t.a11y.day }}</button>
+      <button type="button" data-a="night" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>{{ t.a11y.night }}</button>
+    </div>
     <button type="button" data-a="contrast" aria-pressed="false">{{ t.a11y.contrast }}</button>
     <button type="button" data-a="links" aria-pressed="false">{{ t.a11y.links }}</button>
     <button type="button" data-a="spacing" aria-pressed="false">{{ t.a11y.spacing }}</button>
     <button type="button" data-a="motion" aria-pressed="false">{{ t.a11y.motion }}</button>
+    <div class="a11y-size"><button type="button" data-a="smaller" aria-label="{{ t.a11y.smaller }}">A−</button><span>{{ t.a11y.size }}</span><button type="button" data-a="bigger" aria-label="{{ t.a11y.bigger }}">A+</button></div>
     <button type="button" data-a="reset" class="a11y-reset">{{ t.a11y.reset }}</button>
   </div>
 </div>
-<dialog class="lightbox"><button type="button" class="lb-close" aria-label="×">×</button><img alt=""></dialog>
+<dialog class="lightbox"><button type="button" class="lb-close" aria-label="{{ t.gallery.close }}">×</button><button type="button" class="lb-nav lb-prev" aria-label="{{ t.gallery.prev }}">‹</button><img alt=""><button type="button" class="lb-nav lb-next" aria-label="{{ t.gallery.next }}">›</button></dialog>
 <script src="{{ R }}assets/site.js?v={{ version }}" defer></script>
 </body>
 </html>

@@ -85,7 +85,7 @@
     "Itinerante con escenario móvil eléctrico",
     "Para todos los públicos",
     "60 minutos (en proceso)",
-    "5 intérpretes, reparto fijo",
+    "5 intérpretes, reparto fijo (en proceso)",
     "Para festivales de circo, teatro y música, fiestas mayores y escuelas"
    ]
   },
@@ -118,7 +118,7 @@
     "Para todos los públicos",
     "1–2 artistas",
     "30 minutos",
-    "Solo o con música en directo"
+    "Solo, con música en directo o con acrobacias"
    ],
    "dossier_soon": "Dossier disponible bajo petición."
   }
@@ -135,7 +135,7 @@
  },
  "workshops": {
   "title": "Talleres",
-  "intro": "Las artistas de VENDAVAL ofrecen talleres de circo y de música para jóvenes y adultos, impartidos por profesionales en activo.",
+  "intro": "Las artistas de VENDAVAL ofrecen talleres de circo y de música para jóvenes y adultos, impartidos por profesionales en activo. Los ofrecemos en combinación con uno de nuestros espectáculos y venimos de Barcelona.",
   "groups": {
    "stilts": {
     "title": "Zancos",
@@ -258,7 +258,8 @@
    "ok": "¡Gracias! Hemos recibido tu mensaje.",
    "err": "No se ha podido enviar el mensaje. Escríbenos a VENDAVAL@anartist.org.",
    "sending": "Enviando…"
-  }
+  },
+  "where": "Barcelona · Terrassa (España)"
  },
  "footer": {
   "credits": "Fotografía: David Ugalde (ROAR), Barbara Walzer, Jordi Largo, Albert Garcia · Vestuario: Imaginario de Monica, Tropidelia · Diseño gráfico: bicialta",
@@ -280,7 +281,10 @@
   "links": "Subrayar los enlaces",
   "spacing": "Más espacio entre líneas",
   "motion": "Detener las animaciones",
-  "reset": "Restablecer"
+  "reset": "Restablecer",
+  "day": "Día",
+  "night": "Noche",
+  "theme": "Tema"
  },
  "crew": {
   "kicker": "Registro de tripulación",
@@ -316,5 +320,10 @@
   "sample_job": "Vigía de Huracanes Elegantes",
   "sample_mat": "OCT-0420-PY",
   "sample": "Ejemplo"
+ },
+ "gallery": {
+  "prev": "Foto anterior",
+  "next": "Foto siguiente",
+  "close": "Cerrar"
  }
 }

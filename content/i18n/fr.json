@@ -85,7 +85,7 @@
     "Déambulation avec scène mobile électrique",
     "Tout public",
     "60 minutes (en cours)",
-    "5 artistes, distribution fixe",
+    "5 artistes, distribution fixe (en cours)",
     "Pour festivals de cirque, de théâtre et de musique, fêtes locales et écoles"
    ]
   },
@@ -118,7 +118,7 @@
     "Tout public",
     "1–2 artistes",
     "30 minutes",
-    "Seul ou avec musique live"
+    "Seul, avec musique live ou avec acrobaties"
    ],
    "dossier_soon": "Dossier sur demande."
   }
@@ -135,7 +135,7 @@
  },
  "workshops": {
   "title": "Ateliers",
-  "intro": "Les artistes de VENDAVAL proposent des ateliers de cirque et de musique pour jeunes et adultes, animés par des professionnel·les en activité.",
+  "intro": "Les artistes de VENDAVAL proposent des ateliers de cirque et de musique pour jeunes et adultes, animés par des professionnel·les en activité. Nous les proposons en complément de l'un de nos spectacles et venons de Barcelone.",
   "groups": {
    "stilts": {
     "title": "Échasses",
@@ -258,7 +258,8 @@
    "ok": "Merci ! Nous avons bien reçu votre message.",
    "err": "Le message n'a pas pu être envoyé. Écrivez-nous à VENDAVAL@anartist.org.",
    "sending": "Envoi en cours…"
-  }
+  },
+  "where": "Barcelona · Terrassa (Espagne)"
  },
  "footer": {
   "credits": "Photographie : David Ugalde (ROAR), Barbara Walzer, Jordi Largo, Albert Garcia · Costumes : Imaginario de Monica, Tropidelia · Graphisme : bicialta",
@@ -280,7 +281,10 @@
   "links": "Souligner les liens",
   "spacing": "Plus d'interligne",
   "motion": "Arrêter les animations",
-  "reset": "Réinitialiser"
+  "reset": "Réinitialiser",
+  "day": "Jour",
+  "night": "Nuit",
+  "theme": "Thème"
  },
  "crew": {
   "kicker": "Registre d'équipage",
@@ -316,5 +320,10 @@
   "sample_job": "Vigie des Ouragans Élégants",
   "sample_mat": "OCT-0420-PY",
   "sample": "Exemple"
+ },
+ "gallery": {
+  "prev": "Photo précédente",
+  "next": "Photo suivante",
+  "close": "Fermer"
  }
 }

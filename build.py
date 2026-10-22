@@ -140,6 +140,11 @@ def build_links():
 def render():
     env = Environment(loader=FileSystemLoader(SRC), autoescape=False, trim_blocks=True, lstrip_blocks=True)
     env.filters['loc'] = loc
+    def festlinks(text):
+        for name, url in data.get('festival_links', {}).items():
+            text = text.replace(name, f'<a href="{url}" rel="noopener" target="_blank">{name}</a>', 1)
+        return text
+    env.filters['festlinks'] = festlinks
     tpl = env.get_template('page.html')
     shows = data['shows']; slugs = {s['id']: s['slug'] for s in shows}
     agenda = data['agenda']

@@ -495,3 +495,40 @@ h1.show-title,.page-workshops h1,.page-agenda h1,.page-artists h1,.page-download
 .crew-sample .crew-sign{margin:.1em 0 .6em}
 .crew-sign .flip,.crew-sign span{font-size:1.3em;vertical-align:-.1em}
 @media(max-width:879px){.crew-res{background:#e6fbfd;padding-bottom:8px;margin:0 -16px;padding-left:16px;padding-right:16px}.crew-res .crew-actions{margin-top:10px;gap:8px}.crew-res .crew-actions .btn{padding:.5em 1em}}
+/* lightbox arrows */
+.lightbox{overflow:visible}
+.lb-nav{position:fixed;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;border:0;background:rgba(255,255,255,.92);color:var(--navy);font:700 2rem/1 var(--head);cursor:pointer;display:grid;place-items:center;z-index:3;box-shadow:0 2px 10px rgba(0,0,0,.35)}
+.lb-nav:hover,.lb-nav:focus-visible{background:var(--yellow)}
+.lb-prev{left:12px}.lb-next{right:12px}
+.lb-nav[hidden]{display:none}
+/* hero: photo + title + buttons fit on one screen on computers */
+@media(min-width:1000px){.hero{--stage:min(calc(100svh - 94px - 272px),66.7vw)}}
+/* accessibility panel: day/night row, two smaller text sizes */
+html.fs-1{font-size:93.75%} html.fs-2{font-size:87.5%}
+.a11y-theme{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.a11y-theme button{display:flex;align-items:center;justify-content:center;gap:6px;text-align:center}
+.a11y-theme svg{width:18px;height:18px;fill:currentColor;stroke:currentColor}
+.a11y-theme [data-a="night"] svg{stroke:none}
+
+/* night theme */
+html.a11y-dark{--ink:#e7eef1;--muted:#b6c6cd;--line:#2c5a6e;color-scheme:dark}
+html.a11y-dark body{background:#071d28;color:var(--ink)}
+html.a11y-dark .cream{background:#0d2b3a}
+html.a11y-dark .top{background:rgba(7,29,40,.96);border-color:#1f4658}
+html.a11y-dark #nav,html.a11y-dark .top .langs ul,html.a11y-dark .langs ul{background:#0d2b3a}
+html.a11y-dark #nav>ul a,html.a11y-dark .langs summary,html.a11y-dark .langs a{color:var(--ink)}
+html.a11y-dark h1,html.a11y-dark h2,html.a11y-dark h3,html.a11y-dark h4,html.a11y-dark h1.show-title,html.a11y-dark .crew-nombre{color:#f5ebdd}
+html.a11y-dark a{color:#6fd3db}
+html.a11y-dark :is(.tilt,.artist,.form,.dlcard,.ws-group,.show-card,.dl-more ul,.crew-card,.tags li,.show-media img,.dl-alt){background:#123a4c;color:var(--ink)}
+html.a11y-dark .form input,html.a11y-dark .form select,html.a11y-dark .form textarea{background:#0a2533;color:var(--ink);border-color:#2c5a6e}
+html.a11y-dark .tags li{border-color:#6fd3db;color:#f5ebdd}
+html.a11y-dark .timeline li::before{background:#071d28;color:#6fd3db}
+html.a11y-dark .show-card img,html.a11y-dark .artist img{background:#0d2b3a}
+html.a11y-dark .crew{background:#08283a}
+html.a11y-dark .crew-month,html.a11y-dark .crew-letter,html.a11y-dark .crew-seg button{background:#123a4c;color:var(--ink)}
+html.a11y-dark .a11y-panel{background:#0d2b3a;color:var(--ink);border-color:#6fd3db}
+html.a11y-dark .a11y-panel button{background:#123a4c;color:var(--ink);border-color:#2c5a6e}
+html.a11y-dark .a11y-panel button[aria-pressed="true"]{background:#6fd3db;color:#071d28;border-color:#6fd3db}
+html.a11y-dark .a11y-title{color:#f5ebdd}
+html.a11y-dark .brand img{background:#fff;border-radius:10px;padding:2px 6px}
+html.a11y-dark .dl-kind,html.a11y-dark .dl-kicker{color:#9fdde2}

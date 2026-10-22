@@ -238,8 +238,8 @@ function cargoPara(t, g) {
     var r = st.r;
     $("crew-cargo").textContent = cargoActual(r);
     $("crew-nombre").textContent = nombreCompleto(r);
-    $("crew-mat").textContent = r.mat;
-    $("crew-meta").textContent = T.meta.replace('{m}', ['ca', 'es', 'fr', 'it', 'pt'].indexOf(LANG) < 0 ? monthNames[st.mes] : monthNames[st.mes].toLowerCase()).replace('{a}', st.a).replace('{b}', st.b);
+    if ($("crew-mat")) $("crew-mat").textContent = r.mat;
+    if ($("crew-meta")) $("crew-meta").textContent = T.meta.replace('{m}', ['ca', 'es', 'fr', 'it', 'pt'].indexOf(LANG) < 0 ? monthNames[st.mes] : monthNames[st.mes].toLowerCase()).replace('{a}', st.a).replace('{b}', st.b);
   }
   function flicker() { var f = elegir(); $("crew-cargo").textContent = cargoDe(pick(cargos())); $("crew-nombre").textContent = nombreCompleto(f); }
   function anunciar() { $("crew-anuncio").textContent = nombreCompleto(st.r) + ", " + cargoActual(st.r) + "."; }

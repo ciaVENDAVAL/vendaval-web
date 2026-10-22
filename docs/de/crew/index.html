@@ -33,7 +33,7 @@
 <link rel="apple-touch-icon" href="../../img/apple-touch-icon.png">
 <link rel="manifest" href="../../site.webmanifest">
 <link rel="preload" href="../../fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../../assets/style.css?v=202610222006">
+<link rel="stylesheet" href="../../assets/style.css?v=202610222035">
 </head>
 <body>
 <span id="top"></span>
@@ -58,17 +58,16 @@
   <div class="wrap crew-wrap">
     <header class="crew-head">
       <p class="kicker">Crew-Register</p>
-      <h1>Komm an Bord</h1>
-      <p class="lead">Wähle deinen Geburtsmonat und die Anfangsbuchstaben deines Vor- und Nachnamens. Die VENDAVAL-Crew gibt dir einen Posten an Bord und ein Crew-Patent mit vollem Namen.</p>
+      <h1>Kommt an Bord</h1>
+      <p class="lead">Wählt euren Geburtsmonat und die Anfangsbuchstaben eures Vor- und Nachnamens. Die VENDAVAL-Crew gibt euch einen Posten an Bord und ein Crew-Patent mit vollem Namen.</p>
     </header>
     <div class="crew-res">
-    <section class="crew-card" id="crew-card" aria-label="Dein Crew-Patent">
+    <section class="crew-card" id="crew-card" aria-label="Euer Crew-Patent">
       <svg class="crew-pennants" viewBox="0 0 240 14" preserveAspectRatio="none" aria-hidden="true" focusable="false"><polygon class="p1" points="0,0 24,0 12,14"/><polygon class="p2" points="24,0 48,0 36,14"/><polygon class="p3" points="48,0 72,0 60,14"/><polygon class="p4" points="72,0 96,0 84,14"/><polygon class="p1" points="96,0 120,0 108,14"/><polygon class="p2" points="120,0 144,0 132,14"/><polygon class="p3" points="144,0 168,0 156,14"/><polygon class="p4" points="168,0 192,0 180,14"/><polygon class="p1" points="192,0 216,0 204,14"/><polygon class="p2" points="216,0 240,0 228,14"/></svg>
       <div class="crew-body">
-        <p class="crew-eyebrow"><span>Crew-Patent</span><span>Kennung <span id="crew-mat">—</span></span></p>
+        <p class="crew-eyebrow"><span>Crew-Patent</span></p>
         <p class="crew-cargo" id="crew-cargo"></p>
         <h2 class="crew-nombre" id="crew-nombre"></h2>
-        <p class="crew-meta" id="crew-meta"></p>
         <p class="crew-sign" aria-label="VENDAVAL.cat"><span class="flip" aria-hidden="true">🎷</span><span aria-hidden="true">💨</span><span class="flip" aria-hidden="true">⛵</span> VENDAVAL.cat</p>
       </div>
     </section>
@@ -81,17 +80,17 @@
     </div>
     <p class="sr-only" id="crew-anuncio" aria-live="polite"></p>
     <div class="crew-controls">
-      <fieldset><legend>Geburtsmonat</legend><p class="crew-sub">Er bestimmt deinen Posten. Jeder Monat hat fünf, je nachdem, was an Bord in dieser Jahreszeit los ist.</p><div class="crew-months" id="crew-meses"></div></fieldset>
+      <fieldset><legend>Geburtsmonat</legend><p class="crew-sub">Er bestimmt euren Posten. Jeder Monat hat fünf, je nachdem, was an Bord in dieser Jahreszeit los ist.</p><div class="crew-months" id="crew-meses"></div></fieldset>
       <fieldset><legend>Pronomen</legend>
         <div class="crew-seg" id="crew-genero"><button type="button" data-g="m">Er</button><button type="button" data-g="f">Sie</button><button type="button" data-g="n">Dey</button></div>
       </fieldset>
-      <fieldset><legend>Anfangsbuchstabe Vorname</legend><p class="crew-sub">Dein Vorname wird ein Wort aus der Zirkuswelt.</p><div class="crew-letters" id="crew-letras-nombre"></div></fieldset>
-      <fieldset><legend>Anfangsbuchstabe Nachname</legend><p class="crew-sub">Dein Nachname wird etwas aus dem Meer.</p><div class="crew-letters" id="crew-letras-apellido"></div></fieldset>
+      <fieldset><legend>Anfangsbuchstabe Vorname</legend><p class="crew-sub">Euer Vorname wird ein Wort aus der Zirkuswelt.</p><div class="crew-letters" id="crew-letras-nombre"></div></fieldset>
+      <fieldset><legend>Anfangsbuchstabe Nachname</legend><p class="crew-sub">Euer Nachname wird etwas aus dem Meer.</p><div class="crew-letters" id="crew-letras-apellido"></div></fieldset>
     </div>
   </div>
-  <script type="application/json" id="crew-i18n">{"copied": "Kopiert:", "letter": "Buchstabe", "meta": "Geboren im {m}. Vorname mit {a}, Nachname mit {b}.", "selected": "Name markiert. Kopiere ihn \u00fcber das Men\u00fc deines Ger\u00e4ts."}</script>
-<script src="../../assets/crew-data/de.js?v=202610222006" defer></script>
-<script src="../../assets/crew.js?v=202610222006" defer></script>
+  <script type="application/json" id="crew-i18n">{"copied": "Kopiert:", "letter": "Buchstabe", "meta": "Geboren im {m}. Vorname mit {a}, Nachname mit {b}.", "selected": "Name markiert. Kopiert ihn \u00fcber das Men\u00fc eures Ger\u00e4ts."}</script>
+<script src="../../assets/crew-data/de.js?v=202610222035" defer></script>
+<script src="../../assets/crew.js?v=202610222035" defer></script>
 </section>
 </main>
 
@@ -111,15 +110,19 @@
   <button type="button" class="a11y-btn" aria-expanded="false" aria-controls="a11y-panel" aria-label="Barrierefreiheit" title="Barrierefreiheit"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4" r="2"/><path d="M21 9h-6v13h-2v-6h-2v6H9V9H3V7h18z"/></svg></button>
   <div id="a11y-panel" class="a11y-panel" role="group" aria-label="Barrierefreiheit" hidden>
     <p class="a11y-title">Barrierefreiheit</p>
-    <div class="a11y-size"><button type="button" data-a="smaller" aria-label="Kleinerer Text">A−</button><span>Textgröße</span><button type="button" data-a="bigger" aria-label="Größerer Text">A+</button></div>
+    <div class="a11y-theme" role="group" aria-label="Farbschema">
+      <button type="button" data-a="day" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1" stroke-width="2" stroke-linecap="round"/></svg>Tag</button>
+      <button type="button" data-a="night" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>Nacht</button>
+    </div>
     <button type="button" data-a="contrast" aria-pressed="false">Hoher Kontrast</button>
     <button type="button" data-a="links" aria-pressed="false">Links unterstreichen</button>
     <button type="button" data-a="spacing" aria-pressed="false">Mehr Zeilenabstand</button>
     <button type="button" data-a="motion" aria-pressed="false">Animationen stoppen</button>
+    <div class="a11y-size"><button type="button" data-a="smaller" aria-label="Kleinerer Text">A−</button><span>Textgröße</span><button type="button" data-a="bigger" aria-label="Größerer Text">A+</button></div>
     <button type="button" data-a="reset" class="a11y-reset">Zurücksetzen</button>
   </div>
 </div>
-<dialog class="lightbox"><button type="button" class="lb-close" aria-label="×">×</button><img alt=""></dialog>
-<script src="../../assets/site.js?v=202610222006" defer></script>
+<dialog class="lightbox"><button type="button" class="lb-close" aria-label="Schließen">×</button><button type="button" class="lb-nav lb-prev" aria-label="Vorheriges Foto">‹</button><img alt=""><button type="button" class="lb-nav lb-next" aria-label="Nächstes Foto">›</button></dialog>
+<script src="../../assets/site.js?v=202610222035" defer></script>
 </body>
 </html>

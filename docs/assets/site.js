@@ -59,10 +59,12 @@
 
   // accessibility panel: text size, contrast, underlined links, spacing, stop animations (saved in this browser only)
   var a11yBtn = document.querySelector('.a11y-btn'), panel = document.getElementById('a11y-panel');
-  var A = { fs: 0, contrast: false, links: false, spacing: false, motion: false };
+  var A = { fs: 0, dark: false, contrast: false, links: false, spacing: false, motion: false };
   try { var saved = JSON.parse(localStorage.getItem('vendaval-a11y') || '{}'); for (var k in saved) if (k in A) A[k] = saved[k]; } catch (e) {}
   function applyA11y() {
-    root.classList.remove('fs1', 'fs2', 'fs3'); if (A.fs) root.classList.add('fs' + A.fs);
+    root.classList.remove('fs1', 'fs2', 'fs3', 'fs-1', 'fs-2'); if (A.fs) root.classList.add('fs' + A.fs);
+    root.classList.toggle('a11y-dark', !!A.dark);
+    if (panel) { panel.querySelector('[data-a="day"]').setAttribute('aria-pressed', !A.dark); panel.querySelector('[data-a="night"]').setAttribute('aria-pressed', !!A.dark); }
     ['contrast', 'links', 'spacing', 'motion'].forEach(function (k) {
       root.classList.toggle('a11y-' + k, !!A[k]);
       var b = panel && panel.querySelector('[data-a="' + k + '"]'); if (b) b.setAttribute('aria-pressed', !!A[k]);
@@ -76,12 +78,18 @@
       var open = panel.hidden; panel.hidden = !open; a11yBtn.setAttribute('aria-expanded', open);
       if (open) panel.querySelector('button').focus();
     });
+    // close when clicking anywhere outside the panel
+    document.addEventListener('click', function (e) {
+      if (!panel.hidden && !panel.contains(e.target) && !a11yBtn.contains(e.target)) { panel.hidden = true; a11yBtn.setAttribute('aria-expanded', false); }
+    });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !panel.hidden) { panel.hidden = true; a11yBtn.setAttribute('aria-expanded', false); a11yBtn.focus(); } });
     panel.addEventListener('click', function (e) {
       var b = e.target.closest('button'); if (!b) return; var a = b.dataset.a;
       if (a === 'bigger') A.fs = Math.min(3, A.fs + 1);
-      else if (a === 'smaller') A.fs = Math.max(0, A.fs - 1);
-      else if (a === 'reset') A = { fs: 0, contrast: false, links: false, spacing: false, motion: false };
+      else if (a === 'smaller') A.fs = Math.max(-2, A.fs - 1);
+      else if (a === 'day') A.dark = false;
+      else if (a === 'night') A.dark = true;
+      else if (a === 'reset') A = { fs: 0, dark: false, contrast: false, links: false, spacing: false, motion: false };
       else A[a] = !A[a];
       applyA11y();
     });
@@ -112,11 +120,28 @@
   // gallery lightbox
   var lb = document.querySelector('.lightbox');
   if (lb && lb.showModal) {
-    var lbImg = lb.querySelector('img');
-    document.querySelectorAll('.gal').forEach(function (a) {
-      a.addEventListener('click', function (e) {
-        e.preventDefault(); lbImg.src = a.href; lbImg.alt = a.querySelector('img').alt; lb.showModal();
-      });
+    var lbImg = lb.querySelector('img'), gals = Array.prototype.slice.call(document.querySelectorAll('.gal')), at = 0;
+    function lbShow(i) {
+      at = (i + gals.length) % gals.length;   // endless loop
+      var a = gals[at]; lbImg.src = a.href; lbImg.alt = a.querySelector('img').alt;
+    }
+    gals.forEach(function (a, i) {
+      a.addEventListener('click', function (e) { e.preventDefault(); lbShow(i); lb.showModal(); });
+    });
+    var one = gals.length < 2;
+    lb.querySelectorAll('.lb-nav').forEach(function (b) { b.hidden = one; });
+    lb.querySelector('.lb-prev').addEventListener('click', function (e) { e.stopPropagation(); lbShow(at - 1); });
+    lb.querySelector('.lb-next').addEventListener('click', function (e) { e.stopPropagation(); lbShow(at + 1); });
+    lbImg.addEventListener('click', function (e) { e.stopPropagation(); lbShow(at + 1); });
+    lb.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') lbShow(at - 1);
+      if (e.key === 'ArrowRight') lbShow(at + 1);
+    });
+    var x0 = null;   // swipe on phones
+    lb.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+    lb.addEventListener('touchend', function (e) {
+      if (x0 === null) return; var dx = e.changedTouches[0].clientX - x0; x0 = null;
+      if (Math.abs(dx) > 40) lbShow(at + (dx < 0 ? 1 : -1));
     });
     lb.addEventListener('click', function () { lb.close(); });
   }

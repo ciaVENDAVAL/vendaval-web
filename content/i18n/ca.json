@@ -85,7 +85,7 @@
     "Itinerant de carrer amb escenari mòbil elèctric",
     "Per a tots els públics",
     "60 minuts (en procés)",
-    "5 intèrprets, repartiment fix",
+    "5 intèrprets, repartiment fix (en procés)",
     "Per a festivals de circ, teatre i música, festes majors i escoles"
    ]
   },
@@ -118,7 +118,7 @@
     "Per a tots els públics",
     "1–2 artistes",
     "30 minuts",
-    "Sol o amb música en viu"
+    "Sol, amb música en viu o amb acrobàcies"
    ],
    "dossier_soon": "Dossier disponible a petició."
   }
@@ -135,7 +135,7 @@
  },
  "workshops": {
   "title": "Tallers",
-  "intro": "Les artistes de VENDAVAL ofereixen tallers de circ i de música per a joves i adults, impartits per professionals en actiu.",
+  "intro": "Les artistes de VENDAVAL ofereixen tallers de circ i de música per a joves i adults, impartits per professionals en actiu. Els oferim en combinació amb un dels nostres espectacles i venim de Barcelona.",
   "groups": {
    "stilts": {
     "title": "Xanques",
@@ -258,7 +258,8 @@
    "ok": "Gràcies! Hem rebut el vostre missatge.",
    "err": "No s'ha pogut enviar. Escriviu-nos a VENDAVAL@anartist.org.",
    "sending": "S'està enviant…"
-  }
+  },
+  "where": "Barcelona · Terrassa"
  },
  "footer": {
   "credits": "Fotografia: David Ugalde (ROAR), Barbara Walzer, Jordi Largo, Albert Garcia · Vestuari: Imaginario de Monica, Tropidelia · Disseny gràfic: bicialta",
@@ -280,7 +281,10 @@
   "links": "Subratlla els enllaços",
   "spacing": "Més espai entre línies",
   "motion": "Atura les animacions",
-  "reset": "Restableix"
+  "reset": "Restableix",
+  "day": "Dia",
+  "night": "Nit",
+  "theme": "Tema"
  },
  "crew": {
   "kicker": "Registre de tripulació",
@@ -316,5 +320,10 @@
   "sample_job": "Guaita d'Huracans Elegants",
   "sample_mat": "OCT-0420-PT",
   "sample": "Exemple"
+ },
+ "gallery": {
+  "prev": "Foto anterior",
+  "next": "Foto següent",
+  "close": "Tanca"
  }
 }

@@ -85,7 +85,7 @@
     "Itinerante con palco mobile elettrico",
     "Per tutte le età",
     "60 minuti (in lavorazione)",
-    "5 artisti, cast fisso",
+    "5 artisti, cast fisso (in corso)",
     "Per festival di circo, teatro e musica, feste di paese e scuole"
    ]
   },
@@ -118,7 +118,7 @@
     "Per tutte le età",
     "1–2 artisti",
     "30 minuti",
-    "Da solo o con musica dal vivo"
+    "Da solo, con musica dal vivo o con acrobazie"
    ],
    "dossier_soon": "Dossier su richiesta."
   }
@@ -135,7 +135,7 @@
  },
  "workshops": {
   "title": "Laboratori",
-  "intro": "Gli artisti di VENDAVAL offrono laboratori di circo e di musica per giovani e adulti, tenuti da professionisti in attività.",
+  "intro": "Gli artisti di VENDAVAL offrono laboratori di circo e di musica per giovani e adulti, tenuti da professionisti in attività. Li proponiamo insieme a uno dei nostri spettacoli e arriviamo da Barcellona.",
   "groups": {
    "stilts": {
     "title": "Trampoli",
@@ -258,7 +258,8 @@
    "ok": "Grazie! Abbiamo ricevuto il tuo messaggio.",
    "err": "Non è stato possibile inviare il messaggio. Scrivici a VENDAVAL@anartist.org.",
    "sending": "Invio in corso…"
-  }
+  },
+  "where": "Barcelona · Terrassa (Spagna)"
  },
  "footer": {
   "credits": "Fotografia: David Ugalde (ROAR), Barbara Walzer, Jordi Largo, Albert Garcia · Costumi: Imaginario de Monica, Tropidelia · Grafica: bicialta",
@@ -280,7 +281,10 @@
   "links": "Sottolinea i link",
   "spacing": "Più interlinea",
   "motion": "Ferma le animazioni",
-  "reset": "Ripristina"
+  "reset": "Ripristina",
+  "day": "Giorno",
+  "night": "Notte",
+  "theme": "Tema"
  },
  "crew": {
   "kicker": "Registro della ciurma",
@@ -316,5 +320,10 @@
   "sample_job": "Vedetta degli Uragani Eleganti",
   "sample_mat": "OTT-0420-PT",
   "sample": "Esempio"
+ },
+ "gallery": {
+  "prev": "Foto precedente",
+  "next": "Foto successiva",
+  "close": "Chiudi"
  }
 }
