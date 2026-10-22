@@ -576,3 +576,14 @@ html.a11y-dark .crew [aria-pressed="true"]{background:#f27f1b;color:#0a0a0a;bord
 html.a11y-dark .badge-coproduction{color:#071d28}
 html.a11y-dark .crew-cargo{color:#ffb37a}
 html.a11y-dark :is(.origin,.sc-more){color:#ff8a73}
+/* hero on laptops/desktops: photo fills the screen (never cropped), small title and links over the bottom edge */
+@media(min-width:1000px){
+.hero{--stage:calc(100svh - var(--toph,94px));height:var(--stage);overflow:hidden}
+.hero .slide picture{height:var(--stage);align-items:center}
+.hero .slide picture img{max-height:var(--stage)}
+.hero-in{position:absolute!important;left:0;right:0;bottom:0;max-width:none;padding:70px 28px 18px!important;background:linear-gradient(180deg,rgba(7,29,40,0) 0%,rgba(7,29,40,.78) 100%)}
+.hero h1{font-size:clamp(1.5rem,2.4vw,2.2rem);max-width:none;margin:0 auto .35em}
+.hero .ctas .btn{font-size:.95rem;padding:.55em 1.2em}
+.hero .dots{margin-top:.6em}
+.hero .slide-link{font-size:.82rem}
+}
