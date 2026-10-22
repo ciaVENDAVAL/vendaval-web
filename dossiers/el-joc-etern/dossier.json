@@ -74,27 +74,33 @@
    ]
   },
   "4": {
-   "wide": [
+   "side": 120,
+   "rows": [
     {
      "photos": [
       "creating_el_Joc_Etern_13.jpg",
-      "creating_el_Joc_Etern_8.jpg",
+      "creating_el_Joc_Etern_8.jpg"
+     ],
+     "h": 105
+    },
+    {
+     "photos": [
       "20260331_163157.jpg",
       "20260401_142447.jpg"
      ],
-     "h": 75
+     "h": 105
     }
    ]
   },
   "5": {
-   "side": 100,
+   "side": 110,
    "flip": 1,
    "rows": [
     {
      "photos": [
       "VENDAVAL_salvavidas_publico.jpg"
      ],
-     "h": 90
+     "h": 98
     }
    ]
   },
