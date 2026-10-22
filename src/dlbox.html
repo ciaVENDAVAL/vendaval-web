@@ -8,10 +8,10 @@
   <div class="dl-row{% if d.kind == 'easy' %} easy{% endif %}">
     <span class="dl-kind">{% if d.label %}{{ (d.label.get(lang) or d.label['*']) if d.label is mapping else d.label }} · {% endif %}{% if d.variant %}{{ t.downloads.concert }} · {% endif %}{{ t.downloads.kinds[d.kind] }}{% if d.draft %} <em class="dl-draft">{{ t.shows.status.creation }}</em>{% endif %}</span>
     {% if fs %}{% set main = dlfile(it) %}
-    <a class="dl" href="{{ R }}{{ main.url }}" download hreflang="{{ i18n[main.lang].html_lang }}">{{ icon('download') }} {{ i18n[main.lang].lang_name }}</a>
+    <span class="dl-pair"><a class="dl" href="{{ R }}{{ main.url }}" target="_blank" rel="noopener" hreflang="{{ i18n[main.lang].html_lang }}" title="{{ t.downloads.view }}">{{ icon('eye') }} {{ i18n[main.lang].lang_name }}</a><a class="dl-save" href="{{ R }}{{ main.url }}" download hreflang="{{ i18n[main.lang].html_lang }}" aria-label="{{ t.downloads.dl }} – {{ i18n[main.lang].lang_name }}" title="{{ t.downloads.dl }}">{{ icon('download') }}</a></span>
     {% set others = fs|selectattr('0', 'ne', main.lang)|list %}{% if others %}
     <details class="dl-more"><summary>{{ t.downloads.other }} ({{ others|length }})</summary>
-      <ul>{% for l, u in others %}<li><a href="{{ R }}{{ u }}" download hreflang="{{ i18n[l].html_lang }}" lang="{{ i18n[l].html_lang }}">{{ i18n[l].lang_name }}</a></li>{% endfor %}</ul>
+      <ul>{% for l, u in others %}<li><a href="{{ R }}{{ u }}" target="_blank" rel="noopener" hreflang="{{ i18n[l].html_lang }}" lang="{{ i18n[l].html_lang }}">{{ i18n[l].lang_name }}</a><a class="dl-save" href="{{ R }}{{ u }}" download aria-label="{{ t.downloads.dl }} – {{ i18n[l].lang_name }}" title="{{ t.downloads.dl }}">{{ icon('download') }}</a></li>{% endfor %}</ul>
     </details>{% endif %}
     {% else %}<span class="dl-missing">{{ t.downloads.missing }}</span>{% endif %}
   </div>

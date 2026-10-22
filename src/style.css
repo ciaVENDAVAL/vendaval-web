@@ -587,3 +587,15 @@ html.a11y-dark :is(.origin,.sc-more){color:#ff8a73}
 .hero .dots{margin-top:.6em}
 .hero .slide-link{font-size:.82rem}
 }
+/* PDFs open in the browser; separate download button */
+.dl-pair{display:inline-flex;align-items:stretch;gap:0}
+.dlcard .dl-pair .dl{border-radius:8px 0 0 8px}
+.dl-save{display:inline-flex;align-items:center;justify-content:center;min-width:2.4em;padding:0 .55em;background:var(--navy);color:#fff!important;border-left:1px solid rgba(255,255,255,.35);border-radius:0 8px 8px 0;text-decoration:none}
+.dl-save:hover,.dlcard .dl-pair .dl:hover{background:var(--red)}
+.dl-save .icon{width:1.1em;height:1.1em}
+.dl-more li{display:flex;align-items:center;gap:4px}
+.dl-more li>a:first-child{flex:1}
+.dl-more li .dl-save{min-width:2em;padding:.35em .45em;border-radius:6px;border:0;background:transparent;color:var(--navy)!important}
+.dl-more li .dl-save:hover{background:var(--cream)}
+html.a11y-dark .dl-more li .dl-save{color:#f5ebdd!important}
+html.a11y-dark .dl-more li .dl-save:hover{background:#24394a}
