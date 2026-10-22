@@ -562,3 +562,17 @@ html.a11y-easy .std{display:none}
 html.a11y-easy .easy p{font-size:1.08em;line-height:1.7;max-width:60ch}
 .dl-row.easy{background:#fff7e0;border-radius:8px;padding:8px 10px;margin:6px -10px}
 html.a11y-dark .dl-row.easy{background:#24394a}
+/* night theme: every navy text on dark backgrounds becomes light (22 Oct 2026) */
+html.a11y-dark{--teal-d:#7fdde5}
+html.a11y-dark :is(h2,.show h3,.agenda h3,.timeline .place,.artist h2,.artist h3,.subs-title,.form label,.sc-name,.ws-group h2,.ws-group h3,.dl-head h3 a,.crew-head h1,.crew-nombre,.crew legend,.crew-sample .crew-nombre,.langs summary,.langs a,.dl-more li a,.page-workshops h1,.page-agenda h1,.page-artists h1,.page-downloads h1,h1.show-title){color:#f5ebdd}
+html.a11y-dark .facts h2,html.a11y-dark .facts{color:var(--navy)!important}
+html.a11y-dark .btn-line{color:#f5ebdd;border-color:#f5ebdd}
+html.a11y-dark .dl-alt{border-color:#6fd3db;color:#f5ebdd}
+html.a11y-dark .dl-more summary{color:#9fdde2;border-color:#6fd3db}
+html.a11y-dark :is(.lead,.kicker,.sc-kicker,.dl-row small,.crew p,.form small){color:#cfe0e6}
+html.a11y-dark #nav>ul a:hover,html.a11y-dark #nav>ul a:focus-visible,html.a11y-dark .langs a:hover{background:#6fd3db;color:#071d28}
+html.a11y-dark .crew-month:hover,html.a11y-dark .crew-letter:hover,html.a11y-dark .crew-seg button:hover{border-color:#6fd3db}
+html.a11y-dark .crew [aria-pressed="true"]{background:#f27f1b;color:#0a0a0a;border-color:#f5ebdd}
+html.a11y-dark .badge-coproduction{color:#071d28}
+html.a11y-dark .crew-cargo{color:#ffb37a}
+html.a11y-dark :is(.origin,.sc-more){color:#ff8a73}
