@@ -92,7 +92,7 @@ def render_html(cfg, lang):
     contact_secs = sections[-2:]; body_secs = sections[:-2]
     cover_src, _ = photo(cfg['cover'], 1800)
     out = [f'<h1>{name}</h1>', f'<p class="tag">{tag}</p>', f'<p class="who">Cia. VENDAVAL · {LABEL[lang]}</p>',
-           f'<img class="cover" src="{cover_src}">', '<div class="figs">' + ''.join(fig_cell(f) for f in figs) + '</div>',
+           f'<img class="cover" src="{cover_src}" style="max-height:{cfg.get("cover_h", 120)}mm">', '<div class="figs">' + ''.join(fig_cell(f) for f in figs) + '</div>',
            f'<div class="intro">{M(intro)}</div>']
     rows = cfg.get('rows', {})
     for i, (h, body) in enumerate(body_secs):

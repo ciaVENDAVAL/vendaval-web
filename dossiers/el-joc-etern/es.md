@@ -1,4 +1,4 @@
-<!-- El Joc Etern · dossier ES · obra en proceso · fuente: hoja de datos maestra (22 oct. 2026) -->
+<!-- El Joc Etern · dossier ES · obra en proceso · fuente: hoja de datos maestra (22 oct. 2026) · máx. 5 páginas -->
 
 # El Joc Etern — un juego que no se acaba (título provisional)
 
@@ -6,85 +6,54 @@
 
 ¿Cómo consigue un grupo de desconocides, cada cual de camino a otro sitio, acabar jugando, moviéndose y haciendo música juntes en medio de la calle?
 
-El Joc Etern es la nueva creación de Cia. VENDAVAL: un espectáculo itinerante de calle con escenario móvil eléctrico, música en directo, zancos, monociclo y juegos participativos. Es una obra en proceso.
+El Joc Etern es la nueva creación de Cia. VENDAVAL, en proceso. Tres criaturas del mar, entre clownescas y mitológicas, buscan el Joc Etern, una reliquia mágica que permite jugar para siempre a quien la toca, e invitan a todas las personas que encuentran a sumarse a la búsqueda. La fantasía marina y los dragones se inspiran en los libros de Terramar de Ursula K. Le Guin.
 
-Tres criaturas del mar, entre clownescas y mitológicas, buscan el Joc Etern, una reliquia mágica que permite jugar para siempre a quien la toca, e invitan a todas las personas que encuentran a sumarse a la búsqueda. La fantasía marina y los dragones se inspiran en los libros de Terramar de Ursula K. Le Guin.
-
-Cinco intérpretes viajan con el Windy, una Vespa eléctrica de tres ruedas que remolca un barco que también es un instrumento. Dos personajes en zancos guían los juegos y la historia, y la criatura que conduce el Windy a veces se desplaza en monociclo entre el público y se pasa mazas de malabares con quien va en zancos.
-
+Cinco intérpretes viajan con el Windy, una Vespa eléctrica que remolca un barco que también es un instrumento. Dos personajes en zancos guían los juegos y la historia; quien conduce el Windy a veces se desplaza en monociclo entre el público y se pasa mazas de malabares con quien va en zancos.
 
 ## Dónde estamos
 
-- **Origen**: el espectáculo nace de VENDAVAL Brass, la banda itinerante con la que salimos de gira desde 2025 por Cataluña y Alemania.
-- **Juegos**: probamos juegos participativos en las actuaciones de VENDAVAL Brass. El paso siguiente es un periodo de investigación en 2027 para crear y probar entre 10 y 15 juegos que funcionen en cualquier idioma, y escribir la dramaturgia a partir de lo que de verdad funciona en la calle.
-- **Personajes**: cada intérprete desarrolla un personaje, con un nombre, una manera de caminar y una manera de saludar a la gente a través del sonido.
-- **Estreno**: después del periodo de investigación.
+- **Origen**: nace de VENDAVAL Brass, la banda itinerante con la que salimos de gira desde 2025 por Cataluña y Alemania.
+- **Juegos**: en 2027 creamos y probamos entre 10 y 15 juegos participativos que funcionen en cualquier idioma, y escribimos la dramaturgia a partir de lo que funciona en la calle.
+- **Personajes**: cada intérprete desarrolla un nombre, una manera de caminar y una manera de saludar a través del sonido.
+- **Estreno**: después de la investigación.
 
 ## El Windy
 
-El Windy es el escenario móvil del espectáculo: una Vespa de tres ruedas convertida en vehículo eléctrico que remolca un barco. Uli Weigel construye el remolque y el escenario, y Pepe Ferros el vehículo eléctrico. El motor ya está montado; falta arreglar la dirección, decorarlo y ensayar con él.
-
-- **Medidas**: Vespa y remolque, 4,66 m de largo × 1,55 m de ancho × 3 m de alto con el barco.
-- **Recorrido**: pendiente máxima del 5 %.
-
-## Dragones y gigantes
-
-Los dragones atraviesan todo el mundo del espectáculo: dragones pequeños que se llevan como pulseras o en el pelo, y colas en algunos personajes.
-
-Si el presupuesto lo permite, desarrollaremos dos figuras más grandes como producciones aparte, que también podrán salir de gira como pasacalles independientes:
-
-- **Ani Arqui, el Pacífico (el Gigante del Mar)**: un dios-demonio del océano de unos 3 m de altura, mucho más grande que una figura habitual en zancos. Es un robot acuático al estilo de Neptuno con estética anime, hecho de goma EVA con detalles impresos en 3D. Lleva un carnyx, una trompeta medieval de 2 m que se oye en todas las calles. Antiguamente el carnyx llamaba a la guerra; Ani Arqui viene en paz, a tocar y jugar con el pueblo de los dragones. Dosier de concepto a petición.
-- **El Dragón**: de momento solo es una idea (un títere volador o un dragón en zancos de cuatro patas).
+Una Vespa de tres ruedas convertida en vehículo eléctrico (Pepe Ferros) que remolca un barco (remolque y escenario: Uli Weigel). El motor ya está montado; falta la dirección, la decoración y ensayar con él. Medidas: 4,66 × 1,55 m, 3 m de alto con el barco. Recorrido con pendiente máxima del 5 %.
 
 ## La música
 
-La música la crean Alián Rodrigues y Stefano Ferraro, a partir de su trabajo con VENDAVAL Brass, su proyecto Yiflauki y su dúo electrónico 3L3M3NTS: loop station, sonidos electrónicos, batería, xilófono y didgeridoos de tubos de plástico reciclado, y micrófonos piezoeléctricos que convierten el barco en un instrumento. tyle fernández se suma con la trompeta o el acordeón.
+Alián Rodrigues y Stefano Ferraro (VENDAVAL Brass, Yiflauki, 3L3M3NTS): loop station, electrónica, batería, xilófono y didgeridoos de tubos reciclados, y micrófonos piezoeléctricos que convierten el barco en un instrumento. tyle fernández se suma con trompeta o acordeón.
+
+## Dragones y gigantes
+
+Dragones pequeños como pulseras o en el pelo, y colas en algunos personajes. Si el presupuesto lo permite, desarrollaremos dos figuras grandes como producciones aparte, también como pasacalles independientes:
+
+- **Ani Arqui, el Pacífico (el Gigante del Mar)**: dios-demonio del océano de unos 3 m, robot acuático al estilo de Neptuno con estética anime, de goma EVA con detalles impresos en 3D. Toca un carnyx, una trompeta medieval de 2 m que antes llamaba a la guerra; Ani Arqui viene en paz, a tocar y jugar. Dosier de concepto a petición.
+- **El Dragón**: de momento, una idea.
 
 ## Las máscaras
 
-En algunas partes de la historia usamos máscaras de animales fantásticos, inspiradas en los dibujos animados y en la personalidad de cada intérprete:
-
-- el capitán Mussolgat, mitad búho y mitad gato
-- la rata punk, a la batería
-- el Comandante Fregui Miau, un gato con melena de fregona
-
-Otras máscaras están en construcción.
+Máscaras de animales fantásticos, inspiradas en los dibujos animados y en cada intérprete: el capitán Mussolgat (mitad búho, mitad gato), la rata punk a la batería y el Comandante Fregui Miau, un gato con melena de fregona. Otras están en construcción.
 
 ## Para todos los cuerpos y todas las mentes
 
-En lugar de adaptar los juegos después, nos preguntamos cómo un juego accesible puede ser el juego. Queremos probar:
-
-- visitas táctiles del Windy, el vestuario y los instrumentos
-- vibración que todo el público pueda sentir
-- la lengua de signos como juego, usando las señales de dirección de la música como signos reales (LSC, LSE o BSL), con la guía de personas sordas signantes
-
-tyle fernández se formó en «Un circ universal: accesibilidad, inclusión y diversidad funcional» (Ateneu Popular 9 Barris, 2026). El proyecto sigue la guía de Diseño Universal del Circo Social (DUCS) del Ateneu Popular 9 Barris.
+No adaptamos los juegos después: buscamos que el juego accesible sea el juego. Probaremos visitas táctiles del Windy, el vestuario y los instrumentos; vibración que todo el público pueda sentir; y la lengua de signos como juego, con las señales de dirección de la música como signos reales (LSC, LSE o BSL), con la guía de personas sordas signantes. tyle fernández se formó en «Un circ universal» (Ateneu Popular 9 Barris, 2026) y el proyecto sigue la guía DUCS de Diseño Universal del Circo Social.
 
 ## Qué buscamos
 
-- **Financiación y coproducción**: socios que quieran financiar la investigación, el Windy y el estreno.
-- **Residencias**: trabajamos en dos modalidades. Larga duración: un día a la semana (miércoles o jueves) durante varios meses. Intensiva: una semana, con un mes de antelación. En general podemos empezar un mes después de la confirmación.
-- **Espacio de residencia**: interior, mínimo 10 × 6 m y 4 m de altura para los zancos, con acceso a pie de calle para el Windy y un lugar donde dejar el material. No necesitamos escenario ni apoyo técnico. Si el Windy no cabe, trabajamos igualmente los juegos y las formaciones.
-- **Colaboración con personas con diversidad funcional**: entidades, centros de educación especial, centros de día y personas que quieran probar los juegos con nosotres y darles forma desde el principio.
-- **Espectáculo y taller juntos**: espacios y escuelas que quieran combinar la actuación con talleres antes o después.
-
-## Espectáculo y talleres
-
-Los juegos de El Joc Etern también se pueden ofrecer como talleres: zancos, clown, malabares y equilibrios, burbujas de jabón, instrumentos reciclados, respiración circular o dirección con señales de mano. Dosieres de los talleres a petición.
-
-El equipo tiene una larga experiencia formativa. tyle fernández ha dirigido talleres y campamentos de circo social en más de 20 países, también con jóvenes sordes y autistas, y ha conducido un grupo semanal de teatro para personas mayores con capacidades diversas. Albert Pérez y Jordi Torrens (Cia. Filigranes) son miembros fundadores de la escuela de circo Tub d'assaig y han trabajado con Payasos sin Fronteras.
+- **Financiación y coproducción** para la investigación, el Windy y el estreno.
+- **Residencias**: un día a la semana (miércoles o jueves) durante varios meses, o una semana intensiva. Empezamos un mes después de la confirmación. Espacio interior de 10 × 6 m y 4 m de alto, con acceso a pie de calle para el Windy; sin escenario ni técnica.
+- **Personas con diversidad funcional**, entidades y centros que quieran probar los juegos con nosotres desde el principio.
+- **Espectáculo con talleres**: zancos, clown, malabares, burbujas, instrumentos reciclados o dirección con señales de mano, con un equipo formado en circo social (más de 20 países) y en la escuela de circo Tub d'assaig.
 
 ## Equipo y créditos
 
-**tyle fernández**: dirección artística, zancos, trompeta, acordeón, juegos · **Albert Pérez**: zancos, clown, malabares · **Jordi Torrens**: conducción del Windy, monociclo, malabares · **Alián Rodrigues** y **Stefano Ferraro**: loop station, electrónica, batería, instrumentos reciclados
+**tyle fernández**: dirección artística, zancos, trompeta, acordeón · **Albert Pérez**: zancos, clown, malabares · **Jordi Torrens**: Windy, monociclo, malabares · **Alián Rodrigues** y **Stefano Ferraro**: música
 
-**Escenario móvil**: Uli Weigel · **Vehículo eléctrico**: Pepe Ferros · **Vestuario**: [Imaginario de Mónica](https://imaginariodemonica.wordpress.com) · **Diseño gráfico**: [bicialta](https://linktr.ee/bicialta) · **Fotografía**: [David Ugalde / ROAR](https://www.instagram.com/roar_audiovisual), [Jordi Largo](https://jordilargo.com) · **Música y sonido**: Cia. VENDAVAL
+**Escenario móvil**: Uli Weigel · **Vehículo eléctrico**: Pepe Ferros · **Vestuario**: [Imaginario de Mónica](https://imaginariodemonica.wordpress.com) · **Diseño gráfico**: [bicialta](https://linktr.ee/bicialta) · **Fotografía**: [David Ugalde / ROAR](https://www.instagram.com/roar_audiovisual), [Jordi Largo](https://jordilargo.com)
 
-## Trayectoria
-
-- **2024**: residencia musical y masterclass de danza con Dada Draženka Večerin, Ateneu la Bòbila (Barcelona)
-- **2025**: estreno de VENDAVAL Brass, Festes de Porta, Ateneu la Bòbila (Barcelona)
-- **2026**: residencia de El Joc Etern, Tub d'assaig (Terrassa) · Unterwegs Theater Festival (Alemania) · Fira del Vapor (Sant Vicenç de Castellet) · Sommerwerft Theater Festival, Fráncfort del Meno (Alemania) · Circ Rural, Capafonts
+**Trayectoria**: 2025 estreno de VENDAVAL Brass (Barcelona) · 2026 residencia de El Joc Etern (Terrassa), Unterwegs y Sommerwerft (Alemania), Fira del Vapor, Circ Rural
 
 ## Contratación
 
@@ -92,7 +61,4 @@ Contratación y facturación a través de la Asociación de circo Tub d'assaig 7
 
 ## Contacto
 
-tyle fernández {elle}
-**Email**: VENDAVAL@anartist.org
-**Tel.**: +34 644 389 757
-**Web**: [www.VENDAVAL.cat](https://www.VENDAVAL.cat)
+tyle fernández {elle} · VENDAVAL@anartist.org · +34 644 389 757 · [www.VENDAVAL.cat](https://www.VENDAVAL.cat)

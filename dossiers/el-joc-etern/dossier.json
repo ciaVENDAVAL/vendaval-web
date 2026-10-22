@@ -6,19 +6,20 @@
  "cover": "el_joc_etern_title_y_dibujo_1.jpg",
  "rows": {
   "0": {
-   "wide": [
+   "side": 80,
+   "rows": [
     {
      "photos": [
       "IMG_0622.JPG"
      ],
-     "h": 90
+     "h": 50
     },
     {
      "photos": [
       "IMG_0677.JPG",
       "IMG_0780.JPG"
      ],
-     "h": 60
+     "h": 30
     }
    ]
   },
@@ -27,94 +28,82 @@
    "rows": [
     {
      "photos": [
-      "creating_windy_2.jpg"
+      "creating_windy_2.jpg",
+      "remolc_1.jpg"
      ],
-     "h": 65
-    },
-    {
-     "photos": [
-      "remolc_1.jpg",
-      "creating_windy_3.jpg"
-     ],
-     "h": 60
+     "h": 40
     }
    ],
    "wide": [
     {
      "photos": [
+      "creating_windy_3.jpg",
       "creating_windy_1.jpg",
       "creating_el_Joc_Etern_24.jpg",
       "creating_el_Joc_Etern_6.jpg"
      ],
-     "h": 60
+     "h": 38
     }
    ]
   },
   "2": {
-   "side": 75,
+   "side": 45,
+   "rows": [
+    {
+     "photos": [
+      "20260401_133927.jpg"
+     ],
+     "h": 70
+    }
+   ]
+  },
+  "3": {
+   "side": 60,
    "rows": [
     {
      "photos": [
       "ani_arqui_sketch.jpg",
       "gigant_mood_1.jpg"
      ],
-     "h": 80
-    }
-   ]
-  },
-  "3": {
-   "side": 72,
-   "rows": [
-    {
-     "photos": [
-      "20260401_133927.jpg"
-     ],
-     "h": 110
+     "h": 55
     }
    ]
   },
   "4": {
-   "side": 120,
+   "side": 95,
    "rows": [
     {
      "photos": [
       "creating_el_Joc_Etern_13.jpg",
-      "creating_el_Joc_Etern_8.jpg"
-     ],
-     "h": 105
-    },
-    {
-     "photos": [
+      "creating_el_Joc_Etern_8.jpg",
       "20260331_163157.jpg",
       "20260401_142447.jpg"
      ],
-     "h": 105
+     "h": 45
     }
    ]
   },
   "5": {
-   "side": 110,
+   "side": 50,
    "flip": 1,
    "rows": [
     {
      "photos": [
       "VENDAVAL_salvavidas_publico.jpg"
      ],
-     "h": 98
+     "h": 48
     }
    ]
-  },
-  "6": {
-   "cols": true
   },
   "7": {
    "cols": true
   },
-  "9": {
+  "6": {
    "cols": true
   }
  },
  "row_h": 55,
  "keep_photos": true,
- "two_col": true
+ "two_col": true,
+ "cover_h": 95
 }
