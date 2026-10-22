@@ -52,4 +52,4 @@ Contractació i facturació a través de l'Associació de circ Tub d'assaig 7.70
 
 ## Contacte
 
-tyle fernández {elli} · VENDAVAL@anartist.org · +34 644 389 757 · [vendaval.cat](https://vendaval.cat)
+tyle fernández {elli} · VENDAVAL@anartist.org · +34 644 389 757 · [www.VENDAVAL.cat](https://www.VENDAVAL.cat)

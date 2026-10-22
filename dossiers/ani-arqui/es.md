@@ -52,4 +52,4 @@ Contratación y facturación a través de la Asociación de circo Tub d'assaig 7
 
 ## Contacto
 
-tyle fernández {elle} · VENDAVAL@anartist.org · +34 644 389 757 · [vendaval.cat](https://vendaval.cat)
+tyle fernández {elle} · VENDAVAL@anartist.org · +34 644 389 757 · [www.VENDAVAL.cat](https://www.VENDAVAL.cat)

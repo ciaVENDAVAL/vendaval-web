@@ -168,7 +168,7 @@ def build(code):
     keys = ''.join(f'<div><b>{a}</b><span>{b}</span></div>' for a, b in L['keys'])
     f = L['foot']
     foot = f"""<div class="foot"><div><b>{f[0]}</b>{L['who']}</div><div><b>{f[1]}</b>VENDAVAL@anartist.org</div>
-<div><b>{f[2]}</b>+34 644 389 757</div><div><b>{f[3]}</b>vendaval.cat</div></div>"""
+<div><b>{f[2]}</b>+34 644 389 757</div><div><b>{f[3]}</b>www.VENDAVAL.cat</div></div>"""
     last_photos = (row(['tyle_stilts_portfolio_4', 'tyle_stilts_portfolio_1', 'tyle_performance_1', 'tyle_stilts_portfolio_5'])
                    + row(['tyle_performance_2', 'tyle_stilts_portfolio_6'], 165))
     A = after(code)

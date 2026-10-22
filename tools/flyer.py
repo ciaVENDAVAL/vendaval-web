@@ -56,7 +56,7 @@ def page(lang):
             + card('h concert', x['concert'], x['concert_kicker'], x['concert_facts'], PHOTO['concert'], sub='VENDAVAL Brass') + ws)
     right = show('friend', 'v friend') + show('freakfrac', 'v freak')
     cards = [f'<div class="col">{left}</div><div class="col">{right}</div>']
-    web = 'vendaval.cat'
+    web = 'www.VENDAVAL.cat'
     fonts = ''.join(f"@font-face{{font-family:{fam};font-weight:{w};src:url({(ROOT/'static/fonts'/f).as_uri()})}}"
                     for fam, w, f in [('Brico', 800, 'bricolage-grotesque-latin-800-normal.woff2'), ('Brico', 800, 'bricolage-grotesque-latin-ext-800-normal.woff2'),
                                       ('Brico', 700, 'bricolage-grotesque-latin-700-normal.woff2'), ('Brico', 700, 'bricolage-grotesque-latin-ext-700-normal.woff2'),

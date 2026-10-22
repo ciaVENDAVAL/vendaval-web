@@ -6,4 +6,4 @@ Website vendaval.cat and all promoter material of Cia. VENDAVAL (show dossiers, 
 - How to update: `UPDATING.md`. Check before pushing: `python3 tools/check.py`.
 - Build: `python3 build.py` (site) · `python3 dossiers/build_dossiers.py` (Imaginary Friend) · `python3 dossiers/stilts-workshops/build.py` · `python3 dossiers/brass/build.py` · `python3 tools/flyer.py ca es en`.
 - Push: build, commit (author tyle fernández <VENDAVAL@anartist.org>), `git push origin HEAD:main`. GitHub Pages serves `docs/`.
-- House style: VENDAVAL in capitals (addresses lowercase: vendaval.cat); tyle fernández lowercase; never "tothom"; don't call performers clowns in show texts; never crop photos; prices never public; place names in each language's form; 8 languages kept consistent.
+- House style: VENDAVAL always in capitals, also in addresses as displayed (www.VENDAVAL.cat, VENDAVAL@anartist.org; URL paths stay lowercase); no salsa in the genre lists (funk, Balkan, swing, cumbia); tyle fernández lowercase; never "tothom"; don't call performers clowns in show texts; never crop photos; prices never public; place names in each language's form; 8 languages kept consistent.

@@ -129,6 +129,6 @@ Intérprete y docente de zancos. Sobre zancos desde 2003 y formando en circo des
 tyle fernández {elle}
 **Email**: VENDAVAL@anartist.org
 **Tel.**: +34 644 389 757
-**Web**: [vendaval.cat](https://vendaval.cat)
+**Web**: [www.VENDAVAL.cat](https://www.VENDAVAL.cat)
 **YouTube**: [@vendaval.youtube](https://www.youtube.com/@vendaval.youtube)
 **Instagram**: [@vendaval.brass](https://www.instagram.com/vendaval.brass/)

@@ -112,7 +112,7 @@ def main():
     c = F['contact']; miss = []
     for n, d in pdfs.items():
         t = d['text'].lower(); digits = re.sub(r'\D', '', d['text'])
-        lacks = [k for k, ok in (('email', c['email'].lower() in t), ('phone', c['phone_digits'] in digits), ('web', c['web'] in t)) if not ok]
+        lacks = [k for k, ok in (('email', c['email'].lower() in t), ('phone', c['phone_digits'] in digits), ('web', c['web'].lower() in t.lower())) if not ok]
         if lacks: miss.append(f'- {n}: no {", ".join(lacks)}')
     R += (miss or ['- none']) + ['']
 

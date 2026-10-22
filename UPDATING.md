@@ -41,7 +41,7 @@ python3 tools/check.py                      # writes CHECK-REPORT.md
 5. Update `master/VENDAVAL email templates.md` if links or file names changed.
 
 ## House style the checker enforces
-- VENDAVAL always in capitals; tyle fernández always lowercase.
+- VENDAVAL always in capitals, also in displayed addresses (www.VENDAVAL.cat, VENDAVAL@anartist.org); tyle fernández always lowercase.
 - Performers are not called clowns (clown/pallasso/payaso…). Clown is fine as a discipline or skill (workshops, artist skills, lists like "stilts, unicycle, clown") and in "Pallassos sense Fronteres"; the checker allows those.
 - Catalan: no "walkact", no "tothom".
 - Frankfurt am Main in each language: Frankfurt del Main (CA), Fráncfort del Meno (ES), Francfort-sur-le-Main (FR), Francoforte sul Meno (IT), Francoforte do Meno (PT), Frankfurt am Main (EN, DE), フランクフルト (JA).

@@ -129,6 +129,6 @@ Intèrpret i docent de xanques. Damunt les xanques des del 2003 i formant en cir
 tyle fernández {elli}
 **Email**: VENDAVAL@anartist.org
 **Tel.**: +34 644 389 757
-**Web**: [vendaval.cat](https://vendaval.cat)
+**Web**: [www.VENDAVAL.cat](https://www.VENDAVAL.cat)
 **YouTube**: [@vendaval.youtube](https://www.youtube.com/@vendaval.youtube)
 **Instagram**: [@vendaval.brass](https://www.instagram.com/vendaval.brass/)
