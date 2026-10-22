@@ -36,7 +36,7 @@ LINES = [('Tots els públics, de dia o de nit', 'Todos los públicos, de día o 
          ('També amplificat: Concert enmig del públic', 'También amplificado: Concierto entre el público', 'Also amplified: Concert in the audience')]
 CREDITS = [(('Direcció artística', 'Dirección artística', 'Artistic direction'), 'tyle fernández'),
            (('Música', 'Música', 'Music'), 'Cia. VENDAVAL'),
-           (('Vestuari', 'Vestuario', 'Costumes'), 'Imaginario de Mónica'),
+           (('Vestuari', 'Vestuario', 'Clothing'), 'Imaginario de Mónica'),
            (('Coproducció', 'Coproducción', 'Co-production'), 'Cia. Filigranes'),
            (('Fotografia', 'Fotografía', 'Photography'), 'ROAR · Albert Garcia')]
 
@@ -110,15 +110,17 @@ p,li,div{{text-wrap:pretty}}
 .fig .n{{font:400 12pt/1 Anton,sans-serif;color:#B5401C}}
 .fig .l{{font-size:5.3pt;line-height:1.2;margin-top:.4mm}}
 ul{{list-style:none;font-size:5.4pt;line-height:1.3;margin-top:1mm}}
-li::before{{content:"\\2693\\FE0E";color:#B5401C;margin-right:1mm;font-size:4.6pt}}
-.cr{{margin-top:1mm;font-size:5.2pt;line-height:1.32;color:#55636D}}
+li{{padding-left:2.6mm;text-indent:-2.6mm}}
+li [lang],.cr [lang]{{white-space:nowrap}}
+li::before{{content:"\\2693\\FE0E";color:#B5401C;display:inline-block;width:2.6mm;text-indent:0;font-size:4.6pt}}
+.cr{{margin-top:1.6mm;font-size:5.6pt;line-height:1.42;color:#55636D}}
 .cr .nm{{font-weight:700;color:#1E2A33}}
 .foot{{margin-top:auto;display:flex;gap:3mm;align-items:center;background:#0F2C40;color:#F5EDDC;border-radius:2mm;padding:1.6mm 2.6mm;margin-top:1.4mm}}
 .clogo{{height:11mm;filter:drop-shadow(0 0 .3mm rgba(245,237,220,.95)) drop-shadow(0 0 .2mm rgba(245,237,220,.9))}}
 .ct{{flex:1;font-size:6pt;line-height:1.5}}
 .ct .co{{font:600 6.6pt Oswald,sans-serif;letter-spacing:.3mm;color:#EBA53B}}
 .ct i{{color:#9FDCEC}}
-.qr{{flex:0 0 14mm;text-align:center;font:600 4.6pt Oswald,sans-serif;letter-spacing:.2mm;color:#9FDCEC}}
+.qr{{flex:0 0 11.5mm;text-align:center;font:600 4.6pt Oswald,sans-serif;letter-spacing:.2mm;color:#9FDCEC}}
 .qr svg{{display:block;width:100%;margin-bottom:.5mm;background:#F5EDDC;padding:.8mm;border-radius:.6mm}}
 .pics{{position:absolute;left:95mm;top:3mm;width:56mm;height:105mm;display:flex;flex-direction:column;justify-content:center;gap:1mm}}
 .pics .g{{width:56mm;display:block;border-radius:1.2mm}}
