@@ -6,7 +6,7 @@
   </div>
   {% for it in bx.get('items', []) %}{% set d = downloads[it] %}{% set fs = avail(it) %}
   <div class="dl-row{% if d.kind == 'easy' %} easy{% endif %}">
-    <span class="dl-kind">{% if d.label %}{{ d.label }} · {% endif %}{% if d.variant %}{{ t.downloads.concert }} · {% endif %}{{ t.downloads.kinds[d.kind] }}{% if d.draft %} <em class="dl-draft">{{ t.shows.status.creation }}</em>{% endif %}</span>
+    <span class="dl-kind">{% if d.label %}{{ (d.label.get(lang) or d.label['*']) if d.label is mapping else d.label }} · {% endif %}{% if d.variant %}{{ t.downloads.concert }} · {% endif %}{{ t.downloads.kinds[d.kind] }}{% if d.draft %} <em class="dl-draft">{{ t.shows.status.creation }}</em>{% endif %}</span>
     {% if fs %}{% set main = dlfile(it) %}
     <a class="dl" href="{{ R }}{{ main.url }}" download hreflang="{{ i18n[main.lang].html_lang }}">{{ icon('download') }} {{ i18n[main.lang].lang_name }}</a>
     {% set others = fs|selectattr('0', 'ne', main.lang)|list %}{% if others %}

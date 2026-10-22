@@ -285,7 +285,10 @@
    "show": "joc",
    "kind": "dossier",
    "short": "ani-arqui",
-   "label": "Ani Arqui",
+   "label": {
+    "es": "Ani Arqui, el Pacífico",
+    "*": "Ani Arqui, el Pacífic"
+   },
    "draft": true,
    "files": {
     "ca": "pdf/VENDAVAL_Ani-Arqui_CA_concept_2026-10.pdf",
@@ -839,6 +842,8 @@
   }
  ],
  "festival_links": {
-  "Unterwegs": "https://www.protagon.net/en/unterwegs-theatre-festival-2026"
+  "Unterwegs": "https://www.protagon.net/en/unterwegs-theatre-festival-2026",
+  "Sommerwerft": "https://sommerwerft.de",
+  "Fira del Vapor": "https://www.firadelvapor.cat/"
  }
 }

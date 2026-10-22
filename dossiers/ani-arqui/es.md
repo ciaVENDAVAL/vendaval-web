@@ -1,6 +1,6 @@
 <!-- Ani Arqui · dosier de concepto ES · en creación · traducción de ca.md. Solo imágenes propias. -->
 
-# Ani Arqui — el Gigante del Mar (en creación)
+# Ani Arqui, el Pacífico — el Gigante del Mar (en creación)
 
 **UNOS 3 M DE ALTO · CARNYX EN DIRECTO · CALLE · EN CREACIÓN**
 

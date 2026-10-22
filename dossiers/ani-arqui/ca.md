@@ -1,6 +1,6 @@
 <!-- Ani Arqui · dossier de concepte CA · en creació · font: dossier de concepte "El Gegant del Mar" (oct. 2026) + fitxa mestra. Només imatges pròpies (no les imatges de referència d'altres artistes). -->
 
-# Ani Arqui — el Gegant del Mar (en creació)
+# Ani Arqui, el Pacífic — el Gegant del Mar (en creació)
 
 **UNS 3 M D'ALÇADA · CARNYX EN DIRECTE · CARRER · EN CREACIÓ**
 

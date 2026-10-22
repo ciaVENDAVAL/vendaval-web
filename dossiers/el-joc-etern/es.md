@@ -29,7 +29,7 @@ Alián Rodrigues y Stefano Ferraro (VENDAVAL Brass, Yiflauki, 3L3M3NTS): loop st
 
 Dragones pequeños como pulseras o en el pelo, y colas en algunos personajes. Si el presupuesto lo permite, desarrollaremos dos figuras grandes como producciones aparte, también como pasacalles independientes:
 
-- **Ani Arqui, el Pacífico (el Gigante del Mar)**: dios-demonio del océano de unos 3 m, robot acuático al estilo de Neptuno con estética anime, de goma EVA con detalles impresos en 3D. Toca un carnyx, una trompeta medieval de 2 m que antes llamaba a la guerra; Ani Arqui viene en paz, a tocar y jugar. Dosier de concepto a petición.
+- **Ani Arqui, el Pacífico (el Gigante del Mar)**: dios-demonio del océano de unos 3 m, robot acuático al estilo de Neptuno con estética anime, de goma EVA con detalles impresos en 3D. Toca un carnyx, una trompeta medieval de 2 m que antes llamaba a la guerra; Ani Arqui viene en paz, a tocar y jugar. Dosier de concepto en www.VENDAVAL.cat (descargas).
 - **El Dragón**: de momento, una idea.
 
 ## Las máscaras

@@ -62,10 +62,15 @@
    "rows": [
     {
      "photos": [
-      "ani_arqui_sketch.jpg",
-      "gigant_mood_1.jpg"
+      "ani_arqui_sketch.jpg"
      ],
-     "h": 75
+     "h": 70
+    },
+    {
+     "photos": [
+      "giant_hand_extension_test.jpg"
+     ],
+     "h": 40
     }
    ]
   },
