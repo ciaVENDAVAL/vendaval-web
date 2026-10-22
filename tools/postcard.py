@@ -95,14 +95,14 @@ p,li,div{{text-wrap:pretty}}
 .front .kick{{font:600 6.2pt Oswald,sans-serif;letter-spacing:.45mm;color:#9FDCEC;margin-top:2.6mm;position:relative;padding-top:2.6mm}}
 .front .kick .wave{{top:-.6mm;width:40mm}}
 /* front bottom strip: contact (no logo); photo shortened so nobody's feet are covered (sidewalk/building trimmed) */
-.front .photo{{height:97mm;object-position:50% 40%}}
+.front .photo{{height:97mm;object-position:50% 70%}}
 .front .col{{height:80mm}}
 .strip{{position:absolute;left:0;bottom:0;width:154mm;height:14mm;background:#F5EDDC;display:flex;align-items:center;justify-content:space-between;
   padding:0 9mm 3mm 6.5mm;font-size:6.6pt;color:#0F2C40;white-space:nowrap}}
 .strip .co{{font:600 7.6pt Oswald,sans-serif;letter-spacing:.35mm;color:#B5401C}}
 /* back: supporters inside the contact box */
-.bsup{{display:flex;align-items:center;gap:2.2mm;margin-top:1.2mm}}
-.bsup img{{height:4.2mm;max-width:11.5mm;object-fit:contain;filter:brightness(0) invert(.94) sepia(.15)}}
+.bsup{{display:flex;align-items:center;gap:4.5mm}}
+.bsup img{{height:6mm;max-width:17mm;object-fit:contain}}
 /* BACK: plain sand; text left, game photos right, edges fading into the sand */
 .back{{background:#F5EDDC}}
 .back .txt{{position:absolute;left:8mm;top:7mm;width:84mm;height:97mm;display:flex;flex-direction:column}}
@@ -123,12 +123,13 @@ li [lang],.cr [lang]{{white-space:nowrap}}
 li::before{{content:"\\2693\\FE0E";color:#B5401C;display:inline-block;width:2.6mm;text-indent:0;font-size:4.6pt}}
 .cr{{margin-top:1.6mm;font-size:5.6pt;line-height:1.42;color:#55636D}}
 .cr .nm{{font-weight:700;color:#1E2A33}}
-.foot{{margin-top:auto;display:flex;gap:3mm;align-items:center;background:#0F2C40;color:#F5EDDC;border-radius:2mm;padding:1.6mm 2.6mm;margin-top:1.4mm}}
+.foot{{margin-top:auto;display:flex;gap:4mm;align-items:center;border-top:.3mm solid #EBA53B;padding-top:2mm}}
+.foot .lab{{font-size:5.4pt;color:#55636D;margin-bottom:1.4mm}}
 .clogo{{height:11mm;filter:drop-shadow(.35mm 0 0 #fff) drop-shadow(-.35mm 0 0 #fff) drop-shadow(0 .35mm 0 #fff) drop-shadow(0 -.35mm 0 #fff)}}
 .ct{{flex:1;min-width:0;font-size:6pt;line-height:1.5}}
 .ct .co{{font:600 6.6pt Oswald,sans-serif;letter-spacing:.3mm;color:#EBA53B}}
-.qr{{flex:0 0 11.5mm;text-align:center;font:600 4.6pt Oswald,sans-serif;letter-spacing:.2mm;color:#9FDCEC}}
-.qr svg{{display:block;width:100%;margin-bottom:.5mm;background:#F5EDDC;padding:.8mm;border-radius:.6mm}}
+.qr{{flex:0 0 12mm;text-align:center;font:600 4.6pt Oswald,sans-serif;letter-spacing:.2mm;color:#0F2C40}}
+.qr svg{{display:block;width:100%;margin-bottom:.6mm}}
 .pics{{position:absolute;left:95mm;top:3mm;width:56mm;height:105mm;display:flex;flex-direction:column;justify-content:center;gap:1mm}}
 .pics .g{{width:56mm;display:block;border-radius:1.2mm}}
 </style>
@@ -150,7 +151,7 @@ li::before{{content:"\\2693\\FE0E";color:#B5401C;display:inline-block;width:2.6m
     <ul>{lines}</ul>
     <div class="cr">{credits}</div>
     <div class="foot">
-      <img class="clogo" src="{LOGO}" alt="VENDAVAL"><div class="ct"><span class="co">Cia. VENDAVAL</span><br><b>+34 644 389 757</b> · VENDAVAL@anartist.org<br>www.VENDAVAL.cat · @vendaval.brass<div class="bsup">{logos}</div></div>
+      <div class="ct"><div class="lab">{tri("Amb el suport de", "Con el apoyo de", "Supported by", sep=" · ")}</div><div class="bsup">{logos}</div></div>
       <div class="qr">{qr_svg(QR_URL)}VÍDEO · DOSSIER</div>
     </div>
   </div>
