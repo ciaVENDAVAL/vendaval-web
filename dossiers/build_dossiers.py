@@ -106,7 +106,7 @@ def render_html(cfg, lang):
             wide = ''.join(row(x['photos'], x.get('h', 90), width_mm=178, gap=3) for x in (lay or {}).get('wide', []))
             if rs:
                 side = ''.join(row(x['photos'] if isinstance(x, dict) else x, x.get('h', 80) if isinstance(x, dict) else 80, width_mm=sw, gap=2.5) for x in rs)
-                flip = ' flip' if (lay or {}).get('flip', i % 2) else ''
+                flip = ' flip' if (lay or {}).get('flip', 0) else ''
                 out.append(f'<div class="tcw"><div class="tc{flip}"><div class="txt"><h2>{h}</h2>{M(body)}</div><div class="ph" style="flex:0 0 {sw}mm">{side}</div></div>{wide}</div>')
             elif wide:
                 out.append(f'<div class="tcw"><section><h2>{h}</h2>{M(body)}</section>{wide}</div>')

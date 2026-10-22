@@ -19,7 +19,7 @@ Cinco intérpretes viajan con el Windy, una Vespa eléctrica que remolca un barc
 
 ## El Windy
 
-Una Vespa de tres ruedas convertida en vehículo eléctrico (Pepe Ferros) que remolca un barco (remolque y escenario: Uli Weigel). El motor ya está montado; falta la dirección, la decoración y ensayar con él. Medidas: 4,66 × 1,55 m, 3 m de alto con el barco. Recorrido con pendiente máxima del 5 %.
+Una Vespa de tres ruedas convertida en vehículo eléctrico (Pepe Ruiz Gelices) que remolca un barco (remolque y escenario: Uli Weigel). El motor ya está montado; falta la dirección, la decoración y ensayar con él. Medidas: 4,66 × 1,55 m, 3 m de alto con el barco. Recorrido con pendiente máxima del 5 %.
 
 ## La música
 
@@ -51,7 +51,7 @@ No adaptamos los juegos después: buscamos que el juego accesible sea el juego. 
 
 **tyle fernández**: dirección artística, zancos, trompeta, acordeón · **Albert Pérez**: zancos, clown, malabares · **Jordi Torrens**: Windy, monociclo, malabares · **Alián Rodrigues** y **Stefano Ferraro**: música
 
-**Escenario móvil**: Uli Weigel · **Vehículo eléctrico**: Pepe Ferros · **Vestuario**: [Imaginario de Mónica](https://imaginariodemonica.wordpress.com) · **Diseño gráfico**: [bicialta](https://linktr.ee/bicialta) · **Fotografía**: [David Ugalde / ROAR](https://www.instagram.com/roar_audiovisual), [Jordi Largo](https://jordilargo.com)
+**Escenario móvil**: Uli Weigel · **Vehículo eléctrico**: [Pepe Ruiz Gelices](https://www.instagram.com/pepe_ruiz_gelices/) · **Vestuario**: [Imaginario de Mónica](https://imaginariodemonica.wordpress.com) · **Diseño gráfico**: [bicialta](https://linktr.ee/bicialta) · **Fotografía**: [David Ugalde / ROAR](https://www.instagram.com/roar_audiovisual), [Jordi Largo](https://jordilargo.com)
 
 **Trayectoria**: 2025 estreno de VENDAVAL Brass (Barcelona) · 2026 residencia de El Joc Etern (Terrassa), Unterwegs y Sommerwerft (Alemania), Fira del Vapor, Circ Rural
 
