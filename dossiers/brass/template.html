@@ -34,7 +34,7 @@ p{margin:0}
 {% if kind == 'dossier' %}
 <!-- 1 · cover -->
 <section class="pg" style="background:#0F2C40;color:#0F2C40">
-  {{ photo(P.cover, 'left:0;top:0;width:794px;height:760px') }}
+  {{ photo(P.cover, 'left:0;top:0;width:794px;height:760px', 'center 30%') }}
   <div style="position:absolute;left:0;top:0;width:100%;height:340px;background:linear-gradient(to bottom,rgba(9,27,40,.88) 0%,rgba(9,27,40,.55) 45%,rgba(9,27,40,0) 100%)"></div>
   <div style="position:absolute;left:0;top:530px;width:100%;height:230px;background:linear-gradient(to top,rgba(23,169,201,.95) 0%,rgba(23,169,201,.55) 40%,rgba(23,169,201,0) 100%)"></div>
   {{ waves('#E8F8FC', 'top:620px;height:140px') }}
@@ -59,7 +59,7 @@ p{margin:0}
 
 <!-- 2 · why the street -->
 <section class="pg" style="background:#0F2C40;color:#F5EDDC">
-  {{ photo(P.street, 'left:0;top:0;width:794px;height:600px') }}
+  {{ photo(P.street, 'left:0;top:0;width:794px;height:600px', '55% 40%') }}
   <div style="position:absolute;left:0;top:0;width:100%;height:200px;background:linear-gradient(to bottom,rgba(9,27,40,.85) 0%,rgba(9,27,40,0) 100%)"></div>
   <div style="position:absolute;left:0;top:340px;width:100%;height:260px;background:linear-gradient(to top,#0F2C40 0%,rgba(15,44,64,.75) 40%,rgba(15,44,64,0) 100%)"></div>
   <div class="lab" style="position:absolute;left:56px;top:44px;font-size:13px;color:#EBA53B">{{ t.street_kicker }}</div>
@@ -89,7 +89,7 @@ p{margin:0}
       </div>
     </div>
   </div>
-  {{ photo(P.net, 'left:0;top:663px;width:794px;height:460px') }}
+  {{ photo(P.net, 'left:0;top:663px;width:794px;height:460px', '0% 69%') }}
   <div style="position:absolute;left:0;top:663px;width:100%;height:60px;background:linear-gradient(to bottom,#F5EDDC 0%,rgba(245,237,220,0) 100%)"></div>
   <div style="position:absolute;left:0;top:923px;width:100%;height:200px;background:linear-gradient(to top,rgba(14,94,133,.92) 0%,rgba(23,169,201,.45) 45%,rgba(23,169,201,0) 100%)"></div>
   {{ waves('#E8F8FC', 'top:983px;height:140px') }}
@@ -98,8 +98,8 @@ p{margin:0}
 
 <!-- 4 · games and accessibility -->
 <section class="pg" style="background:#0F2C40;color:#F5EDDC">
-  {{ photo(P.games1, 'left:0;top:0;width:394px;height:440px') }}
-  {{ photo(P.games2, 'left:400px;top:0;width:394px;height:440px') }}
+  {{ photo(P.games1, 'left:0;top:0;width:394px;height:440px', 'center 35%') }}
+  {{ photo(P.games2, 'left:400px;top:0;width:394px;height:440px', 'center 30%') }}
   <div style="position:absolute;left:0;top:250px;width:100%;height:190px;background:linear-gradient(to top,#0F2C40 0%,rgba(15,44,64,.7) 40%,rgba(15,44,64,0) 100%)"></div>
   {{ waves('#9FDCEC', 'top:300px;height:140px', (0.5, 0.35, 0.25)) }}
   <div style="position:absolute;left:56px;right:56px;top:470px;display:flex;flex-direction:column;gap:26px">
@@ -122,7 +122,7 @@ p{margin:0}
     <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px 16px">
       {% for m in crew %}
       <div style="display:flex;flex-direction:column;gap:3px">
-        <div style="position:relative;height:200px">{{ photo(m.photo, 'left:0;top:0;width:100%;height:200px') }}</div>
+        <div style="position:relative;height:200px">{{ photo(m.photo, 'left:0;top:0;width:100%;height:200px', m.pos) }}</div>
         <span class="lab" style="font-size:15px;letter-spacing:.5px;color:#0F2C40;margin-top:4px">{{ m.name }}</span>
         <span style="font-size:12px;line-height:1.35">{{ t.roles[m.id] }}</span>
         <span style="font-size:12px;color:#55636D">{{ m.from }}</span>
@@ -148,7 +148,7 @@ p{margin:0}
 
 <!-- 7 · contact -->
 <section class="pg" style="background:#0F2C40;color:#F5EDDC">
-  {{ photo(P.contact, 'left:0;top:0;width:794px;height:470px') }}
+  {{ photo(P.contact, 'left:0;top:0;width:794px;height:470px', 'center 40%') }}
   <div style="position:absolute;left:0;top:0;width:794px;height:170px;background:linear-gradient(to bottom,rgba(9,27,40,.75) 0%,rgba(9,27,40,0) 100%)"></div>
   <div style="position:absolute;left:0;top:270px;width:794px;height:200px;background:linear-gradient(to top,#0F2C40 0%,rgba(15,44,64,.6) 45%,rgba(15,44,64,0) 100%)"></div>
   {{ waves('#9FDCEC', 'top:350px;height:120px', (0.5, 0.35, 0.25)) }}

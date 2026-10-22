@@ -1,5 +1,6 @@
 {# shared macros, imported by template.html #}
-{% macro photo(name, style) %}<div class="ph" style="{{ style }}"><img class="bg" src="{{ blur(name) }}" alt=""><img class="fg" src="{{ img(name) }}" alt="{{ t.alt[name] if name in t.alt else '' }}"></div>{% endmacro %}
+{# photo framing as in the Design canvas "dossier CA v2" (cropped on purpose for this dossier) #}
+{% macro photo(name, style, pos='center') %}<div class="ph" style="{{ style }}"><img class="fg" src="{{ img(name) }}" alt="{{ t.alt[name] if name in t.alt else '' }}" style="object-fit:cover;object-position:{{ pos }}"></div>{% endmacro %}
 {% macro waves(color, style, o=(0.6, 0.45, 0.3)) %}<svg class="waves" aria-hidden="true" viewBox="0 0 800 140" preserveAspectRatio="none" style="{{ style }}"><g fill="none" stroke="{{ color }}" stroke-width="2" stroke-linecap="round"><path opacity="{{ o[0] }}" d="M0 40 Q25 26 50 40 T100 40 T150 40 T200 40 T250 40 T300 40 T350 40 T400 40 T450 40 T500 40 T550 40 T600 40 T650 40 T700 40 T750 40 T800 40"/><path opacity="{{ o[1] }}" d="M-30 75 Q0 60 30 75 T90 75 T150 75 T210 75 T270 75 T330 75 T390 75 T450 75 T510 75 T570 75 T630 75 T690 75 T750 75 T810 75"/><path opacity="{{ o[2] }}" d="M0 110 Q40 94 80 110 T160 110 T240 110 T320 110 T400 110 T480 110 T560 110 T640 110 T720 110 T800 110"/></g></svg>{% endmacro %}
 
 {% macro access_box() %}
@@ -41,9 +42,10 @@
     </div>
     <p style="font-size:13px;line-height:1.5;color:#3A4A55">{{ t.tech_note }}</p>
   </div>
-  {% set r = row(P.tech_row, 794, 6) %}
-  <div style="position:absolute;left:0;bottom:0;width:794px;height:{{ r.h }}px;display:flex;gap:6px">{% for n, w in r.cells %}<img src="{{ img(n) }}" alt="{{ t.alt[n] if n in t.alt else '' }}" style="width:{{ w }}px;height:{{ r.h }}px;display:block">{% endfor %}</div>
-  {{ waves('#E8F8FC', 'bottom:0;height:90px', (0.55, 0.4, 0.28)) }}
+  {{ photo(P.tech, 'left:0;top:903px;width:794px;height:220px', 'center 35%') }}
+  <div style="position:absolute;left:0;top:903px;width:100%;height:80px;background:linear-gradient(to bottom,#F5EDDC 0%,rgba(245,237,220,0) 100%)"></div>
+  <div style="position:absolute;left:0;top:1013px;width:100%;height:110px;background:linear-gradient(to top,rgba(14,94,133,.9) 0%,rgba(23,169,201,0) 100%)"></div>
+  {{ waves('#E8F8FC', 'top:1023px;height:100px', (0.55, 0.4, 0.28)) }}
 </section>
 {% endmacro %}
 {% macro support() %}
