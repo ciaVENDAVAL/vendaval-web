@@ -1,0 +1,32 @@
+{
+ "file": "VENDAVAL_{name}_{L}_easy-read_2026-10.pdf",
+ "names": {
+  "ca": "Tallers-Xanques",
+  "es": "Talleres-Zancos",
+  "de": "Stelzenworkshops",
+  "*": "Stilts-Workshops"
+ },
+ "cover": "stilts_workshops__1.jpg",
+ "cover_h": 95,
+ "rows": {
+  "0": {
+   "photos": [
+    "tallers_zancos_2.jpg",
+    "stilts_workshops__2.jpg"
+   ],
+   "h": 65
+  }
+ },
+ "row_h": 60,
+ "label": {
+  "ca": "Lectura fàcil",
+  "es": "Lectura fácil",
+  "en": "Easy read",
+  "de": "Leichte Sprache",
+  "fr": "Facile à lire",
+  "it": "Facile da leggere",
+  "pt": "Leitura fácil",
+  "ja": "やさしい日本語"
+ },
+ "css": "body{font-size:13pt;line-height:1.7}html[lang=ja] body{line-height:1.9}.intro p:first-child{font-style:normal;font-size:14pt;color:#222}h2{font-size:17pt;margin-top:9mm}li{margin-bottom:2mm}.figs b{font-size:19pt}.figs div{font-size:11pt}"
+}

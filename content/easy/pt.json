@@ -1,0 +1,43 @@
+{
+ "about": [
+  "Somos a Cia. VENDAVAL. Fazemos música e circo na rua. Somos de Barcelona e de Terrassa, em Espanha.",
+  "Somos uma banda. Tocamos saxofones, trompete, sousafone e percussão. Os músicos vêm da Europa e da América.",
+  "Com a banda há artistas de circo. Uma pessoa anda em andas. As andas são paus compridos presos às pernas. Outra pessoa anda de monociclo. O monociclo é uma bicicleta com 1 roda. Fazem malabares e jogos com o público.",
+  "Dirigimos a banda com sinais de mão. O público aprende os sinais e também dirige a banda.",
+  "Já atuámos na Catalunha, em Andorra e na Alemanha."
+ ],
+ "shows": "Fazemos espetáculos na rua. Alguns espetáculos têm 1 artista. Outros têm 8 artistas.",
+ "workshops": [
+  "Fazemos oficinas de circo e de música. As oficinas são para jovens e para pessoas adultas.",
+  "Fazemos as oficinas no mesmo dia que um dos nossos espetáculos. Vimos de Barcelona."
+ ],
+ "show": {
+  "brass": [
+   "A VENDAVAL Brass é uma banda que anda pela rua.",
+   "Há 6 músicos e 2 artistas de circo. Uma pessoa anda em andas. A outra pessoa anda de monociclo. Fazem malabares.",
+   "A banda toca música para dançar: cumbia, funk, música dos Balcãs e swing.",
+   "O público brinca com redes e boias. O público aprende sinais de mão e dirige a banda.",
+   "Cada sessão dura 30 minutos. Podemos fazer várias sessões num dia.",
+   "Antes do espetáculo, as pessoas cegas podem tocar no guarda-roupa e nos instrumentos."
+  ],
+  "friend": [
+   "Amigui Imaginari é um peluche gigante.",
+   "O peluche anda em andas de 4 patas. Passeia entre o público e procura amigos para brincar.",
+   "Há 3 maneiras de fazer o espetáculo: com uma pessoa acrobata, com uma pessoa que toca música, ou o peluche sozinho.",
+   "O espetáculo dura 30 minutos."
+  ],
+  "freakfrac": [
+   "Freak Frac é um desfile. Um desfile é um espetáculo que anda pela rua.",
+   "Há personagens muito altas em andas. Andam atrás de uma banda.",
+   "Fazem malabares e saltam à corda.",
+   "Freak Frac é da Cia. Filigranes. Fazemo-lo juntas."
+  ],
+  "joc": [
+   "El Joc Etern é um espetáculo novo. Ainda o estamos a criar.",
+   "3 criaturas do mar procuram um jogo mágico. Convidam o público a procurar o jogo.",
+   "Viajam com o Windy. O Windy é uma mota elétrica que puxa um barco. O barco também é um instrumento musical.",
+   "Há 5 artistas. Fazem andas, monociclo, malabares, música e jogos.",
+   "Em 2027 inventamos jogos para todas as pessoas. Os jogos podem ser tocados, sentidos com vibrações e jogados em língua gestual."
+  ]
+ }
+}

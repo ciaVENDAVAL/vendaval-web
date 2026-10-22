@@ -3,7 +3,7 @@
 
     python3 dossiers/build_dossiers.py imaginary-friend [ca es ...]
 
-Each dossier folder has <lang>.md and dossier.json (output name, photos).
+Each dossier folder has <lang>.md and dossier.json (output name, photos; optional "label" per language and extra "css").
 Markdown shape: "# Name — tagline", a bold key-figures line ("A · B · C"), intro paragraphs,
 then "## Section" blocks. "## Trailer"/"## Contact" (in any language: the last two sections)
 are merged into the contact box. Output goes to static/pdf/ (and so to the website).
@@ -91,7 +91,7 @@ def render_html(cfg, lang):
     M = lambda s: markdown.markdown(s)
     contact_secs = sections[-2:]; body_secs = sections[:-2]
     cover_src, _ = photo(cfg['cover'], 1800)
-    out = [f'<h1>{name}</h1>', f'<p class="tag">{tag}</p>', f'<p class="who">Cia. VENDAVAL · {LABEL[lang]}</p>',
+    out = [f'<h1>{name}</h1>', f'<p class="tag">{tag}</p>', f'<p class="who">Cia. VENDAVAL · {cfg.get("label", {}).get(lang, LABEL[lang])}</p>',
            f'<img class="cover" src="{cover_src}" style="max-height:{cfg.get("cover_h", 120)}mm">', '<div class="figs">' + ''.join(fig_cell(f) for f in figs) + '</div>',
            f'<div class="intro">{M(intro)}</div>']
     rows = cfg.get('rows', {})
@@ -121,7 +121,7 @@ def render_html(cfg, lang):
     (th, tb), (ch, cb) = contact_secs
     cb = cb.replace('\n', '  \n')
     out.append(f'<div class="contact"><h2>{ch}</h2>{M(cb)}<p>{M(tb)[3:-4]}</p></div>')
-    return f'<!doctype html><html lang="{lang}"><meta charset="utf-8"><style>{CSS}</style><body>{"".join(out)}</body></html>', name
+    return f'<!doctype html><html lang="{lang}"><meta charset="utf-8"><style>{CSS}{cfg.get("css", "")}</style><body>{"".join(out)}</body></html>', name
 
 HEAD_T = f'<div style="width:100%;margin:0;padding:0;-webkit-print-color-adjust:exact"><img src="{HEADER}" style="width:210mm;display:block;margin-top:5mm"></div>'
 FOOT_T = '<div style="width:100%;font:8pt Inter,sans-serif;color:#666;text-align:right;padding:0 16mm 0 0"><span class="pageNumber"></span>/<span class="totalPages"></span></div>'

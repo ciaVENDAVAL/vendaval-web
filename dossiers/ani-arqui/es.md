@@ -6,7 +6,7 @@
 
 De las profundidades llega un dios-demonio del océano de tres metros de alto. Mitad criatura marina, mitad máquina, recorre las calles con un carnyx, la larga trompeta de bronce que los ejércitos celtas hacían sonar antes de la batalla. La gente espera la guerra. Pero este gigante viene en paz: ha oído tocar al pueblo de los dragones y quiere sumarse al Joc Etern.
 
-Ani Arqui forma parte del mundo de El Joc Etern y puede aparecer dentro del espectáculo. También puede salir de gira solo, como walkact para festivales, pasacalles e inauguraciones.
+Ani Arqui forma parte del mundo de El Joc Etern y puede aparecer dentro del espectáculo. También puede salir de gira solo, como espectáculo itinerante para festivales, pasacalles e inauguraciones.
 
 ## El aspecto
 
@@ -35,7 +35,7 @@ tyle fernández toca instrumentos de viento metal, así que el gigante no solo l
 ## Formatos
 
 - **Dentro de El Joc Etern**: el gigante aparece como invitado del pueblo de los dragones.
-- **Walkact independiente**: el gigante con un guía, pases de 20 a 30 min.
+- **Espectáculo itinerante independiente**: el gigante con un guía, pases de 20 a 30 min.
 - **Con VENDAVAL Brass**: el gigante encabeza el pasacalles o se lo encuentra por el camino.
 
 ## Dónde estamos y qué necesitamos

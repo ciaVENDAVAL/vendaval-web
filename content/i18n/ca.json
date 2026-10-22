@@ -224,7 +224,8 @@
    "dossier": "Dossier de l'espectacle",
    "rider": "Fitxa tècnica (rider)",
    "photos": "Fotos",
-   "workshop": "Dossier de tallers"
+   "workshop": "Dossier de tallers",
+   "easy": "Dossier en lectura fàcil"
   },
   "photos_web": "Web · 1000 px",
   "photos_print": "Impressió · 300 dpi",
@@ -284,7 +285,8 @@
   "reset": "Restableix",
   "day": "Dia",
   "night": "Nit",
-  "theme": "Tema"
+  "theme": "Tema",
+  "easy": "Lectura fàcil"
  },
  "crew": {
   "kicker": "Registre de tripulació",

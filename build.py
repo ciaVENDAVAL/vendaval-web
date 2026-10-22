@@ -22,6 +22,10 @@ data = json.loads((CONTENT/'data.json').read_text(encoding='utf-8'))
 SITE_URL = 'https://' + data['site']['domain'] if data['site'].get('domain_live') else data['site']['preview_url']
 langs = [l for l in data['languages'] if (CONTENT/'i18n'/f'{l}.json').exists()]
 i18n = {l: json.loads((CONTENT/'i18n'/f'{l}.json').read_text(encoding='utf-8')) for l in langs}
+# easy-read texts (shown with the accessibility option "Easy read"): content/easy/<lang>.json
+for l in langs:
+    f = CONTENT/'easy'/f'{l}.json'
+    i18n[l]['easy'] = json.loads(f.read_text(encoding='utf-8')) if f.exists() else {}
 today = datetime.date.today().isoformat()
 version = datetime.datetime.now().strftime('%Y%m%d%H%M')
 

@@ -554,3 +554,11 @@ html.squid-on select{cursor:default!important}
 .squid.blink .sq-lids{display:inline}
 .squid:not(.grab) .sq-lids path:last-child{display:none}
 .squid:not(.grab).blink .sq-lids path:first-child{transform:translate(4px,0)}
+/* easy read (accessibility option): swaps .std texts for .easy texts and shows easy-read downloads */
+.easy{display:none}
+html.a11y-easy .easy{display:block}
+html.a11y-easy .dl-row.easy{display:flex}
+html.a11y-easy .std{display:none}
+html.a11y-easy .easy p{font-size:1.08em;line-height:1.7;max-width:60ch}
+.dl-row.easy{background:#fff7e0;border-radius:8px;padding:8px 10px;margin:6px -10px}
+html.a11y-dark .dl-row.easy{background:#24394a}

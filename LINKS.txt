@@ -60,3 +60,30 @@ https://vendaval.cat/dossier/stilts-workshops  (opens in the reader's language)
 https://vendaval.cat/dossier/ani-arqui/ca
 https://vendaval.cat/dossier/ani-arqui/es
 https://vendaval.cat/dossier/ani-arqui  (opens in the reader's language)
+https://vendaval.cat/dossier/brass-easy/ca
+https://vendaval.cat/dossier/brass-easy/es
+https://vendaval.cat/dossier/brass-easy/en
+https://vendaval.cat/dossier/brass-easy/de
+https://vendaval.cat/dossier/brass-easy/fr
+https://vendaval.cat/dossier/brass-easy/it
+https://vendaval.cat/dossier/brass-easy/pt
+https://vendaval.cat/dossier/brass-easy/ja
+https://vendaval.cat/dossier/brass-easy  (opens in the reader's language)
+https://vendaval.cat/dossier/friend-easy/ca
+https://vendaval.cat/dossier/friend-easy/es
+https://vendaval.cat/dossier/friend-easy/en
+https://vendaval.cat/dossier/friend-easy/de
+https://vendaval.cat/dossier/friend-easy/fr
+https://vendaval.cat/dossier/friend-easy/it
+https://vendaval.cat/dossier/friend-easy/pt
+https://vendaval.cat/dossier/friend-easy/ja
+https://vendaval.cat/dossier/friend-easy  (opens in the reader's language)
+https://vendaval.cat/dossier/stilts-easy/ca
+https://vendaval.cat/dossier/stilts-easy/es
+https://vendaval.cat/dossier/stilts-easy/en
+https://vendaval.cat/dossier/stilts-easy/de
+https://vendaval.cat/dossier/stilts-easy/fr
+https://vendaval.cat/dossier/stilts-easy/it
+https://vendaval.cat/dossier/stilts-easy/pt
+https://vendaval.cat/dossier/stilts-easy/ja
+https://vendaval.cat/dossier/stilts-easy  (opens in the reader's language)

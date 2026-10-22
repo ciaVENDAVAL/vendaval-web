@@ -1,0 +1,43 @@
+{
+ "about": [
+  "Siamo la Cia. VENDAVAL. Facciamo musica e circo in strada. Veniamo da Barcellona e da Terrassa, in Spagna.",
+  "Siamo una banda. Suoniamo sassofoni, tromba, sousafono e percussioni. I musicisti vengono dall'Europa e dall'America.",
+  "Con la banda ci sono artisti di circo. Una persona cammina sui trampoli. I trampoli sono bastoni lunghi legati alle gambe. Un'altra persona va sul monociclo. Il monociclo è una bicicletta con 1 ruota. Fanno giocoleria e giochi con il pubblico.",
+  "Dirigiamo la banda con segni delle mani. Il pubblico impara i segni e dirige anche la banda.",
+  "Abbiamo suonato in Catalogna, in Andorra e in Germania."
+ ],
+ "shows": "Facciamo spettacoli in strada. Alcuni spettacoli hanno 1 artista. Altri hanno 8 artisti.",
+ "workshops": [
+  "Facciamo laboratori di circo e di musica. I laboratori sono per giovani e per adulti.",
+  "Facciamo i laboratori lo stesso giorno di un nostro spettacolo. Veniamo da Barcellona."
+ ],
+ "show": {
+  "brass": [
+   "VENDAVAL Brass è una banda che cammina per la strada.",
+   "Ci sono 6 musicisti e 2 artisti di circo. Una persona è sui trampoli. L'altra persona va sul monociclo. Fanno giocoleria.",
+   "La banda suona musica per ballare: cumbia, funk, musica dei Balcani e swing.",
+   "Il pubblico gioca con reti e salvagenti. Il pubblico impara i segni delle mani e dirige la banda.",
+   "Ogni replica dura 30 minuti. In un giorno possiamo fare più repliche.",
+   "Prima dello spettacolo, le persone cieche possono toccare i costumi e gli strumenti."
+  ],
+  "friend": [
+   "Amigui Imaginari è un peluche gigante.",
+   "Il peluche cammina su trampoli a 4 zampe. Passeggia tra il pubblico e cerca amici per giocare.",
+   "Ci sono 3 modi di fare lo spettacolo: con una persona acrobata, con una persona che suona, oppure il peluche da solo.",
+   "Lo spettacolo dura 30 minuti."
+  ],
+  "freakfrac": [
+   "Freak Frac è una parata. Una parata è uno spettacolo che cammina per la strada.",
+   "Ci sono personaggi molto alti sui trampoli. Camminano dietro una banda.",
+   "Fanno giocoleria e saltano la corda.",
+   "Freak Frac è della Cia. Filigranes. Lo facciamo insieme."
+  ],
+  "joc": [
+   "El Joc Etern è uno spettacolo nuovo. Lo stiamo ancora creando.",
+   "3 creature del mare cercano un gioco magico. Invitano il pubblico a cercare il gioco.",
+   "Viaggiano con Windy. Windy è uno scooter elettrico che tira una barca. La barca è anche uno strumento musicale.",
+   "Ci sono 5 artisti. Fanno trampoli, monociclo, giocoleria, musica e giochi.",
+   "Nel 2027 inventiamo giochi per tutte le persone. I giochi si possono toccare, sentire con le vibrazioni e fare nella lingua dei segni."
+  ]
+ }
+}

@@ -224,7 +224,8 @@
    "dossier": "Dossier dello spettacolo",
    "rider": "Scheda tecnica (rider)",
    "photos": "Foto",
-   "workshop": "Dossier dei laboratori"
+   "workshop": "Dossier dei laboratori",
+   "easy": "Dossier facile da leggere"
   },
   "photos_web": "Web · 1000 px",
   "photos_print": "Stampa · 300 dpi",
@@ -284,7 +285,8 @@
   "reset": "Ripristina",
   "day": "Giorno",
   "night": "Notte",
-  "theme": "Tema"
+  "theme": "Tema",
+  "easy": "Facile da leggere"
  },
  "crew": {
   "kicker": "Registro della ciurma",

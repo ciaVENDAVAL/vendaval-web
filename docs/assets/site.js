@@ -59,13 +59,13 @@
 
   // accessibility panel: text size, contrast, underlined links, spacing, stop animations (saved in this browser only)
   var a11yBtn = document.querySelector('.a11y-btn'), panel = document.getElementById('a11y-panel');
-  var A = { fs: 0, dark: false, contrast: false, links: false, spacing: false, motion: false };
+  var A = { fs: 0, dark: false, contrast: false, links: false, spacing: false, motion: false, easy: false };
   try { var saved = JSON.parse(localStorage.getItem('vendaval-a11y') || '{}'); for (var k in saved) if (k in A) A[k] = saved[k]; } catch (e) {}
   function applyA11y() {
     root.classList.remove('fs1', 'fs2', 'fs3', 'fs-1', 'fs-2'); if (A.fs) root.classList.add('fs' + A.fs);
     root.classList.toggle('a11y-dark', !!A.dark);
     if (panel) { panel.querySelector('[data-a="day"]').setAttribute('aria-pressed', !A.dark); panel.querySelector('[data-a="night"]').setAttribute('aria-pressed', !!A.dark); }
-    ['contrast', 'links', 'spacing', 'motion'].forEach(function (k) {
+    ['contrast', 'links', 'spacing', 'motion', 'easy'].forEach(function (k) {
       root.classList.toggle('a11y-' + k, !!A[k]);
       var b = panel && panel.querySelector('[data-a="' + k + '"]'); if (b) b.setAttribute('aria-pressed', !!A[k]);
     });
@@ -89,7 +89,7 @@
       else if (a === 'smaller') A.fs = Math.max(-2, A.fs - 1);
       else if (a === 'day') A.dark = false;
       else if (a === 'night') A.dark = true;
-      else if (a === 'reset') A = { fs: 0, dark: false, contrast: false, links: false, spacing: false, motion: false };
+      else if (a === 'reset') A = { fs: 0, dark: false, contrast: false, links: false, spacing: false, motion: false, easy: false };
       else A[a] = !A[a];
       applyA11y();
     });

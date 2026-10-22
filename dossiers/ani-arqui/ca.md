@@ -6,7 +6,7 @@
 
 Des de les profunditats arriba un déu-dimoni de l'oceà de tres metres d'alçada. Mig criatura marina, mig màquina, recorre els carrers amb un carnyx, la llarga trompeta de bronze que els exèrcits celtes feien sonar abans de la batalla. La gent espera la guerra. Però aquest gegant ve en pau: ha sentit tocar el poble dels dracs i vol sumar-se al Joc Etern.
 
-Ani Arqui forma part del món d'El Joc Etern i pot aparèixer dins de l'espectacle. També pot fer gira sol, com a walkact per a festivals, cercaviles i inauguracions.
+Ani Arqui forma part del món d'El Joc Etern i pot aparèixer dins de l'espectacle. També pot fer gira sol, com a espectacle itinerant per a festivals, cercaviles i inauguracions.
 
 ## L'aspecte
 
@@ -35,7 +35,7 @@ tyle fernández toca instruments de vent metall, així que el gegant no només p
 ## Formats
 
 - **Dins d'El Joc Etern**: el gegant apareix com a convidat del poble dels dracs.
-- **Walkact independent**: el gegant amb un guia, passis de 20 a 30 min.
+- **Espectacle itinerant independent**: el gegant amb un guia, passis de 20 a 30 min.
 - **Amb VENDAVAL Brass**: el gegant encapçala la cercavila o se la troba pel camí.
 
 ## On som i què necessitem

@@ -291,12 +291,58 @@
     "ca": "pdf/VENDAVAL_Ani-Arqui_CA_concept_2026-10.pdf",
     "es": "pdf/VENDAVAL_Ani-Arqui_ES_concept_2026-10.pdf"
    }
+  },
+  "brass_easy": {
+   "show": "brass",
+   "kind": "easy",
+   "short": "brass-easy",
+   "files": {
+    "ca": "pdf/VENDAVAL-Brass_CA_easy-read_2026-10.pdf",
+    "es": "pdf/VENDAVAL-Brass_ES_easy-read_2026-10.pdf",
+    "en": "pdf/VENDAVAL-Brass_EN_easy-read_2026-10.pdf",
+    "de": "pdf/VENDAVAL-Brass_DE_easy-read_2026-10.pdf",
+    "fr": "pdf/VENDAVAL-Brass_FR_easy-read_2026-10.pdf",
+    "it": "pdf/VENDAVAL-Brass_IT_easy-read_2026-10.pdf",
+    "pt": "pdf/VENDAVAL-Brass_PT_easy-read_2026-10.pdf",
+    "ja": "pdf/VENDAVAL-Brass_JA_easy-read_2026-10.pdf"
+   }
+  },
+  "friend_easy": {
+   "show": "friend",
+   "kind": "easy",
+   "short": "friend-easy",
+   "files": {
+    "ca": "pdf/VENDAVAL_Amigui-Imaginari_CA_easy-read_2026-10.pdf",
+    "es": "pdf/VENDAVAL_Amigui-Imaginari_ES_easy-read_2026-10.pdf",
+    "en": "pdf/VENDAVAL_Imaginary-Friend_EN_easy-read_2026-10.pdf",
+    "de": "pdf/VENDAVAL_Imaginary-Friend_DE_easy-read_2026-10.pdf",
+    "fr": "pdf/VENDAVAL_Amigui-Imaginari_FR_easy-read_2026-10.pdf",
+    "it": "pdf/VENDAVAL_Amigui-Imaginari_IT_easy-read_2026-10.pdf",
+    "pt": "pdf/VENDAVAL_Amigui-Imaginari_PT_easy-read_2026-10.pdf",
+    "ja": "pdf/VENDAVAL_Imaginary-Friend_JA_easy-read_2026-10.pdf"
+   }
+  },
+  "xanques_easy": {
+   "show": "xanques",
+   "kind": "easy",
+   "short": "stilts-easy",
+   "files": {
+    "ca": "pdf/VENDAVAL_Tallers-Xanques_CA_easy-read_2026-10.pdf",
+    "es": "pdf/VENDAVAL_Talleres-Zancos_ES_easy-read_2026-10.pdf",
+    "en": "pdf/VENDAVAL_Stilts-Workshops_EN_easy-read_2026-10.pdf",
+    "de": "pdf/VENDAVAL_Stelzenworkshops_DE_easy-read_2026-10.pdf",
+    "fr": "pdf/VENDAVAL_Stilts-Workshops_FR_easy-read_2026-10.pdf",
+    "it": "pdf/VENDAVAL_Stilts-Workshops_IT_easy-read_2026-10.pdf",
+    "pt": "pdf/VENDAVAL_Stilts-Workshops_PT_easy-read_2026-10.pdf",
+    "ja": "pdf/VENDAVAL_Stilts-Workshops_JA_easy-read_2026-10.pdf"
+   }
   }
  },
  "download_boxes": [
   {
    "id": "brass",
    "items": [
+    "brass_easy",
     "brass_dossier",
     "brass_rider",
     "concert_dossier",
@@ -307,6 +353,7 @@
   {
    "id": "friend",
    "items": [
+    "friend_easy",
     "friend_dossier",
     "friend_rider"
    ],
@@ -329,6 +376,7 @@
    "id": "xanques",
    "title": "xanques",
    "items": [
+    "xanques_easy",
     "xanques_dossier"
    ],
    "press": "xanques",

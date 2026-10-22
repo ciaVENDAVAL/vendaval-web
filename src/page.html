@@ -73,7 +73,8 @@
   <div class="wrap two">
     <div>
       <h2>{{ t.about.title }}</h2>
-      {% for p in t.about.p %}<p>{{ p|festlinks }}</p>{% endfor %}
+      {% if t.easy.about %}<div class="std">{% endif %}{% for p in t.about.p %}<p>{{ p|festlinks }}</p>{% endfor %}{% if t.easy.about %}</div>
+      <div class="easy">{% for p in t.easy.about %}<p>{{ p }}</p>{% endfor %}</div>{% endif %}
     </div>
     <figure class="tilt"><img loading="lazy" src="{{ R }}img/{{ about_image }}-800.webp" alt="" width="800"></figure>
   </div>
@@ -82,7 +83,7 @@
 <section id="shows" class="sec">
   <div class="wrap">
     <h2>{{ t.shows.title }}</h2>
-    <p class="lead">{{ t.shows.intro }}</p>
+    <p class="lead{% if t.easy.shows %} std{% endif %}">{{ t.shows.intro }}</p>{% if t.easy.shows %}<p class="lead easy">{{ t.easy.shows }}</p>{% endif %}
     <div class="show-cards">
       {% for s in shows %}{% set st = t.show[s.id] %}
       <a class="show-card" href="{{ H }}{{ s.slug }}/">
@@ -102,7 +103,7 @@
 <section id="home-workshops" class="sec cream">
   <div class="wrap">
     <h2>{{ t.workshops.title }}</h2>
-    <p class="lead">{{ t.workshops.intro }}</p>
+    <p class="lead{% if t.easy.workshops %} std{% endif %}">{{ t.workshops.intro }}</p>{% if t.easy.workshops %}<div class="easy">{% for p in t.easy.workshops %}<p class="lead">{{ p }}</p>{% endfor %}</div>{% endif %}
     <div class="ws-cards">
       {% for g in workshop_groups %}{% set tg = t.workshops.groups[g.id] %}<a class="ws-group ws-{{ g.kind }} ws-link" href="{{ H }}workshops/#ws-{{ g.id }}">
         <img loading="lazy" src="{{ R }}img/{{ g.photo }}-800.webp" alt="">
@@ -178,7 +179,8 @@
         {% if st.status %}<p class="badge badge-{{ st.status }}">{{ t.shows.status[st.status] }}</p>{% endif %}
         <h1 class="show-title">{{ st.name }}</h1>
         <p class="kicker">{{ st.kicker }}</p>
-        {% for p in st.text %}<p>{{ p }}</p>{% endfor %}
+        {% set ez = t.easy.get('show', {}).get(s.id) %}{% if ez %}<div class="std">{% endif %}{% for p in st.text %}<p>{{ p }}</p>{% endfor %}{% if ez %}</div>
+        <div class="easy">{% for p in ez %}<p>{{ p }}</p>{% endfor %}</div>{% endif %}
         <div class="facts">
           <h2>{{ t.shows.facts }}</h2>
           <ul>{% for f in st.facts %}<li>{{ f }}</li>{% endfor %}</ul>
@@ -212,7 +214,7 @@
 <section id="workshops" class="sec cream">
   <div class="wrap">
     <h1>{{ t.workshops.title }}</h1>
-    <p class="lead">{{ t.workshops.intro }}</p>
+    <p class="lead{% if t.easy.workshops %} std{% endif %}">{{ t.workshops.intro }}</p>{% if t.easy.workshops %}<div class="easy">{% for p in t.easy.workshops %}<p class="lead">{{ p }}</p>{% endfor %}</div>{% endif %}
     <div class="ws-cards">
       {% for g in workshop_groups %}{% set tg = t.workshops.groups[g.id] %}<article class="ws-group ws-{{ g.kind }}" id="ws-{{ g.id }}">
         <img loading="lazy" src="{{ R }}img/{{ g.photo }}-800.webp" alt="{{ t.workshops.title }}: {{ tg.title }}">
@@ -336,6 +338,7 @@
     <button type="button" data-a="links" aria-pressed="false">{{ t.a11y.links }}</button>
     <button type="button" data-a="spacing" aria-pressed="false">{{ t.a11y.spacing }}</button>
     <button type="button" data-a="motion" aria-pressed="false">{{ t.a11y.motion }}</button>
+    <button type="button" data-a="easy" aria-pressed="false" lang="{{ t.html_lang }}">{{ t.a11y.easy }}</button>
     <div class="a11y-size"><button type="button" data-a="smaller" aria-label="{{ t.a11y.smaller }}">A−</button><span>{{ t.a11y.size }}</span><button type="button" data-a="bigger" aria-label="{{ t.a11y.bigger }}">A+</button></div>
     <button type="button" data-a="reset" class="a11y-reset">{{ t.a11y.reset }}</button>
   </div>

@@ -224,7 +224,8 @@
    "dossier": "Dossier zur Show",
    "rider": "Technischer Rider",
    "photos": "Fotos",
-   "workshop": "Workshop-Dossier"
+   "workshop": "Workshop-Dossier",
+   "easy": "Mappe in Leichter Sprache"
   },
   "photos_web": "Web · 1000 px",
   "photos_print": "Druck · 300 dpi",
@@ -284,7 +285,8 @@
   "reset": "Zurücksetzen",
   "day": "Tag",
   "night": "Nacht",
-  "theme": "Farbschema"
+  "theme": "Farbschema",
+  "easy": "Leichte Sprache"
  },
  "crew": {
   "kicker": "Crew-Register",

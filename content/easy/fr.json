@@ -1,0 +1,43 @@
+{
+ "about": [
+  "Nous sommes la Cia. VENDAVAL. Nous faisons de la musique et du cirque dans la rue. Nous venons de Barcelone et de Terrassa, en Espagne.",
+  "Nous sommes une fanfare. Nous jouons du saxophone, de la trompette, du soubassophone et des percussions. Les musicien·nes viennent d'Europe et d'Amérique.",
+  "Avec la fanfare, il y a des artistes de cirque. Une personne marche sur des échasses. Les échasses sont de longs bâtons attachés aux jambes. Une autre personne roule en monocycle. Le monocycle est un vélo à 1 roue. Elles jonglent et font des jeux avec le public.",
+  "Nous dirigeons la fanfare avec des signes de la main. Le public apprend les signes et dirige aussi la fanfare.",
+  "Nous avons joué en Catalogne, en Andorre et en Allemagne."
+ ],
+ "shows": "Nous faisons des spectacles dans la rue. Certains spectacles ont 1 artiste. D'autres ont 8 artistes.",
+ "workshops": [
+  "Nous faisons des ateliers de cirque et de musique. Les ateliers sont pour les jeunes et pour les adultes.",
+  "Nous faisons les ateliers le même jour qu'un de nos spectacles. Nous venons de Barcelone."
+ ],
+ "show": {
+  "brass": [
+   "VENDAVAL Brass est une fanfare qui marche dans la rue.",
+   "Il y a 6 musicien·nes et 2 artistes de cirque. Une personne est sur des échasses. L'autre personne roule en monocycle. Elles jonglent.",
+   "La fanfare joue de la musique pour danser : cumbia, funk, musique des Balkans et swing.",
+   "Le public joue avec des filets et des bouées. Le public apprend des signes de la main et dirige la fanfare.",
+   "Chaque passage dure 30 minutes. Nous pouvons faire plusieurs passages dans une journée.",
+   "Avant le spectacle, les personnes aveugles peuvent toucher les costumes et les instruments."
+  ],
+  "friend": [
+   "Amigui Imaginari est une peluche géante.",
+   "La peluche marche sur des échasses à 4 pattes. Elle se promène dans le public et cherche des ami·es pour jouer.",
+   "Il y a 3 façons de faire le spectacle : avec une personne acrobate, avec une personne musicienne, ou la peluche seule.",
+   "Le spectacle dure 30 minutes."
+  ],
+  "freakfrac": [
+   "Freak Frac est une parade. Une parade est un spectacle qui marche dans la rue.",
+   "Il y a des personnages très grands sur des échasses. Ils marchent derrière une fanfare.",
+   "Ils jonglent et sautent à la corde.",
+   "Freak Frac est un spectacle de la Cia. Filigranes. Nous le faisons ensemble."
+  ],
+  "joc": [
+   "El Joc Etern est un nouveau spectacle. Nous sommes en train de le créer.",
+   "3 créatures de la mer cherchent un jeu magique. Elles invitent le public à chercher le jeu.",
+   "Elles voyagent avec Windy. Windy est un scooter électrique qui tire un bateau. Le bateau est aussi un instrument de musique.",
+   "Il y a 5 artistes. Ils font des échasses, du monocycle, du jonglage, de la musique et des jeux.",
+   "En 2027, nous inventons des jeux pour toutes les personnes. On peut toucher les jeux, les sentir avec des vibrations et les jouer en langue des signes."
+  ]
+ }
+}

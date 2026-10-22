@@ -105,7 +105,10 @@
   "Imaginary Friend rider": "(Amigui-Imaginari|Imaginary-Friend)_{L}_rider",
   "El Joc Etern dossier": "El-Joc-Etern_{L}_dossier",
   "Stilts workshops dossier": "(Tallers-Xanques|Talleres-Zancos|Stilts-Workshops|Stelzenworkshops)_{L}_dossier",
-  "Ani Arqui concept dossier": "Ani-Arqui_{L}_concept"
+  "Ani Arqui concept dossier": "Ani-Arqui_{L}_concept",
+  "Easy-read: VENDAVAL Brass": "VENDAVAL-Brass_{L}_easy-read",
+  "Easy-read: Imaginary Friend": "(Amigui-Imaginari|Imaginary-Friend)_{L}_easy-read",
+  "Easy-read: Stilts workshops": "(Tallers-Xanques|Talleres-Zancos|Stilts-Workshops|Stelzenworkshops)_{L}_easy-read"
  },
  "external_pdfs": {
   "Concert in the audience 2026-10": "made in the FiM 2027 conversation (WeasyPrint) — rebuild there",

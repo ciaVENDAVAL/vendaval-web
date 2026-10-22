@@ -224,7 +224,8 @@
    "dossier": "Dossier du spectacle",
    "rider": "Fiche technique (rider)",
    "photos": "Photos",
-   "workshop": "Dossier d'ateliers"
+   "workshop": "Dossier d'ateliers",
+   "easy": "Dossier facile à lire"
   },
   "photos_web": "Web · 1000 px",
   "photos_print": "Impression · 300 dpi",
@@ -284,7 +285,8 @@
   "reset": "Réinitialiser",
   "day": "Jour",
   "night": "Nuit",
-  "theme": "Thème"
+  "theme": "Thème",
+  "easy": "Facile à lire"
  },
  "crew": {
   "kicker": "Registre d'équipage",

@@ -1,0 +1,43 @@
+{
+ "about": [
+  "Somos la Cia. VENDAVAL. Hacemos música y circo en la calle. Somos de Barcelona y de Terrassa.",
+  "Somos una banda de música. Tocamos saxofones, trompeta, sousáfono y percusión. Los músicos vienen de Europa y de América.",
+  "Con la banda hay artistas de circo. Una artista camina con zancos. Los zancos son palos largos en las piernas. Otro artista va en monociclo. El monociclo es una bicicleta de 1 rueda. Hacen malabares y juegos con el público.",
+  "Dirigimos la banda con señales de mano. El público aprende las señales y también dirige la banda.",
+  "Hemos actuado en Cataluña, en Andorra y en Alemania."
+ ],
+ "shows": "Hacemos espectáculos en la calle. Hay espectáculos con 1 artista y espectáculos con 8 artistas.",
+ "workshops": [
+  "Hacemos talleres de circo y de música. Los talleres son para jóvenes y para personas adultas.",
+  "Hacemos los talleres el mismo día que uno de nuestros espectáculos. Venimos de Barcelona."
+ ],
+ "show": {
+  "brass": [
+   "VENDAVAL Brass es una banda de música que camina por la calle.",
+   "Hay 6 músicos y 2 artistas de circo. Una artista va con zancos. El otro artista va en monociclo. Hacen malabares.",
+   "La banda toca música para bailar: cumbia, funk, música de los Balcanes y swing.",
+   "El público juega con redes y salvavidas. El público aprende señales de mano y dirige la banda.",
+   "Cada actuación dura 30 minutos. Podemos hacer varias actuaciones en un día.",
+   "Antes del espectáculo, las personas ciegas pueden tocar el vestuario y los instrumentos."
+  ],
+  "friend": [
+   "Amigui Imaginari es un peluche gigante.",
+   "El peluche camina con zancos de 4 patas. Pasea entre el público y busca amigos para jugar.",
+   "Hay 3 maneras de hacer el espectáculo: con una artista de acrobacias, con un músico o el peluche solo.",
+   "El espectáculo dura 30 minutos."
+  ],
+  "freakfrac": [
+   "Freak Frac es un pasacalles. Un pasacalles es un espectáculo que pasea por la calle.",
+   "Hay personajes muy altos con zancos. Caminan detrás de una banda de música.",
+   "Hacen malabares y saltan a la comba.",
+   "Freak Frac es de la Cia. Filigranes. Lo hacemos juntas."
+  ],
+  "joc": [
+   "El Joc Etern es un espectáculo nuevo. Todavía lo estamos creando.",
+   "3 criaturas del mar buscan un juego mágico. Invitan al público a buscar el juego.",
+   "Viajan con el Windy. El Windy es una moto eléctrica que lleva un barco. El barco también es un instrumento de música.",
+   "Hay 5 artistas. Hacen zancos, monociclo, malabares, música y juegos.",
+   "En 2027 inventamos juegos para todas las personas. Los juegos se pueden tocar, se pueden sentir con vibraciones y se pueden hacer con lengua de signos."
+  ]
+ }
+}

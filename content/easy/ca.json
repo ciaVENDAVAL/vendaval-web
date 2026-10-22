@@ -1,0 +1,43 @@
+{
+ "about": [
+  "Som la Cia. VENDAVAL. Fem música i circ al carrer. Som de Barcelona i de Terrassa.",
+  "Som una banda de música. Toquem saxos, trompeta, sousàfon i percussió. Els músics venen d'Europa i d'Amèrica.",
+  "Amb la banda hi ha artistes de circ. Un artista camina amb xanques. Les xanques són pals llargs a les cames. Un altre artista va amb monocicle. El monocicle és una bicicleta d'1 roda. Fan malabars i jocs amb el públic.",
+  "Dirigim la banda amb senyals de mà. El públic aprèn els senyals i també dirigeix la banda.",
+  "Hem actuat a Catalunya, a Andorra i a Alemanya."
+ ],
+ "shows": "Fem espectacles al carrer. Hi ha espectacles amb 1 artista i espectacles amb 8 artistes.",
+ "workshops": [
+  "Fem tallers de circ i de música. Els tallers són per a joves i per a persones adultes.",
+  "Fem els tallers el mateix dia que un dels nostres espectacles. Venim de Barcelona."
+ ],
+ "show": {
+  "brass": [
+   "VENDAVAL Brass és una banda de música que camina pel carrer.",
+   "Hi ha 6 músics i 2 artistes de circ. Un artista va amb xanques. L'altre artista va amb monocicle. Fan malabars.",
+   "La banda toca música per ballar: cúmbia, funk, música dels Balcans i swing.",
+   "El públic juga amb xarxes i salvavides. El públic aprèn senyals de mà i dirigeix la banda.",
+   "Cada actuació dura 30 minuts. Podem fer unes quantes actuacions en un dia.",
+   "Abans de l'espectacle, les persones cegues poden tocar el vestuari i els instruments."
+  ],
+  "friend": [
+   "Amigui Imaginari és un peluix gegant.",
+   "El peluix camina amb xanques de 4 potes. Passeja entre el públic i busca amics per jugar.",
+   "Hi ha 3 maneres de fer l'espectacle: amb un artista d'acrobàcies, amb un músic o el peluix sol.",
+   "L'espectacle dura 30 minuts."
+  ],
+  "freakfrac": [
+   "Freak Frac és una cercavila. Una cercavila és un espectacle que passeja pel carrer.",
+   "Hi ha personatges molt alts amb xanques. Caminen darrere d'una banda de música.",
+   "Fan malabars i salten a corda.",
+   "Freak Frac és de la Cia. Filigranes. El fem juntes."
+  ],
+  "joc": [
+   "El Joc Etern és un espectacle nou. Encara l'estem creant.",
+   "3 criatures del mar busquen un joc màgic. Conviden el públic a buscar el joc.",
+   "Viatgen amb el Windy. El Windy és una moto elèctrica que porta un vaixell. El vaixell també és un instrument de música.",
+   "Hi ha 5 artistes. Fan xanques, monocicle, malabars, música i jocs.",
+   "L'any 2027 inventem jocs per a totes les persones. Els jocs es poden tocar, es poden sentir amb vibracions i es poden fer amb llengua de signes."
+  ]
+ }
+}

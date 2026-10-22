@@ -224,7 +224,8 @@
    "dossier": "作品資料",
    "rider": "技術ライダー",
    "photos": "写真",
-   "workshop": "ワークショップ資料"
+   "workshop": "ワークショップ資料",
+   "easy": "やさしい日本語の資料"
   },
   "photos_web": "ウェブ用 · 1000 px",
   "photos_print": "印刷用 · 300 dpi",
@@ -284,7 +285,8 @@
   "reset": "リセット",
   "day": "昼",
   "night": "夜",
-  "theme": "表示テーマ"
+  "theme": "表示テーマ",
+  "easy": "やさしい日本語"
  },
  "crew": {
   "kicker": "乗組員名簿",
