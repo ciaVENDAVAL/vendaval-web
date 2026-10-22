@@ -1,74 +1,43 @@
-"""VENDAVAL Brass postcard for programmers and distributors: A6 landscape (148 x 105 mm), 2 pages (front, back),
-with 3 mm bleed on every side for professional printing (PDF page = 154 x 111 mm).
-Usage: python3 tools/postcard.py ca es en  ->  postcard/VENDAVAL-Brass_<LANG>_postal_<yyyy-mm>.pdf
-Texts: short versions of dossiers/brass/<lang>.json, kept in T below. Add a language here before building it.
-Text levels are told apart by size and weight/style (bold, plain, italic), not by colour alone.
-No prices or private data: this is public promoter material."""
-import sys, html, pathlib, datetime
+"""VENDAVAL Brass postcard for programmers and distributors: ONE trilingual card (CA · ES · EN).
+A6 landscape (148 x 105 mm), 2 pages (front, back), 3 mm bleed on every side for the print shop (PDF page = 154 x 111 mm).
+Usage: python3 tools/postcard.py  ->  postcard/VENDAVAL-Brass_CA-ES-EN_postal_<yyyy-mm>.pdf
+Languages are told apart by style, always the same: CA bold · ES plain · EN italic.
+Photos are never cropped: each one is shown whole and fades into a blurred copy of itself that fills the card.
+Texts: short versions of dossiers/brass/<lang>.json. No prices or private data: this is public promoter material."""
+import html, pathlib, datetime
 import qrcode
 from playwright.sync_api import sync_playwright
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC, OUT = ROOT/'source-images', ROOT/'postcard'
 DFONTS, SFONTS, LOGOS = ROOT/'dossiers/assets/fonts', ROOT/'static/fonts', ROOT/'dossiers/assets/logos'
-FRONT, BACK = 'VENDAVAL_003.jpg', 'VENDAVAL_passecalles_000.jpg'   # back photo is mirrored so the band faces left (into the card)
-QR_LANG = {'ca': 'es', 'es': 'es', 'en': 'en'}                     # dossier language each card's QR opens
-e = html.escape
+FRONT, BACK = 'VENDAVAL_003.jpg', 'VENDAVAL_passecalles_000.jpg'
+QR_URL = 'https://vendaval.cat/dossier/brass/es'
 LOGO = (LOGOS/'vendaval.png').as_uri()
+e = html.escape
 
-T = {
- 'ca': {
-  'tag': 'JOCS & MÚSICA EN VIU · CIRC DE CARRER', 'sub': 'La festa que obre camí',
-  'text': "Una cúmbia esclata al carrer i la tripulació es posa a caminar. Dues criatures del mar, una dalt de les xanques i "
-          "l'altra sobre el monocicle, fan volar les maces mentre sis músics converteixen la plaça en una pista de ball. "
-          "La banda es dirigeix amb senyals de mà, i el públic acaba dirigint-la.",
-  'line': 'Funk, balcànic, swing i cúmbia, amb xanques i jocs per a totes les persones.',
-  'credits_lab': 'Fitxa artística',
-  'credits': [('Direcció artística', 'tyle fernández'), ('Música', 'Cia. VENDAVAL'),
-              ('Vestuari', 'Imaginario de Mónica · Tropidelia'), ('Coproducció', 'Cia. Filigranes'),
-              ('Fotografia', 'ROAR · Albert Garcia')],
-  'spec_lab': 'Especificacions',
-  'spec': [('Passis de 30′', ', diversos al dia'), ('Tots els públics', ', de dia o de nit'),
-           ('Itinerant i acústic', ' · cap tècnic necessari'),
-           ('6 músics i 2 artistes de circ', ' · format reduït des de 4 músics'),
-           ('També amplificat a la plaça:', ' Concert enmig del públic')],
-  'qr': 'Dossier i fitxa tècnica',
- },
- 'es': {
-  'tag': 'JUEGOS & MÚSICA EN VIVO · CIRCO DE CALLE', 'sub': 'La fiesta que abre camino',
-  'text': "Una cumbia estalla en la calle y la tripulación se pone en marcha. Dos criaturas del mar, una sobre zancos y "
-          "otra en monociclo, hacen volar las mazas mientras seis músicos convierten la plaza en una pista de baile. "
-          "La banda se dirige con señas de mano, y el público acaba dirigiéndola.",
-  'line': 'Funk, balcánico, swing y cumbia, con zancos y juegos para todas las personas.',
-  'credits_lab': 'Ficha artística',
-  'credits': [('Dirección artística', 'tyle fernández'), ('Música', 'Cia. VENDAVAL'),
-              ('Vestuario', 'Imaginario de Mónica · Tropidelia'), ('Coproducción', 'Cia. Filigranes'),
-              ('Fotografía', 'ROAR · Albert Garcia')],
-  'spec_lab': 'Especificaciones',
-  'spec': [('Pases de 30′', ', varios al día'), ('Todos los públicos', ', de día o de noche'),
-           ('Pasacalles acústico', ' · sin necesidad de técnicos'),
-           ('6 músicos y 2 artistas de circo', ' · formato reducido desde 4 músicos'),
-           ('También amplificado en la plaza:', ' Concierto entre el público')],
-  'qr': 'Dossier y ficha técnica',
- },
- 'en': {
-  'tag': 'GAMES & LIVE MUSIC · STREET CIRCUS', 'sub': 'The party that leads the way',
-  'text': "A cumbia bursts into the street and the crew sets off. Two sea creatures, one on stilts and one on a unicycle, "
-          "send clubs flying while six musicians turn the square into a dance floor. The band is conducted with hand "
-          "signals, and the audience ends up conducting it.",
-  'line': 'Funk, Balkan, swing and cumbia, with stilts and games for everyone.',
-  'credits_lab': 'Credits',
-  'credits': [('Artistic direction', 'tyle fernández'), ('Music', 'Cia. VENDAVAL'),
-              ('Costumes', 'Imaginario de Mónica · Tropidelia'), ('Co-production', 'Cia. Filigranes'),
-              ('Photography', 'ROAR · Albert Garcia')],
-  'spec_lab': 'Key facts',
-  'spec': [('30-minute sets', ', several a day'), ('All ages', ', day or night'),
-           ('Acoustic roaming show', ' · no technicians needed'),
-           ('6 musicians and 2 circus artists', ' · smaller format from 4 musicians'),
-           ('Also amplified on the square:', ' Concert in the audience')],
-  'qr': 'Dossier and technical rider',
- },
-}
+def tri(ca, es, en, sep='<br>'):
+    """Same text in CA (bold), ES (plain), EN (italic)."""
+    return sep.join([f'<b lang="ca">{e(ca)}</b>', f'<span lang="es">{e(es)}</span>', f'<i lang="en">{e(en)}</i>'])
+
+BODY = ("Una cúmbia esclata al carrer: sis músics i dues criatures del mar, en xanques i monocicle, converteixen la plaça "
+        "en una pista de ball. La banda es dirigeix amb senyals de mà, i el públic acaba dirigint-la.",
+        "Una cumbia estalla en la calle: seis músicos y dos criaturas del mar, en zancos y monociclo, convierten la plaza "
+        "en una pista de baile. La banda se dirige con señas de mano, y el público acaba dirigiéndola.",
+        "A cumbia bursts into the street: six musicians and two sea creatures, on stilts and a unicycle, turn the square "
+        "into a dance floor. The band is conducted with hand signals, and the audience ends up conducting it.")
+FIGS = [('30′', ('passis', 'pases', 'sets')),
+        ('8', ('artistes', 'artistas', 'artists')),
+        ('0', ('tècnics', 'técnicos', 'technicians')),
+        ('100%', ('acústic', 'acústico', 'acoustic'))]
+LINES = [('Tots els públics, de dia o de nit', 'Todos los públicos, de día o de noche', 'All ages, day or night'),
+         ('Diversos passis al dia, des de 4 músics', 'Varios pases al día, desde 4 músicos', 'Several sets a day, from 4 musicians'),
+         ('També amplificat: Concert enmig del públic', 'También amplificado: Concierto entre el público', 'Also amplified: Concert in the audience')]
+CREDITS = [(('Direcció artística', 'Dirección artística', 'Artistic direction'), 'tyle fernández'),
+           (('Música', 'Música', 'Music'), 'Cia. VENDAVAL'),
+           (('Vestuari', 'Vestuario', 'Costumes'), 'Imaginario de Mónica · Tropidelia'),
+           (('Coproducció', 'Coproducción', 'Co-production'), 'Cia. Filigranes'),
+           (('Fotografia', 'Fotografía', 'Photography'), 'ROAR · Albert Garcia')]
 
 def ff(fam, path, weight=400, style='normal', ext=False):
     rng = ';unicode-range:U+0100-024F,U+1E00-1EFF' if ext else ''
@@ -90,93 +59,103 @@ WAVE = ('<svg class="wave" viewBox="0 0 600 20" preserveAspectRatio="none" xmlns
         '<path d="M0 10 Q 25 0 50 10 T 100 10 T 150 10 T 200 10 T 250 10 T 300 10 T 350 10 T 400 10 T 450 10 T 500 10 T 550 10 T 600 10" '
         'fill="none" stroke="#EBA53B" stroke-width="2.2"/></svg>')
 
-def page(lang):
-    t = T[lang]; img = lambda f: (SRC/f).as_uri()
-    credits = ''.join(f'<div><i>{e(k)}</i> <b>{e(v)}</b></div>' for k, v in t['credits'])
-    spec = ''.join(f'<li><b>{e(a)}</b>{e(b)}</li>' for a, b in t['spec'])
+def page():
+    img = lambda f: (SRC/f).as_uri()
+    figs = ''.join(f'<div class="fig"><div class="n">{e(n)}</div><div class="l">{tri(*l)}</div></div>' for n, l in FIGS)
+    lines = ''.join(f'<li>{tri(*l, sep=" · ")}</li>' for l in LINES)
+    credits = ''.join(f'<div>{tri(*r, sep=" · ")}: <span class="nm">{e(n)}</span></div>' for r, n in CREDITS)
+    body = ''.join(f'<p>{x}</p>' for x in [f'<b>{e(BODY[0])}</b>', e(BODY[1]), f'<i>{e(BODY[2])}</i>'])
     logos = ''.join(f'<img src="{(LOGOS/f).as_uri()}" alt="">' for f in ['tub-dassaig.png', 'filigranes.svg', 'bobila.png', 'apcc.svg'])
-    return f'''<!doctype html><html lang="{lang}"><meta charset="utf-8"><title>VENDAVAL Brass · postal</title>
+    return f'''<!doctype html><html lang="ca"><meta charset="utf-8"><title>VENDAVAL Brass · postal</title>
 <style>{FONTCSS}
 @page{{size:154mm 111mm;margin:0}}
 *{{box-sizing:border-box;margin:0;padding:0}}
 body{{-webkit-print-color-adjust:exact;print-color-adjust:exact;color:#1E2A33;font-family:Atk,sans-serif}}
-b{{font-weight:700}} i{{font-style:italic}}
+b{{font-weight:700;font-style:normal}} i{{font-style:italic;font-weight:400}} span[lang]{{font-weight:400}}
 .pg{{width:154mm;height:111mm;position:relative;overflow:hidden;page-break-after:always;background:#0F2C40}}
-/* FRONT: whole 16:9 photo across the full width (bleed included), title band below */
-.front .photo{{position:absolute;left:0;top:0;width:154mm;height:86.6mm;display:block}}
-.front .band{{position:absolute;left:0;top:86.6mm;width:154mm;height:24.4mm;background:#0F2C40;padding:2.4mm 8mm 0}}
-.wave{{position:absolute;left:0;top:-1.6mm;width:154mm;height:3.2mm}}
-.front .kick{{font:600 6.6pt Oswald,sans-serif;letter-spacing:.45mm;color:#9FDCEC;margin-top:.8mm}}
-.front h1{{font:400 22pt/1 Anton,sans-serif;color:#F5EDDC;letter-spacing:.3mm;margin-top:.6mm}}
+.blur{{position:absolute;left:-8mm;top:-8mm;width:170mm;height:127mm;object-fit:cover;filter:blur(5mm) saturate(1.15)}}
+.wave{{position:absolute;left:0;width:100%;height:3.2mm}}
+/* FRONT: whole 16:9 photo, its bottom edge melting into the blurred copy; title band over the blur */
+.front .photo{{position:absolute;left:0;top:0;width:154mm;height:86.6mm;display:block;
+  -webkit-mask-image:linear-gradient(to bottom,#000 90%,transparent 100%);mask-image:linear-gradient(to bottom,#000 90%,transparent 100%)}}
+.front .band{{position:absolute;left:0;top:84mm;width:154mm;height:27mm;padding:3.6mm 8mm 0;
+  background:linear-gradient(to bottom,rgba(15,44,64,.5),rgba(15,44,64,.88) 35%)}}
+.front .band .wave{{top:1mm}}
+.front h1{{font:400 27pt/1 Anton,sans-serif;color:#F5EDDC;letter-spacing:.3mm;margin-top:1.2mm;text-shadow:0 .3mm 1mm rgba(0,0,0,.35)}}
 .front h1 span{{color:#EBA53B}}
-.front .logo{{position:absolute;right:8mm;top:2.6mm;height:15.5mm;background:#F5EDDC;border-radius:2mm;padding:1.2mm 2mm}}
+.front .sup{{position:absolute;right:8mm;top:6.4mm;display:flex;align-items:center;gap:2.6mm;background:rgba(245,237,220,.92);border-radius:1.6mm;padding:1.4mm 2.4mm}}
+.front .sup img{{height:6mm;max-width:16mm;object-fit:contain}}
+.front .kick{{font:600 6.4pt Oswald,sans-serif;letter-spacing:.45mm;color:#9FDCEC;margin-top:1mm}}
+.front .sub{{position:absolute;right:37mm;top:5.2mm;text-align:right;font-size:7.4pt;line-height:1.3;color:#F5EDDC}}
+.front .sub i{{color:#9FDCEC}}
+.front .logo{{position:absolute;right:7mm;top:7mm;height:17mm;background:rgba(245,237,220,.92);border-radius:2mm;padding:1.2mm 2mm;box-shadow:0 .5mm 2mm rgba(0,0,0,.25)}}
 .front .logo img{{height:100%;display:block}}
-.back .head{{display:flex;align-items:flex-start;justify-content:space-between}}
-.back .head img{{height:13mm;margin-top:-2.5mm}}
-.front .tag{{position:absolute;right:38mm;bottom:9.4mm;text-align:right;color:#F5EDDC}}
-.front .tag .t{{font:600 6.6pt Oswald,sans-serif;letter-spacing:.35mm}}
-.front .tag .s{{font:italic 400 9pt/1.3 Atk,sans-serif;color:#9FDCEC}}
-/* BACK: text panel left (sand), mirrored photo + contact right (sea) */
-.back .txt{{position:absolute;left:0;top:0;width:91mm;height:111mm;background:#F5EDDC;padding:7.5mm 4.5mm 0 8mm;display:flex;flex-direction:column}}
-.back h1{{font:400 15.5pt/1 Anton,sans-serif;color:#0F2C40;letter-spacing:.2mm}}
-.back h1 span{{color:#B5401C}}
-.back .sub{{font:italic 700 8pt/1.2 Atk,sans-serif;color:#B5401C;margin:.6mm 0 1.6mm}}
-.back p{{font:400 6.5pt/1.34 Atk,sans-serif}}
-.back p.line{{font:700 7pt/1.3 Atk,sans-serif;color:#0F2C40;margin-top:1.1mm}}
-.back h2{{font:600 6.4pt Oswald,sans-serif;letter-spacing:.4mm;color:#0F2C40;text-transform:uppercase;margin:2.2mm 0 .7mm;border-bottom:.3mm solid #EBA53B;padding-bottom:.4mm}}
-.back .cr div{{font-size:5.9pt;line-height:1.38}}
-.back .cr i{{font-weight:400;color:#55636D}}
-.back ul{{list-style:none;font-size:5.9pt;line-height:1.38}}
-.back li::before{{content:"\\2693\\FE0E";color:#B5401C;margin-right:1.2mm;font-size:5pt}}
-.logos{{margin-top:auto;margin-bottom:7.5mm;display:flex;align-items:center;gap:3.6mm}}
-.logos img{{height:6.4mm;max-width:17mm;object-fit:contain}}
-.back .ph{{position:absolute;left:91mm;top:0;width:63mm;height:80.15mm;display:block;transform:scaleX(-1)}}
-.back .ct{{position:absolute;left:91mm;top:80.15mm;width:63mm;height:30.85mm;padding:2.6mm 8mm 0 3.6mm;display:flex;gap:2.8mm;color:#F5EDDC}}
-.back .ct .wave{{left:0;width:63mm}}
-.ct .lines{{font:400 6.2pt/1.58 Atk,sans-serif;white-space:nowrap}}
-.ct .lines .co{{font:600 6.8pt Oswald,sans-serif;letter-spacing:.3mm;color:#EBA53B}}
-.ct .lines i{{color:#9FDCEC}}
-.ct .qr{{flex:0 0 15mm;text-align:center;font:italic 400 4.9pt/1.2 Atk,sans-serif;color:#9FDCEC}}
-.ct .qr div{{background:#F5EDDC;padding:1.2mm;border-radius:.8mm;margin-bottom:.8mm}}
-.ct .qr svg{{display:block;width:100%}}
+/* BACK: whole photo on the left (as shot), right edge melting into the blur; trilingual text card on the right */
+.back .photo{{position:absolute;left:5mm;top:4mm;width:64mm;height:81.4mm;display:block;
+  -webkit-mask-image:radial-gradient(ellipse 72% 70% at 50% 50%,#000 78%,transparent 100%);mask-image:radial-gradient(ellipse 72% 70% at 50% 50%,#000 78%,transparent 100%)}}
+.card{{position:absolute;left:72mm;top:7mm;width:75mm;height:97mm;background:rgba(245,237,220,.95);border-radius:2.4mm;
+  padding:3mm 3.6mm 2.6mm;display:flex;flex-direction:column;box-shadow:0 .6mm 3mm rgba(0,0,0,.25)}}
+.head{{display:flex;align-items:center;gap:2.2mm}}
+.head img{{height:9.5mm}}
+.head h1{{font:400 17pt/1 Anton,sans-serif;color:#0F2C40;letter-spacing:.15mm}}
+.head h1 span{{color:#B5401C}}
+.head .sub{{font-size:5.6pt;line-height:1.25;color:#B5401C;margin-top:.6mm}}
+.body{{margin-top:1.2mm}}
+.body p{{font-size:6pt;line-height:1.26;margin-bottom:.8mm}}
+.genres{{font:600 5.6pt Oswald,sans-serif;letter-spacing:.35mm;color:#0F2C40;border-top:.3mm solid #EBA53B;border-bottom:.3mm solid #EBA53B;padding:.5mm 0;text-align:center;margin:.4mm 0 1.4mm}}
+.figs{{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4mm}}
+.fig .n{{font:400 12pt/1 Anton,sans-serif;color:#B5401C}}
+.fig .l{{font-size:5.2pt;line-height:1.2;margin-top:.4mm}}
+ul{{list-style:none;font-size:5.4pt;line-height:1.35;margin-top:1.3mm}}
+li::before{{content:"\\2693\\FE0E";color:#B5401C;margin-right:1mm;font-size:4.4pt}}
+.cr{{margin-top:1.3mm;font-size:5.2pt;line-height:1.36;color:#55636D}}
+.cr .nm{{font-weight:700;color:#1E2A33}}
+.foot{{position:absolute;left:8mm;top:84mm;width:61mm;height:20mm;display:flex;gap:2.6mm;align-items:center;background:rgba(15,44,64,.86);border-radius:2mm;padding:2mm 2.4mm;color:#F5EDDC}}
+.ct{{flex:1;font-size:5.9pt;line-height:1.5;white-space:nowrap}}
+.ct .co{{font:600 6.4pt Oswald,sans-serif;letter-spacing:.3mm;color:#EBA53B}}
+.ct .logos{{display:flex;align-items:center;gap:2mm;margin-top:1.4mm}}
+.ct .logos img{{height:4.6mm;max-width:12mm;object-fit:contain}}
+.qr{{flex:0 0 14.5mm;text-align:center;font:600 4.6pt Oswald,sans-serif;letter-spacing:.2mm;color:#9FDCEC}}
+.qr svg{{display:block;width:100%;margin-bottom:.5mm;background:#F5EDDC;padding:.8mm;border-radius:.6mm}}
 </style>
 <section class="pg front">
+  <img class="blur" src="{img(FRONT)}" alt="">
   <img class="photo" src="{img(FRONT)}" alt="">
   <div class="band">{WAVE}
-    <div class="kick">{e(t['tag'])}</div>
     <h1>VENDAVAL <span>BRASS</span></h1>
-    <div class="logo"><img src="{LOGO}" alt="VENDAVAL"></div>
-    <div class="tag"><div class="s">{e(t['sub'])}</div></div>
+    <div class="kick">CIA. VENDAVAL · FUNK · BALKAN · SWING · CUMBIA</div>
+    <div class="sup">{logos}</div>
   </div>
+  <div class="logo"><img src="{LOGO}" alt="VENDAVAL"></div>
 </section>
 <section class="pg back">
-  <div class="txt">
-    <div class="head"><div><h1>VENDAVAL <span>BRASS</span></h1>
-    <div class="sub">{e(t['sub'])}</div></div><img src="{LOGO}" alt="VENDAVAL"></div>
-    <p>{e(t['text'])}</p>
-    <p class="line">{e(t['line'])}</p>
-    <h2>{e(t['credits_lab'])}</h2><div class="cr">{credits}</div>
-    <h2>{e(t['spec_lab'])}</h2><ul>{spec}</ul>
-    <div class="logos">{logos}</div>
+  <img class="blur" src="{img(BACK)}" alt="">
+  <img class="photo" src="{img(BACK)}" alt="">
+  <div class="card">
+    <div class="head"><img src="{LOGO}" alt="VENDAVAL"><h1>VENDAVAL <span>BRASS</span></h1></div>
+    <div class="body">{body}</div>
+    <div class="genres">FUNK · BALKAN · SWING · CUMBIA</div>
+    <div class="figs">{figs}</div>
+    <ul>{lines}</ul>
+    <div class="cr">{credits}</div>
   </div>
-  <img class="ph" src="{img(BACK)}" alt="">
-  <div class="ct">{WAVE}
-    <div class="lines"><span class="co">Cia. VENDAVAL</span><br><i>@vendaval.brass</i><br><b>+34 644 389 757</b><br>VENDAVAL@anartist.org<br>www.VENDAVAL.cat</div>
-    <div class="qr"><div>{qr_svg('https://vendaval.cat/dossier/brass/' + QR_LANG[lang])}</div>{e(t['qr'])}</div>
-  </div>
+    <div class="foot">
+      <div class="ct"><span class="co">Cia. VENDAVAL</span><br><b>+34 644 389 757</b><br>VENDAVAL@anartist.org<br>www.VENDAVAL.cat · <i>@vendaval.brass</i>
+</div>
+      <div class="qr">{qr_svg(QR_URL)}DOSSIER</div>
+    </div>
 </section></html>'''
 
-def build(langs):
+def build():
     OUT.mkdir(exist_ok=True); stamp = datetime.date.today().strftime('%Y-%m')
     with sync_playwright() as p:
         b = p.chromium.launch(); pg = b.new_page()
-        for lang in langs:
-            f = OUT/f'_postcard_{lang}.html'; f.write_text(page(lang))
-            pg.goto(f.as_uri()); pg.wait_for_load_state('networkidle')
-            out = OUT/f'VENDAVAL-Brass_{lang.upper()}_postal_{stamp}.pdf'
-            pg.pdf(path=str(out), width='154mm', height='111mm', print_background=True, prefer_css_page_size=True)
-            f.unlink(); print('built', out.relative_to(ROOT))
+        f = OUT/'_postcard.html'; f.write_text(page())
+        pg.goto(f.as_uri()); pg.wait_for_load_state('networkidle')
+        out = OUT/f'VENDAVAL-Brass_CA-ES-EN_postal_{stamp}.pdf'
+        pg.pdf(path=str(out), width='154mm', height='111mm', print_background=True, prefer_css_page_size=True)
+        f.unlink(); print('built', out.relative_to(ROOT))
         b.close()
 
 if __name__ == '__main__':
-    build(sys.argv[1:] or ['ca', 'es', 'en'])
+    build()
