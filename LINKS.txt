@@ -1,11 +1,20 @@
+https://ciavendaval.github.io/vendaval-web/dossier/brass/ca
 https://ciavendaval.github.io/vendaval-web/dossier/brass/es
 https://ciavendaval.github.io/vendaval-web/dossier/brass/en
 https://ciavendaval.github.io/vendaval-web/dossier/brass/de
+https://ciavendaval.github.io/vendaval-web/dossier/brass/fr
+https://ciavendaval.github.io/vendaval-web/dossier/brass/it
+https://ciavendaval.github.io/vendaval-web/dossier/brass/pt
 https://ciavendaval.github.io/vendaval-web/dossier/brass/ja
 https://ciavendaval.github.io/vendaval-web/dossier/brass  (opens in the reader's language)
+https://ciavendaval.github.io/vendaval-web/rider/brass/ca
 https://ciavendaval.github.io/vendaval-web/rider/brass/es
 https://ciavendaval.github.io/vendaval-web/rider/brass/en
 https://ciavendaval.github.io/vendaval-web/rider/brass/de
+https://ciavendaval.github.io/vendaval-web/rider/brass/fr
+https://ciavendaval.github.io/vendaval-web/rider/brass/it
+https://ciavendaval.github.io/vendaval-web/rider/brass/pt
+https://ciavendaval.github.io/vendaval-web/rider/brass/ja
 https://ciavendaval.github.io/vendaval-web/rider/brass  (opens in the reader's language)
 https://ciavendaval.github.io/vendaval-web/dossier/brass-concert/ca
 https://ciavendaval.github.io/vendaval-web/dossier/brass-concert/es

@@ -1,0 +1,116 @@
+{
+ "kind_title": "Dossier",
+ "cover_kicker": "DOSSIER · VENDAVAL BRASS · 2026-10",
+ "cover_where": "CIRQUE DE RUE · BARCELONE",
+ "cover_tag": "JEUX & MUSIQUE LIVE",
+ "cover_format": "DÉAMBULATION ACOUSTIQUE",
+ "figures": [["8", "ARTISTES"], ["30′", "PASSAGES · PLUSIEURS PAR JOUR"], ["0", "TECHNICIEN NÉCESSAIRE"], ["100%", "ACOUSTIQUE"]],
+ "played_at": "NOUS AVONS JOUÉ À",
+ "festivals": [
+  ["unterwegs.png", "Unterwegs Theater Festival", "Mühlheim et Dreieich (DE) · 2026"],
+  ["sommerwerft.png", "Sommerwerft Theaterfestival", "Francfort-sur-le-Main (DE) · 2026"],
+  ["fira-vapor.png", "Fira del Vapor", "Sant Vicenç de Castellet (ES) · 2026"]
+ ],
+ "street_kicker": "DANS LA RUE",
+ "street_title": "La rue est à tout le monde",
+ "street_text": [
+  "Nous défendons la rue comme un lieu de rencontre et de vivre-ensemble. Quand la musique et le cirque envahissent la place, des inconnus se regardent, rient et finissent par danser ensemble.",
+  "Jouer sans l'avoir prévu est une thérapie collective, gratuite et en plein air : une façon joyeuse de faire face à la solitude.",
+  "Et nous misons sur la couleur et l'ornement, à une époque où les vêtements, les meubles et les bâtiments deviennent de plus en plus gris et rectilignes : nous sortons habillés de toutes les couleurs de la mer."
+ ],
+ "show_kicker": "LE SPECTACLE",
+ "show_title": "La fête qui ouvre la voie",
+ "show_text": [
+  "Une cumbia éclate dans la rue et VENDAVAL Brass se met en marche. Deux personnages fantastiques, l'un sur échasses, l'autre sur un monocycle, font voler les massues pendant que six musicien·nes transforment la place en piste de danse.",
+  "La fanfare est dirigée par des signes de la main : chaque passage se compose en direct, devant le public, qui finit par apprendre les signes et diriger la fanfare. Funk, balkan, swing, salsa et cumbia, venus des cultures d'Europe et des Amériques que portent les musicien·nes.",
+  "Avec des filets, des bouées et des accessoires marins, les jeux invitent petits et grands à rejoindre l'équipage."
+ ],
+ "show_punch": "Personne ne reste sur le trottoir.",
+ "glance": "EN UN COUP D'ŒIL",
+ "glance_list": [
+  "Déambulation acoustique de rue",
+  "Tout public, de jour comme de nuit",
+  "Passages de 30 minutes, plusieurs par jour, avec 30 minutes de pause entre les passages",
+  "6 musicien·nes : 3 saxophones, trompette, soubassophone et percussions",
+  "2 artistes de cirque : échasses, monocycle, jonglage et jeux",
+  "Aucun technicien nécessaire"
+ ],
+ "glance_small": "Durée et nombre d'artistes adaptables : dès 4 musicien·nes, avec ou sans cirque",
+ "show_caption": "Elle accompagne le public d'une scène à l'autre ou se joue comme pièce autonome en mouvement. Existe aussi en version amplifiée sur la place : Concert au milieu du public.",
+ "games_kicker": "TEMPÊTE ET HOULE",
+ "games_title": "Costumes marins et jeux pour tout le monde",
+ "games_text": "Bouées, filets et grosses cordes deviennent des jeux. Le public apprend à diriger la fanfare par signes, réveille les musicien·nes quand ils se figent comme des statues et finit en photo avec l'équipage.",
+ "access": "Accessibilité",
+ "access_kicker": "VENDAVAL VEUT TOUCHER TOUS LES PUBLICS",
+ "always": "TOUJOURS POSSIBLE",
+ "tactile": "Visite tactile pour les personnes aveugles et malvoyantes : 1 heure avant, après maquillage et costumes, dans un espace calme.",
+ "if_equip": "SI L'ÉQUIPEMENT EST DISPONIBLE",
+ "equip_list": "Audiodescription et boucles auditives · Gilets vibrants (avec amplification) · Interprétation en langue des signes",
+ "access_note": "Si l'organisation dispose de son propre équipement d'accessibilité, la compagnie l'utilise pour adapter le spectacle. La direction artistique est formée au cirque universel (Ateneu Popular 9 Barris, 2026) et travaille avec le DUCS, Design universel du cirque social.",
+ "tech_kicker": "FICHE TECHNIQUE",
+ "updated": "MISE À JOUR OCTOBRE 2026",
+ "tech_title": "Tout ce qu'il faut savoir",
+ "getin": [
+  ["MONTAGE · ENV. 2 H, LE JOUR MÊME", "Déchargement 10′ · Installation 20′ · Balance 30′ · Maquillage et costumes 60′"],
+  ["DÉMONTAGE · ENV. 1 H", "Démontage 20′ · Rangement des costumes 30′ · Chargement 10′"]
+ ],
+ "tech": [
+  ["DURÉE", "Passages de 30 minutes, plusieurs par jour, toujours avec 30 minutes de pause entre les passages."],
+  ["ESPACE ET PARCOURS", "Rue ou place, au niveau du public. Le parcours peut comporter des rampes et des marches, mais il est préférable qu'il soit plat."],
+  ["HORAIRES ET CHALEUR", "De jour comme de nuit. En été, évitez de programmer entre 12 h et 19 h en plein soleil ; à l'ombre, c'est possible."],
+  ["SON", "Déambulation : acoustique, sans amplification. Version amplifiée sur la place (Concert au milieu du public) : la compagnie apporte 8 micros sans fil ; sonorisation de l'organisation."],
+  ["LUMIÈRE", "La compagnie s'adapte à l'éclairage de la rue. Aucune installation extérieure n'est nécessaire."],
+  ["PLUIE", "Sous la pluie, on ne peut pas jouer à cause des instruments. La compagnie peut attendre et jouer plus tard ou un autre jour. Une rue mouillée ne pose pas de problème. Alternative : une grande salle d'au moins 5 m de hauteur."],
+  ["LOGISTIQUE", "Stationnement pour 2 véhicules. Loge pour 8 personnes avec tables de maquillage (la compagnie peut apporter miroirs et lumières)."],
+  ["REPAS", "2 sans viande (poisson, œufs et laitages, oui) et 6 sans régime particulier."]
+ ],
+ "tech_note": "La compagnie apporte tout le matériel : échasses, monocycle, accessoires de jonglage, instruments, accessoires de jeu, maquillage et costumes.",
+ "crew_kicker": "QUI SOMMES-NOUS",
+ "crew_title": "L'équipage",
+ "roles": {
+  "tyle": "échasses, saxophone baryton, trompette et jeux · direction",
+  "alian": "soubassophone, euphonium",
+  "facu": "percussions",
+  "lucas": "trompette",
+  "juan": "saxophone alto",
+  "stefano": "saxophone ténor",
+  "albert": "échasses, clown, jonglage, jeux",
+  "jordi": "monocycle, clown, jonglage, jeux"
+ },
+ "credits_lab": "DISTRIBUTION",
+ "credits": [
+  ["Direction artistique", "tyle fernández"],
+  ["Musique et son", "Cia. VENDAVAL"],
+  ["Costumes", "Imaginario de Mónica (Mónica Romero) · Tropidelia"],
+  ["Graphisme", "bicialta"],
+  ["Photographie", "ROAR (David Ugalde) · Barbara Walzer · Jordi Largo · Albert Garcia"],
+  ["Coproduction", "Cia. Filigranes"],
+  ["Production et diffusion", "Cia. VENDAVAL · tyle fernández"]
+ ],
+ "track_lab": "PARCOURS",
+ "track": [
+  ["2024–25", "Résidence musicale, Ateneu la Bòbila, Nou Barris (Barcelone)"],
+  ["2025", "Festes de Porta, Ateneu la Bòbila (Barcelone) · création"],
+  ["2026", "Unterwegs Theater Festival, Mühlheim et Dreieich (DE) · 4 passages"],
+  ["2026", "Fira del Vapor, Sant Vicenç de Castellet (ES) · 4 passages"],
+  ["2026", "Sommerwerft Theaterfestival, Francfort-sur-le-Main (DE) · 2 passages et ateliers"]
+ ],
+ "booking": "Diffusion",
+ "contact_lab": "CONTACT",
+ "who": "tyle fernández",
+ "who_role": "direction artistique et diffusion",
+ "phone_lab": "TÉLÉPHONE",
+ "web_lab": "WEB ET RÉSEAUX",
+ "invoice": "Facturation : Associació sociocultural de circ Tub d'assaig 7.70, Terrassa (association à but non lucratif, facture exonérée de TVA).",
+ "support": "AVEC LE SOUTIEN DE",
+ "access_contact": "Accessibilité et contact",
+ "alt": {
+  "VENDAVAL_FiraVapor001.jpg": "La fanfare VENDAVAL Brass devant un bâtiment moderniste",
+  "IMG_0677.JPG": "Le public assis dans la rue regarde un personnage sur échasses",
+  "IMG_0780.JPG": "Le public joue avec un grand filet bleu",
+  "VENDAVAL_Unterwegs001.jpg": "Un personnage sur échasses tend une bouée aux enfants",
+  "VENDAVAL_102.jpg": "Jonglage entre les échasses et le monocycle",
+  "VENDAVAL_Unterwegs002.jpg": "La fanfare joue dans un parc entourée du public",
+  "IMG_0622.JPG": "Silhouettes d'un personnage sur échasses jouant avec le public à contre-jour"
+ }
+}

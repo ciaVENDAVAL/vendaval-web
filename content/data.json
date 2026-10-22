@@ -176,11 +176,14 @@
    "kind": "dossier",
    "short": "brass",
    "files": {
-    "ca": "pdf/VENDAVAL-Brass_CA_dossier_2026-09.pdf",
-    "es": "pdf/VENDAVAL-Brass_ES_dossier_2026-09.pdf",
-    "en": "pdf/VENDAVAL-Brass_EN_dossier_2026-09.pdf",
-    "de": "pdf/VENDAVAL-Brass_DE_dossier_2026-09.pdf",
-    "ja": "pdf/VENDAVAL-Brass_JA_dossier_2026-09.pdf"
+    "ca": "pdf/VENDAVAL-Brass_CA_dossier_2026-10.pdf",
+    "es": "pdf/VENDAVAL-Brass_ES_dossier_2026-10.pdf",
+    "en": "pdf/VENDAVAL-Brass_EN_dossier_2026-10.pdf",
+    "de": "pdf/VENDAVAL-Brass_DE_dossier_2026-10.pdf",
+    "fr": "pdf/VENDAVAL-Brass_FR_dossier_2026-10.pdf",
+    "it": "pdf/VENDAVAL-Brass_IT_dossier_2026-10.pdf",
+    "pt": "pdf/VENDAVAL-Brass_PT_dossier_2026-10.pdf",
+    "ja": "pdf/VENDAVAL-Brass_JA_dossier_2026-10.pdf"
    }
   },
   "brass_rider": {
@@ -188,10 +191,14 @@
    "kind": "rider",
    "short": "brass",
    "files": {
-    "ca": "pdf/VENDAVAL-Brass_CA_rider_2026-09.pdf",
-    "es": "pdf/VENDAVAL-Brass_ES_rider_2026-09.pdf",
-    "en": "pdf/VENDAVAL-Brass_EN_rider_2026-09.pdf",
-    "de": "pdf/VENDAVAL-Brass_DE_rider_2026-09.pdf"
+    "ca": "pdf/VENDAVAL-Brass_CA_rider_2026-10.pdf",
+    "es": "pdf/VENDAVAL-Brass_ES_rider_2026-10.pdf",
+    "en": "pdf/VENDAVAL-Brass_EN_rider_2026-10.pdf",
+    "de": "pdf/VENDAVAL-Brass_DE_rider_2026-10.pdf",
+    "fr": "pdf/VENDAVAL-Brass_FR_rider_2026-10.pdf",
+    "it": "pdf/VENDAVAL-Brass_IT_rider_2026-10.pdf",
+    "pt": "pdf/VENDAVAL-Brass_PT_rider_2026-10.pdf",
+    "ja": "pdf/VENDAVAL-Brass_JA_rider_2026-10.pdf"
    }
   },
   "concert_dossier": {

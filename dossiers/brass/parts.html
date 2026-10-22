@@ -1,0 +1,57 @@
+{# shared macros, imported by template.html #}
+{% macro photo(name, style) %}<div class="ph" style="{{ style }}"><img class="bg" src="{{ blur(name) }}" alt=""><img class="fg" src="{{ img(name) }}" alt="{{ t.alt[name] if name in t.alt else '' }}"></div>{% endmacro %}
+{% macro waves(color, style, o=(0.6, 0.45, 0.3)) %}<svg class="waves" aria-hidden="true" viewBox="0 0 800 140" preserveAspectRatio="none" style="{{ style }}"><g fill="none" stroke="{{ color }}" stroke-width="2" stroke-linecap="round"><path opacity="{{ o[0] }}" d="M0 40 Q25 26 50 40 T100 40 T150 40 T200 40 T250 40 T300 40 T350 40 T400 40 T450 40 T500 40 T550 40 T600 40 T650 40 T700 40 T750 40 T800 40"/><path opacity="{{ o[1] }}" d="M-30 75 Q0 60 30 75 T90 75 T150 75 T210 75 T270 75 T330 75 T390 75 T450 75 T510 75 T570 75 T630 75 T690 75 T750 75 T810 75"/><path opacity="{{ o[2] }}" d="M0 110 Q40 94 80 110 T160 110 T240 110 T320 110 T400 110 T480 110 T560 110 T640 110 T720 110 T800 110"/></g></svg>{% endmacro %}
+
+{% macro access_box() %}
+<div style="background:#FFFFFF;color:#0F2C40;padding:24px 28px 26px;display:flex;flex-direction:column;gap:14px">
+  <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap">
+    <h3 class="disp" style="margin:0;font-size:30px;line-height:1">{{ t.access }}</h3>
+    <span class="lab" style="font-size:13px;letter-spacing:2px;color:#B5401C">{{ t.access_kicker }}</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px">
+    <div style="display:flex;flex-direction:column;gap:8px"><span class="lab" style="font-size:14px;letter-spacing:2px;color:#0B6E85">{{ t.always }}</span><span style="font-size:15px;line-height:1.45">{{ t.tactile }}</span></div>
+    <div style="display:flex;flex-direction:column;gap:8px"><span class="lab" style="font-size:14px;letter-spacing:2px;color:#0B6E85">{{ t.if_equip }}</span><span style="font-size:15px;line-height:1.45">{{ t.equip_list }}</span></div>
+  </div>
+  <p style="font-size:13px;line-height:1.5;color:#3A4A55">{{ t.access_note }}</p>
+</div>
+{% endmacro %}
+
+{% macro contact_block(dark=True) %}
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 32px">
+  <div style="display:flex;flex-direction:column;gap:4px"><span class="lab" style="font-size:13px;letter-spacing:2px;color:#17A9C9">{{ t.contact_lab }}</span><span style="font-size:17px;font-weight:600">{{ t.who }}</span><span style="font-size:13px">{{ t.who_role }}</span></div>
+  <div style="display:flex;flex-direction:column;gap:4px"><span class="lab" style="font-size:13px;letter-spacing:2px;color:#17A9C9">{{ t.phone_lab }}</span><a href="tel:{{ site.phone_link }}" style="font-size:17px;font-weight:600">{{ site.phone }}</a></div>
+  <div style="display:flex;flex-direction:column;gap:4px"><span class="lab" style="font-size:13px;letter-spacing:2px;color:#17A9C9">EMAIL</span><a href="mailto:{{ site.email }}" style="font-size:17px;font-weight:600">{{ site.email }}</a></div>
+  <div style="display:flex;flex-direction:column;gap:4px"><span class="lab" style="font-size:13px;letter-spacing:2px;color:#17A9C9">{{ t.web_lab }}</span><a href="https://vendaval.cat/{{ lang }}/" style="font-size:17px;font-weight:600">vendaval.cat</a>
+    <a href="https://www.youtube.com/@vendaval.youtube" style="font-size:14px;display:flex;align-items:center;gap:8px;margin-top:4px"><svg aria-hidden="true" width="22" height="16" viewBox="0 0 24 17"><rect width="24" height="17" rx="4" fill="#FF0000"/><path d="M9.5 4.5v8l6.5-4z" fill="#FFFFFF"/></svg><span>@vendaval.youtube</span></a>
+    <a href="https://www.instagram.com/vendaval.brass/" style="font-size:14px;display:flex;align-items:center;gap:8px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="{{ '#F5EDDC' if dark else '#0F2C40' }}" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="{{ '#F5EDDC' if dark else '#0F2C40' }}" stroke="none"/></svg><span>@vendaval.brass</span></a></div>
+</div>
+<p style="font-size:12px;line-height:1.5;color:{{ '#C9D3D9' if dark else '#3A4A55' }}">{{ t.invoice }}</p>
+{% endmacro %}
+
+{% macro tech() %}
+<section class="pg" style="background:#F5EDDC">
+  <div style="position:absolute;left:0;top:0;width:794px;padding:48px 56px 0;display:flex;flex-direction:column;gap:16px">
+    <div class="lab" style="display:flex;justify-content:space-between;font-size:13px;color:#B5401C"><span>{{ t.tech_kicker }}{% if kind == 'rider' %} · VENDAVAL BRASS{% endif %}</span><span style="color:#0F2C40">{{ t.updated }}</span></div>
+    <h1 class="disp" style="margin:0;font-size:54px;line-height:1;color:#0F2C40">{{ t.tech_title }}</h1>
+    <div style="background:#0F2C40;color:#F5EDDC;padding:16px 22px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px">
+      {% for h, x in t.getin %}<div style="display:flex;flex-direction:column;gap:6px"><span class="lab" style="font-size:13.5px;letter-spacing:2px;color:#EBA53B">{{ h }}</span><span style="font-size:13.5px;line-height:1.45">{{ x }}</span></div>{% endfor %}
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px">
+      {% for h, x in t.tech %}<div style="background:#FFFFFF;padding:14px 17px;display:flex;flex-direction:column;gap:5px"><span class="lab" style="font-size:14.5px;letter-spacing:2px;color:#0F2C40">{{ h }}</span><span style="font-size:13.5px;line-height:1.42">{{ x }}</span></div>{% endfor %}
+    </div>
+    <p style="font-size:13px;line-height:1.5;color:#3A4A55">{{ t.tech_note }}</p>
+  </div>
+  {% set r = row(P.tech_row, 794, 6) %}
+  <div style="position:absolute;left:0;bottom:0;width:794px;height:{{ r.h }}px;display:flex;gap:6px">{% for n, w in r.cells %}<img src="{{ img(n) }}" alt="{{ t.alt[n] if n in t.alt else '' }}" style="width:{{ w }}px;height:{{ r.h }}px;display:block">{% endfor %}</div>
+  {{ waves('#E8F8FC', 'bottom:0;height:90px', (0.55, 0.4, 0.28)) }}
+</section>
+{% endmacro %}
+{% macro support() %}
+<div style="position:absolute;left:0;bottom:0;width:794px;height:200px;background:#FFFFFF;padding:26px 56px 34px;display:flex;flex-direction:column;gap:16px;color:#0F2C40">
+  <span class="lab" style="font-size:14px;color:#B5401C">{{ t.support }}</span>
+  <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;align-items:center">
+    {% for lg, alt in [('tub-dassaig.png', "Tub d'assaig 7.70"), ('bobila.png', 'Ateneu la Bòbila de Porta'), ('apcc.svg', 'APCC'), ('filigranes.svg', 'Cia. Filigranes')] %}
+    <div style="display:flex;justify-content:center;align-items:center;height:96px"><img src="{{ logo(lg) }}" alt="{{ alt }}" style="max-height:80px;max-width:150px;width:auto;height:auto"></div>{% endfor %}
+  </div>
+</div>
+{% endmacro %}

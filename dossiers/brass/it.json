@@ -1,0 +1,116 @@
+{
+ "kind_title": "Dossier",
+ "cover_kicker": "DOSSIER · VENDAVAL BRASS · 2026-10",
+ "cover_where": "CIRCO DI STRADA · BARCELLONA",
+ "cover_tag": "GIOCHI & MUSICA DAL VIVO",
+ "cover_format": "PARATA ACUSTICA ITINERANTE",
+ "figures": [["8", "ARTISTI"], ["30′", "REPLICHE · PIÙ AL GIORNO"], ["0", "TECNICI NECESSARI"], ["100%", "ACUSTICO"]],
+ "played_at": "ABBIAMO SUONATO A",
+ "festivals": [
+  ["unterwegs.png", "Unterwegs Theater Festival", "Mühlheim e Dreieich (DE) · 2026"],
+  ["sommerwerft.png", "Sommerwerft Theaterfestival", "Francoforte sul Meno (DE) · 2026"],
+  ["fira-vapor.png", "Fira del Vapor", "Sant Vicenç de Castellet (ES) · 2026"]
+ ],
+ "street_kicker": "IN STRADA",
+ "street_title": "La strada è di tutte le persone",
+ "street_text": [
+  "Difendiamo la strada come luogo di incontro e convivenza. Quando la musica e il circo riempiono la piazza, persone che non si conoscevano si guardano, ridono e finiscono per ballare insieme.",
+  "Giocare senza averlo previsto è una terapia collettiva, gratuita e all'aria aperta: un modo allegro di affrontare la solitudine.",
+  "E puntiamo sul colore e sull'ornamento, in un tempo in cui vestiti, mobili ed edifici diventano sempre più grigi e squadrati: usciamo vestiti di tutti i colori del mare."
+ ],
+ "show_kicker": "LO SPETTACOLO",
+ "show_title": "La festa che apre la strada",
+ "show_text": [
+  "Una cumbia esplode in strada e VENDAVAL Brass si mette in cammino. Due personaggi fantastici, uno sui trampoli e l'altro sul monociclo, fanno volare le clave mentre sei musicisti trasformano la piazza in una pista da ballo.",
+  "La banda è diretta con segni delle mani: ogni replica si compone dal vivo, davanti al pubblico, che finisce per imparare i segni e dirigere la banda. Funk, balcanica, swing, salsa e cumbia, dalle culture d'Europa e delle Americhe che portano i musicisti.",
+  "Con reti, salvagenti e oggetti marinari, i giochi invitano grandi e piccoli a entrare nella ciurma."
+ ],
+ "show_punch": "Nessuno resta sul marciapiede.",
+ "glance": "IN BREVE",
+ "glance_list": [
+  "Parata acustica itinerante",
+  "Per tutte le età, di giorno o di notte",
+  "Repliche di 30 minuti, più al giorno, con 30 minuti di pausa tra una e l'altra",
+  "6 musicisti: 3 sassofoni, tromba, sousafono e percussioni",
+  "2 artisti di circo: trampoli, monociclo, giocoleria e giochi",
+  "Nessun tecnico necessario"
+ ],
+ "glance_small": "Durata e numero di artisti adattabili: da 4 musicisti, con o senza circo",
+ "show_caption": "Funziona come parata che accompagna il pubblico tra un palco e l'altro o come spettacolo autonomo in movimento. Anche in versione amplificata in piazza: Concerto in mezzo al pubblico.",
+ "games_kicker": "TEMPESTA E MAREGGIATA",
+ "games_title": "Costumi di mare e giochi per tutte le persone",
+ "games_text": "Salvagenti, reti e corde spesse diventano giochi. Il pubblico impara a dirigere la banda con i segni delle mani, sveglia i musicisti quando restano immobili come statue e finisce in foto con la ciurma.",
+ "access": "Accessibilità",
+ "access_kicker": "VENDAVAL VUOLE RAGGIUNGERE TUTTE LE PERSONE",
+ "always": "SEMPRE POSSIBILE",
+ "tactile": "Visita tattile per persone cieche e ipovedenti: 1 ora prima, dopo trucco e costumi, in uno spazio tranquillo.",
+ "if_equip": "SE L'ATTREZZATURA È DISPONIBILE",
+ "equip_list": "Audiodescrizione e ausili per l'ascolto · Zaini vibranti (con amplificazione) · Interpretariato in lingua dei segni",
+ "access_note": "Se l'organizzazione ha la propria attrezzatura per l'accessibilità, la compagnia collabora per adattare lo spettacolo. La direzione artistica si è formata nel circo universale (Ateneu Popular 9 Barris, 2026) e lavora con il DUCS, Design universale del circo sociale.",
+ "tech_kicker": "SCHEDA TECNICA",
+ "updated": "AGGIORNATA OTTOBRE 2026",
+ "tech_title": "Tutto quello che serve sapere",
+ "getin": [
+  ["MONTAGGIO · CIRCA 2 ORE, LO STESSO GIORNO", "Scarico 10′ · Montaggio 20′ · Prova del suono 30′ · Trucco e costumi 60′"],
+  ["SMONTAGGIO · CIRCA 1 ORA", "Smontaggio 20′ · Costumi 30′ · Carico 10′"]
+ ],
+ "tech": [
+  ["DURATA", "Repliche di 30 minuti, più al giorno, sempre con 30 minuti di pausa tra una e l'altra."],
+  ["SPAZIO E PERCORSO", "Strada o piazza, allo stesso livello del pubblico. Il percorso può includere rampe e scale, ma è meglio se è pianeggiante."],
+  ["ORARI E CALDO", "Di giorno o di notte. In estate, evitate di programmare tra le 12 e le 19 sotto il sole diretto; all'ombra è possibile."],
+  ["AUDIO", "Itinerante: acustico, senza amplificazione. Versione amplificata in piazza (Concerto in mezzo al pubblico): la compagnia porta 8 microfoni wireless; impianto dell'organizzazione."],
+  ["LUCI", "La compagnia si adatta all'illuminazione della strada. Non serve alcun impianto esterno."],
+  ["PIOGGIA", "Sotto la pioggia non si può suonare a causa degli strumenti. La compagnia può aspettare e suonare più tardi o un altro giorno. La strada bagnata non è un problema. Alternativa: una grande sala alta almeno 5 m."],
+  ["LOGISTICA", "Parcheggio per 2 veicoli. Camerino per 8 persone con tavoli per il trucco (la compagnia può portare specchi e luci)."],
+  ["PASTI", "2 senza carne (pesce, uova e latticini sì) e 6 senza esigenze particolari."]
+ ],
+ "tech_note": "La compagnia porta tutto il materiale: trampoli, monociclo, attrezzi da giocoleria, strumenti, oggetti per i giochi, trucco e costumi.",
+ "crew_kicker": "CHI SIAMO",
+ "crew_title": "La ciurma",
+ "roles": {
+  "tyle": "trampoli, sax baritono, tromba e giochi · direzione",
+  "alian": "sousafono, eufonio",
+  "facu": "percussioni",
+  "lucas": "tromba",
+  "juan": "sax contralto",
+  "stefano": "sax tenore",
+  "albert": "trampoli, clown, giocoleria, giochi",
+  "jordi": "monociclo, clown, giocoleria, giochi"
+ },
+ "credits_lab": "CREDITI",
+ "credits": [
+  ["Direzione artistica", "tyle fernández"],
+  ["Musica e suono", "Cia. VENDAVAL"],
+  ["Costumi", "Imaginario de Mónica (Mónica Romero) · Tropidelia"],
+  ["Grafica", "bicialta"],
+  ["Fotografia", "ROAR (David Ugalde) · Barbara Walzer · Jordi Largo · Albert Garcia"],
+  ["Coproduzione", "Cia. Filigranes"],
+  ["Produzione e distribuzione", "Cia. VENDAVAL · tyle fernández"]
+ ],
+ "track_lab": "PERCORSO",
+ "track": [
+  ["2024–25", "Residenza musicale, Ateneu la Bòbila, Nou Barris (Barcellona)"],
+  ["2025", "Festes de Porta, Ateneu la Bòbila (Barcellona) · debutto"],
+  ["2026", "Unterwegs Theater Festival, Mühlheim e Dreieich (DE) · 4 repliche"],
+  ["2026", "Fira del Vapor, Sant Vicenç de Castellet (ES) · 4 repliche"],
+  ["2026", "Sommerwerft Theaterfestival, Francoforte sul Meno (DE) · 2 repliche e laboratori"]
+ ],
+ "booking": "Contatti e booking",
+ "contact_lab": "CONTATTO",
+ "who": "tyle fernández",
+ "who_role": "direzione artistica e distribuzione",
+ "phone_lab": "TELEFONO",
+ "web_lab": "WEB E SOCIAL",
+ "invoice": "Fatturazione: Associació sociocultural de circ Tub d'assaig 7.70, Terrassa (associazione senza scopo di lucro, fattura esente IVA).",
+ "support": "CON IL SOSTEGNO DI",
+ "access_contact": "Accessibilità e contatti",
+ "alt": {
+  "VENDAVAL_FiraVapor001.jpg": "La banda VENDAVAL Brass davanti a un edificio modernista",
+  "IMG_0677.JPG": "Il pubblico seduto in strada guarda un personaggio sui trampoli",
+  "IMG_0780.JPG": "Il pubblico gioca con una grande rete blu",
+  "VENDAVAL_Unterwegs001.jpg": "Un personaggio sui trampoli porge un salvagente ai bambini",
+  "VENDAVAL_102.jpg": "Giocoleria tra i trampoli e il monociclo",
+  "VENDAVAL_Unterwegs002.jpg": "La banda suona in un parco circondata dal pubblico",
+  "IMG_0622.JPG": "Sagome di un personaggio sui trampoli che gioca con il pubblico in controluce"
+ }
+}

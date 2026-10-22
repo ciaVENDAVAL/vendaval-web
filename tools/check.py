@@ -161,7 +161,7 @@ def main():
     bad = []
     for n, d in pdfs.items():
         for u in d['links']:
-            if u.startswith('mailto:'): continue
+            if u.startswith(('mailto:', 'tel:')): continue
             host = re.sub(r'^https?://', '', u).split('/')[0]
             if '%20' in u or ' ' in u or '.' not in host:
                 bad.append(f'- {n}: `{u}`')

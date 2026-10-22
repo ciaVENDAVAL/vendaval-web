@@ -35,8 +35,8 @@ data = {
  'shows': shows,
  'video': {'id': 'HpkRH-YxNXE', 'poster': 'vendaval-unterwegs002', 'key': 'brass_trailer'},
  'downloads': {
-   'brass_dossier': {'show': 'brass', 'kind': 'dossier', 'short': 'brass', 'files': files('VENDAVAL-Brass_{L}_dossier_2026-09.pdf', ['ca','es','en','de','ja'])},
-   'brass_rider': {'show': 'brass', 'kind': 'rider', 'short': 'brass', 'files': files('VENDAVAL-Brass_{L}_rider_2026-09.pdf', ['ca','es','en','de'])},
+   'brass_dossier': {'show': 'brass', 'kind': 'dossier', 'short': 'brass', 'files': files('VENDAVAL-Brass_{L}_dossier_2026-10.pdf', ['ca','es','en','de','fr','it','pt','ja'])},
+   'brass_rider': {'show': 'brass', 'kind': 'rider', 'short': 'brass', 'files': files('VENDAVAL-Brass_{L}_rider_2026-10.pdf', ['ca','es','en','de','fr','it','pt','ja'])},
    'concert_dossier': {'show': 'brass', 'kind': 'dossier', 'variant': 'concert', 'short': 'brass-concert', 'files': files('VENDAVAL-Brass-Concert-Placa_{L}_dossier_2026-10.pdf', L)},
    'concert_rider': {'show': 'brass', 'kind': 'rider', 'variant': 'concert', 'short': 'brass-concert', 'files': files('VENDAVAL-Brass-Concert-Placa_{L}_rider_2026-10.pdf', L)},
    'joc_dossier': {'show': 'joc', 'kind': 'dossier', 'short': 'el-joc-etern', 'files': files('VENDAVAL_El-Joc-Etern_{L}_dossier.pdf', ['ca','en'])},

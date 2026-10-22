@@ -1,0 +1,116 @@
+{
+ "kind_title": "Dossier",
+ "cover_kicker": "DOSSIER · VENDAVAL BRASS · 2026-10",
+ "cover_where": "STRASSENZIRKUS · BARCELONA",
+ "cover_tag": "SPIELE & LIVEMUSIK",
+ "cover_format": "AKUSTISCHER WALKACT",
+ "figures": [["8", "KÜNSTLER*INNEN"], ["30′", "DURCHGÄNGE · MEHRERE AM TAG"], ["0", "TECHNIK NÖTIG"], ["100%", "AKUSTISCH"]],
+ "played_at": "WIR HABEN GESPIELT BEI",
+ "festivals": [
+  ["unterwegs.png", "Unterwegs Theater Festival", "Mühlheim und Dreieich (DE) · 2026"],
+  ["sommerwerft.png", "Sommerwerft Theaterfestival", "Frankfurt am Main (DE) · 2026"],
+  ["fira-vapor.png", "Fira del Vapor", "Sant Vicenç de Castellet · 2026"]
+ ],
+ "street_kicker": "AUF DER STRASSE",
+ "street_title": "Die Straße gehört allen Menschen",
+ "street_text": [
+  "Wir verteidigen die Straße als Ort der Begegnung und des Zusammenlebens. Wenn Musik und Zirkus den Platz füllen, schauen sich Fremde an, lachen und tanzen am Ende miteinander.",
+  "Ungeplantes Spielen ist eine kollektive Therapie, kostenlos und unter freiem Himmel: eine fröhliche Art, der Einsamkeit die Stirn zu bieten.",
+  "Und wir setzen auf Farbe und Verzierung – in einer Zeit, in der Kleidung, Möbel und Gebäude immer grauer und eckiger werden: Wir ziehen los in allen Farben des Meeres."
+ ],
+ "show_kicker": "DAS STÜCK",
+ "show_title": "Das Fest, das den Weg bahnt",
+ "show_text": [
+  "Eine Cumbia bricht auf der Straße los und VENDAVAL Brass setzt sich in Bewegung. Zwei Fantasiefiguren, eine auf Stelzen, eine auf dem Einrad, lassen Keulen fliegen, während sechs Musiker*innen den Platz in eine Tanzfläche verwandeln.",
+  "Die Band wird mit Handzeichen dirigiert: Jeder Durchgang entsteht live vor dem Publikum, das am Ende die Zeichen lernt und die Band selbst dirigiert. Funk, Balkan, Swing, Salsa und Cumbia aus den Kulturen Europas und Amerikas, die die Musiker*innen mitbringen.",
+  "Mit Netzen, Rettungsringen und Seefahrer-Requisiten laden die Spiele Klein und Groß ein, Teil der Crew zu werden."
+ ],
+ "show_punch": "Niemand bleibt am Rand stehen.",
+ "glance": "AUF EINEN BLICK",
+ "glance_list": [
+  "Akustischer Walkact mit Livemusik",
+  "Für alle Altersgruppen, bei Tag und Nacht",
+  "Durchgänge von 30 Minuten, mehrere am Tag, mit 30 Minuten Pause dazwischen",
+  "6 Musiker*innen: 3 Saxophone, Trompete, Sousaphon und Perkussion",
+  "2 Zirkusartist*innen: Stelzen, Einrad, Jonglage und Spiele",
+  "Ohne Technik"
+ ],
+ "glance_small": "Dauer und Besetzung passen sich an: ab 4 Musiker*innen, mit oder ohne Zirkus",
+ "show_caption": "Funktioniert als Umzug, der das Publikum zwischen Bühnen begleitet, oder als eigenständiges Stück in Bewegung. Auch verstärkt auf dem Platz: Konzert mitten im Publikum.",
+ "games_kicker": "STURM UND SEEGANG",
+ "games_title": "Meereskostüme und Spiele für alle Menschen",
+ "games_text": "Rettungsringe, Netze und dicke Taue werden zu Spielen. Das Publikum lernt, die Band mit Handzeichen zu dirigieren, weckt die Musiker*innen, wenn sie zu Statuen erstarren, und landet am Ende auf dem Foto mit der Crew.",
+ "access": "Barrierefreiheit",
+ "access_kicker": "VENDAVAL MÖCHTE ALLE MENSCHEN ERREICHEN",
+ "always": "IMMER MÖGLICH",
+ "tactile": "Taktile Führung für blinde und sehbehinderte Menschen: 1 Stunde vorher, nach Maske und Kostüm, in einem ruhigen Raum.",
+ "if_equip": "WENN DIE AUSSTATTUNG VORHANDEN IST",
+ "equip_list": "Audiodeskription und Hörhilfen · Vibrationsrucksäcke (mit Verstärkung) · Gebärdensprachdolmetschen",
+ "access_note": "Verfügt die Veranstaltung über eigene barrierefreie Ausstattung, passt die Kompanie das Stück gemeinsam damit an. Die künstlerische Leitung ist in inklusivem Zirkus ausgebildet (Ateneu Popular 9 Barris, 2026) und arbeitet mit dem DUCS (Universelles Design für sozialen Zirkus).",
+ "tech_kicker": "TECHNISCHER RIDER",
+ "updated": "STAND OKTOBER 2026",
+ "tech_title": "Alles, was Sie wissen müssen",
+ "getin": [
+  ["AUFBAU · CA. 2 STD., AM SELBEN TAG", "Ausladen 10′ · Aufbau 20′ · Soundcheck 30′ · Maske und Kostüm 60′"],
+  ["ABBAU · CA. 1 STD.", "Abbau 20′ · Kostüme packen 30′ · Einladen 10′"]
+ ],
+ "tech": [
+  ["DAUER", "Durchgänge von 30 Minuten, mehrere am Tag, immer mit 30 Minuten Pause dazwischen."],
+  ["FLÄCHE UND ROUTE", "Straße oder Platz, auf Höhe des Publikums. Die Route kann Rampen und Stufen enthalten, eben ist aber besser."],
+  ["UHRZEIT UND HITZE", "Bei Tag oder Nacht. Im Sommer bitte nicht zwischen 12 und 19 Uhr in praller Sonne; im Schatten ist es möglich."],
+  ["TON", "Walkact: akustisch, ohne Verstärkung. Verstärkt auf dem Platz (Konzert mitten im Publikum): Die Kompanie bringt 8 Funkmikrofone mit; PA der Veranstaltung."],
+  ["LICHT", "Die Kompanie passt sich der Straßenbeleuchtung an. Keine zusätzliche Lichtanlage nötig."],
+  ["REGEN", "Bei Regen kann wegen der Instrumente nicht gespielt werden. Die Kompanie kann warten und später oder an einem anderen Tag spielen. Nasse Straßen sind kein Problem. Alternative: ein großer Saal mit mindestens 5 m Höhe."],
+  ["LOGISTIK", "Parkplatz für 2 Fahrzeuge. Garderobe für 8 Personen mit Schminktischen (Spiegel und Licht kann die Kompanie mitbringen)."],
+  ["VERPFLEGUNG", "2 ohne Fleisch (Fisch, Eier und Milchprodukte ja) und 6 ohne besondere Ernährung."]
+ ],
+ "tech_note": "Die Kompanie bringt das gesamte Material mit: Stelzen, Einrad, Jonglierrequisiten, Instrumente, Spielrequisiten, Maske und Kostüme.",
+ "crew_kicker": "WER WIR SIND",
+ "crew_title": "Die Crew",
+ "roles": {
+  "tyle": "Stelzen, Baritonsaxophon, Trompete und Spiele · Leitung",
+  "alian": "Sousaphon, Euphonium",
+  "facu": "Perkussion",
+  "lucas": "Trompete",
+  "juan": "Altsaxophon",
+  "stefano": "Tenorsaxophon",
+  "albert": "Stelzen, Clown, Jonglage, Spiele",
+  "jordi": "Einrad, Clown, Jonglage, Spiele"
+ },
+ "credits_lab": "TEAM & CREDITS",
+ "credits": [
+  ["Künstlerische Leitung", "tyle fernández"],
+  ["Musik und Ton", "Cia. VENDAVAL"],
+  ["Kostüme", "Imaginario de Mónica (Mónica Romero) · Tropidelia"],
+  ["Grafikdesign", "bicialta"],
+  ["Fotos", "ROAR (David Ugalde) · Barbara Walzer · Jordi Largo · Albert Garcia"],
+  ["Koproduktion", "Cia. Filigranes"],
+  ["Produktion und Booking", "Cia. VENDAVAL · tyle fernández"]
+ ],
+ "track_lab": "STATIONEN",
+ "track": [
+  ["2024–25", "Musikresidenz, Ateneu la Bòbila, Nou Barris (Barcelona)"],
+  ["2025", "Festes de Porta, Ateneu la Bòbila (Barcelona) · Premiere"],
+  ["2026", "Unterwegs Theater Festival, Mühlheim und Dreieich · 4 Durchgänge"],
+  ["2026", "Fira del Vapor, Sant Vicenç de Castellet (ES) · 4 Durchgänge"],
+  ["2026", "Sommerwerft Theaterfestival, Frankfurt am Main · 2 Durchgänge und Workshops"]
+ ],
+ "booking": "Booking",
+ "contact_lab": "KONTAKT",
+ "who": "tyle fernández (dey/dem)",
+ "who_role": "künstlerische Leitung und Booking",
+ "phone_lab": "TELEFON",
+ "web_lab": "WEB UND SOCIAL MEDIA",
+ "invoice": "Rechnungsstellung: Associació sociocultural de circ Tub d'assaig 7.70, Terrassa (gemeinnütziger Verein, Rechnung ohne MwSt.).",
+ "support": "MIT UNTERSTÜTZUNG VON",
+ "access_contact": "Barrierefreiheit und Kontakt",
+ "alt": {
+  "VENDAVAL_FiraVapor001.jpg": "Die Band VENDAVAL Brass vor einem modernistischen Gebäude",
+  "IMG_0677.JPG": "Das Publikum sitzt auf der Straße und schaut einer Figur auf Stelzen zu",
+  "IMG_0780.JPG": "Das Publikum spielt mit einem großen blauen Netz",
+  "VENDAVAL_Unterwegs001.jpg": "Eine Figur auf Stelzen reicht Kindern einen Rettungsring",
+  "VENDAVAL_102.jpg": "Jonglage zwischen Stelzen und Einrad",
+  "VENDAVAL_Unterwegs002.jpg": "Die Band spielt in einem Park, umgeben vom Publikum",
+  "IMG_0622.JPG": "Silhouetten einer Figur auf Stelzen, die im Gegenlicht mit dem Publikum spielt"
+ }
+}

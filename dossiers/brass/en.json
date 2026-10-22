@@ -1,0 +1,116 @@
+{
+ "kind_title": "Dossier",
+ "cover_kicker": "DOSSIER · VENDAVAL BRASS · 2026-10",
+ "cover_where": "STREET CIRCUS · BARCELONA",
+ "cover_tag": "GAMES & LIVE MUSIC",
+ "cover_format": "ACOUSTIC ROAMING SHOW",
+ "figures": [["8", "ARTISTS"], ["30′", "SETS · SEVERAL A DAY"], ["0", "TECHNICIANS NEEDED"], ["100%", "ACOUSTIC"]],
+ "played_at": "WE HAVE PLAYED AT",
+ "festivals": [
+  ["unterwegs.png", "Unterwegs Theater Festival", "Mühlheim and Dreieich (DE) · 2026"],
+  ["sommerwerft.png", "Sommerwerft Theaterfestival", "Frankfurt am Main (DE) · 2026"],
+  ["fira-vapor.png", "Fira del Vapor", "Sant Vicenç de Castellet · 2026"]
+ ],
+ "street_kicker": "IN THE STREET",
+ "street_title": "The street belongs to everyone",
+ "street_text": [
+  "We stand up for the street as a place where people meet and live together. When music and circus fill the square, strangers catch each other's eye, laugh and end up dancing together.",
+  "Unplanned play is a free, open-air collective therapy: a joyful way to stand up to loneliness.",
+  "And we choose colour and ornament, at a time when clothes, furniture and buildings keep turning greyer and squarer: we come out dressed in every colour of the sea."
+ ],
+ "show_kicker": "THE SHOW",
+ "show_title": "The party that leads the way",
+ "show_text": [
+  "A cumbia bursts into the street and VENDAVAL Brass sets off. Two fantastical characters, one on stilts and one on a unicycle, send clubs flying while six musicians turn the square into a dance floor.",
+  "The band is conducted with hand signals: every set is composed live, in front of the audience, who end up learning the signals and conducting the band. Funk, Balkan, swing, salsa and cumbia, from the European and American cultures the musicians bring with them.",
+  "With nets, lifebuoys and sailors' props, the games invite young and old to join the crew."
+ ],
+ "show_punch": "No one is left on the sidelines.",
+ "glance": "AT A GLANCE",
+ "glance_list": [
+  "Acoustic roaming street show",
+  "All ages, day or night",
+  "30-minute sets, several a day, with a 30-minute break between sets",
+  "6 musicians: 3 saxophones, trumpet, sousaphone and percussion",
+  "2 circus artists: stilts, unicycle, juggling and games",
+  "No technicians needed"
+ ],
+ "glance_small": "Duration and number of artists adapt to the event: from 4 musicians, with or without circus",
+ "show_caption": "It works as a parade leading the audience between stages, or as a stand-alone piece on the move. Also as an amplified show on the square: Concert in the audience.",
+ "games_kicker": "STORM AND SWELL",
+ "games_title": "Sea costumes and games for everyone",
+ "games_text": "Lifebuoys, nets and thick ropes turn into games. The audience learns to conduct the band with hand signals, wakes the musicians when they freeze like statues and ends up in a photo with the crew.",
+ "access": "Accessibility",
+ "access_kicker": "VENDAVAL WANTS TO REACH EVERYONE",
+ "always": "ALWAYS POSSIBLE",
+ "tactile": "Touch tour for blind and partially sighted people: 1 hour before, after make-up and costume, in a quiet space.",
+ "if_equip": "IF THE EQUIPMENT IS AVAILABLE",
+ "equip_list": "Audio description and assistive listening · Vibrating backpacks (with amplification) · Sign language interpretation",
+ "access_note": "If the host has its own accessibility equipment, the company works with it to adapt the show. The artistic director has trained in universal circus (Ateneu Popular 9 Barris, 2026) and works with DUCS, Universal Design for Social Circus.",
+ "tech_kicker": "TECHNICAL RIDER",
+ "updated": "UPDATED OCTOBER 2026",
+ "tech_title": "Everything you need to know",
+ "getin": [
+  ["GET-IN · APPROX. 2 H, SAME DAY", "Unloading 10′ · Set-up 20′ · Sound check 30′ · Make-up and costume 60′"],
+  ["GET-OUT · APPROX. 1 H", "Strike 20′ · Costume pack-up 30′ · Loading 10′"]
+ ],
+ "tech": [
+  ["DURATION", "30-minute sets, several a day, always with a 30-minute break between sets."],
+  ["SPACE AND ROUTE", "Street or square, at the same level as the audience. The route can include ramps and steps, but flat is better."],
+  ["TIMING AND HEAT", "Day or night. In summer, please avoid 12:00–19:00 in direct sun; in the shade it is fine."],
+  ["SOUND", "Roaming: acoustic, no amplification. Amplified format on the square (Concert in the audience): the company brings 8 wireless mics; the host's PA."],
+  ["LIGHTING", "The company adapts to the street lighting. No external rig is needed."],
+  ["RAIN", "We cannot play in the rain because of the instruments. The company can wait for it to stop and perform later or another day. A wet street is fine. Alternative: a large hall at least 5 m high."],
+  ["LOGISTICS", "Parking for 2 vehicles. Dressing room for 8 people with make-up tables (the company can bring mirrors and lights)."],
+  ["MEALS", "2 meat-free (fish, eggs and dairy are fine) and 6 with no restrictions."]
+ ],
+ "tech_note": "The company brings all stage material: stilts, unicycle, juggling props, instruments, game props, make-up and costumes.",
+ "crew_kicker": "WHO WE ARE",
+ "crew_title": "The crew",
+ "roles": {
+  "tyle": "stilts, baritone sax, trumpet and games · direction",
+  "alian": "sousaphone, euphonium",
+  "facu": "percussion",
+  "lucas": "trumpet",
+  "juan": "alto sax",
+  "stefano": "tenor sax",
+  "albert": "stilts, clown, juggling, games",
+  "jordi": "unicycle, clown, juggling, games"
+ },
+ "credits_lab": "CREDITS",
+ "credits": [
+  ["Artistic direction", "tyle fernández"],
+  ["Music and sound", "Cia. VENDAVAL"],
+  ["Costumes", "Imaginario de Mónica (Mónica Romero) · Tropidelia"],
+  ["Graphic design", "bicialta"],
+  ["Photography", "ROAR (David Ugalde) · Barbara Walzer · Jordi Largo · Albert Garcia"],
+  ["Co-production", "Cia. Filigranes"],
+  ["Production and booking", "Cia. VENDAVAL · tyle fernández"]
+ ],
+ "track_lab": "TRACK RECORD",
+ "track": [
+  ["2024–25", "Music residency, Ateneu la Bòbila, Nou Barris (Barcelona)"],
+  ["2025", "Festes de Porta, Ateneu la Bòbila (Barcelona) · premiere"],
+  ["2026", "Unterwegs Theater Festival, Mühlheim and Dreieich (DE) · 4 sets"],
+  ["2026", "Fira del Vapor, Sant Vicenç de Castellet · 4 sets"],
+  ["2026", "Sommerwerft Theaterfestival, Frankfurt am Main (DE) · 2 sets and workshops"]
+ ],
+ "booking": "Booking",
+ "contact_lab": "CONTACT",
+ "who": "tyle fernández (they/them)",
+ "who_role": "artistic direction and booking",
+ "phone_lab": "PHONE",
+ "web_lab": "WEB AND SOCIAL",
+ "invoice": "Invoicing: Associació sociocultural de circ Tub d'assaig 7.70, Terrassa (non-profit association, VAT-exempt invoice).",
+ "support": "WITH THE SUPPORT OF",
+ "access_contact": "Accessibility and contact",
+ "alt": {
+  "VENDAVAL_FiraVapor001.jpg": "The VENDAVAL Brass band in front of a modernist building",
+  "IMG_0677.JPG": "The audience sitting in the street watches a character on stilts",
+  "IMG_0780.JPG": "The audience plays with a huge blue net",
+  "VENDAVAL_Unterwegs001.jpg": "A character on stilts offers a lifebuoy to children",
+  "VENDAVAL_102.jpg": "Juggling between the stilts and the unicycle",
+  "VENDAVAL_Unterwegs002.jpg": "The band plays in a park surrounded by the audience",
+  "IMG_0622.JPG": "Silhouettes of a character on stilts playing with the audience against the light"
+ }
+}

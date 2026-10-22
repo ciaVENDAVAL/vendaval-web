@@ -1,0 +1,116 @@
+{
+ "kind_title": "Dossier",
+ "cover_kicker": "DOSSIER · VENDAVAL BRASS · 2026-10",
+ "cover_where": "CIRC DE CARRER · BARCELONA",
+ "cover_tag": "JOCS & MÚSICA EN VIU",
+ "cover_format": "ITINERANT ACÚSTIC",
+ "figures": [["8", "ARTISTES"], ["30′", "PASSIS · DIVERSOS AL DIA"], ["0", "TÈCNICS NECESSARIS"], ["100%", "ACÚSTIC"]],
+ "played_at": "HEM ACTUAT A",
+ "festivals": [
+  ["unterwegs.png", "Unterwegs Theater Festival", "Mühlheim i Dreieich (DE) · 2026"],
+  ["sommerwerft.png", "Sommerwerft Theaterfestival", "Frankfurt del Main (DE) · 2026"],
+  ["fira-vapor.png", "Fira del Vapor", "Sant Vicenç de Castellet · 2026"]
+ ],
+ "street_kicker": "AL CARRER",
+ "street_title": "El carrer és de totes les persones",
+ "street_text": [
+  "Defensem el carrer com un territori de trobada i convivència. Quan la música i el circ ocupen la plaça, gent que no es coneixia es mira, riu i acaba ballant plegada.",
+  "Jugar sense haver-ho previst és una teràpia col·lectiva, gratuïta i a l'aire lliure: una manera alegre de plantar cara a la solitud.",
+  "I apostem pel color i l'ornament, en un temps en què la roba, els mobles i els edificis es tornen cada cop més grisos i rectes: sortim vestits amb tots els colors del mar."
+ ],
+ "show_kicker": "L'ESPECTACLE",
+ "show_title": "La festa que obre camí",
+ "show_text": [
+  "Una cúmbia esclata al carrer i VENDAVAL Brass es posa a caminar. Dos personatges fantàstics, un dalt de les xanques i l'altre sobre el monocicle, fan volar les maces mentre sis músics converteixen la plaça en una pista de ball.",
+  "La banda es dirigeix amb senyals de mà: cada passi es compon en directe, davant del públic, que acaba aprenent els senyals i dirigint la banda. Funk, balcànic, swing, salsa i cúmbia, de les cultures d'Europa i les Amèriques que porten els músics.",
+  "Amb xarxes, salvavides i atrezzo mariner, els jocs conviden petits i grans a formar part de la tripulació."
+ ],
+ "show_punch": "Ningú no es queda a la vorera.",
+ "glance": "D'UN COP D'ULL",
+ "glance_list": [
+  "Itinerant acústic de carrer",
+  "Per a tots els públics, de dia o de nit",
+  "Passis de 30 minuts, diversos al dia, amb 30 minuts de pausa entre passis",
+  "6 músics: 3 saxos, trompeta, sousàfon i percussió",
+  "2 artistes de circ: xanques, monocicle, malabars i jocs",
+  "Sense necessitat de tècnics"
+ ],
+ "glance_small": "Durada i nombre d'artistes adaptables: des de 4 músics, amb o sense circ",
+ "show_caption": "Funciona com a cercavila que acompanya el públic entre escenaris o com a peça autònoma en moviment. També en format amplificat a la plaça: Concert enmig del públic.",
+ "games_kicker": "TEMPESTA I ONATGE",
+ "games_title": "Vestits de mar i jocs per a totes les persones",
+ "games_text": "Salvavides, xarxes i cordes gruixudes es converteixen en jocs. El públic aprèn a dirigir la banda amb senyals de mà, desperta els músics quan es queden quiets com estàtues i acaba fent-se la foto amb la tripulació.",
+ "access": "Accessibilitat",
+ "access_kicker": "VENDAVAL VOL ARRIBAR A TOTES LES PERSONES",
+ "always": "SEMPRE POSSIBLE",
+ "tactile": "Visita tàctil per a persones amb diversitat visual: 1 hora abans, després de maquillatge i vestuari, en un espai sense soroll.",
+ "if_equip": "SI L'EQUIP ESTÀ DISPONIBLE",
+ "equip_list": "Audiodescripció i audiòfons · Motxilles vibratòries (amb amplificació) · Interpretació en llengua de signes",
+ "access_note": "Si l'organització té el seu propi equip d'accessibilitat, la companyia hi col·labora per adaptar l'espectacle. La direcció artística s'ha format en circ universal (Ateneu Popular 9 Barris, 2026) i treballa amb el DUCS, Diseño universal del circo social.",
+ "tech_kicker": "FITXA TÈCNICA",
+ "updated": "ACTUALITZADA OCTUBRE 2026",
+ "tech_title": "Tot el que cal saber",
+ "getin": [
+  ["MUNTATGE · APROX. 2 H, EL MATEIX DIA", "Descàrrega 10′ · Muntatge 20′ · Prova de so 30′ · Maquillatge i vestuari 60′"],
+  ["DESMUNTATGE · APROX. 1 H", "Desmuntatge 20′ · Recollida del vestuari 30′ · Càrrega 10′"]
+ ],
+ "tech": [
+  ["DURADA", "Passis de 30 minuts, diversos al dia, sempre amb 30 minuts de pausa entre passis."],
+  ["ESPAI I RECORREGUT", "Carrer o plaça, al mateix nivell que el públic. El recorregut pot incloure rampes i escales, però és millor si és pla."],
+  ["HORARI I CALOR", "De dia o de nit. A l'estiu, eviteu programar entre les 12 h i les 19 h al sol directe; a l'ombra sí que és possible."],
+  ["SO", "Itinerant: acústic, sense amplificació. Format amplificat a la plaça (Concert enmig del públic): la companyia porta 8 micròfons sense fils; PA de l'organització."],
+  ["IL·LUMINACIÓ", "La companyia s'adapta a la il·luminació del carrer. No cal cap instal·lació externa."],
+  ["PLUJA", "Sota la pluja no es pot tocar pels instruments. La companyia pot esperar que pari i actuar més tard o un altre dia. El carrer mullat no és cap problema. Alternativa: una sala gran d'almenys 5 m d'alçada."],
+  ["LOGÍSTICA", "Pàrquing per a 2 vehicles. Vestidor per a 8 persones amb taules per maquillar-se (la companyia pot portar miralls i llums)."],
+  ["ÀPATS", "2 sense carn (peix, ous i làctics, sí) i 6 sense dieta específica."]
+ ],
+ "tech_note": "La companyia aporta tot el material escènic: xanques, monocicle, malabars, instruments, atrezzo per als jocs, maquillatge i vestuari.",
+ "crew_kicker": "QUI SOM",
+ "crew_title": "La tripulació",
+ "roles": {
+  "tyle": "xanques, saxo baríton, trompeta i jocs · direcció",
+  "alian": "sousàfon, bombardí",
+  "facu": "percussió",
+  "lucas": "trompeta",
+  "juan": "saxo alt",
+  "stefano": "saxo tenor",
+  "albert": "xanques, clown, malabars, jocs",
+  "jordi": "monocicle, clown, malabars, jocs"
+ },
+ "credits_lab": "FITXA ARTÍSTICA",
+ "credits": [
+  ["Direcció artística", "tyle fernández"],
+  ["Composició musical i so", "Cia. VENDAVAL"],
+  ["Vestuari", "Imaginario de Mónica (Mónica Romero) · Tropidelia"],
+  ["Disseny gràfic", "bicialta"],
+  ["Fotografia", "ROAR (David Ugalde) · Barbara Walzer · Jordi Largo · Albert Garcia"],
+  ["Coproducció", "Cia. Filigranes"],
+  ["Producció i distribució", "Cia. VENDAVAL · tyle fernández"]
+ ],
+ "track_lab": "TRAJECTÒRIA",
+ "track": [
+  ["2024–25", "Residència musical, Ateneu la Bòbila, Nou Barris (Barcelona)"],
+  ["2025", "Festes de Porta, Ateneu la Bòbila (Barcelona) · estrena"],
+  ["2026", "Unterwegs Theater Festival, Mühlheim i Dreieich (DE) · 4 passis"],
+  ["2026", "Fira del Vapor, Sant Vicenç de Castellet · 4 passis"],
+  ["2026", "Sommerwerft Theaterfestival, Frankfurt del Main (DE) · 2 passis i tallers"]
+ ],
+ "booking": "Contractació",
+ "contact_lab": "CONTACTE",
+ "who": "tyle fernández {elli}",
+ "who_role": "direcció artística i distribució",
+ "phone_lab": "TELÈFON",
+ "web_lab": "WEB I XARXES",
+ "invoice": "Facturació: Associació sociocultural de circ Tub d'assaig 7.70, Terrassa (entitat sense ànim de lucre, factura exempta d'IVA).",
+ "support": "AMB EL SUPORT DE",
+ "access_contact": "Accessibilitat i contacte",
+ "alt": {
+  "VENDAVAL_FiraVapor001.jpg": "La banda VENDAVAL Brass davant d'un edifici modernista",
+  "IMG_0677.JPG": "El públic assegut al carrer mira un personatge en xanques",
+  "IMG_0780.JPG": "El públic juga amb una gran xarxa blava",
+  "VENDAVAL_Unterwegs001.jpg": "Un personatge en xanques ofereix un salvavides als infants",
+  "VENDAVAL_102.jpg": "Malabars entre les xanques i el monocicle",
+  "VENDAVAL_Unterwegs002.jpg": "La banda toca en un parc envoltada de públic",
+  "IMG_0622.JPG": "Siluetes d'un personatge en xanques jugant amb el públic a contrallum"
+ }
+}
