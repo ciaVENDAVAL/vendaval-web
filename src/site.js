@@ -170,10 +170,10 @@
 })();
 
 // Squid cursor (mouse/trackpad only): looks left; over links and buttons it grabs and looks at the viewer; blinks on click.
-// Off for touch screens, reduced motion and the "stop animations" option; normal cursor in text fields.
+// Off for touch-only screens and with the "stop animations" option; normal cursor in text fields.
 (function () {
   var root = document.documentElement;
-  if (!window.matchMedia || !window.matchMedia('(pointer: fine)').matches) return;
+  if (!window.matchMedia || !window.matchMedia('(any-pointer: fine)').matches) return;
   var NS = 'http://www.w3.org/2000/svg';
   var box = document.createElement('div');
   box.className = 'squid'; box.setAttribute('aria-hidden', 'true');
@@ -192,7 +192,7 @@
     '</svg>';
   var on = false, blinkT;
   function off() {
-    return root.classList.contains('a11y-motion') || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    return root.classList.contains('a11y-motion');
   }
   function textField(el) {
     return el && el.closest && el.closest('input:not([type=button]):not([type=submit]):not([type=checkbox]):not([type=radio]),textarea,select,[contenteditable=""],[contenteditable=true]');
