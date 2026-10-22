@@ -1,0 +1,64 @@
+{
+ "file": "VENDAVAL_{name}_{L}_dossier_2026-10.pdf",
+ "names": {
+  "*": "El-Joc-Etern"
+ },
+ "cover": "el_joc_etern_title_y_dibujo_1.jpg",
+ "rows": {
+  "0": {
+   "photos": [
+    "IMG_0622.JPG",
+    "IMG_0677.JPG",
+    "IMG_0780.JPG"
+   ],
+   "h": 60
+  },
+  "1": {
+   "photos": [
+    "ani_arqui_sketch.jpg",
+    "gigant_mood_1.jpg"
+   ],
+   "h": 70
+  },
+  "2": {
+   "photos": [
+    "creating_windy_2.jpg",
+    "remolc_1.jpg",
+    "creating_windy_3.jpg"
+   ],
+   "h": 60
+  },
+  "3": {
+   "photos": [
+    "creating_windy_5.jpg",
+    "20260401_133927.jpg",
+    "creating_el_Joc_Etern_6.jpg"
+   ],
+   "h": 70
+  },
+  "4": {
+   "photos": [
+    "creating_el_Joc_Etern_8.jpg",
+    "20260331_163157.jpg",
+    "20260401_142447.jpg"
+   ],
+   "h": 75
+  },
+  "5": {
+   "photos": [
+    "creating_el_Joc_Etern_13.jpg",
+    "creating_windy_1.jpg",
+    "creating_el_Joc_Etern_24.jpg"
+   ],
+   "h": 60
+  },
+  "10": {
+   "photos": [
+    "creating_el_Joc_Etern_7.jpg",
+    "creating_windy_4.jpg"
+   ],
+   "h": 100
+  }
+ },
+ "row_h": 55
+}
