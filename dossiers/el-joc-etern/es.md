@@ -12,10 +12,10 @@ Tres criaturas del mar, entre clownescas y mitológicas, buscan el Joc Etern, un
 
 Cinco intérpretes viajan con el Windy, una Vespa eléctrica de tres ruedas que remolca un barco que también es un instrumento. Dos personajes en zancos guían los juegos y la historia, y la criatura que conduce el Windy a veces se desplaza en monociclo entre el público y se pasa mazas de malabares con quien va en zancos.
 
-El espectáculo nace de VENDAVAL Brass, la banda itinerante con la que salimos de gira desde 2025 por Cataluña y Alemania.
 
 ## Dónde estamos
 
+- **Origen**: el espectáculo nace de VENDAVAL Brass, la banda itinerante con la que salimos de gira desde 2025 por Cataluña y Alemania.
 - **Juegos**: probamos juegos participativos en las actuaciones de VENDAVAL Brass. El paso siguiente es un periodo de investigación en 2027 para crear y probar entre 10 y 15 juegos que funcionen en cualquier idioma, y escribir la dramaturgia a partir de lo que de verdad funciona en la calle.
 - **Personajes**: cada intérprete desarrolla un personaje, con un nombre, una manera de caminar y una manera de saludar a la gente a través del sonido.
 - **Estreno**: después del periodo de investigación.
@@ -74,11 +74,9 @@ Los juegos de El Joc Etern también se pueden ofrecer como talleres: zancos, clo
 
 El equipo tiene una larga experiencia formativa. tyle fernández ha dirigido talleres y campamentos de circo social en más de 20 países, también con jóvenes sordes y autistas, y ha conducido un grupo semanal de teatro para personas mayores con capacidades diversas. Albert Pérez y Jordi Torrens (Cia. Filigranes) son miembros fundadores de la escuela de circo Tub d'assaig y han trabajado con Payasos sin Fronteras.
 
-## Equipo
+## Equipo y créditos
 
 **tyle fernández**: dirección artística, zancos, trompeta, acordeón, juegos · **Albert Pérez**: zancos, clown, malabares · **Jordi Torrens**: conducción del Windy, monociclo, malabares · **Alián Rodrigues** y **Stefano Ferraro**: loop station, electrónica, batería, instrumentos reciclados
-
-## Créditos
 
 **Escenario móvil**: Uli Weigel · **Vehículo eléctrico**: Pepe Ferros · **Vestuario**: [Imaginario de Mónica](https://imaginariodemonica.wordpress.com) · **Diseño gráfico**: [bicialta](https://linktr.ee/bicialta) · **Fotografía**: [David Ugalde / ROAR](https://www.instagram.com/roar_audiovisual), [Jordi Largo](https://jordilargo.com) · **Música y sonido**: Cia. VENDAVAL
 

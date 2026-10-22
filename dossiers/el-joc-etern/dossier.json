@@ -5,85 +5,108 @@
  },
  "cover": "el_joc_etern_title_y_dibujo_1.jpg",
  "rows": {
-  "0": [
-   {
-    "photos": [
-     "IMG_0622.JPG"
-    ],
-    "h": 50
-   },
-   {
-    "photos": [
-     "IMG_0677.JPG",
-     "IMG_0780.JPG"
-    ],
-    "h": 40
-   }
-  ],
-  "1": [
-   {
-    "photos": [
-     "creating_windy_2.jpg",
-     "remolc_1.jpg"
-    ],
-    "h": 40
-   },
-   {
-    "photos": [
-     "creating_windy_3.jpg",
-     "creating_windy_1.jpg"
-    ],
-    "h": 45
-   },
-   {
-    "photos": [
-     "creating_el_Joc_Etern_24.jpg",
-     "creating_el_Joc_Etern_6.jpg"
-    ],
-    "h": 35
-   }
-  ],
-  "2": [
-   {
-    "photos": [
-     "ani_arqui_sketch.jpg",
-     "gigant_mood_1.jpg"
-    ],
-    "h": 70
-   }
-  ],
-  "3": [
-   {
-    "photos": [
-     "20260401_133927.jpg"
-    ],
-    "h": 85
-   }
-  ],
-  "4": [
-   {
-    "photos": [
-     "creating_el_Joc_Etern_13.jpg",
-     "creating_el_Joc_Etern_8.jpg"
-    ],
-    "h": 60
-   },
-   {
-    "photos": [
-     "20260331_163157.jpg",
-     "20260401_142447.jpg"
-    ],
-    "h": 60
-   }
-  ],
-  "5": [
-   {
-    "photos": [
-     "VENDAVAL_salvavidas_publico.jpg"
-    ],
-    "h": 85
-   }
-  ]
+  "0": {
+   "wide": [
+    {
+     "photos": [
+      "IMG_0622.JPG"
+     ],
+     "h": 90
+    },
+    {
+     "photos": [
+      "IMG_0677.JPG",
+      "IMG_0780.JPG"
+     ],
+     "h": 60
+    }
+   ]
+  },
+  "1": {
+   "side": 95,
+   "rows": [
+    {
+     "photos": [
+      "creating_windy_2.jpg"
+     ],
+     "h": 65
+    },
+    {
+     "photos": [
+      "remolc_1.jpg",
+      "creating_windy_3.jpg"
+     ],
+     "h": 60
+    }
+   ],
+   "wide": [
+    {
+     "photos": [
+      "creating_windy_1.jpg",
+      "creating_el_Joc_Etern_24.jpg",
+      "creating_el_Joc_Etern_6.jpg"
+     ],
+     "h": 60
+    }
+   ]
+  },
+  "2": {
+   "side": 75,
+   "rows": [
+    {
+     "photos": [
+      "ani_arqui_sketch.jpg",
+      "gigant_mood_1.jpg"
+     ],
+     "h": 80
+    }
+   ]
+  },
+  "3": {
+   "side": 72,
+   "rows": [
+    {
+     "photos": [
+      "20260401_133927.jpg"
+     ],
+     "h": 110
+    }
+   ]
+  },
+  "4": {
+   "wide": [
+    {
+     "photos": [
+      "creating_el_Joc_Etern_13.jpg",
+      "creating_el_Joc_Etern_8.jpg",
+      "20260331_163157.jpg",
+      "20260401_142447.jpg"
+     ],
+     "h": 75
+    }
+   ]
+  },
+  "5": {
+   "side": 100,
+   "flip": 1,
+   "rows": [
+    {
+     "photos": [
+      "VENDAVAL_salvavidas_publico.jpg"
+     ],
+     "h": 90
+    }
+   ]
+  },
+  "6": {
+   "cols": true
+  },
+  "7": {
+   "cols": true
+  },
+  "9": {
+   "cols": true
+  }
  },
  "row_h": 55,
  "keep_photos": true,

@@ -55,10 +55,11 @@ li{margin:0 0 1.2mm}
 a{color:#0f8a94}
 .photos{display:flex;gap:3mm;justify-content:center;margin:6mm 0 0;break-inside:avoid}
 .photos img{display:block;border-radius:4px}
-.contact{margin-top:10mm;background:#f5ebdd;border-left:5px solid #1ab3bf;border-radius:6px;padding:5mm 6mm;break-inside:avoid}
+.contact{margin-top:7mm;background:#f5ebdd;border-left:5px solid #1ab3bf;border-radius:6px;padding:5mm 6mm;break-inside:avoid}
 .contact h2{border:0;margin:0 0 2mm;padding:0}
 .contact p{margin:0 0 1mm}
-.tc{display:flex;gap:6mm;align-items:flex-start;break-inside:avoid;margin-top:7mm}
+.tcw{break-inside:avoid;margin-top:7mm}.tcw .photos{margin-top:3mm}
+.tc{display:flex;gap:6mm;align-items:flex-start}
 .tc.flip{flex-direction:row-reverse}
 .tc .txt{flex:1 1 0;min-width:0}.tc .txt h2{margin-top:0}
 .tc .ph{flex:0 0 82mm}.tc .ph .photos{margin:0 0 2.5mm;gap:2.5mm}
@@ -96,15 +97,23 @@ def render_html(cfg, lang):
     rows = cfg.get('rows', {})
     for i, (h, body) in enumerate(body_secs):
         cls = ' class="long"' if len(body) > 900 else ''
-        r = rows.get(str(i)); rs = r if isinstance(r, list) else ([r] if r else [])
+        r = rows.get(str(i)); lay = r if isinstance(r, dict) and ('side' in r or 'wide' in r or 'cols' in r) else None
+        if lay: r = lay.get('rows', [])
+        rs = r if isinstance(r, list) else ([r] if r else [])
         extra = ''.join(row(x['photos'] if isinstance(x, dict) else x, x.get('h', cfg.get('row_h', 55)) if isinstance(x, dict) else cfg.get('row_h', 55)) for x in rs)
         if cfg.get('two_col'):  # magazine layout: text | photos side by side, sections without photos in 2 columns
+            sw = (lay or {}).get('side', 82)
+            wide = ''.join(row(x['photos'], x.get('h', 90), width_mm=178, gap=3) for x in (lay or {}).get('wide', []))
             if rs:
-                side = ''.join(row(x['photos'] if isinstance(x, dict) else x, x.get('h', 80) if isinstance(x, dict) else 80, width_mm=82, gap=2.5) for x in rs)
-                flip = ' flip' if i % 2 else ''
-                out.append(f'<div class="tc{flip}"><div class="txt"><h2>{h}</h2>{M(body)}</div><div class="ph">{side}</div></div>')
-            else:
+                side = ''.join(row(x['photos'] if isinstance(x, dict) else x, x.get('h', 80) if isinstance(x, dict) else 80, width_mm=sw, gap=2.5) for x in rs)
+                flip = ' flip' if (lay or {}).get('flip', i % 2) else ''
+                out.append(f'<div class="tcw"><div class="tc{flip}"><div class="txt"><h2>{h}</h2>{M(body)}</div><div class="ph" style="flex:0 0 {sw}mm">{side}</div></div>{wide}</div>')
+            elif wide:
+                out.append(f'<div class="tcw"><section><h2>{h}</h2>{M(body)}</section>{wide}</div>')
+            elif (lay or {}).get('cols'):
                 out.append(f'<section class="c2"><h2>{h}</h2><div class="cols">{M(body)}</div></section>')
+            else:
+                out.append(f'<section{cls}><h2>{h}</h2>{M(body)}</section>')
         elif cfg.get('keep_photos'):  # section and its photos never split across pages
             out.append(f'<div style="break-inside:avoid"><section><h2>{h}</h2>{M(body)}</section>{extra}</div>')
         else:
