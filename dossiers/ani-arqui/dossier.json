@@ -1,0 +1,10 @@
+{
+ "file": "VENDAVAL_{name}_{L}_concept_2026-10.pdf",
+ "names": {"*": "Ani-Arqui"},
+ "cover": "ani_arqui_sketch.jpg",
+ "cover_h": 105,
+ "rows": {
+  "1": {"photos": ["giant_hand_extension_test.jpg"], "h": 60}
+ },
+ "row_h": 55
+}

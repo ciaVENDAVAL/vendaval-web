@@ -110,6 +110,10 @@ LANG = {
    kicker='DOSSIER · TALLERS DE XANQUES · 2026-10', sub='Per a infants, joves i persones adultes',
    keys=[('8+', 'Anys'), ('2', 'Hores'), ('20', 'Participants màx.'), ('0', 'Endolls necessaris')],
    foot=['CONTACTE', 'CORREU', 'TEL.', 'WEB'], who='tyle fernández {elli}', title='VENDAVAL – Tallers de xanques'),
+ 'de': dict(out='VENDAVAL_Stelzenworkshops_DE_dossier.pdf',
+   kicker='DOSSIER · STELZENWORKSHOPS · 2026-10', sub='Für Kinder, Jugendliche und Erwachsene',
+   keys=[('8+', 'Jahre'), ('2', 'Stunden'), ('20', 'Teilnehmende max.'), ('0', 'Strom nötig')],
+   foot=['KONTAKT', 'E-MAIL', 'TEL.', 'WEB'], who='tyle fernández (dey/dem)', title='VENDAVAL – Stelzenworkshops'),
  'es': dict(out='VENDAVAL_Talleres-Zancos_ES_dossier.pdf',
    kicker='DOSSIER · TALLERES DE ZANCOS · 2026-10', sub='Para peques, jóvenes y personas adultas',
    keys=[('8+', 'Años'), ('2', 'Horas'), ('20', 'Participantes máx.'), ('0', 'Enchufes necesarios')],
@@ -141,7 +145,7 @@ def blocks(lines):
 
 # photo blocks after each section, by index (same structure in every language)
 def after(code):
-    w1, w6 = {'en': (110, 98), 'ca': (80, 100), 'es': (80, 100)}[code]
+    w1, w6 = {'en': (110, 98), 'de': (60, 80), 'ca': (80, 100), 'es': (80, 100)}[code]
     return {
         0: row(['tallers_zancos_2', 'stilts_workshops_2']),
         1: row(['stilts_workshop_40', 'tyle_stilts_portfolio_3'], w1),

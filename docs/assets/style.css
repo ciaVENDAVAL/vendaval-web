@@ -532,3 +532,4 @@ html.a11y-dark .a11y-panel button[aria-pressed="true"]{background:#6fd3db;color:
 html.a11y-dark .a11y-title{color:#f5ebdd}
 html.a11y-dark .brand img{background:#fff;border-radius:10px;padding:2px 6px}
 html.a11y-dark .dl-kind,html.a11y-dark .dl-kicker{color:#9fdde2}
+.dl-draft{display:inline-block;font:700 .72rem/1 var(--body);font-style:normal;text-transform:uppercase;letter-spacing:.05em;background:var(--yellow,#f5b83d);color:#1b2b3a;padding:3px 7px;border-radius:99px;vertical-align:2px;margin-left:4px}
