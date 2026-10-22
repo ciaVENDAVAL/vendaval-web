@@ -33,7 +33,7 @@ Los dragones atraviesan todo el mundo del espectáculo: dragones pequeños que s
 
 Si el presupuesto lo permite, desarrollaremos dos figuras más grandes como producciones aparte, que también podrán salir de gira como pasacalles independientes:
 
-- **Ani Arqui, el Pacífico (el Gigante del Mar)**: un dios-demonio del océano de unos 3 m de altura, mucho más grande que una figura habitual en zancos. Es un robot acuático al estilo de Neptuno con estética anime, hecho de goma EVA con detalles impresos en 3D. Lleva un carnyx, una trompeta medieval de 2 m que se oye en todas las calles. Antiguamente el carnyx llamaba a la guerra; Ani Arqui viene en paz, a tocar y jugar con el pueblo de los dragones. Su nombre juega con la palabra «anarquista». Dosier de concepto a petición.
+- **Ani Arqui, el Pacífico (el Gigante del Mar)**: un dios-demonio del océano de unos 3 m de altura, mucho más grande que una figura habitual en zancos. Es un robot acuático al estilo de Neptuno con estética anime, hecho de goma EVA con detalles impresos en 3D. Lleva un carnyx, una trompeta medieval de 2 m que se oye en todas las calles. Antiguamente el carnyx llamaba a la guerra; Ani Arqui viene en paz, a tocar y jugar con el pueblo de los dragones. Dosier de concepto a petición.
 - **El Dragón**: de momento solo es una idea (un títere volador o un dragón en zancos de cuatro patas).
 
 ## La música
