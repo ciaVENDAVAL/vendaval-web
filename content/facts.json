@@ -106,7 +106,7 @@
  "external_pdfs": {
   "VENDAVAL Brass dossier/rider 2026-09": "made outside this generator (design files with tyle) — edit by hand",
   "Concert in the audience 2026-10": "made in the FiM 2027 conversation (WeasyPrint) — rebuild there",
-  "El Joc Etern / Stilts workshops": "old generator lost on 19 Oct — rebuild in dossiers/ before the next change"
+  "El Joc Etern": "old generator lost on 19 Oct — on hold until the new dossier"
  },
  "ignore_cross_language": [
   "ciafiligranes.net/en/workshops",
