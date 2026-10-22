@@ -4,12 +4,41 @@
  "cover_where": "CIRCO DE RUA · BARCELONA",
  "cover_tag": "JOGOS & MÚSICA AO VIVO",
  "cover_format": "ARRUADA ACÚSTICA",
- "figures": [["8", "ARTISTAS"], ["30′", "SESSÕES · VÁRIAS POR DIA"], ["0", "TÉCNICOS NECESSÁRIOS"], ["100%", "ACÚSTICO"]],
+ "figures": [
+  [
+   "8",
+   "ARTISTAS"
+  ],
+  [
+   "30′",
+   "SESSÕES · VÁRIAS POR DIA"
+  ],
+  [
+   "0",
+   "TÉCNICOS NECESSÁRIOS"
+  ],
+  [
+   "100%",
+   "ACÚSTICO"
+  ]
+ ],
  "played_at": "JÁ ATUÁMOS EM",
  "festivals": [
-  ["unterwegs.png", "Unterwegs Theater Festival", "Mühlheim e Dreieich (DE) · 2026"],
-  ["sommerwerft.png", "Sommerwerft Theaterfestival", "Francoforte do Meno (DE) · 2026"],
-  ["fira-vapor.png", "Fira del Vapor", "Sant Vicenç de Castellet (ES) · 2026"]
+  [
+   "unterwegs.png",
+   "Unterwegs Theater Festival",
+   "Mühlheim e Dreieich (DE) · 2026"
+  ],
+  [
+   "sommerwerft.png",
+   "Sommerwerft Theaterfestival",
+   "Francoforte do Meno (DE) · 2026"
+  ],
+  [
+   "fira-vapor.png",
+   "Fira del Vapor",
+   "Sant Vicenç de Castellet (ES) · 2026"
+  ]
  ],
  "street_kicker": "NA RUA",
  "street_title": "A rua é de todas as pessoas",
@@ -51,18 +80,48 @@
  "updated": "ATUALIZADA EM OUTUBRO DE 2026",
  "tech_title": "Tudo o que precisa de saber",
  "getin": [
-  ["MONTAGEM · CERCA DE 2 H, NO PRÓPRIO DIA", "Descarga 10′ · Montagem 20′ · Teste de som 30′ · Maquilhagem e guarda-roupa 60′"],
-  ["DESMONTAGEM · CERCA DE 1 H", "Desmontagem 20′ · Guarda-roupa 30′ · Carga 10′"]
+  [
+   "MONTAGEM · CERCA DE 2 H, NO PRÓPRIO DIA",
+   "Descarga 10′ · Montagem 20′ · Teste de som 30′ · Maquilhagem e guarda-roupa 60′"
+  ],
+  [
+   "DESMONTAGEM · CERCA DE 1 H",
+   "Desmontagem 20′ · Guarda-roupa 30′ · Carga 10′"
+  ]
  ],
  "tech": [
-  ["DURAÇÃO", "Sessões de 30 minutos, várias por dia, sempre com 30 minutos de pausa entre sessões."],
-  ["ESPAÇO E PERCURSO", "Rua ou praça, ao mesmo nível do público. O percurso pode incluir rampas e escadas, mas é melhor se for plano."],
-  ["HORÁRIO E CALOR", "De dia ou de noite. No verão, evitem programar entre as 12h e as 19h ao sol direto; à sombra é possível."],
-  ["SOM", "Arruada: acústico, sem amplificação. Versão amplificada na praça (Concerto no meio do público): a companhia traz 8 microfones sem fios; PA da organização."],
-  ["LUZ", "A companhia adapta-se à iluminação da rua. Não é necessária qualquer instalação externa."],
-  ["CHUVA", "Com chuva não se pode tocar por causa dos instrumentos. A companhia pode esperar e atuar mais tarde ou noutro dia. A rua molhada não é problema. Alternativa: uma sala grande com pelo menos 5 m de altura."],
-  ["LOGÍSTICA", "Estacionamento para 2 veículos. Camarim para 8 pessoas com mesas para maquilhagem (a companhia pode trazer espelhos e luzes)."],
-  ["REFEIÇÕES", "2 sem carne (peixe, ovos e laticínios, sim) e 6 sem dieta específica."]
+  [
+   "DURAÇÃO",
+   "Sessões de 30 minutos, várias por dia, sempre com 30 minutos de pausa entre sessões."
+  ],
+  [
+   "ESPAÇO E PERCURSO",
+   "Rua ou praça, ao mesmo nível do público. O percurso pode incluir rampas e escadas, mas é melhor se for plano."
+  ],
+  [
+   "HORÁRIO E CALOR",
+   "De dia ou de noite. No verão, evitem programar entre as 12h e as 19h ao sol direto; à sombra é possível."
+  ],
+  [
+   "SOM",
+   "Arruada: acústico, sem amplificação. Versão amplificada na praça (Concerto no meio do público): a companhia traz 8 microfones sem fios; PA da organização."
+  ],
+  [
+   "LUZ",
+   "A companhia adapta-se à iluminação da rua. Não é necessária qualquer instalação externa."
+  ],
+  [
+   "CHUVA",
+   "Com chuva não se pode tocar por causa dos instrumentos. A companhia pode esperar e atuar mais tarde ou noutro dia. A rua molhada não é problema. Alternativa: uma sala grande com pelo menos 5 m de altura."
+  ],
+  [
+   "LOGÍSTICA",
+   "Estacionamento para 2 veículos. Camarim para 8 pessoas com mesas para maquilhagem (a companhia pode trazer espelhos e luzes)."
+  ],
+  [
+   "REFEIÇÕES",
+   "2 sem carne (peixe, ovos e laticínios, sim) e 6 sem dieta específica."
+  ]
  ],
  "tech_note": "A companhia traz todo o material: andas, monociclo, material de malabares, instrumentos, adereços para os jogos, maquilhagem e guarda-roupa.",
  "crew_kicker": "QUEM SOMOS",
@@ -79,25 +138,61 @@
  },
  "credits_lab": "FICHA ARTÍSTICA",
  "credits": [
-  ["Direção artística", "tyle fernández"],
-  ["Música e som", "Cia. VENDAVAL"],
-  ["Guarda-roupa", "Imaginario de Mónica (Mónica Romero) · Tropidelia"],
-  ["Design gráfico", "bicialta"],
-  ["Fotografia", "ROAR (David Ugalde) · Barbara Walzer · Jordi Largo · Albert Garcia"],
-  ["Coprodução", "Cia. Filigranes"],
-  ["Produção e difusão", "Cia. VENDAVAL · tyle fernández"]
+  [
+   "Direção artística",
+   "tyle fernández"
+  ],
+  [
+   "Música e som",
+   "Cia. VENDAVAL"
+  ],
+  [
+   "Guarda-roupa",
+   "Imaginario de Mónica (Mónica Romero) · Tropidelia"
+  ],
+  [
+   "Design gráfico",
+   "bicialta"
+  ],
+  [
+   "Fotografia",
+   "ROAR (David Ugalde) · Barbara Walzer · Jordi Largo · Albert Garcia"
+  ],
+  [
+   "Coprodução",
+   "Cia. Filigranes"
+  ],
+  [
+   "Produção e difusão",
+   "Cia. VENDAVAL · tyle fernández"
+  ]
  ],
  "track_lab": "PERCURSO",
  "track": [
-  ["2024–25", "Residência musical, Ateneu la Bòbila, Nou Barris (Barcelona)"],
-  ["2025", "Festes de Porta, Ateneu la Bòbila (Barcelona) · estreia"],
-  ["2026", "Unterwegs Theater Festival, Mühlheim e Dreieich (DE) · 4 sessões"],
-  ["2026", "Fira del Vapor, Sant Vicenç de Castellet (ES) · 4 sessões"],
-  ["2026", "Sommerwerft Theaterfestival, Francoforte do Meno (DE) · 2 sessões e oficinas"]
+  [
+   "2024–25",
+   "Residência musical, Ateneu la Bòbila, Nou Barris (Barcelona)"
+  ],
+  [
+   "2025",
+   "Festes de Porta, Ateneu la Bòbila (Barcelona) · estreia"
+  ],
+  [
+   "2026",
+   "Unterwegs Theater Festival, Mühlheim e Dreieich (DE) · 4 sessões"
+  ],
+  [
+   "2026",
+   "Fira del Vapor, Sant Vicenç de Castellet (ES) · 4 sessões"
+  ],
+  [
+   "2026",
+   "Sommerwerft Theaterfestival, Francoforte do Meno (DE) · 2 sessões e oficinas"
+  ]
  ],
  "booking": "Contratação",
  "contact_lab": "CONTACTO",
- "who": "tyle fernández",
+ "who": "tyle fernández (elu)",
  "who_role": "direção artística e difusão",
  "phone_lab": "TELEFONE",
  "web_lab": "WEB E REDES",

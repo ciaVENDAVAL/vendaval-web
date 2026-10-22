@@ -4,12 +4,41 @@
  "cover_where": "CIRCO DI STRADA · BARCELLONA",
  "cover_tag": "GIOCHI & MUSICA DAL VIVO",
  "cover_format": "PARATA ACUSTICA ITINERANTE",
- "figures": [["8", "ARTISTI"], ["30′", "REPLICHE · PIÙ AL GIORNO"], ["0", "TECNICI NECESSARI"], ["100%", "ACUSTICO"]],
+ "figures": [
+  [
+   "8",
+   "ARTISTI"
+  ],
+  [
+   "30′",
+   "REPLICHE · PIÙ AL GIORNO"
+  ],
+  [
+   "0",
+   "TECNICI NECESSARI"
+  ],
+  [
+   "100%",
+   "ACUSTICO"
+  ]
+ ],
  "played_at": "ABBIAMO SUONATO A",
  "festivals": [
-  ["unterwegs.png", "Unterwegs Theater Festival", "Mühlheim e Dreieich (DE) · 2026"],
-  ["sommerwerft.png", "Sommerwerft Theaterfestival", "Francoforte sul Meno (DE) · 2026"],
-  ["fira-vapor.png", "Fira del Vapor", "Sant Vicenç de Castellet (ES) · 2026"]
+  [
+   "unterwegs.png",
+   "Unterwegs Theater Festival",
+   "Mühlheim e Dreieich (DE) · 2026"
+  ],
+  [
+   "sommerwerft.png",
+   "Sommerwerft Theaterfestival",
+   "Francoforte sul Meno (DE) · 2026"
+  ],
+  [
+   "fira-vapor.png",
+   "Fira del Vapor",
+   "Sant Vicenç de Castellet (ES) · 2026"
+  ]
  ],
  "street_kicker": "IN STRADA",
  "street_title": "La strada è di tutte le persone",
@@ -51,18 +80,48 @@
  "updated": "AGGIORNATA OTTOBRE 2026",
  "tech_title": "Tutto quello che serve sapere",
  "getin": [
-  ["MONTAGGIO · CIRCA 2 ORE, LO STESSO GIORNO", "Scarico 10′ · Montaggio 20′ · Prova del suono 30′ · Trucco e costumi 60′"],
-  ["SMONTAGGIO · CIRCA 1 ORA", "Smontaggio 20′ · Costumi 30′ · Carico 10′"]
+  [
+   "MONTAGGIO · CIRCA 2 ORE, LO STESSO GIORNO",
+   "Scarico 10′ · Montaggio 20′ · Prova del suono 30′ · Trucco e costumi 60′"
+  ],
+  [
+   "SMONTAGGIO · CIRCA 1 ORA",
+   "Smontaggio 20′ · Costumi 30′ · Carico 10′"
+  ]
  ],
  "tech": [
-  ["DURATA", "Repliche di 30 minuti, più al giorno, sempre con 30 minuti di pausa tra una e l'altra."],
-  ["SPAZIO E PERCORSO", "Strada o piazza, allo stesso livello del pubblico. Il percorso può includere rampe e scale, ma è meglio se è pianeggiante."],
-  ["ORARI E CALDO", "Di giorno o di notte. In estate, evitate di programmare tra le 12 e le 19 sotto il sole diretto; all'ombra è possibile."],
-  ["AUDIO", "Itinerante: acustico, senza amplificazione. Versione amplificata in piazza (Concerto in mezzo al pubblico): la compagnia porta 8 microfoni wireless; impianto dell'organizzazione."],
-  ["LUCI", "La compagnia si adatta all'illuminazione della strada. Non serve alcun impianto esterno."],
-  ["PIOGGIA", "Sotto la pioggia non si può suonare a causa degli strumenti. La compagnia può aspettare e suonare più tardi o un altro giorno. La strada bagnata non è un problema. Alternativa: una grande sala alta almeno 5 m."],
-  ["LOGISTICA", "Parcheggio per 2 veicoli. Camerino per 8 persone con tavoli per il trucco (la compagnia può portare specchi e luci)."],
-  ["PASTI", "2 senza carne (pesce, uova e latticini sì) e 6 senza esigenze particolari."]
+  [
+   "DURATA",
+   "Repliche di 30 minuti, più al giorno, sempre con 30 minuti di pausa tra una e l'altra."
+  ],
+  [
+   "SPAZIO E PERCORSO",
+   "Strada o piazza, allo stesso livello del pubblico. Il percorso può includere rampe e scale, ma è meglio se è pianeggiante."
+  ],
+  [
+   "ORARI E CALDO",
+   "Di giorno o di notte. In estate, evitate di programmare tra le 12 e le 19 sotto il sole diretto; all'ombra è possibile."
+  ],
+  [
+   "AUDIO",
+   "Itinerante: acustico, senza amplificazione. Versione amplificata in piazza (Concerto in mezzo al pubblico): la compagnia porta 8 microfoni wireless; impianto dell'organizzazione."
+  ],
+  [
+   "LUCI",
+   "La compagnia si adatta all'illuminazione della strada. Non serve alcun impianto esterno."
+  ],
+  [
+   "PIOGGIA",
+   "Sotto la pioggia non si può suonare a causa degli strumenti. La compagnia può aspettare e suonare più tardi o un altro giorno. La strada bagnata non è un problema. Alternativa: una grande sala alta almeno 5 m."
+  ],
+  [
+   "LOGISTICA",
+   "Parcheggio per 2 veicoli. Camerino per 8 persone con tavoli per il trucco (la compagnia può portare specchi e luci)."
+  ],
+  [
+   "PASTI",
+   "2 senza carne (pesce, uova e latticini sì) e 6 senza esigenze particolari."
+  ]
  ],
  "tech_note": "La compagnia porta tutto il materiale: trampoli, monociclo, attrezzi da giocoleria, strumenti, oggetti per i giochi, trucco e costumi.",
  "crew_kicker": "CHI SIAMO",
@@ -79,25 +138,61 @@
  },
  "credits_lab": "CREDITI",
  "credits": [
-  ["Direzione artistica", "tyle fernández"],
-  ["Musica e suono", "Cia. VENDAVAL"],
-  ["Costumi", "Imaginario de Mónica (Mónica Romero) · Tropidelia"],
-  ["Grafica", "bicialta"],
-  ["Fotografia", "ROAR (David Ugalde) · Barbara Walzer · Jordi Largo · Albert Garcia"],
-  ["Coproduzione", "Cia. Filigranes"],
-  ["Produzione e distribuzione", "Cia. VENDAVAL · tyle fernández"]
+  [
+   "Direzione artistica",
+   "tyle fernández"
+  ],
+  [
+   "Musica e suono",
+   "Cia. VENDAVAL"
+  ],
+  [
+   "Costumi",
+   "Imaginario de Mónica (Mónica Romero) · Tropidelia"
+  ],
+  [
+   "Grafica",
+   "bicialta"
+  ],
+  [
+   "Fotografia",
+   "ROAR (David Ugalde) · Barbara Walzer · Jordi Largo · Albert Garcia"
+  ],
+  [
+   "Coproduzione",
+   "Cia. Filigranes"
+  ],
+  [
+   "Produzione e distribuzione",
+   "Cia. VENDAVAL · tyle fernández"
+  ]
  ],
  "track_lab": "PERCORSO",
  "track": [
-  ["2024–25", "Residenza musicale, Ateneu la Bòbila, Nou Barris (Barcellona)"],
-  ["2025", "Festes de Porta, Ateneu la Bòbila (Barcellona) · debutto"],
-  ["2026", "Unterwegs Theater Festival, Mühlheim e Dreieich (DE) · 4 repliche"],
-  ["2026", "Fira del Vapor, Sant Vicenç de Castellet (ES) · 4 repliche"],
-  ["2026", "Sommerwerft Theaterfestival, Francoforte sul Meno (DE) · 2 repliche e laboratori"]
+  [
+   "2024–25",
+   "Residenza musicale, Ateneu la Bòbila, Nou Barris (Barcellona)"
+  ],
+  [
+   "2025",
+   "Festes de Porta, Ateneu la Bòbila (Barcellona) · debutto"
+  ],
+  [
+   "2026",
+   "Unterwegs Theater Festival, Mühlheim e Dreieich (DE) · 4 repliche"
+  ],
+  [
+   "2026",
+   "Fira del Vapor, Sant Vicenç de Castellet (ES) · 4 repliche"
+  ],
+  [
+   "2026",
+   "Sommerwerft Theaterfestival, Francoforte sul Meno (DE) · 2 repliche e laboratori"
+  ]
  ],
  "booking": "Contatti e booking",
  "contact_lab": "CONTATTO",
- "who": "tyle fernández",
+ "who": "tyle fernández (loro/ə)",
  "who_role": "direzione artistica e distribuzione",
  "phone_lab": "TELEFONO",
  "web_lab": "WEB E SOCIAL",

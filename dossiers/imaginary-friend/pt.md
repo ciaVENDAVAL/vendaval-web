@@ -65,7 +65,7 @@ VENDAVAL quer chegar a todos os públicos, também às pessoas com deficiência.
 
 ## Contacto
 
-tyle fernández
+tyle fernández (elu)
 **Email**: VENDAVAL@anartist.org
 **Tel.**: +34 644 389 757
 **Web**: [www.VENDAVAL.cat](https://www.VENDAVAL.cat)
