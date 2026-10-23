@@ -38,7 +38,7 @@ def build_static():
             if p.name not in ('img', 'press'): (shutil.rmtree if p.is_dir() else pathlib.Path.unlink)(p)
     shutil.copytree(STATIC, OUT, dirs_exist_ok=True)
     (OUT/'assets').mkdir(exist_ok=True)
-    for f in ('style.css', 'site.js', 'crew.js'): shutil.copy(SRC/f, OUT/'assets'/f)
+    for f in ('style.css', 'site.js', 'crew.js', 'toys.js'): shutil.copy(SRC/f, OUT/'assets'/f)
     shutil.copytree(SRC/'crew-data', OUT/'assets'/'crew-data', dirs_exist_ok=True)
     # any new photo in source-images/ that has no web version yet
     for f in sorted(IMGSRC.iterdir()):
