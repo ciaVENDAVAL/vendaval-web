@@ -330,5 +330,10 @@
   "prev": "Vorheriges Foto",
   "next": "Nächstes Foto",
   "close": "Schließen"
+ },
+ "chimera": {
+  "title": "Sing mit uns!",
+  "text": "Komm in den Chimären-Chor.",
+  "cta": "VENDAVAL Chimera Opera spielen"
  }
 }

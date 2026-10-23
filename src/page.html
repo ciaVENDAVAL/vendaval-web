@@ -197,6 +197,10 @@
     </div>
     {% endif %}
     <p class="wrap back-shows"><a href="{{ H }}#shows">← {{ t.shows.back }}</a></p>
+    {% if s.id == 'joc' %}<div class="wrap"><a class="chimera-card" href="{{ R }}chimera-opera/?lang={{ lang }}">
+      <img loading="lazy" src="{{ R }}img/chimera-opera-800.webp" alt="VENDAVAL Chimera Opera">
+      <span class="cc-text"><strong>{{ t.chimera.title }}</strong> {{ t.chimera.text }} <span class="btn btn-small">{{ t.chimera.cta }} →</span></span>
+    </a></div>{% endif %}
     {% set sup = agenda_up|selectattr('show', 'equalto', s.id)|list %}{% set spast = agenda_past|selectattr('show', 'equalto', s.id)|list %}
     {% if sup or spast %}<div class="wrap agenda show-agenda" data-today="{{ today }}">
       <h2>{{ t.agenda.show_dates }}</h2>
