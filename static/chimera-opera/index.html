@@ -98,17 +98,14 @@ const snap=(m)=>{m=Math.round(m);for(let d=0;d<7;d++){if(inScale(m+d))return m+d
 const hz=m=>440*Math.pow(2,(m-69)/12);
 
 let ac,master,wet;
-const LOW=matchMedia('(pointer:coarse)').matches||/Android|iPhone|iPad/.test(navigator.userAgent);
 function initAudio(){
-  // bigger audio buffer on phones = no crackles (a little more delay is fine for this toy)
-  ac=new (window.AudioContext||window.webkitAudioContext)({latencyHint:LOW?'playback':'balanced'});
-  master=ac.createGain(); master.gain.value=.3;               // headroom: 3 voices never clip
-  const lim=ac.createDynamicsCompressor(); lim.threshold.value=-6; lim.knee.value=6; lim.ratio.value=8; lim.attack.value=.005; lim.release.value=.2;
-  master.connect(lim); lim.connect(ac.destination);
-  // light echo-reverb (two filtered feedback delays) instead of a heavy convolver
-  wet=ac.createGain(); wet.gain.value=.22;
-  [[.089,.42],[.131,.38]].forEach(([dt,fb])=>{ const d=ac.createDelay(1); d.delayTime.value=dt; const f=ac.createBiquadFilter(); f.type='lowpass'; f.frequency.value=2200; const g=ac.createGain(); g.gain.value=fb;
-    wet.connect(d); d.connect(f); f.connect(g); g.connect(d); f.connect(lim); });
+  ac=new (window.AudioContext||window.webkitAudioContext)();
+  master=ac.createGain(); master.gain.value=.55;
+  const comp=ac.createDynamicsCompressor(); master.connect(comp); comp.connect(ac.destination);
+  // simple hall reverb
+  const len=ac.sampleRate*2.4, ir=ac.createBuffer(2,len,ac.sampleRate);
+  for(let ch=0;ch<2;ch++){const d=ir.getChannelData(ch);for(let i=0;i<len;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/len,3);}
+  const conv=ac.createConvolver(); conv.buffer=ir; wet=ac.createGain(); wet.gain.value=.32; wet.connect(conv); conv.connect(comp);
   C.forEach(makeVoice);
 }
 function makeVoice(c){
@@ -123,17 +120,14 @@ function makeVoice(c){
   [o1,o2,lfo].forEach(o=>o.start());
   c.v={g,o1,o2,lg,fs};
 }
-// glide a parameter without clicks: freeze it where it is now, then move (Firefox-safe, no event pile-up)
-function glide(prm,to,now,tc){ prm.cancelScheduledValues(now); prm.setValueAtTime(prm.value,now); prm.setTargetAtTime(to,now,tc); }
 function voiceSet(c,now){
   if(!c.v) return;
   const f=hz(c.midi);
-  glide(c.v.o1.frequency,f,now,.05); glide(c.v.o2.frequency,f,now,.05);
-  const F=FORM[VOW[c.vow]]; c.v.fs.forEach((fl,i)=>glide(fl.frequency,F[i]*c.fs,now,.06));
+  c.v.o1.frequency.setTargetAtTime(f,now,.035); c.v.o2.frequency.setTargetAtTime(f,now,.035);
+  const F=FORM[VOW[c.vow]]; c.v.fs.forEach((fl,i)=>fl.frequency.setTargetAtTime(F[i]*c.fs,now,.06));
 }
-function voiceOn(c){ if(!c.v) return; const n=ac.currentTime; voiceSet(c,n); glide(c.v.g.gain,c===C[2]?.75:.55,n,.04);
-  const lg=c.v.lg.gain; lg.cancelScheduledValues(n); lg.setValueAtTime(lg.value,n); lg.linearRampToValueAtTime(22,n+.6); }
-function voiceOff(c){ if(!c.v) return; glide(c.v.g.gain,0,ac.currentTime,.08); }
+function voiceOn(c){ if(!c.v) return; const n=ac.currentTime; voiceSet(c,n); c.v.g.gain.cancelScheduledValues(n); c.v.g.gain.setTargetAtTime(c===C[2]?.75:.55,n,.04); c.v.lg.gain.cancelScheduledValues(n); c.v.lg.gain.setValueAtTime(0,n); c.v.lg.gain.linearRampToValueAtTime(22,n+.6); }
+function voiceOff(c){ if(!c.v) return; const n=ac.currentTime; c.v.g.gain.cancelScheduledValues(n); c.v.g.gain.setTargetAtTime(0,n,.09); }
 
 // ---------- state
 C.forEach((c,i)=>{c.midi=snap((c.lo+c.hi)/2);c.vow=0;c.held=false;c.auto=false;c.singing=false;c.str=1;c.sv=0;c.tilt=0;c.amp=0;c.img={};
@@ -142,10 +136,8 @@ let choir=true;
 
 function harmonize(){
   const leads=C.filter(c=>c.held);
-  if(!choir || leads.length!==1){ // no choir: silence the helpers, but only once
-    C.forEach(c=>{ if(!c.held && c.auto){ c.auto=false; c.singing=false; voiceOff(c);} });
-    return;
-  }
+  C.forEach(c=>{ if(!c.held && c.auto){ c.auto=false; c.singing=false; voiceOff(c);} });
+  if(!choir || leads.length!==1) return;
   const L0=leads[0], sc=SCALES[scaleIx];
   const pc=((L0.midi-TONIC)%12+12)%12, d=sc.indexOf(pc);
   const chord=[0,2,4].map(k=>sc[(d+k)%7]);           // triad pitch classes on the lead's degree
@@ -158,8 +150,7 @@ function harmonize(){
       let cost=Math.abs(m-c.midi)+(used.has(p)?4:0)+(c===C[2]&&p!==chord[0]?3:0);
       if(cost<bd){bd=cost;best=m;}
     }
-    if(best!=null){ used.add(((best-TONIC)%12+12)%12); const changed=best!==c.midi||c.vow!==L0.vow; c.midi=best; c.vow=L0.vow; c.auto=true;
-      if(!c.singing){c.singing=true; voiceOn(c);} else if(changed) voiceSet(c,ac.currentTime); }
+    if(best!=null){ used.add(((best-TONIC)%12+12)%12); c.midi=best; c.vow=L0.vow; c.auto=true; if(!c.singing){c.singing=true; voiceOn(c);} else voiceSet(c,ac.currentTime); }
   });
 }
 
@@ -303,17 +294,14 @@ function drawCreature(c,i,ts){
     ctx.save(); ctx.translate(x,my+mh/2); ctx.rotate(c.tilt+(reduce?0:Math.sin(ts/160+i)*.04*c.amp)); ctx.drawImage(im,-mw/2,-mh/2,mw,mh); ctx.restore();
   }
   // note bubbles
-  if(c.singing && !reduce && notes.length<(LOW?25:60) && Math.random()<(LOW?.07:.12)) notes.push({x:x+(Math.random()-.5)*u*.4,y:top-u*.2,vx:(Math.random()-.5)*.6,life:1,col:c.col,ch:['♪','♫','○'][Math.floor(Math.random()*3)]});
+  if(c.singing && !reduce && Math.random()<.12) notes.push({x:x+(Math.random()-.5)*u*.4,y:top-u*.2,vx:(Math.random()-.5)*.6,life:1,col:c.col,ch:['♪','♫','○'][Math.floor(Math.random()*3)]});
   // name
   ctx.fillStyle='#082f40'; ctx.font=`700 ${W<520?11:13}px Atkinson,system-ui,sans-serif`; ctx.textAlign='center';
   const nm=t.names[c.name]; if(W<520&&nm.includes(' ')){const ws=nm.split(' '); const l1=ws.slice(0,-1).join(' '); ctx.fillText(l1,x,by+48); ctx.fillText(ws[ws.length-1],x,by+61);} else ctx.fillText(nm,x,by+52);
   ctx.restore();
 }
-let lastF=0;
 function frame(ts){
   requestAnimationFrame(frame);
-  if(LOW && ts-lastF<31) return;   // 30 fps on phones leaves CPU for the sound
-  lastF=ts;
   bg(ts);
   C.forEach((c,i)=>drawCreature(c,i,ts));
   for(let n=notes.length-1;n>=0;n--){const p=notes[n]; p.y-=1.2; p.x+=p.vx; p.life-=.012; if(p.life<=0){notes.splice(n,1);continue;}
