@@ -20,7 +20,7 @@
     var s = 14 + Math.random() * 30, b = el('toy-bub'), o = { el: b, x: x, y: y, s: s };
     b.style.width = b.style.height = s + 'px'; b.style.margin = (-s / 2) + 'px 0 0 ' + (-s / 2) + 'px';
     bubbles.push(o); at(b, x, y);
-    var t = 0, vy = -(0.6 + Math.random() * 0.9), ph = Math.random() * 6, max = 200 + Math.random() * 160;
+    var t = 0, vy = -(0.6 + Math.random() * 0.9), ph = Math.random() * 6, max = 60 + Math.random() * 50;
     (function step() {
       if (!b.isConnected) return; t++; o.y += vy; o.x += Math.sin(t / 18 + ph) * 0.6; at(b, o.x, o.y);
       if (o.y < -40) kill(o, false); else if (t > max) kill(o, true); else requestAnimationFrame(step);
@@ -65,7 +65,7 @@
     if (off() || e.touches.length > 1) return;
     var p = e.touches[0]; start = { x: p.clientX, y: p.clientY }; anchor = start;
     if (e.target.closest && e.target.closest('.toy-buoy,.a11y,.lightbox')) return;
-    if (!hitBubble(p.clientX, p.clientY)) for (var i = 0; i < 3; i++) spawn(p.clientX + (Math.random() - .5) * 20, p.clientY + (Math.random() - .5) * 20);
+    if (!hitBubble(p.clientX, p.clientY)) spawn(p.clientX, p.clientY);
     clearTimeout(holdT);
     if (!(e.target.closest && e.target.closest(NOHOLD))) holdT = setTimeout(juggle, 450);
   }, { passive: true });
@@ -73,7 +73,7 @@
     if (off() || !start) return; var p = e.touches[0];
     if (stopJuggle) { anchor = { x: p.clientX, y: p.clientY }; return; }
     if (Math.hypot(p.clientX - start.x, p.clientY - start.y) > 12) clearTimeout(holdT);
-    var n = performance.now(); if (n - last < 60) return; last = n; spawn(p.clientX, p.clientY);
+    var n = performance.now(); if (n - last < 150) return; last = n; spawn(p.clientX, p.clientY);
   }, { passive: true });
   function end() { start = null; clearTimeout(holdT); if (stopJuggle) stopJuggle(); }
   document.addEventListener('touchend', end, { passive: true });
