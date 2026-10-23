@@ -14,7 +14,7 @@ SRC, OUT = ROOT/'source-images', ROOT/'postcard'
 DFONTS, SFONTS, LOGOS = ROOT/'dossiers/assets/fonts', ROOT/'static/fonts', ROOT/'dossiers/assets/logos'
 FRONT = 'VENDAVAL_003.jpg'                                               # band on the move (unicycle, flags, stilts), 16:9, shown whole
 GAMES = ['VENDAVAL_salvavidas_publico.jpg', 'VENDAVAL_FiraVapor002.jpg']   # lifebuoy game · sea-net game
-QR_URL = 'https://vendaval.cat/es/brass/'   # show page (video, photos, dossier, rider, language switcher)
+QR_URL = 'https://vendaval.cat/'   # home page (opens in the reader's language)
 LOGO = (LOGOS/'vendaval.png').as_uri()
 e = html.escape
 
@@ -151,7 +151,7 @@ li::before{{content:"\\2693\\FE0E";color:#B5401C;display:inline-block;width:2.6m
       <div class="ct"><div class="lab">{tri("Amb el suport de", "Con el apoyo de", "Supported by", sep=" · ")}</div><div class="bsup">{logos}</div></div>
     </div>
   </div>
-  <div class="pics">{games}<div class="qr"><span>VÍDEO ·<br>DOSSIER ›</span>{qr_svg(QR_URL)}</div></div>
+  <div class="pics">{games}<div class="qr"><span>www.VENDAVAL.cat ›</span>{qr_svg(QR_URL)}</div></div>
 </section></html>'''
 
 def build():
