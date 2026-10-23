@@ -619,3 +619,6 @@ html.a11y-dark .toy-pop{border-color:rgba(245,235,221,.8)}
 .a11y-size .a11y-emo{width:auto;margin-right:.25em}
 .toy-buoy .toy-pad{position:absolute;inset:-14px;border-radius:50%;pointer-events:auto;touch-action:none}
 .toy-buoy.toy-gone .toy-pad,.toy-buoy.toy-hide .toy-pad{pointer-events:none}
+/* agenda anchors take the sand background of their section */
+.cream .timeline li::before{background:var(--cream)}
+html.a11y-dark .cream .timeline li::before{background:#0d2b3a}
