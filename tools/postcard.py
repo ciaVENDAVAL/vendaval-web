@@ -72,6 +72,8 @@ THEMES = {
  'sea':    ('#BFE6F2', '#0F2C40', '#B5401C', '#14303F', '#3E5866'),
  'white':  ('#FFFFFF', '#0F2C40', '#B5401C', '#1E2A33', '#55636D'),
  'yellow': ('#FFD23F', '#0F2C40', '#B5401C', '#14303F', '#4A4A3A'),
+ 'logo':   ('#18DBF7', '#0F2C40', '#0F2C40', '#0F2C40', '#16485E'),   # exact cyan of the VENDAVAL logo
+ 'logo-soft': ('#8BEAFA', '#0F2C40', '#B5401C', '#0F2C40', '#2E5566'),  # same hue, lighter, easier for small text
 }
 
 def theme_css(name):
