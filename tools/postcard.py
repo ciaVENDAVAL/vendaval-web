@@ -65,7 +65,7 @@ FADE_ALL = ('-webkit-mask-image:linear-gradient(to right,transparent,#000 9%,#00
             '-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent,#000 9%,#000 91%,transparent),linear-gradient(to bottom,transparent,#000 9%,#000 91%,transparent);mask-composite:intersect;')
 FADE_LEFT = ('-webkit-mask-image:linear-gradient(to right,transparent,#000 7%);mask-image:linear-gradient(to right,transparent,#000 7%);')
 
-# background themes: (bg, title, accent, text, muted) — 'sand' is the current card
+# background themes: (bg, title, accent, text, muted) — 'sea' (light blue) is the final card, 23 Oct 2026
 THEMES = {
  'sand':   ('#F5EDDC', '#0F2C40', '#B5401C', '#1E2A33', '#55636D'),
  'navy':   ('#0F2C40', '#F5EDDC', '#EBA53B', '#F5EDDC', '#9FC3D3'),
@@ -85,7 +85,7 @@ def theme_css(name):
 ''' + ('''.bsup{background:#F5EDDC;border-radius:1.4mm;padding:1.4mm 2.4mm} .pics .qr svg{background:#F5EDDC;padding:.8mm;border-radius:.6mm;width:13.6mm;height:13.6mm}
 ''' if dark else '')
 
-def page(theme='sand'):
+def page(theme='sea'):
     img = lambda f: (SRC/f).as_uri()
     figs = ''.join(f'<div class="fig"><div class="n">{e(n)}</div><div class="l">{tri(*l)}</div></div>' for n, l in FIGS)
     lines = ''.join(f'<li>{tri(*l, sep=" · ")}</li>' for l in LINES)
@@ -174,7 +174,7 @@ li::before{{content:"\\2693\\FE0E";color:#B5401C;display:inline-block;width:2.6m
   <div class="pics">{games}<div class="qr"><span>www.VENDAVAL.cat ›</span>{qr_svg(QR_URL)}</div></div>
 </section></html>'''
 
-def build(theme='sand', out=None):
+def build(theme='sea', out=None):
     OUT.mkdir(exist_ok=True); stamp = datetime.date.today().strftime('%Y-%m')
     with sync_playwright() as p:
         b = p.chromium.launch(); pg = b.new_page()
@@ -187,5 +187,5 @@ def build(theme='sand', out=None):
 
 if __name__ == '__main__':
     import sys
-    t = sys.argv[1] if len(sys.argv) > 1 else 'sand'
-    build(t, None if t == 'sand' else OUT/f'_option_{t}.pdf')
+    t = sys.argv[1] if len(sys.argv) > 1 else 'sea'
+    build(t, None if t == 'sea' else OUT/f'_option_{t}.pdf')
