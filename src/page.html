@@ -330,17 +330,17 @@
   <button type="button" class="a11y-btn" aria-expanded="false" aria-controls="a11y-panel" aria-label="{{ t.a11y.title }}" title="{{ t.a11y.title }}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4" r="2"/><path d="M21 9h-6v13h-2v-6h-2v6H9V9H3V7h18z"/></svg></button>
   <div id="a11y-panel" class="a11y-panel" role="group" aria-label="{{ t.a11y.title }}" hidden>
     <p class="a11y-title">{{ t.a11y.title }}</p>
+    <button type="button" data-a="motion" aria-pressed="false"><span class="a11y-emo" aria-hidden="true">⏸️</span>{{ t.a11y.motion }}</button>
     <div class="a11y-theme" role="group" aria-label="{{ t.a11y.theme }}">
-      <button type="button" data-a="day" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1" stroke-width="2" stroke-linecap="round"/></svg>{{ t.a11y.day }}</button>
-      <button type="button" data-a="night" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>{{ t.a11y.night }}</button>
+      <button type="button" data-a="day" aria-pressed="true"><span class="a11y-emo" aria-hidden="true">☀️</span>{{ t.a11y.day }}</button>
+      <button type="button" data-a="night" aria-pressed="false"><span class="a11y-emo" aria-hidden="true">🌙</span>{{ t.a11y.night }}</button>
     </div>
-    <button type="button" data-a="contrast" aria-pressed="false">{{ t.a11y.contrast }}</button>
-    <button type="button" data-a="links" aria-pressed="false">{{ t.a11y.links }}</button>
-    <button type="button" data-a="spacing" aria-pressed="false">{{ t.a11y.spacing }}</button>
-    <button type="button" data-a="motion" aria-pressed="false">{{ t.a11y.motion }}</button>
-    <button type="button" data-a="easy" aria-pressed="false" lang="{{ t.html_lang }}">{{ t.a11y.easy }}</button>
-    <div class="a11y-size"><button type="button" data-a="smaller" aria-label="{{ t.a11y.smaller }}">A−</button><span>{{ t.a11y.size }}</span><button type="button" data-a="bigger" aria-label="{{ t.a11y.bigger }}">A+</button></div>
-    <button type="button" data-a="reset" class="a11y-reset">{{ t.a11y.reset }}</button>
+    <button type="button" data-a="contrast" aria-pressed="false"><span class="a11y-emo" aria-hidden="true">🌗</span>{{ t.a11y.contrast }}</button>
+    <button type="button" data-a="links" aria-pressed="false"><span class="a11y-emo" aria-hidden="true">🔗</span>{{ t.a11y.links }}</button>
+    <button type="button" data-a="spacing" aria-pressed="false"><span class="a11y-emo" aria-hidden="true">↕️</span>{{ t.a11y.spacing }}</button>
+    <button type="button" data-a="easy" aria-pressed="false" lang="{{ t.html_lang }}"><span class="a11y-emo" aria-hidden="true">📖</span>{{ t.a11y.easy }}</button>
+    <div class="a11y-size"><button type="button" data-a="smaller" aria-label="{{ t.a11y.smaller }}">A−</button><span><span class="a11y-emo" aria-hidden="true">🔠</span>{{ t.a11y.size }}</span><button type="button" data-a="bigger" aria-label="{{ t.a11y.bigger }}">A+</button></div>
+    <button type="button" data-a="reset" class="a11y-reset"><span class="a11y-emo" aria-hidden="true">🔄</span>{{ t.a11y.reset }}</button>
   </div>
 </div>
 <dialog class="lightbox"><button type="button" class="lb-close" aria-label="{{ t.gallery.close }}">×</button><button type="button" class="lb-nav lb-prev" aria-label="{{ t.gallery.prev }}">‹</button><img alt=""><button type="button" class="lb-nav lb-next" aria-label="{{ t.gallery.next }}">›</button></dialog>

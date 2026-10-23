@@ -86,8 +86,7 @@
   buoy.className = 'toy-buoy'; buoy.setAttribute('aria-hidden', 'true');
   buoy.innerHTML = '<svg viewBox="0 0 100 100" width="72" height="72"><circle class="toy-grab" cx="50" cy="50" r="40" fill="none" stroke="transparent" stroke-width="26"/><circle cx="50" cy="50" r="40" fill="none" stroke="#f5ebdd" stroke-width="18"/><g fill="none" stroke="#e8492e" stroke-width="18"><path d="M50 10 A40 40 0 0 1 78.3 21.7"/><path d="M90 50 A40 40 0 0 1 78.3 78.3"/><path d="M50 90 A40 40 0 0 1 21.7 78.3"/><path d="M10 50 A40 40 0 0 1 21.7 21.7"/></g><circle cx="50" cy="50" r="49" fill="none" stroke="#0d2233" stroke-width="2"/><circle cx="50" cy="50" r="31" fill="none" stroke="#0d2233" stroke-width="2"/></svg>';
   document.body.appendChild(buoy);
-  var grab = buoy.querySelector('.toy-grab');
-  var x = 0, y = 0, vx = 0, vy = 0, rot = 0, drag = false, hist = [], still = 0, away = false, fading = false;
+    var x = 0, y = 0, vx = 0, vy = 0, rot = 0, drag = false, hist = [], still = 0, away = false, fading = false;
   function home() { var r = toTop.getBoundingClientRect(); return { x: r.left + r.width / 2, y: r.top + r.height / 2 }; }
   function tick(now) {
     var show = !off() && !toTop.hidden;
@@ -112,11 +111,30 @@
     }
     requestAnimationFrame(tick);
   }
-  grab.addEventListener('pointerdown', function (e) { if (fading) return; drag = true; away = true; still = 0; vx = vy = 0; hist = []; grab.setPointerCapture(e.pointerId); });
-  grab.addEventListener('pointermove', function (e) { if (!drag) return; x = e.clientX; y = e.clientY; hist.push({ x: x, y: y, t: performance.now() }); if (hist.length > 6) hist.shift(); });
-  grab.addEventListener('pointerup', function () {
-    drag = false; if (hist.length > 1) { var a = hist[0], z = hist[hist.length - 1], dt = Math.max(16, z.t - a.t); vx = (z.x - a.x) / dt * 16; vy = (z.y - a.y) / dt * 16; }
-  });
-  grab.addEventListener('pointercancel', function () { drag = false; });
+  // touch events on a large invisible pad (easier to catch than the thin ring); a tap without moving still opens "back to top"
+  var pad = document.createElement('div'); pad.className = 'toy-pad'; buoy.appendChild(pad);
+  var t0, sx, sy;
+  pad.addEventListener('touchstart', function (e) {
+    if (fading || off()) return; e.preventDefault();
+    var p = e.touches[0]; drag = true; still = 0; vx = vy = 0; t0 = performance.now(); sx = p.clientX; sy = p.clientY;
+    hist = [{ x: p.clientX, y: p.clientY, t: t0 }];
+  }, { passive: false });
+  pad.addEventListener('touchmove', function (e) {
+    if (!drag) return; e.preventDefault();
+    var p = e.touches[0];
+    if (!away && Math.hypot(p.clientX - sx, p.clientY - sy) > 6) away = true;
+    if (away) { x = p.clientX; y = p.clientY; }
+    hist.push({ x: p.clientX, y: p.clientY, t: performance.now() }); if (hist.length > 12) hist.shift();
+  }, { passive: false });
+  function letGo(e) {
+    if (!drag) return; drag = false;
+    if (!away) { if (e && e.type === 'touchend') toTop.click(); return; }   // a tap = the up button
+    var now = performance.now(), z = hist[hist.length - 1], a = z;
+    for (var i = hist.length - 1; i >= 0 && now - hist[i].t < 120; i--) a = hist[i];   // speed of the last 120 ms
+    var dt = Math.max(16, z.t - a.t);
+    vx = (z.x - a.x) / dt * 16 * 1.4; vy = (z.y - a.y) / dt * 16 * 1.4;
+    var sp = Math.hypot(vx, vy), max = 45; if (sp > max) { vx *= max / sp; vy *= max / sp; }
+  }
+  pad.addEventListener('touchend', letGo); pad.addEventListener('touchcancel', letGo);
   requestAnimationFrame(tick);
 })();

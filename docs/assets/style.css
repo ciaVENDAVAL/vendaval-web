@@ -613,3 +613,9 @@ html.a11y-dark .toy-pop{border-color:rgba(245,235,221,.8)}
 .toy-buoy .toy-grab{pointer-events:stroke;touch-action:none}
 .toy-buoy.toy-gone{opacity:0}
 .toy-buoy.toy-hide{display:none}
+.a11y-emo{display:inline-block;width:1.5em;margin-right:.35em;text-align:center;font-size:1.05em;line-height:1}
+.a11y-theme .a11y-emo{width:auto}
+.a11y-size>span{white-space:nowrap;font-size:.9em}
+.a11y-size .a11y-emo{width:auto;margin-right:.25em}
+.toy-buoy .toy-pad{position:absolute;inset:-14px;border-radius:50%;pointer-events:auto;touch-action:none}
+.toy-buoy.toy-gone .toy-pad,.toy-buoy.toy-hide .toy-pad{pointer-events:none}
