@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>VENDAVAL Chimera Opera</title>
+<meta name="description" content="Fes cantar les criatures del mar de la Cia. VENDAVAL. Make VENDAVAL's sea creatures sing.">
+<meta property="og:title" content="VENDAVAL Chimera Opera">
+<meta property="og:image" content="https://vendaval.cat/chimera-opera/img/mussolgat-front.webp">
+<link rel="icon" href="../favicon.ico">
+<style>
+@font-face{font-family:"Bricolage";src:url(../fonts/bricolage-grotesque-latin-800-normal.woff2) format("woff2");font-weight:800;font-display:swap}
+@font-face{font-family:"Atkinson";src:url(../fonts/atkinson-hyperlegible-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Atkinson";src:url(../fonts/atkinson-hyperlegible-latin-700-normal.woff2) format("woff2");font-weight:700;font-display:swap}
+:root{--red:#e8492e;--navy:#082f40;--teal:#1ab3bf;--yellow:#f4b740;--cream:#f5ebdd;--purple:#8f4a96}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--navy);color:#fff;font:400 16px/1.4 "Atkinson",system-ui,sans-serif;overflow:hidden;overscroll-behavior:none}
+canvas{position:fixed;inset:0;width:100%;height:100%;touch-action:none;display:block}
+header{position:fixed;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 16px;pointer-events:none}
+header *{pointer-events:auto}
+h1{font:800 clamp(18px,3.4vw,30px)/1 "Bricolage",system-ui,sans-serif;margin:0;letter-spacing:-.01em;text-shadow:0 2px 12px rgba(0,0,0,.35)}
+h1 span{color:var(--yellow)}
+.back{color:var(--cream);font-weight:700;text-decoration:none;font-size:14px;opacity:.85}
+.back:hover{opacity:1;color:var(--yellow)}
+nav.bar{position:fixed;left:50%;bottom:max(12px,env(safe-area-inset-bottom));transform:translateX(-50%);display:flex;gap:6px;flex-wrap:nowrap;justify-content:center;padding:8px;border-radius:999px;background:rgba(8,47,64,.72);backdrop-filter:blur(6px);max-width:calc(100% - 24px)}
+button{white-space:nowrap;font:700 14px/1 "Atkinson",system-ui,sans-serif;color:var(--navy);background:var(--cream);border:0;border-radius:999px;padding:10px 14px;cursor:pointer;min-height:40px}
+button[aria-pressed=true]{background:var(--yellow)}
+button.rec[aria-pressed=true]{background:var(--red);color:#fff}
+button:disabled{opacity:.45;cursor:default}
+button:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+#start{position:fixed;inset:0;display:grid;place-items:center;background:radial-gradient(ellipse at 50% 30%,rgba(26,179,191,.35),rgba(8,47,64,.92) 70%);z-index:5;padding:16px;text-align:center}
+#start .card{max-width:520px}
+#start h2{font:800 clamp(32px,7vw,58px)/1 "Bricolage",system-ui,sans-serif;margin:0 0 .3em}
+#start h2 span{color:var(--yellow)}
+#start p{font-size:18px;margin:0 0 1.2em;color:var(--cream)}
+#start .faces{display:flex;justify-content:center;gap:4px;margin:0 0 18px}
+#start .faces img{height:clamp(70px,16vw,120px);width:auto;filter:drop-shadow(0 6px 10px rgba(0,0,0,.4))}
+#go{font-size:20px;padding:16px 28px;background:var(--yellow)}
+#hint{position:fixed;left:50%;top:58px;transform:translateX(-50%);background:rgba(8,47,64,.7);padding:8px 14px;border-radius:999px;font-size:15px;transition:opacity .8s;white-space:nowrap;max-width:calc(100% - 24px);overflow:hidden;text-overflow:ellipsis}
+.sr{position:absolute;left:-9999px}
+@media (max-width:520px){button{font-size:12.5px;padding:8px 10px;min-height:36px} nav.bar{padding:6px;gap:5px}}
+</style>
+</head>
+<body>
+<canvas id="c" aria-label="VENDAVAL Chimera Opera"></canvas>
+<header><h1>VENDAVAL <span>Chimera Opera</span></h1><a class="back" id="back" href="/">vendaval.cat ↗</a></header>
+<div id="hint" aria-live="polite"></div>
+<nav class="bar" aria-label="controls">
+  <button id="choir" aria-pressed="true"></button>
+  <button id="scale"></button>
+  <button id="rec" class="rec" aria-pressed="false"></button>
+  <button id="play" disabled></button>
+</nav>
+<div id="start" role="dialog" aria-modal="true" aria-labelledby="st">
+  <div class="card">
+    <div class="faces"><img src="img/fregui-front.webp" alt=""><img src="img/mussolgat-front.webp" alt=""><img src="img/rata-front.webp" alt=""></div>
+    <h2 id="st">VENDAVAL <span>Chimera Opera</span></h2>
+    <p id="intro"></p>
+    <button id="go"></button>
+  </div>
+</div>
+<p class="sr" id="keys"></p>
+<script>
+(()=>{
+// ---------- texts (FR, IT, PT, JA: native check pending)
+const T={
+ ca:{intro:"Tres criatures del mar canten per tu. Arrossega-les amunt i avall per canviar la nota, i als costats per canviar la vocal.",go:"Comença l'òpera",hint:"Arrossega una criatura amunt i avall",choir:"Cor",scales:["Mar en calma","Tempesta","Balcànic"],rec:"● Grava",stop:"■ Atura",play:"▶ Escolta",keys:"Teclat: mantén A, S o D per fer cantar cada criatura; fletxes amunt i avall per la nota, esquerra i dreta per la vocal.",names:["Comandant Fregui Miau","Capità Mussolgat","Rata Punk"]},
+ es:{intro:"Tres criaturas del mar cantan para ti. Arrástralas arriba y abajo para cambiar la nota, y a los lados para cambiar la vocal.",go:"Empieza la ópera",hint:"Arrastra una criatura arriba y abajo",choir:"Coro",scales:["Mar en calma","Tormenta","Balcánico"],rec:"● Graba",stop:"■ Para",play:"▶ Escucha",keys:"Teclado: mantén A, S o D para hacer cantar a cada criatura; flechas arriba y abajo para la nota, izquierda y derecha para la vocal.",names:["Comandante Fregui Miau","Capitán Mussolgat","Rata Punk"]},
+ en:{intro:"Three sea creatures sing for you. Drag them up and down to change the note, and sideways to change the vowel.",go:"Start the opera",hint:"Drag a creature up and down",choir:"Choir",scales:["Calm sea","Storm","Balkan"],rec:"● Record",stop:"■ Stop",play:"▶ Listen",keys:"Keyboard: hold A, S or D to make each creature sing; up and down arrows for the note, left and right for the vowel.",names:["Commander Fregui Miau","Captain Mussolgat","Punk Rat"]},
+ de:{intro:"Drei Meereswesen singen für dich. Zieh sie nach oben und unten für den Ton und zur Seite für den Vokal.",go:"Oper starten",hint:"Zieh ein Wesen nach oben und unten",choir:"Chor",scales:["Ruhige See","Sturm","Balkan"],rec:"● Aufnehmen",stop:"■ Stopp",play:"▶ Anhören",keys:"Tastatur: A, S oder D gedrückt halten, damit ein Wesen singt; Pfeiltasten hoch und runter für den Ton, links und rechts für den Vokal.",names:["Kommandant Fregui Miau","Kapitän Mussolgat","Punk-Ratte"]},
+ fr:{intro:"Trois créatures marines chantent pour toi. Fais-les glisser vers le haut et le bas pour changer la note, et sur les côtés pour changer la voyelle.",go:"Lancer l'opéra",hint:"Fais glisser une créature vers le haut et le bas",choir:"Chœur",scales:["Mer calme","Tempête","Balkanique"],rec:"● Enregistrer",stop:"■ Stop",play:"▶ Écouter",keys:"Clavier : maintiens A, S ou D pour faire chanter chaque créature ; flèches haut et bas pour la note, gauche et droite pour la voyelle.",names:["Commandant Fregui Miau","Capitaine Mussolgat","Rat Punk"]},
+ it:{intro:"Tre creature del mare cantano per te. Trascinale in su e in giù per cambiare la nota, e di lato per cambiare la vocale.",go:"Inizia l'opera",hint:"Trascina una creatura in su e in giù",choir:"Coro",scales:["Mare calmo","Tempesta","Balcanico"],rec:"● Registra",stop:"■ Stop",play:"▶ Ascolta",keys:"Tastiera: tieni premuto A, S o D per far cantare ogni creatura; frecce su e giù per la nota, sinistra e destra per la vocale.",names:["Comandante Fregui Miau","Capitano Mussolgat","Ratto Punk"]},
+ pt:{intro:"Três criaturas do mar cantam para ti. Arrasta-as para cima e para baixo para mudar a nota, e para os lados para mudar a vogal.",go:"Começar a ópera",hint:"Arrasta uma criatura para cima e para baixo",choir:"Coro",scales:["Mar calmo","Tempestade","Balcânico"],rec:"● Gravar",stop:"■ Parar",play:"▶ Ouvir",keys:"Teclado: mantém A, S ou D para pôr cada criatura a cantar; setas para cima e para baixo para a nota, esquerda e direita para a vogal.",names:["Comandante Fregui Miau","Capitão Mussolgat","Rato Punk"]},
+ ja:{intro:"3匹の海の生きものがあなたのために歌います。上下にドラッグすると音が、左右にドラッグすると母音が変わります。",go:"オペラをはじめる",hint:"生きものを上下にドラッグしてね",choir:"コーラス",scales:["おだやかな海","あらし","バルカン"],rec:"● 録音",stop:"■ 停止",play:"▶ 再生",keys:"キーボード：A・S・D を押すと歌います。上下キーで音、左右キーで母音が変わります。",names:["フレギ・ミャウ司令官","ムソルガット船長","パンクネズミ"]}
+};
+const qs=new URLSearchParams(location.search);
+let L=(qs.get('lang')||document.referrer.match(/vendaval\.cat\/(ca|es|en|de|fr|it|pt|ja)\//)?.[1]||(navigator.language||'ca').slice(0,2)).toLowerCase();
+if(!T[L]) L='en';
+const t=T[L]; document.documentElement.lang=L;
+const $=id=>document.getElementById(id);
+$('intro').textContent=t.intro; $('go').textContent=t.go; $('keys').textContent=t.keys;
+$('choir').textContent=t.choir; $('rec').textContent=t.rec; $('play').textContent=t.play;
+$('back').href='/'+L+'/';
+let scaleIx=0; $('scale').textContent=t.scales[0];
+
+// ---------- music
+const TONIC=50; // D
+const SCALES=[[0,2,4,5,7,9,11],[0,2,3,5,7,8,10],[0,1,4,5,7,8,10]]; // major, natural minor, freygish (Balkan)
+const VOW=['a','e','i','o','u'];
+const FORM={a:[800,1150,2900],e:[430,1800,2600],i:[300,2200,3000],o:[480,820,2800],u:[330,700,2500]};
+const C=[ // creatures, left to right
+ {key:'fregui',name:0,lo:62,hi:81,fs:1.12,col:'#f28a3c',body:'slug',kb:'a'},
+ {key:'mussolgat',name:1,lo:55,hi:74,fs:1.0,col:'#1e78c2',body:'jelly',kb:'s'},
+ {key:'rata',name:2,lo:40,hi:59,fs:.86,col:'#7d8796',body:'octo',kb:'d'}];
+const inScale=(m)=>SCALES[scaleIx].includes(((m-TONIC)%12+12)%12);
+const snap=(m)=>{m=Math.round(m);for(let d=0;d<7;d++){if(inScale(m+d))return m+d;if(inScale(m-d))return m-d;}return m;};
+const hz=m=>440*Math.pow(2,(m-69)/12);
+
+let ac,master,wet;
+function initAudio(){
+  ac=new (window.AudioContext||window.webkitAudioContext)();
+  master=ac.createGain(); master.gain.value=.55;
+  const comp=ac.createDynamicsCompressor(); master.connect(comp); comp.connect(ac.destination);
+  // simple hall reverb
+  const len=ac.sampleRate*2.4, ir=ac.createBuffer(2,len,ac.sampleRate);
+  for(let ch=0;ch<2;ch++){const d=ir.getChannelData(ch);for(let i=0;i<len;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/len,3);}
+  const conv=ac.createConvolver(); conv.buffer=ir; wet=ac.createGain(); wet.gain.value=.32; wet.connect(conv); conv.connect(comp);
+  C.forEach(makeVoice);
+}
+function makeVoice(c){
+  const g=ac.createGain(); g.gain.value=0;
+  const pre=ac.createGain(); pre.gain.value=.5;
+  const o1=ac.createOscillator(), o2=ac.createOscillator(); o1.type=o2.type='sawtooth'; o2.detune.value=7;
+  const lfo=ac.createOscillator(), lg=ac.createGain(); lfo.frequency.value=5.3+Math.random()*.6; lg.gain.value=0; lfo.connect(lg); lg.connect(o1.detune); lg.connect(o2.detune);
+  o1.connect(pre); o2.connect(pre);
+  const fs=[0,1,2].map(i=>{const f=ac.createBiquadFilter(); f.type='bandpass'; f.Q.value=[7,11,14][i]; const fg=ac.createGain(); fg.gain.value=[1,.55,.3][i]; pre.connect(f); f.connect(fg); fg.connect(g); return f;});
+  const pan=ac.createStereoPanner?ac.createStereoPanner():null;
+  if(pan){pan.pan.value=[-.45,0,.45][C.indexOf(c)]; g.connect(pan); pan.connect(master); pan.connect(wet);} else {g.connect(master); g.connect(wet);}
+  [o1,o2,lfo].forEach(o=>o.start());
+  c.v={g,o1,o2,lg,fs};
+}
+function voiceSet(c,now){
+  if(!c.v) return;
+  const f=hz(c.midi);
+  c.v.o1.frequency.setTargetAtTime(f,now,.035); c.v.o2.frequency.setTargetAtTime(f,now,.035);
+  const F=FORM[VOW[c.vow]]; c.v.fs.forEach((fl,i)=>fl.frequency.setTargetAtTime(F[i]*c.fs,now,.06));
+}
+function voiceOn(c){ if(!c.v) return; const n=ac.currentTime; voiceSet(c,n); c.v.g.gain.cancelScheduledValues(n); c.v.g.gain.setTargetAtTime(c===C[2]?.75:.55,n,.04); c.v.lg.gain.cancelScheduledValues(n); c.v.lg.gain.setValueAtTime(0,n); c.v.lg.gain.linearRampToValueAtTime(22,n+.6); }
+function voiceOff(c){ if(!c.v) return; const n=ac.currentTime; c.v.g.gain.cancelScheduledValues(n); c.v.g.gain.setTargetAtTime(0,n,.09); }
+
+// ---------- state
+C.forEach((c,i)=>{c.midi=snap((c.lo+c.hi)/2);c.vow=0;c.held=false;c.auto=false;c.singing=false;c.str=1;c.sv=0;c.tilt=0;c.amp=0;c.img={};
+  ['front','a','b'].forEach(k=>{const im=new Image(); im.src=`img/${c.key}-${k}.webp`; c.img[k]=im;});});
+let choir=true;
+
+function harmonize(){
+  const leads=C.filter(c=>c.held);
+  C.forEach(c=>{ if(!c.held && c.auto){ c.auto=false; c.singing=false; voiceOff(c);} });
+  if(!choir || leads.length!==1) return;
+  const L0=leads[0], sc=SCALES[scaleIx];
+  const pc=((L0.midi-TONIC)%12+12)%12, d=sc.indexOf(pc);
+  const chord=[0,2,4].map(k=>sc[(d+k)%7]);           // triad pitch classes on the lead's degree
+  const used=new Set([pc]);
+  C.forEach(c=>{
+    if(c.held) return;
+    let best=null,bd=1e9;
+    for(let m=c.lo;m<=c.hi;m++){
+      const p=((m-TONIC)%12+12)%12; if(!chord.includes(p)) continue;
+      let cost=Math.abs(m-c.midi)+(used.has(p)?4:0)+(c===C[2]&&p!==chord[0]?3:0);
+      if(cost<bd){bd=cost;best=m;}
+    }
+    if(best!=null){ used.add(((best-TONIC)%12+12)%12); c.midi=best; c.vow=L0.vow; c.auto=true; if(!c.singing){c.singing=true; voiceOn(c);} else voiceSet(c,ac.currentTime); }
+  });
+}
+
+// ---------- canvas
+const cv=$('c'), ctx=cv.getContext('2d'); let W=0,H=0,DPR=1;
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function resize(){DPR=Math.min(2,window.devicePixelRatio||1);W=innerWidth;H=innerHeight;cv.width=W*DPR;cv.height=H*DPR;ctx.setTransform(DPR,0,0,DPR,0,0);}
+addEventListener('resize',resize); resize();
+const colX=i=>W*(.2+.3*i);
+const baseY=()=>H-Math.max(W<520?140:120,H*.15);
+const unit=()=>Math.min(W/3.4,H/3.1);
+const bubbles=Array.from({length:40},()=>({x:Math.random(),y:Math.random(),r:1+Math.random()*3,s:.02+Math.random()*.05}));
+const notes=[];
+
+function yToMidi(c,y){const top=H*.12,bot=baseY(); const k=1-Math.min(1,Math.max(0,(y-top)/(bot-top))); return snap(c.lo+k*(c.hi-c.lo));}
+function xToVow(c,x){const dx=(x-colX(C.indexOf(c)))/(unit()*.9); return Math.max(0,Math.min(4,Math.round((dx+1)*2)));}
+
+// pointer control (multi-touch)
+const grabs=new Map();
+function pick(x){let bi=0,bd=1e9;C.forEach((c,i)=>{const d=Math.abs(x-colX(i)); if(d<bd){bd=d;bi=i;}}); return C[bi];}
+function press(c,x,y){ if(c.auto){c.auto=false;} c.held=true; c.midi=yToMidi(c,y); c.vow=xToVow(c,x); if(!c.singing){c.singing=true; voiceOn(c);} else voiceSet(c,ac.currentTime); harmonize(); hideHint(); }
+function drag(c,x,y){ const m=yToMidi(c,y), v=xToVow(c,x); if(m!==c.midi||v!==c.vow){c.midi=m;c.vow=v;voiceSet(c,ac.currentTime);harmonize();} }
+function release(c){ c.held=false; c.singing=false; voiceOff(c); harmonize(); }
+let rec=null, recT0=0, playing=null;
+function log(e){ if(rec) rec.push({t:performance.now()-recT0,...e,x:e.x/W,y:e.y/H}); }
+cv.addEventListener('pointerdown',e=>{ if(!ac||playing) return; cv.setPointerCapture(e.pointerId); const c=pick(e.clientX); if(c.held) return; grabs.set(e.pointerId,c); press(c,e.clientX,e.clientY); log({k:'d',i:C.indexOf(c),x:e.clientX,y:e.clientY}); });
+cv.addEventListener('pointermove',e=>{ const c=grabs.get(e.pointerId); if(!c) return; drag(c,e.clientX,e.clientY); log({k:'m',i:C.indexOf(c),x:e.clientX,y:e.clientY}); });
+const up=e=>{ const c=grabs.get(e.pointerId); if(!c) return; grabs.delete(e.pointerId); release(c); log({k:'u',i:C.indexOf(c),x:0,y:0}); };
+cv.addEventListener('pointerup',up); cv.addEventListener('pointercancel',up);
+
+// keyboard
+const kbHeld={};
+addEventListener('keydown',e=>{ if(!ac||playing) return; const i=C.findIndex(c=>c.kb===e.key.toLowerCase());
+  if(i>=0&&!kbHeld[i]){kbHeld[i]=1; const c=C[i]; c.held=true; if(!c.singing){c.singing=true;voiceOn(c);} harmonize(); hideHint(); return;}
+  const c=C.find((c,j)=>kbHeld[j]); if(!c) return;
+  if(e.key==='ArrowUp'||e.key==='ArrowDown'){e.preventDefault(); let m=c.midi, s=e.key==='ArrowUp'?1:-1; do{m+=s;}while(!inScale(m)&&m>c.lo&&m<c.hi); c.midi=Math.max(c.lo,Math.min(c.hi,m)); voiceSet(c,ac.currentTime); harmonize();}
+  if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault(); c.vow=Math.max(0,Math.min(4,c.vow+(e.key==='ArrowRight'?1:-1))); voiceSet(c,ac.currentTime); harmonize();}
+});
+addEventListener('keyup',e=>{ const i=C.findIndex(c=>c.kb===e.key.toLowerCase()); if(i>=0&&kbHeld[i]){kbHeld[i]=0; release(C[i]);} });
+
+// buttons
+$('choir').onclick=()=>{choir=!choir; $('choir').setAttribute('aria-pressed',choir); harmonize();};
+$('scale').onclick=()=>{scaleIx=(scaleIx+1)%3; $('scale').textContent=t.scales[scaleIx]; C.forEach(c=>{c.midi=snap(c.midi); if(c.singing) voiceSet(c,ac.currentTime);}); harmonize();};
+$('rec').onclick=()=>{
+  if(rec){ rec.push({t:performance.now()-recT0,k:'end'}); last=rec; rec=null; $('rec').setAttribute('aria-pressed','false'); $('rec').textContent=t.rec; $('play').disabled=!last.length; }
+  else { rec=[]; recT0=performance.now(); $('rec').setAttribute('aria-pressed','true'); $('rec').textContent=t.stop; }
+};
+let last=null;
+$('play').onclick=()=>{
+  if(playing){ stopPlay(); return; }
+  if(!last) return; playing=[]; $('play').textContent=t.stop; $('rec').disabled=true;
+  C.forEach(c=>{ if(c.held) release(c); });
+  last.forEach(ev=>playing.push(setTimeout(()=>{
+    if(ev.k==='end'){ stopPlay(); return; }
+    const c=C[ev.i], x=ev.x*W, y=ev.y*H;
+    if(ev.k==='d') press(c,x,y); else if(ev.k==='m') drag(c,x,y); else release(c);
+  },ev.t)));
+};
+function stopPlay(){ (playing||[]).forEach(clearTimeout); playing=null; C.forEach(c=>{ if(c.held||c.singing) {c.held=false;c.singing=false;c.auto=false;voiceOff(c);} }); $('play').textContent=t.play; $('rec').disabled=false; }
+
+// hint
+let hintShown=false; const hint=$('hint');
+function hideHint(){ if(!hintShown){hintShown=true; hint.style.opacity=0;} }
+
+// start
+$('go').onclick=()=>{ initAudio(); $('start').remove(); hint.textContent=t.hint; };
+
+// ---------- drawing
+function bg(ts){
+  const g=ctx.createLinearGradient(0,0,0,H); g.addColorStop(0,'#0e5a6e'); g.addColorStop(.55,'#0a3f52'); g.addColorStop(1,'#061f2b');
+  ctx.fillStyle=g; ctx.fillRect(0,0,W,H);
+  ctx.save(); ctx.globalCompositeOperation='lighter';
+  for(let i=0;i<5;i++){ const x=W*(.1+.22*i)+Math.sin(ts/4000+i)*40; const r=ctx.createLinearGradient(x,0,x+80,H*.8); r.addColorStop(0,'rgba(140,230,240,.10)'); r.addColorStop(1,'rgba(140,230,240,0)');
+    ctx.fillStyle=r; ctx.beginPath(); ctx.moveTo(x-30,0); ctx.lineTo(x+60,0); ctx.lineTo(x+200,H); ctx.lineTo(x+40,H); ctx.fill(); }
+  ctx.restore();
+  // sand
+  ctx.fillStyle='#e9d8b4'; ctx.beginPath(); ctx.moveTo(0,H); ctx.lineTo(0,baseY()+30);
+  for(let x=0;x<=W;x+=40) ctx.lineTo(x,baseY()+30+Math.sin(x/90)*8); ctx.lineTo(W,H); ctx.fill();
+  ctx.fillStyle='rgba(255,255,255,.35)';
+  bubbles.forEach(b=>{ if(!reduce){b.y-=b.s*.016; if(b.y<-.02){b.y=1.02;b.x=Math.random();}} ctx.beginPath(); ctx.arc(b.x*W+Math.sin(ts/900+b.r*9)*6,b.y*H,b.r,0,7); ctx.fill(); });
+}
+function blobPath(cx,cy,rx,ry,ts,amp,seed){
+  ctx.beginPath();
+  for(let i=0;i<=48;i++){ const a=i/48*Math.PI*2; const w=1+(.04+amp*.07)*Math.sin(a*3+ts/280+seed)+.03*Math.sin(a*5-ts/430+seed);
+    const x=cx+Math.cos(a)*rx*w, y=cy+Math.sin(a)*ry*w; i?ctx.lineTo(x,y):ctx.moveTo(x,y); }
+  ctx.closePath();
+}
+function drawCreature(c,i,ts){
+  const u=unit(), x=colX(i), by=baseY();
+  const k=(c.midi-c.lo)/(c.hi-c.lo);
+  const target=c.singing? .8+k*.9 : .85;                   // stretch with pitch
+  c.sv+=(target-c.str)*.12; c.sv*=.78; c.str+=c.sv;           // springy
+  c.amp+=((c.singing?1:0)-c.amp)*.12;
+  const wob=reduce?0:Math.sin(ts/120)*.03*c.amp;
+  const s=c.str+wob, h=u*s, top=by-h;
+  const tl=(c.vow-2)*.06; c.tilt+=(tl*(c.singing?1:0)-c.tilt)*.15;
+  ctx.save();
+  // shadow
+  ctx.fillStyle='rgba(0,0,0,.18)'; ctx.beginPath(); ctx.ellipse(x,by+28,u*.42,10,0,0,7); ctx.fill();
+  if(c.body==='jelly'){
+    // tentacles: feathery blue strands
+    for(let j=0;j<9;j++){ const sx=x+(j-4)*u*.07; ctx.strokeStyle=j%2?'#1e78c2':'#38b6e8'; ctx.lineWidth=u*.03; ctx.lineCap='round'; ctx.beginPath(); ctx.moveTo(sx,top+h*.45);
+      const len=h*.55; for(let q=1;q<=6;q++){ ctx.lineTo(sx+Math.sin(ts/300+j+q*.9)*u*.05*(1+c.amp)*q/6, top+h*.45+len*q/6);} ctx.stroke(); }
+    blobPath(x,top+h*.32,u*.48,h*.32,ts,c.amp,1); const g=ctx.createRadialGradient(x,top+h*.2,10,x,top+h*.3,u*.55); g.addColorStop(0,'rgba(230,245,255,.95)'); g.addColorStop(1,'rgba(56,182,232,.75)'); ctx.fillStyle=g; ctx.fill();
+  } else if(c.body==='octo'){
+    for(let j=0;j<8;j++){ const sx=x+(j-3.5)*u*.1; ctx.strokeStyle='#6b7584'; ctx.lineWidth=u*.07; ctx.lineCap='round'; ctx.beginPath(); ctx.moveTo(sx,by-h*.35);
+      const ex=sx+(j-3.5)*u*.06+Math.sin(ts/350+j)*u*.06*(1+c.amp), ey=by+10; ctx.quadraticCurveTo(sx+Math.sin(ts/500+j*2)*u*.12,by-h*.1,ex,ey); ctx.stroke();
+      ctx.fillStyle='#e8b9c4'; ctx.beginPath(); ctx.arc(ex,ey-4,u*.018,0,7); ctx.fill(); }
+    blobPath(x,top+h*.42,u*.42,h*.44,ts,c.amp,2); const g=ctx.createLinearGradient(0,top,0,by); g.addColorStop(0,'#9aa3b0'); g.addColorStop(1,'#5d6674'); ctx.fillStyle=g; ctx.fill();
+  } else {
+    // sea slug (nudibranch) with orange cerata
+    const cy=top+h*.55, rx=u*.38, ry=h*.48;
+    for(let j=0;j<16;j++){ const a=Math.PI*(1.05+j/15*.9); const sway=Math.sin(ts/220+j*.8)*(.12+.18*c.amp);
+      const px=x+Math.cos(a)*rx*.92, py=cy+Math.sin(a)*ry*.92, len=u*(.16+.05*Math.sin(j*1.7))*(1+c.amp*.35);
+      const aa=a+sway, ex=px+Math.cos(aa)*len, ey=py+Math.sin(aa)*len;
+      ctx.strokeStyle=j%2?'#f28a3c':'#ff6f2c'; ctx.lineWidth=u*.06; ctx.lineCap='round'; ctx.beginPath(); ctx.moveTo(px,py); ctx.quadraticCurveTo(px+Math.cos(a)*len*.6,py+Math.sin(a)*len*.6,ex,ey); ctx.stroke();
+      ctx.fillStyle='#ffd2a8'; ctx.beginPath(); ctx.arc(ex,ey,u*.022,0,7); ctx.fill(); }
+    blobPath(x,cy,rx,ry,ts,c.amp,3); const g=ctx.createLinearGradient(0,top,0,by); g.addColorStop(0,'#fffaf2'); g.addColorStop(1,'#efe2cf'); ctx.fillStyle=g; ctx.fill();
+  }
+  // mask
+  const im = c.singing ? (c.vow<2?c.img.a:c.vow>2?c.img.b:c.img.front) : c.img.front;
+  if(im.complete && im.naturalWidth){
+    const mw=u*(c.body==='octo'?.62:.92), mh=mw*im.naturalHeight/im.naturalWidth;
+    const my=(c.body==='octo'? top-mh*.05 : top-mh*.35) - c.amp*u*.04*Math.sin(ts/90);
+    ctx.save(); ctx.translate(x,my+mh/2); ctx.rotate(c.tilt+(reduce?0:Math.sin(ts/160+i)*.04*c.amp)); ctx.drawImage(im,-mw/2,-mh/2,mw,mh); ctx.restore();
+  }
+  // note bubbles
+  if(c.singing && !reduce && Math.random()<.12) notes.push({x:x+(Math.random()-.5)*u*.4,y:top-u*.2,vx:(Math.random()-.5)*.6,life:1,col:c.col,ch:['♪','♫','○'][Math.floor(Math.random()*3)]});
+  // name
+  ctx.fillStyle='#082f40'; ctx.font=`700 ${W<520?11:13}px Atkinson,system-ui,sans-serif`; ctx.textAlign='center';
+  const nm=t.names[c.name]; if(W<520&&nm.includes(' ')){const ws=nm.split(' '); const l1=ws.slice(0,-1).join(' '); ctx.fillText(l1,x,by+48); ctx.fillText(ws[ws.length-1],x,by+61);} else ctx.fillText(nm,x,by+52);
+  ctx.restore();
+}
+function frame(ts){
+  bg(ts);
+  C.forEach((c,i)=>drawCreature(c,i,ts));
+  for(let n=notes.length-1;n>=0;n--){const p=notes[n]; p.y-=1.2; p.x+=p.vx; p.life-=.012; if(p.life<=0){notes.splice(n,1);continue;}
+    ctx.globalAlpha=p.life; ctx.fillStyle=p.col; ctx.font='800 22px Bricolage,system-ui'; ctx.fillText(p.ch,p.x,p.y); ctx.globalAlpha=1;}
+  requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
