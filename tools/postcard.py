@@ -2,7 +2,7 @@
 A6 landscape (148 x 105 mm), 2 pages (front, back), 3 mm bleed on every side for the print shop (PDF page = 154 x 111 mm).
 Usage: python3 tools/postcard.py  ->  postcard/VENDAVAL-Brass_CA-ES-EN_postal_<yyyy-mm>.pdf
 Languages are told apart by style, always the same: CA bold · ES plain · EN italic. When CA and ES are identical, ES is left out.
-Photos: back photos whole and sharp; front photo trimmed top/bottom (sidewalk, building; never people, tyle 22 Oct 2026), left edge fading into the navy.
+Photos: back photos whole and sharp; front photo (VENDAVAL_003, 16:9) shown whole across the full width.
 Credits: VENDAVAL Brass only (Tropidelia belongs to Amigui Imaginari and the website footer, not here).
 No prices or private data: this is public promoter material."""
 import html, pathlib, datetime
@@ -12,7 +12,7 @@ from playwright.sync_api import sync_playwright
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC, OUT = ROOT/'source-images', ROOT/'postcard'
 DFONTS, SFONTS, LOGOS = ROOT/'dossiers/assets/fonts', ROOT/'static/fonts', ROOT/'dossiers/assets/logos'
-FRONT = 'VENDAVAL_FiraVapor001.jpg'                                      # whole band in front of the modernista building
+FRONT = 'VENDAVAL_003.jpg'                                               # band on the move (unicycle, flags, stilts), 16:9, shown whole
 GAMES = ['VENDAVAL_salvavidas_publico.jpg', 'VENDAVAL_FiraVapor002.jpg']   # lifebuoy game · sea-net game
 QR_URL = 'https://vendaval.cat/es/brass/'   # show page (video, photos, dossier, rider, language switcher)
 LOGO = (LOGOS/'vendaval.png').as_uri()
@@ -72,8 +72,8 @@ def page():
     credits = ''.join(f'<div>{tri(*r, sep=" · ")}: <span class="nm">{e(n)}</span></div>' for r, n in CREDITS)
     body = (f'<p><b>{BODY[0]}</b></p><p>{e(BODY[1])}</p><p><i>{e(BODY[2])}</i></p>')
     logos = ''.join(f'<img src="{(LOGOS/f).as_uri()}" alt="">' for f in ['tub-dassaig.png', 'filigranes.svg', 'bobila.png', 'apcc.svg'])
-    contact = ('<span class="co">Cia. VENDAVAL</span><b>+34 644 389 757</b><span>VENDAVAL@anartist.org</span>'
-               '<span>www.VENDAVAL.cat</span>')
+    contact = ('<span class="co">Cia. VENDAVAL</span><span>+34 644 389 757</span>'
+               '<span>VENDAVAL@anartist.org</span><span>www.VENDAVAL.cat</span>')
     games = ''.join(f'<img class="g" src="{img(f)}" alt="">' for f in GAMES)
     return f'''<!doctype html><html lang="ca"><meta charset="utf-8"><title>VENDAVAL Brass · postal</title>
 <style>{FONTCSS}
@@ -84,22 +84,19 @@ b{{font-weight:700;font-style:normal}} i{{font-style:italic;font-weight:400}} sp
 p,li,div{{text-wrap:pretty}}
 .pg{{width:154mm;height:111mm;position:relative;overflow:hidden;page-break-after:always}}
 .wave{{position:absolute;left:0;width:100%;height:3.2mm}}
-/* FRONT: deep-sea navy; the portrait photo on the right, its left edge fading into the navy */
-.front{{background:#0F2C40}}
-/* front photo: tyle's choice (22 Oct 2026) to crop sidewalk and building, never people: full width kept, top and bottom trimmed */
-.front .photo{{position:absolute;right:0;top:0;height:111mm;width:100mm;display:block;object-fit:cover;object-position:50% 60%;{FADE_LEFT}}}
-.front .col{{position:absolute;left:6.5mm;top:7.5mm;width:46mm;height:95mm;display:flex;flex-direction:column}}
-.front .logo{{width:42mm;filter:drop-shadow(0 0 .35mm rgba(245,237,220,.95)) drop-shadow(0 0 .2mm rgba(245,237,220,.9))}}
-.front h1{{font:400 31pt/.95 Anton,sans-serif;color:#F5EDDC;letter-spacing:.3mm;margin-top:4mm}}
-.front h1 span{{color:#EBA53B;display:block}}
-.front .kick{{font:600 6.2pt Oswald,sans-serif;letter-spacing:.45mm;color:#9FDCEC;margin-top:2.6mm;position:relative;padding-top:2.6mm}}
-.front .kick .wave{{top:-.6mm;width:40mm}}
-/* front bottom strip: contact (no logo); photo shortened so nobody's feet are covered (sidewalk/building trimmed) */
-.front .photo{{height:97mm;object-position:50% 70%}}
-.front .col{{height:80mm}}
-.strip{{position:absolute;left:0;bottom:0;width:154mm;height:14mm;background:#F5EDDC;display:flex;align-items:center;justify-content:space-between;
-  padding:0 9mm 3mm 6.5mm;font-size:7.6pt;font-weight:700;color:#0F2C40;white-space:nowrap}}
-.strip .co{{font:600 8.4pt Oswald,sans-serif;letter-spacing:.35mm;color:#B5401C}}
+/* FRONT: 16:9 photo across the full width, shown whole; logo on the photo top right; cream bar at the bottom with title + contact */
+.front{{background:#F5EDDC}}
+.front .photo{{position:absolute;left:0;top:0;width:154mm;height:86.6mm;display:block}}
+.front .logo{{position:absolute;right:5mm;top:4.5mm;width:26mm;
+  filter:drop-shadow(.35mm 0 0 #fff) drop-shadow(-.35mm 0 0 #fff) drop-shadow(0 .35mm 0 #fff) drop-shadow(0 -.35mm 0 #fff) drop-shadow(0 .6mm 1.2mm rgba(0,0,0,.35))}}
+.strip{{position:absolute;left:0;top:86.6mm;width:154mm;height:24.4mm;background:#F5EDDC;padding:3mm 9mm 3mm 6.5mm;
+  display:flex;align-items:center;justify-content:space-between;gap:5mm;color:#0F2C40}}
+.strip .wave{{top:-1.6mm}}
+.strip h1{{font:400 22pt/.95 Anton,sans-serif;letter-spacing:.3mm;color:#0F2C40;white-space:nowrap}}
+.strip h1 span{{color:#B5401C}}
+.strip .kick{{font:600 6pt Oswald,sans-serif;letter-spacing:.45mm;color:#B5401C;margin-top:1.2mm}}
+.strip .ct2{{display:grid;grid-template-columns:auto auto;gap:1mm 6mm;font-size:7.4pt;font-weight:700;white-space:nowrap;text-align:left}}
+.strip .co{{font:600 8pt Oswald,sans-serif;letter-spacing:.35mm;color:#B5401C}}
 /* back: supporters inside the contact box */
 .bsup{{display:flex;align-items:center;gap:4.5mm}}
 .bsup img{{height:6mm;max-width:17mm;object-fit:contain}}
@@ -137,12 +134,11 @@ li::before{{content:"\\2693\\FE0E";color:#B5401C;display:inline-block;width:2.6m
 </style>
 <section class="pg front">
   <img class="photo" src="{img(FRONT)}" alt="">
-  <div class="col">
-    <img class="logo" src="{LOGO}" alt="VENDAVAL">
-    <h1>VENDAVAL <span>BRASS</span></h1>
-    <div class="kick">{WAVE}FUNK · BALKAN · SWING · CUMBIA</div>
+  <img class="logo" src="{LOGO}" alt="VENDAVAL">
+  <div class="strip">{WAVE}
+    <div><h1>VENDAVAL <span>BRASS</span></h1><div class="kick">FUNK · BALKAN · SWING · CUMBIA</div></div>
+    <div class="ct2">{contact}</div>
   </div>
-  <div class="strip">{contact}</div>
 </section>
 <section class="pg back">
   <div class="txt">
