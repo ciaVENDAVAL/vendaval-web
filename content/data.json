@@ -658,7 +658,13 @@
    "id": "tyle",
    "name": "tyle fernández",
    "photo": "portrait-tyle",
-   "link": "https://linktr.ee/bicialta"
+   "link": "https://linktr.ee/bicialta",
+   "bands": [
+    {
+     "name": "La Senyal",
+     "url": "https://lasenyal.com"
+    }
+   ]
   },
   {
    "id": "albert",
@@ -676,31 +682,61 @@
    "id": "alian",
    "name": "Alián Rodrigues",
    "photo": "portrait-alian",
-   "link": "https://linktr.ee/a.alian.n"
+   "link": "https://linktr.ee/a.alian.n",
+   "bands": [
+    {
+     "name": "La Senyal",
+     "url": "https://lasenyal.com"
+    }
+   ]
   },
   {
    "id": "juan",
    "name": "Juan Lichter",
    "photo": "portrait-juan",
-   "link": "https://instagram.com/juanlichter90"
+   "link": "https://instagram.com/juanlichter90",
+   "bands": [
+    {
+     "name": "La Senyal",
+     "url": "https://lasenyal.com"
+    }
+   ]
   },
   {
    "id": "stefano",
    "name": "Stefano Ferraro",
    "photo": "portrait-stefano",
-   "link": "https://linktr.ee/stefano.ferraro"
+   "link": "https://linktr.ee/stefano.ferraro",
+   "bands": [
+    {
+     "name": "La Senyal",
+     "url": "https://lasenyal.com"
+    }
+   ]
   },
   {
    "id": "lucas",
    "name": "Lucas Raiquen Pereyra",
    "photo": "portrait-lucas",
-   "link": "https://instagram.com/lukasraiquen"
+   "link": "https://instagram.com/lukasraiquen",
+   "bands": [
+    {
+     "name": "La Senyal",
+     "url": "https://lasenyal.com"
+    }
+   ]
   },
   {
    "id": "facu",
    "name": "Facundo Fernández Alberdi",
    "photo": "portrait-facu",
-   "link": "https://instagram.com/ffa_musica"
+   "link": "https://instagram.com/ffa_musica",
+   "bands": [
+    {
+     "name": "La Senyal",
+     "url": "https://lasenyal.com"
+    }
+   ]
   }
  ],
  "artist_gender": {
@@ -844,6 +880,7 @@
  "festival_links": {
   "Unterwegs": "https://www.protagon.net/en/unterwegs-theatre-festival-2026",
   "Sommerwerft": "https://sommerwerft.de",
-  "Fira del Vapor": "https://www.firadelvapor.cat/"
+  "Fira del Vapor": "https://www.firadelvapor.cat/",
+  "La Senyal": "https://lasenyal.com"
  }
 }

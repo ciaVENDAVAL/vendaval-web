@@ -31,7 +31,7 @@
   "title": "A companhia",
   "p": [
    "A Cia. VENDAVAL é um coletivo de música e circo com sede em Barcelona e Terrassa. Desde 2024 enchemos o espaço público com uma banda de sopros e percussão, personagens fantásticas em andas e monociclo, malabarismo e jogos participativos. Os músicos vêm da Europa e das Américas, e os seus ritmos misturam funk, balcânico, swing e cumbia.",
-   "Dirigimos a banda com sinais de mão, por isso cada atuação é composta diante do público. Coproduzimos com a Cia. Filigranes, e a nossa base de criação é a associação de circo Tub d'assaig 7.70, em Terrassa.",
+   "Dirigimos a banda com sinais de mão, por isso cada atuação é composta diante do público. Coproduzimos com a Cia. Filigranes, e a nossa base de criação é a associação de circo Tub d'assaig 7.70, em Terrassa. Os músicos também tocam juntos na banda La Senyal.",
    "Atuámos na Catalunha, em Andorra e na Alemanha, entre outros na Fira del Vapor e, em Francoforte do Meno, nos festivais de teatro Sommerwerft e Unterwegs."
   ]
  },
@@ -214,7 +214,8 @@
    "m": "Página do artista",
    "f": "Página do artista",
    "x": "Página do artista"
-  }
+  },
+  "also": "Também em"
  },
  "downloads": {
   "title": "Downloads",

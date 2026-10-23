@@ -31,7 +31,7 @@
   "title": "About",
   "p": [
    "Cia. VENDAVAL is a music and circus collective based in Barcelona and Terrassa. Since 2024 we have taken over public space with a brass and percussion band, fantastical characters on stilts and unicycle, juggling and participatory games. The musicians come from Europe and the Americas, and their rhythms mix funk, Balkan, swing and cumbia.",
-   "We conduct the band with hand signals, so every performance is composed in front of the audience. We co-produce with Cia. Filigranes, and our creative base is the circus association Tub d'assaig 7.70 in Terrassa.",
+   "We conduct the band with hand signals, so every performance is composed in front of the audience. We co-produce with Cia. Filigranes, and our creative base is the circus association Tub d'assaig 7.70 in Terrassa. The musicians also play together in the band La Senyal.",
    "We have performed in Catalonia, Andorra and Germany, including Fira del Vapor and, in Frankfurt am Main, the Sommerwerft and Unterwegs theatre festivals."
   ]
  },
@@ -214,7 +214,8 @@
    "m": "Artist's page",
    "f": "Artist's page",
    "x": "Artist's page"
-  }
+  },
+  "also": "Also in"
  },
  "downloads": {
   "title": "Downloads",

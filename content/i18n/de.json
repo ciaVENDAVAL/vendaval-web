@@ -31,7 +31,7 @@
   "title": "Über uns",
   "p": [
    "Die Cia. VENDAVAL ist ein Musik- und Zirkuskollektiv aus Barcelona und Terrassa. Seit 2024 bespielen wir den öffentlichen Raum mit einer Bläser- und Percussionband, fantastischen Figuren auf Stelzen und Einrad, Jonglage und Mitmachspielen. Die Musiker*innen kommen aus Europa und den Amerikas, ihre Rhythmen mischen Funk, Balkan, Swing und Cumbia.",
-   "Wir dirigieren die Band mit Handzeichen, so entsteht jeder Auftritt live vor dem Publikum. Wir koproduzieren mit der Cia. Filigranes; unsere kreative Basis ist der Zirkusverein Tub d'assaig 7.70 in Terrassa.",
+   "Wir dirigieren die Band mit Handzeichen, so entsteht jeder Auftritt live vor dem Publikum. Wir koproduzieren mit der Cia. Filigranes; unsere kreative Basis ist der Zirkusverein Tub d'assaig 7.70 in Terrassa. Die Musiker*innen spielen auch zusammen in der Band La Senyal.",
    "Wir sind in Katalonien, Andorra und Deutschland aufgetreten, unter anderem bei der Fira del Vapor und in Frankfurt am Main bei den Theaterfestivals Sommerwerft und Unterwegs."
   ]
  },
@@ -214,7 +214,8 @@
    "m": "Seite des Künstlers",
    "f": "Seite der Künstlerin",
    "x": "Seite der Künstler*in"
-  }
+  },
+  "also": "Auch bei"
  },
  "downloads": {
   "title": "Downloads",

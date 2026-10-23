@@ -254,6 +254,7 @@
         <h2>{{ a.name }}</h2>
         <p class="origin">{{ p.origin }}</p>
         <p>{{ p.roles }}</p>
+        {% if a.bands %}<p class="artist-band">{{ t.artists.also }} {% for bd in a.bands %}<a href="{{ bd.url }}" rel="noopener" target="_blank">{{ bd.name }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>{% endif %}
         {% if a.link %}<a href="{{ a.link }}" rel="noopener" target="_blank">{{ t.artists.link_by_gender[artist_gender.get(a.id, 'x')] }} {{ icon('open-in-new') }}</a>{% endif %}
       </li>
       {% endfor %}
