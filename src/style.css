@@ -263,9 +263,18 @@ html.a11y-links a{text-decoration:underline!important;text-underline-offset:3px}
 html.a11y-spacing body{line-height:1.95;letter-spacing:.05em;word-spacing:.14em}
 html.a11y-spacing p,html.a11y-spacing li{margin-bottom:1em}
 html.a11y-motion *,html.a11y-motion *::before,html.a11y-motion *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
-html.a11y-contrast body *:not(img):not(svg):not(svg *):not(.a11y-panel):not(.a11y-panel *):not(.a11y-btn):not(.to-top){background-color:#000!important;color:#fff!important;border-color:#fff!important;text-shadow:none!important;box-shadow:none!important}
-html.a11y-contrast body{background:#000!important;color:#fff!important}
-html.a11y-contrast a,html.a11y-contrast a *{color:#ffe600!important}
+/* high contrast, night: black, white text, yellow links */
+html.a11y-contrast.a11y-dark body *:not(img):not(svg):not(svg *):not(.a11y-panel):not(.a11y-panel *):not(.a11y-btn):not(.to-top):not(.hero):not(.hero *):not(.toys):not(.toys *):not(.toy-buoy):not(.toy-buoy *):not(.squid):not(.squid *){background-color:#000!important;color:#fff!important;border-color:#fff!important;text-shadow:none!important;box-shadow:none!important}
+html.a11y-contrast.a11y-dark body{background:#000!important;color:#fff!important}
+html.a11y-contrast.a11y-dark a:not(.btn):not(.dl):not(.dl-save):not(.slide-link),html.a11y-contrast.a11y-dark a:not(.btn):not(.dl):not(.dl-save):not(.slide-link) *{color:#ffe600!important}
+/* high contrast, day: white, black text, dark blue underlined links, black buttons */
+html.a11y-contrast:not(.a11y-dark) body *:not(img):not(svg):not(svg *):not(.a11y-panel):not(.a11y-panel *):not(.a11y-btn):not(.to-top):not(.hero):not(.hero *):not(.toys):not(.toys *):not(.toy-buoy):not(.toy-buoy *):not(.squid):not(.squid *){background-color:#fff!important;color:#000!important;border-color:#000!important;text-shadow:none!important;box-shadow:none!important}
+html.a11y-contrast:not(.a11y-dark) body{background:#fff!important;color:#000!important}
+html.a11y-contrast:not(.a11y-dark) a:not(.btn):not(.dl):not(.dl-save):not(.show-card):not(.slide-link),html.a11y-contrast:not(.a11y-dark) a:not(.btn):not(.dl):not(.dl-save):not(.show-card):not(.slide-link) *{color:#0000b3!important;text-decoration:underline}
+html.a11y-contrast:not(.a11y-dark) :is(.btn,.dl,.dl-save,.badge,.crew [aria-pressed="true"],.dl-draft,.facts h2),html.a11y-contrast:not(.a11y-dark) :is(.btn,.dl,.dl-save) *{background-color:#000!important;color:#fff!important}
+html.a11y-contrast.a11y-dark :is(.btn,.dl,.dl-save,.badge,.crew [aria-pressed="true"],.dl-draft),html.a11y-contrast.a11y-dark :is(.btn,.dl,.dl-save) *{background-color:#ffe600!important;color:#000!important}
+html.a11y-contrast :is(.facts,.tilt,.artist,.form,.dlcard,.show-card,.crew-card,.ws-group){border:2px solid currentColor!important}
+html.a11y-contrast .hero h1{background:rgba(0,0,0,.8);display:inline-block;padding:.1em .3em;border-radius:6px}
 html.a11y-contrast .facts{transform:none}
 
 /* workshops: orange outline = music, blue outline = circus */
