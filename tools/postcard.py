@@ -87,8 +87,7 @@ p,li,div{{text-wrap:pretty}}
 /* FRONT: 16:9 photo across the full width, shown whole; logo on the photo top right; cream bar at the bottom with title + contact */
 .front{{background:#F5EDDC}}
 .front .photo{{position:absolute;left:0;top:0;width:154mm;height:86.6mm;display:block}}
-.front .logo{{position:absolute;right:5mm;top:4.5mm;width:26mm;
-  filter:drop-shadow(.35mm 0 0 #fff) drop-shadow(-.35mm 0 0 #fff) drop-shadow(0 .35mm 0 #fff) drop-shadow(0 -.35mm 0 #fff) drop-shadow(0 .6mm 1.2mm rgba(0,0,0,.35))}}
+.front .logo{{position:absolute;right:6mm;top:5.5mm;width:22mm;transform:rotate(-10deg);transform-origin:center}}
 .strip{{position:absolute;left:0;top:86.6mm;width:154mm;height:24.4mm;background:#F5EDDC;padding:3mm 9mm 3mm 6.5mm;
   display:flex;align-items:center;justify-content:space-between;gap:5mm;color:#0F2C40}}
 .strip .wave{{top:-1.6mm}}
@@ -111,7 +110,7 @@ p,li,div{{text-wrap:pretty}}
 .body p{{font-size:5.9pt;line-height:1.25;margin-bottom:.6mm}}
 .games{{font-size:6.1pt;line-height:1.3;color:#B5401C}}
 .genres{{font:600 5.8pt Oswald,sans-serif;letter-spacing:.35mm;color:#0F2C40;border-top:.3mm solid #EBA53B;border-bottom:.3mm solid #EBA53B;padding:.5mm 0;text-align:center;margin:.8mm 0 1.2mm}}
-.figs{{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4mm}}
+.figs{{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4mm;justify-items:center;text-align:center}}
 .fig .n{{font:400 12pt/1 Anton,sans-serif;color:#B5401C}}
 .fig .l{{font-size:5.3pt;line-height:1.2;margin-top:.4mm}}
 ul{{list-style:none;font-size:5.4pt;line-height:1.3;margin-top:1mm}}
