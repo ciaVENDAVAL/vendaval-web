@@ -561,8 +561,7 @@ html.squid-on select{cursor:default!important}
 .squid.grab .sq-grab,.squid.grab .sq-front{display:inline}
 .squid.blink .sq-eyes{display:none!important}
 .squid.blink .sq-lids{display:inline}
-.squid:not(.grab) .sq-lids path:last-child{display:none}
-.squid:not(.grab).blink .sq-lids path:first-child{transform:translate(4px,0)}
+.squid:not(.grab) .sq-lids .lid-front,.squid.grab .sq-lids .lid-side{display:none}
 /* easy read (accessibility option): swaps .std texts for .easy texts and shows easy-read downloads */
 .easy{display:none}
 html.a11y-easy .easy{display:block}

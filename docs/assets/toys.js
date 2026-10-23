@@ -1,9 +1,8 @@
-// Touch toys (touchscreens only; the mouse keeps the squid cursor). Off with the accessibility option "stop animations".
-// 1 Tap or swipe: soap bubbles (tap a bubble to pop it). 2 Press and hold: juggling a squid, a crab and seaweed out of a fishing net.
+// Toys for touch and mouse (pointer events, so they work in every browser). Off with the accessibility option "stop animations".
+// 1 Tap/click or swipe/drag: soap bubbles (tap a bubble to pop it). 2 Press and hold: juggling a squid, a crab and seaweed out of a fishing net.
 // 3 A lifebuoy floats around the back-to-top button; flick it to throw it; when it stops it fades out and reappears on the button.
 (function () {
   var root = document.documentElement;
-  if (!('ontouchstart' in window) && !(navigator.maxTouchPoints > 0)) return;
   function off() { return root.classList.contains('a11y-motion'); }
   var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -58,24 +57,31 @@
     stopJuggle = function () { cancelAnimationFrame(raf); cs.forEach(function (c) { c.remove(); }); net.remove(); stopJuggle = null; };
   }
 
-  // ---------- touch handling (passive: never blocks scrolling or taps) ----------
-  var holdT, start = null, last = 0;
+  // ---------- input: pointer events (mouse, pen, touch); touchmove adds bubbles while a finger scrolls ----------
+  var holdT, start = null, last = 0, kind = '';
   var NOHOLD = 'a,button,input,textarea,select,label,summary,img,video,.toy-buoy,.a11y,.lightbox';
-  document.addEventListener('touchstart', function (e) {
-    if (off() || e.touches.length > 1) return;
-    var p = e.touches[0]; start = { x: p.clientX, y: p.clientY }; anchor = start;
+  function trail(x, y) { var n = performance.now(); if (n - last < 150) return; last = n; spawn(x, y); }
+  document.addEventListener('pointerdown', function (e) {
+    if (off() || !e.isPrimary || (e.pointerType === 'mouse' && e.button !== 0)) return;
     if (e.target.closest && e.target.closest('.toy-buoy,.a11y,.lightbox')) return;
-    if (!hitBubble(p.clientX, p.clientY)) spawn(p.clientX, p.clientY);
+    kind = e.pointerType; start = { x: e.clientX, y: e.clientY }; anchor = start;
+    if (!hitBubble(e.clientX, e.clientY)) spawn(e.clientX, e.clientY);
     clearTimeout(holdT);
     if (!(e.target.closest && e.target.closest(NOHOLD))) holdT = setTimeout(juggle, 450);
-  }, { passive: true });
+  });
+  document.addEventListener('pointermove', function (e) {
+    if (off() || !start || !e.isPrimary) return;
+    if (stopJuggle) { anchor = { x: e.clientX, y: e.clientY }; return; }
+    if (Math.hypot(e.clientX - start.x, e.clientY - start.y) > 12) clearTimeout(holdT);
+    if (Math.hypot(e.clientX - start.x, e.clientY - start.y) > 6) trail(e.clientX, e.clientY);
+  });
   document.addEventListener('touchmove', function (e) {
-    if (off() || !start) return; var p = e.touches[0];
-    if (stopJuggle) { anchor = { x: p.clientX, y: p.clientY }; return; }
-    if (Math.hypot(p.clientX - start.x, p.clientY - start.y) > 12) clearTimeout(holdT);
-    var n = performance.now(); if (n - last < 150) return; last = n; spawn(p.clientX, p.clientY);
+    if (off() || !start || stopJuggle) return; var p = e.touches[0];
+    clearTimeout(holdT); trail(p.clientX, p.clientY);
   }, { passive: true });
   function end() { start = null; clearTimeout(holdT); if (stopJuggle) stopJuggle(); }
+  document.addEventListener('pointerup', end);
+  document.addEventListener('pointercancel', function () { clearTimeout(holdT); if (stopJuggle) stopJuggle(); if (kind !== 'touch') start = null; });  // a finger that starts scrolling keeps its bubble trail
   document.addEventListener('touchend', end, { passive: true });
   document.addEventListener('touchcancel', end, { passive: true });
 
@@ -114,27 +120,27 @@
   // touch events on a large invisible pad (easier to catch than the thin ring); a tap without moving still opens "back to top"
   var pad = document.createElement('div'); pad.className = 'toy-pad'; buoy.appendChild(pad);
   var t0, sx, sy;
-  pad.addEventListener('touchstart', function (e) {
-    if (fading || off()) return; e.preventDefault();
-    var p = e.touches[0]; drag = true; still = 0; vx = vy = 0; t0 = performance.now(); sx = p.clientX; sy = p.clientY;
-    hist = [{ x: p.clientX, y: p.clientY, t: t0 }];
-  }, { passive: false });
-  pad.addEventListener('touchmove', function (e) {
-    if (!drag) return; e.preventDefault();
-    var p = e.touches[0];
-    if (!away && Math.hypot(p.clientX - sx, p.clientY - sy) > 6) away = true;
-    if (away) { x = p.clientX; y = p.clientY; }
-    hist.push({ x: p.clientX, y: p.clientY, t: performance.now() }); if (hist.length > 12) hist.shift();
-  }, { passive: false });
+  pad.addEventListener('pointerdown', function (e) {
+    if (fading || off() || !e.isPrimary) return; e.preventDefault(); e.stopPropagation();
+    try { pad.setPointerCapture(e.pointerId); } catch (err) {}
+    drag = true; still = 0; vx = vy = 0; t0 = performance.now(); sx = e.clientX; sy = e.clientY;
+    hist = [{ x: e.clientX, y: e.clientY, t: t0 }];
+  });
+  pad.addEventListener('pointermove', function (e) {
+    if (!drag) return;
+    if (!away && Math.hypot(e.clientX - sx, e.clientY - sy) > 6) away = true;
+    if (away) { x = e.clientX; y = e.clientY; }
+    hist.push({ x: e.clientX, y: e.clientY, t: performance.now() }); if (hist.length > 12) hist.shift();
+  });
   function letGo(e) {
     if (!drag) return; drag = false;
-    if (!away) { if (e && e.type === 'touchend') toTop.click(); return; }   // a tap = the up button
+    if (!away) { if (e && e.type === 'pointerup') toTop.click(); return; }   // a tap or click = the up button
     var now = performance.now(), z = hist[hist.length - 1], a = z;
     for (var i = hist.length - 1; i >= 0 && now - hist[i].t < 120; i--) a = hist[i];   // speed of the last 120 ms
     var dt = Math.max(16, z.t - a.t);
     vx = (z.x - a.x) / dt * 16 * 1.4; vy = (z.y - a.y) / dt * 16 * 1.4;
     var sp = Math.hypot(vx, vy), max = 45; if (sp > max) { vx *= max / sp; vy *= max / sp; }
   }
-  pad.addEventListener('touchend', letGo); pad.addEventListener('touchcancel', letGo);
+  pad.addEventListener('pointerup', letGo); pad.addEventListener('pointercancel', letGo);
   requestAnimationFrame(tick);
 })();
