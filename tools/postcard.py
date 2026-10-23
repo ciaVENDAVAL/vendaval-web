@@ -65,7 +65,25 @@ FADE_ALL = ('-webkit-mask-image:linear-gradient(to right,transparent,#000 9%,#00
             '-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent,#000 9%,#000 91%,transparent),linear-gradient(to bottom,transparent,#000 9%,#000 91%,transparent);mask-composite:intersect;')
 FADE_LEFT = ('-webkit-mask-image:linear-gradient(to right,transparent,#000 7%);mask-image:linear-gradient(to right,transparent,#000 7%);')
 
-def page():
+# background themes: (bg, title, accent, text, muted) — 'sand' is the current card
+THEMES = {
+ 'sand':   ('#F5EDDC', '#0F2C40', '#B5401C', '#1E2A33', '#55636D'),
+ 'navy':   ('#0F2C40', '#F5EDDC', '#EBA53B', '#F5EDDC', '#9FC3D3'),
+ 'sea':    ('#BFE6F2', '#0F2C40', '#B5401C', '#14303F', '#3E5866'),
+ 'white':  ('#FFFFFF', '#0F2C40', '#B5401C', '#1E2A33', '#55636D'),
+ 'yellow': ('#FFD23F', '#0F2C40', '#B5401C', '#14303F', '#4A4A3A'),
+}
+
+def theme_css(name):
+    bg, title, acc, txt, mut = THEMES[name]
+    dark = name == 'navy'
+    return f'''.front,.back,.strip{{background:{bg}}} body,.strip{{color:{txt}}}
+.strip h1,.head h1,.genres,.qr{{color:{title}}} .strip h1 span,.head h1 span,.strip .kick,.strip .co,.fig .n,li::before{{color:{acc}}}
+.cr,.foot .lab{{color:{mut}}} .cr .nm{{color:{txt}}}
+''' + ('''.bsup{background:#F5EDDC;border-radius:1.4mm;padding:1.4mm 2.4mm} .pics .qr svg{background:#F5EDDC;padding:.8mm;border-radius:.6mm;width:13.6mm;height:13.6mm}
+''' if dark else '')
+
+def page(theme='sand'):
     img = lambda f: (SRC/f).as_uri()
     figs = ''.join(f'<div class="fig"><div class="n">{e(n)}</div><div class="l">{tri(*l)}</div></div>' for n, l in FIGS)
     lines = ''.join(f'<li>{tri(*l, sep=" · ")}</li>' for l in LINES)
@@ -130,7 +148,7 @@ li::before{{content:"\\2693\\FE0E";color:#B5401C;display:inline-block;width:2.6m
 .pics .g{{width:50mm;display:block;border-radius:1.2mm}}
 .pics .qr{{margin-top:auto;display:flex;justify-content:flex-end;align-items:center;gap:2mm}}
 .pics .qr svg{{width:12mm;height:12mm;display:block}}
-</style>
+{theme_css(theme)}</style>
 <section class="pg front">
   <img class="photo" src="{img(FRONT)}" alt="">
   <img class="logo" src="{LOGO}" alt="VENDAVAL">
@@ -154,17 +172,18 @@ li::before{{content:"\\2693\\FE0E";color:#B5401C;display:inline-block;width:2.6m
   <div class="pics">{games}<div class="qr"><span>www.VENDAVAL.cat ›</span>{qr_svg(QR_URL)}</div></div>
 </section></html>'''
 
-def build():
+def build(theme='sand', out=None):
     OUT.mkdir(exist_ok=True); stamp = datetime.date.today().strftime('%Y-%m')
     with sync_playwright() as p:
         b = p.chromium.launch(); pg = b.new_page()
-        f = OUT/'_postcard.html'; f.write_text(page())
+        f = OUT/'_postcard.html'; f.write_text(page(theme))
         pg.goto(f.as_uri()); pg.wait_for_load_state('networkidle')
-        out = OUT/f'VENDAVAL-Brass_CA-ES-EN_postal_{stamp}.pdf'
+        out = out or OUT/f'VENDAVAL-Brass_CA-ES-EN_postal_{stamp}.pdf'
         pg.pdf(path=str(out), width='154mm', height='111mm', print_background=True, prefer_css_page_size=True)
         f.unlink(); print('built', out.relative_to(ROOT))
         b.close()
 
 if __name__ == '__main__':
     import sys
-    build()
+    t = sys.argv[1] if len(sys.argv) > 1 else 'sand'
+    build(t, None if t == 'sand' else OUT/f'_option_{t}.pdf')
