@@ -14,13 +14,13 @@
 @font-face{font-family:"Atkinson";src:url(../fonts/atkinson-hyperlegible-latin-700-normal.woff2) format("woff2");font-weight:700;font-display:swap}
 :root{--red:#e8492e;--navy:#082f40;--teal:#1ab3bf;--yellow:#f4b740;--cream:#f5ebdd;--purple:#8f4a96}
 *{box-sizing:border-box}
-html,body{margin:0;height:100%;background:var(--navy);color:#fff;font:400 16px/1.4 "Atkinson",system-ui,sans-serif;overflow:hidden;overscroll-behavior:none}
-canvas{position:fixed;inset:0;width:100%;height:100%;touch-action:none;display:block}
+html,body{margin:0;height:100%;height:100dvh;position:fixed;inset:0;width:100%;background:var(--navy);color:#fff;font:400 16px/1.4 "Atkinson",system-ui,sans-serif;overflow:hidden;overscroll-behavior:none}
+canvas{position:fixed;left:0;top:0;width:100vw;height:100dvh;touch-action:none;display:block}
 header{position:fixed;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 16px;pointer-events:none}
 header *{pointer-events:auto}
-h1{font:800 clamp(18px,3.4vw,30px)/1 "Bricolage",system-ui,sans-serif;margin:0;letter-spacing:-.01em;text-shadow:0 2px 12px rgba(0,0,0,.35)}
+h1{font:800 clamp(16px,3.4vw,30px)/1.05 "Bricolage",system-ui,sans-serif;margin:0;letter-spacing:-.01em;text-shadow:0 2px 12px rgba(0,0,0,.35)}
 h1 span{color:var(--yellow)}
-.back{color:var(--cream);font-weight:700;text-decoration:none;font-size:14px;opacity:.85}
+.back{color:var(--cream);font-weight:700;text-decoration:none;font-size:14px;opacity:.85;white-space:nowrap}
 .back:hover{opacity:1;color:var(--yellow)}
 nav.bar{position:fixed;left:50%;bottom:max(12px,env(safe-area-inset-bottom));transform:translateX(-50%);display:flex;gap:6px;flex-wrap:nowrap;justify-content:center;padding:8px;border-radius:999px;background:rgba(8,47,64,.72);backdrop-filter:blur(6px);max-width:calc(100% - 24px)}
 button{white-space:nowrap;font:700 14px/1 "Atkinson",system-ui,sans-serif;color:var(--navy);background:var(--cream);border:0;border-radius:999px;padding:10px 14px;cursor:pointer;min-height:40px}
@@ -50,6 +50,7 @@ button:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
   <button id="scale"></button>
   <button id="rec" class="rec" aria-pressed="false"></button>
   <button id="play" disabled></button>
+  <button id="fs" aria-label="Fullscreen">⛶</button>
 </nav>
 <div id="start" role="dialog" aria-modal="true" aria-labelledby="st">
   <div class="card">
@@ -156,8 +157,18 @@ function harmonize(){
 // ---------- canvas
 const cv=$('c'), ctx=cv.getContext('2d'); let W=0,H=0,DPR=1;
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-function resize(){DPR=Math.min(2,window.devicePixelRatio||1);W=innerWidth;H=innerHeight;cv.width=W*DPR;cv.height=H*DPR;ctx.setTransform(DPR,0,0,DPR,0,0);}
-addEventListener('resize',resize); resize();
+function resize(){ // size from the visible viewport, so mobile address bars can't push creatures off screen
+  const vv=window.visualViewport; DPR=Math.min(2,window.devicePixelRatio||1);
+  W=Math.round(vv?vv.width:innerWidth); H=Math.round(vv?vv.height:innerHeight);
+  cv.style.width=W+'px'; cv.style.height=H+'px'; cv.width=W*DPR; cv.height=H*DPR; ctx.setTransform(DPR,0,0,DPR,0,0);
+  C.forEach(c=>{c.str=Math.min(c.str,2);c.sv=0;});
+}
+addEventListener('resize',resize); window.visualViewport&&visualViewport.addEventListener('resize',resize);
+addEventListener('orientationchange',()=>setTimeout(resize,300));
+addEventListener('pageshow',resize);
+document.addEventListener('visibilitychange',()=>{ if(document.hidden){ C.forEach(c=>{c.held=false;c.auto=false;if(c.singing){c.singing=false;voiceOff(c);}}); grabs.clear(); if(playing) stopPlay(); } else { resize(); if(ac&&ac.state==='suspended') ac.resume(); } });
+document.addEventListener('fullscreenchange',()=>setTimeout(resize,200));
+resize();
 const colX=i=>W*(.2+.3*i);
 const baseY=()=>H-Math.max(W<520?140:120,H*.15);
 const unit=()=>Math.min(W/3.4,H/3.1);
@@ -215,7 +226,10 @@ let hintShown=false; const hint=$('hint');
 function hideHint(){ if(!hintShown){hintShown=true; hint.style.opacity=0;} }
 
 // start
-$('go').onclick=()=>{ initAudio(); $('start').remove(); hint.textContent=t.hint; };
+const fsOK=!!(document.documentElement.requestFullscreen||document.documentElement.webkitRequestFullscreen);
+function goFull(){ const d=document.documentElement; try{ (d.requestFullscreen||d.webkitRequestFullscreen).call(d,{navigationUI:'hide'}); }catch(e){} }
+if(!fsOK) $('fs').remove(); else $('fs').onclick=()=>{ if(document.fullscreenElement||document.webkitFullscreenElement){ (document.exitFullscreen||document.webkitExitFullscreen).call(document);} else goFull(); };
+$('go').onclick=()=>{ initAudio(); if(fsOK && matchMedia('(pointer:coarse)').matches) goFull(); $('start').remove(); hint.textContent=t.hint; };
 
 // ---------- drawing
 function bg(ts){
