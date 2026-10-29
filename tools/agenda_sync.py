@@ -12,7 +12,7 @@ How events are read (keep the calendar like this):
 - Status "tentative" or "cancelled": left out. Only confirmed gigs go public.
 - All-day events or timed events both work; a multi-day event becomes a date range.
 Events are matched by their calendar UID, so editing an event in the calendar updates it on the website.
-Gigs typed by hand into data.json (no uid) are never touched or deleted.
+Gigs typed by hand into data.json (no uid) are never deleted; one with the same show and start date as a calendar event is linked to it (its notes and link are kept).
 """
 import json, re, sys, pathlib, urllib.request, datetime
 
@@ -75,7 +75,13 @@ def main(dry):
             new = dict(g, **keep)
             if new != old: agenda[by_uid[g['uid']]] = new; changed += 1
         else:
-            agenda.append(g); added += 1
+            # a gig already typed by hand (same show, same start date): link it to the calendar instead of adding it twice
+            twin = next((i for i, o in enumerate(agenda) if not o.get('uid') and o['show'] == g['show'] and o['start'] == g['start']), None)
+            if twin is not None:
+                old = agenda[twin]; keep = {k: old[k] for k in ('note', 'ws', 'url') if old.get(k)}
+                agenda[twin] = dict(g, **keep); by_uid[g['uid']] = twin; changed += 1
+            else:
+                agenda.append(g); added += 1
     agenda.sort(key=lambda g: (g['start'], g['end']))
     print(f'{len(gigs)} confirmed gigs in the calendar · {added} new · {changed} updated')
     for g in gigs: print(f"  {g['start']}–{g['end']}  {g['show']:9}  {g['place']}")

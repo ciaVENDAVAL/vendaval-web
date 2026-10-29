@@ -626,11 +626,12 @@
    "start": "2026-11-07",
    "end": "2026-11-07",
    "show": "freakfrac",
-   "url": null,
+   "url": "https://visitandorra.com/en/events/freak-frack-brothers/",
    "precision": "day",
-   "place": "Pas de la Casa (Andorra)",
+   "place": "Pas de la Casa, Andorra",
    "note": "",
-   "ws": ""
+   "ws": "",
+   "uid": "53df98b3-9369-4515-a204-f2210548c090"
   },
   {
    "start": "2027-01-05",
