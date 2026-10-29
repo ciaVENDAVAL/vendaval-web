@@ -1,0 +1,245 @@
+{
+ "top_l": "DOSSIER · VENDAVAL BRASS · 2026-10",
+ "top_r": "BARCELONA · MÚSICA Y CIRCO",
+ "fmt": "CONCIERTO ENTRE EL PÚBLICO",
+ "title": "Música en directo<br>entre el público",
+ "kf": [
+  [
+   "8",
+   "PERSONAS EN ESCENA"
+  ],
+  [
+   "30′",
+   "VARIOS PASES"
+  ],
+  [
+   "8",
+   "MICRÓFONOS INALÁMBRICOS"
+  ],
+  [
+   "PLAZA",
+   "FRENTE AL ESCENARIO"
+  ]
+ ],
+ "show_kick": "El espectáculo",
+ "show_h": "La fiesta baja del escenario",
+ "show_p": [
+  "<b>VENDAVAL Brass</b> es una banda de viento y percusión que toca entre el público. En este formato, la banda se instala en la plaza, frente al escenario de música, y convierte la espera entre conciertos en una fiesta.",
+  "Seis músicos con vestuario de criaturas marinas y maquillaje teatral tocan funk, balcánico, swing y cumbia, dirigidos en directo con señas de mano. Dos personajes fantásticos, uno en zancos y otro en monociclo, invitan al público a saltar a la comba, lanzar objetos blandos al aire y bailar juntos. La banda puede subir al escenario, pero la mayor parte de la acción ocurre entre el público."
+ ],
+ "box_h": "Pensado para festivales de música",
+ "box": [
+  "Para los cambios de escenario: el público se queda, juega y baila mientras el siguiente grupo monta.",
+  "30 minutos, varios pases al día. Para todos los públicos, de día o de noche.",
+  "En la plaza, frente al escenario; la banda puede subir a él. Los zancos, siempre entre el público, salvo que el escenario no esté elevado.",
+  "6 músicos (3 saxos, trompeta, sousáfono, percusión) y 2 artistas de circo (zancos, monociclo, malabares, juegos).",
+  "Sonido amplificado: 8 micrófonos inalámbricos (6 de instrumento, 2 de voz) al PA del festival, o en acústico, sin micrófonos.",
+  "Sin texto; instrucciones de los juegos en catalán, castellano, inglés o alemán."
+ ],
+ "mus_kick": "La música",
+ "mus_h": "Composición e improvisación en directo",
+ "mus_p1": "Todas las piezas son composiciones propias de VENDAVAL. Las músicas que los miembros de la banda han traído de Europa y de las Américas se mezclan en un repertorio abierto:",
+ "chips": [
+  "FUNK",
+  "BALCÁNICO",
+  "SWING",
+  "CUMBIA"
+ ],
+ "mus_p2": "Desde el centro de la plaza, la dirección marca con señas de mano cuándo cambia el ritmo, quién hace un solo o cuándo la banda se detiene para un juego. Cada pase es distinto: la música responde a la gente que tiene delante.",
+ "chr_kick": "Personajes",
+ "chr_h": "Un concierto con personajes",
+ "chr_p": [
+  "Cada músico es un personaje: marineros, sirenas y criaturas de las profundidades, con un maquillaje teatral atrevido y un vestuario con todos los colores del mar. Es una capa extra de teatro sobre un concierto en directo, pensada para verse de lejos y de cerca.",
+  "Los juegos con el público usan la comba, objetos blandos para lanzar al aire, la red de mar y el salvavidas."
+ ],
+ "why_h": "La plaza, una pista de baile compartida",
+ "why_p": [
+  "Una plaza llena de música es un lugar donde personas que no se conocen acaban bailando juntas. Entre concierto y concierto, VENDAVAL abre un espacio de juego espontáneo: saltar a la comba con alguien a quien acabas de conocer, reír con una criatura marina en zancos, aplaudir una melodía que nace en ese momento.",
+  "El juego compartido es una terapia al aire libre, gratuita y colectiva, que rompe la soledad. Y los colores del mar —azules, verdes, naranjas y rosados— llenan la plaza de vida."
+ ],
+ "acc_kick": "Para todos los cuerpos y mentes",
+ "acc_h": "Accesibilidad",
+ "acc_p": "VENDAVAL quiere llegar a todas las personas. La compañía ofrece una visita táctil para personas con diversidad visual. Como este formato es amplificado, es más fácil añadir audiodescripción, audífonos y mochilas vibratorias, si la organización dispone del equipo.",
+ "alw_h": "Siempre posible",
+ "alw": [
+  "Visita táctil"
+ ],
+ "ifq_h": "Si el equipo está disponible",
+ "ifq": [
+  "Audiodescripción y audífonos",
+  "Mochilas vibratorias",
+  "Interpretación en lengua de signos"
+ ],
+ "ducs": "Para más información sobre la inclusión de personas con diversidad funcional en el circo, véase el <i>DUCS: Diseño universal del circo social</i>.",
+ "team_kick": "Quién es quién",
+ "team_h": "Equipo",
+ "tyle": "tyle fernández {elle}",
+ "roles": [
+  "dirección artística · saxo barítono",
+  "saxo alto",
+  "saxo tenor",
+  "trompeta",
+  "sousáfono",
+  "percusión",
+  "zancos · malabares · juegos",
+  "monociclo · malabares · juegos"
+ ],
+ "orig": [
+  "EE. UU./DE",
+  "AR",
+  "IT",
+  "AR",
+  "AR/PT",
+  "AR/ES",
+  "CAT",
+  "CAT"
+ ],
+ "cred_h": "Créditos",
+ "cred": [
+  [
+   "Composición musical y sonido",
+   "Cia. VENDAVAL"
+  ],
+  [
+   "Vestuario",
+   "Imaginario de Mónica (Mónica Romero)"
+  ],
+  [
+   "Diseño gráfico",
+   "bicialta"
+  ],
+  [
+   "Fotografía",
+   "ROAR (David Ugalde) · Barbara Walzer · Jordi Largo"
+  ],
+  [
+   "Coproducción",
+   "Cia. Filigranes"
+  ]
+ ],
+ "gigs_h": "Actuaciones de VENDAVAL Brass",
+ "gigs": [
+  [
+   "1 de marzo de 2025",
+   "Festes de Porta, Ateneu la Bòbila, Barcelona · <i>estreno</i>"
+  ],
+  [
+   "8–11 de mayo de 2026",
+   "Unterwegs Theater Festival, Mühlheim y Dreieich (Alemania)"
+  ],
+  [
+   "30 y 31 de mayo de 2026",
+   "Fira del Vapor, Sant Vicenç de Castellet"
+  ],
+  [
+   "24–26 de julio de 2026",
+   "Sommerwerft Theater Festival, Fráncfort del Meno (Alemania)"
+  ]
+ ],
+ "con_h": "Contacto",
+ "con_role": "dirección artística · contratación",
+ "lab_tel": "TEL.",
+ "dl": "Dosieres, fichas técnicas y fotos: www.VENDAVAL.cat/descarregues",
+ "sup": "Apoyo",
+ "foot_d": "DOSSIER · CONCIERTO ENTRE EL PÚBLICO",
+ "r_title": "Ficha técnica",
+ "r_upd": "Actualizado",
+ "r_date": "22 de octubre de 2026",
+ "r_kf": [
+  [
+   "PLAZA",
+   "FRENTE AL ESCENARIO"
+  ],
+  [
+   "TODOS LOS PÚBLICOS",
+   "DE DÍA O DE NOCHE"
+  ],
+  [
+   "30′",
+   "VARIOS PASES"
+  ],
+  [
+   "0–1",
+   "TÉCNICO DE SONIDO (FESTIVAL)"
+  ]
+ ],
+ "s": [
+  "Espacio",
+  "Sonido",
+  "Iluminación",
+  "Horarios",
+  "Lluvia",
+  "Logística",
+  "Accesibilidad"
+ ],
+ "s1": [
+  "Espacio llano y libre frente al escenario: mínimo 6 × 6 m.",
+  "Acceso entre la zona de público y el escenario (escaleras o rampa).",
+  "Zancos en el escenario solo si no está elevado, con una altura libre de 4 m (techo, truss, luces).",
+  "La compañía aporta todo el material escénico: instrumentos, zancos, monociclo, malabares, atrezo para los juegos, vestuario y maquillaje."
+ ],
+ "s2_intro": "Opción recomendada: <b>PA y técnico de sonido del festival</b>. La compañía trae sus 8 micrófonos inalámbricos. <b>Opción acústica:</b> la banda también puede tocar sin micrófonos ni PA. En ese caso no hacen falta técnico de sonido ni toma de corriente.",
+ "th": [
+  "Canal",
+  "Fuente",
+  "Micrófono (compañía)"
+ ],
+ "src": [
+  "Saxo alto",
+  "Saxo tenor",
+  "Saxo barítono",
+  "Trompeta",
+  "Sousáfono",
+  "Percusión",
+  "Voz · personaje 1 (zancos)",
+  "Voz · personaje 2 (monociclo)"
+ ],
+ "mic": [
+  "pinza inalámbrico",
+  "inalámbrico",
+  "diadema inalámbrico"
+ ],
+ "s2_p": [
+  "<b>El festival aporta:</b> PA que cubra la zona de público frente al escenario · mesa con 8 canales libres · técnico de sonido · 1 toma de 230 V en el control, para los receptores.",
+  "<b>Monitores:</b> no hacen falta; la banda toca delante de los altavoces del PA. Hay que vigilar los acoples, porque los músicos se mueven por delante del PA.",
+  "<b>Frecuencias y modelo de los micrófonos:</b> bajo petición (pueden variar según los artistas).",
+  "<b>Opción alternativa:</b> a petición, la compañía puede traer su mesa XR18, altavoces y técnico (coste adicional)."
+ ],
+ "s3": "De día, ninguna necesidad. De noche, luz general en la plaza (la del festival).",
+ "mt_h": "Montaje · aprox. 2 h",
+ "mt": [
+  [
+   "Descarga",
+   "10′"
+  ],
+  [
+   "Prueba de sonido (antes de los conciertos)",
+   "60′"
+  ],
+  [
+   "Maquillaje y vestuario",
+   "60′"
+  ]
+ ],
+ "dm_h": "Desmontaje · aprox. 1 h",
+ "dm": [
+  [
+   "Desmontaje",
+   "20′"
+  ],
+  [
+   "Recogida del vestuario",
+   "30′"
+  ],
+  [
+   "Carga",
+   "10′"
+  ]
+ ],
+ "sets": "<b>Pases:</b> 30 minutos cada uno, varios a lo largo del día. Siempre con 30 minutos de pausa entre pases.",
+ "s5": "Con lluvia no se puede tocar al aire libre, por los instrumentos y los micrófonos. La compañía puede esperar a que pare y tocar más tarde u otro día. El suelo mojado no impide el espectáculo. Alternativa: una sala grande con una altura mínima de 5 m.",
+ "s6": "<b>Aparcamiento:</b> espacio para 2 vehículos.<br><b>Camerino:</b> espacio para 8 personas con mesas para maquillarse y cambiarse. La compañía puede traer espejos y luces.<br><b>Comidas:</b> 2 sin carne (pescado, huevos y lácteos, sí) · 6 sin dieta específica.",
+ "s7": "<b>Siempre posible:</b> visita táctil, 1 hora antes del espectáculo, después del maquillaje, en un espacio sin ruido.<br><b>Si el equipo está disponible:</b> audiodescripción, audífonos y mochilas vibratorias (conectados al sonido amplificado) · interpretación en lengua de signos para los juegos.",
+ "r_role": "dirección · contratación",
+ "foot_r": "FICHA TÉCNICA · CONCIERTO ENTRE EL PÚBLICO"
+}

@@ -1,0 +1,169 @@
+<!doctype html>
+{# VENDAVAL Brass · Concert in the audience: dossier (6 pp) and rider (2 pp). Texts: <lang>.json (may contain <b>, <i>, <br>). #}
+{% macro row(names, width=180, gap=3) %}{% set r = row_sizes(names, width, gap) %}<div class="row">{% for n, w in r.cells %}<img src="{{ img(n) }}" alt="" style="height:{{ r.h }}mm;width:{{ w }}mm;margin-right:{{ gap if not loop.last else 0 }}mm">{% endfor %}</div>{% endmacro %}
+{% macro kfrow(items, colors, big='20pt') %}{% for a, b in items %}<td style="background:{{ colors[loop.index0 % colors|length] }};color:#fff;text-align:center;padding:4mm 1mm;border:0"><div style="font:700 {{ big }} Osw">{{ a }}</div><div style="font:600 7.8pt Osw;letter-spacing:1pt">{{ b }}</div></td>{% endfor %}{% endmacro %}
+{% macro ul(items) %}<ul>{% for x in items %}<li>{{ x|safe }}</li>{% endfor %}</ul>{% endmacro %}
+{% macro paras(items) %}{% for x in items %}<p>{{ x|safe }}</p>{% endfor %}{% endmacro %}
+{% macro tr(rows) %}{% for a, b in rows %}<tr><td style="width:62mm"><b>{{ a|safe }}</b></td><td>{{ b|safe }}</td></tr>{% endfor %}{% endmacro %}
+{% macro lab(s) %}<span style="font:700 8pt Osw;letter-spacing:2pt;color:var(--cyan)">{{ s }}</span><br>{% endmacro %}
+<html lang="{{ lang }}">
+<head>
+<meta charset="utf-8">
+<title>VENDAVAL Brass · {{ t.fmt }}</title>
+<style>
+/* Oswald from dossiers/assets/fonts: 500 for regular text, 600 for bold */
+@font-face{font-family:Osw;font-weight:100 550;src:url({{ font('oswald-latin-500-normal') }})}
+@font-face{font-family:Osw;font-weight:551 900;src:url({{ font('oswald-latin-600-normal') }})}
+@font-face{font-family:Osw;font-weight:100 550;src:url({{ font('oswald-latin-ext-500-normal') }});unicode-range:U+0100-024F,U+1E00-1EFF}
+@font-face{font-family:Osw;font-weight:551 900;src:url({{ font('oswald-latin-ext-600-normal') }});unicode-range:U+0100-024F,U+1E00-1EFF}
+:root{--navy:#0b2e3f;--orange:#e8492e;--amber:#f2a93b;--cyan:#2ec5e0;--cream:#f8f3e8}
+@page{size:A4;margin:15mm 15mm 20mm 15mm;background:#f8f3e8;
+  @bottom-left{content:"{{ foot }}";font:600 7.5pt Osw,"Noto Sans CJK JP";letter-spacing:2pt;color:#7a8b93}
+  @bottom-right{content:"VENDAVAL · " counter(page);font:600 7.5pt Osw;letter-spacing:2pt;color:#7a8b93}}
+@page rider{margin:15mm 0 20mm 0}
+@page rider:first{margin-top:0}
+@page rider{@bottom-left{padding-left:15mm}@bottom-right{padding-right:15mm}}
+.rider{page:rider} .rider .in{padding:0 15mm}
+@page cover{margin:0;@bottom-left{content:none}@bottom-right{content:none}}
+@page last{margin:0;@bottom-left{content:none}@bottom-right{content:none}}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font:9.6pt/1.55 Poppins,"Noto Sans CJK JP",sans-serif;color:#14262e;margin:0}
+.cover{page:cover} .last{page:last;break-before:page}
+.pb{break-before:page}
+h1,h2,h3{font-family:Osw,"Noto Sans CJK JP";margin:0}
+.kick{font:700 8pt Osw,"Noto Sans CJK JP";letter-spacing:3pt;color:var(--orange);text-transform:uppercase;margin-top:10mm}
+h2{font-size:26pt;line-height:1.05;color:var(--navy);margin:1mm 0 4mm}
+h3{font-size:12pt;color:var(--orange);letter-spacing:1pt;text-transform:uppercase;margin:4mm 0 2mm}
+p{margin:0 0 2.5mm}
+/* photo rows: same height, widths fill the row, never cropped */
+.row{white-space:nowrap;margin:3mm 0;line-height:0;text-align:center}
+.row img{display:inline-block;vertical-align:top}
+.sec{break-inside:avoid}
+.box{background:var(--amber);padding:4mm 6mm;margin:3mm 0}
+.box.navy{background:var(--navy);color:#fff} .box.navy h3{color:var(--cyan)}
+.box ul{margin:0;padding-left:5mm} .box li{margin:.6mm 0}
+.chips span{display:inline-block;border:1.2pt solid var(--navy);border-radius:10mm;padding:.8mm 4mm;margin:0 1.5mm 1.5mm 0;font:700 8.5pt Osw,"Noto Sans CJK JP";letter-spacing:1pt}
+.cols{display:flex;gap:6mm} .cols>div{flex:1}
+table{border-collapse:collapse;width:100%}
+td,th{padding:1.4mm 2mm;border-bottom:.6pt solid #c9c1b0;text-align:left;vertical-align:top}
+th{font:700 8.5pt Osw,"Noto Sans CJK JP";letter-spacing:1pt;color:var(--navy);text-transform:uppercase}
+.small{font-size:8.3pt;color:#4b5a61}
+html[lang=ja] .kick,html[lang=ja] h3,html[lang=ja] th{letter-spacing:1pt}
+</style>
+</head>
+<body>
+{% if kind == 'dossier' %}
+<!-- 1 · cover -->
+<div class="cover">
+ <div style="position:relative">
+  {% set c = row_sizes([P.cover], 210, 0) %}<img src="{{ img(P.cover) }}" alt="" style="width:210mm;height:{{ c.h }}mm;display:block">
+  <div style="position:absolute;top:7mm;left:12mm;right:12mm;font:700 8pt Osw,'Noto Sans CJK JP';letter-spacing:3pt;color:#fff;text-shadow:0 0 3mm #000">{{ t.top_l }}<span style="float:right">{{ t.top_r }}</span></div>
+ </div>
+ <div style="padding:6mm 15mm 0;position:relative">
+  <img src="{{ logo('vendaval.png') }}" alt="VENDAVAL" style="width:62mm;position:absolute;right:12mm;top:-24mm">
+  <div style="font:700 9pt Osw,'Noto Sans CJK JP';letter-spacing:3pt;color:var(--orange)">{{ t.fmt }}</div>
+  <div style="font:700 30pt/1.05 Osw,'Noto Sans CJK JP';color:var(--navy);margin-top:1mm">{{ t.title|safe }}</div>
+ </div>
+ <table style="margin-top:6mm;width:210mm"><tr>{{ kfrow(t.kf, ['#e8492e', '#0b2e3f']) }}</tr></table>
+ <div style="padding:0 15mm">{{ row(P.cover_row, 180, 3) }}</div>
+</div>
+
+<!-- 2 · the show -->
+<div class="sec pb">
+ <div class="kick" style="margin-top:0">{{ t.show_kick }}</div><h2>{{ t.show_h }}</h2>
+ {{ paras(t.show_p) }}
+</div>
+<div class="sec box navy"><h3>{{ t.box_h }}</h3>{{ ul(t.box) }}</div>
+{{ row(P.show_row) }}
+
+<!-- 3 · music and characters -->
+<div class="sec pb">
+ <div class="kick" style="margin-top:0">{{ t.mus_kick }}</div><h2>{{ t.mus_h }}</h2>
+ <p>{{ t.mus_p1|safe }}</p>
+ <div class="chips">{% for c in t.chips %}<span>{{ c }}</span>{% endfor %}</div>
+ <p>{{ t.mus_p2|safe }}</p>
+</div>
+{{ row(P.music_row, 160) }}
+<div class="sec"><div class="kick">{{ t.chr_kick }}</div><h2>{{ t.chr_h }}</h2>{{ paras(t.chr_p) }}</div>
+{{ row(P.chars_row, 135) }}
+
+<!-- 4 · the square + accessibility -->
+<div class="sec pb">
+ <div class="kick" style="margin-top:0">Cia. VENDAVAL</div><h2>{{ t.why_h }}</h2>
+ {{ paras(t.why_p) }}
+</div>
+<div class="sec">
+ <div class="kick">{{ t.acc_kick }}</div><h2 style="font-size:20pt">{{ t.acc_h }}</h2>
+ <p>{{ t.acc_p|safe }}</p>
+ <div class="cols">
+  <div class="box" style="background:#e3f1c9"><h3 style="color:#3d6b12;margin-top:0">{{ t.alw_h }}</h3>{{ ul(t.alw) }}</div>
+  <div class="box" style="background:#fde3ad"><h3 style="color:#8a5a00;margin-top:0">{{ t.ifq_h }}</h3>{{ ul(t.ifq) }}</div>
+ </div>
+ <p class="small">{{ t.ducs|safe }}</p>
+</div>
+{{ row(P.access_row, 180) }}
+
+<!-- 5 · team, credits, performances -->
+<div class="sec pb">
+ <div class="kick" style="margin-top:0">{{ t.team_kick }}</div><h2>{{ t.team_h }}</h2>
+ {{ row(team|map(attribute='photo')|list, 180, 2) }}
+ <table>{% for m in team %}<tr><td style="width:62mm"><b>{{ t.tyle if loop.first else m.name }}</b> <span class="small">({{ t.orig[loop.index0] }})</span></td><td>{{ t.roles[loop.index0] }}</td></tr>{% endfor %}</table>
+</div>
+<div class="sec"><h3 style="margin-top:10mm">{{ t.cred_h }}</h3><table>{{ tr(t.cred) }}</table></div>
+<div class="sec"><h3 style="margin-top:10mm">{{ t.gigs_h }}</h3><table>{{ tr(t.gigs) }}</table></div>
+
+<!-- 6 · contact (no running footer) -->
+<div class="last">
+ <div style="background:var(--navy);color:#fff;padding:14mm 15mm 10mm">
+  <div style="font:700 8pt Osw;letter-spacing:3pt;color:var(--cyan)">CIA. VENDAVAL</div>
+  <div style="font:700 30pt Osw,'Noto Sans CJK JP';color:var(--cream)">{{ t.con_h }}</div>
+  <table style="margin-top:4mm;color:#fff"><tr>
+   <td style="border:0;padding-left:0"><b style="font:700 12pt Osw">{{ t.tyle }}</b><br><span style="color:#9fb3bc">{{ t.con_role }}</span></td>
+   <td style="border:0">{{ lab('EMAIL') }}{{ site.email }}</td>
+   <td style="border:0">{{ lab(t.lab_tel) }}{{ site.phone }}</td>
+  </tr><tr>
+   <td style="border:0;padding-left:0">{{ lab('WEB') }}www.VENDAVAL.cat</td>
+   <td style="border:0">{{ lab('YOUTUBE') }}@vendaval.youtube</td>
+   <td style="border:0">{{ lab('INSTAGRAM') }}@vendaval.brass</td>
+  </tr></table>
+  <p style="margin-top:4mm;color:#cfdde3">{{ t.dl }}</p>
+ </div>
+ {% set c = row_sizes([P.contact], 210, 0) %}<img src="{{ img(P.contact) }}" alt="" style="width:210mm;height:{{ c.h }}mm;display:block">
+ <div style="padding:7mm 15mm;white-space:nowrap">
+  <span style="font:700 18pt Osw,'Noto Sans CJK JP';color:var(--navy);vertical-align:middle;margin-right:8mm">{{ t.sup }}</span>
+  {% for f, h in support %}<img src="{{ logo(f) }}" alt="" style="height:{{ h }}mm;vertical-align:middle;{% if not loop.last %}margin-right:7mm{% endif %}">{% endfor %}
+ </div>
+</div>
+
+{% else %}
+{% macro sec(n) %}<div style="padding-top:10mm"><span style="background:var(--amber);font:700 12pt Osw;padding:1mm 3mm;border-radius:1.5mm">{{ n }}</span> <span style="font:700 14pt Osw,'Noto Sans CJK JP';color:var(--navy);margin-left:2mm">{{ t.s[n - 1] }}</span></div>{% endmacro %}
+{% macro tbl(rows) %}<table>{% for a, b in rows %}<tr><td>{{ a }}</td><td>{{ b }}</td></tr>{% endfor %}</table>{% endmacro %}
+{% set mics = [t.mic[0]] * 5 + [t.mic[1], t.mic[2], t.mic[2]] %}
+<div class="rider">
+<div style="background:var(--navy);color:#fff;padding:12mm 15mm 8mm;position:relative">
+ <div style="font:700 9pt Osw,'Noto Sans CJK JP';letter-spacing:3pt;color:var(--cyan)">VENDAVAL BRASS · {{ t.fmt }}</div>
+ <div style="font:700 30pt Osw,'Noto Sans CJK JP';color:var(--cream)">{{ t.r_title }}</div>
+ <div style="position:absolute;right:15mm;top:12mm;text-align:right;font:600 9pt Osw,'Noto Sans CJK JP'">{{ t.r_upd }}<br><span style="color:var(--amber);font:400 11pt Poppins,'Noto Sans CJK JP'">{{ t.r_date }}</span></div>
+</div>
+<table style="width:210mm"><tr>{{ kfrow(t.r_kf, ['#e8492e'], '14pt') }}</tr></table>
+<div class="in">
+<div class="sec">{{ sec(1) }}{{ ul(t.s1) }}</div>
+<div class="sec">{{ sec(2) }}<p style="margin-top:3mm">{{ t.s2_intro|safe }}</p>
+<table><tr><th style="width:14mm">{{ t.th[0] }}</th><th>{{ t.th[1] }}</th><th>{{ t.th[2] }}</th></tr>
+{% for s in t.src %}<tr><td>{{ loop.index }}</td><td>{{ s }}</td><td>{{ mics[loop.index0] }}</td></tr>{% endfor %}</table>
+{% for x in t.s2_p %}<p style="margin-top:2mm">{{ x|safe }}</p>{% endfor %}</div>
+<div class="sec">{{ sec(3) }}<p style="margin-top:3mm">{{ t.s3|safe }}</p></div>
+<div class="sec">{{ sec(4) }}
+<div class="cols" style="margin-top:3mm"><div><h3>{{ t.mt_h }}</h3>{{ tbl(t.mt) }}</div><div><h3>{{ t.dm_h }}</h3>{{ tbl(t.dm) }}</div></div>
+<p style="margin-top:3mm">{{ t.sets|safe }}</p></div>
+<div class="sec">{{ sec(5) }}<p style="margin-top:3mm">{{ t.s5|safe }}</p></div>
+<div class="sec">{{ sec(6) }}<p style="margin-top:3mm">{{ t.s6|safe }}</p></div>
+<div class="sec">{{ sec(7) }}<p style="margin-top:3mm">{{ t.s7|safe }}</p></div>
+<div class="sec" style="margin-top:5mm;background:var(--navy);color:#fff;padding:3mm 6mm">
+ <b style="font:700 12pt Osw">{{ t.tyle }}</b> <span style="color:#9fb3bc">· {{ t.r_role }}</span><br>
+ {{ site.email }} · {{ site.phone }} · www.VENDAVAL.cat
+</div>
+</div></div>
+{% endif %}
+</body>
+</html>

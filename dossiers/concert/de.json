@@ -1,0 +1,245 @@
+{
+ "top_l": "DOSSIER · VENDAVAL BRASS · 2026-10",
+ "top_r": "BARCELONA · MUSIK & ZIRKUS",
+ "fmt": "KONZERT MITTEN IM PUBLIKUM",
+ "title": "Livemusik<br>mitten im Publikum",
+ "kf": [
+  [
+   "8",
+   "DARSTELLENDE"
+  ],
+  [
+   "30′",
+   "MEHRERE DURCHGÄNGE"
+  ],
+  [
+   "8",
+   "FUNKMIKROFONE"
+  ],
+  [
+   "PLATZ",
+   "VOR DER BÜHNE"
+  ]
+ ],
+ "show_kick": "Die Show",
+ "show_h": "Die Party kommt von der Bühne",
+ "show_p": [
+  "<b>VENDAVAL Brass</b> ist eine Blas- und Perkussionsband, die mitten im Publikum spielt. In diesem Format stellt sich die Band auf den Platz vor der Musikbühne und verwandelt das Warten zwischen den Konzerten in ein Fest.",
+  "Sechs Musiker*innen in Kostümen von Meereswesen und mit Theater-Make-up spielen Funk, Balkan, Swing und Cumbia, live dirigiert mit Handzeichen. Zwei fantastische Figuren, eine auf Stelzen und eine auf dem Einrad, laden das Publikum zum Seilspringen, zum Werfen weicher Gegenstände in die Luft und zum gemeinsamen Tanzen ein. Die Band kann auf die Bühne gehen, aber das meiste passiert mitten im Publikum."
+ ],
+ "box_h": "Gemacht für Musikfestivals",
+ "box": [
+  "Ideal für Umbaupausen: Das Publikum bleibt, spielt und tanzt, während die nächste Band aufbaut.",
+  "30 Minuten, mehrere Durchgänge am Tag. Für jedes Alter, tagsüber oder abends.",
+  "Auf dem Platz vor der Bühne; die Band kann auf die Bühne gehen. Die Stelzenfigur bleibt immer im Publikum, außer die Bühne ist nicht erhöht.",
+  "6 Musiker*innen (3 Saxophone, Trompete, Sousaphon, Perkussion) und 2 Zirkusartist*innen (Stelzen, Einrad, Jonglage, Spiele).",
+  "Verstärkt: 8 Funkmikrofone (6 Instrumente, 2 Stimmen) über die PA des Festivals, oder rein akustisch, ohne Mikrofone.",
+  "Ohne Text; Spielanleitungen auf Deutsch, Englisch, Katalanisch oder Spanisch."
+ ],
+ "mus_kick": "Die Musik",
+ "mus_h": "Komponiert und live improvisiert",
+ "mus_p1": "Alle Stücke sind Eigenkompositionen von VENDAVAL. Die Musik, die die Bandmitglieder aus Europa und den Amerikas mitgebracht haben, verschmilzt zu einem offenen Repertoire:",
+ "chips": [
+  "FUNK",
+  "BALKAN",
+  "SWING",
+  "CUMBIA"
+ ],
+ "mus_p2": "Aus der Mitte des Platzes gibt die Leitung mit Handzeichen vor, wann der Rhythmus wechselt, wer ein Solo spielt oder wann die Band für ein Spiel anhält. Jeder Durchgang ist anders: Die Musik antwortet den Menschen, die vor ihr stehen.",
+ "chr_kick": "Figuren",
+ "chr_h": "Ein Konzert mit Figuren",
+ "chr_p": [
+  "Alle Musiker*innen sind Figuren: Seeleute, Sirenen und Wesen aus der Tiefe, mit kräftigem Theater-Make-up und Kostümen in allen Farben des Meeres. Eine zusätzliche Ebene Theater über einem Livekonzert, gemacht, um aus der Nähe und aus der Ferne zu wirken.",
+  "Die Spiele mit dem Publikum nutzen Springseile, weiche Gegenstände zum Werfen, das Meeresnetz und den Rettungsring."
+ ],
+ "why_h": "Der Platz als gemeinsame Tanzfläche",
+ "why_p": [
+  "Ein Platz voller Musik ist ein Ort, an dem Menschen, die sich nicht kennen, am Ende zusammen tanzen. Zwischen den Konzerten öffnet VENDAVAL einen Raum für spontanes Spiel: Seilspringen mit jemandem, den man gerade erst kennengelernt hat, Lachen mit einem Meereswesen auf Stelzen, Applaus für eine Melodie, die genau in diesem Moment entsteht.",
+  "Gemeinsames Spielen ist eine kostenlose, kollektive Therapie unter freiem Himmel, die die Einsamkeit durchbricht. Und die Farben des Meeres —Blau, Grün, Orange und Rosa— erfüllen den Platz mit Leben."
+ ],
+ "acc_kick": "Für alle Körper und Köpfe",
+ "acc_h": "Barrierefreiheit",
+ "acc_p": "VENDAVAL möchte alle Menschen erreichen. Die Compagnie bietet eine Tastführung für blinde und sehbehinderte Menschen an. Da dieses Format verstärkt ist, lassen sich Audiodeskription, Höranlagen und Vibrationsrucksäcke leichter einbinden, wenn der Veranstalter die Technik hat.",
+ "alw_h": "Immer möglich",
+ "alw": [
+  "Tastführung"
+ ],
+ "ifq_h": "Wenn Technik vorhanden ist",
+ "ifq": [
+  "Audiodeskription und Höranlagen",
+  "Vibrationsrucksäcke",
+  "Gebärdensprachdolmetschen"
+ ],
+ "ducs": "Mehr zur Inklusion von Menschen mit Behinderung im Zirkus: <i>DUCS: Diseño universal del circo social</i>.",
+ "team_kick": "Wer ist wer",
+ "team_h": "Team",
+ "tyle": "tyle fernández (dey/dem)",
+ "roles": [
+  "künstlerische Leitung · Baritonsaxophon",
+  "Altsaxophon",
+  "Tenorsaxophon",
+  "Trompete",
+  "Sousaphon",
+  "Perkussion",
+  "Stelzen · Jonglage · Spiele",
+  "Einrad · Jonglage · Spiele"
+ ],
+ "orig": [
+  "USA/DE",
+  "AR",
+  "IT",
+  "AR",
+  "AR/PT",
+  "AR/ES",
+  "CAT",
+  "CAT"
+ ],
+ "cred_h": "Credits",
+ "cred": [
+  [
+   "Musik und Sound",
+   "Cia. VENDAVAL"
+  ],
+  [
+   "Kleidung",
+   "Imaginario de Mónica (Mónica Romero)"
+  ],
+  [
+   "Grafikdesign",
+   "bicialta"
+  ],
+  [
+   "Fotografie",
+   "ROAR (David Ugalde) · Barbara Walzer · Jordi Largo"
+  ],
+  [
+   "Koproduktion",
+   "Cia. Filigranes"
+  ]
+ ],
+ "gigs_h": "Auftritte von VENDAVAL Brass",
+ "gigs": [
+  [
+   "1. März 2025",
+   "Festes de Porta, Ateneu la Bòbila, Barcelona · <i>Premiere</i>"
+  ],
+  [
+   "8.–11. Mai 2026",
+   "Unterwegs Theater Festival, Mühlheim und Dreieich"
+  ],
+  [
+   "30.–31. Mai 2026",
+   "Fira del Vapor, Sant Vicenç de Castellet (Spanien)"
+  ],
+  [
+   "24.–26. Juli 2026",
+   "Sommerwerft Theater Festival, Frankfurt am Main"
+  ]
+ ],
+ "con_h": "Kontakt",
+ "con_role": "künstlerische Leitung · Booking",
+ "lab_tel": "TEL.",
+ "dl": "Dossiers, Technical Rider und Fotos: www.VENDAVAL.cat/descarregues",
+ "sup": "Unterstützt von",
+ "foot_d": "DOSSIER · KONZERT MITTEN IM PUBLIKUM",
+ "r_title": "Technischer Rider",
+ "r_upd": "Aktualisiert",
+ "r_date": "22. Oktober 2026",
+ "r_kf": [
+  [
+   "PLATZ",
+   "VOR DER BÜHNE"
+  ],
+  [
+   "JEDES ALTER",
+   "TAGSÜBER ODER ABENDS"
+  ],
+  [
+   "30′",
+   "MEHRERE DURCHGÄNGE"
+  ],
+  [
+   "0–1",
+   "TONTECHNIK (FESTIVAL)"
+  ]
+ ],
+ "s": [
+  "Fläche",
+  "Ton",
+  "Licht",
+  "Zeitplan",
+  "Regen",
+  "Logistik",
+  "Barrierefreiheit"
+ ],
+ "s1": [
+  "Ebene, freie Fläche vor der Bühne: mindestens 6 × 6 m.",
+  "Zugang zwischen Publikumsbereich und Bühne (Treppe oder Rampe).",
+  "Stelzen auf der Bühne nur, wenn sie nicht erhöht ist, mit 4 m lichter Höhe (Decke, Traversen, Licht).",
+  "Die Compagnie bringt das gesamte Material mit: Instrumente, Stelzen, Einrad, Jonglier- und Spielrequisiten, Kostüme und Make-up."
+ ],
+ "s2_intro": "Bevorzugt: <b>PA und Tontechnik des Festivals</b>. Die Compagnie bringt ihre 8 Funkmikrofone mit. <b>Akustische Option:</b> Die Band kann auch ohne Mikrofone und PA spielen. Dann werden weder Tontechnik noch Strom gebraucht.",
+ "th": [
+  "Kanal",
+  "Quelle",
+  "Mikrofon (Compagnie)"
+ ],
+ "src": [
+  "Altsaxophon",
+  "Tenorsaxophon",
+  "Baritonsaxophon",
+  "Trompete",
+  "Sousaphon",
+  "Perkussion",
+  "Stimme · Figur 1 (Stelzen)",
+  "Stimme · Figur 2 (Einrad)"
+ ],
+ "mic": [
+  "Funk-Clipmikrofon",
+  "Funk",
+  "Funk-Headset"
+ ],
+ "s2_p": [
+  "<b>Das Festival stellt:</b> PA, die den Publikumsbereich vor der Bühne abdeckt · Pult mit 8 freien Kanälen · Tontechniker*in · 1 Steckdose 230 V am FOH für die Empfänger.",
+  "<b>Monitore:</b> nicht nötig; die Band spielt vor den PA-Lautsprechern. Achtung Rückkopplung: Die Musiker*innen bewegen sich vor der PA.",
+  "<b>Frequenzen und Mikrofonmodelle:</b> auf Anfrage (können je nach Besetzung variieren).",
+  "<b>Alternative:</b> auf Anfrage bringt die Compagnie ihr eigenes XR18-Pult, Lautsprecher und Techniker*in mit (Zusatzkosten)."
+ ],
+ "s3": "Tagsüber nichts nötig. Abends allgemeine Beleuchtung des Platzes (vom Festival).",
+ "mt_h": "Aufbau · ca. 2 Std.",
+ "mt": [
+  [
+   "Ausladen",
+   "10′"
+  ],
+  [
+   "Soundcheck (vor den Konzerten)",
+   "60′"
+  ],
+  [
+   "Make-up und Kostüm",
+   "60′"
+  ]
+ ],
+ "dm_h": "Abbau · ca. 1 Std.",
+ "dm": [
+  [
+   "Abbau",
+   "20′"
+  ],
+  [
+   "Kostüme einpacken",
+   "30′"
+  ],
+  [
+   "Einladen",
+   "10′"
+  ]
+ ],
+ "sets": "<b>Durchgänge:</b> je 30 Minuten, mehrere über den Tag verteilt. Immer 30 Minuten Pause zwischen den Durchgängen.",
+ "s5": "Bei Regen kann die Band wegen der Instrumente und Mikrofone nicht draußen spielen. Die Compagnie kann warten, bis es aufhört, und später oder an einem anderen Tag spielen. Nasser Boden ist kein Problem. Alternative: eine große Halle mit mindestens 5 m Höhe.",
+ "s6": "<b>Parken:</b> Platz für 2 Fahrzeuge.<br><b>Garderobe:</b> Raum für 8 Personen mit Tischen zum Schminken und Umziehen. Die Compagnie kann Spiegel und Licht mitbringen.<br><b>Verpflegung:</b> 2 × ohne Fleisch (Fisch, Eier und Milchprodukte sind okay) · 6 × ohne besondere Ernährung.",
+ "s7": "<b>Immer möglich:</b> Tastführung, 1 Stunde vor der Show, nach dem Schminken, in einem ruhigen Raum.<br><b>Wenn Technik vorhanden ist:</b> Audiodeskription, Höranlagen und Vibrationsrucksäcke (über den verstärkten Ton) · Gebärdensprachdolmetschen für die Spiele.",
+ "r_role": "Leitung · Booking",
+ "foot_r": "TECHNISCHER RIDER · KONZERT MITTEN IM PUBLIKUM"
+}
