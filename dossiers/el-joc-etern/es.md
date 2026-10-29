@@ -36,6 +36,8 @@ Dragones pequeños como pulseras o en el pelo, y colas en algunos personajes. Si
 
 Máscaras de animales fantásticos, inspiradas en los dibujos animados y en cada intérprete: el capitán Mussolgat (mitad búho, mitad gato), la rata punk a la batería y el Comandante Fregui Miau, un gato con melena de fregona. Otras están en construcción.
 
+¡Canta con las peludas criaturas del mar de la [VENDAVAL Chimera Opera](https://vendaval.cat/chimera-opera/)!
+
 ## Para todos los cuerpos y todas las mentes
 
 No adaptamos los juegos después: buscamos que el juego accesible sea el juego. Probaremos visitas táctiles del Windy, el vestuario y los instrumentos; vibración que todo el público pueda sentir; y la lengua de signos como juego, con las señales de dirección de la música como signos reales (LSC, LSE o BSL), con la guía de personas sordas signantes. tyle fernández se formó en «Un circ universal» (Ateneu Popular 9 Barris, 2026) y el proyecto sigue la guía DUCS de Diseño Universal del Circo Social.
