@@ -215,7 +215,7 @@ h3{font-size:1.6rem;font-weight:800}
 
 /* footer */
 .foot{background:#05202c;color:#c9dbe1;padding:48px 0;text-align:center;font-size:.92rem}
-.foot img{margin:0 auto 22px;background:#fff;border-radius:18px;padding:10px 16px;box-sizing:content-box}
+.foot img{margin:0 auto 22px;width:180px;height:auto} /* logo with its own white outline, never a box behind it */
 .foot a{color:var(--yellow)}
 .socials{list-style:none;padding:0;margin:0 0 24px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
 .soc{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;color:#fff!important;transition:transform .15s}
@@ -539,7 +539,7 @@ html.a11y-dark .a11y-panel{background:#0d2b3a;color:var(--ink);border-color:#6fd
 html.a11y-dark .a11y-panel button{background:#123a4c;color:var(--ink);border-color:#2c5a6e}
 html.a11y-dark .a11y-panel button[aria-pressed="true"]{background:#6fd3db;color:#071d28;border-color:#6fd3db}
 html.a11y-dark .a11y-title{color:#f5ebdd}
-html.a11y-dark .brand img{background:#fff;border-radius:10px;padding:2px 6px}
+/* night theme: the logo carries its own white outline (no box behind it) */
 html.a11y-dark .dl-kind,html.a11y-dark .dl-kicker{color:#9fdde2}
 .dl-draft{display:inline-block;font:700 .72rem/1 var(--body);font-style:normal;text-transform:uppercase;letter-spacing:.05em;background:var(--yellow,#f5b83d);color:#1b2b3a;padding:3px 7px;border-radius:99px;vertical-align:2px;margin-left:4px}
 /* squid cursor (site.js) */
