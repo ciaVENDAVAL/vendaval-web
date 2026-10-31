@@ -15,15 +15,15 @@
  "street_title": "Die Straße gehört allen Menschen",
  "street_text": [
   "Wir verteidigen die Straße als Ort der Begegnung und des Zusammenlebens. Wenn Musik und Zirkus den Platz füllen, schauen sich Fremde an, lachen und tanzen am Ende miteinander.",
-  "Ungeplantes Spielen ist eine kollektive Therapie, kostenlos und unter freiem Himmel: eine fröhliche Art, der Einsamkeit die Stirn zu bieten.",
+  "Spontanes Spielen ist ein kollektives Ritual, zugänglich unter freiem Himmel: eine fröhliche Art, der Einsamkeit die Stirn zu bieten.",
   "Und wir setzen auf Farbe und Verzierung – in einer Zeit, in der Kleidung, Möbel und Gebäude immer grauer und eckiger werden: Wir ziehen los in allen Farben des Meeres."
  ],
  "show_kicker": "DAS STÜCK",
  "show_title": "Das Fest, das den Weg bahnt",
  "show_text": [
   "Eine Cumbia bricht auf der Straße los und VENDAVAL Brass setzt sich in Bewegung. Zwei Fantasiefiguren, eine auf Stelzen, eine auf dem Einrad, lassen Keulen fliegen, während sechs Musiker*innen den Platz in eine Tanzfläche verwandeln.",
-  "Die Band wird mit Handzeichen dirigiert: Jeder Durchgang entsteht live vor dem Publikum, das am Ende die Zeichen lernt und die Band selbst dirigiert. Funk, Balkan, Swing und Cumbia aus den Kulturen Europas und Amerikas, die die Musiker*innen mitbringen.",
-  "Mit Netzen, Rettungsringen und Seefahrer-Requisiten laden die Spiele Klein und Groß ein, Teil der Crew zu werden."
+  "Die Band wird mit Handzeichen dirigiert: Jeder Durchgang entsteht live vor dem Publikum, das am Ende die Zeichen lernt und die Band selbst dirigiert. Funk, Balkan, Swing und Cumbia aus den Kulturen Nord- und Südamerikas, die die Musiker*innen mitbringen.",
+  "Mit Netzen, Rettungsringen und Seefahrer-Requisiten laden die Spiele alle Menschen ein, Teil der Crew zu werden."
  ],
  "show_punch": "Niemand bleibt am Rand stehen.",
  "glance": "AUF EINEN BLICK",
@@ -35,15 +35,15 @@
   "2 Zirkusartist*innen: Stelzen, Einrad, Jonglage und Spiele",
   "Ohne Technik"
  ],
- "glance_small": "Dauer und Besetzung passen sich an: ab 4 Musiker*innen, mit oder ohne Zirkus",
+ "glance_small": "Dauer und Besetzung passen sich an: ab 4 Musiker*innen, mit oder ohne Zirkusartist*innen",
  "show_caption": "Funktioniert als Umzug, der das Publikum zwischen Bühnen begleitet, oder als eigenständiges Stück in Bewegung. Auch verstärkt auf dem Platz: Konzert mitten im Publikum.",
  "games_kicker": "STURM UND SEEGANG",
- "games_title": "Meereskostüme und Spiele für alle Menschen",
+ "games_title": "Meereskleidung und Spiele für alle Menschen",
  "games_text": "Rettungsringe, Netze und dicke Taue werden zu Spielen. Das Publikum lernt, die Band mit Handzeichen zu dirigieren, weckt die Musiker*innen, wenn sie zu Statuen erstarren, und landet am Ende auf dem Foto mit der Crew.",
  "access": "Barrierefreiheit",
  "access_kicker": "VENDAVAL MÖCHTE ALLE MENSCHEN ERREICHEN",
  "always": "IMMER MÖGLICH",
- "tactile": "Taktile Führung für blinde und sehbehinderte Menschen: 1 Stunde vorher, nach Maske und Kostüm, in einem ruhigen Raum.",
+ "tactile": "Taktile Führung für blinde und sehbehinderte Menschen: 1 Stunde vorher, nach Schminke und Verkleidung, in einem ruhigen Raum.",
  "if_equip": "WENN DIE AUSSTATTUNG VORHANDEN IST",
  "equip_list": "Audiodeskription und Hörhilfen · Vibrationsrucksäcke (mit Verstärkung) · Gebärdensprachdolmetschen",
  "access_note": "Verfügt die Veranstaltung über eigene barrierefreie Ausstattung, passt die Kompanie das Stück gemeinsam damit an. Die künstlerische Leitung ist in inklusivem Zirkus ausgebildet (Ateneu Popular 9 Barris, 2026) und arbeitet mit dem DUCS (Universelles Design für sozialen Zirkus).",
@@ -51,8 +51,8 @@
  "updated": "STAND OKTOBER 2026",
  "tech_title": "Alles, was Sie wissen müssen",
  "getin": [
-  ["AUFBAU · CA. 2 STD., AM SELBEN TAG", "Ausladen 10′ · Aufbau 20′ · Soundcheck 30′ · Maske und Kostüm 60′"],
-  ["ABBAU · CA. 1 STD.", "Abbau 20′ · Kostüme packen 30′ · Einladen 10′"]
+  ["AUFBAU · CA. 2 STD., AM SELBEN TAG", "Ausladen 10′ · Aufbau 20′ · Soundcheck 30′ · Schminke und Verkleidung 60′"],
+  ["ABBAU · CA. 1 STD.", "Abbau 20′ · Kleidung packen 30′ · Einladen 10′"]
  ],
  "tech": [
   ["DAUER", "Durchgänge von 30 Minuten, mehrere am Tag, immer mit 30 Minuten Pause dazwischen."],
@@ -64,7 +64,7 @@
   ["LOGISTIK", "Parkplatz für 2 Fahrzeuge. Garderobe für 8 Personen mit Schminktischen (Spiegel und Licht kann die Kompanie mitbringen)."],
   ["VERPFLEGUNG", "2 ohne Fleisch (Fisch, Eier und Milchprodukte ja) und 6 ohne besondere Ernährung."]
  ],
- "tech_note": "Die Kompanie bringt das gesamte Material mit: Stelzen, Einrad, Jonglierrequisiten, Instrumente, Spielrequisiten, Maske und Kostüme.",
+ "tech_note": "Die Kompanie bringt das gesamte Material mit: Stelzen, Einrad, Jonglierrequisiten, Instrumente, Spielrequisiten, Schminke und Kleidung.",
  "crew_kicker": "WER WIR SIND",
  "crew_title": "Die Crew",
  "roles": {

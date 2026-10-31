@@ -41,7 +41,7 @@ Die Band geht dabei durch das Publikum.
 
 ## Für alle Menschen
 
-- Vor der Show können blinde Menschen die Kostüme und die Instrumente anfassen.
+- Vor der Show können blinde Menschen die Kleidung und die Instrumente anfassen.
 - Manche Veranstalter haben besondere Geräte. Dann gibt es auch: Audio-Deskription, Gebärden-Sprache und Ruck-Säcke, die vibrieren.
 
 ## Buchung

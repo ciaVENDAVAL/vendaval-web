@@ -25,7 +25,7 @@
  "show_h": "Die Party kommt von der Bühne",
  "show_p": [
   "<b>VENDAVAL Brass</b> ist eine Blas- und Perkussionsband, die mitten im Publikum spielt. In diesem Format stellt sich die Band auf den Platz vor der Musikbühne und verwandelt das Warten zwischen den Konzerten in ein Fest.",
-  "Sechs Musiker*innen in Kostümen von Meereswesen und mit Theater-Make-up spielen Funk, Balkan, Swing und Cumbia, live dirigiert mit Handzeichen. Zwei fantastische Figuren, eine auf Stelzen und eine auf dem Einrad, laden das Publikum zum Seilspringen, zum Werfen weicher Gegenstände in die Luft und zum gemeinsamen Tanzen ein. Die Band kann auf die Bühne gehen, aber das meiste passiert mitten im Publikum."
+  "Sechs Musiker*innen in der Kleidung von Meereswesen und mit Theaterschminke spielen Funk, Balkan, Swing und Cumbia, live dirigiert mit Handzeichen. Zwei fantastische Figuren, eine auf Stelzen und eine auf dem Einrad, laden das Publikum zum Seilspringen, zum Werfen weicher Gegenstände in die Luft und zum gemeinsamen Tanzen ein. Die Band kann auf die Bühne gehen, aber das meiste passiert mitten im Publikum."
  ],
  "box_h": "Gemacht für Musikfestivals",
  "box": [
@@ -49,13 +49,13 @@
  "chr_kick": "Figuren",
  "chr_h": "Ein Konzert mit Figuren",
  "chr_p": [
-  "Alle Musiker*innen sind Figuren: Seeleute, Sirenen und Wesen aus der Tiefe, mit kräftigem Theater-Make-up und Kostümen in allen Farben des Meeres. Eine zusätzliche Ebene Theater über einem Livekonzert, gemacht, um aus der Nähe und aus der Ferne zu wirken.",
+  "Alle Musiker*innen sind Figuren: Seeleute, Sirenen und Wesen aus der Tiefe, mit kräftigem Theaterschminke und Kleidung in allen Farben des Meeres. Eine zusätzliche Ebene Theater über einem Livekonzert, gemacht, um aus der Nähe und aus der Ferne zu wirken.",
   "Die Spiele mit dem Publikum nutzen Springseile, weiche Gegenstände zum Werfen, das Meeresnetz und den Rettungsring."
  ],
  "why_h": "Der Platz als gemeinsame Tanzfläche",
  "why_p": [
   "Ein Platz voller Musik ist ein Ort, an dem Menschen, die sich nicht kennen, am Ende zusammen tanzen. Zwischen den Konzerten öffnet VENDAVAL einen Raum für spontanes Spiel: Seilspringen mit jemandem, den man gerade erst kennengelernt hat, Lachen mit einem Meereswesen auf Stelzen, Applaus für eine Melodie, die genau in diesem Moment entsteht.",
-  "Gemeinsames Spielen ist eine kostenlose, kollektive Therapie unter freiem Himmel, die die Einsamkeit durchbricht. Und die Farben des Meeres —Blau, Grün, Orange und Rosa— erfüllen den Platz mit Leben."
+  "Spontanes Spielen ist ein kollektives Ritual, zugänglich unter freiem Himmel, das die Einsamkeit durchbricht. Und die Farben des Meeres —Blau, Grün, Orange und Rosa— erfüllen den Platz mit Leben."
  ],
  "acc_kick": "Für alle Körper und Köpfe",
  "acc_h": "Barrierefreiheit",
@@ -176,7 +176,7 @@
   "Ebene, freie Fläche vor der Bühne: mindestens 6 × 6 m.",
   "Zugang zwischen Publikumsbereich und Bühne (Treppe oder Rampe).",
   "Stelzen auf der Bühne nur, wenn sie nicht erhöht ist, mit 4 m lichter Höhe (Decke, Traversen, Licht).",
-  "Die Compagnie bringt das gesamte Material mit: Instrumente, Stelzen, Einrad, Jonglier- und Spielrequisiten, Kostüme und Make-up."
+  "Die Compagnie bringt das gesamte Material mit: Instrumente, Stelzen, Einrad, Jonglier- und Spielrequisiten, Kleidung und Schminke."
  ],
  "s2_intro": "Bevorzugt: <b>PA und Tontechnik des Festivals</b>. Die Compagnie bringt ihre 8 Funkmikrofone mit. <b>Akustische Option:</b> Die Band kann auch ohne Mikrofone und PA spielen. Dann werden weder Tontechnik noch Strom gebraucht.",
  "th": [
@@ -217,7 +217,7 @@
    "60′"
   ],
   [
-   "Make-up und Kostüm",
+   "Schminke und Verkleidung",
    "60′"
   ]
  ],
@@ -228,7 +228,7 @@
    "20′"
   ],
   [
-   "Kostüme einpacken",
+   "Kleidung einpacken",
    "30′"
   ],
   [

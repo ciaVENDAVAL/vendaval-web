@@ -20,12 +20,12 @@ PHOTOS = dict(cover='VENDAVAL_FiraVapor001.jpg', street='IMG_0677.JPG', net='IMG
               games1='VENDAVAL_Unterwegs001.jpg', games2='VENDAVAL_102.jpg', tech='VENDAVAL_Unterwegs002.jpg',
               contact='IMG_0622.JPG', tech_row=['VENDAVAL_Unterwegs002.jpg', 'VENDAVAL_003.jpg'])
 CREW = [
-    dict(id='tyle', pos='center 15%', name='tyle fernández', photo='portrait__3_tyle.jpg', **{'from': 'US / DE'}, link='https://linktr.ee/bicialta', link_label='linktr.ee/bicialta'),
-    dict(id='alian', pos='center 20%', name='Alián Rodrigues', photo='portrait__6_Ali_n.jpg', **{'from': 'AR / PT'}, link='https://linktr.ee/a.alian.n', link_label='linktr.ee/a.alian.n'),
-    dict(id='facu', pos='center 15%', name='Facundo Fernández Alberdi', photo='portrait__7_Facu.jpg', **{'from': 'AR / ES'}, link='https://instagram.com/ffa_musica', link_label='@ffa_musica'),
-    dict(id='lucas', pos='center 15%', name='Lucas Raiquen Pereyra', photo='portrait__1_Lucas.jpg', **{'from': 'AR'}, link='https://instagram.com/lukasraiquen', link_label='@lukasraiquen'),
-    dict(id='juan', pos='center 15%', name='Juan Lichter', photo='portrait__8_Juan.jpg', **{'from': 'AR'}, link='https://instagram.com/juanlichter90', link_label='@juanlichter90'),
-    dict(id='stefano', pos='center 15%', name='Stefano Ferraro', photo='portrait__2_Stefano.jpg', **{'from': 'IT'}, link='https://linktr.ee/stefano.ferraro', link_label='linktr.ee/stefano.ferraro'),
+    dict(id='tyle', pos='center 15%', name='tyle fernández', photo='portrait__3_tyle.jpg', **{'from': 'US / DE · La Senyal'}, link='https://linktr.ee/bicialta', link_label='linktr.ee/bicialta'),
+    dict(id='alian', pos='center 20%', name='Alián Rodrigues', photo='portrait__6_Ali_n.jpg', **{'from': 'AR / PT · La Senyal'}, link='https://linktr.ee/a.alian.n', link_label='linktr.ee/a.alian.n'),
+    dict(id='facu', pos='center 15%', name='Facundo Fernández Alberdi', photo='portrait__7_Facu.jpg', **{'from': 'AR / ES · La Senyal'}, link='https://instagram.com/ffa_musica', link_label='@ffa_musica'),
+    dict(id='lucas', pos='center 15%', name='Lucas Raiquen Pereyra', photo='portrait__1_Lucas.jpg', **{'from': 'AR · La Senyal'}, link='https://instagram.com/lukasraiquen', link_label='@lukasraiquen'),
+    dict(id='juan', pos='center 15%', name='Juan Lichter', photo='portrait__8_Juan.jpg', **{'from': 'AR · La Senyal'}, link='https://instagram.com/juanlichter90', link_label='@juanlichter90'),
+    dict(id='stefano', pos='center 15%', name='Stefano Ferraro', photo='portrait__2_Stefano.jpg', **{'from': 'IT · La Senyal'}, link='https://linktr.ee/stefano.ferraro', link_label='linktr.ee/stefano.ferraro'),
     dict(id='albert', pos='center 20%', name='Albert Pérez', photo='portrait__5_Albert.jpg', **{'from': 'CAT · Cia. Filigranes'}, link='https://ciafiligranes.net', link_label='ciafiligranes.net'),
     dict(id='jordi', pos='center 10%', name='Jordi Torrens', photo='portrait__4_Jordi.jpg', **{'from': 'CAT · Cia. Filigranes'}, link='https://ciafiligranes.net', link_label='ciafiligranes.net'),
 ]
