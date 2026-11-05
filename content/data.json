@@ -201,6 +201,36 @@
     "ja": "pdf/VENDAVAL-Brass_JA_rider_2026-10.pdf"
    }
   },
+  "brass_green": {
+   "show": "brass",
+   "kind": "green",
+   "short": "brass-green",
+   "files": {
+    "ca": "pdf/VENDAVAL-Brass_CA_green-rider_2026-11.pdf",
+    "es": "pdf/VENDAVAL-Brass_ES_green-rider_2026-11.pdf",
+    "en": "pdf/VENDAVAL-Brass_EN_green-rider_2026-11.pdf",
+    "de": "pdf/VENDAVAL-Brass_DE_green-rider_2026-11.pdf",
+    "fr": "pdf/VENDAVAL-Brass_FR_green-rider_2026-11.pdf",
+    "it": "pdf/VENDAVAL-Brass_IT_green-rider_2026-11.pdf",
+    "pt": "pdf/VENDAVAL-Brass_PT_green-rider_2026-11.pdf",
+    "ja": "pdf/VENDAVAL-Brass_JA_green-rider_2026-11.pdf"
+   }
+  },
+  "brass_access": {
+   "show": "brass",
+   "kind": "access",
+   "short": "brass-access",
+   "files": {
+    "ca": "pdf/VENDAVAL-Brass_CA_access-rider_2026-11.pdf",
+    "es": "pdf/VENDAVAL-Brass_ES_access-rider_2026-11.pdf",
+    "en": "pdf/VENDAVAL-Brass_EN_access-rider_2026-11.pdf",
+    "de": "pdf/VENDAVAL-Brass_DE_access-rider_2026-11.pdf",
+    "fr": "pdf/VENDAVAL-Brass_FR_access-rider_2026-11.pdf",
+    "it": "pdf/VENDAVAL-Brass_IT_access-rider_2026-11.pdf",
+    "pt": "pdf/VENDAVAL-Brass_PT_access-rider_2026-11.pdf",
+    "ja": "pdf/VENDAVAL-Brass_JA_access-rider_2026-11.pdf"
+   }
+  },
   "concert_dossier": {
    "show": "brass",
    "kind": "dossier",
@@ -348,6 +378,8 @@
     "brass_easy",
     "brass_dossier",
     "brass_rider",
+    "brass_green",
+    "brass_access",
     "concert_dossier",
     "concert_rider"
    ],

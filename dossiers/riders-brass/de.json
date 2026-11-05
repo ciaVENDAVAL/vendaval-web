@@ -1,0 +1,120 @@
+{
+ "tyle": "tyle fernández (dey/dem)",
+ "role": "Technik und Management",
+ "green": {
+  "title": "Green Rider",
+  "lead": "Wie wir den Fußabdruck jedes Auftritts klein halten – und wie Veranstaltende dabei helfen können.",
+  "foot": "GREEN RIDER · VENDAVAL BRASS",
+  "groups": [
+   {
+    "h": "Leicht auf Tour",
+    "items": [
+     [
+      "Kein Strom, keine PA, kein Generator.",
+      "Die Straßenversion ist vollständig akustisch und kommt mit der normalen Straßenbeleuchtung aus."
+     ],
+     [
+      "Keine Technik-Crew, keine LKWs.",
+      "Instrumente, Kleidung und Requisiten reisen in unseren eigenen Autos, 4 Personen pro Auto."
+     ],
+     [
+      "Regional und langlebig.",
+      "Unsere Meereswesen-Kleidung und Requisiten fertigt Imaginario de Mónica in Handarbeit – sie teilt sich mit uns den Coworking-Space."
+     ],
+     [
+      "Wiederverwendbare Spiele.",
+      "Springseile, weiche Wurfobjekte, ein Meeresnetz und ein Rettungsring. Kein Konfetti, keine Luftballons, nichts, was nach der Show weggeworfen wird."
+     ],
+     [
+      "Kein gedrucktes Papier.",
+      "Mappen, Rider und Fotos gibt es nur online, auf www.VENDAVAL.cat."
+     ],
+     [
+      "Konzert mitten im Publikum:",
+      "Wir nutzen die Tonanlage des Festivals, statt eine eigene mitzubringen."
+     ]
+    ]
+   },
+   {
+    "h": "Unsere Bitten an Veranstaltende",
+    "box": true,
+    "items": [
+     [
+      "",
+      "Leitungswasser oder Wasserkaraffen; wir bringen wiederbefüllbare Flaschen mit."
+     ],
+     [
+      "",
+      "Vegetarisches, regionales und saisonales Essen, nach Möglichkeit ohne Einweggeschirr und -besteck."
+     ],
+     [
+      "",
+      "Eine Garderobe nahe der Strecke, damit keine zusätzlichen Fahrten nötig sind."
+     ],
+     [
+      "",
+      "Unterkunft zu Fuß oder mit öffentlichen Verkehrsmitteln erreichbar."
+     ],
+     [
+      "",
+      "Hilfe beim Verknüpfen von Terminen: Wenn andere Veranstaltende in der Nähe Interesse haben, teilen wir die Reise zwischen den Auftritten auf."
+     ]
+    ]
+   }
+  ]
+ },
+ "access": {
+  "title": "Access Rider",
+  "lead": "Wie die Show für alle Menschen zugänglich wird – und was wir gemeinsam mit Veranstaltenden vorbereiten können.",
+  "foot": "ACCESS RIDER · VENDAVAL BRASS",
+  "groups": [
+   {
+    "h": "Für das Publikum",
+    "items": [
+     [
+      "Keine Worte nötig.",
+      "Die Show besteht aus Musik, Zirkus und Spielen. Wir erklären die Spiele mit Gesten und leicht verständlichen Beispielen."
+     ],
+     [
+      "Mehrsprachige Artist*innen.",
+      "Damit sich alle Menschen willkommen fühlen, begrüßen wir das Publikum in seiner Sprache und sagen ein paar Schlüsselwörter auf Englisch, Deutsch, Italienisch, Spanisch, Katalanisch, Arabisch, Russisch, Türkisch, Chinesisch und Japanisch."
+     ],
+     [
+      "Strecke.",
+      "Ebene Strecken sind am besten. Rampen und Treppen sind möglich, und wir passen Strecke und Tempo an, damit Menschen im Rollstuhl und mit Kinderwagen folgen können."
+     ],
+     [
+      "Immer inklusive (auf Anfrage): Tastführung.",
+      "Eine Stunde vor der Show können blinde und sehbehinderte Menschen in einem ruhigen Raum die Kleidung mit ihren Drachen-Applikationen, die Instrumente und die Requisiten ertasten und die Figuren kennenlernen."
+     ],
+     [
+      "Barrierefreiheit entsteht gemeinsam mit den Veranstaltenden.",
+      "Auf Anfrage, mit der Technik oder dem Budget vor Ort: Audiodeskription, Induktionsschleifen oder Kopfhörer, Vibrationsrucksäcke (nur beim verstärkten Konzert mitten im Publikum) und Gebärdensprachdolmetschen."
+     ],
+     [
+      "Entspannte Version (Relaxed Performance).",
+      "Eine Brassband kann für manche Menschen zu laut sein. Auf Anfrage bieten wir für ein angemeldetes Publikum eine entspannte Version an: leiser und langsamer. Wir können langsamer gehen oder auf einem ruhigen Platz oder in einem Park spielen. Möglich ist auch ein Saal ohne weitere visuelle oder akustische Reize. Innen: 5 m hoch und etwa 10 × 10 m, je nach Zahl der Teilnehmenden auch größer."
+     ],
+     [
+      "Leichte Sprache.",
+      "Auf www.VENDAVAL.cat gibt es eine Mappe in Leichter Sprache. Unten links den Barrierefreiheits-Knopf öffnen und „Leichte Sprache“ wählen: Die Texte der Website und der Mappen wechseln in Leichte Sprache."
+     ],
+     [
+      "Sozialzirkus.",
+      "Die künstlerische Leitung, tyle fernández, ist in Sozialzirkus ausgebildet („Un circ universal“, Ateneu Popular 9 Barris, 2026, sowie weitere Fortbildungen in Deutschland). Unsere Arbeit folgt dem Ansatz des Universal Design für Sozialzirkus (DUCS)."
+     ]
+    ]
+   },
+   {
+    "h": "Für unser Team",
+    "box": true,
+    "items": [
+     [
+      "",
+      "Keine Anpassungen nötig. Die Anforderungen der Show stehen im technischen Rider."
+     ]
+    ]
+   }
+  ]
+ }
+}

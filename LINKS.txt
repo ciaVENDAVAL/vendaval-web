@@ -16,6 +16,24 @@ https://vendaval.cat/rider/brass/it
 https://vendaval.cat/rider/brass/pt
 https://vendaval.cat/rider/brass/ja
 https://vendaval.cat/rider/brass  (opens in the reader's language)
+https://vendaval.cat/rider/brass-green/ca
+https://vendaval.cat/rider/brass-green/es
+https://vendaval.cat/rider/brass-green/en
+https://vendaval.cat/rider/brass-green/de
+https://vendaval.cat/rider/brass-green/fr
+https://vendaval.cat/rider/brass-green/it
+https://vendaval.cat/rider/brass-green/pt
+https://vendaval.cat/rider/brass-green/ja
+https://vendaval.cat/rider/brass-green  (opens in the reader's language)
+https://vendaval.cat/rider/brass-access/ca
+https://vendaval.cat/rider/brass-access/es
+https://vendaval.cat/rider/brass-access/en
+https://vendaval.cat/rider/brass-access/de
+https://vendaval.cat/rider/brass-access/fr
+https://vendaval.cat/rider/brass-access/it
+https://vendaval.cat/rider/brass-access/pt
+https://vendaval.cat/rider/brass-access/ja
+https://vendaval.cat/rider/brass-access  (opens in the reader's language)
 https://vendaval.cat/dossier/brass-concert/ca
 https://vendaval.cat/dossier/brass-concert/es
 https://vendaval.cat/dossier/brass-concert/en

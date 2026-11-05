@@ -226,7 +226,9 @@
    "rider": "Technischer Rider",
    "photos": "Fotos",
    "workshop": "Workshop-Dossier",
-   "easy": "Mappe in Leichter Sprache"
+   "easy": "Mappe in Leichter Sprache",
+   "green": "Green Rider",
+   "access": "Access Rider (Barrierefreiheit)"
   },
   "photos_web": "Web · 1000 px",
   "photos_print": "Druck · 300 dpi",

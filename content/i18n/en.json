@@ -226,7 +226,9 @@
    "rider": "Technical rider",
    "photos": "Photos",
    "workshop": "Workshop dossier",
-   "easy": "Easy-read dossier"
+   "easy": "Easy-read dossier",
+   "green": "Green rider",
+   "access": "Access rider"
   },
   "photos_web": "Web · 1000 px",
   "photos_print": "Print · 300 dpi",

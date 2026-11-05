@@ -1,0 +1,120 @@
+{
+ "tyle": "tyle fernández (they/them)",
+ "role": "technical contact and management",
+ "green": {
+  "title": "Green rider",
+  "lead": "How we keep the footprint of each show small, and how you can help.",
+  "foot": "GREEN RIDER · VENDAVAL BRASS",
+  "groups": [
+   {
+    "h": "A light show to tour",
+    "items": [
+     [
+      "No power, no PA, no generator.",
+      "The street version is fully acoustic and works under normal street lighting."
+     ],
+     [
+      "No technicians, no trucks.",
+      "Instruments, clothing and props travel in our own cars, 4 people per car."
+     ],
+     [
+      "Local and made to last.",
+      "Our sea-creature costumes and props are handmade by Imaginario de Mónica, who shares our co-working space."
+     ],
+     [
+      "Reusable games.",
+      "Jump ropes, soft throwing objects, a sea net and a lifebuoy. No confetti, balloons or anything thrown away after the show."
+     ],
+     [
+      "No printed paper.",
+      "Dossiers, riders and photos are online only, at www.VENDAVAL.cat."
+     ],
+     [
+      "Concert in the audience:",
+      "we use the festival's sound system rather than bringing our own."
+     ]
+    ]
+   },
+   {
+    "h": "What we ask of you",
+    "box": true,
+    "items": [
+     [
+      "",
+      "Tap water or water jugs; we bring refillable bottles."
+     ],
+     [
+      "",
+      "Vegetarian, local and seasonal food, with no single-use plates or cutlery where possible."
+     ],
+     [
+      "",
+      "A dressing room close to the route, so no extra vehicle trips are needed."
+     ],
+     [
+      "",
+      "Lodging within walking distance or on public transport."
+     ],
+     [
+      "",
+      "Help us link dates: if other venues nearby are interested, we'll share the travel between them."
+     ]
+    ]
+   }
+  ]
+ },
+ "access": {
+  "title": "Access rider",
+  "lead": "How we make the show open to everyone, and what we can prepare with you.",
+  "foot": "ACCESS RIDER · VENDAVAL BRASS",
+  "groups": [
+   {
+    "h": "For the audience",
+    "items": [
+     [
+      "No words needed.",
+      "The show is music, circus and games. We explain the games with gestures and easily understandable examples."
+     ],
+     [
+      "Multilingual artists.",
+      "To make everyone feel at home, we can greet people in their language and say a few key words in English, German, Italian, Spanish, Catalan, Arabic, Russian, Turkish, Chinese and Japanese."
+     ],
+     [
+      "Route.",
+      "Flat routes work best. We can manage ramps and stairs, and we adapt the route and pace so wheelchair users and people with prams can follow."
+     ],
+     [
+      "Always included (on request): Touch Tour.",
+      "One hour before the show, in a quiet space, people with visual impairments can touch the clothing and its dragon appliqués, the musical instruments and the props, and meet the characters."
+     ],
+     [
+      "We work together with the venue to create accessible shows.",
+      "On request, with the venue's equipment or budget: audio description, hearing loops or headsets, vibrating backpacks (only in the amplified Concert in the audience), and sign-language interpretation."
+     ],
+     [
+      "Relaxed version.",
+      "A brass band can be too loud for some people. On request, for a planned audience, we offer a relaxed version, quieter and at a slower pace. We can walk more slowly or play in a quiet square or park. It can also take place in a hall without other visual or sound stimuli. Indoors: 5 m high and about 10 × 10 m, or larger depending on the number of participants."
+     ],
+     [
+      "Easy read.",
+      "An easy-read dossier is available at www.VENDAVAL.cat. Open the accessibility button at the bottom left and choose “Easy read”: the text on the website and the dossiers changes to easy read."
+     ],
+     [
+      "Social circus.",
+      "Our artistic director, tyle fernández, is trained in social circus (“Un circ universal”, Ateneu Popular 9 Barris, 2026, and other trainings in Germany). Our work follows the Universal Design for Social Circus (DUCS) approach."
+     ]
+    ]
+   },
+   {
+    "h": "For our team",
+    "box": true,
+    "items": [
+     [
+      "",
+      "No adaptations necessary. See the technical rider for the show's requirements."
+     ]
+    ]
+   }
+  ]
+ }
+}

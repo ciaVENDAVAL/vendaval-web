@@ -1,0 +1,51 @@
+<!doctype html>
+{# VENDAVAL Brass: green rider / access rider. Texts: <lang>.json → t (shared) and r (this rider). Items are [bold lead, text]. #}
+<html lang="{{ lang }}">
+<head>
+<meta charset="utf-8">
+<title>VENDAVAL Brass · {{ r.title }}</title>
+<style>
+@font-face{font-family:Osw;font-weight:100 550;src:url({{ font('oswald-latin-500-normal') }})}
+@font-face{font-family:Osw;font-weight:551 900;src:url({{ font('oswald-latin-600-normal') }})}
+@font-face{font-family:Osw;font-weight:100 550;src:url({{ font('oswald-latin-ext-500-normal') }});unicode-range:U+0100-024F,U+1E00-1EFF}
+@font-face{font-family:Osw;font-weight:551 900;src:url({{ font('oswald-latin-ext-600-normal') }});unicode-range:U+0100-024F,U+1E00-1EFF}
+:root{--navy:#0b2e3f;--orange:#e8492e;--amber:#f2a93b;--cyan:#2ec5e0;--cream:#f8f3e8;--green:#3d6b12}
+@page{size:A4;margin:0 0 16mm 0;background:#f8f3e8;
+  @bottom-left{content:"{{ r.foot|replace("\"", "")|safe }}";font:600 7.5pt Osw,"Noto Sans CJK JP";letter-spacing:2pt;color:#7a8b93;padding-left:15mm}
+  @bottom-right{content:"VENDAVAL · " counter(page);font:600 7.5pt Osw;letter-spacing:2pt;color:#7a8b93;padding-right:15mm}}
+@page :not(:first){margin-top:15mm}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font:{{ "9.4pt" if kind == "green" else "9pt" }}/1.48 Poppins,"Noto Sans CJK JP",sans-serif;color:#14262e;margin:0}
+.in{padding:0 15mm}
+h3{font:700 12pt Osw,"Noto Sans CJK JP";color:var(--orange);letter-spacing:1pt;text-transform:uppercase;margin:6mm 0 2mm}
+ul{margin:0;padding-left:5mm} li{margin:0 0 1.6mm;break-inside:avoid}
+li b{font-family:Osw,"Noto Sans CJK JP";font-weight:600;font-size:10.2pt;color:var(--navy)}
+.row{white-space:nowrap;margin:5mm 0 0;line-height:0;text-align:center;break-inside:avoid}
+.row img{display:inline-block;vertical-align:top}
+.box{background:{{ '#e3f1c9' if kind == 'green' else '#fde3ad' }};padding:3mm 6mm 2mm;margin-top:4mm;break-inside:avoid}
+.box h3{margin-top:1mm;color:{{ 'var(--green)' if kind == 'green' else '#8a5a00' }}}
+html[lang=ja] h3{letter-spacing:1pt}
+</style>
+</head>
+<body>
+<div style="background:var(--navy);color:#fff;padding:11mm 15mm 8mm;position:relative">
+ <div style="font:700 9pt Osw,'Noto Sans CJK JP';letter-spacing:3pt;color:var(--cyan)">VENDAVAL BRASS</div>
+ <div style="font:700 30pt/1.1 Osw,'Noto Sans CJK JP';color:var(--cream)">{{ r.title }}</div>
+ <div style="color:#cfdde3;margin-top:1mm;max-width:130mm">{{ r.lead }}</div>
+ <img src="{{ logo('vendaval-outline.png') }}" alt="VENDAVAL" style="position:absolute;right:13mm;top:9mm;width:44mm">
+</div>
+<div class="in">
+{% for g in r.groups %}
+ {% if g.box %}<div class="box">{% endif %}
+ <h3>{{ g.h }}</h3>
+ <ul>{% for a, b in g['items'] %}<li>{% if a %}<b>{{ a }}</b> {% endif %}{{ b|safe }}</li>{% endfor %}</ul>
+ {% if g.box %}</div>{% endif %}
+{% endfor %}
+{% set rs = row_sizes(photos, 180 if kind == 'green' else 86, 3) %}<div class="row">{% for n, w in rs.cells %}<img src="{{ img(n) }}" alt="" style="height:{{ rs.h }}mm;width:{{ w }}mm;margin-right:{{ 3 if not loop.last else 0 }}mm">{% endfor %}</div>
+<div style="margin-top:5mm;background:var(--navy);color:#fff;padding:3mm 6mm;break-inside:avoid">
+ <b style="font:700 12pt Osw">{{ t.tyle }}</b> <span style="color:#9fb3bc">· {{ t.role }}</span><br>
+ {{ site.email }} · {{ site.phone }} · www.VENDAVAL.cat
+</div>
+</div>
+</body>
+</html>

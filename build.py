@@ -128,7 +128,7 @@ def redirect(target, rel):
 def build_links():
     lines = []
     for key, d in data['downloads'].items():
-        kind = 'rider' if d['kind'] == 'rider' else 'dossier'
+        kind = 'rider' if d['kind'] in ('rider', 'green', 'access') else 'dossier'
         fs = dict(avail(key))
         if not fs: continue
         base = OUT/kind/d['short']

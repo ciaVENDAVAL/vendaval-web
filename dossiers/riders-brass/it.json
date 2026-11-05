@@ -1,0 +1,120 @@
+{
+ "tyle": "tyle fernández (loro/ə)",
+ "role": "contatto tecnico e gestione",
+ "green": {
+  "title": "Rider verde",
+  "lead": "Come riduciamo l'impronta di ogni spettacolo, e come potete aiutarci.",
+  "foot": "RIDER VERDE · VENDAVAL BRASS",
+  "groups": [
+   {
+    "h": "Uno spettacolo leggero da portare in tournée",
+    "items": [
+     [
+      "Niente corrente, impianto audio o generatore.",
+      "La versione di strada è completamente acustica e funziona con la normale illuminazione pubblica."
+     ],
+     [
+      "Niente tecnici, niente camion.",
+      "Strumenti, costumi e oggetti di scena viaggiano nelle nostre auto, 4 persone per auto."
+     ],
+     [
+      "Locale e fatto per durare.",
+      "I costumi e gli oggetti di scena da creature marine sono fatti a mano da Imaginario de Mónica, che condivide il nostro spazio di coworking."
+     ],
+     [
+      "Giochi riutilizzabili.",
+      "Corde per saltare, oggetti morbidi da lanciare, una rete marina e un salvagente. Niente coriandoli, palloncini o cose da buttare dopo lo spettacolo."
+     ],
+     [
+      "Niente carta stampata.",
+      "Dossier, rider e foto solo online, su www.VENDAVAL.cat."
+     ],
+     [
+      "Concerto in mezzo al pubblico:",
+      "usiamo l'impianto audio del festival invece di portarne uno nostro."
+     ]
+    ]
+   },
+   {
+    "h": "Cosa vi chiediamo",
+    "box": true,
+    "items": [
+     [
+      "",
+      "Acqua del rubinetto o caraffe d'acqua; portiamo borracce riutilizzabili."
+     ],
+     [
+      "",
+      "Cibo vegetariano, locale e di stagione, senza piatti e posate usa e getta quando possibile."
+     ],
+     [
+      "",
+      "Un camerino vicino al percorso, per evitare spostamenti in più con i veicoli."
+     ],
+     [
+      "",
+      "Alloggio raggiungibile a piedi o con i mezzi pubblici."
+     ],
+     [
+      "",
+      "Aiutateci a collegare le date: se altri spazi vicini sono interessati, divideremo il viaggio tra gli spettacoli."
+     ]
+    ]
+   }
+  ]
+ },
+ "access": {
+  "title": "Rider accessibilità",
+  "lead": "Come rendiamo lo spettacolo aperto a tutte le persone, e cosa possiamo preparare insieme a voi.",
+  "foot": "RIDER ACCESSIBILITÀ · VENDAVAL BRASS",
+  "groups": [
+   {
+    "h": "Per il pubblico",
+    "items": [
+     [
+      "Non servono parole.",
+      "Lo spettacolo è musica, circo e giochi. Spieghiamo i giochi con gesti ed esempi facili da capire."
+     ],
+     [
+      "Artisti multilingue.",
+      "Perché tutte le persone si sentano a casa, possiamo salutare il pubblico nella sua lingua e dire alcune parole chiave in inglese, tedesco, italiano, spagnolo, catalano, arabo, russo, turco, cinese e giapponese."
+     ],
+     [
+      "Percorso.",
+      "I percorsi in piano sono i migliori. Possiamo affrontare rampe e scale, e adattiamo percorso e ritmo perché le persone in sedia a rotelle e con passeggini possano seguirci."
+     ],
+     [
+      "Sempre inclusa (su richiesta): visita tattile.",
+      "Un'ora prima dello spettacolo, in uno spazio tranquillo, le persone con disabilità visiva possono toccare i costumi con le loro applicazioni a forma di drago, gli strumenti musicali e gli oggetti di scena, e conoscere i personaggi."
+     ],
+     [
+      "Lavoriamo con lo spazio per creare spettacoli accessibili.",
+      "Su richiesta, con l'attrezzatura o il budget dello spazio: audiodescrizione, anelli a induzione o cuffie, zaini vibranti (solo nel Concerto in mezzo al pubblico, amplificato) e interpretariato in lingua dei segni."
+     ],
+     [
+      "Versione relaxed.",
+      "Una banda di ottoni può essere troppo forte per alcune persone. Su richiesta, per un pubblico previsto, offriamo una versione relaxed, con meno volume e a ritmo più lento. Possiamo camminare più piano o suonare in una piazza o in un parco tranquilli. Può anche svolgersi in una sala senza altri stimoli visivi o sonori. Al chiuso: 5 m di altezza e circa 10 × 10 m, o più a seconda del numero di partecipanti."
+     ],
+     [
+      "Facile da leggere.",
+      "Su www.VENDAVAL.cat c'è un dossier in versione facile da leggere. Aprite il pulsante dell'accessibilità in basso a sinistra e scegliete «Facile da leggere»: il testo del sito e dei dossier passa alla versione facile da leggere."
+     ],
+     [
+      "Circo sociale.",
+      "La direzione artistica, tyle fernández, ha una formazione in circo sociale («Un circ universal», Ateneu Popular 9 Barris, 2026, e altre formazioni in Germania). Il nostro lavoro segue l'approccio del Design Universale per il Circo Sociale (DUCS)."
+     ]
+    ]
+   },
+   {
+    "h": "Per il nostro team",
+    "box": true,
+    "items": [
+     [
+      "",
+      "Nessun adattamento necessario. Vedi il rider tecnico per le esigenze dello spettacolo."
+     ]
+    ]
+   }
+  ]
+ }
+}

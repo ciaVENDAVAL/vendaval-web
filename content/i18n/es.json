@@ -226,7 +226,9 @@
    "rider": "Ficha técnica (rider)",
    "photos": "Fotos",
    "workshop": "Dossier de talleres",
-   "easy": "Dosier en lectura fácil"
+   "easy": "Dosier en lectura fácil",
+   "green": "Rider verde",
+   "access": "Rider de accesibilidad"
   },
   "photos_web": "Web · 1000 px",
   "photos_print": "Impresión · 300 dpi",
