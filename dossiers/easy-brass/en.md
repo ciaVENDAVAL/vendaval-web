@@ -21,7 +21,7 @@ A unicycle is a bike with 1 wheel.
 - The circus artists juggle.
 - The audience plays with nets and life rings.
 - The band freezes like a statue. The audience wakes the musicians up.
-- The audience learns hand signs. With the signs, the audience leads the band.
+- The audience learns hand signals. With the signals, the audience leads the band.
 
 ## When and where
 

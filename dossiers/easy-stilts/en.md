@@ -43,7 +43,7 @@ We adapt the workshop to the group.
 ## With a show
 
 We give the workshops on the same day as one of our shows.
-We come from Barcelona.
+We travel to you from Barcelona.
 
 ## Booking
 

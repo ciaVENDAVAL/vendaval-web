@@ -55,7 +55,7 @@
    "kicker": "Espetáculo itinerante com música ao vivo",
    "text": [
     "VENDAVAL Brass é uma banda itinerante que transforma a rua numa festa em movimento. Começa com uma cumbia contagiante, enquanto duas personagens clownescas enchem o espaço de humor com andas, monociclo e malabarismo.",
-    "Três saxofones, trompete, sousafone e bateria portátil marcam o ritmo e improvisam ao vivo com sinais de mão. Com figurinos e adereços marítimos e jogos participativos, VENDAVAL propõe uma viagem festiva, poética e partilhada. Funciona como desfile entre palcos ou como peça autónoma."
+    "Três saxofones, trompete, sousafone e bateria portátil marcam o ritmo e improvisam ao vivo com sinais de mão. Com figurinos e adereços marítimos e jogos participativos, VENDAVAL propõe uma viagem festiva, poética e partilhada. Pode levar o público de um palco ao outro ou animar uma praça durante uma sessão de 30 minutos."
    ],
    "facts": [
     "Itinerante, de dia ou de noite",
@@ -128,7 +128,7 @@
   "intro": "Veja VENDAVAL na rua.",
   "play": "Reproduzir o vídeo",
   "consent": "Ao carregar em play, o vídeo é carregado a partir do YouTube, que pode usar cookies.",
-  "watch_on": "Ver em",
+  "watch_on": "Ver no",
   "items": {
    "brass_trailer": "Trailer de VENDAVAL Brass"
   }
