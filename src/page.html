@@ -69,7 +69,23 @@
   </div>
 </section>
 
-<section id="about" class="sec cream">
+<!--sec:glance-->{% if t.glance %}
+<section id="glance" class="sec">
+  <div class="wrap">
+    <h2>{{ t.glance.title }}</h2>
+    {% if t.glance.lead %}<p class="lead">{{ t.glance.lead }}</p>{% endif %}
+    <dl class="glance">{% for k, v in t.glance.rows %}<div><dt>{{ k }}</dt><dd>{{ v }}</dd></div>{% endfor %}</dl>
+    {% if t.glance.more %}<p><a class="btn btn-small" href="{{ H }}downloads/">{{ t.glance.more }} →</a></p>{% endif %}
+  </div>
+</section>{% endif %}<!--/sec:glance-->
+<!--sec:why-->{% if t.why %}
+<section id="why" class="sec navy">
+  <div class="wrap why">
+    <h2>{{ t.why.title }}</h2>
+    {% for p in t.why.p %}<p>{{ p }}</p>{% endfor %}
+  </div>
+</section>{% endif %}<!--/sec:why-->
+<!--sec:about--><section id="about" class="sec cream">
   <div class="wrap two">
     <div>
       <h2>{{ t.about.title }}</h2>
@@ -78,9 +94,9 @@
     </div>
     <figure class="tilt"><img loading="lazy" src="{{ R }}img/{{ about_image }}-800.webp" alt="" width="800"></figure>
   </div>
-</section>
+</section><!--/sec:about-->
 
-<section id="shows" class="sec">
+<!--sec:shows--><section id="shows" class="sec">
   <div class="wrap">
     <h2>{{ t.shows.title }}</h2>
     <p class="lead{% if t.easy.shows %} std{% endif %}">{{ t.shows.intro }}</p>{% if t.easy.shows %}<p class="lead easy">{{ t.easy.shows }}</p>{% endif %}
@@ -98,9 +114,9 @@
       {% endfor %}
     </div>
   </div>
-</section>
+</section><!--/sec:shows-->
 
-<section id="home-workshops" class="sec cream">
+<!--sec:workshops--><section id="home-workshops" class="sec cream">
   <div class="wrap">
     <h2>{{ t.workshops.title }}</h2>
     <p class="lead{% if t.easy.workshops %} std{% endif %}">{{ t.workshops.intro }}</p>{% if t.easy.workshops %}<div class="easy">{% for p in t.easy.workshops %}<p class="lead">{{ p }}</p>{% endfor %}</div>{% endif %}
@@ -113,9 +129,9 @@
     </div>
     <p><a class="btn btn-small btn-line" href="{{ H }}workshops/">{{ t.nav.workshops }} →</a></p>
   </div>
-</section>
+</section><!--/sec:workshops-->
 
-<section id="video" class="sec navy">
+<!--sec:video--><section id="video" class="sec navy">
   <div class="wrap">
     <h2>{{ t.video.title }}</h2>
     <p class="lead">{{ t.video.intro }}</p>
@@ -129,9 +145,9 @@
     </figure>
     <p class="channels"><a class="btn btn-line-light" href="https://www.youtube.com/@VENDAVAL.YOUTUBE" rel="noopener" target="_blank">{{ icon('youtube') }} YouTube</a></p>
   </div>
-</section>
+</section><!--/sec:video-->
 
-<section id="agenda" class="sec cream">
+<!--sec:agenda--><section id="agenda" class="sec cream">
   <div class="wrap agenda" data-today="{{ today }}">
     <h2>{{ t.agenda.title }}</h2>
     <h3 class="ag-up">{{ t.agenda.upcoming }}</h3>
@@ -139,11 +155,11 @@
     <p class="none"{% if agenda_up %} hidden{% endif %}>{{ t.agenda.none }}</p>
     <p><a class="btn btn-small btn-line" href="{{ H }}agenda/">{{ t.agenda.all }} →</a></p>
   </div>
-</section>
+</section><!--/sec:agenda-->
 
-{% include 'contact.html' %}
+<!--sec:contact-->{% include 'contact.html' %}<!--/sec:contact-->
 
-<section id="home-crew" class="sec">
+<!--sec:crew--><section id="home-crew" class="sec">
   <div class="wrap home-crew">
     <svg class="crew-pennants" viewBox="0 0 240 14" preserveAspectRatio="none" aria-hidden="true" focusable="false">{% for i in range(10) %}<polygon class="p{{ loop.index0 % 4 + 1 }}" points="{{ i*24 }},0 {{ i*24+24 }},0 {{ i*24+12 }},14"/>{% endfor %}</svg>
     <div class="home-crew-body">
@@ -164,7 +180,7 @@
       </a>
     </div>
   </div>
-</section>
+</section><!--/sec:crew-->
 
 {% elif page == 'show' %}
 {% set st = t.show[s.id] %}

@@ -176,6 +176,22 @@ def render():
             ctx = dict(base, page=page, path=path, R=R, H=R + lang + '/', **extra)
             out = OUT/lang/path/'index.html'; out.parent.mkdir(parents=True, exist_ok=True)
             html = tpl.render(**ctx)
+            if page == 'home' and t.get('home_order'):
+                # each language shows the home sections in its own order (content/i18n/<lang>.json → home_order)
+                secs = dict(re.findall(r'<!--sec:([a-z]+)-->(.*?)<!--/sec:\1-->', html, flags=re.S))
+                first = html.index('<!--sec:'); last = html.rindex('<!--/sec:'); last = html.index('-->', last) + 3
+                order = [k for k in t['home_order'] if k in secs] + [k for k in secs if k not in t['home_order']]
+                # alternate sand / white backgrounds in the new order so two sand sections never touch (navy ones stay)
+                parts, sand = [], False
+                for k in order:
+                    sec = secs[k]
+                    if 'class="sec navy' not in sec and '<section' in sec:
+                        sand = not sand
+                        sec = re.sub(r'(<section id="[^"]+" class="sec)( cream)?', lambda m: m.group(1) + (' cream' if sand else ''), sec, count=1)
+                    elif 'class="sec navy' in sec: sand = False
+                    parts.append(sec)
+                html = html[:first] + '\n'.join(parts) + html[last:]
+            html = re.sub(r'<!--/?sec:[a-z]+-->', '', html)
             # links to another page always open at its top (#top), not at the old scroll position
             html = re.sub(r'href="((?:\.\./)+[a-z]{2}/(?:[a-z-]+/)?)"', r'href="\1#top"', html)
             out.write_text(html, encoding='utf-8')

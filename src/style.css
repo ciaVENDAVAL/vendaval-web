@@ -640,3 +640,12 @@ html.a11y-dark .cream .timeline li::before{background:#0d2b3a}
 .chimera-card .btn{display:inline-block;margin-top:14px;background:var(--yellow);color:var(--navy)}
 .chimera-card:hover strong{color:#fff}
 @media (max-width:700px){.chimera-card{grid-template-columns:1fr}}
+/* culture-specific home blocks: DE "Auf einen Blick", JA "主催者の皆さまへ" (glance), FR/IT street manifesto (why) */
+.glance{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:1.2em 0}
+.glance>div{background:var(--cream);border-radius:var(--radius);padding:14px 18px}
+.glance dt{font:800 .8rem/1.2 var(--body);text-transform:uppercase;letter-spacing:.08em;color:var(--teal-d);margin-bottom:.35em}
+.glance dd{margin:0;font-weight:600}
+html.a11y-dark .glance>div{background:#123a4c}
+.why{max-width:62ch}.why p{font-size:1.15rem;line-height:1.65}
+#why h2{color:#fff}
+.cream .glance>div{background:#fff}

@@ -335,5 +335,14 @@
   "title": "Canta connosco!",
   "text": "Junta-te ao coro das quimeras.",
   "cta": "Jogar VENDAVAL Chimera Opera"
- }
+ },
+ "home_order": [
+  "shows",
+  "about",
+  "video",
+  "agenda",
+  "workshops",
+  "contact",
+  "crew"
+ ]
 }

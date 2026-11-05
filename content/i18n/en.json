@@ -335,5 +335,14 @@
   "title": "Sing with us!",
   "text": "Join the Chimera choir.",
   "cta": "Play VENDAVAL Chimera Opera"
- }
+ },
+ "home_order": [
+  "shows",
+  "video",
+  "about",
+  "agenda",
+  "workshops",
+  "contact",
+  "crew"
+ ]
 }

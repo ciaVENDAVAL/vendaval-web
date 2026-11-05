@@ -335,5 +335,23 @@
   "title": "Chante avec nous !",
   "text": "Rejoins le chœur des chimères.",
   "cta": "Jouer à VENDAVAL Chimera Opera"
- }
+ },
+ "why": {
+  "title": "La rue est à tout le monde",
+  "p": [
+   "Nous défendons la rue comme un lieu de rencontre et de vivre-ensemble. Quand la musique et le cirque envahissent la place, des inconnus se regardent, rient et finissent par danser ensemble.",
+   "Jouer sans l'avoir prévu est une thérapie collective, gratuite et en plein air : une façon joyeuse de faire face à la solitude.",
+   "Et nous misons sur la couleur et l'ornement, à une époque où les vêtements, les meubles et les bâtiments deviennent de plus en plus gris et rectilignes : nous sortons habillés de toutes les couleurs de la mer."
+  ]
+ },
+ "home_order": [
+  "why",
+  "about",
+  "video",
+  "shows",
+  "workshops",
+  "agenda",
+  "contact",
+  "crew"
+ ]
 }
