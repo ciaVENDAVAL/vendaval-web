@@ -1,4 +1,4 @@
-"""VENDAVAL Brass dossier (7 pages) and technical rider (2 pages), 8 languages -> static/pdf/
+"""VENDAVAL Brass dossier (6 pages) and technical rider (2 pages), 8 languages -> static/pdf/
 Usage (from the repo root): python3 dossiers/brass/build.py [ca es en de fr it pt ja]
 Texts: dossiers/brass/<lang>.json · layout: template.html + parts.html · photos: source-images/, framed (cropped) as in the canvas, by tyle's choice for this dossier
 Based on the Design canvas "VENDAVAL Brass — dossier CA v2" (Oct 2026)."""

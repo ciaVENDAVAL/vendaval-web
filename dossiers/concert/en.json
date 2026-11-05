@@ -34,7 +34,7 @@
   "On the square in front of the stage; the band can go up on stage. The stilt-walker always stays in the crowd, unless the stage is low.",
   "6 musicians (3 saxophones, trumpet, sousaphone, percussion) and 2 circus artists (stilts, unicycle, juggling, games).",
   "Amplified: 8 wireless mics (6 instrument, 2 voice) into the festival PA, or fully acoustic, without mics.",
-  "No dialogue; game instructions in English, German, Catalan or Spanish."
+  "No words needed: the games are explained with gestures and examples. All technical details in the technical rider."
  ],
  "mus_kick": "The music",
  "mus_h": "Composed and improvised live",
@@ -59,7 +59,7 @@
  ],
  "acc_kick": "For all bodies and minds",
  "acc_h": "Accessibility",
- "acc_p": "VENDAVAL wants to reach everyone. The company offers a tactile visit for blind and partially sighted people. Because this format is amplified, it's easier to add audio description, hearing loops and vibrating backpacks, if the organiser has the equipment.",
+ "acc_p": "Touch Tour always included on request; in this amplified format also audio description, hearing loops, vibrating backpacks, sign language and a relaxed version, prepared together with the venue.",
  "alw_h": "Always possible",
  "alw": [
   "Tactile visit"
@@ -239,7 +239,9 @@
  "sets": "<b>Sets:</b> 30 minutes each, several during the day. Always a 30-minute break between sets.",
  "s5": "The band can't play outdoors in the rain, because of the instruments and microphones. The company can wait for it to stop and play later or another day. Wet ground is fine. Alternative: a large hall at least 5 m high.",
  "s6": "<b>Parking:</b> space for 2 vehicles.<br><b>Dressing room:</b> space for 8 people with tables for make-up and changing. The company can bring mirrors and lights.<br><b>Meals:</b> 2 meat-free (fish, eggs and dairy are fine) · 6 with no dietary requirements.",
- "s7": "<b>Always possible:</b> tactile visit, 1 hour before the show, after make-up, in a quiet space.<br><b>If equipment is available:</b> audio description, hearing loops and vibrating backpacks (fed from the amplified sound) · sign-language interpretation for the games.",
+ "s7": "Touch Tour always included on request; in this amplified format also audio description, hearing loops, vibrating backpacks, sign language and a relaxed version, prepared together with the venue.",
  "r_role": "direction · booking",
- "foot_r": "TECHNICAL RIDER · CONCERT IN THE AUDIENCE"
+ "foot_r": "TECHNICAL RIDER · CONCERT IN THE AUDIENCE",
+ "see_access": "All details in the access rider:",
+ "see_tech": "All details in the technical rider:"
 }

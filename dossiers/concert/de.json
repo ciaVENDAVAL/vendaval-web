@@ -34,7 +34,7 @@
   "Auf dem Platz vor der Bühne; die Band kann auf die Bühne gehen. Die Stelzenfigur bleibt immer im Publikum, außer die Bühne ist nicht erhöht.",
   "6 Musiker*innen (3 Saxophone, Trompete, Sousaphon, Perkussion) und 2 Zirkusartist*innen (Stelzen, Einrad, Jonglage, Spiele).",
   "Verstärkt: 8 Funkmikrofone (6 Instrumente, 2 Stimmen) über die PA des Festivals, oder rein akustisch, ohne Mikrofone.",
-  "Ohne Text; Spielanleitungen auf Deutsch, Englisch, Katalanisch oder Spanisch."
+  "Keine Worte nötig: Die Spiele werden mit Gesten und Beispielen erklärt. Alle technischen Details im technischen Rider."
  ],
  "mus_kick": "Die Musik",
  "mus_h": "Komponiert und live improvisiert",
@@ -59,7 +59,7 @@
  ],
  "acc_kick": "Für alle Körper und Köpfe",
  "acc_h": "Barrierefreiheit",
- "acc_p": "VENDAVAL möchte alle Menschen erreichen. Die Compagnie bietet eine Tastführung für blinde und sehbehinderte Menschen an. Da dieses Format verstärkt ist, lassen sich Audiodeskription, Höranlagen und Vibrationsrucksäcke leichter einbinden, wenn der Veranstalter die Technik hat.",
+ "acc_p": "Tastführung auf Anfrage immer inklusive; in diesem verstärkten Format auch Audiodeskription, Induktionsschleifen, Vibrationsrucksäcke, Gebärdensprache und eine entspannte Version, gemeinsam mit den Veranstaltenden vorbereitet.",
  "alw_h": "Immer möglich",
  "alw": [
   "Tastführung"
@@ -239,7 +239,9 @@
  "sets": "<b>Durchgänge:</b> je 30 Minuten, mehrere über den Tag verteilt. Immer 30 Minuten Pause zwischen den Durchgängen.",
  "s5": "Bei Regen kann die Band wegen der Instrumente und Mikrofone nicht draußen spielen. Die Compagnie kann warten, bis es aufhört, und später oder an einem anderen Tag spielen. Nasser Boden ist kein Problem. Alternative: eine große Halle mit mindestens 5 m Höhe.",
  "s6": "<b>Parken:</b> Platz für 2 Fahrzeuge.<br><b>Garderobe:</b> Raum für 8 Personen mit Tischen zum Schminken und Umziehen. Die Compagnie kann Spiegel und Licht mitbringen.<br><b>Verpflegung:</b> 2 × ohne Fleisch (Fisch, Eier und Milchprodukte sind okay) · 6 × ohne besondere Ernährung.",
- "s7": "<b>Immer möglich:</b> Tastführung, 1 Stunde vor der Show, nach dem Schminken, in einem ruhigen Raum.<br><b>Wenn Technik vorhanden ist:</b> Audiodeskription, Höranlagen und Vibrationsrucksäcke (über den verstärkten Ton) · Gebärdensprachdolmetschen für die Spiele.",
+ "s7": "Tastführung auf Anfrage immer inklusive; in diesem verstärkten Format auch Audiodeskription, Induktionsschleifen, Vibrationsrucksäcke, Gebärdensprache und eine entspannte Version, gemeinsam mit den Veranstaltenden vorbereitet.",
  "r_role": "Leitung · Booking",
- "foot_r": "TECHNISCHER RIDER · KONZERT MITTEN IM PUBLIKUM"
+ "foot_r": "TECHNISCHER RIDER · KONZERT MITTEN IM PUBLIKUM",
+ "see_access": "Alle Details im Access Rider:",
+ "see_tech": "Alle Details im technischen Rider:"
 }

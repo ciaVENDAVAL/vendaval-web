@@ -34,7 +34,7 @@
   "En la plaza, frente al escenario; la banda puede subir a él. Los zancos, siempre entre el público, salvo que el escenario no esté elevado.",
   "6 músicos (3 saxos, trompeta, sousáfono, percusión) y 2 artistas de circo (zancos, monociclo, malabares, juegos).",
   "Sonido amplificado: 8 micrófonos inalámbricos (6 de instrumento, 2 de voz) al PA del festival, o en acústico, sin micrófonos.",
-  "Sin texto; instrucciones de los juegos en catalán, castellano, inglés o alemán."
+  "Sin texto: los juegos se explican con gestos y ejemplos. Todos los detalles técnicos en la ficha técnica."
  ],
  "mus_kick": "La música",
  "mus_h": "Composición e improvisación en directo",
@@ -59,7 +59,7 @@
  ],
  "acc_kick": "Para todos los cuerpos y mentes",
  "acc_h": "Accesibilidad",
- "acc_p": "VENDAVAL quiere llegar a todas las personas. La compañía ofrece una visita táctil para personas con diversidad visual. Como este formato es amplificado, es más fácil añadir audiodescripción, audífonos y mochilas vibratorias, si la organización dispone del equipo.",
+ "acc_p": "Visita táctil siempre incluida a petición; en este formato amplificado, también audiodescripción, bucles magnéticos, mochilas vibratorias, lengua de signos y una versión relajada, preparados con el espacio.",
  "alw_h": "Siempre posible",
  "alw": [
   "Visita táctil"
@@ -239,7 +239,9 @@
  "sets": "<b>Pases:</b> 30 minutos cada uno, varios a lo largo del día. Siempre con 30 minutos de pausa entre pases.",
  "s5": "Con lluvia no se puede tocar al aire libre, por los instrumentos y los micrófonos. La compañía puede esperar a que pare y tocar más tarde u otro día. El suelo mojado no impide el espectáculo. Alternativa: una sala grande con una altura mínima de 5 m.",
  "s6": "<b>Aparcamiento:</b> espacio para 2 vehículos.<br><b>Camerino:</b> espacio para 8 personas con mesas para maquillarse y cambiarse. La compañía puede traer espejos y luces.<br><b>Comidas:</b> 2 sin carne (pescado, huevos y lácteos, sí) · 6 sin dieta específica.",
- "s7": "<b>Siempre posible:</b> visita táctil, 1 hora antes del espectáculo, después del maquillaje, en un espacio sin ruido.<br><b>Si el equipo está disponible:</b> audiodescripción, audífonos y mochilas vibratorias (conectados al sonido amplificado) · interpretación en lengua de signos para los juegos.",
+ "s7": "Visita táctil siempre incluida a petición; en este formato amplificado, también audiodescripción, bucles magnéticos, mochilas vibratorias, lengua de signos y una versión relajada, preparados con el espacio.",
  "r_role": "dirección · contratación",
- "foot_r": "FICHA TÉCNICA · CONCIERTO ENTRE EL PÚBLICO"
+ "foot_r": "FICHA TÉCNICA · CONCIERTO ENTRE EL PÚBLICO",
+ "see_access": "Todos los detalles en el rider de accesibilidad:",
+ "see_tech": "Todos los detalles en la ficha técnica:"
 }

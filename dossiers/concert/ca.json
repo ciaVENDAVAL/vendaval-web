@@ -34,7 +34,7 @@
   "A la plaça, davant de l'escenari; la banda hi pot pujar. Les xanques, sempre entre el públic, tret que l'escenari no sigui elevat.",
   "6 músics (3 saxos, trompeta, sousàfon, percussió) i 2 artistes de circ (xanques, monocicle, malabars, jocs).",
   "So amplificat: 8 micròfons sense fils (6 d'instrument, 2 de veu) al PA del festival, o en acústic, sense micròfons.",
-  "Sense text; instruccions dels jocs en català, castellà, anglès o alemany."
+  "Sense text: els jocs s'expliquen amb gestos i exemples. Tots els detalls tècnics a la fitxa tècnica."
  ],
  "mus_kick": "La música",
  "mus_h": "Composició i improvisació en directe",
@@ -59,7 +59,7 @@
  ],
  "acc_kick": "Per a tots els cossos i ments",
  "acc_h": "Accessibilitat",
- "acc_p": "VENDAVAL vol arribar a totes les persones. La companyia ofereix una visita tàctil per a persones amb diversitat visual. Com que aquest format és amplificat, és més fàcil afegir-hi audiodescripció, audiòfons i motxilles vibratòries, si l'organització disposa de l'equip.",
+ "acc_p": "Visita tàctil sempre inclosa a petició; en aquest format amplificat, també audiodescripció, bucles magnètics, motxilles vibratòries, llengua de signes i una versió relaxada, preparats amb l'espai.",
  "alw_h": "Sempre possible",
  "alw": [
   "Visita tàctil"
@@ -239,7 +239,9 @@
  "sets": "<b>Passis:</b> 30 minuts cadascun, diversos al llarg del dia. Sempre amb 30 minuts de pausa entre passis.",
  "s5": "Amb pluja no es pot tocar a l'aire lliure, pels instruments i els micròfons. La companyia pot esperar que pari i tocar més tard o un altre dia. El terra mullat no impedeix l'espectacle. Alternativa: una sala gran amb una alçada mínima de 5 m.",
  "s6": "<b>Pàrquing:</b> espai per a 2 vehicles.<br><b>Vestidor:</b> espai per a 8 persones amb taules per maquillar-se i canviar-se. La companyia pot portar miralls i llums.<br><b>Dietes:</b> 2 sense carn (peix, ous i lactis, sí) · 6 sense dieta específica.",
- "s7": "<b>Sempre possible:</b> visita tàctil, 1 hora abans de l'espectacle, després del maquillatge, en un espai sense soroll.<br><b>Si l'equip està disponible:</b> audiodescripció, audiòfons i motxilles vibratòries (connectats al so amplificat) · interpretació en llengua de signes per als jocs.",
+ "s7": "Visita tàctil sempre inclosa a petició; en aquest format amplificat, també audiodescripció, bucles magnètics, motxilles vibratòries, llengua de signes i una versió relaxada, preparats amb l'espai.",
  "r_role": "direcció · contractació",
- "foot_r": "FITXA TÈCNICA · CONCERT ENMIG DEL PÚBLIC"
+ "foot_r": "FITXA TÈCNICA · CONCERT ENMIG DEL PÚBLIC",
+ "see_access": "Tots els detalls al rider d'accessibilitat:",
+ "see_tech": "Tots els detalls a la fitxa tècnica:"
 }

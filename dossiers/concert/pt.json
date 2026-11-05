@@ -34,7 +34,7 @@
   "Na praça, em frente ao palco; a banda pode subir ao palco. A personagem em andas fica sempre no meio do público, exceto se o palco não for elevado.",
   "6 músicos (3 saxofones, trompete, sousafone, percussão) e 2 artistas de circo (andas, monociclo, malabarismo, jogos).",
   "Som amplificado: 8 microfones sem fios (6 de instrumento, 2 de voz) ligados ao sistema de som do festival, ou em acústico, sem microfones.",
-  "Sem texto; instruções dos jogos em catalão, espanhol, inglês ou alemão."
+  "Não são precisas palavras: os jogos explicam-se com gestos e exemplos. Todos os detalhes técnicos no rider técnico."
  ],
  "mus_kick": "A música",
  "mus_h": "Composta e improvisada ao vivo",
@@ -59,7 +59,7 @@
  ],
  "acc_kick": "Para todos os corpos e mentes",
  "acc_h": "Acessibilidade",
- "acc_p": "VENDAVAL quer chegar a todas as pessoas. A companhia oferece uma visita tátil para pessoas cegas e com baixa visão. Como este formato é amplificado, é mais fácil acrescentar audiodescrição, anel magnético e mochilas vibratórias, se a organização tiver o equipamento.",
+ "acc_p": "Visita tátil sempre incluída a pedido; neste formato amplificado, também audiodescrição, anéis de indução, mochilas vibratórias, língua gestual e uma versão descontraída, preparados com o espaço.",
  "alw_h": "Sempre possível",
  "alw": [
   "Visita tátil"
@@ -239,7 +239,9 @@
  "sets": "<b>Sessões:</b> 30 minutos cada, várias ao longo do dia. Sempre com 30 minutos de pausa entre sessões.",
  "s5": "Com chuva, a banda não pode tocar ao ar livre, por causa dos instrumentos e dos microfones. A companhia pode esperar que pare e tocar mais tarde ou noutro dia. Chão molhado não é problema. Alternativa: uma sala grande com pelo menos 5 m de altura.",
  "s6": "<b>Estacionamento:</b> lugar para 2 veículos.<br><b>Camarim:</b> espaço para 8 pessoas com mesas para maquilhagem e para mudar de roupa. A companhia pode trazer espelhos e luzes.<br><b>Refeições:</b> 2 sem carne (peixe, ovos e laticínios, sim) · 6 sem dieta específica.",
- "s7": "<b>Sempre possível:</b> visita tátil, 1 hora antes do espetáculo, depois da maquilhagem, num espaço sem ruído.<br><b>Se o equipamento estiver disponível:</b> audiodescrição, anel magnético e mochilas vibratórias (ligados ao som amplificado) · interpretação em língua gestual para os jogos.",
+ "s7": "Visita tátil sempre incluída a pedido; neste formato amplificado, também audiodescrição, anéis de indução, mochilas vibratórias, língua gestual e uma versão descontraída, preparados com o espaço.",
  "r_role": "direção · contratação",
- "foot_r": "FICHA TÉCNICA · CONCERTO NO MEIO DO PÚBLICO"
+ "foot_r": "FICHA TÉCNICA · CONCERTO NO MEIO DO PÚBLICO",
+ "see_access": "Todos os detalhes no rider de acessibilidade:",
+ "see_tech": "Todos os detalhes no rider técnico:"
 }

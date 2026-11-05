@@ -17,6 +17,15 @@
 </div>
 {% endmacro %}
 
+
+{% macro info_box(show_tech=True) %}
+<div style="background:#FFFFFF;color:#0F2C40;padding:22px 28px 24px;display:flex;flex-direction:column;gap:12px">
+  <h3 class="disp" style="margin:0;font-size:28px;line-height:1">{{ t.info_h if show_tech else t.access }}</h3>
+  {% if show_tech %}<p style="margin:0;font-size:14.5px;line-height:1.45"><b>{{ t.tech_lab }}.</b> {{ t.tech_short }} {{ t.see_tech }} <a href="https://vendaval.cat/rider/brass/{{ lang }}" style="color:#0B6E85;font-weight:600">www.VENDAVAL.cat/rider/brass</a></p>{% endif %}
+  <p style="margin:0;font-size:14.5px;line-height:1.45">{% if show_tech %}<b>{{ t.access }}.</b> {% endif %}{{ t.access_short }} {{ t.see_access }} <a href="https://vendaval.cat/rider/brass-access/{{ lang }}" style="color:#0B6E85;font-weight:600">www.VENDAVAL.cat/rider/brass-access</a></p>
+</div>
+{% endmacro %}
+
 {% macro contact_block(dark=True) %}
 <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 32px">
   <div style="display:flex;flex-direction:column;gap:4px"><span class="lab" style="font-size:13px;letter-spacing:2px;color:#17A9C9">{{ t.contact_lab }}</span><span style="font-size:17px;font-weight:600">{{ t.who }}</span><span style="font-size:13px">{{ t.who_role }}</span></div>

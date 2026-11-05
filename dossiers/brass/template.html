@@ -30,7 +30,7 @@ p{margin:0}
 </style>
 </head>
 <body>
-{% from 'parts' import photo, waves, access_box, contact_block, tech, support with context %}
+{% from 'parts' import photo, waves, access_box, info_box, contact_block, tech, support with context %}
 {% if kind == 'dossier' %}
 <!-- 1 · cover -->
 <section class="pg" style="background:#0F2C40;color:#0F2C40">
@@ -108,12 +108,11 @@ p{margin:0}
       <h2 class="disp" style="margin:0;font-size:44px;line-height:1.05;color:#FFFFFF">{{ t.games_title }}</h2>
       <p style="font-size:16px;line-height:1.55;max-width:640px">{{ t.games_text }}</p>
     </div>
-    <div style="background:#F5EDDC;color:#0F2C40">{{ access_box() }}</div>
+    <div style="background:#F5EDDC;color:#0F2C40">{{ info_box(True) }}</div>
   </div>
 </section>
 
-<!-- 5 · technical sheet -->
-{{ tech() }}
+<!-- technical sheet: in the rider only (summary on page 4) -->
 
 <!-- 6 · crew -->
 <section class="pg" style="background:#FFFFFF">
@@ -168,7 +167,7 @@ p{margin:0}
   <div style="position:absolute;inset:0;padding:52px 56px 0;display:flex;flex-direction:column;gap:22px">
     <div class="lab" style="display:flex;justify-content:space-between;font-size:13px;color:#B5401C"><span>{{ t.tech_kicker }} · VENDAVAL BRASS</span><span style="color:#0F2C40">{{ t.updated }}</span></div>
     <h1 class="disp" style="margin:0;font-size:56px;line-height:1;color:#0F2C40">{{ t.access_contact }}</h1>
-    {{ access_box() }}
+    {{ info_box(False) }}
     <div style="background:#0F2C40;color:#F5EDDC;padding:26px 28px 28px;display:flex;flex-direction:column;gap:18px">
       <h3 class="disp" style="margin:0;font-size:30px;line-height:1;color:#FFFFFF">{{ t.booking }}</h3>
       {{ contact_block(True) }}

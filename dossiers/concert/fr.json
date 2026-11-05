@@ -34,7 +34,7 @@
   "Sur la place, devant la scène ; la fanfare peut y monter. Le personnage sur échasses reste toujours dans le public, sauf si la scène n'est pas surélevée.",
   "6 musicien·nes (3 saxophones, trompette, soubassophone, percussions) et 2 artistes de cirque (échasses, monocycle, jonglage, jeux).",
   "Son amplifié : 8 micros sans fil (6 instruments, 2 voix) sur la sono du festival, ou en acoustique, sans micros.",
-  "Sans texte ; consignes des jeux en catalan, espagnol, anglais ou allemand."
+  "Pas besoin de mots : les jeux s'expliquent par des gestes et des exemples. Tous les détails techniques dans la fiche technique."
  ],
  "mus_kick": "La musique",
  "mus_h": "Composée et improvisée en direct",
@@ -59,7 +59,7 @@
  ],
  "acc_kick": "Pour tous les corps et tous les esprits",
  "acc_h": "Accessibilité",
- "acc_p": "VENDAVAL veut toucher toutes les personnes. La compagnie propose une visite tactile pour les personnes aveugles et malvoyantes. Ce format étant amplifié, il est plus facile d'ajouter audiodescription, boucles magnétiques et sacs à dos vibrants, si l'organisation dispose du matériel.",
+ "acc_p": "Visite tactile toujours incluse sur demande ; dans ce format amplifié, aussi audiodescription, boucles magnétiques, gilets vibrants, langue des signes et une version relax, préparées avec le lieu.",
  "alw_h": "Toujours possible",
  "alw": [
   "Visite tactile"
@@ -239,7 +239,9 @@
  "sets": "<b>Passages :</b> 30 minutes chacun, plusieurs dans la journée. Toujours 30 minutes de pause entre les passages.",
  "s5": "Sous la pluie, la fanfare ne peut pas jouer en extérieur, à cause des instruments et des micros. La compagnie peut attendre la fin de l'averse et jouer plus tard ou un autre jour. Un sol mouillé ne pose pas de problème. Alternative : une grande salle d'au moins 5 m de hauteur.",
  "s6": "<b>Parking :</b> place pour 2 véhicules.<br><b>Loge :</b> espace pour 8 personnes avec tables pour se maquiller et se changer. La compagnie peut apporter miroirs et lumières.<br><b>Repas :</b> 2 sans viande (poisson, œufs et laitages acceptés) · 6 sans régime particulier.",
- "s7": "<b>Toujours possible :</b> visite tactile, 1 heure avant le spectacle, après le maquillage, dans un espace calme.<br><b>Si le matériel est disponible :</b> audiodescription, boucles magnétiques et sacs à dos vibrants (reliés au son amplifié) · interprétation en langue des signes pour les jeux.",
+ "s7": "Visite tactile toujours incluse sur demande ; dans ce format amplifié, aussi audiodescription, boucles magnétiques, gilets vibrants, langue des signes et une version relax, préparées avec le lieu.",
  "r_role": "direction · diffusion",
- "foot_r": "FICHE TECHNIQUE · CONCERT AU MILIEU DU PUBLIC"
+ "foot_r": "FICHE TECHNIQUE · CONCERT AU MILIEU DU PUBLIC",
+ "see_access": "Tous les détails dans la fiche accessibilité :",
+ "see_tech": "Tous les détails dans la fiche technique :"
 }

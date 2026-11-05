@@ -34,7 +34,7 @@
   "In piazza, davanti al palco; la banda può salirci. Il personaggio sui trampoli resta sempre tra il pubblico, a meno che il palco non sia rialzato.",
   "6 musicisti (3 sassofoni, tromba, sousafono, percussioni) e 2 artisti di circo (trampoli, monociclo, giocoleria, giochi).",
   "Suono amplificato: 8 microfoni wireless (6 strumenti, 2 voci) sull'impianto del festival, oppure in acustico, senza microfoni.",
-  "Senza testo; istruzioni dei giochi in catalano, spagnolo, inglese o tedesco."
+  "Non servono parole: i giochi si spiegano con gesti ed esempi. Tutti i dettagli tecnici nel rider tecnico."
  ],
  "mus_kick": "La musica",
  "mus_h": "Composta e improvvisata dal vivo",
@@ -59,7 +59,7 @@
  ],
  "acc_kick": "Per tutti i corpi e le menti",
  "acc_h": "Accessibilità",
- "acc_p": "VENDAVAL vuole arrivare a tutte le persone. La compagnia offre una visita tattile per persone cieche e ipovedenti. Poiché questo formato è amplificato, è più facile aggiungere audiodescrizione, anello magnetico e zaini vibranti, se l'organizzazione dispone dell'attrezzatura.",
+ "acc_p": "Visita tattile sempre inclusa su richiesta; in questo formato amplificato anche audiodescrizione, anelli a induzione, zaini vibranti, lingua dei segni e una versione relaxed, preparati insieme allo spazio.",
  "alw_h": "Sempre possibile",
  "alw": [
   "Visita tattile"
@@ -239,7 +239,9 @@
  "sets": "<b>Repliche:</b> 30 minuti ciascuna, più volte nella giornata. Sempre 30 minuti di pausa tra una replica e l'altra.",
  "s5": "Con la pioggia la banda non può suonare all'aperto, per via degli strumenti e dei microfoni. La compagnia può aspettare che smetta e suonare più tardi o un altro giorno. Il terreno bagnato non è un problema. Alternativa: una sala grande alta almeno 5 m.",
  "s6": "<b>Parcheggio:</b> posto per 2 veicoli.<br><b>Camerino:</b> spazio per 8 persone con tavoli per truccarsi e cambiarsi. La compagnia può portare specchi e luci.<br><b>Pasti:</b> 2 senza carne (pesce, uova e latticini sì) · 6 senza esigenze particolari.",
- "s7": "<b>Sempre possibile:</b> visita tattile, 1 ora prima dello spettacolo, dopo il trucco, in uno spazio silenzioso.<br><b>Se l'attrezzatura è disponibile:</b> audiodescrizione, anello magnetico e zaini vibranti (collegati al suono amplificato) · interpretariato in lingua dei segni per i giochi.",
+ "s7": "Visita tattile sempre inclusa su richiesta; in questo formato amplificato anche audiodescrizione, anelli a induzione, zaini vibranti, lingua dei segni e una versione relaxed, preparati insieme allo spazio.",
  "r_role": "direzione · booking",
- "foot_r": "SCHEDA TECNICA · CONCERTO IN MEZZO AL PUBBLICO"
+ "foot_r": "SCHEDA TECNICA · CONCERTO IN MEZZO AL PUBBLICO",
+ "see_access": "Tutti i dettagli nel rider accessibilità:",
+ "see_tech": "Tutti i dettagli nel rider tecnico:"
 }
