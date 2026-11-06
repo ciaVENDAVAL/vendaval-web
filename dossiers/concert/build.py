@@ -79,4 +79,4 @@ async def main(langs):
         await b.close()
 
 if __name__ == '__main__':
-    asyncio.run(main(sys.argv[1:] or ['ca', 'es', 'en', 'de', 'fr', 'it', 'pt', 'ja']))
+    asyncio.run(main(sys.argv[1:] or ['ca', 'es', 'en', 'de', 'fr', 'it', 'ja']))

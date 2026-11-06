@@ -337,23 +337,5 @@
   "title": "Canta con noi!",
   "text": "Unisciti al coro delle chimere.",
   "cta": "Gioca a VENDAVAL Chimera Opera"
- },
- "why": {
-  "title": "La strada è di tutte le persone",
-  "p": [
-   "Difendiamo la strada come luogo di incontro e convivenza. Quando la musica e il circo riempiono la piazza, persone che non si conoscevano si guardano, ridono e finiscono per ballare insieme.",
-   "Giocare senza averlo previsto è una terapia collettiva, gratuita e all'aria aperta: un modo allegro di affrontare la solitudine.",
-   "E puntiamo sul colore e sull'ornamento, in un tempo in cui vestiti, mobili ed edifici diventano sempre più grigi e squadrati: usciamo vestiti di tutti i colori del mare."
-  ]
- },
- "home_order": [
-  "video",
-  "shows",
-  "why",
-  "about",
-  "agenda",
-  "workshops",
-  "contact",
-  "crew"
- ]
+ }
 }

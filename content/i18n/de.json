@@ -337,54 +337,5 @@
   "title": "Sing mit uns!",
   "text": "Komm in den Chimären-Chor.",
   "cta": "VENDAVAL Chimera Opera spielen"
- },
- "home_order": [
-  "glance",
-  "shows",
-  "agenda",
-  "workshops",
-  "video",
-  "about",
-  "contact",
-  "crew"
- ],
- "glance": {
-  "title": "Auf einen Blick",
-  "lead": "Für Veranstalter*innen: das Wichtigste in Kürze.",
-  "more": "Mappen, Rider und Fotos herunterladen",
-  "rows": [
-   [
-    "Formate",
-    "VENDAVAL Brass (Walkact mit Livemusik) · Konzert mitten im Publikum · Imaginary Friend (Stelzen-Walkact)"
-   ],
-   [
-    "Dauer",
-    "Sets à 30 Minuten, mehrere am Tag, mit 30 Minuten Pause dazwischen"
-   ],
-   [
-    "Besetzung",
-    "1 bis 8 Personen, je nach Format und Budget"
-   ],
-   [
-    "Technik",
-    "Keine Technik-Crew nötig. Akustisch; auf Wunsch mit eigenen Funkmikrofonen über die PA des Festivals"
-   ],
-   [
-    "Sprache",
-    "Ohne Text: für alle Menschen verständlich"
-   ],
-   [
-    "Workshops",
-    "Stelzen, Zirkus und Musik, am selben Tag wie die Show"
-   ],
-   [
-    "Barrierefreiheit",
-    "Taktile Führung vor jeder Show; mehr, wenn Technik vorhanden ist"
-   ],
-   [
-    "Anreise",
-    "Aus Barcelona; in Deutschland seit 2026 (Unterwegs, Sommerwerft)"
-   ]
-  ]
  }
 }

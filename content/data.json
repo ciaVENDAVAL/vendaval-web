@@ -17,7 +17,6 @@
   "de",
   "fr",
   "it",
-  "pt",
   "ja"
  ],
  "socials": [
@@ -182,7 +181,6 @@
     "de": "pdf/VENDAVAL-Brass_DE_dossier_2026-10.pdf",
     "fr": "pdf/VENDAVAL-Brass_FR_dossier_2026-10.pdf",
     "it": "pdf/VENDAVAL-Brass_IT_dossier_2026-10.pdf",
-    "pt": "pdf/VENDAVAL-Brass_PT_dossier_2026-10.pdf",
     "ja": "pdf/VENDAVAL-Brass_JA_dossier_2026-10.pdf"
    }
   },
@@ -197,7 +195,6 @@
     "de": "pdf/VENDAVAL-Brass_DE_rider_2026-10.pdf",
     "fr": "pdf/VENDAVAL-Brass_FR_rider_2026-10.pdf",
     "it": "pdf/VENDAVAL-Brass_IT_rider_2026-10.pdf",
-    "pt": "pdf/VENDAVAL-Brass_PT_rider_2026-10.pdf",
     "ja": "pdf/VENDAVAL-Brass_JA_rider_2026-10.pdf"
    }
   },
@@ -212,7 +209,6 @@
     "de": "pdf/VENDAVAL-Brass_DE_green-rider_2026-11.pdf",
     "fr": "pdf/VENDAVAL-Brass_FR_green-rider_2026-11.pdf",
     "it": "pdf/VENDAVAL-Brass_IT_green-rider_2026-11.pdf",
-    "pt": "pdf/VENDAVAL-Brass_PT_green-rider_2026-11.pdf",
     "ja": "pdf/VENDAVAL-Brass_JA_green-rider_2026-11.pdf"
    }
   },
@@ -227,7 +223,6 @@
     "de": "pdf/VENDAVAL-Brass_DE_access-rider_2026-11.pdf",
     "fr": "pdf/VENDAVAL-Brass_FR_access-rider_2026-11.pdf",
     "it": "pdf/VENDAVAL-Brass_IT_access-rider_2026-11.pdf",
-    "pt": "pdf/VENDAVAL-Brass_PT_access-rider_2026-11.pdf",
     "ja": "pdf/VENDAVAL-Brass_JA_access-rider_2026-11.pdf"
    }
   },
@@ -243,7 +238,6 @@
     "de": "pdf/VENDAVAL-Brass-Concert-Placa_DE_dossier_2026-10.pdf",
     "fr": "pdf/VENDAVAL-Brass-Concert-Placa_FR_dossier_2026-10.pdf",
     "it": "pdf/VENDAVAL-Brass-Concert-Placa_IT_dossier_2026-10.pdf",
-    "pt": "pdf/VENDAVAL-Brass-Concert-Placa_PT_dossier_2026-10.pdf",
     "ja": "pdf/VENDAVAL-Brass-Concert-Placa_JA_dossier_2026-10.pdf"
    }
   },
@@ -259,7 +253,6 @@
     "de": "pdf/VENDAVAL-Brass-Concert-Placa_DE_rider_2026-10.pdf",
     "fr": "pdf/VENDAVAL-Brass-Concert-Placa_FR_rider_2026-10.pdf",
     "it": "pdf/VENDAVAL-Brass-Concert-Placa_IT_rider_2026-10.pdf",
-    "pt": "pdf/VENDAVAL-Brass-Concert-Placa_PT_rider_2026-10.pdf",
     "ja": "pdf/VENDAVAL-Brass-Concert-Placa_JA_rider_2026-10.pdf"
    }
   },
@@ -285,7 +278,6 @@
     "de": "pdf/VENDAVAL_Imaginary-Friend_DE_dossier_2026-10.pdf",
     "fr": "pdf/VENDAVAL_Amigui-Imaginari_FR_dossier_2026-10.pdf",
     "it": "pdf/VENDAVAL_Amigui-Imaginari_IT_dossier_2026-10.pdf",
-    "pt": "pdf/VENDAVAL_Amigui-Imaginari_PT_dossier_2026-10.pdf",
     "ja": "pdf/VENDAVAL_Imaginary-Friend_JA_dossier_2026-10.pdf"
    }
   },
@@ -336,7 +328,6 @@
     "de": "pdf/VENDAVAL-Brass_DE_easy-read_2026-10.pdf",
     "fr": "pdf/VENDAVAL-Brass_FR_easy-read_2026-10.pdf",
     "it": "pdf/VENDAVAL-Brass_IT_easy-read_2026-10.pdf",
-    "pt": "pdf/VENDAVAL-Brass_PT_easy-read_2026-10.pdf",
     "ja": "pdf/VENDAVAL-Brass_JA_easy-read_2026-10.pdf"
    }
   },
@@ -351,7 +342,6 @@
     "de": "pdf/VENDAVAL_Imaginary-Friend_DE_easy-read_2026-10.pdf",
     "fr": "pdf/VENDAVAL_Amigui-Imaginari_FR_easy-read_2026-10.pdf",
     "it": "pdf/VENDAVAL_Amigui-Imaginari_IT_easy-read_2026-10.pdf",
-    "pt": "pdf/VENDAVAL_Amigui-Imaginari_PT_easy-read_2026-10.pdf",
     "ja": "pdf/VENDAVAL_Imaginary-Friend_JA_easy-read_2026-10.pdf"
    }
   },
@@ -366,7 +356,6 @@
     "de": "pdf/VENDAVAL_Stelzenworkshops_DE_easy-read_2026-10.pdf",
     "fr": "pdf/VENDAVAL_Stilts-Workshops_FR_easy-read_2026-10.pdf",
     "it": "pdf/VENDAVAL_Stilts-Workshops_IT_easy-read_2026-10.pdf",
-    "pt": "pdf/VENDAVAL_Stilts-Workshops_PT_easy-read_2026-10.pdf",
     "ja": "pdf/VENDAVAL_Stilts-Workshops_JA_easy-read_2026-10.pdf"
    }
   }
@@ -486,7 +475,6 @@
     "de": "Langzeit-Musikresidenz",
     "fr": "Résidence musicale de longue durée",
     "it": "Residenza musicale di lunga durata",
-    "pt": "Residência musical de longa duração",
     "ja": "長期音楽レジデンス"
    },
    "ws": ""
@@ -515,7 +503,6 @@
     "de": "Tanz-Masterclass „Musik in Bewegung“ · mit Dada Draženka Večerin (DE / HR)",
     "fr": "Masterclass de danse « Musique en mouvement » · avec Dada Draženka Večerin (DE / HR)",
     "it": "Masterclass di danza «Musica in movimento» · con Dada Draženka Večerin (DE / HR)",
-    "pt": "Masterclass de dança «Música em movimento» · com Dada Draženka Večerin (DE / HR)",
     "ja": "ダンス・マスタークラス「動きの中の音楽」 · 講師： Dada Draženka Večerin (DE / HR)"
    },
    "ws": ""
@@ -544,7 +531,6 @@
     "de": "Premiere",
     "fr": "Première",
     "it": "Debutto",
-    "pt": "Estreia",
     "ja": "初演"
    },
    "ws": ""
@@ -573,7 +559,6 @@
     "de": "Künstlerische Residenz",
     "fr": "Résidence artistique",
     "it": "Residenza artistica",
-    "pt": "Residência artística",
     "ja": "アーティスト・イン・レジデンス"
    },
    "ws": ""
@@ -611,7 +596,6 @@
     "de": "Sommerwerft Theater Festival, Frankfurt am Main (DE)",
     "fr": "Sommerwerft Theater Festival, Francfort-sur-le-Main (DE)",
     "it": "Sommerwerft Theater Festival, Francoforte sul Meno (DE)",
-    "pt": "Sommerwerft Theater Festival, Francoforte do Meno (DE)",
     "ja": "Sommerwerft Theater Festival, フランクフルト・アム・マイン (DE)"
    },
    "note": {
@@ -621,7 +605,6 @@
     "de": "<a href=\"{W}\">Show und Workshops</a>",
     "fr": "<a href=\"{W}\">Spectacle et ateliers</a>",
     "it": "<a href=\"{W}\">Spettacolo e laboratori</a>",
-    "pt": "<a href=\"{W}\">Espetáculo e oficinas</a>",
     "ja": "<a href=\"{W}\">公演とワークショップ</a>"
    },
    "ws": {
@@ -631,7 +614,6 @@
     "de": "Workshops: <a href=\"{W}\">Musik mit Yiflauki</a> · <a href=\"{W}\">Stelzen</a> · Make-up, Figurenentwicklung, Tanz und Konzert, gemeinsam mit dem Publikum und <a href=\"https://lasmarikarmen.com\" rel=\"noopener\" target=\"_blank\">Las Marikarmen</a>",
     "fr": "Ateliers: <a href=\"{W}\">musique avec Yiflauki</a> · <a href=\"{W}\">échasses</a> · maquillage, création de personnages, danse et concert, créés avec le public et <a href=\"https://lasmarikarmen.com\" rel=\"noopener\" target=\"_blank\">Las Marikarmen</a>",
     "it": "Laboratori: <a href=\"{W}\">musica con Yiflauki</a> · <a href=\"{W}\">trampoli</a> · trucco, creazione di personaggi, danza e concerto, creati con il pubblico e <a href=\"https://lasmarikarmen.com\" rel=\"noopener\" target=\"_blank\">Las Marikarmen</a>",
-    "pt": "Oficinas: <a href=\"{W}\">música com Yiflauki</a> · <a href=\"{W}\">andas</a> · maquilhagem, criação de personagens, dança e concerto, criados com o público e <a href=\"https://lasmarikarmen.com\" rel=\"noopener\" target=\"_blank\">Las Marikarmen</a>",
     "ja": "ワークショップ: <a href=\"{W}\">Yiflauki による音楽</a> · <a href=\"{W}\">竹馬</a> · 観客と一緒に作るメイク、キャラクター作り、ダンス、コンサート（共同： <a href=\"https://lasmarikarmen.com\" rel=\"noopener\" target=\"_blank\">Las Marikarmen</a>）"
    }
   },
@@ -649,7 +631,6 @@
     "de": "Stelzen-Walkact",
     "fr": "Déambulation sur échasses",
     "it": "Itinerante sui trampoli",
-    "pt": "Itinerante em andas",
     "ja": "竹馬の練り歩き"
    },
    "ws": ""

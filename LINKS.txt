@@ -4,7 +4,6 @@ https://vendaval.cat/dossier/brass/en
 https://vendaval.cat/dossier/brass/de
 https://vendaval.cat/dossier/brass/fr
 https://vendaval.cat/dossier/brass/it
-https://vendaval.cat/dossier/brass/pt
 https://vendaval.cat/dossier/brass/ja
 https://vendaval.cat/dossier/brass  (opens in the reader's language)
 https://vendaval.cat/rider/brass/ca
@@ -13,7 +12,6 @@ https://vendaval.cat/rider/brass/en
 https://vendaval.cat/rider/brass/de
 https://vendaval.cat/rider/brass/fr
 https://vendaval.cat/rider/brass/it
-https://vendaval.cat/rider/brass/pt
 https://vendaval.cat/rider/brass/ja
 https://vendaval.cat/rider/brass  (opens in the reader's language)
 https://vendaval.cat/rider/brass-green/ca
@@ -22,7 +20,6 @@ https://vendaval.cat/rider/brass-green/en
 https://vendaval.cat/rider/brass-green/de
 https://vendaval.cat/rider/brass-green/fr
 https://vendaval.cat/rider/brass-green/it
-https://vendaval.cat/rider/brass-green/pt
 https://vendaval.cat/rider/brass-green/ja
 https://vendaval.cat/rider/brass-green  (opens in the reader's language)
 https://vendaval.cat/rider/brass-access/ca
@@ -31,7 +28,6 @@ https://vendaval.cat/rider/brass-access/en
 https://vendaval.cat/rider/brass-access/de
 https://vendaval.cat/rider/brass-access/fr
 https://vendaval.cat/rider/brass-access/it
-https://vendaval.cat/rider/brass-access/pt
 https://vendaval.cat/rider/brass-access/ja
 https://vendaval.cat/rider/brass-access  (opens in the reader's language)
 https://vendaval.cat/dossier/brass-concert/ca
@@ -40,7 +36,6 @@ https://vendaval.cat/dossier/brass-concert/en
 https://vendaval.cat/dossier/brass-concert/de
 https://vendaval.cat/dossier/brass-concert/fr
 https://vendaval.cat/dossier/brass-concert/it
-https://vendaval.cat/dossier/brass-concert/pt
 https://vendaval.cat/dossier/brass-concert/ja
 https://vendaval.cat/dossier/brass-concert  (opens in the reader's language)
 https://vendaval.cat/rider/brass-concert/ca
@@ -49,7 +44,6 @@ https://vendaval.cat/rider/brass-concert/en
 https://vendaval.cat/rider/brass-concert/de
 https://vendaval.cat/rider/brass-concert/fr
 https://vendaval.cat/rider/brass-concert/it
-https://vendaval.cat/rider/brass-concert/pt
 https://vendaval.cat/rider/brass-concert/ja
 https://vendaval.cat/rider/brass-concert  (opens in the reader's language)
 https://vendaval.cat/dossier/el-joc-etern/ca
@@ -62,7 +56,6 @@ https://vendaval.cat/dossier/imaginary-friend/en
 https://vendaval.cat/dossier/imaginary-friend/de
 https://vendaval.cat/dossier/imaginary-friend/fr
 https://vendaval.cat/dossier/imaginary-friend/it
-https://vendaval.cat/dossier/imaginary-friend/pt
 https://vendaval.cat/dossier/imaginary-friend/ja
 https://vendaval.cat/dossier/imaginary-friend  (opens in the reader's language)
 https://vendaval.cat/rider/imaginary-friend/ca
@@ -84,7 +77,6 @@ https://vendaval.cat/dossier/brass-easy/en
 https://vendaval.cat/dossier/brass-easy/de
 https://vendaval.cat/dossier/brass-easy/fr
 https://vendaval.cat/dossier/brass-easy/it
-https://vendaval.cat/dossier/brass-easy/pt
 https://vendaval.cat/dossier/brass-easy/ja
 https://vendaval.cat/dossier/brass-easy  (opens in the reader's language)
 https://vendaval.cat/dossier/friend-easy/ca
@@ -93,7 +85,6 @@ https://vendaval.cat/dossier/friend-easy/en
 https://vendaval.cat/dossier/friend-easy/de
 https://vendaval.cat/dossier/friend-easy/fr
 https://vendaval.cat/dossier/friend-easy/it
-https://vendaval.cat/dossier/friend-easy/pt
 https://vendaval.cat/dossier/friend-easy/ja
 https://vendaval.cat/dossier/friend-easy  (opens in the reader's language)
 https://vendaval.cat/dossier/stilts-easy/ca
@@ -102,6 +93,5 @@ https://vendaval.cat/dossier/stilts-easy/en
 https://vendaval.cat/dossier/stilts-easy/de
 https://vendaval.cat/dossier/stilts-easy/fr
 https://vendaval.cat/dossier/stilts-easy/it
-https://vendaval.cat/dossier/stilts-easy/pt
 https://vendaval.cat/dossier/stilts-easy/ja
 https://vendaval.cat/dossier/stilts-easy  (opens in the reader's language)

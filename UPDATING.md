@@ -10,7 +10,7 @@ Goal: one change → every language, every PDF and the website say the same thin
 ## 2. Find every place that uses it
 `python3 tools/check.py --find "old text"` lists every PDF and web page that contains it, in all languages.
 
-## 3. Change the sources, in all 8 languages at once
+## 3. Change the sources, in all 7 languages at once
 | What | Where |
 |---|---|
 | Website texts | `content/i18n/<lang>.json` (ca es en de fr it pt ja) |
@@ -44,7 +44,7 @@ python3 tools/check.py                      # writes CHECK-REPORT.md
 - VENDAVAL always in capitals, also in displayed addresses (www.VENDAVAL.cat, VENDAVAL@anartist.org); tyle fernández always lowercase.
 - Performers are not called clowns (clown/pallasso/payaso…). Clown is fine as a discipline or skill (workshops, artist skills, lists like "stilts, unicycle, clown") and in "Pallassos sense Fronteres"; the checker allows those.
 - Catalan: no "walkact", no "tothom".
-- Frankfurt am Main in each language: Frankfurt del Main (CA), Fráncfort del Meno (ES), Francfort-sur-le-Main (FR), Francoforte sul Meno (IT), Francoforte do Meno (PT), Frankfurt am Main (EN, DE), フランクフルト (JA).
+- Frankfurt am Main in each language: Frankfurt del Main (CA), Fráncfort del Meno (ES), Francfort-sur-le-Main (FR), Francoforte sul Meno (IT), Frankfurt am Main (EN, DE), フランクフルト (JA).
 - Name spellings: see `names` in `content/facts.json`.
 - Prices never on the website or in public PDFs.
 - Dossiers short, website long.
