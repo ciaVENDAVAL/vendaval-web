@@ -199,7 +199,7 @@ def render():
     # root: pick the visitor's language
     codes = json.dumps(langs)
     (OUT/'index.html').write_text(f'''<!doctype html><html lang="ca"><meta charset="utf-8"><title>Cia. VENDAVAL</title>
-<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="favicon.ico" sizes="any"><link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="favicon.ico" sizes="any"><link rel="apple-touch-icon" href="img/apple-touch-icon.png"><link rel="me" href="https://social.anartist.org/@bicialta">
 <meta property="og:title" content="Cia. VENDAVAL"><meta property="og:image" content="{SITE_URL}/og/photo-{data['hero_slides'][0]['image']}.jpg">
 <script>var L={codes},n=(navigator.languages||[navigator.language||"ca"]).map(function(x){{return x.slice(0,2).toLowerCase()}}),k=n.find(function(x){{return L.indexOf(x)>=0}})||"{data['site']['default_lang']}";location.replace(k+"/");</script>
 <p>{' · '.join(f'<a href="{l}/">{i18n[l]["lang_name"]}</a>' for l in langs)}</p></html>

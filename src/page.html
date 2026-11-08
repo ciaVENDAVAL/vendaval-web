@@ -44,6 +44,7 @@
   <nav id="nav" aria-label="{{ t.nav.menu }}">
     <ul>
       {% for k, u in [('about', H ~ '#about'), ('shows', H ~ '#shows'), ('workshops', H ~ 'workshops/'), ('agenda', H ~ 'agenda/'), ('artists', H ~ 'artists/'), ('downloads', H ~ 'downloads/'), ('crew', H ~ 'crew/'), ('contact', H ~ '#contact')] %}<li><a href="{{ u }}"{% if page == k %} aria-current="page"{% endif %}>{{ t.nav[k] }}</a></li>{% endfor %}
+      <li><a rel="me" href="https://social.anartist.org/@bicialta">Mastodon</a></li>
     </ul>
   </nav>
 </header>
