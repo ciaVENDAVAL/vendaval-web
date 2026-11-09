@@ -28,7 +28,7 @@ El monociclo es una bicicleta de 1 rueda.
 - En la calle o en una plaza.
 - De día o de noche.
 - Cada actuación dura 30 minutos.
-- Entre actuaciones descansamos 30 minutos.
+- Entre actuaciones descansamos 10 minutos.
 - No hacen falta técnicos.
 - Si llueve, no podemos tocar. Podemos tocar más tarde o otro día.
 

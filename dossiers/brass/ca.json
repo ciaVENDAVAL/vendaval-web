@@ -59,7 +59,7 @@
  "glance_list": [
   "Itinerant acústic de carrer",
   "Per a tots els públics, de dia o de nit",
-  "Passis de 30 minuts, diversos al dia, amb 30 minuts de pausa entre passis",
+  "Passis de 30 minuts, fins a tres al dia, amb 10 minuts de pausa entre passis",
   "6 músics: 3 saxos, trompeta, sousàfon i percussió",
   "2 artistes de circ: xanques, monocicle, malabars i jocs",
   "Sense necessitat de tècnics"
@@ -92,7 +92,7 @@
  "tech": [
   [
    "DURADA",
-   "Passis de 30 minuts, diversos al dia, sempre amb 30 minuts de pausa entre passis."
+   "Passis de 30 minuts, fins a tres al dia, sempre amb 10 minuts de pausa entre passis."
   ],
   [
    "ESPAI I RECORREGUT",
@@ -104,7 +104,7 @@
   ],
   [
    "SO",
-   "Itinerant: acústic, sense amplificació. Format amplificat a la plaça (Concert enmig del públic): la companyia porta 8 micròfons sense fils; PA de l'organització."
+   "A) Itinerant acústic: sense amplificació.\nB) Amplificat a la plaça (Concert enmig del públic): la companyia porta 8 micròfons sense fils; PA de l'organització."
   ],
   [
    "IL·LUMINACIÓ",
@@ -116,11 +116,11 @@
   ],
   [
    "LOGÍSTICA",
-   "Pàrquing per a 2 vehicles. Vestidor per a 8 persones amb taules per maquillar-se (la companyia pot portar miralls i llums)."
+   "Pàrquing per a 1 vehicle. Vestidor per a 8 persones amb taules per maquillar-se (la companyia pot portar miralls i llums)."
   ],
   [
    "ÀPATS",
-   "2 sense carn (peix, ous i làctics, sí) i 6 sense dieta específica."
+   "2 sense carn (pot incloure peix, ous i làctics), 6 sense dieta específica."
   ]
  ],
  "tech_note": "La companyia aporta tot el material escènic: xanques, monocicle, malabars, instruments, atrezzo per als jocs, maquillatge i vestuari.",
@@ -211,7 +211,7 @@
  "info_h": "Necessitats tècniques i accessibilitat",
  "tech_short": "En acústic al carrer: sense electricitat, escenari ni tècnics; unes 2 h de muntatge el mateix dia i un camerino per a 8 persones.",
  "see_tech": "Tots els detalls a la fitxa tècnica:",
- "access_short": "Visita tàctil sempre inclosa a petició; versió relaxada, audiodescripció, bucles magnètics i llengua de signes a petició, preparats amb l'espai.",
+ "access_short": "A petició: visita tàctil, versió relaxada, audiodescripció, bucles magnètics i llengua de signes, preparats conjuntament amb l'organització.",
  "see_access": "Tots els detalls al rider d'accessibilitat:",
  "tech_lab": "Tècnica"
 }

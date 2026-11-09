@@ -28,7 +28,7 @@ Un monocycle est un vélo à 1 roue.
 - Dans la rue ou sur une place.
 - Le jour ou la nuit.
 - Chaque passage dure 30 minutes.
-- Entre 2 passages, nous faisons une pause de 30 minutes.
+- Entre 2 passages, nous faisons une pause de 10 minutes.
 - Pas besoin de technicien.
 - Sous la pluie, nous ne pouvons pas jouer. Nous jouons plus tard ou un autre jour.
 

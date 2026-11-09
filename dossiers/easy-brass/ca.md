@@ -28,7 +28,7 @@ El monocicle és una bicicleta d'1 roda.
 - Al carrer o en una plaça.
 - De dia o de nit.
 - Cada actuació dura 30 minuts.
-- Entre actuacions descansem 30 minuts.
+- Entre actuacions descansem 10 minuts.
 - No calen tècnics.
 - Si plou, no podem tocar. Podem tocar més tard o un altre dia.
 

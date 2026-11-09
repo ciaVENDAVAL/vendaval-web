@@ -59,7 +59,7 @@
  "glance_list": [
   "Akustischer Walkact mit Livemusik",
   "Für alle Altersgruppen, bei Tag und Nacht",
-  "Durchgänge von 30 Minuten, mehrere am Tag, mit 30 Minuten Pause dazwischen",
+  "Durchgänge von 30 Minuten, bis zu dreimal am Tag, mit 10 Minuten Pause dazwischen",
   "6 Musiker*innen: 3 Saxophone, Trompete, Sousaphon und Perkussion",
   "2 Zirkusartist*innen: Stelzen, Einrad, Jonglage und Spiele",
   "Ohne Technik"
@@ -78,7 +78,7 @@
  "access_note": "Verfügt die Veranstaltung über eigene barrierefreie Ausstattung, passt die Kompanie das Stück gemeinsam damit an. Die künstlerische Leitung ist in inklusivem Zirkus ausgebildet (Ateneu Popular 9 Barris, 2026) und arbeitet mit dem DUCS (Universelles Design für sozialen Zirkus).",
  "tech_kicker": "TECHNISCHER RIDER",
  "updated": "STAND OKTOBER 2026",
- "tech_title": "Alles, was Sie wissen müssen",
+ "tech_title": "Alles, was zu wissen ist",
  "getin": [
   [
    "AUFBAU · CA. 2 STD., AM SELBEN TAG",
@@ -92,7 +92,7 @@
  "tech": [
   [
    "DAUER",
-   "Durchgänge von 30 Minuten, mehrere am Tag, immer mit 30 Minuten Pause dazwischen."
+   "Durchgänge von 30 Minuten, bis zu dreimal am Tag, immer mit 10 Minuten Pause dazwischen."
   ],
   [
    "FLÄCHE UND ROUTE",
@@ -104,7 +104,7 @@
   ],
   [
    "TON",
-   "Walkact: akustisch, ohne Verstärkung. Verstärkt auf dem Platz (Konzert mitten im Publikum): Die Kompanie bringt 8 Funkmikrofone mit; PA der Veranstaltung."
+   "A) Akustischer Walkact: ohne Verstärkung.\nB) Verstärkt auf dem Platz (Konzert mitten im Publikum): Die Kompanie bringt 8 Funkmikrofone mit; PA der Veranstaltung."
   ],
   [
    "LICHT",
@@ -116,11 +116,11 @@
   ],
   [
    "LOGISTIK",
-   "Parkplatz für 2 Fahrzeuge. Garderobe für 8 Personen mit Schminktischen (Spiegel und Licht kann die Kompanie mitbringen)."
+   "Parkplatz für 1 Fahrzeug. Garderobe für 8 Personen mit Schminktischen (Spiegel und Licht kann die Kompanie mitbringen)."
   ],
   [
    "VERPFLEGUNG",
-   "2 ohne Fleisch (Fisch, Eier und Milchprodukte ja) und 6 ohne besondere Ernährung."
+   "2 ohne Fleisch (kann Fisch, Eier und Milchprodukte enthalten), 6 ohne besondere Ernährung."
   ]
  ],
  "tech_note": "Die Kompanie bringt das gesamte Material mit: Stelzen, Einrad, Jonglierrequisiten, Instrumente, Spielrequisiten, Schminke und Kleidung.",
@@ -211,7 +211,7 @@
  "info_h": "Technik und Barrierefreiheit",
  "tech_short": "Auf der Straße rein akustisch: kein Strom, keine Bühne, keine Technik-Crew; etwa 2 Std. Aufbau am Spieltag und eine Garderobe für 8 Personen.",
  "see_tech": "Alle Details im technischen Rider:",
- "access_short": "Tastführung auf Anfrage immer inklusive; entspannte Version, Audiodeskription, Induktionsschleifen und Gebärdensprache auf Anfrage, gemeinsam mit den Veranstaltenden vorbereitet.",
+ "access_short": "Auf Anfrage: Tastführung, entspannte Version, Audiodeskription, Induktionsschleifen und Gebärdensprache möglich, gemeinsam mit den Veranstaltenden vorzubereiten.",
  "see_access": "Alle Details im Access Rider:",
  "tech_lab": "Technik"
 }

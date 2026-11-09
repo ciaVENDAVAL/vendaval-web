@@ -59,7 +59,7 @@
  "glance_list": [
   "Pasacalles acústico",
   "Para todos los públicos, de día o de noche",
-  "Pases de 30 minutos, varios al día, con 30 minutos de pausa entre pases",
+  "Pases de 30 minutos, hasta tres al día, con 10 minutos de pausa entre pases",
   "6 músicos: 3 saxos, trompeta, sousáfono y percusión",
   "2 artistas de circo: zancos, monociclo, malabares y juegos",
   "Sin necesidad de técnicos"
@@ -92,7 +92,7 @@
  "tech": [
   [
    "DURACIÓN",
-   "Pases de 30 minutos, varios al día, siempre con 30 minutos de pausa entre pases."
+   "Pases de 30 minutos, hasta tres al día, siempre con 10 minutos de pausa entre pases."
   ],
   [
    "ESPACIO Y RECORRIDO",
@@ -104,7 +104,7 @@
   ],
   [
    "SONIDO",
-   "Pasacalles: acústico, sin amplificación. Formato amplificado en la plaza (Concierto entre el público): la compañía trae 8 micrófonos inalámbricos; PA de la organización."
+   "A) Pasacalles acústico: sin amplificación.\nB) Amplificado en la plaza (Concierto entre el público): la compañía trae 8 micrófonos inalámbricos; PA de la organización."
   ],
   [
    "ILUMINACIÓN",
@@ -116,11 +116,11 @@
   ],
   [
    "LOGÍSTICA",
-   "Aparcamiento para 2 vehículos. Camerino para 8 personas con mesas para maquillarse (la compañía puede traer espejos y luces)."
+   "Aparcamiento para 1 vehículo. Camerino para 8 personas con mesas para maquillarse (la compañía puede traer espejos y luces)."
   ],
   [
    "COMIDAS",
-   "2 sin carne (pescado, huevos y lácteos, sí) y 6 sin dieta específica."
+   "2 sin carne (puede incluir pescado, huevos y lácteos), 6 sin dieta específica."
   ]
  ],
  "tech_note": "La compañía aporta todo el material escénico: zancos, monociclo, malabares, instrumentos, atrezo para los juegos, maquillaje y vestuario.",
@@ -211,7 +211,7 @@
  "info_h": "Necesidades técnicas y accesibilidad",
  "tech_short": "En acústico en la calle: sin electricidad, escenario ni técnicos; unas 2 h de montaje el mismo día y un camerino para 8 personas.",
  "see_tech": "Todos los detalles en la ficha técnica:",
- "access_short": "Visita táctil siempre incluida a petición; versión relajada, audiodescripción, bucles magnéticos y lengua de signos a petición, preparados con el espacio.",
+ "access_short": "A petición: visita táctil, versión relajada, audiodescripción, bucles magnéticos y lengua de signos, preparados junto con la organización.",
  "see_access": "Todos los detalles en el rider de accesibilidad:",
  "tech_lab": "Técnica"
 }

@@ -29,7 +29,7 @@ Ein Einrad ist ein Fahrrad mit 1 Rad.
 - Auf der Straße oder auf einem Platz.
 - Am Tag oder in der Nacht.
 - Eine Show dauert 30 Minuten.
-- Zwischen 2 Shows machen wir 30 Minuten Pause.
+- Zwischen 2 Shows machen wir 10 Minuten Pause.
 - Wir brauchen keine Technik-Leute.
 - Bei Regen können wir nicht spielen. Dann spielen wir später oder an einem anderen Tag.
 

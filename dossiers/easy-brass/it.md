@@ -28,7 +28,7 @@ Il monociclo è una bicicletta con 1 ruota.
 - In strada o in piazza.
 - Di giorno o di notte.
 - Ogni replica dura 30 minuti.
-- Tra 2 repliche facciamo una pausa di 30 minuti.
+- Tra 2 repliche facciamo una pausa di 10 minuti.
 - Non servono tecnici.
 - Con la pioggia non possiamo suonare. Suoniamo più tardi o un altro giorno.
 

@@ -28,7 +28,7 @@ A unicycle is a bike with 1 wheel.
 - In a street or a square.
 - By day or at night.
 - Each show lasts 30 minutes.
-- We rest for 30 minutes between shows.
+- We rest for 10 minutes between shows.
 - No technicians needed.
 - We cannot play in the rain. We can play later or on another day.
 

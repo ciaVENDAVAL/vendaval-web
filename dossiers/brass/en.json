@@ -59,7 +59,7 @@
  "glance_list": [
   "Acoustic roaming street show",
   "All ages, day or night",
-  "30-minute sets, several a day, with a 30-minute break between sets",
+  "30-minute sets, up to three a day, with a 10-minute break between sets",
   "6 musicians: 3 saxophones, trumpet, sousaphone and percussion",
   "2 circus artists: stilts, unicycle, juggling and games",
   "No technicians needed"
@@ -92,7 +92,7 @@
  "tech": [
   [
    "DURATION",
-   "30-minute sets, several a day, always with a 30-minute break between sets."
+   "30-minute sets, up to three a day, always with a 10-minute break between sets."
   ],
   [
    "SPACE AND ROUTE",
@@ -104,7 +104,7 @@
   ],
   [
    "SOUND",
-   "Roaming: acoustic, no amplification. Amplified format on the square (Concert in the audience): the company brings 8 wireless mics; the host's PA."
+   "A) Acoustic roaming show: no amplification.\nB) Amplified on the square (Concert in the audience): the company brings 8 wireless mics; the host's PA."
   ],
   [
    "LIGHTING",
@@ -116,11 +116,11 @@
   ],
   [
    "LOGISTICS",
-   "Parking for 2 vehicles. Dressing room for 8 people with make-up tables (the company can bring mirrors and lights)."
+   "Parking for 1 vehicle. Dressing room for 8 people with make-up tables (the company can bring mirrors and lights)."
   ],
   [
    "MEALS",
-   "2 meat-free (fish, eggs and dairy are fine) and 6 with no restrictions."
+   "2 meat-free (may include fish, eggs and dairy), 6 with no restrictions."
   ]
  ],
  "tech_note": "The company brings all stage material: stilts, unicycle, juggling props, instruments, game props, make-up and costumes.",
@@ -211,7 +211,7 @@
  "info_h": "Technical needs and accessibility",
  "tech_short": "Fully acoustic in the street: no power, no stage and no technicians; about 2 h get-in on the day and a dressing room for 8.",
  "see_tech": "All details in the technical rider:",
- "access_short": "Touch Tour always included on request; relaxed version, audio description, hearing loops and sign language on request, prepared together with the venue.",
+ "access_short": "On request: Touch Tour, relaxed version, audio description, hearing loops and sign language, prepared together with the organisers.",
  "see_access": "All details in the access rider:",
  "tech_lab": "Technical needs"
 }

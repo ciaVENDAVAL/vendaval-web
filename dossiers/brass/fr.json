@@ -59,7 +59,7 @@
  "glance_list": [
   "Déambulation acoustique de rue",
   "Tout public, de jour comme de nuit",
-  "Passages de 30 minutes, plusieurs par jour, avec 30 minutes de pause entre les passages",
+  "Passages de 30 minutes, jusqu'à trois par jour, avec 10 minutes de pause entre les passages",
   "6 musicien·nes : 3 saxophones, trompette, soubassophone et percussions",
   "2 artistes de cirque : échasses, monocycle, jonglage et jeux",
   "Aucun technicien nécessaire"
@@ -92,7 +92,7 @@
  "tech": [
   [
    "DURÉE",
-   "Passages de 30 minutes, plusieurs par jour, toujours avec 30 minutes de pause entre les passages."
+   "Passages de 30 minutes, jusqu'à trois par jour, toujours avec 10 minutes de pause entre les passages."
   ],
   [
    "ESPACE ET PARCOURS",
@@ -104,7 +104,7 @@
   ],
   [
    "SON",
-   "Déambulation : acoustique, sans amplification. Version amplifiée sur la place (Concert au milieu du public) : la compagnie apporte 8 micros sans fil ; sonorisation de l'organisation."
+   "A) Déambulation acoustique : sans amplification.\nB) Amplifiée sur la place (Concert au milieu du public) : la compagnie apporte 8 micros sans fil ; sonorisation de l'organisation."
   ],
   [
    "LUMIÈRE",
@@ -116,11 +116,11 @@
   ],
   [
    "LOGISTIQUE",
-   "Stationnement pour 2 véhicules. Loge pour 8 personnes avec tables de maquillage (la compagnie peut apporter miroirs et lumières)."
+   "Stationnement pour 1 véhicule. Loge pour 8 personnes avec tables de maquillage (la compagnie peut apporter miroirs et lumières)."
   ],
   [
    "REPAS",
-   "2 sans viande (poisson, œufs et laitages, oui) et 6 sans régime particulier."
+   "2 sans viande (peut contenir poisson, œufs et produits laitiers), 6 sans régime particulier."
   ]
  ],
  "tech_note": "La compagnie apporte tout le matériel : échasses, monocycle, accessoires de jonglage, instruments, accessoires de jeu, maquillage et costumes.",
@@ -211,7 +211,7 @@
  "info_h": "Besoins techniques et accessibilité",
  "tech_short": "En acoustique dans la rue : ni électricité, ni scène, ni techniciens ; environ 2 h d'installation le jour même et une loge pour 8 personnes.",
  "see_tech": "Tous les détails dans la fiche technique :",
- "access_short": "Visite tactile toujours incluse sur demande ; version relax, audiodescription, boucles magnétiques et langue des signes sur demande, préparées avec le lieu.",
+ "access_short": "Sur demande : visite tactile, version relax, audiodescription, boucles magnétiques et langue des signes, préparées avec l'organisation.",
  "see_access": "Tous les détails dans la fiche accessibilité :",
  "tech_lab": "Technique"
 }

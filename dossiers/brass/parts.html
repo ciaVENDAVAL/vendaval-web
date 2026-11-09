@@ -47,7 +47,7 @@
       {% for h, x in t.getin %}<div style="display:flex;flex-direction:column;gap:6px"><span class="lab" style="font-size:13.5px;letter-spacing:2px;color:#EBA53B">{{ h }}</span><span style="font-size:13.5px;line-height:1.45">{{ x }}</span></div>{% endfor %}
     </div>
     <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px">
-      {% for h, x in t.tech %}<div style="background:#FFFFFF;padding:14px 17px;display:flex;flex-direction:column;gap:5px"><span class="lab" style="font-size:14.5px;letter-spacing:2px;color:#0F2C40">{{ h }}</span><span style="font-size:13.5px;line-height:1.42">{{ x }}</span></div>{% endfor %}
+      {% for h, x in t.tech %}<div style="background:#FFFFFF;padding:14px 17px;display:flex;flex-direction:column;gap:5px"><span class="lab" style="font-size:14.5px;letter-spacing:2px;color:#0F2C40">{{ h }}</span><span style="font-size:13.5px;line-height:1.42">{{ x|e|replace("\n", "<br>"|safe) }}</span></div>{% endfor %}
     </div>
     <p style="font-size:13px;line-height:1.5;color:#3A4A55">{{ t.tech_note }}</p>
   </div>
