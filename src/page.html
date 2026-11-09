@@ -27,6 +27,7 @@
 <link rel="manifest" href="{{ R }}site.webmanifest">
 <link rel="preload" href="{{ R }}fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{{ R }}assets/style.css?v={{ version }}">
+  <link rel="me" href="https://social.anartist.org/@bicialta">
 </head>
 <body>
 <span id="top"></span>
@@ -44,7 +45,6 @@
   <nav id="nav" aria-label="{{ t.nav.menu }}">
     <ul>
       {% for k, u in [('about', H ~ '#about'), ('shows', H ~ '#shows'), ('workshops', H ~ 'workshops/'), ('agenda', H ~ 'agenda/'), ('artists', H ~ 'artists/'), ('downloads', H ~ 'downloads/'), ('crew', H ~ 'crew/'), ('contact', H ~ '#contact')] %}<li><a href="{{ u }}"{% if page == k %} aria-current="page"{% endif %}>{{ t.nav[k] }}</a></li>{% endfor %}
-      <li><a rel="me" href="https://social.anartist.org/@bicialta">Mastodon</a></li>
     </ul>
   </nav>
 </header>
