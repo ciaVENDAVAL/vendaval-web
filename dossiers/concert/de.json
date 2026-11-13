@@ -10,7 +10,7 @@
   ],
   [
    "30′",
-   "MEHRERE DURCHGÄNGE"
+   "MAX. 2 DURCHGÄNGE"
   ],
   [
    "8",
@@ -30,7 +30,7 @@
  "box_h": "Gemacht für Musikfestivals",
  "box": [
   "Ideal für Umbaupausen: Das Publikum bleibt, spielt und tanzt, während die nächste Band aufbaut.",
-  "30 Minuten, mehrere Durchgänge am Tag. Für jedes Alter, tagsüber oder abends.",
+  "30 Minuten, höchstens 2 Durchgänge am Tag. Für jedes Alter, tagsüber oder abends.",
   "Auf dem Platz vor der Bühne; die Band kann auf die Bühne gehen. Die Stelzenfigur bleibt immer im Publikum, außer die Bühne ist nicht erhöht.",
   "6 Musiker*innen (3 Saxophone, Trompete, Sousaphon, Perkussion) und 2 Zirkusartist*innen (Stelzen, Einrad, Jonglage, Spiele).",
   "Verstärkt: 8 Funkmikrofone (6 Instrumente, 2 Stimmen) über die PA des Festivals, oder rein akustisch, ohne Mikrofone.",
@@ -59,8 +59,8 @@
  ],
  "acc_kick": "Für alle Körper und Köpfe",
  "acc_h": "Barrierefreiheit",
- "acc_p": "Tastführung auf Anfrage immer inklusive; in diesem verstärkten Format auch Audiodeskription, Induktionsschleifen, Vibrationsrucksäcke, Gebärdensprache und eine entspannte Version, gemeinsam mit den Veranstaltenden vorbereitet.",
- "alw_h": "Immer möglich",
+ "acc_p": "Tastführung auf Anfrage; in diesem verstärkten Format auch Audiodeskription, Induktionsschleifen, Vibrationsrucksäcke, Gebärdensprache und eine entspannte Version, gemeinsam mit den Veranstaltenden vorbereitet.",
+ "alw_h": "Auf Anfrage",
  "alw": [
   "Tastführung"
  ],
@@ -156,7 +156,7 @@
   ],
   [
    "30′",
-   "MEHRERE DURCHGÄNGE"
+   "MAX. 2 DURCHGÄNGE"
   ],
   [
    "0–1",
@@ -236,10 +236,10 @@
    "10′"
   ]
  ],
- "sets": "<b>Durchgänge:</b> je 30 Minuten, mehrere über den Tag verteilt. Immer 10 Minuten Pause zwischen den Durchgängen.",
+ "sets": "<b>Durchgänge:</b> je 30 Minuten, höchstens 2 am Tag, mit höchstens 1 Stunde Pause dazwischen (ideal für die Umbaupausen zwischen den Bands).",
  "s5": "Bei Regen kann die Band wegen der Instrumente und Mikrofone nicht draußen spielen. Die Compagnie kann warten, bis es aufhört, und später oder an einem anderen Tag spielen. Nasser Boden ist kein Problem. Alternative: eine große Halle mit mindestens 5 m Höhe.",
- "s6": "<b>Parken:</b> Platz für 1 Fahrzeug.<br><b>Garderobe:</b> Raum für 8 Personen mit Tischen zum Schminken und Umziehen. Die Compagnie kann Spiegel und Licht mitbringen.<br><b>Verpflegung:</b> 2 × ohne Fleisch (Fisch, Eier und Milchprodukte sind okay) · 6 × ohne besondere Ernährung.",
- "s7": "Tastführung auf Anfrage immer inklusive; in diesem verstärkten Format auch Audiodeskription, Induktionsschleifen, Vibrationsrucksäcke, Gebärdensprache und eine entspannte Version, gemeinsam mit den Veranstaltenden vorbereitet.",
+ "s6": "<b>Parken:</b> Platz für 2 Autos; reist die Compagnie mit dem Flugzeug, wird der Transport vor Ort mit den Veranstaltenden abgesprochen.<br><b>Garderobe:</b> Raum für 8 Personen mit Tischen zum Schminken und Umziehen. Die Compagnie kann Spiegel und Licht mitbringen.<br><b>Verpflegung:</b> 2 × ohne Fleisch (Fisch, Eier und Milchprodukte sind okay) · 6 × ohne besondere Ernährung.",
+ "s7": "Tastführung auf Anfrage; in diesem verstärkten Format auch Audiodeskription, Induktionsschleifen, Vibrationsrucksäcke, Gebärdensprache und eine entspannte Version, gemeinsam mit den Veranstaltenden vorbereitet.",
  "r_role": "Leitung · Booking",
  "foot_r": "TECHNISCHER RIDER · KONZERT MITTEN IM PUBLIKUM",
  "see_access": "Alle Details im Access Rider:",

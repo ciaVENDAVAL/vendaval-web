@@ -10,7 +10,7 @@
   ],
   [
    "30′",
-   "SEVERAL SETS"
+   "MAX. 2 SETS"
   ],
   [
    "8",
@@ -30,7 +30,7 @@
  "box_h": "Made for music festivals",
  "box": [
   "Built for stage changeovers: the audience stays, plays and dances while the next band sets up.",
-  "30 minutes, several sets a day. For all ages, day or night.",
+  "30 minutes, maximum 2 sets a day. For all ages, day or night.",
   "On the square in front of the stage; the band can go up on stage. The stilt-walker always stays in the crowd, unless the stage is low.",
   "6 musicians (3 saxophones, trumpet, sousaphone, percussion) and 2 circus artists (stilts, unicycle, juggling, games).",
   "Amplified: 8 wireless mics (6 instrument, 2 voice) into the festival PA, or fully acoustic, without mics.",
@@ -59,10 +59,10 @@
  ],
  "acc_kick": "For all bodies and minds",
  "acc_h": "Accessibility",
- "acc_p": "Touch Tour always included on request; in this amplified format also audio description, hearing loops, vibrating backpacks, sign language and a relaxed version, prepared together with the venue.",
- "alw_h": "Always possible",
+ "acc_p": "Touch Tour on request; in this amplified format also audio description, hearing loops, vibrating backpacks, sign language and a relaxed version, prepared together with the venue.",
+ "alw_h": "On request",
  "alw": [
-  "Tactile visit"
+  "Touch Tour"
  ],
  "ifq_h": "If equipment is available",
  "ifq": [
@@ -156,7 +156,7 @@
   ],
   [
    "30′",
-   "SEVERAL SETS"
+   "MAX. 2 SETS"
   ],
   [
    "0–1",
@@ -236,10 +236,10 @@
    "10′"
   ]
  ],
- "sets": "<b>Sets:</b> 30 minutes each, several during the day. Always a 10-minute break between sets.",
+ "sets": "<b>Sets:</b> 30 minutes each, maximum 2 a day, with a break of up to 1 hour between sets (ideal for the stage changeovers between bands).",
  "s5": "The band can't play outdoors in the rain, because of the instruments and microphones. The company can wait for it to stop and play later or another day. Wet ground is fine. Alternative: a large hall at least 5 m high.",
- "s6": "<b>Parking:</b> space for 1 vehicle.<br><b>Dressing room:</b> space for 8 people with tables for make-up and changing. The company can bring mirrors and lights.<br><b>Meals:</b> 2 meat-free (fish, eggs and dairy are fine) · 6 with no dietary requirements.",
- "s7": "Touch Tour always included on request; in this amplified format also audio description, hearing loops, vibrating backpacks, sign language and a relaxed version, prepared together with the venue.",
+ "s6": "<b>Parking:</b> space for 2 cars; if the company flies, local transport to be agreed with the venue.<br><b>Dressing room:</b> space for 8 people with tables for make-up and changing. The company can bring mirrors and lights.<br><b>Meals:</b> 2 meat-free (fish, eggs and dairy are fine) · 6 with no dietary requirements.",
+ "s7": "Touch Tour on request; in this amplified format also audio description, hearing loops, vibrating backpacks, sign language and a relaxed version, prepared together with the venue.",
  "r_role": "direction · booking",
  "foot_r": "TECHNICAL RIDER · CONCERT IN THE AUDIENCE",
  "see_access": "All details in the access rider:",

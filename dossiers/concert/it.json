@@ -10,7 +10,7 @@
   ],
   [
    "30′",
-   "PIÙ REPLICHE"
+   "MAX. 2 REPLICHE"
   ],
   [
    "8",
@@ -30,7 +30,7 @@
  "box_h": "Pensato per i festival musicali",
  "box": [
   "Per i cambi palco: il pubblico resta, gioca e balla mentre il gruppo successivo si prepara.",
-  "30 minuti, più repliche al giorno. Per tutte le età, di giorno o di sera.",
+  "30 minuti, massimo 2 repliche al giorno. Per tutte le età, di giorno o di sera.",
   "In piazza, davanti al palco; la banda può salirci. Il personaggio sui trampoli resta sempre tra il pubblico, a meno che il palco non sia rialzato.",
   "6 musicisti (3 sassofoni, tromba, sousafono, percussioni) e 2 artisti di circo (trampoli, monociclo, giocoleria, giochi).",
   "Suono amplificato: 8 microfoni wireless (6 strumenti, 2 voci) sull'impianto del festival, oppure in acustico, senza microfoni.",
@@ -59,8 +59,8 @@
  ],
  "acc_kick": "Per tutti i corpi e le menti",
  "acc_h": "Accessibilità",
- "acc_p": "Visita tattile sempre inclusa su richiesta; in questo formato amplificato anche audiodescrizione, anelli a induzione, zaini vibranti, lingua dei segni e una versione relaxed, preparati insieme allo spazio.",
- "alw_h": "Sempre possibile",
+ "acc_p": "Visita tattile su richiesta; in questo formato amplificato anche audiodescrizione, anelli a induzione, zaini vibranti, lingua dei segni e una versione relaxed, preparati insieme allo spazio.",
+ "alw_h": "Su richiesta",
  "alw": [
   "Visita tattile"
  ],
@@ -156,7 +156,7 @@
   ],
   [
    "30′",
-   "PIÙ REPLICHE"
+   "MAX. 2 REPLICHE"
   ],
   [
    "0–1",
@@ -236,10 +236,10 @@
    "10′"
   ]
  ],
- "sets": "<b>Repliche:</b> 30 minuti ciascuna, più volte nella giornata. Sempre 10 minuti di pausa tra una replica e l'altra.",
+ "sets": "<b>Repliche:</b> 30 minuti ciascuna, massimo 2 al giorno, con una pausa di massimo 1 ora tra una replica e l'altra (ideale per i cambi palco tra le band).",
  "s5": "Con la pioggia la banda non può suonare all'aperto, per via degli strumenti e dei microfoni. La compagnia può aspettare che smetta e suonare più tardi o un altro giorno. Il terreno bagnato non è un problema. Alternativa: una sala grande alta almeno 5 m.",
- "s6": "<b>Parcheggio:</b> posto per 1 veicolo.<br><b>Camerino:</b> spazio per 8 persone con tavoli per truccarsi e cambiarsi. La compagnia può portare specchi e luci.<br><b>Pasti:</b> 2 senza carne (pesce, uova e latticini sì) · 6 senza esigenze particolari.",
- "s7": "Visita tattile sempre inclusa su richiesta; in questo formato amplificato anche audiodescrizione, anelli a induzione, zaini vibranti, lingua dei segni e una versione relaxed, preparati insieme allo spazio.",
+ "s6": "<b>Parcheggio:</b> posto per 2 auto; se la compagnia viaggia in aereo, il trasporto locale va concordato con l'organizzazione.<br><b>Camerino:</b> spazio per 8 persone con tavoli per truccarsi e cambiarsi. La compagnia può portare specchi e luci.<br><b>Pasti:</b> 2 senza carne (pesce, uova e latticini sì) · 6 senza esigenze particolari.",
+ "s7": "Visita tattile su richiesta; in questo formato amplificato anche audiodescrizione, anelli a induzione, zaini vibranti, lingua dei segni e una versione relaxed, preparati insieme allo spazio.",
  "r_role": "direzione · booking",
  "foot_r": "SCHEDA TECNICA · CONCERTO IN MEZZO AL PUBBLICO",
  "see_access": "Tutti i dettagli nel rider accessibilità:",

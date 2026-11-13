@@ -10,7 +10,7 @@
   ],
   [
    "30′",
-   "PLUSIEURS PASSAGES"
+   "2 PASSAGES MAX."
   ],
   [
    "8",
@@ -30,7 +30,7 @@
  "box_h": "Pensé pour les festivals de musique",
  "box": [
   "Pour les changements de plateau : le public reste, joue et danse pendant que le groupe suivant s'installe.",
-  "30 minutes, plusieurs passages par jour. Tout public, de jour comme de nuit.",
+  "30 minutes, 2 passages par jour au maximum. Tout public, de jour comme de nuit.",
   "Sur la place, devant la scène ; la fanfare peut y monter. Le personnage sur échasses reste toujours dans le public, sauf si la scène n'est pas surélevée.",
   "6 musicien·nes (3 saxophones, trompette, soubassophone, percussions) et 2 artistes de cirque (échasses, monocycle, jonglage, jeux).",
   "Son amplifié : 8 micros sans fil (6 instruments, 2 voix) sur la sono du festival, ou en acoustique, sans micros.",
@@ -59,8 +59,8 @@
  ],
  "acc_kick": "Pour tous les corps et tous les esprits",
  "acc_h": "Accessibilité",
- "acc_p": "Visite tactile toujours incluse sur demande ; dans ce format amplifié, aussi audiodescription, boucles magnétiques, gilets vibrants, langue des signes et une version relax, préparées avec le lieu.",
- "alw_h": "Toujours possible",
+ "acc_p": "Visite tactile sur demande ; dans ce format amplifié, aussi audiodescription, boucles magnétiques, gilets vibrants, langue des signes et une version relax, préparées avec le lieu.",
+ "alw_h": "Sur demande",
  "alw": [
   "Visite tactile"
  ],
@@ -156,7 +156,7 @@
   ],
   [
    "30′",
-   "PLUSIEURS PASSAGES"
+   "2 PASSAGES MAX."
   ],
   [
    "0–1",
@@ -236,10 +236,10 @@
    "10′"
   ]
  ],
- "sets": "<b>Passages :</b> 30 minutes chacun, plusieurs dans la journée. Toujours 10 minutes de pause entre les passages.",
+ "sets": "<b>Passages :</b> 30 minutes chacun, 2 par jour au maximum, avec une pause d'1 heure au plus entre les passages (idéal pour les changements de plateau entre groupes).",
  "s5": "Sous la pluie, la fanfare ne peut pas jouer en extérieur, à cause des instruments et des micros. La compagnie peut attendre la fin de l'averse et jouer plus tard ou un autre jour. Un sol mouillé ne pose pas de problème. Alternative : une grande salle d'au moins 5 m de hauteur.",
- "s6": "<b>Parking :</b> place pour 1 véhicule.<br><b>Loge :</b> espace pour 8 personnes avec tables pour se maquiller et se changer. La compagnie peut apporter miroirs et lumières.<br><b>Repas :</b> 2 sans viande (poisson, œufs et laitages acceptés) · 6 sans régime particulier.",
- "s7": "Visite tactile toujours incluse sur demande ; dans ce format amplifié, aussi audiodescription, boucles magnétiques, gilets vibrants, langue des signes et une version relax, préparées avec le lieu.",
+ "s6": "<b>Parking :</b> place pour 2 voitures ; si la compagnie voyage en avion, le transport sur place est à convenir avec l'organisation.<br><b>Loge :</b> espace pour 8 personnes avec tables pour se maquiller et se changer. La compagnie peut apporter miroirs et lumières.<br><b>Repas :</b> 2 sans viande (poisson, œufs et laitages acceptés) · 6 sans régime particulier.",
+ "s7": "Visite tactile sur demande ; dans ce format amplifié, aussi audiodescription, boucles magnétiques, gilets vibrants, langue des signes et une version relax, préparées avec le lieu.",
  "r_role": "direction · diffusion",
  "foot_r": "FICHE TECHNIQUE · CONCERT AU MILIEU DU PUBLIC",
  "see_access": "Tous les détails dans la fiche accessibilité :",

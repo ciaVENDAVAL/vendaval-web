@@ -40,16 +40,16 @@
 
 {% macro tech() %}
 <section class="pg" style="background:#F5EDDC">
-  <div style="position:absolute;left:0;top:0;width:794px;padding:48px 56px 0;display:flex;flex-direction:column;gap:16px">
+  <div style="position:absolute;left:0;top:0;width:794px;padding:40px 56px 0;display:flex;flex-direction:column;gap:14px">
     <div class="lab" style="display:flex;justify-content:space-between;font-size:13px;color:#B5401C"><span>{{ t.tech_kicker }}{% if kind == 'rider' %} · VENDAVAL BRASS{% endif %}</span><span style="color:#0F2C40">{{ t.updated }}</span></div>
     <h1 class="disp" style="margin:0;font-size:54px;line-height:1;color:#0F2C40">{{ t.tech_title }}</h1>
     <div style="background:#0F2C40;color:#F5EDDC;padding:16px 22px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px">
       {% for h, x in t.getin %}<div style="display:flex;flex-direction:column;gap:6px"><span class="lab" style="font-size:13.5px;letter-spacing:2px;color:#EBA53B">{{ h }}</span><span style="font-size:13.5px;line-height:1.45">{{ x }}</span></div>{% endfor %}
     </div>
     <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px">
-      {% for h, x in t.tech %}<div style="background:#FFFFFF;padding:14px 17px;display:flex;flex-direction:column;gap:5px"><span class="lab" style="font-size:14.5px;letter-spacing:2px;color:#0F2C40">{{ h }}</span><span style="font-size:13.5px;line-height:1.42">{{ x|e|replace("\n", "<br>"|safe) }}</span></div>{% endfor %}
+      {% for h, x in t.tech %}<div style="background:#FFFFFF;padding:12px 17px;display:flex;flex-direction:column;gap:5px"><span class="lab" style="font-size:14.5px;letter-spacing:2px;color:#0F2C40">{{ h }}</span><span style="font-size:13.5px;line-height:1.42">{{ x|e|replace("\n", "<br>"|safe) }}</span></div>{% endfor %}
     </div>
-    <p style="font-size:13px;line-height:1.5;color:#3A4A55">{{ t.tech_note }}</p>
+    <p style="margin:0;font-size:13px;line-height:1.5;color:#3A4A55">{{ t.tech_note }}</p>
   </div>
   {{ photo(P.tech, 'left:0;top:903px;width:794px;height:220px', 'center 35%') }}
   <div style="position:absolute;left:0;top:903px;width:100%;height:80px;background:linear-gradient(to bottom,#F5EDDC 0%,rgba(245,237,220,0) 100%)"></div>

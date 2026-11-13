@@ -10,7 +10,7 @@
   ],
   [
    "30′",
-   "DIVERSOS PASSIS"
+   "MÀX. 2 PASSIS"
   ],
   [
    "8",
@@ -30,7 +30,7 @@
  "box_h": "Fet per a festivals de música",
  "box": [
   "Per als canvis d'escenari: el públic es queda, juga i balla mentre el grup següent munta.",
-  "30 minuts, diversos passis al dia. Tots els públics, de dia o de nit.",
+  "30 minuts, màxim 2 passis al dia. Tots els públics, de dia o de nit.",
   "A la plaça, davant de l'escenari; la banda hi pot pujar. Les xanques, sempre entre el públic, tret que l'escenari no sigui elevat.",
   "6 músics (3 saxos, trompeta, sousàfon, percussió) i 2 artistes de circ (xanques, monocicle, malabars, jocs).",
   "So amplificat: 8 micròfons sense fils (6 d'instrument, 2 de veu) al PA del festival, o en acústic, sense micròfons.",
@@ -59,8 +59,8 @@
  ],
  "acc_kick": "Per a tots els cossos i ments",
  "acc_h": "Accessibilitat",
- "acc_p": "Visita tàctil sempre inclosa a petició; en aquest format amplificat, també audiodescripció, bucles magnètics, motxilles vibratòries, llengua de signes i una versió relaxada, preparats amb l'espai.",
- "alw_h": "Sempre possible",
+ "acc_p": "Visita tàctil a petició; en aquest format amplificat, també audiodescripció, bucles magnètics, motxilles vibratòries, llengua de signes i una versió relaxada, preparats amb l'espai.",
+ "alw_h": "A petició",
  "alw": [
   "Visita tàctil"
  ],
@@ -156,7 +156,7 @@
   ],
   [
    "30′",
-   "DIVERSOS PASSIS"
+   "MÀX. 2 PASSIS"
   ],
   [
    "0–1",
@@ -236,10 +236,10 @@
    "10′"
   ]
  ],
- "sets": "<b>Passis:</b> 30 minuts cadascun, diversos al llarg del dia. Sempre amb 10 minuts de pausa entre passis.",
+ "sets": "<b>Passis:</b> 30 minuts cadascun, màxim 2 al dia, amb una pausa de com a màxim 1 hora entre passis (ideal per als canvis d'escenari entre bandes).",
  "s5": "Amb pluja no es pot tocar a l'aire lliure, pels instruments i els micròfons. La companyia pot esperar que pari i tocar més tard o un altre dia. El terra mullat no impedeix l'espectacle. Alternativa: una sala gran amb una alçada mínima de 5 m.",
- "s6": "<b>Pàrquing:</b> espai per a 1 vehicle.<br><b>Vestidor:</b> espai per a 8 persones amb taules per maquillar-se i canviar-se. La companyia pot portar miralls i llums.<br><b>Dietes:</b> 2 sense carn (peix, ous i lactis, sí) · 6 sense dieta específica.",
- "s7": "Visita tàctil sempre inclosa a petició; en aquest format amplificat, també audiodescripció, bucles magnètics, motxilles vibratòries, llengua de signes i una versió relaxada, preparats amb l'espai.",
+ "s6": "<b>Pàrquing:</b> espai per a 2 cotxes; si la companyia viatja en avió, el transport local es parla amb l'organització.<br><b>Vestidor:</b> espai per a 8 persones amb taules per maquillar-se i canviar-se. La companyia pot portar miralls i llums.<br><b>Dietes:</b> 2 sense carn (peix, ous i lactis, sí) · 6 sense dieta específica.",
+ "s7": "Visita tàctil a petició; en aquest format amplificat, també audiodescripció, bucles magnètics, motxilles vibratòries, llengua de signes i una versió relaxada, preparats amb l'espai.",
  "r_role": "direcció · contractació",
  "foot_r": "FITXA TÈCNICA · CONCERT ENMIG DEL PÚBLIC",
  "see_access": "Tots els detalls al rider d'accessibilitat:",
