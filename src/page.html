@@ -353,7 +353,11 @@
   <div class="wrap">
     <h1>{{ t.downloads.title }}</h1>
     <p class="lead">{{ t.downloads.intro }}</p>
-    <div class="downloads">{% for bx in download_boxes %}{% include 'dlbox.html' %}{% endfor %}</div>
+    {% set ws_boxes = ['xanques', 'yiflauki', 'circ'] %}
+    <h2 class="dl-group">{{ t.nav.shows }}</h2>
+    <div class="downloads">{% for bx in download_boxes if bx.id not in ws_boxes %}{% include 'dlbox.html' %}{% endfor %}</div>
+    <h2 class="dl-group">{{ t.nav.workshops }}</h2>
+    <div class="downloads">{% for bx in download_boxes if bx.id in ws_boxes %}{% include 'dlbox.html' %}{% endfor %}</div>
     <p class="note">{{ t.downloads.note }}</p>
   </div>
 </section>

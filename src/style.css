@@ -681,3 +681,10 @@ html.a11y-dark #nav .sub a{color:#9fe3e8}
   .top #nav .langs ul{position:static;width:auto;box-shadow:none;border:0;padding:8px 0 0}
 }
 @media(min-width:1000px){.top #nav .langs{order:2;margin-left:10px}}
+
+/* downloads page: Shows / Workshops groups; sub-header for the amplified Concert in the audience inside the Brass box */
+h2.dl-group{margin:1.6em 0 .6em}
+h2.dl-group:first-of-type{margin-top:.8em}
+.dl-sub{margin:14px 0 2px;padding-top:10px;border-top:2px solid var(--line);font:800 1rem/1.3 var(--head);color:var(--navy)}
+.dl-sub span{font:600 .9rem var(--body);color:var(--teal-d)}
+html.a11y-dark .dl-sub{color:#f5ebdd}html.a11y-dark .dl-sub span{color:#9fe3e8}
