@@ -23,5 +23,5 @@
     {% if z.print %}<a class="dl-alt" href="{{ R }}{{ z.print.url }}" download>{{ icon('download') }} {{ t.downloads.photos_print }} <small>{{ z.print.n }} · {{ z.print.mb }} MB</small></a>{% endif %}
   </div>
   {% endif %}
-  {% if bx.link %}<p class="dl-row dl-link">{{ t.downloads.more_at }} <a href="{{ bx.link }}" rel="noopener" target="_blank">{{ bx.link_label }} {{ icon('open-in-new') }}</a></p>{% endif %}
+  {% if bx.link %}{% set lk = (bx.link.get(lang) or bx.link['*']) if bx.link is mapping else bx.link %}<p class="dl-row dl-link">{{ t.downloads.more_at }} <a href="{{ lk }}" rel="noopener" target="_blank">{{ bx.link_label }} {{ icon('open-in-new') }}</a></p>{% endif %}
 </article>

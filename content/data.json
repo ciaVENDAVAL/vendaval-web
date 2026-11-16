@@ -412,6 +412,17 @@
    "link": "https://yiflauki.com/",
    "link_label": "yiflauki.com",
    "thumb": "talleres-10-musica"
+  },
+  {
+   "id": "circ",
+   "title": "circ",
+   "link": {
+    "ca": "https://ciafiligranes.net/tallers/",
+    "es": "https://ciafiligranes.net/es/talleres/",
+    "*": "https://ciafiligranes.net/en/workshops/"
+   },
+   "link_label": "ciafiligranes.net",
+   "thumb": "taller-circo-20-1"
   }
  ],
  "press": {
@@ -798,8 +809,8 @@
    "by": "Cia. Filigranes",
    "url": {
     "ca": "https://ciafiligranes.net/tallers/",
-    "es": "https://ciafiligranes.net/es/talleres",
-    "*": "https://ciafiligranes.net/en/workshops"
+    "es": "https://ciafiligranes.net/es/talleres/",
+    "*": "https://ciafiligranes.net/en/workshops/"
    },
    "dossier": null
   },
