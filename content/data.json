@@ -653,7 +653,15 @@
    "url": null,
    "precision": "day",
    "place": "Plaça de l'Ajuntament, Figueres",
-   "note": "16:45–18:45",
+   "note": {
+    "ca": "Duo · 16:45–18:45",
+    "es": "Duo · 16:45–18:45",
+    "en": "Duo · 16:45–18:45",
+    "de": "Duo · 16:45–18:45",
+    "fr": "Duo · 16:45–18:45",
+    "it": "Duo · 16:45–18:45",
+    "ja": "デュオ · 16:45–18:45"
+   },
    "ws": ""
   },
   {
