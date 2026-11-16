@@ -24,6 +24,7 @@
     {% if z.web %}<a class="dl-alt" href="{{ R }}{{ z.web.url }}" download>{{ icon('download') }} {{ t.downloads.photos_web }} <small>{{ z.web.n }} · {{ z.web.mb }} MB</small></a>{% endif %}
     {% if z.print %}<a class="dl-alt" href="{{ R }}{{ z.print.url }}" download>{{ icon('download') }} {{ t.downloads.photos_print }} <small>{{ z.print.n }} · {{ z.print.mb }} MB</small></a>{% endif %}
   </div>
+  <div class="dl-thumbs">{% for g in press[bx.press] %}<a href="{{ R }}img/{{ g }}-1600.webp"{% if page == 'downloads' %} class="gal"{% else %} target="_blank" rel="noopener"{% endif %}><img loading="lazy" src="{{ R }}img/{{ g }}-240.webp" alt="{{ t.downloads.kinds.photos }} {{ loop.index }}"></a>{% endfor %}</div>
   {% endif %}
   {% if bx.link %}{% set lk = (bx.link.get(lang) or bx.link['*']) if bx.link is mapping else bx.link %}<p class="dl-row dl-link">{{ t.downloads.more_at }} <a href="{{ lk }}" rel="noopener" target="_blank">{{ bx.link_label }} {{ icon('open-in-new') }}</a></p>{% endif %}
 </article>

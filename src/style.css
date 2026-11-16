@@ -691,3 +691,11 @@ html.a11y-dark .dl-sub{color:#f5ebdd}html.a11y-dark .dl-sub span{color:#9fe3e8}
 .dl-head img.dl-logo-thumb{object-fit:contain;background:#fff}
 .dl-head img.dl-logo-thumb.dark{background:var(--navy)}
 .dl-note{margin:.2em 0 0;font-size:.9rem;color:var(--muted,#5a6b72)}
+/* previews on the downloads page: photo strip under the photo ZIPs (whole photos, no crop) and logo previews in the graphics buttons */
+.dl-thumbs{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 4px}
+.dl-thumbs a{display:block;line-height:0;border-radius:6px;overflow:hidden;outline-offset:2px}
+.dl-thumbs img{height:56px;width:auto;display:block}
+.dl-thumbs a:hover img{opacity:.85}
+.dl-gfx{display:inline-flex;align-items:center;gap:.45em}
+.dl-gfx img{height:30px;width:auto;padding:3px;border-radius:5px;background:repeating-conic-gradient(#e9e4dc 0 25%,#fff 0 50%) 0 0/10px 10px}
+.dl-gfx.dark img{background:var(--navy)}

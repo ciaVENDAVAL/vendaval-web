@@ -365,12 +365,12 @@
       <article class="dlcard" id="dl-logo{{ lg[0] }}">
         <div class="dl-head"><img src="{{ R }}img/{{ lg[5] }}" alt="" loading="lazy" class="dl-logo-thumb{{ ' dark' if lg[0] else '' }}"><div><h3>{{ t.downloads[lg[1]] }}</h3>{% if lg[0] %}<p class="dl-note">{{ t.downloads.outline_note }}</p>{% endif %}</div></div>
         <div class="dl-row"><span class="dl-kind">{{ t.downloads.logo_kind }}</span>
-          <a class="dl-alt" href="{{ R }}graphics/{{ lg[2] }}" download>{{ icon('download') }} {{ t.downloads.hires }} <small>PNG · 2048 px</small></a>
-          <a class="dl-alt" href="{{ R }}graphics/{{ lg[3] }}" download>{{ icon('download') }} Web <small>PNG · 600 px</small></a>
+          <a class="dl-alt dl-gfx{{ ' dark' if lg[0] else '' }}" href="{{ R }}graphics/{{ lg[2] }}" download><img src="{{ R }}graphics/{{ lg[3] }}" alt="" loading="lazy">{{ icon('download') }} {{ t.downloads.hires }} <small>PNG · 2048 px</small></a>
+          <a class="dl-alt dl-gfx{{ ' dark' if lg[0] else '' }}" href="{{ R }}graphics/{{ lg[3] }}" download><img src="{{ R }}graphics/{{ lg[3] }}" alt="" loading="lazy">{{ icon('download') }} Web <small>PNG · 600 px</small></a>
         </div>
         <div class="dl-row"><span class="dl-kind">{{ t.downloads.vector }}</span>
-          <a class="dl-alt" href="{{ R }}graphics/{{ lg[4] }}.svg" download>{{ icon('download') }} SVG</a>
-          <a class="dl-alt" href="{{ R }}graphics/{{ lg[4] }}.pdf" download>{{ icon('download') }} PDF</a>
+          <a class="dl-alt dl-gfx{{ ' dark' if lg[0] else '' }}" href="{{ R }}graphics/{{ lg[4] }}.svg" download><img src="{{ R }}graphics/{{ lg[3] }}" alt="" loading="lazy">{{ icon('download') }} SVG</a>
+          <a class="dl-alt dl-gfx{{ ' dark' if lg[0] else '' }}" href="{{ R }}graphics/{{ lg[4] }}.pdf" download><img src="{{ R }}graphics/{{ lg[3] }}" alt="" loading="lazy">{{ icon('download') }} PDF</a>
         </div>
       </article>
       {% endfor %}

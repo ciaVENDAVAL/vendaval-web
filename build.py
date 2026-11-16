@@ -39,6 +39,11 @@ def build_static():
     shutil.copytree(STATIC, OUT, dirs_exist_ok=True)
     (OUT/'assets').mkdir(exist_ok=True)
     for f in ('style.css', 'site.js', 'crew.js', 'toys.js'): shutil.copy(SRC/f, OUT/'assets'/f)
+    # small previews for the photo ZIPs on the downloads page (whole photo, never cropped)
+    for s in {x for v in data['press'].values() for x in v}:
+        t = OUT/'img'/f'{s}-240.webp'
+        if not t.exists() and (OUT/'img'/f'{s}-800.webp').exists():
+            im = Image.open(OUT/'img'/f'{s}-800.webp'); im.thumbnail((240, 240)); im.save(t, quality=75, method=6)
     # downloads → Graphics: the logo without background, high resolution (original) and web size
     (OUT/'graphics').mkdir(exist_ok=True)
     logo = IMGSRC/'logo_VENDAVAL_2025-04_sin_fondo.png'
