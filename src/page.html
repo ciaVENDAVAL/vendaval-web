@@ -359,6 +359,16 @@
     <div class="downloads">{% for bx in download_boxes if bx.id not in ws_boxes %}{% include 'dlbox.html' %}{% endfor %}</div>
     <h2 class="dl-group">{{ t.nav.workshops }}</h2>
     <div class="downloads">{% for bx in download_boxes if bx.id in ws_boxes %}{% include 'dlbox.html' %}{% endfor %}</div>
+    <h2 class="dl-group">{{ t.downloads.graphics }}</h2>
+    <div class="downloads">
+      <article class="dlcard" id="dl-logo">
+        <div class="dl-head"><img src="{{ R }}img/logo.webp" alt="" loading="lazy" class="dl-logo-thumb"><div><h3>{{ t.downloads.logo }}</h3></div></div>
+        <div class="dl-row"><span class="dl-kind">{{ t.downloads.logo_kind }}</span>
+          <a class="dl-alt" href="{{ R }}graphics/VENDAVAL_logo_sin-fondo_2048px.png" download>{{ icon('download') }} {{ t.downloads.hires }} <small>PNG · 2048 px</small></a>
+          <a class="dl-alt" href="{{ R }}graphics/VENDAVAL_logo_sin-fondo_web-600px.png" download>{{ icon('download') }} Web <small>PNG · 600 px</small></a>
+        </div>
+      </article>
+    </div>
     <p class="note">{{ t.downloads.note }}</p>
   </div>
 </section>

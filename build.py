@@ -39,6 +39,11 @@ def build_static():
     shutil.copytree(STATIC, OUT, dirs_exist_ok=True)
     (OUT/'assets').mkdir(exist_ok=True)
     for f in ('style.css', 'site.js', 'crew.js', 'toys.js'): shutil.copy(SRC/f, OUT/'assets'/f)
+    # downloads → Graphics: the logo without background, high resolution (original) and web size
+    (OUT/'graphics').mkdir(exist_ok=True)
+    logo = IMGSRC/'logo_VENDAVAL_2025-04_sin_fondo.png'
+    shutil.copy(logo, OUT/'graphics'/'VENDAVAL_logo_sin-fondo_2048px.png')
+    w = Image.open(logo); w.thumbnail((600, 600)); w.save(OUT/'graphics'/'VENDAVAL_logo_sin-fondo_web-600px.png', optimize=True)
     shutil.copytree(SRC/'crew-data', OUT/'assets'/'crew-data', dirs_exist_ok=True)
     # any new photo in source-images/ that has no web version yet
     for f in sorted(IMGSRC.iterdir()):

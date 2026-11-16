@@ -244,7 +244,11 @@
   "other": "他の言語",
   "view": "見る",
   "dl": "ダウンロード",
-  "amplified": "PA使用"
+  "amplified": "PA使用",
+  "graphics": "グラフィック",
+  "logo": "ロゴ",
+  "logo_kind": "PNG（背景なし）",
+  "hires": "高解像度"
  },
  "contact": {
   "title": "お問い合わせ",

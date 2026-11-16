@@ -688,3 +688,4 @@ h2.dl-group:first-of-type{margin-top:.8em}
 .dl-sub{margin:14px 0 2px;padding-top:10px;border-top:2px solid var(--line);font:800 1rem/1.3 var(--head);color:var(--navy)}
 .dl-sub span{font:600 .9rem var(--body);color:var(--teal-d)}
 html.a11y-dark .dl-sub{color:#f5ebdd}html.a11y-dark .dl-sub span{color:#9fe3e8}
+.dl-head img.dl-logo-thumb{object-fit:contain;background:#fff}

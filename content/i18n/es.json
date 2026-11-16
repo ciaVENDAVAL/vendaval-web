@@ -244,7 +244,11 @@
   "other": "Otros idiomas",
   "view": "Ver",
   "dl": "Descargar",
-  "amplified": "amplificado"
+  "amplified": "amplificado",
+  "graphics": "Gráficos",
+  "logo": "Logo",
+  "logo_kind": "PNG sin fondo",
+  "hires": "Alta resolución"
  },
  "contact": {
   "title": "Contacto",
