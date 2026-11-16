@@ -10,6 +10,10 @@
     nav.addEventListener('click', function (e) {
       if (e.target.closest('#nav > ul a')) { nav.classList.remove('open'); btn.setAttribute('aria-expanded', false); }
     });
+    // a click or tap anywhere outside the open menu closes it (Esc too)
+    function closeNav() { if (nav.classList.contains('open')) { nav.classList.remove('open'); btn.setAttribute('aria-expanded', false); } }
+    document.addEventListener('pointerdown', function (e) { if (!e.target.closest('#nav, .menu-btn')) closeNav(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && nav.classList.contains('open')) { closeNav(); btn.focus(); } });
   }
 
   // hero carousel: one photo per show, changes every 6 s (stops for reduced motion)
