@@ -652,3 +652,4 @@ html.a11y-dark .glance>div{background:#123a4c}
 
 .hero{touch-action:pan-y}
 #home-chimera .chimera-card{margin:0}
+#home-chimera{padding-bottom:clamp(90px,12vw,150px)}
