@@ -649,3 +649,6 @@ html.a11y-dark .glance>div{background:#123a4c}
 .why{max-width:62ch}.why p{font-size:1.15rem;line-height:1.65}
 #why h2{color:#fff}
 .cream .glance>div{background:#fff}
+
+.hero{touch-action:pan-y}
+#home-chimera .chimera-card{margin:0}

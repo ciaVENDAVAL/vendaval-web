@@ -25,6 +25,20 @@
   }
   if (slides.length > 1) {
     dots.forEach(function (d, i) { d.addEventListener('click', function () { clearInterval(timer); show(i); }); });
+    // swipe (finger) or drag (mouse) sideways to change the photo; vertical moves still scroll the page
+    var hero = document.querySelector('.hero'), sx = null, sy = 0, moved = false;
+    if (hero) {
+      hero.addEventListener('pointerdown', function (e) { if (e.button > 0 || e.target.closest('.dots, .toy-pad')) return; sx = e.clientX; sy = e.clientY; moved = false; });
+      hero.addEventListener('pointerup', function (e) {
+        if (sx === null) return;
+        var dx = e.clientX - sx, dy = e.clientY - sy; sx = null;
+        if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) * 1.5) { moved = true; clearInterval(timer); show(cur + (dx < 0 ? 1 : -1)); }
+      });
+      hero.addEventListener('pointercancel', function () { sx = null; });
+      hero.addEventListener('click', function (e) { if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; } }, true);
+      hero.addEventListener('dragstart', function (e) { e.preventDefault(); });
+      document.addEventListener('keydown', function (e) { if (e.target.closest && e.target.closest('.dots') && (e.key === 'ArrowRight' || e.key === 'ArrowLeft')) { clearInterval(timer); show(cur + (e.key === 'ArrowRight' ? 1 : -1)); if (dots[cur]) dots[cur].focus(); } });
+    }
     if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) timer = setInterval(function () { if (!root.classList.contains('a11y-motion')) show(cur + 1); }, 6000);
   }
 
