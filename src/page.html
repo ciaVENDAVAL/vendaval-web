@@ -35,16 +35,36 @@
 
 <header class="top">
   <a class="brand" href="{{ H }}" aria-label="VENDAVAL · {{ t.nav.home }}"><img src="{{ R }}img/logo-outline.webp" alt="VENDAVAL" width="150" height="111"></a>
-  <details class="langs">
-    <summary aria-label="{{ t.nav.language }}">{{ t.lang_name }} <span aria-hidden="true">▾</span></summary>
-    <ul>
-      {% for l in langs %}<li><a href="{{ R }}{{ l }}/{{ path }}" hreflang="{{ i18n[l].html_lang }}" lang="{{ i18n[l].html_lang }}"{% if l == lang %} aria-current="true"{% endif %}>{{ i18n[l].lang_name }}</a></li>{% endfor %}
-    </ul>
-  </details>
   <button class="menu-btn" aria-expanded="false" aria-controls="nav">{{ icon('menu') }}<span>{{ t.nav.menu }}</span></button>
   <nav id="nav" aria-label="{{ t.nav.menu }}">
+    <details class="langs">
+      <summary aria-label="{{ t.nav.language }}">{{ t.lang_name }} <span aria-hidden="true">▾</span></summary>
+      <ul>
+        {% for l in langs %}<li><a href="{{ R }}{{ l }}/{{ path }}" hreflang="{{ i18n[l].html_lang }}" lang="{{ i18n[l].html_lang }}"{% if l == lang %} aria-current="true"{% endif %}>{{ i18n[l].lang_name }}</a></li>{% endfor %}
+      </ul>
+    </details>
     <ul>
-      {% for k, u in [('about', H ~ '#about'), ('shows', H ~ '#shows'), ('workshops', H ~ 'workshops/'), ('agenda', H ~ 'agenda/'), ('artists', H ~ 'artists/'), ('downloads', H ~ 'downloads/'), ('crew', H ~ 'crew/'), ('contact', H ~ '#contact')] %}<li><a href="{{ u }}"{% if page == k %} aria-current="page"{% endif %}>{{ t.nav[k] }}</a></li>{% endfor %}
+      {% set menu = [
+        ('agenda', t.nav.agenda, H ~ 'agenda/', []),
+        ('shows', t.nav.shows, H ~ '#shows', []),
+        ('workshops', t.nav.workshops, H ~ 'workshops/', []),
+        ('about', t.nav.about, H ~ '#about', []),
+        ('play', t.nav.play, H ~ 'crew/', []),
+        ('contact', t.nav.contact, H ~ '#contact', [])] %}
+      {% set subs = {
+        'shows': shows|map(attribute='id')|list + ['downloads'],
+        'workshops': workshop_groups|map(attribute='id')|list,
+        'about': ['artists'],
+        'play': ['crew', 'chimera']} %}
+      {% for k, label, u, _ in menu %}<li{% if subs.get(k) %} class="has-sub"{% endif %}><a href="{{ u }}"{% if page == k or (k == 'about' and page == 'artists') or (k == 'play' and page == 'crew') or (k == 'shows' and page in ('show', 'downloads')) %} aria-current="page"{% endif %}>{{ label }}</a>
+        {% if subs.get(k) %}<ul class="sub">{% for sk in subs[k] %}
+          {% if sk == 'downloads' %}<li><a href="{{ H }}downloads/"{% if page == 'downloads' %} aria-current="page"{% endif %}>{{ t.nav.downloads }}</a></li>
+          {% elif k == 'shows' %}{% set sh = shows_by_id[sk] %}<li><a href="{{ H }}{{ sh.slug }}/"{% if page == 'show' and s and s.id == sk %} aria-current="page"{% endif %}>{{ t.show[sk].name }}</a></li>
+          {% elif k == 'workshops' %}<li><a href="{{ H }}workshops/#ws-{{ sk }}">{{ t.workshops.groups[sk].title }}</a></li>
+          {% elif sk == 'artists' %}<li><a href="{{ H }}artists/"{% if page == 'artists' %} aria-current="page"{% endif %}>{{ t.nav.artists }}</a></li>
+          {% elif sk == 'crew' %}<li><a href="{{ H }}crew/"{% if page == 'crew' %} aria-current="page"{% endif %}>{{ t.crew.home_title }}</a></li>
+          {% elif sk == 'chimera' %}<li><a href="{{ R }}chimera-opera/?lang={{ lang }}">VENDAVAL Chimera Opera</a></li>{% endif %}
+        {% endfor %}</ul>{% endif %}</li>{% endfor %}
     </ul>
   </nav>
 </header>
@@ -347,6 +367,7 @@
       {% for so in socials %}<li><a class="soc soc-{{ so.id }}" href="{{ so.url }}" rel="noopener" target="_blank" aria-label="{{ so.label }}">{{ icon(so.id) }}</a></li>{% endfor %}
     </ul>
     <p class="credits">{% for c in credits %}<span><strong>{{ t.footer.roles[c.role] }}{{ t.footer.colon }}</strong> {% for pp in c.people %}{% if pp.url %}<a href="{{ pp.url }}" rel="noopener" target="_blank">{{ pp.name }}</a>{% else %}{{ pp.name }}{% endif %}{% if not loop.last %}, {% endif %}{% endfor %}</span>{% if not loop.last %} · {% endif %}{% endfor %}</p>
+    <p class="foot-links"><a href="{{ H }}downloads/">{{ t.nav.downloads }}</a> · <a href="{{ H }}artists/">{{ t.nav.artists }}</a> · <a href="{{ H }}#contact">{{ t.nav.contact }}</a></p>
     <p>© Cia. VENDAVAL · {{ t.footer.hosted }}</p>
     <p><a href="#top">{{ icon('arrow-up') }} {{ t.footer.top }}</a></p>
   </div>

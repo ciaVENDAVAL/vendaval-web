@@ -653,3 +653,31 @@ html.a11y-dark .glance>div{background:#123a4c}
 .hero{touch-action:pan-y}
 #home-chimera .chimera-card{margin:0}
 #home-chimera{padding-bottom:clamp(90px,12vw,150px)}
+
+/* menu with sub-items (Shows, Workshops, Company, Play) */
+#nav{max-height:calc(100vh - 70px);max-height:calc(100dvh - 70px);overflow-y:auto}
+#nav .sub{margin:0 0 .3em;padding-left:1em}
+#nav .sub a{font-weight:600;font-size:.95rem;padding:.5em .2em;border-bottom:0;color:var(--teal-d)}
+#nav .sub a::before{content:"› ";color:var(--red)}
+#nav>ul a[aria-current]{color:var(--red)}
+.foot-links a{font-weight:700}
+@media(min-width:1000px){
+  #nav{max-height:none;overflow:visible}
+  #nav .has-sub{position:relative}
+  #nav .has-sub>a::after{content:" ▾";font-size:.75em;opacity:.7}
+  #nav .sub{display:none;position:absolute;left:0;top:100%;min-width:230px;margin:0;padding:8px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 12px 32px rgba(8,47,64,.15);z-index:60}
+  #nav .sub::before{content:"";position:absolute;left:0;right:0;top:-10px;height:10px}
+  #nav .has-sub:hover>.sub,#nav .has-sub:focus-within>.sub{display:block}
+  #nav .sub a{border-radius:10px;padding:.55em .8em;font-size:.95rem;white-space:nowrap}
+  #nav .sub a:hover{background:var(--cream)}
+  html.a11y-dark #nav .sub{background:#0d2b3a;border-color:#1d4a5e}
+}
+html.a11y-dark #nav .sub a{color:#9fe3e8}
+/* language choice inside the menu: first line of the phone menu, last item on wide screens */
+#nav .langs summary{display:inline-block}
+@media(max-width:999px){
+  .menu-btn{margin-left:auto}
+  .top #nav .langs{margin:4px 0 8px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+  .top #nav .langs ul{position:static;width:auto;box-shadow:none;border:0;padding:8px 0 0}
+}
+@media(min-width:1000px){.top #nav .langs{order:2;margin-left:10px}}
