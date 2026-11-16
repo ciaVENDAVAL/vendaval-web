@@ -689,3 +689,5 @@ h2.dl-group:first-of-type{margin-top:.8em}
 .dl-sub span{font:600 .9rem var(--body);color:var(--teal-d)}
 html.a11y-dark .dl-sub{color:#f5ebdd}html.a11y-dark .dl-sub span{color:#9fe3e8}
 .dl-head img.dl-logo-thumb{object-fit:contain;background:#fff}
+.dl-head img.dl-logo-thumb.dark{background:var(--navy)}
+.dl-note{margin:.2em 0 0;font-size:.9rem;color:var(--muted,#5a6b72)}

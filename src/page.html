@@ -361,13 +361,19 @@
     <div class="downloads">{% for bx in download_boxes if bx.id in ws_boxes %}{% include 'dlbox.html' %}{% endfor %}</div>
     <h2 class="dl-group">{{ t.downloads.graphics }}</h2>
     <div class="downloads">
-      <article class="dlcard" id="dl-logo">
-        <div class="dl-head"><img src="{{ R }}img/logo.webp" alt="" loading="lazy" class="dl-logo-thumb"><div><h3>{{ t.downloads.logo }}</h3></div></div>
+      {% for lg in [('', 'logo', 'VENDAVAL_logo_sin-fondo_2048px.png', 'VENDAVAL_logo_sin-fondo_web-600px.png', 'VENDAVAL_logo', 'logo.webp'), ('-outline', 'logo_outline', 'VENDAVAL_logo_outline_2048px.png', 'VENDAVAL_logo_outline_web-600px.png', 'VENDAVAL_logo_outline', 'logo-outline.webp')] %}
+      <article class="dlcard" id="dl-logo{{ lg[0] }}">
+        <div class="dl-head"><img src="{{ R }}img/{{ lg[5] }}" alt="" loading="lazy" class="dl-logo-thumb{{ ' dark' if lg[0] else '' }}"><div><h3>{{ t.downloads[lg[1]] }}</h3>{% if lg[0] %}<p class="dl-note">{{ t.downloads.outline_note }}</p>{% endif %}</div></div>
         <div class="dl-row"><span class="dl-kind">{{ t.downloads.logo_kind }}</span>
-          <a class="dl-alt" href="{{ R }}graphics/VENDAVAL_logo_sin-fondo_2048px.png" download>{{ icon('download') }} {{ t.downloads.hires }} <small>PNG · 2048 px</small></a>
-          <a class="dl-alt" href="{{ R }}graphics/VENDAVAL_logo_sin-fondo_web-600px.png" download>{{ icon('download') }} Web <small>PNG · 600 px</small></a>
+          <a class="dl-alt" href="{{ R }}graphics/{{ lg[2] }}" download>{{ icon('download') }} {{ t.downloads.hires }} <small>PNG · 2048 px</small></a>
+          <a class="dl-alt" href="{{ R }}graphics/{{ lg[3] }}" download>{{ icon('download') }} Web <small>PNG · 600 px</small></a>
+        </div>
+        <div class="dl-row"><span class="dl-kind">{{ t.downloads.vector }}</span>
+          <a class="dl-alt" href="{{ R }}graphics/{{ lg[4] }}.svg" download>{{ icon('download') }} SVG</a>
+          <a class="dl-alt" href="{{ R }}graphics/{{ lg[4] }}.pdf" download>{{ icon('download') }} PDF</a>
         </div>
       </article>
+      {% endfor %}
     </div>
     <p class="note">{{ t.downloads.note }}</p>
   </div>

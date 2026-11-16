@@ -248,7 +248,10 @@
   "graphics": "Gráficos",
   "logo": "Logo",
   "logo_kind": "PNG sin fondo",
-  "hires": "Alta resolución"
+  "hires": "Alta resolución",
+  "logo_outline": "Logo con contorno blanco",
+  "outline_note": "Para fondos oscuros o fotos.",
+  "vector": "Vectorial (para imprimir a cualquier tamaño)"
  },
  "contact": {
   "title": "Contacto",

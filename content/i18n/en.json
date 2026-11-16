@@ -248,7 +248,10 @@
   "graphics": "Graphics",
   "logo": "Logo",
   "logo_kind": "PNG, transparent background",
-  "hires": "High resolution"
+  "hires": "High resolution",
+  "logo_outline": "Logo with white outline",
+  "outline_note": "For dark backgrounds or photos.",
+  "vector": "Vector (prints at any size)"
  },
  "contact": {
   "title": "Contact",

@@ -248,7 +248,10 @@
   "graphics": "Grafiken",
   "logo": "Logo",
   "logo_kind": "PNG ohne Hintergrund",
-  "hires": "Hohe Auflösung"
+  "hires": "Hohe Auflösung",
+  "logo_outline": "Logo mit weißer Kontur",
+  "outline_note": "Für dunkle Hintergründe oder Fotos.",
+  "vector": "Vektor (für den Druck in jeder Größe)"
  },
  "contact": {
   "title": "Kontakt",

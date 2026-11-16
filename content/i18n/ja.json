@@ -248,7 +248,10 @@
   "graphics": "グラフィック",
   "logo": "ロゴ",
   "logo_kind": "PNG（背景なし）",
-  "hires": "高解像度"
+  "hires": "高解像度",
+  "logo_outline": "白いフチ付きロゴ",
+  "outline_note": "暗い背景や写真の上に。",
+  "vector": "ベクター（どのサイズでも印刷可）"
  },
  "contact": {
   "title": "お問い合わせ",
