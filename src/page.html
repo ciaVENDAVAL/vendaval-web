@@ -54,7 +54,7 @@
       {% set subs = {
         'shows': shows|map(attribute='id')|list + ['downloads'],
         'workshops': workshop_groups|map(attribute='id')|list,
-        'about': ['artists'],
+        'about': ['artists', 'video'],
         'play': ['crew', 'chimera']} %}
       {% for k, label, u, _ in menu %}<li{% if subs.get(k) %} class="has-sub"{% endif %}><a href="{{ u }}"{% if page == k or (k == 'about' and page == 'artists') or (k == 'play' and page == 'crew') or (k == 'shows' and page in ('show', 'downloads')) %} aria-current="page"{% endif %}>{{ label }}</a>
         {% if subs.get(k) %}<ul class="sub">{% for sk in subs[k] %}
@@ -62,6 +62,7 @@
           {% elif k == 'shows' %}{% set sh = shows_by_id[sk] %}<li><a href="{{ H }}{{ sh.slug }}/"{% if page == 'show' and s and s.id == sk %} aria-current="page"{% endif %}>{{ t.show[sk].name }}</a></li>
           {% elif k == 'workshops' %}<li><a href="{{ H }}workshops/#ws-{{ sk }}">{{ t.workshops.groups[sk].title }}</a></li>
           {% elif sk == 'artists' %}<li><a href="{{ H }}artists/"{% if page == 'artists' %} aria-current="page"{% endif %}>{{ t.nav.artists }}</a></li>
+          {% elif sk == 'video' %}<li><a href="{{ H }}#video">{{ t.nav.video }}</a></li>
           {% elif sk == 'crew' %}<li><a href="{{ H }}crew/"{% if page == 'crew' %} aria-current="page"{% endif %}>{{ t.crew.home_title }}</a></li>
           {% elif sk == 'chimera' %}<li><a href="{{ R }}chimera-opera/?lang={{ lang }}">VENDAVAL Chimera Opera</a></li>{% endif %}
         {% endfor %}</ul>{% endif %}</li>{% endfor %}
