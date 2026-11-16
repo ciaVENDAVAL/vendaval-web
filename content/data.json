@@ -647,6 +647,16 @@
    "uid": "53df98b3-9369-4515-a204-f2210548c090"
   },
   {
+   "start": "2026-11-20",
+   "end": "2026-11-20",
+   "show": "brass",
+   "url": null,
+   "precision": "day",
+   "place": "Plaça de l'Ajuntament, Figueres",
+   "note": "16:45–18:45",
+   "ws": ""
+  },
+  {
    "start": "2027-01-05",
    "end": "2027-01-05",
    "show": "freakfrac",
