@@ -520,11 +520,21 @@
   },
   {
    "start": "2025-01-04",
+   "end": "2025-01-04",
+   "show": "freakfrac",
+   "url": "https://tubdassaig.com/",
+   "precision": "day",
+   "place": "Sant Quirze del Vallès (Tub d'assaig)",
+   "note": "",
+   "ws": ""
+  },
+  {
+   "start": "2025-01-05",
    "end": "2025-01-05",
    "show": "freakfrac",
    "url": "https://tubdassaig.com/",
    "precision": "day",
-   "place": "Tub d'assaig, Terrassa & Sant Quirze del Vallès",
+   "place": "Casal Cívic de Can Boada, Terrassa (Tub d'assaig)",
    "note": "",
    "ws": ""
   },
