@@ -731,3 +731,12 @@ html.a11y-dark .dl-sub{color:#f5ebdd}html.a11y-dark .dl-sub span{color:#9fe3e8}
 }
 html.a11y-dark #nav,html.a11y-dark #nav .sub{background:#0d2b3a}
 html.a11y-dark #nav .sub a,html.a11y-dark #nav .sub a::before{color:#9fe3e8}
+/* menu highlight: white instead of red on the cyan (hover / tap / keyboard focus) */
+#nav>ul a:hover,#nav>ul a:focus-visible,#nav .sub a:hover,#nav .sub a:focus-visible{color:var(--navy);background:#fff;border-radius:10px}
+#nav .sub-toggle:hover,#nav .sub-toggle:focus-visible{background:#fff}
+@media(min-width:1000px){
+  #nav>ul>li>a:hover,#nav>ul>li>a:focus-visible{background:var(--cream)}
+  /* dropdowns of the last items open to the left so they stay on screen */
+  #nav .has-sub:nth-last-child(-n+2)>.sub{left:auto;right:0}
+}
+html.a11y-dark #nav>ul a:hover,html.a11y-dark #nav .sub a:hover{background:#6fd3db;color:#071d28}
