@@ -740,3 +740,7 @@ html.a11y-dark #nav .sub a,html.a11y-dark #nav .sub a::before{color:#9fe3e8}
   #nav .has-sub:nth-last-child(-n+2)>.sub{left:auto;right:0}
 }
 html.a11y-dark #nav>ul a:hover,html.a11y-dark #nav .sub a:hover{background:#6fd3db;color:#071d28}
+/* menu background = the light blue of the crew page */
+:root{--logo-cyan:#e6fbfd}
+#nav .sub-toggle{background:#9fe8f0}
+@media(min-width:1000px){#nav .sub{border-color:#9fe8f0}}
