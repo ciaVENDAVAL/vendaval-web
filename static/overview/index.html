@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Overview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Work+Sans:wght@400;600;700&display=swap">
+<style>
+/* VOICE: quick, friendly launcher for a circus/music family of sites
+   IDEA: a row of backstage passes, one per company, each with two doors
+   PICTURE: the four big pass cards themselves are the page
+   COLOUR and TYPE: ocean blue ground, golden yellow accent, black/white; Bowlby One + Work Sans
+   LAYOUT: modest title, 2x2 grid of passes, stacks to one column on phones */
+:root{color-scheme:light dark;
+  --bg:light-dark(#0e5c73,#08303c);--ink:#fbf8f2;
+  --card:light-dark(#fbf8f2,#12404d);--cink:light-dark(#141414,#fbf8f2);
+  --gold:#f0b429;--muted:light-dark(#4a5a60,#a9c3cb);--line:light-dark(#d9d2c4,#1f5868)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Work Sans",system-ui,sans-serif;overflow-x:clip;min-height:100vh}
+.band{padding:clamp(24px,4vw,56px) max(5vw,16px);max-width:1100px;margin:0 auto}
+h1{font:400 clamp(32px,6vw,48px)/1.05 "Bowlby One",Impact,sans-serif;margin:0 0 6px;letter-spacing:.01em}
+.sub{margin:0 0 28px;color:#cfe3e9}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.pass{background:var(--card);color:var(--cink);border-radius:18px;padding:20px;position:relative;display:flex;flex-direction:column;gap:14px;box-shadow:0 10px 0 rgba(0,0,0,.18)}
+.pass::before{content:"";position:absolute;top:50%;left:-9px;width:18px;height:18px;border-radius:50%;background:var(--bg);transform:translateY(-50%)}
+.pass::after{content:"";position:absolute;top:50%;right:-9px;width:18px;height:18px;border-radius:50%;background:var(--bg);transform:translateY(-50%)}
+.top{display:flex;align-items:center;gap:12px}
+.dot{flex:none;width:44px;height:44px;border-radius:50%;background:var(--gold);display:grid;place-items:center;font:400 20px "Bowlby One",sans-serif;color:#141414}
+.name{font:400 22px/1.1 "Bowlby One",Impact,sans-serif;margin:0}
+.dom{font-size:14px;color:var(--muted);overflow-wrap:anywhere}
+.btns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;border-top:2px dashed var(--line);padding-top:14px}
+a.btn{display:flex;align-items:center;justify-content:center;min-height:52px;border-radius:12px;font-weight:700;text-decoration:none;font-size:16px;text-align:center;padding:6px 10px}
+a.site{background:#0e5c73;color:#fbf8f2}
+a.admin{background:var(--gold);color:#141414}
+a.btn:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+a.btn:active{transform:translateY(1px)}
+.tech{font-size:13px;color:var(--muted);display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+button.edit{background:none;border:1.5px solid var(--line);color:var(--cink);border-radius:10px;min-height:36px;padding:0 12px;font:600 13px "Work Sans",sans-serif;cursor:pointer}
+form.ed{display:none;gap:8px;flex-direction:column}
+.pass.editing form.ed{display:flex}
+form.ed label{font-size:13px;font-weight:600}
+form.ed input{font:16px "Work Sans",sans-serif;padding:10px;border-radius:10px;border:1.5px solid var(--line);background:transparent;color:var(--cink);width:100%}
+form.ed .row{display:flex;gap:8px}
+form.ed button{flex:1;min-height:44px;border-radius:10px;border:0;font:700 15px "Work Sans",sans-serif;cursor:pointer}
+form.ed .save{background:#0e5c73;color:#fff}form.ed .reset{background:var(--line);color:var(--cink)}
+.note{margin-top:26px;font-size:14px;color:#cfe3e9}
+@media(max-width:640px){.grid{grid-template-columns:minmax(0,1fr)}}
+@media(prefers-reduced-motion:no-preference){.pass{animation:in .4s ease both}.pass:nth-child(2){animation-delay:.05s}.pass:nth-child(3){animation-delay:.1s}.pass:nth-child(4){animation-delay:.15s}@keyframes in{from{opacity:0;transform:translateY(8px)}}}
+</style>
+</head>
+<body>
+<main class="band">
+  <h1>Overview</h1>
+  <p class="sub">Your four websites and their admin pages.</p>
+  <div class="grid" id="grid"></div>
+  <p class="note">Tap "Edit links" on any card to change a link. Your changes are saved in this browser only.</p>
+</main>
+<script>
+{
+const SITES=[
+  {id:"vendaval",name:"Cia. VENDAVAL",site:"https://vendaval.cat",admin:"https://vendaval.cat/admin/",tech:"Admin at /admin"},
+  {id:"marikarmen",name:"Las Marikarmen",site:"https://lasmarikarmen.com",admin:"https://lasmarikarmen.com/admin/",tech:"Admin at /admin"},
+  {id:"senyal",name:"La Senyal",site:"https://lasenyal.com",admin:"https://lasenyal.com/admin/",tech:"Admin at /admin"},
+  {id:"victoria",name:"Cia. Victoria Sickness",site:"https://victoriasickness.com",admin:"https://victoriasickness.com/admin/",tech:"Admin at /admin"}
+];
+let saved={};
+try{saved=JSON.parse(localStorage.getItem("overview-links")||"{}")}catch(e){saved={}}
+const store=()=>{try{localStorage.setItem("overview-links",JSON.stringify(saved))}catch(e){}};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const get=s=>({site:(saved[s.id]&&saved[s.id].site)||s.site,admin:(saved[s.id]&&saved[s.id].admin)||s.admin});
+const grid=document.getElementById("grid");
+const render=()=>{
+  grid.innerHTML=SITES.map(s=>{const l=get(s);const custom=!!saved[s.id];
+  return `<article class="pass" id="p-${s.id}">
+    <div class="top"><div class="dot" aria-hidden="true">${esc(s.name.replace(/^(Cia\. |Las |La )/,"")[0])}</div>
+      <div><h2 class="name">${esc(s.name)}</h2><div class="dom">${esc(l.site.replace(/^https?:\/\//,"").replace(/\/$/,""))}</div></div></div>
+    <div class="btns">
+      <a class="btn site" href="${esc(l.site)}" target="_blank" rel="noopener">Website</a>
+      <a class="btn admin" href="${esc(l.admin)}" target="_blank" rel="noopener">Admin</a>
+    </div>
+    <div class="tech"><span>${custom?"Custom links":esc(s.tech)}</span><button class="edit" data-id="${s.id}" type="button">Edit links</button></div>
+    <form class="ed" data-id="${s.id}">
+      <label for="s-${s.id}">Website link</label><input id="s-${s.id}" name="site" type="url" value="${esc(l.site)}">
+      <label for="a-${s.id}">Admin link</label><input id="a-${s.id}" name="admin" type="url" value="${esc(l.admin)}">
+      <div class="row"><button class="save" type="submit">Save</button><button class="reset" type="button" data-reset="${s.id}">Reset</button></div>
+    </form>
+  </article>`}).join("");
+};
+render();
+grid.addEventListener("click",e=>{
+  const ed=e.target.closest("button.edit");
+  if(ed){document.getElementById("p-"+ed.dataset.id).classList.toggle("editing");return}
+  const r=e.target.closest("[data-reset]");
+  if(r){delete saved[r.dataset.reset];store();render()}
+});
+grid.addEventListener("submit",e=>{
+  e.preventDefault();const f=e.target;const id=f.dataset.id;
+  const site=f.site.value.trim(),admin=f.admin.value.trim();
+  if(!/^https?:\/\//.test(site)||!/^https?:\/\//.test(admin))return;
+  saved[id]={site,admin};store();render();
+});
+}
+</script>
+</body>
+</html>
