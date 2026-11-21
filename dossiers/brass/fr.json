@@ -5,40 +5,40 @@
  "cover_tag": "JEUX & MUSIQUE LIVE",
  "cover_format": "DÉAMBULATION ACOUSTIQUE",
  "figures": [
-  [
-   "8",
-   "ARTISTES"
-  ],
-  [
-   "30′",
-   "PASSAGES · PLUSIEURS PAR JOUR"
-  ],
-  [
-   "0",
-   "TECHNICIEN NÉCESSAIRE"
-  ],
-  [
-   "100%",
-   "ACOUSTIQUE"
-  ]
+  {
+   "a": "8",
+   "b": "ARTISTES"
+  },
+  {
+   "a": "30′",
+   "b": "PASSAGES · PLUSIEURS PAR JOUR"
+  },
+  {
+   "a": "0",
+   "b": "TECHNICIEN NÉCESSAIRE"
+  },
+  {
+   "a": "100%",
+   "b": "ACOUSTIQUE"
+  }
  ],
  "played_at": "NOUS AVONS JOUÉ À",
  "festivals": [
-  [
-   "unterwegs.png",
-   "Unterwegs Theater Festival",
-   "Mühlheim et Dreieich (DE) · 2026"
-  ],
-  [
-   "sommerwerft.png",
-   "Sommerwerft Theaterfestival",
-   "Francfort-sur-le-Main (DE) · 2026"
-  ],
-  [
-   "fira-vapor.png",
-   "Fira del Vapor",
-   "Sant Vicenç de Castellet (ES) · 2026"
-  ]
+  {
+   "a": "unterwegs.png",
+   "b": "Unterwegs Theater Festival",
+   "c": "Mühlheim et Dreieich (DE) · 2026"
+  },
+  {
+   "a": "sommerwerft.png",
+   "b": "Sommerwerft Theaterfestival",
+   "c": "Francfort-sur-le-Main (DE) · 2026"
+  },
+  {
+   "a": "fira-vapor.png",
+   "b": "Fira del Vapor",
+   "c": "Sant Vicenç de Castellet (ES) · 2026"
+  }
  ],
  "street_kicker": "DANS LA RUE",
  "street_title": "La rue est à tout le monde",
@@ -80,48 +80,48 @@
  "updated": "MISE À JOUR OCTOBRE 2026",
  "tech_title": "Tout ce qu'il faut savoir",
  "getin": [
-  [
-   "MONTAGE · ENV. 2 H, LE JOUR MÊME",
-   "Déchargement 10′ · Installation 20′ · Balance 30′ · Maquillage et costumes 60′"
-  ],
-  [
-   "DÉMONTAGE · ENV. 1 H",
-   "Démontage 20′ · Rangement des costumes 30′ · Chargement 10′"
-  ]
+  {
+   "a": "MONTAGE · ENV. 2 H, LE JOUR MÊME",
+   "b": "Déchargement 10′ · Installation 20′ · Balance 30′ · Maquillage et costumes 60′"
+  },
+  {
+   "a": "DÉMONTAGE · ENV. 1 H",
+   "b": "Démontage 20′ · Rangement des costumes 30′ · Chargement 10′"
+  }
  ],
  "tech": [
-  [
-   "DURÉE",
-   "Passages de 30 minutes, jusqu'à trois par jour, toujours avec 10 minutes de pause entre les passages."
-  ],
-  [
-   "ESPACE ET PARCOURS",
-   "Rue ou place, au niveau du public. Le parcours peut comporter des rampes et des marches, mais il est préférable qu'il soit plat."
-  ],
-  [
-   "HORAIRES ET CHALEUR",
-   "De jour comme de nuit. En été, évitez de programmer entre 12 h et 19 h en plein soleil ; à l'ombre, c'est possible."
-  ],
-  [
-   "SON",
-   "A) Déambulation acoustique : sans amplification.\nB) Amplifiée sur la place (Concert au milieu du public) : la compagnie apporte 8 micros sans fil ; sonorisation de l'organisation."
-  ],
-  [
-   "LUMIÈRE",
-   "La compagnie s'adapte à l'éclairage de la rue. Aucune installation extérieure n'est nécessaire."
-  ],
-  [
-   "PLUIE",
-   "Sous la pluie, on ne peut pas jouer à cause des instruments. La compagnie peut attendre et jouer plus tard ou un autre jour. Une rue mouillée ne pose pas de problème. Alternative : une grande salle d'au moins 5 m de hauteur."
-  ],
-  [
-   "LOGISTIQUE",
-   "Parking pour 2 voitures (en avion : transport sur place à convenir). Loge pour 8 avec tables de maquillage (la compagnie peut apporter miroirs et lumières)."
-  ],
-  [
-   "REPAS",
-   "2 sans viande (peut contenir poisson, œufs et produits laitiers), 6 sans régime particulier."
-  ]
+  {
+   "a": "DURÉE",
+   "b": "Passages de 30 minutes, jusqu'à trois par jour, toujours avec 10 minutes de pause entre les passages."
+  },
+  {
+   "a": "ESPACE ET PARCOURS",
+   "b": "Rue ou place, au niveau du public. Le parcours peut comporter des rampes et des marches, mais il est préférable qu'il soit plat."
+  },
+  {
+   "a": "HORAIRES ET CHALEUR",
+   "b": "De jour comme de nuit. En été, évitez de programmer entre 12 h et 19 h en plein soleil ; à l'ombre, c'est possible."
+  },
+  {
+   "a": "SON",
+   "b": "A) Déambulation acoustique : sans amplification.\nB) Amplifiée sur la place (Concert au milieu du public) : la compagnie apporte 8 micros sans fil ; sonorisation de l'organisation."
+  },
+  {
+   "a": "LUMIÈRE",
+   "b": "La compagnie s'adapte à l'éclairage de la rue. Aucune installation extérieure n'est nécessaire."
+  },
+  {
+   "a": "PLUIE",
+   "b": "Sous la pluie, on ne peut pas jouer à cause des instruments. La compagnie peut attendre et jouer plus tard ou un autre jour. Une rue mouillée ne pose pas de problème. Alternative : une grande salle d'au moins 5 m de hauteur."
+  },
+  {
+   "a": "LOGISTIQUE",
+   "b": "Parking pour 2 voitures (en avion : transport sur place à convenir). Loge pour 8 avec tables de maquillage (la compagnie peut apporter miroirs et lumières)."
+  },
+  {
+   "a": "REPAS",
+   "b": "2 sans viande (peut contenir poisson, œufs et produits laitiers), 6 sans régime particulier."
+  }
  ],
  "tech_note": "La compagnie apporte tout le matériel : échasses, monocycle, accessoires de jonglage, instruments, accessoires de jeu, maquillage et costumes.",
  "crew_kicker": "QUI SOMMES-NOUS",
@@ -138,57 +138,57 @@
  },
  "credits_lab": "DISTRIBUTION",
  "credits": [
-  [
-   "Direction artistique",
-   "tyle fernández"
-  ],
-  [
-   "Musique et son",
-   "Cia. VENDAVAL"
-  ],
-  [
-   "Costumes",
-   "Imaginario de Mónica (Mónica Romero)"
-  ],
-  [
-   "Graphisme",
-   "bicialta"
-  ],
-  [
-   "Photographie",
-   "ROAR (David Ugalde) · Barbara Walzer · Jordi Largo · Albert Garcia"
-  ],
-  [
-   "Coproduction",
-   "Cia. Filigranes"
-  ],
-  [
-   "Production et diffusion",
-   "Cia. VENDAVAL · tyle fernández"
-  ]
+  {
+   "a": "Direction artistique",
+   "b": "tyle fernández"
+  },
+  {
+   "a": "Musique et son",
+   "b": "Cia. VENDAVAL"
+  },
+  {
+   "a": "Costumes",
+   "b": "Imaginario de Mónica (Mónica Romero)"
+  },
+  {
+   "a": "Graphisme",
+   "b": "bicialta"
+  },
+  {
+   "a": "Photographie",
+   "b": "ROAR (David Ugalde) · Barbara Walzer · Jordi Largo · Albert Garcia"
+  },
+  {
+   "a": "Coproduction",
+   "b": "Cia. Filigranes"
+  },
+  {
+   "a": "Production et diffusion",
+   "b": "Cia. VENDAVAL · tyle fernández"
+  }
  ],
  "track_lab": "PARCOURS",
  "track": [
-  [
-   "2024–25",
-   "Résidence musicale, Ateneu la Bòbila, Nou Barris (Barcelone)"
-  ],
-  [
-   "2025",
-   "Festes de Porta, Ateneu la Bòbila (Barcelone) · création"
-  ],
-  [
-   "2026",
-   "Unterwegs Theater Festival, Mühlheim et Dreieich (DE) · 4 passages"
-  ],
-  [
-   "2026",
-   "Fira del Vapor, Sant Vicenç de Castellet (ES) · 4 passages"
-  ],
-  [
-   "2026",
-   "Sommerwerft Theaterfestival, Francfort-sur-le-Main (DE) · 2 passages et ateliers"
-  ]
+  {
+   "a": "2024–25",
+   "b": "Résidence musicale, Ateneu la Bòbila, Nou Barris (Barcelone)"
+  },
+  {
+   "a": "2025",
+   "b": "Festes de Porta, Ateneu la Bòbila (Barcelone) · création"
+  },
+  {
+   "a": "2026",
+   "b": "Unterwegs Theater Festival, Mühlheim et Dreieich (DE) · 4 passages"
+  },
+  {
+   "a": "2026",
+   "b": "Fira del Vapor, Sant Vicenç de Castellet (ES) · 4 passages"
+  },
+  {
+   "a": "2026",
+   "b": "Sommerwerft Theaterfestival, Francfort-sur-le-Main (DE) · 2 passages et ateliers"
+  }
  ],
  "booking": "Diffusion",
  "contact_lab": "CONTACT",

@@ -6,6 +6,7 @@ import sys, json, io, base64, pathlib, asyncio, functools
 from PIL import Image, ImageOps
 from jinja2 import Environment, FileSystemLoader
 from playwright.async_api import async_playwright
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent)); import manual, texts   # PDFs replaced by hand are kept (see dossiers/manual.py)
 
 HERE = pathlib.Path(__file__).resolve().parent
 ROOT = HERE.parent.parent
@@ -60,7 +61,7 @@ def row_sizes(names, width, gap):
 env = Environment(loader=FileSystemLoader(str(HERE)), autoescape=True)
 
 def html(lang, kind):
-    t = json.loads((HERE/f'{lang}.json').read_text(encoding='utf-8'))
+    t = texts.load(HERE/f'{lang}.json')   # table rows: objects {a, b} in the file, rows [a, b] here
     foot = t['foot_d'] if kind == 'dossier' else t['foot_r']
     return env.get_template('template.html').render(t=t, lang=lang, kind=kind, foot=foot, P=PHOTOS, team=TEAM, support=SUPPORT,
                                                     site=site, img=img, logo=logo, font=font, row_sizes=row_sizes)
@@ -71,9 +72,10 @@ async def main(langs):
         pg = await b.new_page()
         for lang in langs:
             for kind in ('dossier', 'rider'):
+                out = OUT/f'VENDAVAL-Brass-Concert-Placa_{lang.upper()}_{kind}_{DATE}.pdf'
+                if manual.skip(out): continue
                 await pg.set_content(html(lang, kind), wait_until='load')
                 await pg.evaluate('document.fonts.ready')
-                out = OUT/f'VENDAVAL-Brass-Concert-Placa_{lang.upper()}_{kind}_{DATE}.pdf'
                 await pg.pdf(path=str(out), print_background=True, prefer_css_page_size=True)
                 print(out.relative_to(ROOT))
         await b.close()

@@ -13,7 +13,7 @@ Goal: one change → every language, every PDF and the website say the same thin
 ## 3. Change the sources, in all 7 languages at once
 | What | Where |
 |---|---|
-| Website texts | `content/i18n/<lang>.json` (ca es en de fr it pt ja) |
+| Website texts | `content/i18n/<lang>.json` (ca es en de fr it ja) |
 | Dates, shows, photos, links, credits, downloads | `content/data.json` |
 | Dossiers made here | `dossiers/<name>/<lang>.md` and the copies in the project |
 | PDFs made elsewhere | see "Made outside this generator" at the end of the check report: these need a manual edit or a rebuild |
@@ -55,3 +55,21 @@ python3 tools/check.py                      # writes CHECK-REPORT.md
 - Previews are only made when missing. After changing a page's text or photo: `python3 build.py --og`.
 - Domain: while `site.domain_live` is false in content/data.json, links and previews use the GitHub address.
   When vendaval.cat points to GitHub, set it to true, rebuild and push (this adds the CNAME file), then tick "Enforce HTTPS".
+
+## Editing without code (admin, on-page editor, workflows) — since 21 Nov 2026
+- **www.VENDAVAL.cat/admin/** — start page; forms (Sveltia CMS, served from this site) for web texts, easy read, site data
+  (agenda, photos, artists, downloads, credits) and the dossier/rider texts. Each Save = 1 commit. Login: one GitHub
+  fine-grained token (only `vendaval-web`, Contents: read and write) — steps on the start page. Only tyle has one.
+- **Any page + `#edit`** — tap a text, a photo or a PDF link; Publish = 1 commit. Same token.
+- After every push **build.yml** runs: `tools/translate.py --only=content` (CA↔ES↔EN with Softcatalà, the only "model", run inside
+  the GitHub job) → `build.py` → `check.py` → commits `docs/` → Pages build. House-style problems open a GitHub issue.
+  **dossiers.yml** (push to `dossiers/**`): translate dossier texts → `tools/dossier_ci.py` rebuilds only the changed
+  folders/languages → layout check (page count, text over the bottom photo strip; on failure the old PDF stays) → site build.
+- DE, FR, IT, JA are never machine-translated: see CHECK-REPORT.md §8. Translate, remove the entry from
+  `content/i18n/_needs-translation.json`; for dossiers, the PDF of that language is rebuilt when its text file changes.
+- Photos: originals in `source-images/`; `docs/img/.sources.json` remembers their hashes, so a replaced original (same name)
+  gets new web sizes and its ready-made copy in `static/img/` is removed. Photo fields accept a slug or a file name.
+- Calendar gigs (entries with `uid`) are changed in the Nextcloud calendar, not in the admin.
+- Forms changed? `python3 tools/make_config.py` (validates nothing by itself: check with Sveltia's JSON schema,
+  `npm pack @sveltia/cms` → `schema/sveltia-cms.json`). Update Sveltia: copy `dist/sveltia-cms.js` + `dist/chunks/` into
+  `static/admin/web/sveltia/`.

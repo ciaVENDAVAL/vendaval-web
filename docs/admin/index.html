@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>VENDAVAL · admin</title>
+  <link rel="icon" href="logo.png">
+  <style>
+    @font-face { font-family:"Bricolage"; src:url("../fonts/bricolage-grotesque-latin-800-normal.woff2") format("woff2"); font-weight:800; font-display:swap; }
+    @font-face { font-family:"Atkinson"; src:url("../fonts/atkinson-hyperlegible-latin-400-normal.woff2") format("woff2"); font-weight:400; font-display:swap; }
+    @font-face { font-family:"Atkinson"; src:url("../fonts/atkinson-hyperlegible-latin-700-normal.woff2") format("woff2"); font-weight:700; font-display:swap; }
+    :root { --navy:#082f40; --navy2:#0e3d52; --ink:#fff; --text:rgb(255 255 255/.86); --muted:rgb(255 255 255/.62); --line:rgb(255 255 255/.18); --teal:#1ab3bf; --yellow:#f4b740; --red:#e8492e; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--navy); color:var(--text); font:400 1.05rem/1.55 "Atkinson",system-ui,sans-serif; padding:clamp(1.25rem,5vw,4rem); }
+    main { max-width:56rem; margin:0 auto; }
+    .label { font-size:.8rem; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin:0 0 .8rem; }
+    h1 { font:800 clamp(2.2rem,8vw,4.2rem)/.95 "Bricolage",sans-serif; color:var(--ink); margin:0 0 2.2rem; display:flex; align-items:center; gap:1rem; }
+    /* logo on white, with a white border so the navy background never swallows it */
+    h1 img { width:clamp(56px,10vw,92px); height:auto; background:#fff; border:4px solid #fff; border-radius:14px; }
+    h2 { color:var(--ink); font-weight:700; font-size:1.3rem; margin:0 0 .3rem; }
+    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(15rem,1fr)); gap:1rem; margin-bottom:2.5rem; }
+    .card { display:block; background:var(--navy2); border:1px solid var(--line); border-radius:14px; padding:1.4rem; text-decoration:none; color:var(--text); transition:border-color .15s, transform .15s; }
+    .card:hover, .card:focus-visible { border-color:var(--yellow); transform:translateY(-2px); }
+    .card--main { border-color:var(--yellow); }
+    .card h2::after { content:" →"; color:var(--yellow); }
+    .card ul { margin:.7rem 0 0; padding-left:1.1rem; color:var(--muted); font-size:.95rem; }
+    a { color:var(--yellow); }
+    details { border-top:1px solid var(--line); padding:1rem 0; }
+    details:last-of-type { border-bottom:1px solid var(--line); }
+    summary { cursor:pointer; color:var(--ink); font-size:1.1rem; font-weight:700; }
+    details ol, details ul { padding-left:1.3rem; }
+    details li { margin:.4rem 0; }
+    code { font:.88em ui-monospace,monospace; background:var(--navy2); padding:.1em .35em; border-radius:4px; color:var(--ink); }
+    .foot { margin-top:2.5rem; font-size:.8rem; color:var(--muted); }
+  </style>
+</head>
+<body>
+<main>
+  <p class="label">Cia. VENDAVAL · www.VENDAVAL.cat</p>
+  <h1><img src="logo.png" alt="">Admin</h1>
+
+  <div class="cards">
+    <a class="card card--main" href="../ca/#edit">
+      <h2>Edit on the page</h2>
+      <p>The real website, editable</p>
+      <ul>
+        <li>Tap any text and type</li>
+        <li>Tap a photo or a PDF link to replace it (or “Photos” in the bar)</li>
+        <li>Move between pages and languages, then <b>Publish</b> once</li>
+        <li>Easy-read texts: switch on <i>Easy read</i> in the accessibility menu first</li>
+      </ul>
+    </a>
+    <a class="card" href="web/#/collections/texts">
+      <h2>Web texts</h2>
+      <p>Every text in the 7 languages</p>
+      <ul>
+        <li>Catalan next to the others</li>
+        <li>Easy read (accessibility option)</li>
+      </ul>
+    </a>
+    <a class="card" href="web/#/collections/data">
+      <h2>Site data</h2>
+      <p>Agenda, photos, artists, PDFs</p>
+      <ul>
+        <li>Agenda (gigs typed by hand)</li>
+        <li>Big photos, show photos, galleries</li>
+        <li>Artists, workshops, credits, social links</li>
+        <li>Which PDF each short link gives</li>
+      </ul>
+    </a>
+    <a class="card" href="web/#/collections/dossiers">
+      <h2>Dossiers &amp; riders</h2>
+      <p>Texts of the PDFs</p>
+      <ul>
+        <li>Save → the changed PDFs are rebuilt by themselves (3–5 min)</li>
+        <li>Layout checked: if a text no longer fits, the old PDF stays</li>
+      </ul>
+    </a>
+  </div>
+
+  <details>
+    <summary>First time: how to sign in</summary>
+    <p>You sign in with a <b>GitHub token</b> (a long password made for this). You paste it once per browser; it stays there until you sign out. The same token works for the forms and for <i>Edit on the page</i>.</p>
+    <ol>
+      <li>Sign in to GitHub with your account (member of <b>ciaVENDAVAL</b>).</li>
+      <li>Open <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">New fine-grained token</a>.</li>
+      <li><b>Token name:</b> <code>VENDAVAL admin</code>. <b>Expiration:</b> up to one year (put a reminder in the calendar).</li>
+      <li><b>Resource owner:</b> <code>ciaVENDAVAL</code>.</li>
+      <li><b>Repository access:</b> <i>Only select repositories</i> → <code>vendaval-web</code>.</li>
+      <li><b>Permissions → Repository permissions → Contents:</b> <i>Read and write</i>.</li>
+      <li><b>Generate token</b>, copy it, open <i>Web texts</i> above, choose <b>Sign In Using Access Token</b> and paste it.</li>
+    </ol>
+    <p>If ciaVENDAVAL doesn't allow fine-grained tokens, use a <a href="https://github.com/settings/tokens/new?scopes=public_repo&amp;description=VENDAVAL%20admin" target="_blank" rel="noopener">classic token</a> with only <code>public_repo</code> ticked.</p>
+    <p>Keep the token private, like a password. If it leaks, delete it on GitHub (Settings → Developer settings) and make a new one.</p>
+  </details>
+
+  <details>
+    <summary>How it works</summary>
+    <ul>
+      <li>Each <b>Save</b> (or <b>Publish</b> on the page) is one change on GitHub. The website is rebuilt automatically and shows it after about <b>3 minutes</b> (reload the page). Everything stays in GitHub's history, so anything can be undone.</li>
+      <li><b>Translations:</b> a text changed in <b>CA, ES or EN</b> is translated into the other two of these by Softcatalà's free, open-source translator, inside the same GitHub job (no Google, no Amazon, no AI service). <b>Check the result.</b> To fix only one language, untick <i>Translate</i> in the on-page editor, or change CA, ES and EN in the same save.</li>
+      <li><b>DE, FR, IT, JA are never machine-translated:</b> they keep the old text, and the text goes on the list “Texts that need translation” (CHECK-REPORT.md §8, file <code>content/i18n/_needs-translation.json</code>). Ask a Claude session or a native speaker to translate them.</li>
+      <li><b>Agenda:</b> confirmed gigs come from the Nextcloud calendar. Change their date and place <b>in the calendar</b>, not here (here they are overwritten at the next sync). Gigs typed here by hand stay.</li>
+      <li><b>Photos:</b> upload the original as it is (it is never cropped); the web sizes are made automatically. To <b>replace</b> a photo everywhere: tap it with <i>Edit on the page</i>, or <i>Assets → Photos (originals)</i> → upload a file with the <b>same name</b> → <i>Replace</i>. Credit the photographer (Site data → Credits).</li>
+      <li><b>PDFs:</b> normally they are built from the texts in <i>Dossiers &amp; riders</i>. A PDF made elsewhere can replace one (same file name: with <i>Edit on the page</i>, tap the PDF link). It is then marked “replaced by hand” and the scripts don't overwrite it until its text is updated. Max. 3 MB. Never fees or private data: this website is public.</li>
+      <li>If a check finds a house-style problem (VENDAVAL in capitals, tyle lowercase, no “tothom”…), the site is still published and an <i>issue</i> opens on GitHub.</li>
+      <li>On a phone it works too: in the forms the menu is behind ☰.</li>
+    </ul>
+  </details>
+
+  <p class="foot">Forms: <a href="https://sveltiacms.app" target="_blank" rel="noopener">Sveltia CMS</a> (open source, served from this site) · repo ciaVENDAVAL/vendaval-web · <a href="https://github.com/ciaVENDAVAL/vendaval-web/commits/main" target="_blank" rel="noopener">history of changes</a> · <a href="https://github.com/ciaVENDAVAL/vendaval-web/actions" target="_blank" rel="noopener">build status</a></p>
+</main>
+</body>
+</html>

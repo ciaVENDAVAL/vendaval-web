@@ -4,22 +4,22 @@
  "fmt": "KONZERT MITTEN IM PUBLIKUM",
  "title": "Livemusik<br>mitten im Publikum",
  "kf": [
-  [
-   "8",
-   "DARSTELLENDE"
-  ],
-  [
-   "30′",
-   "MAX. 2 DURCHGÄNGE"
-  ],
-  [
-   "8",
-   "FUNKMIKROFONE"
-  ],
-  [
-   "PLATZ",
-   "VOR DER BÜHNE"
-  ]
+  {
+   "a": "8",
+   "b": "DARSTELLENDE"
+  },
+  {
+   "a": "30′",
+   "b": "MAX. 2 DURCHGÄNGE"
+  },
+  {
+   "a": "8",
+   "b": "FUNKMIKROFONE"
+  },
+  {
+   "a": "PLATZ",
+   "b": "VOR DER BÜHNE"
+  }
  ],
  "show_kick": "Die Show",
  "show_h": "Die Party kommt von der Bühne",
@@ -96,45 +96,45 @@
  ],
  "cred_h": "Credits",
  "cred": [
-  [
-   "Musik und Sound",
-   "Cia. VENDAVAL"
-  ],
-  [
-   "Kleidung",
-   "Imaginario de Mónica (Mónica Romero)"
-  ],
-  [
-   "Grafikdesign",
-   "bicialta"
-  ],
-  [
-   "Fotografie",
-   "ROAR (David Ugalde) · Barbara Walzer · Jordi Largo"
-  ],
-  [
-   "Koproduktion",
-   "Cia. Filigranes"
-  ]
+  {
+   "a": "Musik und Sound",
+   "b": "Cia. VENDAVAL"
+  },
+  {
+   "a": "Kleidung",
+   "b": "Imaginario de Mónica (Mónica Romero)"
+  },
+  {
+   "a": "Grafikdesign",
+   "b": "bicialta"
+  },
+  {
+   "a": "Fotografie",
+   "b": "ROAR (David Ugalde) · Barbara Walzer · Jordi Largo"
+  },
+  {
+   "a": "Koproduktion",
+   "b": "Cia. Filigranes"
+  }
  ],
  "gigs_h": "Auftritte von VENDAVAL Brass",
  "gigs": [
-  [
-   "1. März 2025",
-   "Festes de Porta, Ateneu la Bòbila, Barcelona · <i>Premiere</i>"
-  ],
-  [
-   "8.–11. Mai 2026",
-   "Unterwegs Theater Festival, Mühlheim und Dreieich"
-  ],
-  [
-   "30.–31. Mai 2026",
-   "Fira del Vapor, Sant Vicenç de Castellet (Spanien)"
-  ],
-  [
-   "24.–26. Juli 2026",
-   "Sommerwerft Theater Festival, Frankfurt am Main"
-  ]
+  {
+   "a": "1. März 2025",
+   "b": "Festes de Porta, Ateneu la Bòbila, Barcelona · <i>Premiere</i>"
+  },
+  {
+   "a": "8.–11. Mai 2026",
+   "b": "Unterwegs Theater Festival, Mühlheim und Dreieich"
+  },
+  {
+   "a": "30.–31. Mai 2026",
+   "b": "Fira del Vapor, Sant Vicenç de Castellet (Spanien)"
+  },
+  {
+   "a": "24.–26. Juli 2026",
+   "b": "Sommerwerft Theater Festival, Frankfurt am Main"
+  }
  ],
  "con_h": "Kontakt",
  "con_role": "künstlerische Leitung · Booking",
@@ -146,22 +146,22 @@
  "r_upd": "Aktualisiert",
  "r_date": "22. Oktober 2026",
  "r_kf": [
-  [
-   "PLATZ",
-   "VOR DER BÜHNE"
-  ],
-  [
-   "JEDES ALTER",
-   "TAGSÜBER ODER ABENDS"
-  ],
-  [
-   "30′",
-   "MAX. 2 DURCHGÄNGE"
-  ],
-  [
-   "0–1",
-   "TONTECHNIK (FESTIVAL)"
-  ]
+  {
+   "a": "PLATZ",
+   "b": "VOR DER BÜHNE"
+  },
+  {
+   "a": "JEDES ALTER",
+   "b": "TAGSÜBER ODER ABENDS"
+  },
+  {
+   "a": "30′",
+   "b": "MAX. 2 DURCHGÄNGE"
+  },
+  {
+   "a": "0–1",
+   "b": "TONTECHNIK (FESTIVAL)"
+  }
  ],
  "s": [
   "Fläche",
@@ -208,33 +208,33 @@
  "s3": "Tagsüber nichts nötig. Abends allgemeine Beleuchtung des Platzes (vom Festival).",
  "mt_h": "Aufbau · ca. 2 Std.",
  "mt": [
-  [
-   "Ausladen",
-   "10′"
-  ],
-  [
-   "Soundcheck (vor den Konzerten)",
-   "60′"
-  ],
-  [
-   "Schminke und Verkleidung",
-   "60′"
-  ]
+  {
+   "a": "Ausladen",
+   "b": "10′"
+  },
+  {
+   "a": "Soundcheck (vor den Konzerten)",
+   "b": "60′"
+  },
+  {
+   "a": "Schminke und Verkleidung",
+   "b": "60′"
+  }
  ],
  "dm_h": "Abbau · ca. 1 Std.",
  "dm": [
-  [
-   "Abbau",
-   "20′"
-  ],
-  [
-   "Kleidung einpacken",
-   "30′"
-  ],
-  [
-   "Einladen",
-   "10′"
-  ]
+  {
+   "a": "Abbau",
+   "b": "20′"
+  },
+  {
+   "a": "Kleidung einpacken",
+   "b": "30′"
+  },
+  {
+   "a": "Einladen",
+   "b": "10′"
+  }
  ],
  "sets": "<b>Durchgänge:</b> je 30 Minuten, höchstens 2 am Tag, mit höchstens 1 Stunde Pause dazwischen (ideal für die Umbaupausen zwischen den Bands).",
  "s5": "Bei Regen kann die Band wegen der Instrumente und Mikrofone nicht draußen spielen. Die Compagnie kann warten, bis es aufhört, und später oder an einem anderen Tag spielen. Nasser Boden ist kein Problem. Alternative: eine große Halle mit mindestens 5 m Höhe.",

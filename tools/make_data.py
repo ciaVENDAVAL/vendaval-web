@@ -17,7 +17,7 @@ for sid, slug in [('brass','brass'),('joc','el-joc-etern'),('freakfrac','freak-f
     s = x['shows'][sid]; shows.append({'id': sid, 'slug': slug, **s})
 for g in x['workshop_groups']:
     if g['id'] == 'circus':
-        g['url'] = {'ca': 'https://ciafiligranes.net/tallers/', 'es': 'https://ciafiligranes.net/es/talleres', '*': 'https://ciafiligranes.net/en/workshops'}
+        g['url'] = {'ca': 'https://ciafiligranes.net/tallers/', 'es': 'https://ciafiligranes.net/es/talleres', 'all': 'https://ciafiligranes.net/en/workshops'}
 P = 'pdf/'
 def files(pattern, langs): return {l: P + pattern.format(L=l.upper()) for l in langs}
 data = {

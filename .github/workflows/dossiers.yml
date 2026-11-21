@@ -1,0 +1,85 @@
+# Dossier and rider PDFs: when their texts change (admin → "Dossiers & riders", or a Claude session),
+# translate (CA ↔ ES ↔ EN; DE/FR/IT/JA go on the needs-translation list and are NOT rebuilt until translated),
+# rebuild only the changed folders and languages (tools/dossier_ci.py), check the layout, rebuild the website, publish.
+# PDFs replaced by hand ("manual" in content/data.json) are kept; [rebuild-pdf] in the commit message rebuilds them too.
+# [no-pdf] skips this workflow. Separate from build.yml so a website text change doesn't wait for PDFs.
+name: Build dossiers
+on:
+  push:
+    branches: [main]
+    paths:
+      - "dossiers/**"
+      - "!dossiers/assets/**"
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+concurrency:
+  group: site-build
+  cancel-in-progress: false
+jobs:
+  pdfs:
+    if: ${{ !contains(github.event.head_commit.message, '[no-pdf]') }}
+    runs-on: ubuntu-latest
+    env:
+      NMT_MODELS: ${{ github.workspace }}/../nmt-models
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 30
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: |
+          sudo apt-get update -q && sudo apt-get install -yq libpango-1.0-0 libpangoft2-1.0-0
+          pip install jinja2 pillow pymupdf playwright markdown weasyprint ctranslate2 sentencepiece
+      - uses: actions/cache@v4
+        with:
+          path: ${{ github.workspace }}/../nmt-models
+          key: softcatala-nmt-2024-09-v1
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-v1
+      - run: python -m playwright install --with-deps chromium
+      - name: Where to start
+        env:
+          BEFORE: ${{ github.event.before }}
+        run: |
+          if [ -z "$BEFORE" ] || ! git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then BEFORE=HEAD~1; fi
+          echo "BEFORE=$BEFORE" >> "$GITHUB_ENV"
+      - name: Translate
+        if: ${{ !contains(github.event.head_commit.message, '[no-translate]') }}
+        env:
+          TRANSLATED_LIST: /tmp/translated.txt
+        run: python tools/translate.py "$BEFORE" --only=dossiers
+      - name: Build the changed PDFs
+        id: pdfs
+        env:
+          FORCE: ${{ contains(github.event.head_commit.message, '[rebuild-pdf]') && '--force' || '' }}
+        run: python tools/dossier_ci.py "$BEFORE" $FORCE || echo "failed=1" >> "$GITHUB_OUTPUT"
+      - name: Website (download sizes and dates) + check
+        run: |
+          python build.py
+          python tools/check.py > /dev/null
+      - name: Commit and publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git add dossiers content static/pdf docs LINKS.txt
+          if git diff --cached --quiet; then echo "Nothing to commit"; else
+            { echo "Build dossiers [no-translate] [no-pdf]"; echo; [ -s /tmp/translated.txt ] && { echo "Auto-translate (Softcatalà) — please check:"; cat /tmp/translated.txt; }; } > /tmp/msg.txt
+            git -c user.name="build bot" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -q -F /tmp/msg.txt
+            ok=0; for i in 1 2 3; do
+              # someone saved meanwhile: replay this commit on top (generated files: ours wins) and push again
+              if git pull -q --rebase -X theirs origin main && git push -q; then ok=1; break; fi
+              git rebase --abort 2>/dev/null; sleep 5
+            done
+            [ "$ok" = 1 ] || { echo "Could not push: run the workflow again (Actions → Run workflow)"; exit 1; }
+          fi
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" || true
+      - name: Layout check failed
+        if: ${{ steps.pdfs.outputs.failed == '1' }}
+        run: |
+          echo "A PDF failed the layout check (see the summary): the old PDF stays online. Shorten the text or ask a Claude session."
+          exit 1

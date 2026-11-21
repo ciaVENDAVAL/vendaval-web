@@ -4,22 +4,22 @@
  "fmt": "CONCIERTO ENTRE EL PÚBLICO",
  "title": "Música en directo<br>entre el público",
  "kf": [
-  [
-   "8",
-   "PERSONAS EN ESCENA"
-  ],
-  [
-   "30′",
-   "MÁX. 2 PASES"
-  ],
-  [
-   "8",
-   "MICRÓFONOS INALÁMBRICOS"
-  ],
-  [
-   "PLAZA",
-   "FRENTE AL ESCENARIO"
-  ]
+  {
+   "a": "8",
+   "b": "PERSONAS EN ESCENA"
+  },
+  {
+   "a": "30′",
+   "b": "MÁX. 2 PASES"
+  },
+  {
+   "a": "8",
+   "b": "MICRÓFONOS INALÁMBRICOS"
+  },
+  {
+   "a": "PLAZA",
+   "b": "FRENTE AL ESCENARIO"
+  }
  ],
  "show_kick": "El espectáculo",
  "show_h": "La fiesta baja del escenario",
@@ -96,45 +96,45 @@
  ],
  "cred_h": "Créditos",
  "cred": [
-  [
-   "Composición musical y sonido",
-   "Cia. VENDAVAL"
-  ],
-  [
-   "Vestuario",
-   "Imaginario de Mónica (Mónica Romero)"
-  ],
-  [
-   "Diseño gráfico",
-   "bicialta"
-  ],
-  [
-   "Fotografía",
-   "ROAR (David Ugalde) · Barbara Walzer · Jordi Largo"
-  ],
-  [
-   "Coproducción",
-   "Cia. Filigranes"
-  ]
+  {
+   "a": "Composición musical y sonido",
+   "b": "Cia. VENDAVAL"
+  },
+  {
+   "a": "Vestuario",
+   "b": "Imaginario de Mónica (Mónica Romero)"
+  },
+  {
+   "a": "Diseño gráfico",
+   "b": "bicialta"
+  },
+  {
+   "a": "Fotografía",
+   "b": "ROAR (David Ugalde) · Barbara Walzer · Jordi Largo"
+  },
+  {
+   "a": "Coproducción",
+   "b": "Cia. Filigranes"
+  }
  ],
  "gigs_h": "Actuaciones de VENDAVAL Brass",
  "gigs": [
-  [
-   "1 de marzo de 2025",
-   "Festes de Porta, Ateneu la Bòbila, Barcelona · <i>estreno</i>"
-  ],
-  [
-   "8–11 de mayo de 2026",
-   "Unterwegs Theater Festival, Mühlheim y Dreieich (Alemania)"
-  ],
-  [
-   "30 y 31 de mayo de 2026",
-   "Fira del Vapor, Sant Vicenç de Castellet"
-  ],
-  [
-   "24–26 de julio de 2026",
-   "Sommerwerft Theater Festival, Fráncfort del Meno (Alemania)"
-  ]
+  {
+   "a": "1 de marzo de 2025",
+   "b": "Festes de Porta, Ateneu la Bòbila, Barcelona · <i>estreno</i>"
+  },
+  {
+   "a": "8–11 de mayo de 2026",
+   "b": "Unterwegs Theater Festival, Mühlheim y Dreieich (Alemania)"
+  },
+  {
+   "a": "30 y 31 de mayo de 2026",
+   "b": "Fira del Vapor, Sant Vicenç de Castellet"
+  },
+  {
+   "a": "24–26 de julio de 2026",
+   "b": "Sommerwerft Theater Festival, Fráncfort del Meno (Alemania)"
+  }
  ],
  "con_h": "Contacto",
  "con_role": "dirección artística · contratación",
@@ -146,22 +146,22 @@
  "r_upd": "Actualizado",
  "r_date": "22 de octubre de 2026",
  "r_kf": [
-  [
-   "PLAZA",
-   "FRENTE AL ESCENARIO"
-  ],
-  [
-   "TODOS LOS PÚBLICOS",
-   "DE DÍA O DE NOCHE"
-  ],
-  [
-   "30′",
-   "MÁX. 2 PASES"
-  ],
-  [
-   "0–1",
-   "TÉCNICO DE SONIDO (FESTIVAL)"
-  ]
+  {
+   "a": "PLAZA",
+   "b": "FRENTE AL ESCENARIO"
+  },
+  {
+   "a": "TODOS LOS PÚBLICOS",
+   "b": "DE DÍA O DE NOCHE"
+  },
+  {
+   "a": "30′",
+   "b": "MÁX. 2 PASES"
+  },
+  {
+   "a": "0–1",
+   "b": "TÉCNICO DE SONIDO (FESTIVAL)"
+  }
  ],
  "s": [
   "Espacio",
@@ -208,33 +208,33 @@
  "s3": "De día, ninguna necesidad. De noche, luz general en la plaza (la del festival).",
  "mt_h": "Montaje · aprox. 2 h",
  "mt": [
-  [
-   "Descarga",
-   "10′"
-  ],
-  [
-   "Prueba de sonido (antes de los conciertos)",
-   "60′"
-  ],
-  [
-   "Maquillaje y vestuario",
-   "60′"
-  ]
+  {
+   "a": "Descarga",
+   "b": "10′"
+  },
+  {
+   "a": "Prueba de sonido (antes de los conciertos)",
+   "b": "60′"
+  },
+  {
+   "a": "Maquillaje y vestuario",
+   "b": "60′"
+  }
  ],
  "dm_h": "Desmontaje · aprox. 1 h",
  "dm": [
-  [
-   "Desmontaje",
-   "20′"
-  ],
-  [
-   "Recogida del vestuario",
-   "30′"
-  ],
-  [
-   "Carga",
-   "10′"
-  ]
+  {
+   "a": "Desmontaje",
+   "b": "20′"
+  },
+  {
+   "a": "Recogida del vestuario",
+   "b": "30′"
+  },
+  {
+   "a": "Carga",
+   "b": "10′"
+  }
  ],
  "sets": "<b>Pases:</b> 30 minutos cada uno, máximo 2 al día, con una pausa de como máximo 1 hora entre pases (ideal para los cambios de escenario entre bandas).",
  "s5": "Con lluvia no se puede tocar al aire libre, por los instrumentos y los micrófonos. La compañía puede esperar a que pare y tocar más tarde u otro día. El suelo mojado no impide el espectáculo. Alternativa: una sala grande con una altura mínima de 5 m.",

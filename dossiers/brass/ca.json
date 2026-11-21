@@ -5,40 +5,40 @@
  "cover_tag": "JOCS & MÚSICA EN VIU",
  "cover_format": "ITINERANT ACÚSTIC",
  "figures": [
-  [
-   "8",
-   "ARTISTES"
-  ],
-  [
-   "30′",
-   "PASSIS · DIVERSOS AL DIA"
-  ],
-  [
-   "0",
-   "TÈCNICS NECESSARIS"
-  ],
-  [
-   "100%",
-   "ACÚSTIC"
-  ]
+  {
+   "a": "8",
+   "b": "ARTISTES"
+  },
+  {
+   "a": "30′",
+   "b": "PASSIS · DIVERSOS AL DIA"
+  },
+  {
+   "a": "0",
+   "b": "TÈCNICS NECESSARIS"
+  },
+  {
+   "a": "100%",
+   "b": "ACÚSTIC"
+  }
  ],
  "played_at": "HEM ACTUAT A",
  "festivals": [
-  [
-   "unterwegs.png",
-   "Unterwegs Theater Festival",
-   "Mühlheim i Dreieich (DE) · 2026"
-  ],
-  [
-   "sommerwerft.png",
-   "Sommerwerft Theaterfestival",
-   "Frankfurt del Main (DE) · 2026"
-  ],
-  [
-   "fira-vapor.png",
-   "Fira del Vapor",
-   "Sant Vicenç de Castellet · 2026"
-  ]
+  {
+   "a": "unterwegs.png",
+   "b": "Unterwegs Theater Festival",
+   "c": "Mühlheim i Dreieich (DE) · 2026"
+  },
+  {
+   "a": "sommerwerft.png",
+   "b": "Sommerwerft Theaterfestival",
+   "c": "Frankfurt del Main (DE) · 2026"
+  },
+  {
+   "a": "fira-vapor.png",
+   "b": "Fira del Vapor",
+   "c": "Sant Vicenç de Castellet · 2026"
+  }
  ],
  "street_kicker": "AL CARRER",
  "street_title": "El carrer és de totes les persones",
@@ -80,48 +80,48 @@
  "updated": "ACTUALITZADA OCTUBRE 2026",
  "tech_title": "Tot el que cal saber",
  "getin": [
-  [
-   "MUNTATGE · APROX. 2 H, EL MATEIX DIA",
-   "Descàrrega 10′ · Muntatge 20′ · Prova de so 30′ · Maquillatge i vestuari 60′"
-  ],
-  [
-   "DESMUNTATGE · APROX. 1 H",
-   "Desmuntatge 20′ · Recollida del vestuari 30′ · Càrrega 10′"
-  ]
+  {
+   "a": "MUNTATGE · APROX. 2 H, EL MATEIX DIA",
+   "b": "Descàrrega 10′ · Muntatge 20′ · Prova de so 30′ · Maquillatge i vestuari 60′"
+  },
+  {
+   "a": "DESMUNTATGE · APROX. 1 H",
+   "b": "Desmuntatge 20′ · Recollida del vestuari 30′ · Càrrega 10′"
+  }
  ],
  "tech": [
-  [
-   "DURADA",
-   "Passis de 30 minuts, fins a tres al dia, sempre amb 10 minuts de pausa entre passis."
-  ],
-  [
-   "ESPAI I RECORREGUT",
-   "Carrer o plaça, al mateix nivell que el públic. El recorregut pot incloure rampes i escales, però és millor si és pla."
-  ],
-  [
-   "HORARI I CALOR",
-   "De dia o de nit. A l'estiu, eviteu programar entre les 12 h i les 19 h al sol directe; a l'ombra sí que és possible."
-  ],
-  [
-   "SO",
-   "A) Itinerant acústic: sense amplificació.\nB) Amplificat a la plaça (Concert enmig del públic): la companyia porta 8 micròfons sense fils; PA de l'organització."
-  ],
-  [
-   "IL·LUMINACIÓ",
-   "La companyia s'adapta a la il·luminació del carrer. No cal cap instal·lació externa."
-  ],
-  [
-   "PLUJA",
-   "Sota la pluja no es pot tocar pels instruments. La companyia pot esperar que pari i actuar més tard o un altre dia. El carrer mullat no és cap problema. Alternativa: una sala gran d'almenys 5 m d'alçada."
-  ],
-  [
-   "LOGÍSTICA",
-   "Pàrquing per a 2 cotxes (si venim en avió, transport local a acordar). Vestidor per a 8 persones amb taules per maquillar-se (la companyia pot portar miralls i llums)."
-  ],
-  [
-   "ÀPATS",
-   "2 sense carn (pot incloure peix, ous i làctics), 6 sense dieta específica."
-  ]
+  {
+   "a": "DURADA",
+   "b": "Passis de 30 minuts, fins a tres al dia, sempre amb 10 minuts de pausa entre passis."
+  },
+  {
+   "a": "ESPAI I RECORREGUT",
+   "b": "Carrer o plaça, al mateix nivell que el públic. El recorregut pot incloure rampes i escales, però és millor si és pla."
+  },
+  {
+   "a": "HORARI I CALOR",
+   "b": "De dia o de nit. A l'estiu, eviteu programar entre les 12 h i les 19 h al sol directe; a l'ombra sí que és possible."
+  },
+  {
+   "a": "SO",
+   "b": "A) Itinerant acústic: sense amplificació.\nB) Amplificat a la plaça (Concert enmig del públic): la companyia porta 8 micròfons sense fils; PA de l'organització."
+  },
+  {
+   "a": "IL·LUMINACIÓ",
+   "b": "La companyia s'adapta a la il·luminació del carrer. No cal cap instal·lació externa."
+  },
+  {
+   "a": "PLUJA",
+   "b": "Sota la pluja no es pot tocar pels instruments. La companyia pot esperar que pari i actuar més tard o un altre dia. El carrer mullat no és cap problema. Alternativa: una sala gran d'almenys 5 m d'alçada."
+  },
+  {
+   "a": "LOGÍSTICA",
+   "b": "Pàrquing per a 2 cotxes (si venim en avió, transport local a acordar). Vestidor per a 8 persones amb taules per maquillar-se (la companyia pot portar miralls i llums)."
+  },
+  {
+   "a": "ÀPATS",
+   "b": "2 sense carn (pot incloure peix, ous i làctics), 6 sense dieta específica."
+  }
  ],
  "tech_note": "La companyia aporta tot el material escènic: xanques, monocicle, malabars, instruments, atrezzo per als jocs, maquillatge i vestuari.",
  "crew_kicker": "QUI SOM",
@@ -138,57 +138,57 @@
  },
  "credits_lab": "FITXA ARTÍSTICA",
  "credits": [
-  [
-   "Direcció artística",
-   "tyle fernández"
-  ],
-  [
-   "Composició musical i so",
-   "Cia. VENDAVAL"
-  ],
-  [
-   "Vestuari",
-   "Imaginario de Mónica (Mónica Romero)"
-  ],
-  [
-   "Disseny gràfic",
-   "bicialta"
-  ],
-  [
-   "Fotografia",
-   "ROAR (David Ugalde) · Barbara Walzer · Jordi Largo · Albert Garcia"
-  ],
-  [
-   "Coproducció",
-   "Cia. Filigranes"
-  ],
-  [
-   "Producció i distribució",
-   "Cia. VENDAVAL · tyle fernández"
-  ]
+  {
+   "a": "Direcció artística",
+   "b": "tyle fernández"
+  },
+  {
+   "a": "Composició musical i so",
+   "b": "Cia. VENDAVAL"
+  },
+  {
+   "a": "Vestuari",
+   "b": "Imaginario de Mónica (Mónica Romero)"
+  },
+  {
+   "a": "Disseny gràfic",
+   "b": "bicialta"
+  },
+  {
+   "a": "Fotografia",
+   "b": "ROAR (David Ugalde) · Barbara Walzer · Jordi Largo · Albert Garcia"
+  },
+  {
+   "a": "Coproducció",
+   "b": "Cia. Filigranes"
+  },
+  {
+   "a": "Producció i distribució",
+   "b": "Cia. VENDAVAL · tyle fernández"
+  }
  ],
  "track_lab": "TRAJECTÒRIA",
  "track": [
-  [
-   "2024–25",
-   "Residència musical, Ateneu la Bòbila, Nou Barris (Barcelona)"
-  ],
-  [
-   "2025",
-   "Festes de Porta, Ateneu la Bòbila (Barcelona) · estrena"
-  ],
-  [
-   "2026",
-   "Unterwegs Theater Festival, Mühlheim i Dreieich (DE) · 4 passis"
-  ],
-  [
-   "2026",
-   "Fira del Vapor, Sant Vicenç de Castellet · 4 passis"
-  ],
-  [
-   "2026",
-   "Sommerwerft Theaterfestival, Frankfurt del Main (DE) · 2 passis i tallers"
-  ]
+  {
+   "a": "2024–25",
+   "b": "Residència musical, Ateneu la Bòbila, Nou Barris (Barcelona)"
+  },
+  {
+   "a": "2025",
+   "b": "Festes de Porta, Ateneu la Bòbila (Barcelona) · estrena"
+  },
+  {
+   "a": "2026",
+   "b": "Unterwegs Theater Festival, Mühlheim i Dreieich (DE) · 4 passis"
+  },
+  {
+   "a": "2026",
+   "b": "Fira del Vapor, Sant Vicenç de Castellet · 4 passis"
+  },
+  {
+   "a": "2026",
+   "b": "Sommerwerft Theaterfestival, Frankfurt del Main (DE) · 2 passis i tallers"
+  }
  ],
  "booking": "Contractació",
  "contact_lab": "CONTACTE",

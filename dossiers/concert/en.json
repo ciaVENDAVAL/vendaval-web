@@ -4,22 +4,22 @@
  "fmt": "CONCERT IN THE AUDIENCE",
  "title": "Live music<br>in the crowd",
  "kf": [
-  [
-   "8",
-   "PERFORMERS"
-  ],
-  [
-   "30′",
-   "MAX. 2 SETS"
-  ],
-  [
-   "8",
-   "WIRELESS MICS"
-  ],
-  [
-   "SQUARE",
-   "IN FRONT OF THE STAGE"
-  ]
+  {
+   "a": "8",
+   "b": "PERFORMERS"
+  },
+  {
+   "a": "30′",
+   "b": "MAX. 2 SETS"
+  },
+  {
+   "a": "8",
+   "b": "WIRELESS MICS"
+  },
+  {
+   "a": "SQUARE",
+   "b": "IN FRONT OF THE STAGE"
+  }
  ],
  "show_kick": "The show",
  "show_h": "The party comes down off the stage",
@@ -96,45 +96,45 @@
  ],
  "cred_h": "Credits",
  "cred": [
-  [
-   "Music and sound",
-   "Cia. VENDAVAL"
-  ],
-  [
-   "Clothing",
-   "Imaginario de Mónica (Mónica Romero)"
-  ],
-  [
-   "Graphic design",
-   "bicialta"
-  ],
-  [
-   "Photography",
-   "ROAR (David Ugalde) · Barbara Walzer · Jordi Largo"
-  ],
-  [
-   "Co-production",
-   "Cia. Filigranes"
-  ]
+  {
+   "a": "Music and sound",
+   "b": "Cia. VENDAVAL"
+  },
+  {
+   "a": "Clothing",
+   "b": "Imaginario de Mónica (Mónica Romero)"
+  },
+  {
+   "a": "Graphic design",
+   "b": "bicialta"
+  },
+  {
+   "a": "Photography",
+   "b": "ROAR (David Ugalde) · Barbara Walzer · Jordi Largo"
+  },
+  {
+   "a": "Co-production",
+   "b": "Cia. Filigranes"
+  }
  ],
  "gigs_h": "VENDAVAL Brass performances",
  "gigs": [
-  [
-   "1 March 2025",
-   "Festes de Porta, Ateneu la Bòbila, Barcelona · <i>premiere</i>"
-  ],
-  [
-   "8–11 May 2026",
-   "Unterwegs Theater Festival, Mühlheim and Dreieich (Germany)"
-  ],
-  [
-   "30–31 May 2026",
-   "Fira del Vapor, Sant Vicenç de Castellet"
-  ],
-  [
-   "24–26 July 2026",
-   "Sommerwerft Theater Festival, Frankfurt am Main (Germany)"
-  ]
+  {
+   "a": "1 March 2025",
+   "b": "Festes de Porta, Ateneu la Bòbila, Barcelona · <i>premiere</i>"
+  },
+  {
+   "a": "8–11 May 2026",
+   "b": "Unterwegs Theater Festival, Mühlheim and Dreieich (Germany)"
+  },
+  {
+   "a": "30–31 May 2026",
+   "b": "Fira del Vapor, Sant Vicenç de Castellet"
+  },
+  {
+   "a": "24–26 July 2026",
+   "b": "Sommerwerft Theater Festival, Frankfurt am Main (Germany)"
+  }
  ],
  "con_h": "Contact",
  "con_role": "artistic direction · booking",
@@ -146,22 +146,22 @@
  "r_upd": "Updated",
  "r_date": "22 October 2026",
  "r_kf": [
-  [
-   "SQUARE",
-   "IN FRONT OF THE STAGE"
-  ],
-  [
-   "ALL AGES",
-   "DAY OR NIGHT"
-  ],
-  [
-   "30′",
-   "MAX. 2 SETS"
-  ],
-  [
-   "0–1",
-   "SOUND ENGINEER (FESTIVAL)"
-  ]
+  {
+   "a": "SQUARE",
+   "b": "IN FRONT OF THE STAGE"
+  },
+  {
+   "a": "ALL AGES",
+   "b": "DAY OR NIGHT"
+  },
+  {
+   "a": "30′",
+   "b": "MAX. 2 SETS"
+  },
+  {
+   "a": "0–1",
+   "b": "SOUND ENGINEER (FESTIVAL)"
+  }
  ],
  "s": [
   "Space",
@@ -208,33 +208,33 @@
  "s3": "Daytime: nothing needed. At night: general lighting on the square (the festival's).",
  "mt_h": "Get-in · approx. 2 h",
  "mt": [
-  [
-   "Unload",
-   "10′"
-  ],
-  [
-   "Sound check (before the concerts)",
-   "60′"
-  ],
-  [
-   "Make-up and costume",
-   "60′"
-  ]
+  {
+   "a": "Unload",
+   "b": "10′"
+  },
+  {
+   "a": "Sound check (before the concerts)",
+   "b": "60′"
+  },
+  {
+   "a": "Make-up and costume",
+   "b": "60′"
+  }
  ],
  "dm_h": "Get-out · approx. 1 h",
  "dm": [
-  [
-   "Derig",
-   "20′"
-  ],
-  [
-   "Pack costumes",
-   "30′"
-  ],
-  [
-   "Load",
-   "10′"
-  ]
+  {
+   "a": "Derig",
+   "b": "20′"
+  },
+  {
+   "a": "Pack costumes",
+   "b": "30′"
+  },
+  {
+   "a": "Load",
+   "b": "10′"
+  }
  ],
  "sets": "<b>Sets:</b> 30 minutes each, maximum 2 a day, with a break of up to 1 hour between sets (ideal for the stage changeovers between bands).",
  "s5": "The band can't play outdoors in the rain, because of the instruments and microphones. The company can wait for it to stop and play later or another day. Wet ground is fine. Alternative: a large hall at least 5 m high.",

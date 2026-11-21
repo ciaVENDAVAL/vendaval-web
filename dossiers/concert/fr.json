@@ -4,22 +4,22 @@
  "fmt": "CONCERT AU MILIEU DU PUBLIC",
  "title": "Musique live<br>au milieu du public",
  "kf": [
-  [
-   "8",
-   "ARTISTES"
-  ],
-  [
-   "30′",
-   "2 PASSAGES MAX."
-  ],
-  [
-   "8",
-   "MICROS SANS FIL"
-  ],
-  [
-   "PLACE",
-   "DEVANT LA SCÈNE"
-  ]
+  {
+   "a": "8",
+   "b": "ARTISTES"
+  },
+  {
+   "a": "30′",
+   "b": "2 PASSAGES MAX."
+  },
+  {
+   "a": "8",
+   "b": "MICROS SANS FIL"
+  },
+  {
+   "a": "PLACE",
+   "b": "DEVANT LA SCÈNE"
+  }
  ],
  "show_kick": "Le spectacle",
  "show_h": "La fête descend de la scène",
@@ -96,45 +96,45 @@
  ],
  "cred_h": "Crédits",
  "cred": [
-  [
-   "Musique et son",
-   "Cia. VENDAVAL"
-  ],
-  [
-   "Costumes",
-   "Imaginario de Mónica (Mónica Romero)"
-  ],
-  [
-   "Graphisme",
-   "bicialta"
-  ],
-  [
-   "Photographie",
-   "ROAR (David Ugalde) · Barbara Walzer · Jordi Largo"
-  ],
-  [
-   "Coproduction",
-   "Cia. Filigranes"
-  ]
+  {
+   "a": "Musique et son",
+   "b": "Cia. VENDAVAL"
+  },
+  {
+   "a": "Costumes",
+   "b": "Imaginario de Mónica (Mónica Romero)"
+  },
+  {
+   "a": "Graphisme",
+   "b": "bicialta"
+  },
+  {
+   "a": "Photographie",
+   "b": "ROAR (David Ugalde) · Barbara Walzer · Jordi Largo"
+  },
+  {
+   "a": "Coproduction",
+   "b": "Cia. Filigranes"
+  }
  ],
  "gigs_h": "Représentations de VENDAVAL Brass",
  "gigs": [
-  [
-   "1er mars 2025",
-   "Festes de Porta, Ateneu la Bòbila, Barcelone · <i>création</i>"
-  ],
-  [
-   "8–11 mai 2026",
-   "Unterwegs Theater Festival, Mühlheim et Dreieich (Allemagne)"
-  ],
-  [
-   "30–31 mai 2026",
-   "Fira del Vapor, Sant Vicenç de Castellet (Espagne)"
-  ],
-  [
-   "24–26 juillet 2026",
-   "Sommerwerft Theater Festival, Francfort-sur-le-Main (Allemagne)"
-  ]
+  {
+   "a": "1er mars 2025",
+   "b": "Festes de Porta, Ateneu la Bòbila, Barcelone · <i>création</i>"
+  },
+  {
+   "a": "8–11 mai 2026",
+   "b": "Unterwegs Theater Festival, Mühlheim et Dreieich (Allemagne)"
+  },
+  {
+   "a": "30–31 mai 2026",
+   "b": "Fira del Vapor, Sant Vicenç de Castellet (Espagne)"
+  },
+  {
+   "a": "24–26 juillet 2026",
+   "b": "Sommerwerft Theater Festival, Francfort-sur-le-Main (Allemagne)"
+  }
  ],
  "con_h": "Contact",
  "con_role": "direction artistique · diffusion",
@@ -146,22 +146,22 @@
  "r_upd": "Mise à jour",
  "r_date": "22 octobre 2026",
  "r_kf": [
-  [
-   "PLACE",
-   "DEVANT LA SCÈNE"
-  ],
-  [
-   "TOUT PUBLIC",
-   "DE JOUR OU DE NUIT"
-  ],
-  [
-   "30′",
-   "2 PASSAGES MAX."
-  ],
-  [
-   "0–1",
-   "TECHNICIEN·NE SON (FESTIVAL)"
-  ]
+  {
+   "a": "PLACE",
+   "b": "DEVANT LA SCÈNE"
+  },
+  {
+   "a": "TOUT PUBLIC",
+   "b": "DE JOUR OU DE NUIT"
+  },
+  {
+   "a": "30′",
+   "b": "2 PASSAGES MAX."
+  },
+  {
+   "a": "0–1",
+   "b": "TECHNICIEN·NE SON (FESTIVAL)"
+  }
  ],
  "s": [
   "Espace",
@@ -208,33 +208,33 @@
  "s3": "De jour, aucun besoin. De nuit, éclairage général de la place (celui du festival).",
  "mt_h": "Montage · env. 2 h",
  "mt": [
-  [
-   "Déchargement",
-   "10′"
-  ],
-  [
-   "Balance (avant les concerts)",
-   "60′"
-  ],
-  [
-   "Maquillage et costumes",
-   "60′"
-  ]
+  {
+   "a": "Déchargement",
+   "b": "10′"
+  },
+  {
+   "a": "Balance (avant les concerts)",
+   "b": "60′"
+  },
+  {
+   "a": "Maquillage et costumes",
+   "b": "60′"
+  }
  ],
  "dm_h": "Démontage · env. 1 h",
  "dm": [
-  [
-   "Démontage",
-   "20′"
-  ],
-  [
-   "Rangement des costumes",
-   "30′"
-  ],
-  [
-   "Chargement",
-   "10′"
-  ]
+  {
+   "a": "Démontage",
+   "b": "20′"
+  },
+  {
+   "a": "Rangement des costumes",
+   "b": "30′"
+  },
+  {
+   "a": "Chargement",
+   "b": "10′"
+  }
  ],
  "sets": "<b>Passages :</b> 30 minutes chacun, 2 par jour au maximum, avec une pause d'1 heure au plus entre les passages (idéal pour les changements de plateau entre groupes).",
  "s5": "Sous la pluie, la fanfare ne peut pas jouer en extérieur, à cause des instruments et des micros. La compagnie peut attendre la fin de l'averse et jouer plus tard ou un autre jour. Un sol mouillé ne pose pas de problème. Alternative : une grande salle d'au moins 5 m de hauteur.",

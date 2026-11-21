@@ -1,0 +1,90 @@
+# Website: after every change made in the admin (/admin/), with #edit on a page, or by a Claude session:
+# 1. translate (CA ↔ ES ↔ EN with Softcatalà's open models; DE/FR/IT/JA → content/i18n/_needs-translation.json)
+# 2. python3 build.py → docs/   3. python3 tools/check.py   4. commit docs/ + translations   5. ask Pages to rebuild.
+# No AI, no account: ordinary scripts. [no-translate] in a commit message skips step 1.
+name: Build website
+on:
+  push:
+    branches: [main]
+    paths:
+      - "content/**"
+      - "src/**"
+      - "static/**"
+      - "source-images/**"
+      - "build.py"
+      - "tools/og.py"
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  issues: write
+concurrency:
+  group: site-build
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      NMT_MODELS: ${{ github.workspace }}/../nmt-models
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 30
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install jinja2 pillow pymupdf playwright ctranslate2 sentencepiece
+      - name: Translation models (from softcatala.org once, then cached)
+        uses: actions/cache@v4
+        with:
+          path: ${{ github.workspace }}/../nmt-models
+          key: softcatala-nmt-2024-09-v1
+      - name: Browser for link previews (cached)
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-v1
+      - run: python -m playwright install --with-deps chromium
+      - name: Translate
+        if: ${{ !contains(github.event.head_commit.message, '[no-translate]') }}
+        env:
+          BEFORE: ${{ github.event.before }}
+          TRANSLATED_LIST: /tmp/translated.txt
+        run: |
+          if [ -z "$BEFORE" ] || ! git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then BEFORE=HEAD~1; fi
+          python tools/translate.py "$BEFORE" --only=content
+      - name: Build
+        run: python build.py
+      - name: Check
+        env:
+          CHECK_SUMMARY: /tmp/check.json
+        run: |
+          python tools/check.py > /dev/null
+          cat /tmp/check.json
+          { echo "## Check"; echo; cat /tmp/check.json; } >> "$GITHUB_STEP_SUMMARY"
+      - name: Commit and publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git add content docs static/img LINKS.txt
+          if git diff --cached --quiet; then echo "Nothing to commit"; else
+            { echo "Build website [no-translate]"; echo; [ -s /tmp/translated.txt ] && { echo "Auto-translate (Softcatalà) — please check:"; cat /tmp/translated.txt; }; } > /tmp/msg.txt
+            git -c user.name="build bot" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -q -F /tmp/msg.txt
+            ok=0; for i in 1 2 3; do
+              # someone saved meanwhile: replay this commit on top (generated files: ours wins) and push again
+              if git pull -q --rebase -X theirs origin main && git push -q; then ok=1; break; fi
+              git rebase --abort 2>/dev/null; sleep 5
+            done
+            [ "$ok" = 1 ] || { echo "Could not push: run the workflow again (Actions → Run workflow)"; exit 1; }
+          fi
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" || true
+      - name: House-style problems → issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          n=$(python -c "import json;d=json.load(open('/tmp/check.json'));print(d['style']+d['contact'])")
+          [ "$n" = "0" ] && exit 0
+          title="Website check: $n house-style / contact problems"
+          body="The automatic check after commit ${GITHUB_SHA::7} found problems. Run \`python3 tools/check.py\` (or ask a Claude session) and read CHECK-REPORT.md, sections 2 and 3. The website was published anyway."
+          num=$(gh issue list --state open --search "Website check in:title" --json number -q '.[0].number')
+          if [ -n "$num" ]; then gh issue comment "$num" --body "$body"; else gh issue create --title "$title" --body "$body"; fi

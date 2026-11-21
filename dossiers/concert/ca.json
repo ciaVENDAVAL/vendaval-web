@@ -4,22 +4,22 @@
  "fmt": "CONCERT ENMIG DEL PÚBLIC",
  "title": "Música en viu<br>enmig del públic",
  "kf": [
-  [
-   "8",
-   "PERSONES EN ESCENA"
-  ],
-  [
-   "30′",
-   "MÀX. 2 PASSIS"
-  ],
-  [
-   "8",
-   "MICRÒFONS SENSE FILS"
-  ],
-  [
-   "PLAÇA",
-   "DAVANT DE L'ESCENARI"
-  ]
+  {
+   "a": "8",
+   "b": "PERSONES EN ESCENA"
+  },
+  {
+   "a": "30′",
+   "b": "MÀX. 2 PASSIS"
+  },
+  {
+   "a": "8",
+   "b": "MICRÒFONS SENSE FILS"
+  },
+  {
+   "a": "PLAÇA",
+   "b": "DAVANT DE L'ESCENARI"
+  }
  ],
  "show_kick": "L'espectacle",
  "show_h": "La festa baixa de l'escenari",
@@ -96,45 +96,45 @@
  ],
  "cred_h": "Crèdits",
  "cred": [
-  [
-   "Composició musical i so",
-   "Cia. VENDAVAL"
-  ],
-  [
-   "Vestuari",
-   "Imaginario de Mónica (Mónica Romero)"
-  ],
-  [
-   "Disseny gràfic",
-   "bicialta"
-  ],
-  [
-   "Fotografia",
-   "ROAR (David Ugalde) · Barbara Walzer · Jordi Largo"
-  ],
-  [
-   "Coproducció",
-   "Cia. Filigranes"
-  ]
+  {
+   "a": "Composició musical i so",
+   "b": "Cia. VENDAVAL"
+  },
+  {
+   "a": "Vestuari",
+   "b": "Imaginario de Mónica (Mónica Romero)"
+  },
+  {
+   "a": "Disseny gràfic",
+   "b": "bicialta"
+  },
+  {
+   "a": "Fotografia",
+   "b": "ROAR (David Ugalde) · Barbara Walzer · Jordi Largo"
+  },
+  {
+   "a": "Coproducció",
+   "b": "Cia. Filigranes"
+  }
  ],
  "gigs_h": "Actuacions de VENDAVAL Brass",
  "gigs": [
-  [
-   "1 de març de 2025",
-   "Festes de Porta, Ateneu la Bòbila, Barcelona · <i>estrena</i>"
-  ],
-  [
-   "8–11 de maig de 2026",
-   "Unterwegs Theater Festival, Mühlheim i Dreieich (Alemanya)"
-  ],
-  [
-   "30 i 31 de maig de 2026",
-   "Fira del Vapor, Sant Vicenç de Castellet"
-  ],
-  [
-   "24–26 de juliol de 2026",
-   "Sommerwerft Theater Festival, Frankfurt del Main (Alemanya)"
-  ]
+  {
+   "a": "1 de març de 2025",
+   "b": "Festes de Porta, Ateneu la Bòbila, Barcelona · <i>estrena</i>"
+  },
+  {
+   "a": "8–11 de maig de 2026",
+   "b": "Unterwegs Theater Festival, Mühlheim i Dreieich (Alemanya)"
+  },
+  {
+   "a": "30 i 31 de maig de 2026",
+   "b": "Fira del Vapor, Sant Vicenç de Castellet"
+  },
+  {
+   "a": "24–26 de juliol de 2026",
+   "b": "Sommerwerft Theater Festival, Frankfurt del Main (Alemanya)"
+  }
  ],
  "con_h": "Contacte",
  "con_role": "direcció artística · contractació",
@@ -146,22 +146,22 @@
  "r_upd": "Actualitzat",
  "r_date": "22 d'octubre de 2026",
  "r_kf": [
-  [
-   "PLAÇA",
-   "DAVANT DE L'ESCENARI"
-  ],
-  [
-   "TOTS ELS PÚBLICS",
-   "DE DIA O DE NIT"
-  ],
-  [
-   "30′",
-   "MÀX. 2 PASSIS"
-  ],
-  [
-   "0–1",
-   "TÈCNIC DE SO (FESTIVAL)"
-  ]
+  {
+   "a": "PLAÇA",
+   "b": "DAVANT DE L'ESCENARI"
+  },
+  {
+   "a": "TOTS ELS PÚBLICS",
+   "b": "DE DIA O DE NIT"
+  },
+  {
+   "a": "30′",
+   "b": "MÀX. 2 PASSIS"
+  },
+  {
+   "a": "0–1",
+   "b": "TÈCNIC DE SO (FESTIVAL)"
+  }
  ],
  "s": [
   "Espai",
@@ -208,33 +208,33 @@
  "s3": "De dia, cap necessitat. De nit, llum general a la plaça (la del festival).",
  "mt_h": "Muntatge · aprox. 2 h",
  "mt": [
-  [
-   "Descàrrega",
-   "10′"
-  ],
-  [
-   "Prova de so (abans dels concerts)",
-   "60′"
-  ],
-  [
-   "Maquillatge i vestuari",
-   "60′"
-  ]
+  {
+   "a": "Descàrrega",
+   "b": "10′"
+  },
+  {
+   "a": "Prova de so (abans dels concerts)",
+   "b": "60′"
+  },
+  {
+   "a": "Maquillatge i vestuari",
+   "b": "60′"
+  }
  ],
  "dm_h": "Desmuntatge · aprox. 1 h",
  "dm": [
-  [
-   "Desmuntatge",
-   "20′"
-  ],
-  [
-   "Recollida del vestuari",
-   "30′"
-  ],
-  [
-   "Càrrega",
-   "10′"
-  ]
+  {
+   "a": "Desmuntatge",
+   "b": "20′"
+  },
+  {
+   "a": "Recollida del vestuari",
+   "b": "30′"
+  },
+  {
+   "a": "Càrrega",
+   "b": "10′"
+  }
  ],
  "sets": "<b>Passis:</b> 30 minuts cadascun, màxim 2 al dia, amb una pausa de com a màxim 1 hora entre passis (ideal per als canvis d'escenari entre bandes).",
  "s5": "Amb pluja no es pot tocar a l'aire lliure, pels instruments i els micròfons. La companyia pot esperar que pari i tocar més tard o un altre dia. El terra mullat no impedeix l'espectacle. Alternativa: una sala gran amb una alçada mínima de 5 m.",

@@ -12,6 +12,7 @@ import sys, json, re, base64, pathlib, asyncio, io
 import markdown
 from PIL import Image, ImageOps
 from playwright.async_api import async_playwright
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent)); import manual   # PDFs replaced by hand are kept (see dossiers/manual.py)
 
 HERE = pathlib.Path(__file__).parent
 ROOT = HERE.parent
@@ -143,9 +144,10 @@ async def build(key, langs):
         b = await p.chromium.launch()
         pg = await b.new_page()
         for lang in langs:
+            out = OUT / cfg['file'].format(name=cfg['names'].get(lang, cfg['names']['*']), L=lang.upper())
+            if manual.skip(out): continue
             html, name = render_html(cfg, lang)
             await pg.set_content(html, wait_until='load')
-            out = OUT / cfg['file'].format(name=cfg['names'].get(lang, cfg['names']['*']), L=lang.upper())
             pdf = await pg.pdf(format='A4', print_background=True, prefer_css_page_size=True)
             finish(pdf, out, name)
         await b.close()

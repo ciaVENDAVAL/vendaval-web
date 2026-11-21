@@ -5,40 +5,40 @@
  "cover_tag": "GIOCHI & MUSICA DAL VIVO",
  "cover_format": "PARATA ACUSTICA ITINERANTE",
  "figures": [
-  [
-   "8",
-   "ARTISTI"
-  ],
-  [
-   "30′",
-   "REPLICHE · PIÙ AL GIORNO"
-  ],
-  [
-   "0",
-   "TECNICI NECESSARI"
-  ],
-  [
-   "100%",
-   "ACUSTICO"
-  ]
+  {
+   "a": "8",
+   "b": "ARTISTI"
+  },
+  {
+   "a": "30′",
+   "b": "REPLICHE · PIÙ AL GIORNO"
+  },
+  {
+   "a": "0",
+   "b": "TECNICI NECESSARI"
+  },
+  {
+   "a": "100%",
+   "b": "ACUSTICO"
+  }
  ],
  "played_at": "ABBIAMO SUONATO A",
  "festivals": [
-  [
-   "unterwegs.png",
-   "Unterwegs Theater Festival",
-   "Mühlheim e Dreieich (DE) · 2026"
-  ],
-  [
-   "sommerwerft.png",
-   "Sommerwerft Theaterfestival",
-   "Francoforte sul Meno (DE) · 2026"
-  ],
-  [
-   "fira-vapor.png",
-   "Fira del Vapor",
-   "Sant Vicenç de Castellet (ES) · 2026"
-  ]
+  {
+   "a": "unterwegs.png",
+   "b": "Unterwegs Theater Festival",
+   "c": "Mühlheim e Dreieich (DE) · 2026"
+  },
+  {
+   "a": "sommerwerft.png",
+   "b": "Sommerwerft Theaterfestival",
+   "c": "Francoforte sul Meno (DE) · 2026"
+  },
+  {
+   "a": "fira-vapor.png",
+   "b": "Fira del Vapor",
+   "c": "Sant Vicenç de Castellet (ES) · 2026"
+  }
  ],
  "street_kicker": "IN STRADA",
  "street_title": "La strada è di tutte le persone",
@@ -80,48 +80,48 @@
  "updated": "AGGIORNATA OTTOBRE 2026",
  "tech_title": "Tutto quello che serve sapere",
  "getin": [
-  [
-   "MONTAGGIO · CIRCA 2 ORE, LO STESSO GIORNO",
-   "Scarico 10′ · Montaggio 20′ · Prova del suono 30′ · Trucco e costumi 60′"
-  ],
-  [
-   "SMONTAGGIO · CIRCA 1 ORA",
-   "Smontaggio 20′ · Costumi 30′ · Carico 10′"
-  ]
+  {
+   "a": "MONTAGGIO · CIRCA 2 ORE, LO STESSO GIORNO",
+   "b": "Scarico 10′ · Montaggio 20′ · Prova del suono 30′ · Trucco e costumi 60′"
+  },
+  {
+   "a": "SMONTAGGIO · CIRCA 1 ORA",
+   "b": "Smontaggio 20′ · Costumi 30′ · Carico 10′"
+  }
  ],
  "tech": [
-  [
-   "DURATA",
-   "Repliche di 30 minuti, fino a tre al giorno, sempre con 10 minuti di pausa tra una e l'altra."
-  ],
-  [
-   "SPAZIO E PERCORSO",
-   "Strada o piazza, allo stesso livello del pubblico. Il percorso può includere rampe e scale, ma è meglio se è pianeggiante."
-  ],
-  [
-   "ORARI E CALDO",
-   "Di giorno o di notte. In estate, evitate di programmare tra le 12 e le 19 sotto il sole diretto; all'ombra è possibile."
-  ],
-  [
-   "AUDIO",
-   "A) Itinerante acustico: senza amplificazione.\nB) Amplificato in piazza (Concerto in mezzo al pubblico): la compagnia porta 8 microfoni wireless; impianto dell'organizzazione."
-  ],
-  [
-   "LUCI",
-   "La compagnia si adatta all'illuminazione della strada. Non serve alcun impianto esterno."
-  ],
-  [
-   "PIOGGIA",
-   "Sotto la pioggia non si può suonare a causa degli strumenti. La compagnia può aspettare e suonare più tardi o un altro giorno. La strada bagnata non è un problema. Alternativa: una grande sala alta almeno 5 m."
-  ],
-  [
-   "LOGISTICA",
-   "Parcheggio per 2 auto (in aereo: trasporto locale da concordare). Camerino per 8 con tavoli per il trucco (la compagnia può portare specchi e luci)."
-  ],
-  [
-   "PASTI",
-   "2 senza carne (può includere pesce, uova e latticini), 6 senza esigenze particolari."
-  ]
+  {
+   "a": "DURATA",
+   "b": "Repliche di 30 minuti, fino a tre al giorno, sempre con 10 minuti di pausa tra una e l'altra."
+  },
+  {
+   "a": "SPAZIO E PERCORSO",
+   "b": "Strada o piazza, allo stesso livello del pubblico. Il percorso può includere rampe e scale, ma è meglio se è pianeggiante."
+  },
+  {
+   "a": "ORARI E CALDO",
+   "b": "Di giorno o di notte. In estate, evitate di programmare tra le 12 e le 19 sotto il sole diretto; all'ombra è possibile."
+  },
+  {
+   "a": "AUDIO",
+   "b": "A) Itinerante acustico: senza amplificazione.\nB) Amplificato in piazza (Concerto in mezzo al pubblico): la compagnia porta 8 microfoni wireless; impianto dell'organizzazione."
+  },
+  {
+   "a": "LUCI",
+   "b": "La compagnia si adatta all'illuminazione della strada. Non serve alcun impianto esterno."
+  },
+  {
+   "a": "PIOGGIA",
+   "b": "Sotto la pioggia non si può suonare a causa degli strumenti. La compagnia può aspettare e suonare più tardi o un altro giorno. La strada bagnata non è un problema. Alternativa: una grande sala alta almeno 5 m."
+  },
+  {
+   "a": "LOGISTICA",
+   "b": "Parcheggio per 2 auto (in aereo: trasporto locale da concordare). Camerino per 8 con tavoli per il trucco (la compagnia può portare specchi e luci)."
+  },
+  {
+   "a": "PASTI",
+   "b": "2 senza carne (può includere pesce, uova e latticini), 6 senza esigenze particolari."
+  }
  ],
  "tech_note": "La compagnia porta tutto il materiale: trampoli, monociclo, attrezzi da giocoleria, strumenti, oggetti per i giochi, trucco e costumi.",
  "crew_kicker": "CHI SIAMO",
@@ -138,57 +138,57 @@
  },
  "credits_lab": "CREDITI",
  "credits": [
-  [
-   "Direzione artistica",
-   "tyle fernández"
-  ],
-  [
-   "Musica e suono",
-   "Cia. VENDAVAL"
-  ],
-  [
-   "Costumi",
-   "Imaginario de Mónica (Mónica Romero)"
-  ],
-  [
-   "Grafica",
-   "bicialta"
-  ],
-  [
-   "Fotografia",
-   "ROAR (David Ugalde) · Barbara Walzer · Jordi Largo · Albert Garcia"
-  ],
-  [
-   "Coproduzione",
-   "Cia. Filigranes"
-  ],
-  [
-   "Produzione e distribuzione",
-   "Cia. VENDAVAL · tyle fernández"
-  ]
+  {
+   "a": "Direzione artistica",
+   "b": "tyle fernández"
+  },
+  {
+   "a": "Musica e suono",
+   "b": "Cia. VENDAVAL"
+  },
+  {
+   "a": "Costumi",
+   "b": "Imaginario de Mónica (Mónica Romero)"
+  },
+  {
+   "a": "Grafica",
+   "b": "bicialta"
+  },
+  {
+   "a": "Fotografia",
+   "b": "ROAR (David Ugalde) · Barbara Walzer · Jordi Largo · Albert Garcia"
+  },
+  {
+   "a": "Coproduzione",
+   "b": "Cia. Filigranes"
+  },
+  {
+   "a": "Produzione e distribuzione",
+   "b": "Cia. VENDAVAL · tyle fernández"
+  }
  ],
  "track_lab": "PERCORSO",
  "track": [
-  [
-   "2024–25",
-   "Residenza musicale, Ateneu la Bòbila, Nou Barris (Barcellona)"
-  ],
-  [
-   "2025",
-   "Festes de Porta, Ateneu la Bòbila (Barcellona) · debutto"
-  ],
-  [
-   "2026",
-   "Unterwegs Theater Festival, Mühlheim e Dreieich (DE) · 4 repliche"
-  ],
-  [
-   "2026",
-   "Fira del Vapor, Sant Vicenç de Castellet (ES) · 4 repliche"
-  ],
-  [
-   "2026",
-   "Sommerwerft Theaterfestival, Francoforte sul Meno (DE) · 2 repliche e laboratori"
-  ]
+  {
+   "a": "2024–25",
+   "b": "Residenza musicale, Ateneu la Bòbila, Nou Barris (Barcellona)"
+  },
+  {
+   "a": "2025",
+   "b": "Festes de Porta, Ateneu la Bòbila (Barcellona) · debutto"
+  },
+  {
+   "a": "2026",
+   "b": "Unterwegs Theater Festival, Mühlheim e Dreieich (DE) · 4 repliche"
+  },
+  {
+   "a": "2026",
+   "b": "Fira del Vapor, Sant Vicenç de Castellet (ES) · 4 repliche"
+  },
+  {
+   "a": "2026",
+   "b": "Sommerwerft Theaterfestival, Francoforte sul Meno (DE) · 2 repliche e laboratori"
+  }
  ],
  "booking": "Contatti e booking",
  "contact_lab": "CONTATTO",

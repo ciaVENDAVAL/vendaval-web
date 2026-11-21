@@ -9,56 +9,56 @@
    {
     "h": "Un spectacle léger pour tourner",
     "items": [
-     [
-      "Ni électricité, ni sono, ni groupe électrogène.",
-      "La version de rue est entièrement acoustique et fonctionne avec l'éclairage public habituel."
-     ],
-     [
-      "Ni techniciens, ni camions.",
-      "Les instruments, les costumes et les accessoires voyagent dans nos propres voitures, 4 personnes par voiture."
-     ],
-     [
-      "Local et fait pour durer.",
-      "Nos costumes et accessoires de créatures marines sont faits main par Imaginario de Mónica, qui partage notre espace de coworking."
-     ],
-     [
-      "Jeux réutilisables.",
-      "Cordes à sauter, objets mous à lancer, un filet marin et une bouée. Pas de confettis, pas de ballons, rien qui se jette après le spectacle."
-     ],
-     [
-      "Pas de papier imprimé.",
-      "Dossiers, fiches techniques et photos uniquement en ligne, sur www.VENDAVAL.cat."
-     ],
-     [
-      "Concert au milieu du public :",
-      "nous utilisons la sono du festival plutôt que d'apporter la nôtre."
-     ]
+     {
+      "a": "Ni électricité, ni sono, ni groupe électrogène.",
+      "b": "La version de rue est entièrement acoustique et fonctionne avec l'éclairage public habituel."
+     },
+     {
+      "a": "Ni techniciens, ni camions.",
+      "b": "Les instruments, les costumes et les accessoires voyagent dans nos propres voitures, 4 personnes par voiture."
+     },
+     {
+      "a": "Local et fait pour durer.",
+      "b": "Nos costumes et accessoires de créatures marines sont faits main par Imaginario de Mónica, qui partage notre espace de coworking."
+     },
+     {
+      "a": "Jeux réutilisables.",
+      "b": "Cordes à sauter, objets mous à lancer, un filet marin et une bouée. Pas de confettis, pas de ballons, rien qui se jette après le spectacle."
+     },
+     {
+      "a": "Pas de papier imprimé.",
+      "b": "Dossiers, fiches techniques et photos uniquement en ligne, sur www.VENDAVAL.cat."
+     },
+     {
+      "a": "Concert au milieu du public :",
+      "b": "nous utilisons la sono du festival plutôt que d'apporter la nôtre."
+     }
     ]
    },
    {
     "h": "Ce que nous vous demandons",
     "box": true,
     "items": [
-     [
-      "",
-      "De l'eau du robinet ou des carafes ; nous apportons des gourdes."
-     ],
-     [
-      "",
-      "Des repas végétariens, locaux et de saison, si possible sans vaisselle ni couverts jetables."
-     ],
-     [
-      "",
-      "Une loge proche du parcours, pour éviter des trajets supplémentaires en véhicule."
-     ],
-     [
-      "",
-      "Un hébergement accessible à pied ou en transports en commun."
-     ],
-     [
-      "",
-      "Aidez-nous à enchaîner les dates : si d'autres lieux proches sont intéressés, nous partagerons le voyage entre les représentations."
-     ]
+     {
+      "a": "",
+      "b": "De l'eau du robinet ou des carafes ; nous apportons des gourdes."
+     },
+     {
+      "a": "",
+      "b": "Des repas végétariens, locaux et de saison, si possible sans vaisselle ni couverts jetables."
+     },
+     {
+      "a": "",
+      "b": "Une loge proche du parcours, pour éviter des trajets supplémentaires en véhicule."
+     },
+     {
+      "a": "",
+      "b": "Un hébergement accessible à pied ou en transports en commun."
+     },
+     {
+      "a": "",
+      "b": "Aidez-nous à enchaîner les dates : si d'autres lieux proches sont intéressés, nous partagerons le voyage entre les représentations."
+     }
     ]
    }
   ]
@@ -71,48 +71,48 @@
    {
     "h": "Pour le public",
     "items": [
-     [
-      "Pas besoin de mots.",
-      "Le spectacle, c'est de la musique, du cirque et des jeux. Nous expliquons les jeux par des gestes et des exemples faciles à comprendre."
-     ],
-     [
-      "Artistes multilingues.",
-      "Pour que chacun et chacune se sente chez soi, nous pouvons saluer le public dans sa langue et dire quelques mots clés en anglais, allemand, italien, espagnol, catalan, arabe, russe, turc, chinois et japonais."
-     ],
-     [
-      "Parcours.",
-      "Les parcours plats sont les meilleurs. Les rampes et les escaliers sont possibles, et nous adaptons le parcours et le rythme pour que les personnes en fauteuil roulant et avec des poussettes puissent suivre."
-     ],
-     [
-      "Sur demande : visite tactile.",
-      "Une heure avant le spectacle, dans un espace calme, les personnes aveugles ou malvoyantes peuvent toucher les costumes et leurs applications de dragon, les instruments et les accessoires, et rencontrer les personnages."
-     ],
-     [
-      "Nous travaillons avec le lieu pour créer des spectacles accessibles.",
-      "Sur demande, avec le matériel ou le budget du lieu : audiodescription, boucles magnétiques ou casques, gilets vibrants (uniquement pour le Concert au milieu du public, amplifié) et interprétation en langue des signes."
-     ],
-     [
-      "Version relax.",
-      "Une fanfare peut être trop forte pour certaines personnes. Sur demande, pour un public prévu, nous proposons une version relax, moins forte et plus lente. Nous pouvons marcher plus lentement ou jouer sur une place ou dans un parc calmes. Elle peut aussi avoir lieu dans une salle sans autres stimulations visuelles ou sonores. En intérieur : 5 m de hauteur et environ 10 × 10 m, ou plus selon le nombre de participants."
-     ],
-     [
-      "Facile à lire.",
-      "Un dossier « facile à lire » est disponible sur www.VENDAVAL.cat. Ouvrez le bouton d'accessibilité en bas à gauche et choisissez « Facile à lire » : le texte du site et des dossiers passe en facile à lire."
-     ],
-     [
-      "Cirque social.",
-      "La direction artistique, tyle fernández, est formé·e au cirque social (« Un circ universal », Ateneu Popular 9 Barris, 2026, et d'autres formations en Allemagne). Notre travail suit l'approche de la Conception universelle du cirque social (DUCS)."
-     ]
+     {
+      "a": "Pas besoin de mots.",
+      "b": "Le spectacle, c'est de la musique, du cirque et des jeux. Nous expliquons les jeux par des gestes et des exemples faciles à comprendre."
+     },
+     {
+      "a": "Artistes multilingues.",
+      "b": "Pour que chacun et chacune se sente chez soi, nous pouvons saluer le public dans sa langue et dire quelques mots clés en anglais, allemand, italien, espagnol, catalan, arabe, russe, turc, chinois et japonais."
+     },
+     {
+      "a": "Parcours.",
+      "b": "Les parcours plats sont les meilleurs. Les rampes et les escaliers sont possibles, et nous adaptons le parcours et le rythme pour que les personnes en fauteuil roulant et avec des poussettes puissent suivre."
+     },
+     {
+      "a": "Sur demande : visite tactile.",
+      "b": "Une heure avant le spectacle, dans un espace calme, les personnes aveugles ou malvoyantes peuvent toucher les costumes et leurs applications de dragon, les instruments et les accessoires, et rencontrer les personnages."
+     },
+     {
+      "a": "Nous travaillons avec le lieu pour créer des spectacles accessibles.",
+      "b": "Sur demande, avec le matériel ou le budget du lieu : audiodescription, boucles magnétiques ou casques, gilets vibrants (uniquement pour le Concert au milieu du public, amplifié) et interprétation en langue des signes."
+     },
+     {
+      "a": "Version relax.",
+      "b": "Une fanfare peut être trop forte pour certaines personnes. Sur demande, pour un public prévu, nous proposons une version relax, moins forte et plus lente. Nous pouvons marcher plus lentement ou jouer sur une place ou dans un parc calmes. Elle peut aussi avoir lieu dans une salle sans autres stimulations visuelles ou sonores. En intérieur : 5 m de hauteur et environ 10 × 10 m, ou plus selon le nombre de participants."
+     },
+     {
+      "a": "Facile à lire.",
+      "b": "Un dossier « facile à lire » est disponible sur www.VENDAVAL.cat. Ouvrez le bouton d'accessibilité en bas à gauche et choisissez « Facile à lire » : le texte du site et des dossiers passe en facile à lire."
+     },
+     {
+      "a": "Cirque social.",
+      "b": "La direction artistique, tyle fernández, est formé·e au cirque social (« Un circ universal », Ateneu Popular 9 Barris, 2026, et d'autres formations en Allemagne). Notre travail suit l'approche de la Conception universelle du cirque social (DUCS)."
+     }
     ]
    },
    {
     "h": "Pour notre équipe",
     "box": true,
     "items": [
-     [
-      "",
-      "Aucune adaptation nécessaire. Voir la fiche technique pour les besoins du spectacle."
-     ]
+     {
+      "a": "",
+      "b": "Aucune adaptation nécessaire. Voir la fiche technique pour les besoins du spectacle."
+     }
     ]
    }
   ]

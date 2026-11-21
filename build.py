@@ -1,4 +1,3 @@
-import sys
 #!/usr/bin/env python3
 """Build the VENDAVAL website into docs/ (served by GitHub Pages).
 
@@ -12,7 +11,7 @@ Pages per language:  /<lang>/  ·  /<lang>/<show-slug>/  ·  /<lang>/workshops|a
 Short links:         /dossier/<short>/<lang>/  ·  /rider/<short>/<lang>/  (without <lang>: browser language)
 Run:  pip install jinja2 pillow && python3 build.py
 """
-import json, datetime, pathlib, re, shutil, zipfile, io
+import sys, json, datetime, pathlib, re, shutil, zipfile, io
 from jinja2 import Environment, FileSystemLoader
 from PIL import Image, ImageOps
 
@@ -30,15 +29,37 @@ today = datetime.date.today().isoformat()
 version = datetime.datetime.now().strftime('%Y%m%d%H%M')
 
 def slug(name): return re.sub(r'[^a-z0-9]+', '-', pathlib.Path(name).stem.lower()).strip('-')
+rev_originals = {v: k for k, v in data.get('originals', {}).items()}
+
+# photo fields may hold a slug ("amigui-1") or a file name / path from the admin ("source-images/Foto nova.jpg")
+def photo_ref(v):
+    if not isinstance(v, str) or not v: return v
+    name = v.split('/')[-1]
+    if name in rev_originals: return rev_originals[name]
+    return slug(name) if ('.' in name or '/' in v or v != slug(v)) else v
+def fix_photos():
+    for x in data['hero_slides']: x['image'] = photo_ref(x['image'])
+    data['about_image'] = photo_ref(data['about_image'])
+    for x in data['shows']:
+        x['cover'] = photo_ref(x['cover'])
+        for k in ('side', 'gallery'): x[k] = [photo_ref(y) for y in x.get(k, [])]
+    if data.get('video', {}).get('poster'): data['video']['poster'] = photo_ref(data['video']['poster'])
+    for k, v in data['press'].items(): data['press'][k] = [photo_ref(y) for y in v]
+    for x in data['artists'] + data.get('substitutes', []):
+        if x.get('photo'): x['photo'] = photo_ref(x['photo'])
+    for x in data['workshop_groups']: x['photo'] = photo_ref(x['photo'])
+    data['workshops_gallery'] = [photo_ref(y) for y in data['workshops_gallery']]
+fix_photos()
 
 # ---------- static files and images
 def build_static():
     if OUT.exists():
         for p in OUT.iterdir():
-            if p.name not in ('img', 'press'): (shutil.rmtree if p.is_dir() else pathlib.Path.unlink)(p)
+            if p.name not in ('img', 'press', 'og'): (shutil.rmtree if p.is_dir() else pathlib.Path.unlink)(p)
     shutil.copytree(STATIC, OUT, dirs_exist_ok=True)
     (OUT/'assets').mkdir(exist_ok=True)
     for f in ('style.css', 'site.js', 'crew.js', 'toys.js'): shutil.copy(SRC/f, OUT/'assets'/f)
+    build_photos()
     # small previews for the photo ZIPs on the downloads page (whole photo, never cropped)
     for s in {x for v in data['press'].values() for x in v}:
         t = OUT/'img'/f'{s}-240.webp'
@@ -50,13 +71,40 @@ def build_static():
     shutil.copy(logo, OUT/'graphics'/'VENDAVAL_logo_sin-fondo_2048px.png')
     w = Image.open(logo); w.thumbnail((600, 600)); w.save(OUT/'graphics'/'VENDAVAL_logo_sin-fondo_web-600px.png', optimize=True)
     shutil.copytree(SRC/'crew-data', OUT/'assets'/'crew-data', dirs_exist_ok=True)
-    # any new photo in source-images/ that has no web version yet
+
+# ---------- photos: web sizes from the originals in source-images/ (never cropped)
+# docs/img/.sources.json remembers each original's hash, so a photo replaced with the same
+# file name (admin or #edit) gets new web sizes; the ready-made copy in static/img/ is then removed so it
+# can't win; web sizes whose original was deleted are removed too.
+def build_photos():
+    import hashlib
+    rec_f = OUT/'img'/'.sources.json'
+    first = not rec_f.exists()
+    rec = {} if first else json.loads(rec_f.read_text())
+    seen = {}
     for f in sorted(IMGSRC.iterdir()):
-        s = slug(f.name)
-        if f.suffix.lower() not in ('.jpg', '.jpeg', '.png') or (OUT/'img'/f'{s}-800.webp').exists(): continue
+        if f.suffix.lower() not in ('.jpg', '.jpeg', '.png', '.webp'): continue
+        s = rev_originals.get(f.name) or slug(f.name)
+        old = rec.get(f.name); h = hashlib.sha1(f.read_bytes()).hexdigest()
+        seen[f.name] = {'slug': s, 'hash': h}
+        have = (OUT/'img'/f'{s}-800.webp').exists()
+        # changed = replaced with the same name, or a new original for a photo that so far only had a ready-made copy
+        changed = (old is not None and old['hash'] != h) or (old is None and not first and have)
+        if have and not changed: continue   # first run: keep the existing web sizes
         im = ImageOps.exif_transpose(Image.open(f)).convert('RGB')
         for w in (800, 1600):
             c = im.copy(); c.thumbnail((w, w * 2)); c.save(OUT/'img'/f'{s}-{w}.webp', quality=80, method=6)
+        if changed:
+            for x in (STATIC/'img'/f'{s}-800.webp', STATIC/'img'/f'{s}-1600.webp', STATIC/'img'/f'{s}-240.webp',
+                      OUT/'img'/f'{s}-240.webp', OUT/'og'/f'photo-{s}.jpg'):
+                if x.exists(): x.unlink()
+            print(f'  photo replaced: {f.name} → {s}')
+    for name, r in rec.items():   # original deleted → its web sizes go too (if no other original makes them)
+        if name not in seen and r['slug'] not in {v['slug'] for v in seen.values()}:
+            for w in (240, 800, 1600):
+                x = OUT/'img'/f"{r['slug']}-{w}.webp"
+                if x.exists(): x.unlink()
+    rec_f.write_text(json.dumps(seen, indent=0, sort_keys=True) + '\n')
 
 def original(s):
     name = data.get('originals', {}).get(s)
@@ -85,7 +133,7 @@ def build_press():
                         im = ImageOps.exif_transpose(Image.open(f)).convert('RGB')
                         if max(im.size) < 1500: continue
                         b = io.BytesIO(); im.save(b, 'JPEG', quality=92, dpi=(300, 300))
-                    zf.writestr(f'VENDAVAL_{key}_{i:02d}_{s}.jpg', b.getvalue()); n += 1
+                    zf.writestr(zipfile.ZipInfo(f'VENDAVAL_{key}_{i:02d}_{s}.jpg', (2026, 1, 1, 0, 0, 0)), b.getvalue()); n += 1   # fixed date: same photos → same ZIP
             if n:
                 p = OUT/'press'/f'VENDAVAL_{key}_photos_{kind}.zip'
                 if not p.exists() or p.read_bytes() != buf.getvalue(): p.write_bytes(buf.getvalue())
@@ -117,7 +165,7 @@ def make_fmt(lang):
     return fmt_range
 
 def loc(v, lang):
-    if isinstance(v, dict): return v.get(lang) or v.get('*') or v.get('en') or ''
+    if isinstance(v, dict): return v.get(lang) or v.get('all') or v.get('*') or v.get('en') or ''   # 'all' = every language
     return v or ''
 
 def avail(key, lang=None):

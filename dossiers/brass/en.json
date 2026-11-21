@@ -5,40 +5,40 @@
  "cover_tag": "GAMES & LIVE MUSIC",
  "cover_format": "ACOUSTIC ROAMING SHOW",
  "figures": [
-  [
-   "8",
-   "ARTISTS"
-  ],
-  [
-   "30′",
-   "SETS · SEVERAL A DAY"
-  ],
-  [
-   "0",
-   "TECHNICIANS NEEDED"
-  ],
-  [
-   "100%",
-   "ACOUSTIC"
-  ]
+  {
+   "a": "8",
+   "b": "ARTISTS"
+  },
+  {
+   "a": "30′",
+   "b": "SETS · SEVERAL A DAY"
+  },
+  {
+   "a": "0",
+   "b": "TECHNICIANS NEEDED"
+  },
+  {
+   "a": "100%",
+   "b": "ACOUSTIC"
+  }
  ],
  "played_at": "WE HAVE PLAYED AT",
  "festivals": [
-  [
-   "unterwegs.png",
-   "Unterwegs Theater Festival",
-   "Mühlheim and Dreieich (DE) · 2026"
-  ],
-  [
-   "sommerwerft.png",
-   "Sommerwerft Theaterfestival",
-   "Frankfurt am Main (DE) · 2026"
-  ],
-  [
-   "fira-vapor.png",
-   "Fira del Vapor",
-   "Sant Vicenç de Castellet · 2026"
-  ]
+  {
+   "a": "unterwegs.png",
+   "b": "Unterwegs Theater Festival",
+   "c": "Mühlheim and Dreieich (DE) · 2026"
+  },
+  {
+   "a": "sommerwerft.png",
+   "b": "Sommerwerft Theaterfestival",
+   "c": "Frankfurt am Main (DE) · 2026"
+  },
+  {
+   "a": "fira-vapor.png",
+   "b": "Fira del Vapor",
+   "c": "Sant Vicenç de Castellet · 2026"
+  }
  ],
  "street_kicker": "IN THE STREET",
  "street_title": "The street belongs to everyone",
@@ -80,48 +80,48 @@
  "updated": "UPDATED OCTOBER 2026",
  "tech_title": "Everything you need to know",
  "getin": [
-  [
-   "GET-IN · APPROX. 2 H, SAME DAY",
-   "Unloading 10′ · Set-up 20′ · Sound check 30′ · Make-up and costume 60′"
-  ],
-  [
-   "GET-OUT · APPROX. 1 H",
-   "Strike 20′ · Costume pack-up 30′ · Loading 10′"
-  ]
+  {
+   "a": "GET-IN · APPROX. 2 H, SAME DAY",
+   "b": "Unloading 10′ · Set-up 20′ · Sound check 30′ · Make-up and costume 60′"
+  },
+  {
+   "a": "GET-OUT · APPROX. 1 H",
+   "b": "Strike 20′ · Costume pack-up 30′ · Loading 10′"
+  }
  ],
  "tech": [
-  [
-   "DURATION",
-   "30-minute sets, up to three a day, always with a 10-minute break between sets."
-  ],
-  [
-   "SPACE AND ROUTE",
-   "Street or square, at the same level as the audience. The route can include ramps and steps, but flat is better."
-  ],
-  [
-   "TIMING AND HEAT",
-   "Day or night. In summer, please avoid 12:00–19:00 in direct sun; in the shade it is fine."
-  ],
-  [
-   "SOUND",
-   "A) Acoustic roaming show: no amplification.\nB) Amplified on the square (Concert in the audience): the company brings 8 wireless mics; the host's PA."
-  ],
-  [
-   "LIGHTING",
-   "The company adapts to the street lighting. No external rig is needed."
-  ],
-  [
-   "RAIN",
-   "We cannot play in the rain because of the instruments. The company can wait for it to stop and perform later or another day. A wet street is fine. Alternative: a large hall at least 5 m high."
-  ],
-  [
-   "LOGISTICS",
-   "Parking for 2 cars (if we fly: local transport to be agreed). Dressing room for 8 people with make-up tables (the company can bring mirrors and lights)."
-  ],
-  [
-   "MEALS",
-   "2 meat-free (may include fish, eggs and dairy), 6 with no restrictions."
-  ]
+  {
+   "a": "DURATION",
+   "b": "30-minute sets, up to three a day, always with a 10-minute break between sets."
+  },
+  {
+   "a": "SPACE AND ROUTE",
+   "b": "Street or square, at the same level as the audience. The route can include ramps and steps, but flat is better."
+  },
+  {
+   "a": "TIMING AND HEAT",
+   "b": "Day or night. In summer, please avoid 12:00–19:00 in direct sun; in the shade it is fine."
+  },
+  {
+   "a": "SOUND",
+   "b": "A) Acoustic roaming show: no amplification.\nB) Amplified on the square (Concert in the audience): the company brings 8 wireless mics; the host's PA."
+  },
+  {
+   "a": "LIGHTING",
+   "b": "The company adapts to the street lighting. No external rig is needed."
+  },
+  {
+   "a": "RAIN",
+   "b": "We cannot play in the rain because of the instruments. The company can wait for it to stop and perform later or another day. A wet street is fine. Alternative: a large hall at least 5 m high."
+  },
+  {
+   "a": "LOGISTICS",
+   "b": "Parking for 2 cars (if we fly: local transport to be agreed). Dressing room for 8 people with make-up tables (the company can bring mirrors and lights)."
+  },
+  {
+   "a": "MEALS",
+   "b": "2 meat-free (may include fish, eggs and dairy), 6 with no restrictions."
+  }
  ],
  "tech_note": "The company brings all stage material: stilts, unicycle, juggling props, instruments, game props, make-up and costumes.",
  "crew_kicker": "WHO WE ARE",
@@ -138,57 +138,57 @@
  },
  "credits_lab": "CREDITS",
  "credits": [
-  [
-   "Artistic direction",
-   "tyle fernández"
-  ],
-  [
-   "Music and sound",
-   "Cia. VENDAVAL"
-  ],
-  [
-   "Clothing",
-   "Imaginario de Mónica (Mónica Romero)"
-  ],
-  [
-   "Graphic design",
-   "bicialta"
-  ],
-  [
-   "Photography",
-   "ROAR (David Ugalde) · Barbara Walzer · Jordi Largo · Albert Garcia"
-  ],
-  [
-   "Co-production",
-   "Cia. Filigranes"
-  ],
-  [
-   "Production and booking",
-   "Cia. VENDAVAL · tyle fernández"
-  ]
+  {
+   "a": "Artistic direction",
+   "b": "tyle fernández"
+  },
+  {
+   "a": "Music and sound",
+   "b": "Cia. VENDAVAL"
+  },
+  {
+   "a": "Clothing",
+   "b": "Imaginario de Mónica (Mónica Romero)"
+  },
+  {
+   "a": "Graphic design",
+   "b": "bicialta"
+  },
+  {
+   "a": "Photography",
+   "b": "ROAR (David Ugalde) · Barbara Walzer · Jordi Largo · Albert Garcia"
+  },
+  {
+   "a": "Co-production",
+   "b": "Cia. Filigranes"
+  },
+  {
+   "a": "Production and booking",
+   "b": "Cia. VENDAVAL · tyle fernández"
+  }
  ],
  "track_lab": "TRACK RECORD",
  "track": [
-  [
-   "2024–25",
-   "Music residency, Ateneu la Bòbila, Nou Barris (Barcelona)"
-  ],
-  [
-   "2025",
-   "Festes de Porta, Ateneu la Bòbila (Barcelona) · premiere"
-  ],
-  [
-   "2026",
-   "Unterwegs Theater Festival, Mühlheim and Dreieich (DE) · 4 sets"
-  ],
-  [
-   "2026",
-   "Fira del Vapor, Sant Vicenç de Castellet · 4 sets"
-  ],
-  [
-   "2026",
-   "Sommerwerft Theaterfestival, Frankfurt am Main (DE) · 2 sets and workshops"
-  ]
+  {
+   "a": "2024–25",
+   "b": "Music residency, Ateneu la Bòbila, Nou Barris (Barcelona)"
+  },
+  {
+   "a": "2025",
+   "b": "Festes de Porta, Ateneu la Bòbila (Barcelona) · premiere"
+  },
+  {
+   "a": "2026",
+   "b": "Unterwegs Theater Festival, Mühlheim and Dreieich (DE) · 4 sets"
+  },
+  {
+   "a": "2026",
+   "b": "Fira del Vapor, Sant Vicenç de Castellet · 4 sets"
+  },
+  {
+   "a": "2026",
+   "b": "Sommerwerft Theaterfestival, Frankfurt am Main (DE) · 2 sets and workshops"
+  }
  ],
  "booking": "Booking",
  "contact_lab": "CONTACT",

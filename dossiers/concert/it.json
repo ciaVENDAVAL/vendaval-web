@@ -4,22 +4,22 @@
  "fmt": "CONCERTO IN MEZZO AL PUBBLICO",
  "title": "Musica dal vivo<br>in mezzo al pubblico",
  "kf": [
-  [
-   "8",
-   "PERSONE IN SCENA"
-  ],
-  [
-   "30′",
-   "MAX. 2 REPLICHE"
-  ],
-  [
-   "8",
-   "MICROFONI WIRELESS"
-  ],
-  [
-   "PIAZZA",
-   "DAVANTI AL PALCO"
-  ]
+  {
+   "a": "8",
+   "b": "PERSONE IN SCENA"
+  },
+  {
+   "a": "30′",
+   "b": "MAX. 2 REPLICHE"
+  },
+  {
+   "a": "8",
+   "b": "MICROFONI WIRELESS"
+  },
+  {
+   "a": "PIAZZA",
+   "b": "DAVANTI AL PALCO"
+  }
  ],
  "show_kick": "Lo spettacolo",
  "show_h": "La festa scende dal palco",
@@ -96,45 +96,45 @@
  ],
  "cred_h": "Crediti",
  "cred": [
-  [
-   "Musica e suono",
-   "Cia. VENDAVAL"
-  ],
-  [
-   "Costumi",
-   "Imaginario de Mónica (Mónica Romero)"
-  ],
-  [
-   "Grafica",
-   "bicialta"
-  ],
-  [
-   "Fotografia",
-   "ROAR (David Ugalde) · Barbara Walzer · Jordi Largo"
-  ],
-  [
-   "Coproduzione",
-   "Cia. Filigranes"
-  ]
+  {
+   "a": "Musica e suono",
+   "b": "Cia. VENDAVAL"
+  },
+  {
+   "a": "Costumi",
+   "b": "Imaginario de Mónica (Mónica Romero)"
+  },
+  {
+   "a": "Grafica",
+   "b": "bicialta"
+  },
+  {
+   "a": "Fotografia",
+   "b": "ROAR (David Ugalde) · Barbara Walzer · Jordi Largo"
+  },
+  {
+   "a": "Coproduzione",
+   "b": "Cia. Filigranes"
+  }
  ],
  "gigs_h": "Repliche di VENDAVAL Brass",
  "gigs": [
-  [
-   "1 marzo 2025",
-   "Festes de Porta, Ateneu la Bòbila, Barcellona · <i>debutto</i>"
-  ],
-  [
-   "8–11 maggio 2026",
-   "Unterwegs Theater Festival, Mühlheim e Dreieich (Germania)"
-  ],
-  [
-   "30–31 maggio 2026",
-   "Fira del Vapor, Sant Vicenç de Castellet (Spagna)"
-  ],
-  [
-   "24–26 luglio 2026",
-   "Sommerwerft Theater Festival, Francoforte sul Meno (Germania)"
-  ]
+  {
+   "a": "1 marzo 2025",
+   "b": "Festes de Porta, Ateneu la Bòbila, Barcellona · <i>debutto</i>"
+  },
+  {
+   "a": "8–11 maggio 2026",
+   "b": "Unterwegs Theater Festival, Mühlheim e Dreieich (Germania)"
+  },
+  {
+   "a": "30–31 maggio 2026",
+   "b": "Fira del Vapor, Sant Vicenç de Castellet (Spagna)"
+  },
+  {
+   "a": "24–26 luglio 2026",
+   "b": "Sommerwerft Theater Festival, Francoforte sul Meno (Germania)"
+  }
  ],
  "con_h": "Contatti",
  "con_role": "direzione artistica · booking",
@@ -146,22 +146,22 @@
  "r_upd": "Aggiornata",
  "r_date": "22 ottobre 2026",
  "r_kf": [
-  [
-   "PIAZZA",
-   "DAVANTI AL PALCO"
-  ],
-  [
-   "TUTTE LE ETÀ",
-   "DI GIORNO O DI SERA"
-  ],
-  [
-   "30′",
-   "MAX. 2 REPLICHE"
-  ],
-  [
-   "0–1",
-   "FONICO (FESTIVAL)"
-  ]
+  {
+   "a": "PIAZZA",
+   "b": "DAVANTI AL PALCO"
+  },
+  {
+   "a": "TUTTE LE ETÀ",
+   "b": "DI GIORNO O DI SERA"
+  },
+  {
+   "a": "30′",
+   "b": "MAX. 2 REPLICHE"
+  },
+  {
+   "a": "0–1",
+   "b": "FONICO (FESTIVAL)"
+  }
  ],
  "s": [
   "Spazio",
@@ -208,33 +208,33 @@
  "s3": "Di giorno, nessuna necessità. Di sera, luce generale sulla piazza (quella del festival).",
  "mt_h": "Montaggio · circa 2 h",
  "mt": [
-  [
-   "Scarico",
-   "10′"
-  ],
-  [
-   "Soundcheck (prima dei concerti)",
-   "60′"
-  ],
-  [
-   "Trucco e costumi",
-   "60′"
-  ]
+  {
+   "a": "Scarico",
+   "b": "10′"
+  },
+  {
+   "a": "Soundcheck (prima dei concerti)",
+   "b": "60′"
+  },
+  {
+   "a": "Trucco e costumi",
+   "b": "60′"
+  }
  ],
  "dm_h": "Smontaggio · circa 1 h",
  "dm": [
-  [
-   "Smontaggio",
-   "20′"
-  ],
-  [
-   "Riordino dei costumi",
-   "30′"
-  ],
-  [
-   "Carico",
-   "10′"
-  ]
+  {
+   "a": "Smontaggio",
+   "b": "20′"
+  },
+  {
+   "a": "Riordino dei costumi",
+   "b": "30′"
+  },
+  {
+   "a": "Carico",
+   "b": "10′"
+  }
  ],
  "sets": "<b>Repliche:</b> 30 minuti ciascuna, massimo 2 al giorno, con una pausa di massimo 1 ora tra una replica e l'altra (ideale per i cambi palco tra le band).",
  "s5": "Con la pioggia la banda non può suonare all'aperto, per via degli strumenti e dei microfoni. La compagnia può aspettare che smetta e suonare più tardi o un altro giorno. Il terreno bagnato non è un problema. Alternativa: una sala grande alta almeno 5 m.",

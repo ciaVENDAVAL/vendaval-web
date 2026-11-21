@@ -5,40 +5,40 @@
  "cover_tag": "SPIELE & LIVEMUSIK",
  "cover_format": "AKUSTISCHER WALKACT",
  "figures": [
-  [
-   "8",
-   "KÜNSTLER*INNEN"
-  ],
-  [
-   "30′",
-   "DURCHGÄNGE · MEHRERE AM TAG"
-  ],
-  [
-   "0",
-   "TECHNIK NÖTIG"
-  ],
-  [
-   "100%",
-   "AKUSTISCH"
-  ]
+  {
+   "a": "8",
+   "b": "KÜNSTLER*INNEN"
+  },
+  {
+   "a": "30′",
+   "b": "DURCHGÄNGE · MEHRERE AM TAG"
+  },
+  {
+   "a": "0",
+   "b": "TECHNIK NÖTIG"
+  },
+  {
+   "a": "100%",
+   "b": "AKUSTISCH"
+  }
  ],
  "played_at": "WIR HABEN GESPIELT BEI",
  "festivals": [
-  [
-   "unterwegs.png",
-   "Unterwegs Theater Festival",
-   "Mühlheim und Dreieich (DE) · 2026"
-  ],
-  [
-   "sommerwerft.png",
-   "Sommerwerft Theaterfestival",
-   "Frankfurt am Main (DE) · 2026"
-  ],
-  [
-   "fira-vapor.png",
-   "Fira del Vapor",
-   "Sant Vicenç de Castellet · 2026"
-  ]
+  {
+   "a": "unterwegs.png",
+   "b": "Unterwegs Theater Festival",
+   "c": "Mühlheim und Dreieich (DE) · 2026"
+  },
+  {
+   "a": "sommerwerft.png",
+   "b": "Sommerwerft Theaterfestival",
+   "c": "Frankfurt am Main (DE) · 2026"
+  },
+  {
+   "a": "fira-vapor.png",
+   "b": "Fira del Vapor",
+   "c": "Sant Vicenç de Castellet · 2026"
+  }
  ],
  "street_kicker": "AUF DER STRASSE",
  "street_title": "Die Straße gehört allen Menschen",
@@ -80,48 +80,48 @@
  "updated": "STAND OKTOBER 2026",
  "tech_title": "Alles, was zu wissen ist",
  "getin": [
-  [
-   "AUFBAU · CA. 2 STD., AM SELBEN TAG",
-   "Ausladen 10′ · Aufbau 20′ · Soundcheck 30′ · Schminke und Verkleidung 60′"
-  ],
-  [
-   "ABBAU · CA. 1 STD.",
-   "Abbau 20′ · Kleidung packen 30′ · Einladen 10′"
-  ]
+  {
+   "a": "AUFBAU · CA. 2 STD., AM SELBEN TAG",
+   "b": "Ausladen 10′ · Aufbau 20′ · Soundcheck 30′ · Schminke und Verkleidung 60′"
+  },
+  {
+   "a": "ABBAU · CA. 1 STD.",
+   "b": "Abbau 20′ · Kleidung packen 30′ · Einladen 10′"
+  }
  ],
  "tech": [
-  [
-   "DAUER",
-   "Durchgänge von 30 Minuten, bis zu dreimal am Tag, immer mit 10 Minuten Pause dazwischen."
-  ],
-  [
-   "FLÄCHE UND ROUTE",
-   "Straße oder Platz, auf Höhe des Publikums. Die Route kann Rampen und Stufen enthalten, eben ist aber besser."
-  ],
-  [
-   "UHRZEIT UND HITZE",
-   "Bei Tag oder Nacht. Im Sommer bitte nicht zwischen 12 und 19 Uhr in praller Sonne; im Schatten ist es möglich."
-  ],
-  [
-   "TON",
-   "A) Akustischer Walkact: ohne Verstärkung.\nB) Verstärkt auf dem Platz (Konzert mitten im Publikum): Die Kompanie bringt 8 Funkmikrofone mit; PA der Veranstaltung."
-  ],
-  [
-   "LICHT",
-   "Die Kompanie passt sich der Straßenbeleuchtung an. Keine zusätzliche Lichtanlage nötig."
-  ],
-  [
-   "REGEN",
-   "Bei Regen kann wegen der Instrumente nicht gespielt werden. Die Kompanie kann warten und später oder an einem anderen Tag spielen. Nasse Straßen sind kein Problem. Alternative: ein großer Saal mit mindestens 5 m Höhe."
-  ],
-  [
-   "LOGISTIK",
-   "Parkplätze für 2 Autos (bei Anreise per Flug: Transport vor Ort nach Absprache). Garderobe für 8 Personen mit Schminktischen (Spiegel und Licht kann die Kompanie mitbringen)."
-  ],
-  [
-   "VERPFLEGUNG",
-   "2 ohne Fleisch (kann Fisch, Eier und Milchprodukte enthalten), 6 ohne besondere Ernährung."
-  ]
+  {
+   "a": "DAUER",
+   "b": "Durchgänge von 30 Minuten, bis zu dreimal am Tag, immer mit 10 Minuten Pause dazwischen."
+  },
+  {
+   "a": "FLÄCHE UND ROUTE",
+   "b": "Straße oder Platz, auf Höhe des Publikums. Die Route kann Rampen und Stufen enthalten, eben ist aber besser."
+  },
+  {
+   "a": "UHRZEIT UND HITZE",
+   "b": "Bei Tag oder Nacht. Im Sommer bitte nicht zwischen 12 und 19 Uhr in praller Sonne; im Schatten ist es möglich."
+  },
+  {
+   "a": "TON",
+   "b": "A) Akustischer Walkact: ohne Verstärkung.\nB) Verstärkt auf dem Platz (Konzert mitten im Publikum): Die Kompanie bringt 8 Funkmikrofone mit; PA der Veranstaltung."
+  },
+  {
+   "a": "LICHT",
+   "b": "Die Kompanie passt sich der Straßenbeleuchtung an. Keine zusätzliche Lichtanlage nötig."
+  },
+  {
+   "a": "REGEN",
+   "b": "Bei Regen kann wegen der Instrumente nicht gespielt werden. Die Kompanie kann warten und später oder an einem anderen Tag spielen. Nasse Straßen sind kein Problem. Alternative: ein großer Saal mit mindestens 5 m Höhe."
+  },
+  {
+   "a": "LOGISTIK",
+   "b": "Parkplätze für 2 Autos (bei Anreise per Flug: Transport vor Ort nach Absprache). Garderobe für 8 Personen mit Schminktischen (Spiegel und Licht kann die Kompanie mitbringen)."
+  },
+  {
+   "a": "VERPFLEGUNG",
+   "b": "2 ohne Fleisch (kann Fisch, Eier und Milchprodukte enthalten), 6 ohne besondere Ernährung."
+  }
  ],
  "tech_note": "Die Kompanie bringt das gesamte Material mit: Stelzen, Einrad, Jonglierrequisiten, Instrumente, Spielrequisiten, Schminke und Kleidung.",
  "crew_kicker": "WER WIR SIND",
@@ -138,57 +138,57 @@
  },
  "credits_lab": "TEAM & CREDITS",
  "credits": [
-  [
-   "Künstlerische Leitung",
-   "tyle fernández"
-  ],
-  [
-   "Musik und Ton",
-   "Cia. VENDAVAL"
-  ],
-  [
-   "Kleidung",
-   "Imaginario de Mónica (Mónica Romero)"
-  ],
-  [
-   "Grafikdesign",
-   "bicialta"
-  ],
-  [
-   "Fotos",
-   "ROAR (David Ugalde) · Barbara Walzer · Jordi Largo · Albert Garcia"
-  ],
-  [
-   "Koproduktion",
-   "Cia. Filigranes"
-  ],
-  [
-   "Produktion und Booking",
-   "Cia. VENDAVAL · tyle fernández"
-  ]
+  {
+   "a": "Künstlerische Leitung",
+   "b": "tyle fernández"
+  },
+  {
+   "a": "Musik und Ton",
+   "b": "Cia. VENDAVAL"
+  },
+  {
+   "a": "Kleidung",
+   "b": "Imaginario de Mónica (Mónica Romero)"
+  },
+  {
+   "a": "Grafikdesign",
+   "b": "bicialta"
+  },
+  {
+   "a": "Fotos",
+   "b": "ROAR (David Ugalde) · Barbara Walzer · Jordi Largo · Albert Garcia"
+  },
+  {
+   "a": "Koproduktion",
+   "b": "Cia. Filigranes"
+  },
+  {
+   "a": "Produktion und Booking",
+   "b": "Cia. VENDAVAL · tyle fernández"
+  }
  ],
  "track_lab": "STATIONEN",
  "track": [
-  [
-   "2024–25",
-   "Musikresidenz, Ateneu la Bòbila, Nou Barris (Barcelona)"
-  ],
-  [
-   "2025",
-   "Festes de Porta, Ateneu la Bòbila (Barcelona) · Premiere"
-  ],
-  [
-   "2026",
-   "Unterwegs Theater Festival, Mühlheim und Dreieich · 4 Durchgänge"
-  ],
-  [
-   "2026",
-   "Fira del Vapor, Sant Vicenç de Castellet (ES) · 4 Durchgänge"
-  ],
-  [
-   "2026",
-   "Sommerwerft Theaterfestival, Frankfurt am Main · 2 Durchgänge und Workshops"
-  ]
+  {
+   "a": "2024–25",
+   "b": "Musikresidenz, Ateneu la Bòbila, Nou Barris (Barcelona)"
+  },
+  {
+   "a": "2025",
+   "b": "Festes de Porta, Ateneu la Bòbila (Barcelona) · Premiere"
+  },
+  {
+   "a": "2026",
+   "b": "Unterwegs Theater Festival, Mühlheim und Dreieich · 4 Durchgänge"
+  },
+  {
+   "a": "2026",
+   "b": "Fira del Vapor, Sant Vicenç de Castellet (ES) · 4 Durchgänge"
+  },
+  {
+   "a": "2026",
+   "b": "Sommerwerft Theaterfestival, Frankfurt am Main · 2 Durchgänge und Workshops"
+  }
  ],
  "booking": "Booking",
  "contact_lab": "KONTAKT",

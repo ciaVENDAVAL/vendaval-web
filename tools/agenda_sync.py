@@ -59,8 +59,8 @@ def to_gig(e):
     url = e.get('URL', ('',))[0].strip()
     if not url:
         m = re.search(r'https?://\S+', e.get('DESCRIPTION', ('',))[0]); url = m.group(0) if m else None
-    return dict(start=start, end=end, show=show, url=url or None, precision='day', place=place, note='',
-                ws=dict(WS_TEXT) if re.search(WORKSHOP, low) else '', uid=e.get('UID', ('',))[0])
+    return dict(start=start, end=end, show=show, url=url or None, precision='day', place={'all': place}, note={},
+                ws=dict(WS_TEXT) if re.search(WORKSHOP, low) else {}, uid=e.get('UID', ('',))[0])
 
 def main(dry):
     text = urllib.request.urlopen(ICS_URL, timeout=30).read().decode('utf-8', 'replace')

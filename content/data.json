@@ -309,7 +309,7 @@
    "short": "ani-arqui",
    "label": {
     "es": "Ani Arqui, el Pacífico",
-    "*": "Ani Arqui, el Pacífic"
+    "all": "Ani Arqui, el Pacífic"
    },
    "draft": true,
    "files": {
@@ -393,7 +393,9 @@
   },
   {
    "id": "freakfrac",
-   "link": "https://ciafiligranes.net/en/shows/freak-frac",
+   "link": {
+    "all": "https://ciafiligranes.net/en/shows/freak-frac"
+   },
    "link_label": "ciafiligranes.net"
   },
   {
@@ -409,7 +411,9 @@
   {
    "id": "yiflauki",
    "title": "yiflauki",
-   "link": "https://yiflauki.com/",
+   "link": {
+    "all": "https://yiflauki.com/"
+   },
    "link_label": "yiflauki.com",
    "thumb": "talleres-10-musica"
   },
@@ -419,7 +423,7 @@
    "link": {
     "ca": "https://ciafiligranes.net/tallers/",
     "es": "https://ciafiligranes.net/es/talleres/",
-    "*": "https://ciafiligranes.net/en/workshops/"
+    "all": "https://ciafiligranes.net/en/workshops/"
    },
    "link_label": "ciafiligranes.net",
    "thumb": "taller-circo-20-1"
@@ -478,7 +482,9 @@
    "show": "brass",
    "url": "https://www.ateneulabobila.org/",
    "precision": "month",
-   "place": "Ateneu la Bòbila, Barcelona",
+   "place": {
+    "all": "Ateneu la Bòbila, Barcelona"
+   },
    "note": {
     "ca": "Residència musical de llarga durada",
     "es": "Residencia musical de larga duración",
@@ -488,7 +494,7 @@
     "it": "Residenza musicale di lunga durata",
     "ja": "長期音楽レジデンス"
    },
-   "ws": ""
+   "ws": {}
   },
   {
    "start": "2024-12-10",
@@ -496,9 +502,11 @@
    "show": "freakfrac",
    "url": null,
    "precision": "day",
-   "place": "Casal de les Fonts, Terrassa",
-   "note": "",
-   "ws": ""
+   "place": {
+    "all": "Casal de les Fonts, Terrassa"
+   },
+   "note": {},
+   "ws": {}
   },
   {
    "start": "2024-12-13",
@@ -506,7 +514,9 @@
    "show": "brass",
    "url": "https://www.ateneulabobila.org/",
    "precision": "day",
-   "place": "Ateneu la Bòbila, Barcelona",
+   "place": {
+    "all": "Ateneu la Bòbila, Barcelona"
+   },
    "note": {
     "ca": "Masterclass de dansa «Música en moviment» · amb Dada Draženka Večerin (DE / HR)",
     "es": "Masterclass de danza «Música en movimiento» · con Dada Draženka Večerin (DE / HR)",
@@ -516,7 +526,7 @@
     "it": "Masterclass di danza «Musica in movimento» · con Dada Draženka Večerin (DE / HR)",
     "ja": "ダンス・マスタークラス「動きの中の音楽」 · 講師： Dada Draženka Večerin (DE / HR)"
    },
-   "ws": ""
+   "ws": {}
   },
   {
    "start": "2025-01-04",
@@ -524,9 +534,11 @@
    "show": "freakfrac",
    "url": "https://tubdassaig.com/",
    "precision": "day",
-   "place": "Sant Quirze del Vallès (Tub d'assaig)",
-   "note": "",
-   "ws": ""
+   "place": {
+    "all": "Sant Quirze del Vallès (Tub d'assaig)"
+   },
+   "note": {},
+   "ws": {}
   },
   {
    "start": "2025-01-05",
@@ -534,9 +546,11 @@
    "show": "freakfrac",
    "url": "https://tubdassaig.com/",
    "precision": "day",
-   "place": "Casal Cívic de Can Boada, Terrassa (Tub d'assaig)",
-   "note": "",
-   "ws": ""
+   "place": {
+    "all": "Casal Cívic de Can Boada, Terrassa (Tub d'assaig)"
+   },
+   "note": {},
+   "ws": {}
   },
   {
    "start": "2025-03-01",
@@ -544,7 +558,9 @@
    "show": "brass",
    "url": "https://www.ateneulabobila.org/",
    "precision": "day",
-   "place": "Festes de Porta, Ateneu la Bòbila, Barcelona",
+   "place": {
+    "all": "Festes de Porta, Ateneu la Bòbila, Barcelona"
+   },
    "note": {
     "ca": "Estrena",
     "es": "Estreno",
@@ -554,7 +570,7 @@
     "it": "Debutto",
     "ja": "初演"
    },
-   "ws": ""
+   "ws": {}
   },
   {
    "start": "2025-10-25",
@@ -562,9 +578,11 @@
    "show": "freakfrac",
    "url": "https://clownic.cat/",
    "precision": "day",
-   "place": "Festival Clownic, Torrelles de Foix",
-   "note": "",
-   "ws": ""
+   "place": {
+    "all": "Festival Clownic, Torrelles de Foix"
+   },
+   "note": {},
+   "ws": {}
   },
   {
    "start": "2026-03-02",
@@ -572,7 +590,9 @@
    "show": "joc",
    "url": "https://tubdassaig.com/",
    "precision": "day",
-   "place": "Tub d'assaig, Terrassa",
+   "place": {
+    "all": "Tub d'assaig, Terrassa"
+   },
    "note": {
     "ca": "Residència artística",
     "es": "Residencia artística",
@@ -582,7 +602,7 @@
     "it": "Residenza artistica",
     "ja": "アーティスト・イン・レジデンス"
    },
-   "ws": ""
+   "ws": {}
   },
   {
    "start": "2026-05-08",
@@ -590,9 +610,11 @@
    "show": "brass",
    "url": "https://www.protagon.net/en/unterwegs",
    "precision": "day",
-   "place": "Unterwegs Theater Festival, Mühlheim am Main & Dreieich (DE)",
-   "note": "",
-   "ws": ""
+   "place": {
+    "all": "Unterwegs Theater Festival, Mühlheim am Main & Dreieich (DE)"
+   },
+   "note": {},
+   "ws": {}
   },
   {
    "start": "2026-05-30",
@@ -600,9 +622,11 @@
    "show": "brass",
    "url": "https://www.firadelvapor.cat/programa.html",
    "precision": "day",
-   "place": "Fira del Vapor, Sant Vicenç de Castellet",
-   "note": "",
-   "ws": ""
+   "place": {
+    "all": "Fira del Vapor, Sant Vicenç de Castellet"
+   },
+   "note": {},
+   "ws": {}
   },
   {
    "start": "2026-07-24",
@@ -644,7 +668,9 @@
    "show": "brass",
    "url": "https://www.instagram.com/p/DcCAY8LOgD_/",
    "precision": "day",
-   "place": "Circ Rural, Capafonts",
+   "place": {
+    "all": "Circ Rural, Capafonts"
+   },
    "note": {
     "ca": "Itinerant en xanques",
     "es": "Itinerante en zancos",
@@ -654,7 +680,7 @@
     "it": "Itinerante sui trampoli",
     "ja": "竹馬の練り歩き"
    },
-   "ws": ""
+   "ws": {}
   },
   {
    "start": "2026-11-07",
@@ -662,9 +688,11 @@
    "show": "freakfrac",
    "url": "https://visitandorra.com/en/events/freak-frack-brothers/",
    "precision": "day",
-   "place": "Pas de la Casa, Andorra",
-   "note": "",
-   "ws": "",
+   "place": {
+    "all": "Pas de la Casa, Andorra"
+   },
+   "note": {},
+   "ws": {},
    "uid": "53df98b3-9369-4515-a204-f2210548c090"
   },
   {
@@ -673,7 +701,9 @@
    "show": "brass",
    "url": "https://www.figueres.cat/actualitat/agenda/festa-de-la-infancia",
    "precision": "day",
-   "place": "Festa de la Infància, Plaça de l'Ajuntament, Figueres",
+   "place": {
+    "all": "Festa de la Infància, Plaça de l'Ajuntament, Figueres"
+   },
    "note": {
     "ca": "Duo · 16:45–18:45",
     "es": "Duo · 16:45–18:45",
@@ -683,7 +713,7 @@
     "it": "Duo · 16:45–18:45",
     "ja": "デュオ · 16:45–18:45"
    },
-   "ws": ""
+   "ws": {}
   },
   {
    "start": "2027-01-05",
@@ -691,9 +721,11 @@
    "show": "freakfrac",
    "url": null,
    "precision": "day",
-   "place": "Cavalcada de Reis, Roses",
-   "note": "",
-   "ws": ""
+   "place": {
+    "all": "Cavalcada de Reis, Roses"
+   },
+   "note": {},
+   "ws": {}
   },
   {
    "start": "2027-02-05",
@@ -701,9 +733,11 @@
    "show": "freakfrac",
    "url": null,
    "precision": "day",
-   "place": "Andorra",
-   "note": "",
-   "ws": ""
+   "place": {
+    "all": "Andorra"
+   },
+   "note": {},
+   "ws": {}
   }
  ],
  "artists": [
@@ -809,7 +843,9 @@
    "kind": "circus",
    "photo": "tallers-zancos-1",
    "by": "tyle fernández",
-   "url": "https://linktr.ee/bicialta",
+   "url": {
+    "all": "https://linktr.ee/bicialta"
+   },
    "dossier": "xanques_dossier"
   },
   {
@@ -820,7 +856,7 @@
    "url": {
     "ca": "https://ciafiligranes.net/tallers/",
     "es": "https://ciafiligranes.net/es/talleres/",
-    "*": "https://ciafiligranes.net/en/workshops/"
+    "all": "https://ciafiligranes.net/en/workshops/"
    },
    "dossier": null
   },
@@ -829,7 +865,9 @@
    "kind": "music",
    "photo": "talleres-10-musica",
    "by": "Yiflauki",
-   "url": "https://yiflauki.com/",
+   "url": {
+    "all": "https://yiflauki.com/"
+   },
    "dossier": null
   }
  ],

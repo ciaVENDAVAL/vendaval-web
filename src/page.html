@@ -417,5 +417,14 @@
 <dialog class="lightbox"><button type="button" class="lb-close" aria-label="{{ t.gallery.close }}">×</button><button type="button" class="lb-nav lb-prev" aria-label="{{ t.gallery.prev }}">‹</button><img alt=""><button type="button" class="lb-nav lb-next" aria-label="{{ t.gallery.next }}">›</button></dialog>
 <script src="{{ R }}assets/site.js?v={{ version }}" defer></script>
 <script src="{{ R }}assets/toys.js?v={{ version }}" defer></script>
+<script>/* edit on the page: open any page with #edit (see static/assets/edit.js and /admin/) */try{if(location.hash==="#edit"||sessionStorage.getItem("ls-edit")){sessionStorage.setItem("ls-edit","1");
+window.LS_EDIT={repo:"ciaVENDAVAL/vendaval-web",branch:"main",base:"",lang:"{{ lang }}",
+  files:["content/i18n/{lang}.json","content/easy/{lang}.json","content/data.json"],
+  skip:["url","href","start","end","uid","image","photo","files","short","slug","id","show","kind","precision","form_access_key","cover","side","gallery","poster","thumb","about_image","workshops_gallery","press","originals","html_lang","home_order","status","manual"],
+  img:{root:"/img/",source:"source-images/",slugged:true},
+  pdf:{downloads:"content/data.json",path:"downloads.*.files",dir:"static/pdf/",short:["/dossier/","/rider/"],mark:"manual"},
+  admin:"/admin/"};
+var s=document.createElement("script");s.type="module";s.src="/assets/edit.js?v={{ version }}";document.body.appendChild(s)}
+else addEventListener("hashchange",function(){if(location.hash==="#edit")location.reload()})}catch(e){}</script>
 </body>
 </html>

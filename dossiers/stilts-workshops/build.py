@@ -4,6 +4,7 @@ Text: dossiers/stilts-workshops/<lang>.md · Photos: source-images/ (never cropp
 import re, sys, pathlib, tempfile
 from PIL import Image, ImageOps
 from weasyprint import HTML
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent)); import manual   # PDFs replaced by hand are kept (see dossiers/manual.py)
 
 HERE = pathlib.Path(__file__).resolve().parent
 ROOT = HERE.parent.parent
@@ -197,6 +198,7 @@ def build(code):
 {''.join(body)}
 </body></html>"""
     out = OUT/L['out']
+    if manual.skip(out): return
     HTML(string=html, base_url=str(TMP)).write_pdf(out)
     print(out.relative_to(ROOT))
 

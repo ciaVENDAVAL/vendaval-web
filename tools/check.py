@@ -118,12 +118,13 @@ def main():
 
     # 3 style
     R += ['## 3. House style (VENDAVAL capitals, tyle lowercase, no "clown" words, names, Frankfurt)', '']
-    any3 = False
+    any3 = False; n_style = [0]
     for group, docs in (('PDF', pdfs), ('Web', web)):
         for n, d in docs.items():
             if not d['lang']: continue
             iss = style_issues(d['text'], d['lang'])
             if iss:
+                n_style[0] += len(iss)
                 any3 = True; R.append(f'**{group} · {n}**')
                 R += [f'- {x}' for x in iss[:12]] + ([f'- … {len(iss) - 12} more'] if len(iss) > 12 else []) + ['']
     if not any3: R += ['- none', '']
@@ -177,6 +178,31 @@ def main():
         ms = ref - keys(i18n[l])
         if ms: m6.append(f'- {l.upper()}: {", ".join(sorted(ms))}')
     R += (m6 or ['- none']) + ['']
+
+    # 7 PDFs replaced by hand (admin / on-page editor): the source + script were not updated
+    R += ['## 7. PDFs replaced by hand — source not updated', '',
+          'Replaced from the admin or with #edit. The build scripts keep these files (rebuild with --force, or [rebuild-pdf]',
+          'in a commit message) — update the source to match, then remove `manual` from the download in content/data.json.', '']
+    m7 = []
+    for key, d in DATA['downloads'].items():
+        m = d.get('manual')
+        if not m: continue
+        for l, u in d['files'].items():
+            day = m if isinstance(m, str) else m.get(l)
+            if day: m7.append(f'- {u.split("/")[-1]} ({key} · {l.upper()}) — replaced by hand on {day}')
+    R += (m7 or ['- none']) + ['']
+
+    # 8 texts changed in one language that DE/FR/IT/JA (or others) still show in the old wording
+    R += ['## 8. Texts that need translation', '',
+          'Changed in one language; the other languages still show the old text (no machine translation for DE, FR, IT, JA).',
+          'List: content/i18n/_needs-translation.json — translate, then remove the entry.', '']
+    nt_f = ROOT / 'content' / 'i18n' / '_needs-translation.json'
+    nt = json.loads(nt_f.read_text()) if nt_f.exists() else []
+    R += ([f'- `{e["file"]}` · `{e["key"]}` → {", ".join(x.upper() for x in e["langs"])} (since {e["date"]}): {e["text"][:120]}' for e in nt] or ['- none']) + ['']
+
+    import os
+    if os.environ.get('CHECK_SUMMARY'):
+        pathlib.Path(os.environ['CHECK_SUMMARY']).write_text(json.dumps({'style': n_style[0], 'contact': len(miss), 'manual': len(m7), 'needs_translation': len(nt)}))
 
     R += ['## Made outside this generator (update by hand)', ''] + [f'- **{k}**: {v}' for k, v in F['external_pdfs'].items()]
     (ROOT / 'CHECK-REPORT.md').write_text('\n'.join(R) + '\n')
