@@ -699,3 +699,18 @@ html.a11y-dark .dl-sub{color:#f5ebdd}html.a11y-dark .dl-sub span{color:#9fe3e8}
 .dl-gfx{display:inline-flex;align-items:center;gap:.45em}
 .dl-gfx img{height:30px;width:auto;padding:3px;border-radius:5px;background:repeating-conic-gradient(#e9e4dc 0 25%,#fff 0 50%) 0 0/10px 10px}
 .dl-gfx.dark img{background:var(--navy)}
+
+/* phone menu: sections collapsed, ▾ button opens the sub-items; social icons at the end */
+#nav .sub-toggle{display:none}
+#nav .nav-socials{display:none}
+@media(max-width:999px){
+  #nav .has-sub{position:relative}
+  #nav .has-sub>a{padding-right:52px}
+  #nav .sub-toggle{display:grid;place-items:center;position:absolute;right:0;top:2px;width:44px;height:40px;border:0;border-radius:10px;background:var(--cream);color:var(--navy);font-size:1rem;cursor:pointer}
+  #nav .sub-toggle span{transition:transform .2s}
+  #nav .sub-open>.sub-toggle span{transform:rotate(180deg)}
+  #nav .has-sub>.sub{display:none}
+  #nav .has-sub.sub-open>.sub{display:block}
+  #nav .nav-socials{display:flex;justify-content:flex-start;margin:14px 0 4px}
+  html.a11y-dark #nav .sub-toggle{background:#123a4c;color:#f5ebdd}
+}

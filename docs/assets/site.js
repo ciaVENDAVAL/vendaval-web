@@ -10,6 +10,12 @@
     nav.addEventListener('click', function (e) {
       if (e.target.closest('#nav > ul a')) { nav.classList.remove('open'); btn.setAttribute('aria-expanded', false); }
     });
+    // phone menu: sections start collapsed; the ▾ button next to a section opens its sub-items
+    nav.addEventListener('click', function (e) {
+      var tg = e.target.closest('.sub-toggle'); if (!tg) return;
+      var li = tg.parentNode, open = li.classList.toggle('sub-open');
+      tg.setAttribute('aria-expanded', open);
+    });
     // a click or tap anywhere outside the open menu closes it (Esc too)
     function closeNav() { if (nav.classList.contains('open')) { nav.classList.remove('open'); btn.setAttribute('aria-expanded', false); } }
     document.addEventListener('pointerdown', function (e) { if (!e.target.closest('#nav, .menu-btn')) closeNav(); });

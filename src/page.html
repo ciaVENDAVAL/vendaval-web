@@ -45,19 +45,19 @@
     </details>
     <ul>
       {% set menu = [
+        ('contact', t.nav.contact, H ~ '#contact', []),
         ('agenda', t.nav.agenda, H ~ 'agenda/', []),
         ('shows', t.nav.shows, H ~ '#shows', []),
         ('workshops', t.nav.workshops, H ~ 'workshops/', []),
         ('about', t.nav.about, H ~ '#about', []),
-        ('play', t.nav.play, H ~ 'crew/', []),
-        ('contact', t.nav.contact, H ~ '#contact', [])] %}
+        ('play', t.nav.play, H ~ 'crew/', [])] %}
       {% set subs = {
         'shows': shows|map(attribute='id')|list + ['downloads'],
         'workshops': workshop_groups|map(attribute='id')|list,
         'about': ['artists', 'video'],
         'play': ['crew', 'chimera']} %}
       {% for k, label, u, _ in menu %}<li{% if subs.get(k) %} class="has-sub"{% endif %}><a href="{{ u }}"{% if page == k or (k == 'about' and page == 'artists') or (k == 'play' and page == 'crew') or (k == 'shows' and page in ('show', 'downloads')) %} aria-current="page"{% endif %}>{{ label }}</a>
-        {% if subs.get(k) %}<ul class="sub">{% for sk in subs[k] %}
+        {% if subs.get(k) %}<button class="sub-toggle" type="button" aria-expanded="false" aria-controls="sub-{{ k }}" aria-label="{{ label }}: {{ t.nav.more }}"><span aria-hidden="true">▾</span></button><ul class="sub" id="sub-{{ k }}">{% for sk in subs[k] %}
           {% if sk == 'downloads' %}<li><a href="{{ H }}downloads/"{% if page == 'downloads' %} aria-current="page"{% endif %}>{{ t.nav.downloads }}</a></li>
           {% elif k == 'shows' %}{% set sh = shows_by_id[sk] %}<li><a href="{{ H }}{{ sh.slug }}/"{% if page == 'show' and s and s.id == sk %} aria-current="page"{% endif %}>{{ t.show[sk].name }}</a></li>
           {% elif k == 'workshops' %}<li><a href="{{ H }}workshops/#ws-{{ sk }}">{{ t.workshops.groups[sk].title }}</a></li>
@@ -66,6 +66,10 @@
           {% elif sk == 'crew' %}<li><a href="{{ H }}crew/"{% if page == 'crew' %} aria-current="page"{% endif %}>{{ t.crew.home_title }}</a></li>
           {% elif sk == 'chimera' %}<li><a href="{{ R }}chimera-opera/?lang={{ lang }}">VENDAVAL Chimera Opera</a></li>{% endif %}
         {% endfor %}</ul>{% endif %}</li>{% endfor %}
+    </ul>
+    {#- social icons at the end of the phone menu (on wide screens they are in the footer) #}
+    <ul class="socials nav-socials">
+      {% for so in socials %}<li><a class="soc soc-{{ so.id }}" href="{{ so.url }}" rel="noopener" target="_blank" aria-label="{{ so.label }}">{{ icon(so.id) }}</a></li>{% endfor %}
     </ul>
   </nav>
 </header>
