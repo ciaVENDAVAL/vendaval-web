@@ -54,11 +54,20 @@
       });
       raf = requestAnimationFrame(step);
     })();
-    stopJuggle = function () { cancelAnimationFrame(raf); cs.forEach(function (c) { c.remove(); }); net.remove(); stopJuggle = null; };
+    holding = false; lock(true); clearSel();
+    stopJuggle = function () { cancelAnimationFrame(raf); cs.forEach(function (c) { c.remove(); }); net.remove(); stopJuggle = null; lock(false); };
   }
 
   // ---------- input: pointer events (mouse, pen, touch); touchmove adds bubbles while a finger scrolls ----------
-  var holdT, start = null, last = 0, kind = '';
+  var holdT, holding = false, start = null, last = 0, kind = '';
+  // While a hold is pending (touch/pen) or juggling: no text selection, no copy/callout menu, so the browser's own long press can't cancel the juggling.
+  // A mouse keeps normal drag-to-select until the juggling actually starts.
+  function lock(on) { root.classList.toggle('toy-hold', on); }
+  function clearSel() { var s = window.getSelection && getSelection(); if (s && s.removeAllRanges) s.removeAllRanges(); }
+  function cancelHold() { clearTimeout(holdT); if (holding) { holding = false; if (!stopJuggle) lock(false); } }
+  function blocking() { return !!stopJuggle || (holding && kind !== 'mouse'); }
+  document.addEventListener('selectstart', function (e) { if (blocking()) e.preventDefault(); });
+  document.addEventListener('contextmenu', function (e) { if (blocking()) e.preventDefault(); });
   var NOHOLD = 'a,button,input,textarea,select,label,summary,img,video,.toy-buoy,.a11y,.lightbox';
   function trail(x, y) { var n = performance.now(); if (n - last < 150) return; last = n; spawn(x, y); }
   document.addEventListener('pointerdown', function (e) {
@@ -66,22 +75,23 @@
     if (e.target.closest && e.target.closest('.toy-buoy,.a11y,.lightbox')) return;
     kind = e.pointerType; start = { x: e.clientX, y: e.clientY }; anchor = start;
     if (!hitBubble(e.clientX, e.clientY)) spawn(e.clientX, e.clientY);
-    clearTimeout(holdT);
-    if (!(e.target.closest && e.target.closest(NOHOLD))) holdT = setTimeout(juggle, 450);
+    cancelHold();
+    if (!(e.target.closest && e.target.closest(NOHOLD))) { holding = true; if (kind !== 'mouse') lock(true); holdT = setTimeout(juggle, 450); }
   });
   document.addEventListener('pointermove', function (e) {
     if (off() || !start || !e.isPrimary) return;
     if (stopJuggle) { anchor = { x: e.clientX, y: e.clientY }; return; }
-    if (Math.hypot(e.clientX - start.x, e.clientY - start.y) > 12) clearTimeout(holdT);
+    if (Math.hypot(e.clientX - start.x, e.clientY - start.y) > 12) cancelHold();
     if (Math.hypot(e.clientX - start.x, e.clientY - start.y) > 6) trail(e.clientX, e.clientY);
   });
   document.addEventListener('touchmove', function (e) {
     if (off() || !start || stopJuggle) return; var p = e.touches[0];
-    clearTimeout(holdT); trail(p.clientX, p.clientY);
+    if (Math.hypot(p.clientX - start.x, p.clientY - start.y) > 12) cancelHold();   // a trembling finger still counts as holding
+    trail(p.clientX, p.clientY);
   }, { passive: true });
-  function end() { start = null; clearTimeout(holdT); if (stopJuggle) stopJuggle(); }
+  function end() { start = null; cancelHold(); if (stopJuggle) stopJuggle(); }
   document.addEventListener('pointerup', end);
-  document.addEventListener('pointercancel', function () { clearTimeout(holdT); if (stopJuggle) stopJuggle(); if (kind !== 'touch') start = null; });  // a finger that starts scrolling keeps its bubble trail
+  document.addEventListener('pointercancel', function () { cancelHold(); if (stopJuggle) stopJuggle(); if (kind !== 'touch') start = null; });  // a finger that starts scrolling keeps its bubble trail
   document.addEventListener('touchend', end, { passive: true });
   document.addEventListener('touchcancel', end, { passive: true });
 
