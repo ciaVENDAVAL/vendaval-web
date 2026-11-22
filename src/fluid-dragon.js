@@ -1,5 +1,5 @@
 /* Fire dragon in the water — hidden toy (WebGL fluid). Adapted from Las Marikarmen's "Fuego" toy (lasmarikarmen-web/assets/js/fluid.js).
-   Long-press anywhere: a little fire dragon hatches and coils around the finger, growing.
+   Long-press anywhere: a little fire dragon hatches (drawn sharp on a 2D canvas above the fluid; the fluid carries its breath, embers and wake) and coils around the finger, growing.
    Flick while holding (or just let go): the dragon flies off across the screen in that direction, breathing fire, and dissolves.
    Keep holding GAME_MS more: the page turns into deep water with moving light; the dragon swims/flies around (it follows your finger),
    your strokes leave swirls of fire or water; stop touching for IDLE_MS (or press Esc) and it all dissolves back into the page.
@@ -28,12 +28,17 @@
     '.fluid-dragon{position:fixed;inset:0;width:100%;height:100%;z-index:9999;pointer-events:none;display:none;transition:opacity 1.2s ease;touch-action:none}' +
     '.fluid-dragon.is-on{display:block}.fluid-dragon.is-game{pointer-events:auto;cursor:crosshair}' +
     'html.fluid-hold,html.fluid-hold *{-webkit-user-select:none!important;user-select:none!important;-webkit-touch-callout:none!important}' +
-    'html.fluid-game{overflow:hidden}';
+    '.fluid-dragon.fluid-fig{z-index:10000;pointer-events:none!important}html.fluid-game{overflow:hidden}';
   document.head.appendChild(st);
   var cv = document.createElement('canvas');
   cv.className = 'fluid-dragon';
   cv.setAttribute('aria-hidden', 'true');
   body.appendChild(cv);
+  var fig = document.createElement('canvas'), c2 = fig.getContext('2d'), DPR = 1;   // the dragon itself, drawn sharp above the fluid
+  fig.className = 'fluid-dragon fluid-fig';
+  fig.setAttribute('aria-hidden', 'true');
+  body.appendChild(fig);
+  function both(fn) { fn(cv); fn(fig); }
 
   /* ---------- WebGL fluid ---------- */
   var gl, ext, P = {}, vel, dye, divg, curlT, pres, ready = false, failed = false, MULTI = 0;
@@ -169,10 +174,10 @@
     return w > h ? { w: hi, h: lo } : { w: lo, h: hi };
   }
   function resize(force) {
-    var dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+    var dpr = DPR = Math.min(window.devicePixelRatio || 1, 1.5);
     var w = Math.round(innerWidth * dpr), h = Math.round(innerHeight * dpr);
     if (!force && cv.width === w && cv.height === h) return;
-    cv.width = w; cv.height = h;
+    cv.width = fig.width = w; cv.height = fig.height = h;
     var small = Math.min(innerWidth, innerHeight) < 600;
     var s = res(small ? 112 : 144), d = res(small ? 640 : 1024);
     vel = dbl(s.w, s.h, ext.rg, ext.filter);
@@ -254,6 +259,7 @@
   var N = 26;
   function Dragon(x, y, ang, size) {
     this.p = []; this.size = size; this.ang = ang; this.t = 0; this.breath = 0; this.nextBreath = 1.2; this.live = true;
+    this.side = 1; this.sideT = 1; this.jaw = 0.1; this.k = 0; this.center = null; this.F = null;
     for (var i = 0; i < N; i++) this.p.push({ x: x - Math.cos(ang) * i * 3, y: y - Math.sin(ang) * i * 3 });
   }
   Dragon.prototype.seg = function () { return 9 * this.size; };
@@ -267,48 +273,198 @@
       b.x = a.x + ex / d * L; b.y = a.y + ey / d * L;
     }
   };
-  Dragon.prototype.draw = function (dt, k) {               // k: overall brightness (0..1)
-    var s = this.size, t = this.t += dt, f = dt * 60, p = this.p, i, u, a, b;
+  /* The dragon is drawn twice each frame:
+     draw()  feeds the fluid: fire breath from the mouth, embers from the tail, swirls of fire/water in its wake,
+             and a push on the water from the body (no dye from the body, so the fluid never hides its shape);
+     paint() draws the figure itself, sharp, on the 2D canvas above the fluid: red snake body with a pale belly,
+             spines along the back, two ragged bat wings, four small legs, horned head with an opening jaw, whip tail.
+     Side view: "side" says which way the back faces; when it must change, the dragon rolls over smoothly. */
+  var C = { body: '#b3302a', dark: '#6e1813', belly: '#f2a676', wing: 'rgba(190,52,36,.86)', wingFar: 'rgba(112,26,20,.9)',
+            horn: '#efd3a8', eye: '#ffd84d', glow: 'rgba(255,110,30,.75)' };
+  Dragon.prototype.frame = function (dt) {                // per-point frames + which side is the back
+    var p = this.p, s = this.size, t = this.t, F = [], i;
+    for (i = 0; i < N; i++) {
+      var a = p[Math.max(i - 1, 0)], b = p[Math.min(i + 1, N - 1)];
+      var fx = a.x - b.x, fy = a.y - b.y, fl = Math.hypot(fx, fy) || 1; fx /= fl; fy /= fl;   // forward (towards the head)
+      var u = i / (N - 1);
+      var w = u < 0.2 ? 0.55 + 0.45 * u / 0.2 : Math.max(0.05, 1 - 0.95 * Math.pow((u - 0.2) / 0.8, 0.8));
+      var nx = -fy, ny = fx, ripple = Math.sin(t * 6 - i * 0.5) * 3 * s * (0.3 + u);
+      F.push({ x: p[i].x + nx * ripple, y: p[i].y + ny * ripple, fx: fx, fy: fy, nx: nx, ny: ny, w: w, hw: 11.5 * s * w });
+    }
+    // the back faces up (or away from the finger while it coils around it), with some hysteresis
+    var q = F[4], rx = 0, ry = -1;
+    if (this.center) { rx = q.x - this.center.x; ry = q.y - this.center.y; var rl = Math.hypot(rx, ry) || 1; rx /= rl; ry /= rl; }
+    var d = q.nx * rx + q.ny * ry;
+    if (Math.abs(d) > 0.3) this.sideT = d > 0 ? 1 : -1;
+    this.side += (this.sideT - this.side) * Math.min(1, dt * 5);
+    this.F = F;
+    return F;
+  };
+  Dragon.prototype.mouth = function () {                   // snout tip, in screen px
+    var F = this.F, h = F[0], s = this.size, sg = this.side >= 0 ? 1 : -1;
+    return { x: h.x + h.fx * 34 * s - h.nx * sg * 3 * s, y: h.y + h.fy * 34 * s - h.ny * sg * 3 * s };
+  };
+  Dragon.prototype.draw = function (dt, k) {               // k: overall strength (0..1)
+    var s = this.size, f = dt * 60, i;
+    this.t += dt; this.k = k;
     if (!this.live || k <= 0) return;
-    for (i = 0; i < N; i += 1) {                            // body + tail
-      if (i % 2 && i < N - 4) continue;
-      u = i / (N - 1); a = p[Math.max(i - 1, 0)]; b = p[Math.min(i + 1, N - 1)];
-      var tx = b.x - a.x, ty = b.y - a.y, tl = Math.hypot(tx, ty) || 1; tx /= tl; ty /= tl;        // towards the tail
-      var w = (0.45 + 0.55 * Math.sin(Math.PI * Math.min(1, (u + 0.1) / 0.75))) * (1 - u * 0.8);
-      var wave = Math.sin(t * 7 - i * 0.45) * 55 * w;
-      put(p[i].x, p[i].y, (3 + 9 * w) * s, fire(50 - u * 50, k * (0.16 + 0.16 * w) * f),
-        tx * 20 - ty * wave, ty * 20 + tx * wave);
+    var F = this.frame(dt), t = this.t;
+    for (i = 2; i < N; i += 3) {                             // the body pushes the water (velocity only)
+      var q = F[i], wave = Math.sin(t * 7 - i * 0.45) * 40 * q.w;
+      put(q.x, q.y, (4 + 8 * q.w) * s, [0, 0, 0, 0], -q.fx * 25 + q.nx * wave, -q.fy * 25 + q.ny * wave);
     }
-    // head, jaw and eyes: hot white-yellow
-    var hx = p[0].x, hy = p[0].y, fx = Math.cos(this.ang), fy = Math.sin(this.ang), nx = -fy, ny = fx;
-    put(hx, hy, 10 * s, fire(55, k * 0.45 * f), fx * 40, fy * 40);
-    put(hx + fx * 9 * s, hy + fy * 9 * s, 6 * s, fire(60, k * 0.35 * f), fx * 60, fy * 60);
-    for (var e = -1; e <= 1; e += 2) put(hx - fx * 6 * s + nx * e * 7 * s, hy - fy * 6 * s + ny * e * 7 * s, 3.5 * s, fire(20, k * 0.5 * f), nx * e * 40, ny * e * 40);
-    // wings at the shoulders, flapping
-    var A = p[4], A2 = p[6], bx = A.x - A2.x, by = A.y - A2.y, bl = Math.hypot(bx, by) || 1; bx /= bl; by /= bl;   // forward at the shoulders
-    var flap = Math.sin(t * 5.5), dflap = Math.cos(t * 5.5);
-    for (var side = -1; side <= 1; side += 2) {
-      var phi = 0.5 + 0.55 * flap, sx = -by * side, sy = bx * side;
-      var wx = sx * Math.cos(phi) - bx * Math.sin(phi), wy = sy * Math.cos(phi) - by * Math.sin(phi);
-      for (var j = 1; j <= 4; j++) {
-        var d = j * 11 * s, cx = A.x + wx * d - bx * j * j * 1.5 * s, cy = A.y + wy * d - by * j * j * 1.5 * s;
-        put(cx, cy, (8 - 1.3 * j) * s, fire(38 - j * 6, k * 0.26 * f), (-bx * 2 + sx) * dflap * d * 1.2, (-by * 2 + sy) * dflap * d * 1.2);
-      }
-    }
+    var e1 = F[N - 1], e2 = F[N - 4];                         // embers from the tail
+    put(e1.x, e1.y, 4 * s, fire(rnd(0, 30), k * 0.18 * f), -e1.fx * 60, -e1.fy * 60);
+    put(e2.x, e2.y, 3 * s, fire(rnd(10, 40), k * 0.08 * f), 0, 0);
     // fire breath now and then
     this.nextBreath -= dt;
-    if (this.nextBreath <= 0) { this.breath = 0.55; this.nextBreath = rnd(1.6, 3.2); }
+    if (this.nextBreath <= 0) { this.breath = 0.6; this.nextBreath = rnd(1.6, 3.2); }
+    this.jaw += ((this.breath > 0 ? 0.5 : 0.08 + 0.05 * Math.sin(t * 3)) - this.jaw) * Math.min(1, dt * 12);
     if (this.breath > 0) {
       this.breath -= dt;
-      for (var m = 1; m <= 3; m++) put(hx + fx * (12 + m * 10) * s, hy + fy * (12 + m * 10) * s, (5 + m * 2) * s,
-        fire(55 - m * 8, k * 0.55 * f), fx * 1100 + rnd(-150, 150), fy * 1100 + rnd(-150, 150));
+      var m = this.mouth(), h = F[0];
+      for (var j = 0; j < 3; j++) put(m.x + h.fx * j * 9 * s, m.y + h.fy * j * 9 * s, (4 + j * 2.5) * s,
+        fire(55 - j * 10, k * 0.5 * f), h.fx * 1100 + rnd(-150, 150), h.fy * 1100 + rnd(-150, 150));
     }
-    // the wake: random swirls of fire and water around the body
-    if (Math.random() < 0.35 * f) {
-      var q = p[Math.floor(rnd(3, N))], sd = Math.random() < 0.5 ? -1 : 1, off = rnd(14, 38) * s;
-      var ox = q.x + nx * sd * off + rnd(-8, 8), oy = q.y + ny * sd * off + rnd(-8, 8), spin = rnd(250, 550) * sd;
-      put(ox, oy, rnd(9, 18) * s, Math.random() < 0.5 ? fire(rnd(0, 45), k * rnd(0.4, 0.9)) : water(k * rnd(1, 2.2)), fx * spin, fy * spin);
+    // the wake: random swirls of fire and water beside the body
+    if (Math.random() < 0.3 * f) {
+      var w = F[Math.floor(rnd(3, N))], sd = Math.random() < 0.5 ? -1 : 1, off = rnd(18, 40) * s, spin = rnd(250, 550) * sd;
+      put(w.x + w.nx * sd * off, w.y + w.ny * sd * off, rnd(9, 18) * s,
+        Math.random() < 0.5 ? fire(rnd(0, 45), k * rnd(0.3, 0.7)) : water(k * rnd(1, 2.2)), w.fx * spin, w.fy * spin);
     }
+  };
+
+  Dragon.prototype.paint = function (c) {
+    var F = this.F, s = this.size, t = this.t, side = this.side, sg = side >= 0 ? 1 : -1, i, j;
+    c.save();
+    c.setTransform(DPR, 0, 0, DPR, 0, 0);
+    c.globalAlpha = Math.max(0, Math.min(1, this.k));
+    c.lineJoin = c.lineCap = 'round';
+    function back(q, d) { return { x: q.x + q.nx * d, y: q.y + q.ny * d }; }          // d > 0: towards the back (when side > 0)
+
+    // ---- wings: arm bone to the wrist, four finger bones, ragged membrane between them, joined to the back
+    function wing(phase, span, far) {
+      var A = F[4], Z = F[10], flap = Math.sin(t * 5.5 + phase), sp = span * (0.78 + 0.22 * flap) * s;
+      var ux = A.nx * side, uy = A.ny * side;                    // "up" from the back; shrinks while rolling over
+      function dir(a) { return { x: A.fx * Math.cos(a) + ux * Math.sin(a), y: A.fy * Math.cos(a) + uy * Math.sin(a) }; }
+      var R = back(A, sg * A.hw * 0.7), Ra = back(Z, sg * Z.hw * 0.8);
+      var a0 = 1.75 + 0.55 * flap + (far ? 0.25 : 0), dw = dir(a0);
+      var W = { x: R.x + dw.x * 34 * sp, y: R.y + dw.y * 34 * sp }, T = [];
+      for (j = 0; j < 4; j++) {
+        var dj = dir(a0 + 0.55 + j * 0.42), L = (60 - j * 8) * sp;
+        T.push({ x: W.x + dj.x * L, y: W.y + dj.y * L });
+      }
+      function scallop(P, Q) {                                     // concave edge between two finger tips, a bit torn
+        var mx = (P.x + Q.x) / 2, my = (P.y + Q.y) / 2, kk = 0.32 + 0.06 * Math.sin(t * 9 + P.x * 0.05);
+        c.quadraticCurveTo(mx + (W.x - mx) * kk, my + (W.y - my) * kk, Q.x, Q.y);
+      }
+      c.beginPath(); c.moveTo(R.x, R.y); c.lineTo(W.x, W.y); c.lineTo(T[0].x, T[0].y);
+      for (j = 1; j < 4; j++) scallop(T[j - 1], T[j]);
+      scallop(T[3], Ra); c.closePath();
+      c.fillStyle = far ? C.wingFar : C.wing; c.fill();
+      c.strokeStyle = C.dark; c.lineWidth = 2.4 * s;
+      c.beginPath(); c.moveTo(R.x, R.y); c.lineTo(W.x, W.y);
+      for (j = 0; j < 4; j++) { c.moveTo(W.x, W.y); c.lineTo(T[j].x, T[j].y); }
+      c.stroke();
+      c.lineWidth = 1.4 * s; c.beginPath();                        // claw at the wrist
+      c.moveTo(W.x, W.y); c.lineTo(W.x + dw.x * 6 * s - A.fx * 2 * s, W.y + dw.y * 6 * s - A.fy * 2 * s); c.stroke();
+    }
+    // ---- legs: thigh, shin, three claws, paddling a little
+    function leg(i0, ph, far) {
+      var q = F[i0], bx = -q.nx * sg, by = -q.ny * sg;           // towards the belly
+      var a = 0.5 + 0.35 * Math.sin(t * 4 + ph), H = back(q, -sg * q.hw * 0.5);
+      var kx = H.x + (bx * Math.cos(a) - q.fx * Math.sin(a)) * 9 * s, ky = H.y + (by * Math.cos(a) - q.fy * Math.sin(a)) * 9 * s;
+      var fx2 = kx + (bx * 0.5 + q.fx * 0.85) * 8 * s, fy2 = ky + (by * 0.5 + q.fy * 0.85) * 8 * s;
+      c.strokeStyle = far ? C.dark : C.body; c.lineWidth = 4 * s;
+      c.beginPath(); c.moveTo(H.x, H.y); c.lineTo(kx, ky); c.lineTo(fx2, fy2); c.stroke();
+      c.strokeStyle = C.horn; c.lineWidth = 1.2 * s; c.beginPath();
+      for (var m = -1; m <= 1; m++) { c.moveTo(fx2, fy2); c.lineTo(fx2 + (q.fx * 3 + bx * (2 + m * 1.5)) * s, fy2 + (q.fy * 3 + by * (2 + m * 1.5)) * s); }
+      c.stroke();
+    }
+
+    wing(0.35, 1.35, true);                                      // far side first
+    leg(5, 1.5, true); leg(13, 0.5, true);
+
+    // ---- body: a ribbon through the points, glowing at the edges
+    c.beginPath();
+    var Lp = [], Rp = [];
+    for (i = 0; i < N; i++) { Lp.push(back(F[i], F[i].hw)); Rp.push(back(F[i], -F[i].hw)); }
+    var tip = F[N - 1];
+    c.moveTo(Lp[0].x, Lp[0].y);
+    for (i = 1; i < N - 1; i++) c.quadraticCurveTo(Lp[i].x, Lp[i].y, (Lp[i].x + Lp[i + 1].x) / 2, (Lp[i].y + Lp[i + 1].y) / 2);
+    c.lineTo(tip.x - tip.fx * 4 * s, tip.y - tip.fy * 4 * s);
+    for (i = N - 2; i > 0; i--) c.quadraticCurveTo(Rp[i].x, Rp[i].y, (Rp[i].x + Rp[i - 1].x) / 2, (Rp[i].y + Rp[i - 1].y) / 2);
+    c.lineTo(Rp[0].x, Rp[0].y); c.closePath();
+    c.shadowColor = C.glow; c.shadowBlur = 14 * s * DPR;
+    c.fillStyle = C.body; c.fill();
+    c.shadowBlur = 0;
+    // pale belly with ribs
+    c.strokeStyle = C.belly;
+    for (i = 1; i < N - 3; i++) {
+      var A1 = back(F[i], -sg * F[i].hw * 0.5), B1 = back(F[i + 1], -sg * F[i + 1].hw * 0.5);
+      c.lineWidth = Math.max(1, F[i].hw * 0.75); c.beginPath(); c.moveTo(A1.x, A1.y); c.lineTo(B1.x, B1.y); c.stroke();
+    }
+    c.strokeStyle = 'rgba(160,60,40,.6)'; c.lineWidth = 0.8 * s; c.beginPath();
+    for (i = 2; i < N - 4; i++) {
+      var r1 = back(F[i], -sg * F[i].hw * 0.15), r2 = back(F[i], -sg * F[i].hw * 0.85);
+      c.moveTo(r1.x, r1.y); c.lineTo(r2.x, r2.y);
+    }
+    c.stroke();
+    // spines along the back, raked towards the tail
+    c.fillStyle = C.dark; c.beginPath();
+    for (i = 2; i < N - 1; i++) {
+      var q = F[i], len = (3 + 7 * q.w) * s * (i % 2 ? 0.6 : 1), bs = back(q, sg * q.hw * 0.9), bw = (2 + 2 * q.w) * s;
+      c.moveTo(bs.x + q.fx * bw, bs.y + q.fy * bw);
+      c.lineTo(bs.x + q.nx * side * len - q.fx * len * 0.7, bs.y + q.ny * side * len - q.fy * len * 0.7);
+      c.lineTo(bs.x - q.fx * bw, bs.y - q.fy * bw);
+    }
+    c.fill();
+    // tail fin: a small flame-shaped spade
+    var T2 = F[N - 3], ex = tip.x - tip.fx * 10 * s, ey = tip.y - tip.fy * 10 * s;
+    c.fillStyle = C.body; c.beginPath(); c.moveTo(T2.x, T2.y);
+    c.quadraticCurveTo(T2.x + T2.nx * 9 * s, T2.y + T2.ny * 9 * s, ex, ey);
+    c.quadraticCurveTo(T2.x - T2.nx * 9 * s, T2.y - T2.ny * 9 * s, T2.x, T2.y); c.fill();
+
+    leg(5, 0, false); leg(13, 2.5, false);                       // near side
+    wing(0, 1.5, false);
+
+    // ---- head, in its own frame: x forward, y towards the belly (squashed while rolling over)
+    var h = F[0], sq = sg * Math.max(Math.abs(side), 0.35), hs = s * 1.05;
+    c.setTransform(DPR * h.fx * hs, DPR * h.fy * hs, -DPR * h.nx * sq * hs, -DPR * h.ny * sq * hs, DPR * h.x, DPR * h.y);
+    var jaw = this.jaw, cj = Math.cos(jaw), sj = Math.sin(jaw);
+    function J(x, y) { x -= 2; y -= 3; return [2 + x * cj - y * sj, 3 + x * sj + y * cj]; }   // lower jaw turns around (2,3)
+    // horns (behind the head)
+    c.fillStyle = C.horn; c.beginPath();
+    c.moveTo(4, -8); c.quadraticCurveTo(-8, -20, -26, -19); c.quadraticCurveTo(-10, -14, -1, -5); c.fill();
+    c.beginPath(); c.moveTo(0, -6); c.quadraticCurveTo(-10, -11, -20, -8); c.quadraticCurveTo(-9, -7, -2, -3); c.fill();
+    // mouth inside + lower jaw + teeth
+    var j1 = J(31, 4), j2 = J(28, 8), j3 = J(8, 9), j0 = J(4, 3);
+    c.fillStyle = '#2a0805'; c.beginPath(); c.moveTo(3, 2); c.lineTo(32, 2); c.lineTo(j1[0], j1[1]); c.lineTo(j0[0], j0[1]); c.fill();
+    c.fillStyle = '#fff3dc'; c.beginPath();
+    for (j = 0; j < 5; j++) { var tx = 12 + j * 4; c.moveTo(tx, 1.5); c.lineTo(tx + 1, 5); c.lineTo(tx + 2, 1.5);
+      var ta = J(tx + 1, 4), tb = J(tx + 2, 0.5), tc = J(tx + 3, 4); c.moveTo(ta[0], ta[1]); c.lineTo(tb[0], tb[1]); c.lineTo(tc[0], tc[1]); }
+    c.fill();
+    c.fillStyle = C.body; c.beginPath();
+    c.moveTo(j0[0], j0[1]); c.lineTo(j1[0], j1[1]); c.quadraticCurveTo(J(32, 7)[0], J(32, 7)[1], j2[0], j2[1]);
+    c.lineTo(j3[0], j3[1]); var jb = J(-2, 9); c.quadraticCurveTo(jb[0], jb[1], -5, 6); c.fill();
+    // skull and snout
+    c.shadowColor = C.glow; c.shadowBlur = 10 * s * DPR;
+    c.beginPath(); c.moveTo(-8, 7); c.quadraticCurveTo(-10, -6, 0, -9); c.quadraticCurveTo(8, -12, 15, -8);
+    c.lineTo(31, -4); c.quadraticCurveTo(36, -2, 34, 2); c.lineTo(3, 2); c.quadraticCurveTo(-2, 6, -8, 7); c.fill();
+    c.shadowBlur = 0;
+    // brow ridge spikes, nostril, eye
+    c.fillStyle = C.dark; c.beginPath();
+    c.moveTo(-6, -6); c.lineTo(-14, -9); c.lineTo(-4, -2); c.moveTo(-8, 2); c.lineTo(-16, 1); c.lineTo(-7, 5); c.fill();
+    c.beginPath(); c.arc(31, -1.5, 0.9, 0, 6.3); c.fill();
+    c.fillStyle = C.eye; c.shadowColor = C.eye; c.shadowBlur = 6 * s * DPR;
+    c.beginPath(); c.ellipse(13, -5, 2.6, 1.8, -0.2, 0, 6.3); c.fill(); c.shadowBlur = 0;
+    c.fillStyle = '#1a0503'; c.beginPath(); c.ellipse(13.4, -5, 0.6, 1.6, 0, 0, 6.3); c.fill();
+    // whiskers, drifting
+    c.strokeStyle = 'rgba(255,170,80,.85)'; c.lineWidth = 0.9;
+    var wv = Math.sin(t * 4) * 3;
+    c.beginPath(); c.moveTo(30, 0); c.quadraticCurveTo(22, 12 + wv, 6, 18 + wv);
+    c.moveTo(26, -3); c.quadraticCurveTo(14, -16 - wv, -2, -14 - wv); c.stroke();
+    c.restore();
   };
 
   /* ---------- the toy ---------- */
@@ -316,14 +472,14 @@
   var hold = null, brew = null, dragon = null, fly = null, ptrs = {}, lastPlay = 0, suppressClick = 0, wander = null, wanderT = 0;
 
   function show() {
-    if (!cv.classList.contains('is-on')) { cv.classList.add('is-on'); resize(); wipe(); }
-    cv.style.opacity = '1';
+    if (!cv.classList.contains('is-on')) { both(function (c) { c.classList.add('is-on'); }); resize(); wipe(); }
+    both(function (c) { c.style.opacity = '1'; });
     if (!raf) { last = performance.now(); raf = requestAnimationFrame(loop); }
   }
   function startFade() { mode = 'fade'; fadeAt = performance.now(); DIS.fire = 3; DIS.water = 1.6; DIS.vel = 0.6; BG_TO = 0; }
   function stopAll() {
     mode = 'idle'; cancelAnimationFrame(raf); raf = 0; dragon = null; fly = null; BG = BG_TO = 0;
-    cv.classList.remove('is-on', 'is-game'); html.classList.remove('fluid-game', 'fluid-hold');
+    both(function (c) { c.classList.remove('is-on', 'is-game'); }); if (c2) c2.clearRect(0, 0, fig.width, fig.height); html.classList.remove('fluid-game', 'fluid-hold');
     emit('end');
   }
   function scale() { return Math.max(0.8, Math.min(1.6, Math.min(innerWidth, innerHeight) / 420)); }
@@ -340,12 +496,13 @@
       dragon.size = scale() * (0.45 + 0.4 * age);
       brew.a += dt * (3.2 + age * 2.5);
       var R = (16 + 42 * age) * scale();
+      dragon.center = { x: brew.x, y: brew.y };
       dragon.moveHead(brew.x + Math.cos(brew.a) * R, brew.y + Math.sin(brew.a) * R);
       dragon.draw(dt, 0.55 + 0.45 * age);
       if (Math.random() < 0.1) put(brew.x + rnd(-R, R), brew.y + rnd(-R, R), rnd(8, 14), water(rnd(0.4, 0.9)), rnd(-200, 200), rnd(-200, 200));
       if (now - brew.t0 > GAME_MS) startGame();
     } else if (fly && dragon) {                             // thrown: flies off in a weaving line
-      fly.t += dt;
+      fly.t += dt; dragon.center = null;
       var an = fly.ang + Math.sin(fly.t * 6) * 0.35, h = dragon.p[0];
       dragon.moveHead(h.x + Math.cos(an) * fly.speed * dt, h.y + Math.sin(an) * fly.speed * dt);
       dragon.draw(dt, Math.max(0, 1 - fly.t / 2.2));
@@ -353,6 +510,7 @@
       if (fly.t > 2.4 || (tail.x < -M || tail.y < -M || tail.x > innerWidth + M || tail.y > innerHeight + M) &&
           (h.x < -M || h.y < -M || h.x > innerWidth + M || h.y > innerHeight + M)) { fly = null; dragon.live = false; }
     } else if (mode === 'game' && dragon) {                 // swims around, follows a finger
+      dragon.center = null;
       var tgt = null;
       for (var id in ptrs) { tgt = ptrs[id]; break; }
       if (!tgt) {
@@ -371,12 +529,14 @@
     }
 
     if (mode === 'fade' && !fly && now - fadeAt > 1500) {
-      cv.style.opacity = '0';
+      both(function (c) { c.style.opacity = '0'; });
       if (now - fadeAt > 2900) { flush(); stopAll(); return; }
     }
     flush();
     step(dt);
     render(now);
+    c2.setTransform(1, 0, 0, 1, 0, 0); c2.clearRect(0, 0, fig.width, fig.height);
+    if (dragon && dragon.live && dragon.F) dragon.paint(c2);
   }
 
   function startBrew(h) {
