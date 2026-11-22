@@ -58,7 +58,7 @@ def build_static():
             if p.name not in ('img', 'press', 'og'): (shutil.rmtree if p.is_dir() else pathlib.Path.unlink)(p)
     shutil.copytree(STATIC, OUT, dirs_exist_ok=True)
     (OUT/'assets').mkdir(exist_ok=True)
-    for f in ('style.css', 'site.js', 'crew.js', 'toys.js'): shutil.copy(SRC/f, OUT/'assets'/f)
+    for f in ('style.css', 'site.js', 'crew.js', 'toys.js', 'fluid-dragon.js'): shutil.copy(SRC/f, OUT/'assets'/f)
     build_photos()
     # small previews for the photo ZIPs on the downloads page (whole photo, never cropped)
     for s in {x for v in data['press'].values() for x in v}:

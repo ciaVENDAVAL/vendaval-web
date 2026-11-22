@@ -1,5 +1,6 @@
 // Toys for touch and mouse (pointer events, so they work in every browser). Off with the accessibility option "stop animations".
 // 1 Tap/click or swipe/drag: soap bubbles (tap a bubble to pop it). 2 Press and hold: juggling a squid, a crab and seaweed out of a fishing net.
+// Keep holding (1.6 s): fluid-dragon.js takes over (fire dragon, then the water game); the juggling stops on 'fluiddragon:brew'.
 // 3 A lifebuoy floats around the back-to-top button; flick it to throw it; when it stops it fades out and reappears on the button.
 (function () {
   var root = document.documentElement;
@@ -15,7 +16,7 @@
   // ---------- bubbles ----------
   var bubbles = [];
   function spawn(x, y) {
-    if (bubbles.length > 40) return;
+    if (bubbles.length > 40 || root.classList.contains('fluid-game')) return;
     var s = 14 + Math.random() * 30, b = el('toy-bub'), o = { el: b, x: x, y: y, s: s };
     b.style.width = b.style.height = s + 'px'; b.style.margin = (-s / 2) + 'px 0 0 ' + (-s / 2) + 'px';
     bubbles.push(o); at(b, x, y);
@@ -90,6 +91,7 @@
     trail(p.clientX, p.clientY);
   }, { passive: true });
   function end() { start = null; cancelHold(); if (stopJuggle) stopJuggle(); }
+  document.addEventListener('fluiddragon:brew', function () { if (stopJuggle) stopJuggle(); });
   document.addEventListener('pointerup', end);
   document.addEventListener('pointercancel', function () { cancelHold(); if (stopJuggle) stopJuggle(); if (kind !== 'touch') start = null; });  // a finger that starts scrolling keeps its bubble trail
   document.addEventListener('touchend', end, { passive: true });

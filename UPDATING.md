@@ -73,3 +73,8 @@ python3 tools/check.py                      # writes CHECK-REPORT.md
 - Forms changed? `python3 tools/make_config.py` (validates nothing by itself: check with Sveltia's JSON schema,
   `npm pack @sveltia/cms` → `schema/sveltia-cms.json`). Update Sveltia: copy `dist/sveltia-cms.js` + `dist/chunks/` into
   `static/admin/web/sveltia/`.
+
+## Hidden toys (no texts, nothing to translate)
+
+- `src/toys.js`: tap/drag → soap bubbles; press and hold 0.45 s → juggling net (squid, crab, seaweed); lifebuoy around the back-to-top button.
+- `src/fluid-dragon.js` (since 22 Nov 2026): keep holding to 1.6 s → a fire dragon hatches (the juggling stops on `fluiddragon:brew`). Flick → it flies off; hold 3 s more → the page turns into deep water and the dragon follows the finger; 2 s without touching (or Esc) → back to the page. Timings: `window.FLUID_DRAGON` in `src/page.html` (`holdMs`, `gameMs`, `idleMs`). Off with reduced motion, `html.a11y-motion` and `#edit`; nothing without WebGL. No bubbles while `html.fluid-game` is set.
