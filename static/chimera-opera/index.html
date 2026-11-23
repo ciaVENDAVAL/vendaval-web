@@ -97,12 +97,27 @@ const snap=(m)=>{m=Math.round(m);for(let d=0;d<7;d++){if(inScale(m+d))return m+d
 const hz=m=>440*Math.pow(2,(m-69)/12);
 
 let ac,master,wet;
+// Weaker phones (few cores / little memory) get a bigger audio buffer and a shorter reverb: otherwise the sound crackles.
+const WEAK=(navigator.hardwareConcurrency||4)<=4||(navigator.deviceMemory&&navigator.deviceMemory<=3);
+function unlockIOS(){ // iPhone/iPad: web audio is muted by the silent switch unless the page counts as "media playback"
+  try{ if(navigator.audioSession) navigator.audioSession.type='playback'; }catch(e){}
+  try{ // older iOS: a looping silent <audio> element switches the page to playback mode
+    const sr=8000,n=800,b=new ArrayBuffer(44+n*2),v=new DataView(b),w=(o,t)=>{for(let i=0;i<t.length;i++)v.setUint8(o+i,t.charCodeAt(i));};
+    w(0,'RIFF');v.setUint32(4,36+n*2,true);w(8,'WAVEfmt ');v.setUint32(16,16,true);v.setUint16(20,1,true);v.setUint16(22,1,true);
+    v.setUint32(24,sr,true);v.setUint32(28,sr*2,true);v.setUint16(32,2,true);v.setUint16(34,16,true);w(36,'data');v.setUint32(40,n*2,true);
+    const a=new Audio(URL.createObjectURL(new Blob([b],{type:'audio/wav'}))); a.loop=true; a.setAttribute('playsinline',''); a.play().catch(()=>{});
+  }catch(e){}
+}
+function wake(){ if(ac&&ac.state!=='running') ac.resume().catch(()=>{}); }
 function initAudio(){
-  ac=new (window.AudioContext||window.webkitAudioContext)();
+  if(/iP(hone|ad|od)/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1)) unlockIOS();
+  const AC=window.AudioContext||window.webkitAudioContext;
+  try{ ac=new AC({latencyHint:WEAK?'playback':'balanced'}); }catch(e){ ac=new AC(); }
+  wake();
   master=ac.createGain(); master.gain.value=.55;
   const comp=ac.createDynamicsCompressor(); master.connect(comp); comp.connect(ac.destination);
   // simple hall reverb
-  const len=ac.sampleRate*2.4, ir=ac.createBuffer(2,len,ac.sampleRate);
+  const len=Math.round(ac.sampleRate*(WEAK?1.1:2.4)), ir=ac.createBuffer(2,len,ac.sampleRate);
   for(let ch=0;ch<2;ch++){const d=ir.getChannelData(ch);for(let i=0;i<len;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/len,3);}
   const conv=ac.createConvolver(); conv.buffer=ir; wet=ac.createGain(); wet.gain.value=.32; wet.connect(conv); conv.connect(comp);
   C.forEach(makeVoice);
@@ -185,7 +200,7 @@ function drag(c,x,y){ const m=yToMidi(c,y), v=xToVow(c,x); if(m!==c.midi||v!==c.
 function release(c){ c.held=false; c.singing=false; voiceOff(c); harmonize(); }
 let rec=null, recT0=0, playing=null;
 function log(e){ if(rec) rec.push({t:performance.now()-recT0,...e,x:e.x/W,y:e.y/H}); }
-cv.addEventListener('pointerdown',e=>{ if(!ac||playing) return; cv.setPointerCapture(e.pointerId); const c=pick(e.clientX); if(c.held) return; grabs.set(e.pointerId,c); press(c,e.clientX,e.clientY); log({k:'d',i:C.indexOf(c),x:e.clientX,y:e.clientY}); });
+cv.addEventListener('pointerdown',e=>{ if(!ac||playing) return; wake(); cv.setPointerCapture(e.pointerId); const c=pick(e.clientX); if(c.held) return; grabs.set(e.pointerId,c); press(c,e.clientX,e.clientY); log({k:'d',i:C.indexOf(c),x:e.clientX,y:e.clientY}); });
 cv.addEventListener('pointermove',e=>{ const c=grabs.get(e.pointerId); if(!c) return; drag(c,e.clientX,e.clientY); log({k:'m',i:C.indexOf(c),x:e.clientX,y:e.clientY}); });
 const up=e=>{ const c=grabs.get(e.pointerId); if(!c) return; grabs.delete(e.pointerId); release(c); log({k:'u',i:C.indexOf(c),x:0,y:0}); };
 cv.addEventListener('pointerup',up); cv.addEventListener('pointercancel',up);
