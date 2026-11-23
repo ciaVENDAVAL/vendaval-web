@@ -17,8 +17,8 @@
 </head>
 <body>
 <h1>Phone test</h1>
-<p>Open this page on the phone where things go wrong, tap <b>Test sound</b>, wait for the speed test, then take a screenshot (or tap <b>Copy</b> and paste it in the chat).</p>
-<button id="snd">Test sound</button><button id="cp">Copy</button>
+<p>Open this page on the phone where things go wrong, tap <b>Test sound</b> and then <b>Test sound (big buffer)</b>, wait for the speed test, then take a screenshot (or tap <b>Copy</b> and paste it in the chat).</p>
+<button id="snd">Test sound</button><button id="snd2">Test sound (big buffer)</button><button id="cp">Copy</button>
 <canvas id="cv"></canvas>
 <table id="t"></table>
 <script>
@@ -85,19 +85,23 @@
   // ---- sound
   var AC = window.AudioContext || window.webkitAudioContext;
   row('Web audio', AC ? 'yes' : 'NO', !AC);
-  var sndCell = row('Sound test', 'tap “Test sound”');
-  document.getElementById('snd').onclick = function () {
+  var sndCell = row('Sound test', 'tap “Test sound”, then “Test sound (big buffer)”');
+  function tone(hint, label) {
     try { if (navigator.audioSession) navigator.audioSession.type = 'playback'; } catch (e) {}
-    var ac = new AC(); if (ac.state !== 'running') ac.resume();
-    var o = ac.createOscillator(), gn = ac.createGain(); o.type = 'sawtooth'; o.frequency.value = 330;
-    gn.gain.setValueAtTime(0, ac.currentTime); gn.gain.linearRampToValueAtTime(.15, ac.currentTime + .05); gn.gain.linearRampToValueAtTime(0, ac.currentTime + 1.2);
-    o.connect(gn); gn.connect(ac.destination); o.start(); o.stop(ac.currentTime + 1.3);
-    setTimeout(function () {
-      sndCell.textContent = 'state ' + ac.state + ' · ' + ac.sampleRate + ' Hz · latency ' + Math.round((ac.baseLatency || 0) * 1000) + '+' +
-        Math.round((ac.outputLatency || 0) * 1000) + ' ms · audioSession ' + (navigator.audioSession ? 'yes' : 'no') + ' — did you hear a clean tone?';
-      sndCell.className = ac.state === 'running' ? '' : 'bad'; rows.push('Sound test: ' + sndCell.textContent);
-    }, 400);
-  };
+    var ac; try { ac = new AC({ latencyHint: hint }); } catch (e) { ac = new AC(); }
+    var go = function () {
+      var o = ac.createOscillator(), gn = ac.createGain(), t = ac.currentTime + 0.05; o.type = 'sawtooth'; o.frequency.value = 330;
+      gn.gain.setValueAtTime(0, t); gn.gain.linearRampToValueAtTime(.15, t + .05); gn.gain.linearRampToValueAtTime(0, t + 1.2);
+      o.connect(gn); gn.connect(ac.destination); o.start(t); o.stop(t + 1.3);
+      var info = label + ': state ' + ac.state + ' · ' + ac.sampleRate + ' Hz · latency ' + Math.round((ac.baseLatency || 0) * 1000) + '+' +
+        Math.round((ac.outputLatency || 0) * 1000) + ' ms';
+      setTimeout(function () { ac.close(); }, 1700);          // closed afterwards: no hiss after the tone
+      var c = row('Sound ' + label, info + ' — clean, crackling or silent?'); if (ac.state !== 'running') c.className = 'bad';
+    };
+    if (ac.state === 'running') go(); else ac.resume().then(go, go);
+  }
+  document.getElementById('snd').onclick = function () { tone('interactive', 'normal'); };
+  document.getElementById('snd2').onclick = function () { tone('playback', 'big buffer'); };
   document.getElementById('cp').onclick = function () {
     var txt = rows.join('\n');
     (navigator.clipboard ? navigator.clipboard.writeText(txt) : Promise.reject()).then(function () { alert('Copied'); }, function () { prompt('Copy this:', txt); });

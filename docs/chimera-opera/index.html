@@ -108,7 +108,15 @@ function unlockIOS(){ // iPhone/iPad: web audio is muted by the silent switch un
     const a=new Audio(URL.createObjectURL(new Blob([b],{type:'audio/wav'}))); a.loop=true; a.setAttribute('playsinline',''); a.play().catch(()=>{});
   }catch(e){}
 }
-function wake(){ if(ac&&ac.state!=='running') ac.resume().catch(()=>{}); }
+function wake(){ quietSince=0; if(ac&&ac.state!=='running') ac.resume().catch(()=>{}); }
+// Some Android phones hiss or crackle while web audio plays silence: pause the audio 3 s after the last voice
+// (reverb tail included); a touch, a voice or the player wakes it again.
+let quietSince=0;
+setInterval(()=>{
+  if(!ac||ac.state!=='running') return;
+  if(playing||C.some(c=>c.singing||c.held)){ quietSince=0; return; }
+  if(!quietSince) quietSince=performance.now(); else if(performance.now()-quietSince>3000){ quietSince=0; ac.suspend().catch(()=>{}); }
+},500);
 function initAudio(){
   if(/iP(hone|ad|od)/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1)) unlockIOS();
   const AC=window.AudioContext||window.webkitAudioContext;
@@ -140,7 +148,7 @@ function voiceSet(c,now){
   c.v.o1.frequency.setTargetAtTime(f,now,.035); c.v.o2.frequency.setTargetAtTime(f,now,.035);
   const F=FORM[VOW[c.vow]]; c.v.fs.forEach((fl,i)=>fl.frequency.setTargetAtTime(F[i]*c.fs,now,.06));
 }
-function voiceOn(c){ if(!c.v) return; const n=ac.currentTime; voiceSet(c,n); c.v.g.gain.cancelScheduledValues(n); c.v.g.gain.setTargetAtTime(c===C[2]?.75:.55,n,.04); c.v.lg.gain.cancelScheduledValues(n); c.v.lg.gain.setValueAtTime(0,n); c.v.lg.gain.linearRampToValueAtTime(22,n+.6); }
+function voiceOn(c){ if(!c.v) return; wake(); const n=ac.currentTime; voiceSet(c,n); c.v.g.gain.cancelScheduledValues(n); c.v.g.gain.setTargetAtTime(c===C[2]?.75:.55,n,.04); c.v.lg.gain.cancelScheduledValues(n); c.v.lg.gain.setValueAtTime(0,n); c.v.lg.gain.linearRampToValueAtTime(22,n+.6); }
 function voiceOff(c){ if(!c.v) return; const n=ac.currentTime; c.v.g.gain.cancelScheduledValues(n); c.v.g.gain.setTargetAtTime(0,n,.09); }
 
 // ---------- state
