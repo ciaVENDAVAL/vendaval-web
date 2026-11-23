@@ -28,7 +28,8 @@
     '.fluid-dragon{position:fixed;inset:0;width:100%;height:100%;z-index:9999;pointer-events:none;display:none;transition:opacity 1.2s ease;touch-action:none}' +
     '.fluid-dragon.is-on{display:block}.fluid-dragon.is-game{pointer-events:auto;cursor:crosshair}' +
     'html.fluid-hold,html.fluid-hold *{-webkit-user-select:none!important;user-select:none!important;-webkit-touch-callout:none!important}' +
-    '.fluid-dragon.fluid-fig{z-index:10000;pointer-events:none!important}html.fluid-game{overflow:hidden}';
+    '.fluid-dragon.fluid-fig{z-index:10000;pointer-events:none!important}.fluid-fig.nogl{transition:opacity 1.2s ease,background-color 1s}' +
+    'html.fluid-game .fluid-fig.nogl{background:radial-gradient(ellipse at 50% 0,#0a5a78,#00203a 60%,#000b18)}html.fluid-game{overflow:hidden}';
   document.head.appendChild(st);
   var cv = document.createElement('canvas');
   cv.className = 'fluid-dragon';
@@ -41,7 +42,7 @@
   function both(fn) { fn(cv); fn(fig); }
 
   /* ---------- WebGL fluid ---------- */
-  var gl, ext, P = {}, vel, dye, divg, curlT, pres, ready = false, failed = false, MULTI = 0;
+  var NOGL = false, gl, ext, P = {}, vel, dye, divg, curlT, pres, ready = false, failed = false, MULTI = 0;
   var VS = 'precision highp float;attribute vec2 aPosition;varying vec2 vUv,vL,vR,vT,vB;uniform vec2 texelSize;' +
     'void main(){vUv=aPosition*.5+.5;vL=vUv-vec2(texelSize.x,0.);vR=vUv+vec2(texelSize.x,0.);vT=vUv+vec2(0.,texelSize.y);vB=vUv-vec2(0.,texelSize.y);gl_Position=vec4(aPosition,0.,1.);}';
   var H = 'precision mediump float;precision mediump sampler2D;varying highp vec2 vUv,vL,vR,vT,vB;';
@@ -116,7 +117,13 @@
       gl.enableVertexAttribArray(0);
       resize(true);
       ready = true;
-    } catch (e) { failed = true; if (window.console) console.info('fluid dragon off:', e); }
+    } catch (e) {
+      // no WebGL (or blocked, e.g. Chrome after a graphics crash): the dragon still appears, without the fluid;
+      // the water is a plain gradient behind it
+      failed = true; NOGL = true; ready = true; fig.classList.add('nogl');
+      if (window.console) console.info('fluid dragon without fluid:', e);
+      resize(true);
+    }
     return ready;
   }
   function testFmt(i, f, t) {
@@ -178,6 +185,7 @@
     var w = Math.round(innerWidth * dpr), h = Math.round(innerHeight * dpr);
     if (!force && cv.width === w && cv.height === h) return;
     cv.width = fig.width = w; cv.height = fig.height = h;
+    if (NOGL) { if (!raf) { last = performance.now(); raf = requestAnimationFrame(loop); } return; }
     var small = Math.min(innerWidth, innerHeight) < 600;
     var s = res(small ? 112 : 144), d = res(small ? 640 : 1024);
     vel = dbl(s.w, s.h, ext.rg, ext.filter);
@@ -194,6 +202,7 @@
 
   var DIS = { fire: 2, water: 0.5, vel: 0.25 }, BG = 0, BG_TO = 0, T0 = performance.now();
   function step(dt) {
+    if (NOGL) return;
     gl.disable(gl.BLEND);
     var u = use(P.curl); gl.uniform2f(u.texelSize, vel.tx, vel.ty); gl.uniform1i(u.uVelocity, vel.read.attach(0)); blit(curlT);
     u = use(P.vorticity); gl.uniform2f(u.texelSize, vel.tx, vel.ty); gl.uniform1i(u.uVelocity, vel.read.attach(0)); gl.uniform1i(u.uCurl, curlT.attach(1));
@@ -210,6 +219,7 @@
     gl.uniform4f(u.dissipation, DIS.fire, DIS.fire, DIS.fire, DIS.water); blit(dye.write); dye.swap();
   }
   function render(now) {
+    if (NOGL) return;
     gl.disable(gl.BLEND); gl.bindFramebuffer(gl.FRAMEBUFFER, null);
     gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight); gl.clearColor(0, 0, 0, 0); gl.clear(gl.COLOR_BUFFER_BIT);
     var u = use(P.display);
@@ -222,6 +232,7 @@
   var Q = [];
   function put(x, y, r, col, vx, vy) { Q.push([x, y, r, col, vx || 0, vy || 0]); }
   function flush() {
+    if (NOGL) { Q = []; return; }
     if (!Q.length) return;
     var asp = cv.width / cv.height, ih = innerHeight;
     var pts = Q.map(function (s) { return [s[0] / innerWidth, 1 - s[1] / ih, (s[2] / ih) * (s[2] / ih), s[3], s[4] / innerWidth * vel.w, -s[5] / ih * vel.h]; });
@@ -245,6 +256,7 @@
     }
   }
   function wipe() {
+    if (NOGL) return;
     var u = use(P.clear); gl.uniform1f(u.value, 0);
     [vel, dye, pres].forEach(function (d) { gl.uniform1i(u.uTexture, d.read.attach(0)); blit(d.write); d.swap(); });
   }
@@ -594,14 +606,19 @@
     if (hold || brew) { cancelHold(); return; }              // a second finger (pinch) cancels
     if (!e.isPrimary || (e.pointerType === 'mouse' && e.button !== 0) || off()) return;
     if (e.target.closest && e.target.closest(SKIP)) return;
-    var h = { id: e.pointerId, x: e.clientX, y: e.clientY };
+    var h = { id: e.pointerId, x: e.clientX, y: e.clientY, t0: performance.now() };
     h.timer = setTimeout(function () { if (hold === h) { hold = null; startBrew(h); } }, HOLD_MS);
     hold = h;
     if (e.pointerType !== 'mouse') html.classList.add('fluid-hold');
   }, true);
 
   addEventListener('pointermove', function (e) {
-    if (hold && e.pointerId === hold.id && Math.hypot(e.clientX - hold.x, e.clientY - hold.y) > SLOP) cancelHold();
+    // first 0.4 s: moving more than SLOP means a scroll or a swipe, not a hold. After that (the juggling net has started
+    // and follows the finger) the finger may wander: the dragon hatches wherever it is.
+    if (hold && e.pointerId === hold.id) {
+      if (performance.now() - hold.t0 > 400) { hold.x = e.clientX; hold.y = e.clientY; }
+      else if (Math.hypot(e.clientX - hold.x, e.clientY - hold.y) > SLOP) cancelHold();
+    }
     if (brew && e.pointerId === brew.id) {
       brew.x = e.clientX; brew.y = e.clientY;
       brew.hist.push([e.clientX, e.clientY, performance.now()]); if (brew.hist.length > 12) brew.hist.shift();
@@ -631,7 +648,11 @@
   addEventListener('pointerup', up, true);
   addEventListener('pointercancel', up, true);
 
-  addEventListener('touchmove', function (e) { if (brew || mode === 'game') e.preventDefault(); }, { passive: false, capture: true });
+  // a held finger that starts moving must not scroll the page: in Chrome the scroll would cancel the touch (pointercancel)
+  addEventListener('touchmove', function (e) {
+    if (brew || mode === 'game' || (hold && performance.now() - hold.t0 > 400)) e.preventDefault();
+  }, { passive: false, capture: true });
+  addEventListener('dragstart', function (e) { if (hold || brew || mode === 'game') e.preventDefault(); }, true);   // Chrome: long press on an image starts a drag
   addEventListener('contextmenu', function (e) { if (hold || brew || mode === 'game' || performance.now() - suppressClick < 600) e.preventDefault(); }, true);
   addEventListener('click', function (e) {
     if (mode === 'game' || performance.now() - suppressClick < 450) { e.preventDefault(); e.stopPropagation(); }
