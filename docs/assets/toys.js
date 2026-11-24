@@ -1,6 +1,6 @@
 // Toys for touch and mouse (pointer events, so they work in every browser). Off with the accessibility option "stop animations".
 // 1 Tap/click or swipe/drag: soap bubbles (tap a bubble to pop it). 2 Press and hold: juggling a squid, a crab and seaweed out of a fishing net.
-// Keep holding (1.6 s): fluid-dragon.js takes over (fire dragon, then the water game); the juggling stops on 'fluiddragon:brew'.
+// Keep holding (1.6 s): fluid-dragon.js takes over (fire dragon, then the water game); on 'fluiddragon:brew' the net flies up and the creatures scatter.
 // 3 A lifebuoy floats around the back-to-top button; flick it to throw it; when it stops it fades out and reappears on the button.
 (function () {
   var root = document.documentElement;
@@ -45,18 +45,56 @@
   var NET = '<svg viewBox="0 0 96 56" width="96" height="56"><defs><pattern id="toy-mesh" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0H9M0 0V9" stroke="#2f8fe0" stroke-width="1.6" fill="none"/></pattern><clipPath id="toy-bag"><path d="M6 14 Q48 70 90 14 Z"/></clipPath></defs><path d="M6 14 Q48 70 90 14 Z" fill="rgba(47,143,224,.18)"/><rect width="96" height="56" fill="url(#toy-mesh)" clip-path="url(#toy-bag)"/><path d="M6 14 Q48 70 90 14" fill="none" stroke="#2f8fe0" stroke-width="1.6"/><ellipse cx="48" cy="14" rx="42" ry="9" fill="none" stroke="#1a5fb0" stroke-width="4"/><ellipse cx="48" cy="14" rx="42" ry="9" fill="none" stroke="#6fb6f2" stroke-width="1.4"/></svg>';
   var anchor = { x: 0, y: 0 }, stopJuggle = null;
   function juggle() {
-    var net = el('toy-net', NET), cs = THINGS.map(function (s) { return el('toy-thing', s); }), t0 = performance.now(), raf;
+    var net = el('toy-net', NET), cs = THINGS.map(function (s) { return el('toy-thing', s); }), t0 = performance.now(), raf, tPrev = t0;
+    var pos = cs.map(function () { return { x: anchor.x, y: anchor.y, r: 0, vx: 0, vy: 0 }; });   // kept for the scatter
     (function step() {
-      var t = (performance.now() - t0) / 1100; at(net, anchor.x, anchor.y);
+      var now = performance.now(), dt = Math.max(0.008, (now - tPrev) / 1000), t = (now - t0) / 1100; tPrev = now; at(net, anchor.x, anchor.y);
       cs.forEach(function (c, i) {
         var ph = (t + i / 3) % 1, left = Math.floor(t + i / 3) % 2 === 0, hx = left ? -30 : 30;
         var x = anchor.x + hx - 2 * hx * ph, y = anchor.y - 40 - Math.sin(Math.PI * ph) * 170;
-        c.style.transform = 'translate(' + x + 'px,' + y + 'px) rotate(' + (ph * 540 * (left ? 1 : -1)) + 'deg)';
+        var r = ph * 540 * (left ? 1 : -1), P = pos[i];
+        P.vx = (x - P.x) / dt; P.vy = (y - P.y) / dt; P.x = x; P.y = y; P.r = r;
+        c.style.transform = 'translate(' + x + 'px,' + y + 'px) rotate(' + r + 'deg)';
       });
       raf = requestAnimationFrame(step);
     })();
     holding = false; lock(true); clearSel();
-    stopJuggle = function () { cancelAnimationFrame(raf); cs.forEach(function (c) { c.remove(); }); net.remove(); stopJuggle = null; lock(false); };
+    stopJuggle = function () { cancelAnimationFrame(raf); cs.forEach(function (c) { c.remove(); }); net.remove(); stopJuggle = null; scatterJuggle = null; lock(false); };
+    scatterJuggle = function (cx, cy) { cancelAnimationFrame(raf); stopJuggle = null; scatterJuggle = null; lock(false); scatter(net, cs, pos, cx, cy); };
+  }
+
+  // The dragon hatches (fluid-dragon.js, 'fluiddragon:brew'): the net is yanked up out of the screen and the three creatures
+  // burst out in three directions, drifting on curving currents (drag + a slowly turning swirl), tumbling, and fading.
+  // While they fly they stir the dragon's fluid (window.fluidDragonStir): the crab leaves fire, squid and seaweed water.
+  var scatterJuggle = null;
+  function rnd(a, b) { return a + Math.random() * (b - a); }
+  function scatter(net, cs, pos, cx, cy) {
+    var t0 = performance.now(), last = t0, turn = Math.random() * 6.28, stir = window.fluidDragonStir || function () {};
+    var N = { x: cx, y: cy, vx: rnd(-80, 80), vy: -320, r: 0, vr: rnd(-90, 90) };
+    var ps = cs.map(function (c, i) {
+      var P = pos[i], a = turn + i * 2.094 + rnd(-0.35, 0.35), sp = rnd(600, 850);       // three directions, 120° apart
+      return { el: c, x: P.x, y: P.y, vx: P.vx * 0.35 + Math.cos(a) * sp, vy: P.vy * 0.35 + Math.sin(a) * sp, r: P.r,
+               vr: rnd(300, 720) * (Math.random() < 0.5 ? -1 : 1), sw: rnd(1.8, 3.4), ph: Math.random() * 6.28, kind: i === 1 ? 'fire' : 'water' };
+    });
+    stir(cx, cy, 0, -600, 'water', 1.2);                                                // the net leaves a gulp of water
+    (function step() {
+      var now = performance.now(), dt = Math.min(0.05, (now - last) / 1000), t = (now - t0) / 1000; last = now;
+      // net: accelerates upwards, sways, turns a little, grows and fades
+      N.vy -= 1500 * dt; N.vx += Math.sin(t * 9) * 600 * dt; N.x += N.vx * dt; N.y += N.vy * dt; N.r += N.vr * dt;
+      net.style.transform = 'translate(' + N.x + 'px,' + N.y + 'px) rotate(' + N.r + 'deg) scale(' + (1 + t * 0.5) + ')';
+      net.style.opacity = Math.max(0, Math.min(1, (1.2 - t) / 0.6));
+      if (t < 0.6) stir(N.x, N.y + 20, N.vx * 0.3, -N.vy * 0.25, 'water', 0.25);
+      ps.forEach(function (p) {
+        var drag = Math.exp(-1.0 * dt), w = Math.sin(t * p.sw + p.ph) * 2.4 * dt, c = Math.cos(w), s2 = Math.sin(w);
+        var vx = (p.vx * c - p.vy * s2) * drag, vy = (p.vx * s2 + p.vy * c) * drag - 45 * dt;   // curving current, slight lift
+        p.vx = vx; p.vy = vy; p.x += vx * dt; p.y += vy * dt; p.r += p.vr * dt; p.vr *= Math.exp(-0.7 * dt);
+        p.el.style.transform = 'translate(' + p.x + 'px,' + p.y + 'px) rotate(' + p.r + 'deg) scale(' + (1 + t * 0.35) + ')';
+        p.el.style.opacity = Math.max(0, Math.min(1, (2.3 - t) / 0.9));
+        if (t < 1.8) stir(p.x, p.y, vx * 0.5, vy * 0.5, p.kind, p.kind === 'fire' ? 0.18 : 0.6);
+      });
+      if (t < 2.3) requestAnimationFrame(step);
+      else { cs.forEach(function (c) { c.remove(); }); net.remove(); }
+    })();
   }
 
   // ---------- input: pointer events (mouse, pen, touch); touchmove adds bubbles while a finger scrolls ----------
@@ -91,7 +129,10 @@
     trail(p.clientX, p.clientY);
   }, { passive: true });
   function end() { start = null; cancelHold(); if (stopJuggle) stopJuggle(); }
-  document.addEventListener('fluiddragon:brew', function () { if (stopJuggle) stopJuggle(); });
+  document.addEventListener('fluiddragon:brew', function (e) {
+    var d = e.detail || anchor;
+    if (scatterJuggle) scatterJuggle(d.x, d.y); else if (stopJuggle) stopJuggle();
+  });
   document.addEventListener('pointerup', end);
   document.addEventListener('pointercancel', function () { cancelHold(); if (stopJuggle) stopJuggle(); if (kind !== 'touch') start = null; });  // a finger that starts scrolling keeps its bubble trail
   document.addEventListener('touchend', end, { passive: true });

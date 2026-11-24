@@ -20,7 +20,7 @@
     try { ed = location.hash === '#edit' || !!sessionStorage.getItem('ls-edit'); } catch (e) {}
     return rm || ed || html.classList.contains('a11y-motion') || html.classList.contains('is-editing');
   }
-  function emit(name) { try { document.dispatchEvent(new CustomEvent('fluiddragon:' + name)); } catch (e) {} }
+  function emit(name, d) { try { document.dispatchEvent(new CustomEvent('fluiddragon:' + name, { detail: d })); } catch (e) {} }
 
   /* ---------- styles ---------- */
   var st = document.createElement('style');
@@ -267,6 +267,11 @@
   }
   function water(k) { return [0, 0, 0, k]; }
   function rnd(a, b) { return a + Math.random() * (b - a); }
+  // other toys can stir the fluid while it is on (toys.js: the juggling creatures fly off through it)
+  window.fluidDragonStir = function (x, y, vx, vy, kind, k) {
+    if (!ready || NOGL || !cv.classList.contains('is-on')) return;
+    put(x, y, 6 * scale(), kind === 'fire' ? fire(rnd(10, 45), k) : kind === 'water' ? water(k) : [0, 0, 0, 0], vx, vy);
+  };
 
   /* ---------- the dragon: a chain of points pulled by its head ---------- */
   var N = 26;
@@ -559,7 +564,11 @@
     dragon = new Dragon(h.x + 16, h.y, brew.a + 1.57, scale() * 0.45);
     html.classList.add('fluid-hold');
     show();
-    emit('brew');
+    for (var i = 0; i < 8; i++) {                         // hatching puff: a ring pushed outwards, fire and water in turn
+      var a = i * 0.785 + brew.a, sc = scale();
+      put(h.x + Math.cos(a) * 8 * sc, h.y + Math.sin(a) * 8 * sc, 12 * sc, i % 2 ? fire(rnd(20, 50), 0.45) : water(1.4), Math.cos(a) * 900, Math.sin(a) * 900);
+    }
+    emit('brew', { x: h.x, y: h.y });
     if (navigator.vibrate) try { navigator.vibrate(12); } catch (e) {}
   }
   function release() {
