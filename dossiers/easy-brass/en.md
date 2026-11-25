@@ -5,6 +5,8 @@
 
 VENDAVAL Brass is a band that walks through the street.
 There are circus artists with the band.
+The band is a family of dragons on a journey.
+They carry things that sailors use.
 
 ## Who we are
 

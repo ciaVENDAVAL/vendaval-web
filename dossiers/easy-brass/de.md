@@ -6,6 +6,8 @@
 VENDAVAL Brass ist eine Band.
 Die Band geht durch die Straßen.
 Bei der Band sind auch Zirkus-Künstler*innen.
+Die Band ist ein Drachen-Volk auf Reisen.
+Die Drachen haben Sachen von Seeleuten dabei.
 
 ## Wer wir sind
 

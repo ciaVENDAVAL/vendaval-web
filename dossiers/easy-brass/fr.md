@@ -5,6 +5,8 @@
 
 VENDAVAL Brass est une fanfare qui marche dans la rue.
 Avec la fanfare, il y a des artistes de cirque.
+La fanfare est un peuple de dragons qui voyage.
+Les dragons portent des objets de marins.
 
 ## Qui nous sommes
 

@@ -5,6 +5,8 @@
 
 VENDAVAL Brass es una banda de música que camina por la calle.
 Con la banda hay artistas de circo.
+La banda es un pueblo de dragones que viaja.
+Llevan cosas de marineros.
 
 ## Quiénes somos
 
