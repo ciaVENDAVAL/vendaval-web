@@ -738,6 +738,18 @@
    },
    "note": {},
    "ws": {}
+  },
+  {
+   "start": "2027-05-14",
+   "end": "2027-05-22",
+   "show": "brass",
+   "url": "https://www.protagon.net/en/unterwegs",
+   "precision": "day",
+   "place": {
+    "all": "Unterwegs Theater Festival (DE)"
+   },
+   "note": {},
+   "ws": {}
   }
  ],
  "artists": [
