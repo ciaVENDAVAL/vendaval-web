@@ -4,7 +4,14 @@
  "skip": "Skip to content",
  "meta": {
   "title": "Cia. VENDAVAL – Games and live music in the street",
-  "description": "A roaming brass band with fantastical characters on stilts and unicycle. Street shows for all ages, from Barcelona and Terrassa."
+  "description": "A roaming brass band with fantastical characters on stilts and unicycle. Street shows for all ages, from Barcelona and Terrassa.",
+  "pages": {
+   "agenda": "Upcoming and past shows of Cia. VENDAVAL at festivals and towns in Catalonia and across Europe.",
+   "artists": "Meet the musicians and circus artists of Cia. VENDAVAL: brass, saxophones, drums, stilts, unicycle and juggling, from Barcelona and Terrassa.",
+   "workshops": "Stilts, circus, soap-bubble and music workshops for children and adults, alongside our shows. We travel to your venue from Barcelona.",
+   "downloads": "Dossiers, technical riders, press photos and logos of Cia. VENDAVAL in 7 languages, for programmers and the press.",
+   "crew": "Join the VENDAVAL crew: find your sea-creature name and play along with the band."
+  }
  },
  "nav": {
   "about": "About",

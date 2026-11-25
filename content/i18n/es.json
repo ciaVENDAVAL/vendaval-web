@@ -4,7 +4,14 @@
  "skip": "Saltar al contenido",
  "meta": {
   "title": "Cia. VENDAVAL – Juegos y música en directo en la calle",
-  "description": "Banda de vientos itinerante con personajes fantásticos en zancos y monociclo. Espectáculos de calle para todos los públicos, desde Barcelona y Terrassa."
+  "description": "Banda de vientos itinerante con personajes fantásticos en zancos y monociclo. Espectáculos de calle para todos los públicos, desde Barcelona y Terrassa.",
+  "pages": {
+   "agenda": "Próximas y pasadas actuaciones de la Cia. VENDAVAL en festivales y pueblos de Cataluña y de toda Europa.",
+   "artists": "Conoce al equipo de música y circo de la Cia. VENDAVAL: metales, saxos, batería, zancos, monociclo y malabares, desde Barcelona y Terrassa.",
+   "workshops": "Talleres de zancos, circo, pompas de jabón y música para la infancia y personas adultas, junto con nuestros espectáculos. Viajamos a vuestro espacio desde Barcelona.",
+   "downloads": "Dosieres, riders técnicos, fotos de prensa y logotipos de la Cia. VENDAVAL en 7 idiomas, para programación y prensa.",
+   "crew": "Únete a la tripulación de VENDAVAL: encuentra tu nombre de criatura marina y juega con la banda."
+  }
  },
  "nav": {
   "about": "La compañía",

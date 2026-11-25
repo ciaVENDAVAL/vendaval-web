@@ -4,7 +4,14 @@
  "skip": "Salta al contingut",
  "meta": {
   "title": "Cia. VENDAVAL – Jocs i música en viu al carrer",
-  "description": "Banda de vents itinerant amb personatges fantàstics en xanques i monocicle. Espectacles de carrer per a tots els públics, des de Barcelona i Terrassa."
+  "description": "Banda de vents itinerant amb personatges fantàstics en xanques i monocicle. Espectacles de carrer per a tots els públics, des de Barcelona i Terrassa.",
+  "pages": {
+   "agenda": "Pròximes i anteriors actuacions de la Cia. VENDAVAL a festivals i pobles de Catalunya i de tot Europa.",
+   "artists": "Coneix l'equip de música i circ de la Cia. VENDAVAL: metalls, saxos, bateria, xanques, monocicle i malabars, des de Barcelona i Terrassa.",
+   "workshops": "Tallers de xanques, circ, bombolles de sabó i música per a infants i persones adultes, juntament amb els nostres espectacles. Viatgem al vostre espai des de Barcelona.",
+   "downloads": "Dossiers, riders tècnics, fotos de premsa i logotips de la Cia. VENDAVAL en 7 idiomes, per a la programació i la premsa.",
+   "crew": "Uneix-te a la tripulació de VENDAVAL: troba el teu nom de criatura marina i juga amb la banda."
+  }
  },
  "nav": {
   "about": "La companyia",

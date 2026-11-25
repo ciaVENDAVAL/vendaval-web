@@ -98,6 +98,37 @@ collections:
         widget: text
         required: false
         i18n: true
+      - name: pages
+        label: Pages
+        widget: object
+        collapsed: true
+        fields:
+        - name: agenda
+          label: Agenda
+          widget: text
+          required: false
+          i18n: true
+        - name: artists
+          label: Artists
+          widget: text
+          required: false
+          i18n: true
+        - name: workshops
+          label: Workshops
+          widget: text
+          required: false
+          i18n: true
+        - name: downloads
+          label: Downloads
+          widget: text
+          required: false
+          i18n: true
+        - name: crew
+          label: Crew
+          widget: text
+          required: false
+          i18n: true
+        i18n: true
       i18n: true
     - name: nav
       label: Menu names

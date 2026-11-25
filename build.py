@@ -269,7 +269,7 @@ def render():
             pages.append((s['slug'] + '/', 'show', {'s': s, 'page_title': st['name'], 'page_desc': short_desc(re.sub('<[^>]+>', '', st['text'][0])), 'og_image': 'og/photo-' + s['cover'] + '.jpg'}))
         for k in ('workshops', 'agenda', 'artists', 'downloads', 'crew'):
             og = ('og/photo-' + data['workshop_groups'][0]['photo'] + '.jpg') if k == 'workshops' else f'og/{lang}-{k}.jpg'
-            pages.append((k + '/', k, {'page_title': t['nav'][k], 'og_image': og}))
+            pages.append((k + '/', k, {'page_title': t['nav'][k], 'page_desc': t['meta'].get('pages', {}).get(k), 'og_image': og}))
         for path, page, extra in pages:
             depth = path.count('/') + 1
             R = '../' * depth

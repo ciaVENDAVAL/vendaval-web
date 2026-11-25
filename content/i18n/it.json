@@ -4,7 +4,14 @@
  "skip": "Vai al contenuto",
  "meta": {
   "title": "Cia. VENDAVAL – Giochi e musica dal vivo in strada",
-  "description": "Banda itinerante di fiati con personaggi fantastici sui trampoli e sul monociclo. Spettacoli di strada per tutte le età, da Barcellona e Terrassa."
+  "description": "Banda itinerante di fiati con personaggi fantastici sui trampoli e sul monociclo. Spettacoli di strada per tutte le età, da Barcellona e Terrassa.",
+  "pages": {
+   "agenda": "Prossime e passate esibizioni della Cia. VENDAVAL in festival e città della Catalogna e di tutta Europa.",
+   "artists": "Il gruppo di musica e circo della Cia. VENDAVAL: ottoni, sassofoni, batteria, trampoli, monociclo e giocoleria, da Barcellona e Terrassa.",
+   "workshops": "Laboratori di trampoli, circo, bolle di sapone e musica per l'infanzia e per adulti, insieme ai nostri spettacoli. Veniamo da Barcellona fino al vostro spazio.",
+   "downloads": "Dossier, rider tecnici, foto stampa e loghi della Cia. VENDAVAL in 7 lingue, per la programmazione e la stampa.",
+   "crew": "Unisciti alla ciurma di VENDAVAL: trova il tuo nome da creatura marina e gioca con la banda."
+  }
  },
  "nav": {
   "about": "La compagnia",

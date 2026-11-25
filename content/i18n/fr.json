@@ -4,7 +4,14 @@
  "skip": "Aller au contenu",
  "meta": {
   "title": "Cia. VENDAVAL – Jeux et musique live dans la rue",
-  "description": "Fanfare déambulatoire avec des personnages fantastiques sur échasses et monocycle. Spectacles de rue tout public, depuis Barcelone et Terrassa."
+  "description": "Fanfare déambulatoire avec des personnages fantastiques sur échasses et monocycle. Spectacles de rue tout public, depuis Barcelone et Terrassa.",
+  "pages": {
+   "agenda": "Prochaines et anciennes représentations de la Cia. VENDAVAL dans des festivals et des villes de Catalogne et de toute l'Europe.",
+   "artists": "L'équipe de musique et de cirque de la Cia. VENDAVAL : cuivres, saxophones, batterie, échasses, monocycle et jonglage, depuis Barcelone et Terrassa.",
+   "workshops": "Ateliers d'échasses, de cirque, de bulles de savon et de musique pour enfants et adultes, en lien avec nos spectacles. Nous venons jusqu'à votre lieu depuis Barcelone.",
+   "downloads": "Dossiers, fiches techniques, photos presse et logos de la Cia. VENDAVAL en 7 langues, pour la programmation et la presse.",
+   "crew": "Rejoignez l'équipage de VENDAVAL : trouvez votre nom de créature marine et jouez avec la fanfare."
+  }
  },
  "nav": {
   "about": "La compagnie",

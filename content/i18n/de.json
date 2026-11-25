@@ -4,7 +4,14 @@
  "skip": "Zum Inhalt springen",
  "meta": {
   "title": "Cia. VENDAVAL – Spiele und Live-Musik auf der Straße",
-  "description": "Mobile Brassband mit fantastischen Figuren auf Stelzen und Einrad. Straßentheater für alle Altersgruppen, aus Barcelona und Terrassa."
+  "description": "Mobile Brassband mit fantastischen Figuren auf Stelzen und Einrad. Straßentheater für alle Altersgruppen, aus Barcelona und Terrassa.",
+  "pages": {
+   "agenda": "Kommende und vergangene Auftritte der Cia. VENDAVAL bei Festivals und in Städten in Katalonien und ganz Europa.",
+   "artists": "Das Musik- und Zirkusteam der Cia. VENDAVAL: Blech, Saxofone, Schlagzeug, Stelzen, Einrad und Jonglage, aus Barcelona und Terrassa.",
+   "workshops": "Workshops für Stelzen, Zirkus, Seifenblasen und Musik für Kinder und Erwachsene, zusammen mit unseren Aufführungen. Anreise aus Barcelona an den Veranstaltungsort.",
+   "downloads": "Dossiers, technische Rider, Pressefotos und Logos der Cia. VENDAVAL in 7 Sprachen, für Programmverantwortliche und Presse.",
+   "crew": "Teil der VENDAVAL-Crew werden: den eigenen Meereswesen-Namen finden und mit der Band spielen."
+  }
  },
  "nav": {
   "about": "Über uns",
