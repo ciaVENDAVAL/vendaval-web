@@ -228,21 +228,22 @@
         <p class="kicker">{{ st.kicker }}</p>
         {% set ez = t.easy.get('show', {}).get(s.id) %}{% if ez %}<div class="std">{% endif %}{% for p in st.text %}<p>{{ p }}</p>{% endfor %}{% if ez %}</div>
         <div class="easy">{% for p in ez %}<p>{{ p }}</p>{% endfor %}</div>{% endif %}
-        <div class="facts">
-          <h2>{{ t.shows.facts }}</h2>
-          <ul>{% for f in st.facts %}<li>{{ f }}</li>{% endfor %}</ul>
-        </div>
-        {% if st.extra_title %}<div class="facts"><h2>{{ st.extra_title }}</h2><p>{{ st.extra_text }}</p></div>{% endif %}
-        {% if st.access %}<p class="access"><strong>{{ st.access_title }}:</strong> {{ st.access }}</p>{% endif %}
-        {% if s.link %}<p class="show-links"><a class="btn btn-small btn-line" href="{{ s.link }}" rel="noopener" target="_blank">{{ t.shows.more }} {{ icon('open-in-new') }}</a></p>{% endif %}
       </div>
     </div>
-    {% set bx = boxes.get(s.id) %}{% if bx %}<div class="wrap show-dl"><div class="downloads one">{% include 'dlbox.html' %}</div></div>{% endif %}
     {% if s.gallery %}
     <div class="gallery" aria-label="{{ t.shows.photos }} – {{ st.name }}">
       {% for g in s.gallery %}<a href="{{ R }}img/{{ g }}-1600.webp" class="gal"><img loading="lazy" src="{{ R }}img/{{ g }}-800.webp" alt="{{ st.name }} – {{ t.shows.photos|lower }} {{ loop.index }}"></a>{% endfor %}
     </div>
     {% endif %}
+    <div class="wrap show-facts">
+      <div class="facts">
+        <h2>{{ t.shows.facts }}</h2>
+        <ul>{% for f in st.facts %}<li>{{ f }}</li>{% endfor %}</ul>
+      </div>
+      {% if st.extra_title %}<div class="facts"><h2>{{ st.extra_title }}</h2><p>{{ st.extra_text }}</p></div>{% endif %}
+      {% if st.access %}<p class="access"><strong>{{ st.access_title }}:</strong> {{ st.access }}</p>{% endif %}
+      {% if s.link %}<p class="show-links"><a class="btn btn-small btn-line" href="{{ s.link }}" rel="noopener" target="_blank">{{ t.shows.more }} {{ icon('open-in-new') }}</a></p>{% endif %}
+    </div>
     <p class="wrap back-shows"><a href="{{ H }}#shows">← {{ t.shows.back }}</a></p>
     {% if s.id == 'joc' %}<div class="wrap"><a class="chimera-card" href="{{ R }}chimera-opera/?lang={{ lang }}">
       <img loading="lazy" src="{{ R }}img/chimera-opera-800.webp" alt="VENDAVAL Chimera Opera">
@@ -258,6 +259,7 @@
       <h3>{{ t.agenda.past }}</h3>
       <ol class="timeline past">{% for e in spast %}{% include 'agenda_item.html' %}{% endfor %}</ol>
     </div>{% endif %}
+    {% set bx = boxes.get(s.id) %}{% if bx %}<div class="wrap show-dl"><div class="downloads one">{% include 'dlbox.html' %}</div></div>{% endif %}
   </article>
 </section>
 

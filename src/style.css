@@ -745,3 +745,7 @@ html.a11y-dark #nav>ul a:hover,html.a11y-dark #nav .sub a:hover{background:#6fd3
 :root{--logo-cyan:#e6fbfd}
 #nav .sub-toggle{background:#9fe8f0}
 @media(min-width:1000px){#nav .sub{border-color:#9fe8f0}}
+/* show pages: description → photos → key facts → … → downloads at the bottom */
+.show-facts{max-width:820px;margin-top:28px}
+.show-page .gallery{margin-top:28px}
+.show-page .show-dl{margin-top:36px}
