@@ -78,6 +78,14 @@ jobs:
             [ "$ok" = 1 ] || { echo "Could not push: run the workflow again (Actions → Run workflow)"; exit 1; }
           fi
           gh api -X POST "repos/${{ github.repository }}/pages/builds" || true
+      - name: Tell search engines what changed (IndexNow → Bing, Yandex…; no account)
+        env:
+          BEFORE: ${{ github.event.before }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then BEFORE=all
+          elif [ -z "$BEFORE" ] || ! git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then BEFORE=HEAD~1; fi
+          sleep 90   # let GitHub Pages publish first
+          python tools/indexnow.py "$BEFORE" || true
       - name: House-style problems → issue
         env:
           GH_TOKEN: ${{ github.token }}
