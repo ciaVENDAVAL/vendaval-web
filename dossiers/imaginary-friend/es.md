@@ -26,7 +26,7 @@ Artistas intercambiables según disponibilidad.
 
 - **Zancos**: tyle fernández
 - **Músicos**: Juan Lichter, Alián Rodrigues, Lucas Raiquen Pereyra, Stefano Ferraro
-- **Acróbatas**: Vic Heredero, Candela Casas, Roc
+- **Acróbatas**: Vic Heredero, Candela Casas
 
 ## Trayectoria
 

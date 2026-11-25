@@ -24,7 +24,7 @@ Artistes interchangeables selon les disponibilités.
 
 - **Échasses** : tyle fernández
 - **Musique** : Juan Lichter, Alián Rodrigues, Lucas Raiquen Pereyra, Stefano Ferraro
-- **Acrobatie** : Vic Heredero, Candela Casas, Roc
+- **Acrobatie** : Vic Heredero, Candela Casas
 
 ## Parcours
 

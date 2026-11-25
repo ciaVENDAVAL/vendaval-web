@@ -24,7 +24,7 @@ Artisti intercambiabili secondo la disponibilità.
 
 - **Trampoli**: tyle fernández
 - **Musica**: Juan Lichter, Alián Rodrigues, Lucas Raiquen Pereyra, Stefano Ferraro
-- **Acrobatica**: Vic Heredero, Candela Casas, Roc
+- **Acrobatica**: Vic Heredero, Candela Casas
 
 ## Percorso
 

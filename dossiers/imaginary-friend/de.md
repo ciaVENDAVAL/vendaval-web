@@ -26,7 +26,7 @@ Austauschbare Künstler\*innen, je nach Verfügbarkeit.
 
 - **Stelzen**: tyle fernández
 - **Musik**: Juan Lichter, Alián Rodrigues, Lucas Raiquen Pereyra, Stefano Ferraro
-- **Akrobatik**: Vic Heredero, Candela Casas, Roc
+- **Akrobatik**: Vic Heredero, Candela Casas
 
 ## Geschichte
 

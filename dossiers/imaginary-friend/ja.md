@@ -24,7 +24,7 @@
 
 - **竹馬**：tyle fernández
 - **音楽**：Juan Lichter、Alián Rodrigues、Lucas Raiquen Pereyra、Stefano Ferraro
-- **アクロバット**：Vic Heredero、Candela Casas、Roc
+- **アクロバット**：Vic Heredero、Candela Casas
 
 ## これまでの歩み
 

@@ -26,7 +26,7 @@ Artistes intercanviables segons disponibilitat.
 
 - **Xanques**: tyle fernández
 - **Músics**: Juan Lichter, Alián Rodrigues, Lucas Raiquen Pereyra, Stefano Ferraro
-- **Acròbates**: Vic Heredero, Candela Casas, Roc
+- **Acròbates**: Vic Heredero, Candela Casas
 
 ## Trajectòria
 

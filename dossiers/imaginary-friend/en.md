@@ -26,7 +26,7 @@ Artists are interchangeable depending on availability.
 
 - **Stilts**: tyle fernández
 - **Musicians**: Juan Lichter, Alián Rodrigues, Lucas Raiquen Pereyra, Stefano Ferraro
-- **Acrobats**: Vic Heredero, Candela Casas, Roc
+- **Acrobats**: Vic Heredero, Candela Casas
 
 ## History
 
