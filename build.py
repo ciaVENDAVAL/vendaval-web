@@ -198,6 +198,39 @@ def build_links():
         lines.append(f'{SITE_URL}/{kind}/{d["short"]}  (opens in the reader\'s language)')
     (ROOT/'LINKS.txt').write_text('\n'.join(lines) + '\n')
 
+# ---------- structured data (SEO)
+def jsonld(lang, path, page, show, up):
+    t = i18n[lang]
+    org_id = f'{SITE_URL}/#org'
+    social = [x['url'] for x in data['socials'] if x['id'] in ('instagram', 'youtube')] + ['https://social.anartist.org/@bicialta']
+    org = {'@type': 'PerformingGroup', '@id': org_id, 'name': 'Cia. VENDAVAL', 'alternateName': 'VENDAVAL',
+           'url': f'{SITE_URL}/{lang}/', 'logo': f'{SITE_URL}/img/icon-512.png', 'image': f'{SITE_URL}/og/photo-' + data['hero_slides'][0]['image'] + '.jpg',
+           'description': t['meta']['description'], 'email': data['site']['email'], 'telephone': data['site']['phone'],
+           'address': {'@type': 'PostalAddress', 'addressLocality': 'Barcelona', 'addressRegion': 'Catalunya', 'addressCountry': 'ES'},
+           'sameAs': social}
+    graph = [org, {'@type': 'WebSite', '@id': f'{SITE_URL}/#web', 'url': f'{SITE_URL}/', 'name': 'Cia. VENDAVAL',
+                   'inLanguage': langs, 'publisher': {'@id': org_id}}]
+    if page in ('agenda', 'show'):
+        by = {x['id']: x for x in data['shows']}
+        for e in up:
+            if e.get('precision') != 'day' or (show and e['show'] != show['id']) or e['show'] not in by: continue
+            place = loc(e['place'], lang)
+            if not place: continue
+            sname = t['show'][e['show']]['name']
+            # Freak Frac is Cia. Filigranes' show (only advertised here)
+            perf = {'@type': 'PerformingGroup', 'name': 'Cia. Filigranes', 'url': 'https://ciafiligranes.net/'} if e['show'] == 'freakfrac' else {'@id': org_id}
+            ev = {'@type': 'Event', 'name': f"{sname} – {'Cia. Filigranes' if e['show'] == 'freakfrac' else 'Cia. VENDAVAL'}", 'startDate': e['start'], 'endDate': e['end'],
+                  'eventStatus': 'https://schema.org/EventScheduled', 'eventAttendanceMode': 'https://schema.org/OfflineEventAttendanceMode',
+                  'location': {'@type': 'Place', 'name': place, 'address': place},
+                  'image': f'{SITE_URL}/og/photo-' + by[e['show']]['cover'] + '.jpg',
+                  'url': e.get('url') or f'{SITE_URL}/{lang}/{by[e["show"]]["slug"]}/',
+                  'performer': perf}
+            note = loc(e.get('note') or {}, lang)
+            if note: ev['description'] = re.sub('<[^>]+>', '', note)
+            graph.append(ev)
+    js = json.dumps({'@context': 'https://schema.org', '@graph': graph}, ensure_ascii=False).replace('</', '<\\/')
+    return f'<script type="application/ld+json">{js}</script>\n'
+
 # ---------- pages
 def render():
     env = Environment(loader=FileSystemLoader(SRC), autoescape=False, trim_blocks=True, lstrip_blocks=True)
@@ -250,6 +283,8 @@ def render():
                     parts.append(sec)
                 html = html[:first] + '\n'.join(parts) + html[last:]
             html = re.sub(r'<!--/?sec:[a-z]+-->', '', html)
+            # structured data for search engines (schema.org JSON-LD): the company on every page, upcoming gigs on agenda + show pages
+            html = html.replace('</head>', jsonld(lang, path, page, extra.get('s'), up) + '</head>', 1)
             # links to another page always open at its top (#top), not at the old scroll position
             html = re.sub(r'href="((?:\.\./)+[a-z]{2}/(?:[a-z-]+/)?)"', r'href="\1#top"', html)
             out.write_text(html, encoding='utf-8')
@@ -258,6 +293,7 @@ def render():
     codes = json.dumps(langs)
     (OUT/'index.html').write_text(f'''<!doctype html><html lang="ca"><meta charset="utf-8"><title>Cia. VENDAVAL</title>
 <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="favicon.ico" sizes="any"><link rel="apple-touch-icon" href="img/apple-touch-icon.png"><link rel="me" href="https://social.anartist.org/@bicialta">
+<meta name="description" content="{i18n[data['site']['default_lang']]['meta']['description']}"><link rel="canonical" href="{SITE_URL}/">{''.join(f'<link rel="alternate" hreflang="{i18n[l]["html_lang"]}" href="{SITE_URL}/{l}/">' for l in langs)}<link rel="alternate" hreflang="x-default" href="{SITE_URL}/">
 <meta property="og:title" content="Cia. VENDAVAL"><meta property="og:image" content="{SITE_URL}/og/photo-{data['hero_slides'][0]['image']}.jpg">
 <script>var L={codes},n=(navigator.languages||[navigator.language||"ca"]).map(function(x){{return x.slice(0,2).toLowerCase()}}),k=n.find(function(x){{return L.indexOf(x)>=0}})||"{data['site']['default_lang']}";location.replace(k+"/");</script>
 <p>{' · '.join(f'<a href="{l}/">{i18n[l]["lang_name"]}</a>' for l in langs)}</p></html>
@@ -273,8 +309,13 @@ def render():
     elif (OUT/'CNAME').exists(): (OUT/'CNAME').unlink()
     (OUT/'.nojekyll').write_text('')
     (OUT/'robots.txt').write_text(f'User-agent: *\nAllow: /\nSitemap: https://{data["site"]["domain"]}/sitemap.xml\n')
-    (OUT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-        + ''.join(f'<url><loc>{u}</loc><lastmod>{today}</lastmod></url>\n' for u in urls) + '</urlset>\n')
+    # sitemap: every page with its 7 language versions (hreflang), plus the Chimera Opera toy
+    paths = list(dict.fromkeys(u.split('/', 4)[4] if u.count('/') >= 4 else '' for u in urls))
+    def alts(p): return ''.join(f'<xhtml:link rel="alternate" hreflang="{i18n[l]["html_lang"]}" href="{SITE_URL}/{l}/{p}"/>' for l in langs) + f'<xhtml:link rel="alternate" hreflang="x-default" href="{SITE_URL}/"/>'
+    sm = ''.join(f'<url><loc>{SITE_URL}/{l}/{p}</loc><lastmod>{today}</lastmod>{alts(p)}</url>\n' for p in paths for l in langs)
+    if (OUT/'chimera-opera'/'index.html').exists(): sm += f'<url><loc>{SITE_URL}/chimera-opera/</loc><lastmod>{today}</lastmod></url>\n'
+    (OUT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
+        + sm + '</urlset>\n')
 
 def check():
     # every language needs the same keys as Catalan
