@@ -199,6 +199,15 @@ def build_links():
     (ROOT/'LINKS.txt').write_text('\n'.join(lines) + '\n')
 
 # ---------- structured data (SEO)
+def short_desc(x, n=158):
+    # search snippets show ~155 characters: cut at a word (or, in Japanese, at a full stop), never mid-word
+    x = ' '.join(x.split())
+    if len(x) <= n: return x
+    cut = x[:n]
+    i = max(cut.rfind('。'), cut.rfind('. '))
+    if i > n // 2: return cut[:i + 1]
+    return cut[:cut.rfind(' ')].rstrip(',;:–-') + '…' if ' ' in cut else cut[:n - 1] + '…'
+
 def jsonld(lang, path, page, show, up):
     t = i18n[lang]
     org_id = f'{SITE_URL}/#org'
@@ -257,7 +266,7 @@ def render():
         pages = [('', 'home', {})]
         for s in shows:
             st = t['show'][s['id']]
-            pages.append((s['slug'] + '/', 'show', {'s': s, 'page_title': st['name'], 'page_desc': re.sub('<[^>]+>', '', st['text'][0])[:180], 'og_image': 'og/photo-' + s['cover'] + '.jpg'}))
+            pages.append((s['slug'] + '/', 'show', {'s': s, 'page_title': st['name'], 'page_desc': short_desc(re.sub('<[^>]+>', '', st['text'][0])), 'og_image': 'og/photo-' + s['cover'] + '.jpg'}))
         for k in ('workshops', 'agenda', 'artists', 'downloads', 'crew'):
             og = ('og/photo-' + data['workshop_groups'][0]['photo'] + '.jpg') if k == 'workshops' else f'og/{lang}-{k}.jpg'
             pages.append((k + '/', k, {'page_title': t['nav'][k], 'og_image': og}))
