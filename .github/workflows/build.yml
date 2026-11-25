@@ -66,6 +66,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          git config user.name "build bot"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"   # also needed when the rebase below replays the commit
           git add content docs static/img LINKS.txt
           if git diff --cached --quiet; then echo "Nothing to commit"; else
             { echo "Build website [no-translate]"; echo; [ -s /tmp/translated.txt ] && { echo "Auto-translate (Softcatalà) — please check:"; cat /tmp/translated.txt; }; } > /tmp/msg.txt
