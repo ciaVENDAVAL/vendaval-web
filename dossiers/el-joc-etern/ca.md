@@ -6,14 +6,14 @@
 
 Com aconsegueix un grup de persones desconegudes, cadascuna de camí cap a un altre lloc, acabar jugant, movent-se i fent música juntes enmig del carrer?
 
-El Joc Etern és la nova creació de la Cia. VENDAVAL, en procés. Tres criatures del mar, entre clownesques i mitològiques, busquen el Joc Etern, una relíquia màgica que permet jugar per sempre a qui la toca, i conviden totes les persones que troben a sumar-se a la recerca. La fantasia marina i els dracs s'inspiren en els llibres de Terramar d'Ursula K. Le Guin.
+El Joc Etern és la nova creació de la Cia. VENDAVAL, una obra en procés de pura fantasia: dracs, mags i criatures mitològiques que juguen amb les persones. Tres criatures del mar, entre clownesques i mitològiques, busquen el Joc Etern, una relíquia màgica que permet jugar per sempre a qui la toca, i conviden totes les persones que troben a sumar-se a la recerca. La fantasia marina i els dracs s'inspiren en els llibres de Terramar d'Ursula K. Le Guin.
 
-Cinc intèrprets viatgen amb el Windy, una Vespa elèctrica que remolca un vaixell que també és un instrument. Dos personatges en xanques guien els jocs i la història; qui condueix el Windy de vegades es mou en monocicle entre el públic i es passa maces de malabars amb qui va en xanques.
+Una tripulació de cinc intèrprets viatja amb el Windy, una Vespa elèctrica de tres rodes que remolca un vaixell que també és un instrument, tots dos en construcció des del 2025. A l'inici del 2027, el nostre equip de música i de circ multidisciplinari està a punt per començar els assajos amb aquest escenari mòbil. Dos personatges en xanques guien els jocs i la història; qui condueix el Windy de vegades es mou en monocicle entre el públic i es passa maces de malabars amb qui va en xanques.
 
 ## On som
 
 - **Origen**: neix de VENDAVAL Brass, la banda itinerant amb què fem gira des del 2025 per Catalunya i Alemanya.
-- **Jocs**: el 2027 creem i provem entre 10 i 15 jocs participatius que funcionin en qualsevol idioma, i escrivim la dramatúrgia a partir del que funciona al carrer.
+- **Jocs**: en un període de recerca creem i provem jocs participatius inclusius que funcionin en qualsevol idioma, amb el tacte, la vibració o la llengua de signes integrats des del principi, i tanquem la història i els personatges a partir del que funciona al carrer.
 - **Personatges**: cada intèrpret desenvolupa un nom, una manera de caminar i una manera de saludar a través del so.
 - **Estrena**: després de la recerca.
 

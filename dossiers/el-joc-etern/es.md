@@ -6,14 +6,14 @@
 
 ¿Cómo consigue un grupo de desconocides, cada cual de camino a otro sitio, acabar jugando, moviéndose y haciendo música juntes en medio de la calle?
 
-El Joc Etern es la nueva creación de Cia. VENDAVAL, en proceso. Tres criaturas del mar, entre clownescas y mitológicas, buscan el Joc Etern, una reliquia mágica que permite jugar para siempre a quien la toca, e invitan a todas las personas que encuentran a sumarse a la búsqueda. La fantasía marina y los dragones se inspiran en los libros de Terramar de Ursula K. Le Guin.
+El Joc Etern es la nueva creación de Cia. VENDAVAL, una obra en proceso de pura fantasía: dragones, magos y criaturas mitológicas que juegan con las personas. Tres criaturas del mar, entre clownescas y mitológicas, buscan el Joc Etern, una reliquia mágica que permite jugar para siempre a quien la toca, e invitan a todas las personas que encuentran a sumarse a la búsqueda. La fantasía marina y los dragones se inspiran en los libros de Terramar de Ursula K. Le Guin.
 
-Cinco intérpretes viajan con el Windy, una Vespa eléctrica que remolca un barco que también es un instrumento. Dos personajes en zancos guían los juegos y la historia; quien conduce el Windy a veces se desplaza en monociclo entre el público y se pasa mazas de malabares con quien va en zancos.
+Una tripulación de cinco intérpretes viaja con el Windy, una Vespa eléctrica de tres ruedas que remolca un barco que también es un instrumento, ambos en construcción desde 2025. A principios de 2027, nuestro equipo de música y circo multidisciplinar está listo para empezar los ensayos con este escenario móvil. Dos personajes en zancos guían los juegos y la historia; quien conduce el Windy a veces se desplaza en monociclo entre el público y se pasa mazas de malabares con quien va en zancos.
 
 ## Dónde estamos
 
 - **Origen**: nace de VENDAVAL Brass, la banda itinerante con la que salimos de gira desde 2025 por Cataluña y Alemania.
-- **Juegos**: en 2027 creamos y probamos entre 10 y 15 juegos participativos que funcionen en cualquier idioma, y escribimos la dramaturgia a partir de lo que funciona en la calle.
+- **Juegos**: en un periodo de investigación creamos y probamos juegos participativos inclusivos que funcionen en cualquier idioma, con el tacto, la vibración o la lengua de signos integrados desde el principio, y cerramos la historia y los personajes a partir de lo que funciona en la calle.
 - **Personajes**: cada intérprete desarrolla un nombre, una manera de caminar y una manera de saludar a través del sonido.
 - **Estreno**: después de la investigación.
 

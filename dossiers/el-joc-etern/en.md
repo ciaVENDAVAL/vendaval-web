@@ -6,14 +6,14 @@
 
 How does a group of strangers, each on their way somewhere else, end up playing, moving and making music together in the middle of the street?
 
-El Joc Etern (The Eternal Game) is the new creation by Cia. VENDAVAL, currently in progress. Three sea creatures, part clownesque and part mythical, are searching for the Eternal Game, a magical relic that lets whoever touches it play forever, and they invite everyone they meet to join the search. The sea fantasy and the dragons are inspired by Ursula K. Le Guin's Earthsea books.
+El Joc Etern (The Eternal Game) is the new creation by Cia. VENDAVAL, a work in progress of pure fantasy: dragons, wizards and mythical creatures playing games with humans. Three sea creatures, part clownesque and part mythical, are searching for the Eternal Game, a magical relic that lets whoever touches it play forever, and they invite everyone they meet to join the search. The sea fantasy and the dragons are inspired by Ursula K. Le Guin's Earthsea books.
 
-Five performers travel with Windy, an electric Vespa towing a boat that is also an instrument. Two characters on stilts lead the games and the story; the Windy driver sometimes rides a unicycle through the audience and passes juggling clubs with the stilt walkers.
+A crew of five performers travels with Windy, a three-wheeled electric Vespa towing a boat that is also an instrument; both have been in the making since 2025. As 2027 begins, our ensemble of musicians and multidisciplinary circus artists is ready to start rehearsing with this mobile stage. Two characters on stilts lead the games and the story; the Windy driver sometimes rides a unicycle through the audience and passes juggling clubs with the stilt walkers.
 
 ## Where we are
 
 - **Origin**: it grows out of VENDAVAL Brass, the roaming band we have been touring with since 2025 in Catalonia and Germany.
-- **Games**: in 2027 we will create and test 10 to 15 participatory games that work in any language, and write the dramaturgy from what works in the street.
+- **Games**: in a research period we will create and test inclusive participatory games that work in any language, with touch, vibration or sign language built in from the start, and finalise the story and the characters from what works in the street.
 - **Characters**: each performer develops a name, a way of walking and a way of greeting through sound.
 - **Premiere**: after the research period.
 
