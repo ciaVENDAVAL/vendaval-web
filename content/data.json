@@ -113,6 +113,11 @@
     "windy-vespa-grinding"
    ],
    "gallery": [
+    "windy-fur-scales-back",
+    "windy-fur-scales-side",
+    "octopus-plush",
+    "windy-ship-wheel",
+    "tyle-glue-gun-fur",
     "img-0780",
     "creating-windy-1",
     "creating-windy-5",
@@ -127,7 +132,6 @@
     "creating-el-joc-etern-6",
     "creating-el-joc-etern-7",
     "windy-cad-frame",
-    "windy-trailer-frame",
     "windy-trailer-deck",
     "windy-vespa-grinding",
     "windy-vespa-motor",
@@ -933,7 +937,12 @@
   "vendaval-unterwegs002": "VENDAVAL_Unterwegs002.jpg",
   "vendaval-unterwegs003": "VENDAVAL_Unterwegs003.jpg",
   "vendaval-unterwegs004": "VENDAVAL_Unterwegs004.jpg",
-  "windy-vespa-grinding": "20260324_192711.jpg"
+  "windy-vespa-grinding": "20260324_192711.jpg",
+  "windy-fur-scales-back": "windy_fur_scales_back.jpg",
+  "windy-fur-scales-side": "windy_fur_scales_side.jpg",
+  "octopus-plush": "octopus_plush.jpg",
+  "windy-ship-wheel": "windy_ship_wheel.jpg",
+  "tyle-glue-gun-fur": "tyle_glue_gun_fur.jpg"
  },
  "credits": [
   {
